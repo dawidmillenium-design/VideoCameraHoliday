@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Video Camera: Real Travel Camera Testing, No Lab Charts</title>
+    <meta name="description" content="Holiday Video Camera tests video cameras on real trips — beach, ski, city and desert. Honest reviews, buying guides and filming how-tos from the road, not the lab.">
+    <meta name="author" content="Dawid Millennium">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/">
+    <meta property="og:title" content="Holiday Video Camera: Real Travel Camera Testing, No Lab Charts">
+    <meta property="og:description" content="Honest video camera reviews, buying guides and filming how-tos — every product tested on real holidays.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/">
+    <meta property="og:site_name" content="Holiday Video Camera">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+    .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+    .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
+    .top-nav .nav-links li { position: relative; }
+    .top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
+    .top-nav .nav-links a:hover, .top-nav .nav-links a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #1a1a2e; border: 1px solid #333; border-top: 2px solid #e94560; border-radius: 0 0 8px 8px; min-width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); list-style: none; padding: 8px 0; }
+    .top-nav .nav-links li:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { padding: 10px 20px !important; font-size: 0.85rem !important; border-bottom: 1px solid #222; }
+    .dropdown-menu a:last-child { border-bottom: none; }
+    .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
+    header { text-align: center; padding: 60px 20px 50px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+    h1 { font-size: 2.6rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
+    .subtitle { font-size: 1.2rem; color: #888; max-width: 680px; margin: 0 auto 25px; }
+    .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 25px; }
+    .stat { text-align: center; }
+    .stat .num { font-size: 2rem; font-weight: 700; color: #e94560; }
+    .stat .label { font-size: 0.85rem; color: #888; }
+    article { padding: 40px 20px; }
+    h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+    p { margin-bottom: 20px; font-size: 1.05rem; }
+    a.content-link { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
+    a.content-link:hover { color: #ff6b6b; }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 30px 0; }
+    .cat-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; text-decoration: none; color: inherit; transition: border-color 0.2s; display: block; }
+    .cat-card:hover { border-color: #e94560; }
+    .cat-card h3 { color: #e94560; margin: 0 0 10px; font-size: 1.2rem; }
+    .cat-card p { font-size: 0.92rem; color: #888; margin: 0; }
+    .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+    .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+    .related-card:hover { border-color: #e94560; }
+    .related-card h4 { color: #e94560; margin-top: 0; }
+    .related-card p { font-size: 0.9rem; color: #888; margin-bottom: 0; }
+    .author-box { display: flex; align-items: center; gap: 15px; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 25px 0; }
+    .author-avatar { width: 50px; height: 50px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+    .author-info h4 { color: #fff; margin: 0 0 5px; font-size: 1rem; }
+    .author-info p { color: #888; font-size: 0.85rem; margin: 0; }
+    .takeaways { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; }
+    .takeaways h3 { color: #e94560; margin-top: 0; }
+    .takeaways ul { margin-left: 20px; margin-bottom: 0; }
+    ul { margin-left: 20px; margin-bottom: 20px; }
+    li { margin-bottom: 10px; }
+    .affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
+    .site-footer { background: #111; border-top: 2px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+    .footer-section h4 { color: #e94560; font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-section ul { list-style: none; margin: 0; padding: 0; }
+    .footer-section li { margin-bottom: 8px; }
+    .footer-section a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .footer-section a:hover { color: #e94560; }
+    .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
+    .footer-bottom a { color: #e94560; text-decoration: none; }
+    @media (max-width: 768px) {
+        h1 { font-size: 1.8rem; } .subtitle { font-size: 1rem; }
+        .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; }
+        .footer-container { grid-template-columns: 1fr 1fr; }
+        .stats { gap: 20px; }
+    }
+    </style>
     <title>Dubai Traveler Interview: X5 Performance in Desert Heat | Holiday Video Camera</title>
     <meta name="description" content="Ahmed discusses using the Insta360 X5 in the scorching Dubai desert, surviving sand, and getting fast upload speeds in luxury hotels.">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
 <body>
 
     <!-- YOUR EXACT TOP MENU (Paths updated to ../ for subfolder compatibility) -->
