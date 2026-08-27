@@ -29,3 +29,4 @@ Folder: reviews/ | File name: dji-osmo-pocket-4p-review.html
 Folder: reviews/ | File name: canon-g7x-mark-iv-review.html
 Folder: reviews/ | File name: panasonic-lumix-tz300-review.html
 Folder: guides/ | File name: best-pocket-gimbal-camera-2026.html
+Folder: guides/ | File name: best-travel-mirrorless-cameras-2026.html
