@@ -20,5 +20,9 @@ Name it: film-sunsets-golden-hour.html. - how-to folder.
 Name it: ai-video-editing-travel-workflows.html - editing folder.
 Name it: solo-travel-filming.html. - how-to folder.
 Name it: best-camera-desert-dusty-conditions.html. -guides folder.
+Name it: pov-story-time-travel-video-format.html. - how-to folder.
+
+
+
 
 
