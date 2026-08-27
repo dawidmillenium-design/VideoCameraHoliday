@@ -27,5 +27,5 @@ Name it: travel-camera-predictions-2027.html - guides folder.
 
 Folder: reviews/ | File name: dji-osmo-pocket-4p-review.html
 Folder: reviews/ | File name: canon-g7x-mark-iv-review.html
-
+Folder: reviews/ | File name: panasonic-lumix-tz300-review.html
 
