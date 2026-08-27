@@ -34,3 +34,4 @@ Folder: reviews/ | File name: insta360-ace-pro-3-review.html
 Name it: why-gimbal-cameras-took-over-2026.html. - guides folder.
 
 
+Name it: dji-osmo-action-6-vs-gopro-mission-1-pro.html. - comparisons folder.
