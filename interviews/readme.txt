@@ -10,3 +10,6 @@ film-in-harsh-sunlight.html - Technique -
 vertical-video-settings-travel.html. - how-to folder.
 best-camera-european-night-markets.html. - guides folder.
 Name it: canon-eos-r50-v-creator-kit-test.html - reviews folder.
+
+
+Name it: sony-a7cr-vs-fujifilm-x-t50.html - comparisons folder.
