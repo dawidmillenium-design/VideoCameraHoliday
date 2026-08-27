@@ -8,3 +8,4 @@ travel vlog SEO - category - technique
 
 film-in-harsh-sunlight.html - Technique -
 vertical-video-settings-travel.html. - how-to folder.
+best-camera-european-night-markets.html. - guides folder.
