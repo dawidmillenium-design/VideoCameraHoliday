@@ -15,8 +15,10 @@ Name it: dji-osmo-action-5-pro-adventure-test.html. - reviews folder.
 Name it: audio-tips-noisy-locations.html - how-to folder.
 Name it: best-camera-southeast-asia.html - guides folder.
 Name it: insta360-go-3s-pov-test.html - reviews folder.
-
-
-
-
 Name it: budget-vs-premium-travel-cameras.html. - comparisons folder.
+
+
+Name it: film-sunsets-golden-hour.html. - how-to folder.
+
+
+
