@@ -11,7 +11,7 @@ best-camera-european-night-markets.html. - guides folder.
 Name it: canon-eos-r50-v-creator-kit-test.html - reviews folder.
 Name it: sony-a7cr-vs-fujifilm-x-t50.html - comparisons folder.
 Name it: best-compact-cameras-travel.html - guides folder.
-
-
-
 Name it: dji-osmo-action-5-pro-adventure-test.html. - reviews folder.
+Name it: audio-tips-noisy-locations.html - how-to folder.
+
+
