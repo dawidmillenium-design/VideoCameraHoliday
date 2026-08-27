@@ -7,3 +7,4 @@ capture memories - category - reviews
 travel vlog SEO - category - technique
 
 film-in-harsh-sunlight.html - Technique -
+vertical-video-settings-travel.html. - how-to folder.
