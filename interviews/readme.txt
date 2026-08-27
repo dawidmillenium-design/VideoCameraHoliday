@@ -18,3 +18,8 @@ Name it: insta360-go-3s-pov-test.html - reviews folder.
 Name it: budget-vs-premium-travel-cameras.html. - comparisons folder.
 Name it: film-sunsets-golden-hour.html. - how-to folder.
 Name it: ai-video-editing-travel-workflows.html - editing folder.
+Name it: solo-travel-filming.html. - how-to folder.
+
+
+
+
