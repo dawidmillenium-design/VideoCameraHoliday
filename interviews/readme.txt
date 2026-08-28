@@ -42,3 +42,7 @@ Name it: panasonic-lumix-s9-ii-review.html. - reviews folder.
 Folder: how-to/ | File name: solo-travel-accessory-kit-2026.html
 Name it: insta360-mirrorless-camera-2027.html. - guides folder
 
+
+
+File to overwrite: guides/best-travel-camera-gifts-2026.html
+
