@@ -40,3 +40,5 @@ Name it: fujifilm-x-t6-review.html. - reviews folder.
 Name it: panasonic-lumix-s9-ii-review.html. - reviews folder.
 
 Folder: how-to/ | File name: solo-travel-accessory-kit-2026.html
+Name it: insta360-mirrorless-camera-2027.html. - guides folder
+
