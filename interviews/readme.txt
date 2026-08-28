@@ -55,7 +55,8 @@ Folder: guides/ | File name: best-cameras-theme-parks.html
 ////
 
 File to overwrite: guides/best-travel-camera-gifts-2026.html
-
-
-Name it: drone-laws-by-country-travel-guide.html. - guides folder.
+Name it: drone-laws-by-country-travel-guide.html. - guides folder
 Name it: best-cameras-theme-parks-disney.html. - guides folder
+Name it: iphone-16-pro-video-workflow.html. - how-to folder
+
+
