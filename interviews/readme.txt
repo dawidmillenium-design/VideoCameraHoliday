@@ -59,4 +59,5 @@ Name it: drone-laws-by-country-travel-guide.html. - guides folder
 Name it: best-cameras-theme-parks-disney.html. - guides folder
 Name it: iphone-16-pro-video-workflow.html. - how-to folder
 
+Name it: best-cameras-cruise-ship-travel.html. - guides folder
 
