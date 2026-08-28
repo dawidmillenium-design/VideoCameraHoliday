@@ -39,4 +39,4 @@ Name it: best-cameras-fall-travel-photography.html. - guides folder.
 Name it: fujifilm-x-t6-review.html. - reviews folder.
 Name it: panasonic-lumix-s9-ii-review.html. - reviews folder.
 
-
+Folder: how-to/ | File name: solo-travel-accessory-kit-2026.html
