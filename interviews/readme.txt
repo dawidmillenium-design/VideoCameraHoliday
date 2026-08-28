@@ -37,3 +37,6 @@ Name it: dji-osmo-action-6-vs-gopro-mission-1-pro.html. - comparisons folder.
 Name it: dji-osmo-pocket-4-vs-insta360-luna-ultra.html. - comparisons folder.
 Name it: best-cameras-fall-travel-photography.html. - guides folder.
 
+
+
+Name it: fujifilm-x-t6-review.html. - reviews folder.
