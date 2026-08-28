@@ -42,7 +42,17 @@ Name it: panasonic-lumix-s9-ii-review.html. - reviews folder.
 Folder: how-to/ | File name: solo-travel-accessory-kit-2026.html
 Name it: insta360-mirrorless-camera-2027.html. - guides folder
 
-
+///
+generate the complete, Domain 2-formatted HTML for it right now -  4 new files in their respective folders (guides/ or how-to/). - 
+📁 File 4: Sell Travel Stock Footage
+Folder: how-to/ | File name: sell-travel-stock-footage.html
+📁 File 3: iPhone 16 Pro Video Workflow
+Folder: how-to/ | File name: iphone-16-pro-video-workflow.html
+📁 File 2: Cruise Ship Creator Guide
+Folder: guides/ | File name: best-cameras-cruise-ship.html
+📁 File 1: Theme Park Filming Guide
+Folder: guides/ | File name: best-cameras-theme-parks.html
+////
 
 File to overwrite: guides/best-travel-camera-gifts-2026.html
 
