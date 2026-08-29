@@ -109,3 +109,4 @@ Step	Action	Filename
 
 
 /techniques/underwater-filming-travel-guide
+Category: AI & Editing - /editing/ai-color-grading-audio-cleanup
