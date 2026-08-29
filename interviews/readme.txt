@@ -108,4 +108,4 @@ Step	Action	Filename
 3	Save Article 27	canon-g7x-iv-vs-panasonic-tz300-vs-dji-pocket-3-2026.html
 
 
-
+/techniques/underwater-filming-travel-guide
