@@ -65,3 +65,14 @@ Name it: best-travel-camera-bags-hard-cases-2026.html - guides folder
 Name it: best-wireless-microphones-travel-vlogging.html - guides folder
 
 Name it: how-to-ai-auto-edit-holiday-footage.html - editing folder
+
+
+Quick Reference — All 8 Articles
+1	Best Travel Camera Bags & Hard Cases — 2026 Guide	best-travel-camera-bags-2026.html
+2	Best Wireless Microphones for Travel Vlogging	best-wireless-microphones-travel-vlogging-2026.html
+3	How to Use AI to Auto-Edit Holiday Footage	how-to-use-ai-auto-edit-holiday-footage-2026.html
+4	Free LUTs and Color Grading Settings	free-luts-color-grading-travel-videos-2026.html
+5	How to Travel with Camera Gear on a Plane	how-to-travel-with-camera-gear-on-plane-2026.html
+6	Filming in Extreme Cold — Battery Tips	filming-in-extreme-cold-camera-battery-tips-2026.html
+7	Drone Laws for Travelers (2026)	drone-laws-for-travelers-2026.html
+8	Cultural Etiquette for Travel Vloggers	cultural-etiquette-filming-locals-travel-vloggers-2026.html
