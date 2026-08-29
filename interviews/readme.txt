@@ -110,3 +110,5 @@ Step	Action	Filename
 
 /techniques/underwater-filming-travel-guide
 Category: AI & Editing - /editing/ai-color-grading-audio-cleanup
+
+becoming-a-travel-filmmaker.html - Category - Business & Career
