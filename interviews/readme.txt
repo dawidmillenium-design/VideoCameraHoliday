@@ -63,3 +63,5 @@ Name it: best-cameras-cruise-ship-travel.html - guides folder
 Name it: sell-travel-stock-footage-2026.html - how-to folder
 Name it: best-travel-camera-bags-hard-cases-2026.html - guides folder
 Name it: best-wireless-microphones-travel-vlogging.html - guides folder
+
+Name it: how-to-ai-auto-edit-holiday-footage.html - editing folder
