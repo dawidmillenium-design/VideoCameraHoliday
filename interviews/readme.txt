@@ -76,3 +76,16 @@ Quick Reference — All 8 Articles
 6	Filming in Extreme Cold — Battery Tips	filming-in-extreme-cold-camera-battery-tips-2026.html
 7	Drone Laws for Travelers (2026)	drone-laws-for-travelers-2026.html
 8	Cultural Etiquette for Travel Vloggers	cultural-etiquette-filming-locals-travel-vloggers-2026.html
+
+
+ Quick Reference — All 10 New Articles
+9	Best Travel Tripods & Stabilizers	best-travel-tripods-stabilizers-2026.html
+10	Best ND Filters & Polarizers	best-nd-filters-polarizers-travel-video-2026.html
+11	Best Portable Power Banks & Chargers	best-portable-power-banks-chargers-travel-filmmakers-2026.html
+12	Advanced Travel Storytelling	advanced-travel-storytelling-structure-travel-vlog-2026.html
+13	Filming in Rain & Bad Weather	filming-in-rain-bad-weather-protect-gear-2026.html
+14	How to Film Yourself Solo	how-to-film-yourself-solo-travel-guide-2026.html
+15	Best Camera for Japan	best-camera-for-japan-travel-guide-2026.html
+16	Best Camera for Iceland	best-camera-for-iceland-travel-guide-2026.html
+17	Sustainable Travel Filmmaking	sustainable-travel-filmmaking-eco-friendly-guide-2026.html
+18	Travel Filmmaking Insurance	travel-filmmaking-insurance-protect-gear-2026.html
