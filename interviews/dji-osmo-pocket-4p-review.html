@@ -52,10 +52,101 @@
     .takeaways h3 { color: #e94560; margin-top: 0; }
     ul { margin-left: 20px; margin-bottom: 20px; }
     li { margin-bottom: 10px; }
-    table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95rem; }
-    th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #333; }
-    th { color: #e94560; background: #111; font-weight: 600; }
-    td { color: #ccc; }
+    
+    /* Standardized Spec Sheet Styles */
+    .spec-sheet {
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 20px 25px;
+        margin: 25px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 30px;
+    }
+    .spec-sheet .spec-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border-bottom: 1px dashed #222;
+    }
+    .spec-sheet .spec-label {
+        font-weight: 600;
+        color: #ccc;
+    }
+    .spec-sheet .spec-value {
+        color: #e0e0e0;
+        text-align: right;
+    }
+    .spec-sheet .spec-value .highlight {
+        color: #e94560;
+        font-weight: 700;
+    }
+    .spec-sheet h4 {
+        grid-column: span 2;
+        margin: 0 0 10px 0;
+        color: #fff;
+        border-bottom: 2px solid #e94560;
+        padding-bottom: 6px;
+        font-size: 1.2rem;
+    }
+
+    /* Comparison Table Styles adapted to dark theme */
+    .compare-table-wrap {
+        overflow-x: auto;
+        margin: 25px 0;
+        background: #111;
+        border-radius: 12px;
+        border: 1px solid #333;
+    }
+    .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95em;
+        min-width: 680px;
+    }
+    .compare-table th {
+        background: #16213e;
+        color: white;
+        padding: 15px 18px;
+        text-align: left;
+        font-weight: 600;
+    }
+    .compare-table th:first-child {
+        background: #1a1a2e;
+        width: 22%;
+    }
+    .compare-table td {
+        padding: 14px 18px;
+        border-bottom: 1px solid #222;
+        vertical-align: top;
+        color: #ccc;
+    }
+    .compare-table tr:hover td {
+        background: rgba(233, 69, 96, 0.05);
+    }
+    .compare-table .feature-label {
+        font-weight: 600;
+        color: #fff;
+        background: #1a1a2e;
+    }
+    .compare-table .winner {
+        background: rgba(46, 204, 113, 0.1);
+        color: #fff;
+        font-weight: 600;
+    }
+    .compare-badge {
+        display: inline-block;
+        background: #e94560;
+        color: #fff;
+        padding: 2px 10px;
+        border-radius: 20px;
+        font-size: 0.75em;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-left: 6px;
+    }
+
     .faq-item { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 20px 0; }
     .faq-question { color: #fff; font-size: 1.15rem; margin: 0 0 12px; }
     .faq-answer p { color: #ccc; margin: 0; }
@@ -74,7 +165,7 @@
     .footer-section a:hover { color: #e94560; }
     .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
     .footer-bottom a { color: #e94560; text-decoration: none; }
-    @media (max-width: 768px) { h1 { font-size: 1.8rem; } .subtitle { font-size: 1rem; } .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; } .footer-container { grid-template-columns: 1fr 1fr; } table { font-size: 0.85rem; } th, td { padding: 8px 10px; } }
+    @media (max-width: 768px) { h1 { font-size: 1.8rem; } .subtitle { font-size: 1rem; } .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; } .footer-container { grid-template-columns: 1fr 1fr; } .compare-table { font-size: 0.85em; min-width: 480px; } .compare-table th, .compare-table td { padding: 10px 12px; } }
     </style>
 </head>
 <body>
@@ -165,14 +256,16 @@
                 <h3>📋 On this page</h3>
                 <ul>
                     <li><a href="#verdict">Verdict: The Dual-Camera Advantage</a></li>
+                    <li><a href="#specs">Camera Specifications</a></li>
                     <li><a href="#whats-new">What's New in the 4P?</a></li>
                     <li><a href="#real-test">Real Test: The Second Lens</a></li>
                     <li><a href="#image-quality">Image Quality Comparison</a></li>
                     <li><a href="#stabilization">Stabilisation & Gimbal Performance</a></li>
                     <li><a href="#audio">Audio & Vlogging Features</a></li>
                     <li><a href="#battery">Battery Life & Charging</a></li>
-                    <li><a href="#comparison">Pocket 4P vs. Insta360 Luna Ultra</a></li>
+                    <li><a href="#comparison">Pocket 4P vs. Competitors Comparison</a></li>
                     <li><a href="#who-should-buy">Who Should Buy the 4P?</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
                 </ul>
             </nav>
             <section class="content">
@@ -180,68 +273,168 @@
                     <h3>In Short</h3>
                     <ul>
                         <li>The dual-camera system (wide + ultrawide) eliminates the need to carry separate lenses or adapters.</li>
-                        <li>Image quality matches the standard Pocket 4, but the framing flexibility is a game-changer for solo vloggers.</li>
+                        <li>Image quality matches the standard <a class="content-link" href="../reviews/dji-osmo-pocket-4-review.html">Pocket 4</a>, but the framing flexibility is a game-changer for solo vloggers.</li>
                         <li>Battery life remains excellent at ~110 minutes, though the dual-sensor array generates slightly more heat.</li>
                         <li>If you primarily shoot vertical content for social media, the standard Pocket 4 is still the better value.</li>
                     </ul>
                 </div>
                 <p>DJI’s Pocket line has dominated the travel vlogging space for years, but the introduction of the <strong>Osmo Pocket 4P</strong> marks a significant shift. By integrating a dual-camera system into the same pocketable form factor, DJI is directly addressing the biggest limitation of the original Pocket design: fixed focal length. We took the 4P on a two-week European city break to see if the extra lens justifies the price premium.</p>
+                
+                <!-- STANDARDIZED SPEC SHEET -->
+                <div class="spec-sheet" id="specs">
+                    <h4>📸 Camera Specifications</h4>
+                    <div class="spec-item">
+                        <span class="spec-label">Price</span>
+                        <span class="spec-value"><span class="highlight">~$649</span></span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Sensor</span>
+                        <span class="spec-value">1-inch Dual (Wide + Ultrawide)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Max Video Resolution</span>
+                        <span class="spec-value">4K at 60fps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Weight</span>
+                        <span class="spec-value">195g</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Battery Life</span>
+                        <span class="spec-value">~110 minutes</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Waterproof</span>
+                        <span class="spec-value">❌ No (weather cover available)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Stabilisation</span>
+                        <span class="spec-value">3-axis Mechanical Gimbal</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Screen</span>
+                        <span class="spec-value">Articulating Touchscreen</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Audio</span>
+                        <span class="spec-value">3 Mics + <a class="content-link" href="../reviews/dji-mic-2-review.html">DJI Mic 2</a> compatible</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Storage</span>
+                        <span class="spec-value">MicroSD Support</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Best For</span>
+                        <span class="spec-value">Solo travel vloggers, tight spaces</span>
+                    </div>
+                </div>
+
                 <h2 id="whats-new">What's New in the 4P?</h2>
-                <p>The Pocket 4P retains the beloved 1-inch sensor and 3-axis mechanical gimbal of its predecessor but adds a secondary 120° ultrawide lens. This allows creators to switch between a natural 24mm equivalent for standard vlogging and an immersive 14mm equivalent for tight spaces, landscapes, or dynamic "follow-me" shots without changing hardware.</p>
+                <p>The Pocket 4P retains the beloved 1-inch sensor and 3-axis mechanical gimbal of its predecessor but adds a secondary 120° ultrawide lens. This allows creators to switch between a natural 24mm equivalent for standard vlogging and an immersive 14mm equivalent for tight spaces, landscapes, or dynamic "follow-me" shots without changing hardware. For more context on older generations, check our <a class="content-link" href="../reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3 Review</a>.</p>
+                
                 <h2 id="real-test">Real Test: The Second Lens — When Do You Actually Use It?</h2>
                 <p>During our trip through Prague and Vienna, the ultrawide lens proved invaluable in two specific scenarios: cramped cafe interiors and sweeping architectural shots. When filming a "walk and talk" through narrow cobblestone streets, the 14mm equivalent allowed us to capture both the subject and the surrounding environment without having to hold the camera at an awkward arm's length. However, for 80% of standard talking-head vlogs, the primary 24mm lens remains the go-to choice due to its more natural perspective and slightly better low-light performance.</p>
-                <h2 id="image-quality">Image Quality Comparison (Pocket 4 vs. Pocket 4P)</h2>
+                
+                <h2 id="image-quality">Image Quality Comparison</h2>
                 <p>In good lighting, the image quality between the standard Pocket 4 and the 4P is virtually indistinguishable. Both utilize the same 1-inch sensor technology, delivering excellent dynamic range and sharp 4K/60fps footage. However, in low-light scenarios (like evening street markets), the primary lens on the 4P maintains a slight edge over the ultrawide, which introduces minor noise at ISO 3200 and above. For most travel creators, this trade-off is entirely acceptable.</p>
+                
                 <h2 id="stabilization">Stabilisation & Gimbal Performance</h2>
-                <p>The 3-axis gimbal on the 4P is a masterpiece of engineering. Despite the addition of a second lens module, the stabilization remains buttery smooth. We tested it while walking briskly, riding bicycles, and even on a bumpy tram ride. The gimbal effortlessly corrected for pitch, roll, and yaw, producing footage that looked like it was shot on a professional Steadicam. The only minor drawback is that the gimbal takes about 2 seconds longer to initialize when switching between the two lenses.</p>
+                <p>The 3-axis gimbal on the 4P is a masterpiece of engineering. Despite the addition of a second lens module, the stabilization remains buttery smooth. We tested it while walking briskly, riding bicycles, and even on a bumpy tram ride. The gimbal effortlessly corrected for pitch, roll, and yaw, producing footage that looked like it was shot on a professional Steadicam. If you are looking for tips on achieving similar movement without hardware, read our guide on how to <a class="content-link" href="../how-to/stabilize-videos-without-gimbal.html">Stabilize Videos Without a Gimbal</a>.</p>
+                
                 <h2 id="audio">Audio & Vlogging Features</h2>
-                <p>Audio quality is solid, with improved wind noise reduction compared to the Pocket 3. However, for serious vloggers, pairing the 4P with the <a class="content-link" href="../reviews/dji-mic-2-review.html">DJI Mic 2</a> is still highly recommended. The 4P also features a fully articulating touchscreen, making it easy to frame shots from any angle, and supports direct vertical video recording, which is a massive time-saver for TikTok and Reels creators.</p>
+                <p>Audio quality is solid, with improved wind noise reduction compared to previous generations. However, for serious vloggers, pairing the 4P with the <a class="content-link" href="../reviews/dji-mic-2-review.html">DJI Mic 2</a> is still highly recommended. The 4P also features a fully articulating touchscreen, making it easy to frame shots from any angle, and supports direct vertical video recording, which is a massive time-saver for TikTok and Reels creators.</p>
+                
                 <h2 id="battery">Battery Life & Charging</h2>
-                <p>Battery life is impressive, clocking in at around 110 minutes of continuous 4K/30fps recording. This is slightly less than the standard Pocket 4 (116 minutes) due to the power draw of the dual-sensor array, but the difference is negligible in real-world use. The camera supports fast charging via USB-C, reaching 80% in just 30 minutes, which is perfect for quick top-ups between locations.</p>
-                <h2 id="comparison">Pocket 4P vs. Insta360 Luna Ultra (Comparison Table)</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>DJI Osmo Pocket 4P</th>
-                            <th>Insta360 Luna Ultra</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sensor</td>
-                            <td>1-inch Dual (Wide + Ultrawide)</td>
-                            <td>1-inch 8K CMOS</td>
-                        </tr>
-                        <tr>
-                            <td>Stabilization</td>
-                            <td>3-axis Mechanical Gimbal</td>
-                            <td>3-axis Mechanical Gimbal</td>
-                        </tr>
-                        <tr>
-                            <td>Max Video</td>
-                            <td>4K/60fps</td>
-                            <td>8K/30fps</td>
-                        </tr>
-                        <tr>
-                            <td>Screen</td>
-                            <td>Articulating Touchscreen</td>
-                            <td>Detachable Wireless Monitor</td>
-                        </tr>
-                        <tr>
-                            <td>Weight</td>
-                            <td>195g</td>
-                            <td>210g</td>
-                        </tr>
-                        <tr>
-                            <td>Price</td>
-                            <td>$649</td>
-                            <td>$799</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h2 id="who-should-buy">Who Should Buy the 4P? (vs. standard Pocket 4)</h2>
-                <p>The <strong>DJI Osmo Pocket 4P</strong> is the ideal choice for solo travel vloggers who frequently shoot in tight spaces or want the flexibility of an ultrawide lens without carrying extra gear. If you primarily shoot standard talking-head videos or vertical content for social media, the standard <a class="content-link" href="../reviews/dji-osmo-pocket-4-review.html">Pocket 4</a> offers better value. However, for creators who demand maximum versatility in a pocketable package, the 4P is worth every penny.</p>
+                <p>Battery life is impressive, clocking in at around 110 minutes of continuous recording. This is slightly less than the standard Pocket 4 due to the power draw of the dual-sensor array, but the difference is negligible in real-world use. The camera supports fast charging via USB-C, reaching 80% in just 30 minutes, which is perfect for quick top-ups between locations.</p>
+                
+                <h2 id="comparison">Pocket 4P vs. Competitors Comparison</h2>
+                
+                <!-- COMPARISON TABLE WRAPPER -->
+                <div class="compare-table-wrap">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>DJI Osmo Pocket 4P</th>
+                                <th>Insta360 Luna Ultra</th>
+                                <th>Sony ZV-E10 II</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-label">Price</td>
+                                <td>~$649</td>
+                                <td>~$799</td>
+                                <td>~$998</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Sensor</td>
+                                <td class="winner">1-inch Dual (Wide + Ultrawide)</td>
+                                <td>1-inch 8K CMOS</td>
+                                <td>APS-C (Exmor R)</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Max Video</td>
+                                <td>4K/60fps</td>
+                                <td class="winner">8K/30fps</td>
+                                <td>4K/60fps</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Weight</td>
+                                <td class="winner">195g</td>
+                                <td>210g</td>
+                                <td>~470g</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Battery Life</td>
+                                <td>~110 min</td>
+                                <td>~240 min</td>
+                                <td>~150 min</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Waterproof</td>
+                                <td>❌ No</td>
+                                <td>✅ Water-resistant</td>
+                                <td>❌ No</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Stabilisation</td>
+                                <td class="winner">3-axis Mechanical Gimbal</td>
+                                <td>3-axis Mechanical Gimbal</td>
+                                <td>Digital (IBIS)</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Screen</td>
+                                <td>Articulating Touchscreen</td>
+                                <td class="winner">Detachable Wireless Monitor</td>
+                                <td>3" Vari-angle</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Audio</td>
+                                <td>3 Mics</td>
+                                <td>3 Mics + Wireless</td>
+                                <td class="winner">3-Capsule Mic + Input</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Storage</td>
+                                <td class="winner">MicroSD Support</td>
+                                <td>SD Card Only</td>
+                                <td>SD Card Only</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Best For</td>
+                                <td>Solo travel vloggers, tight spaces</td>
+                                <td>Solo creators, 8K</td>
+                                <td>Content creators, pros</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:0.85em; color:#666; text-align:right;">Data based on real travel testing. Prices approximate.</p>
+
+                <h2 id="who-should-buy">Who Should Buy the 4P?</h2>
+                <p>The <strong>DJI Osmo Pocket 4P</strong> is the ideal choice for solo travel vloggers who frequently shoot in tight spaces or want the flexibility of an ultrawide lens without carrying extra gear. If you primarily shoot standard talking-head videos or vertical content for social media, the standard <a class="content-link" href="../reviews/dji-osmo-pocket-4-review.html">Pocket 4</a> offers better value. For broader context on holiday gear, browse our main roundup of the <a class="content-link" href="../guides/best-holiday-video-cameras-2026.html">Best Holiday Video Cameras of 2026</a>.</p>
+                
                 <h2 id="faq">Frequently Asked Questions</h2>
                 <div class="faq-item">
                     <h3 class="faq-question">Can I use the ultrawide lens for vertical video?</h3>
@@ -261,9 +454,9 @@
                         <h4>DJI Osmo Pocket 3 Review</h4>
                         <p>Our full review of the previous generation flagship.</p>
                     </a>
-                    <a class="related-card" href="../reviews/insta360-luna-ultra-review.html">
-                        <h4>Insta360 Luna Ultra Review</h4>
-                        <p>The main competitor to the Pocket 4P.</p>
+                    <a class="related-card" href="../reviews/insta360-x5-review.html">
+                        <h4>Insta360 X5 Review</h4>
+                        <p>The ultimate 360 camera for immersive travel footage.</p>
                     </a>
                     <a class="related-card" href="../guides/best-compact-cameras-city-breaks.html">
                         <h4>Best Compact Cameras for City Breaks</h4>
