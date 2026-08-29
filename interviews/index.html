@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interviews: Travel Filmmakers & Gear Stress Tests | Holiday Video Camera</title>
+    <meta name="description" content="In-depth interviews with local videographers from 50 global cities, plus exclusive gear stress-test diaries like the Insta360 X5 20-City World Tour. Real talk, no fluff.">
+    <meta name="keywords" content="travel filmmaker interviews, City Through the Lens, Insta360 X5 interview, travel videography podcast, filmmaking career interviews">
+    <meta property="og:title" content="Interviews: Travel Filmmakers & Gear Stress Tests">
+    <meta property="og:description" content="Conversations with local creators in 50 cities, and raw field-test diaries of camera gear pushed to its absolute limits around the world.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/interviews/">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/interviews/">
+
+    <!-- ============ SCHEMA MARKUP ============ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://dawidmillenium-design.github.io/VideoCameraHoliday/interviews/#page",
+          "name": "Interviews: Travel Filmmakers & Gear Stress Tests",
+          "description": "Hub for filmmaker interviews and gear stress-test diaries on Holiday Video Camera.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Holiday Video Camera",
+            "logo": { "@type": "ImageObject", "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/images/logo.png" }
+          }
+        },
+        {
+          "@type": "ItemList",
+          "name": "Featured Interview Series",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/interviews/insta360-x5-20-cities-world-tour",
+              "name": "The Insta360 X5 World Tour: 20 Cities, 5 Continents"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/interviews/insta360-x5-global-trip-interview",
+              "name": "Taking the Insta360 X5 Around the World (Original 12-City Interview)"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-lens",
+              "name": "City Through the Lens: 50 Local Filmmakers"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #2a2a2a; background: #f8f9fa; }
+        
+        /* Header */
+        header { background: #1a1a1a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; }
+        .logo span { color: #3f51b5; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #7986cb; }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0d1117 0%, #1a237e 50%, #3f51b5 100%);
+            color: white; padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(121,134,203,0.3) 0%, transparent 50%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+        .hero .tag { display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
+        .hero-stats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .stat-number { font-size: 2.2rem; font-weight: 700; color: #9fa8da; display: block; }
+        .stat-label { font-size: 0.85rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Main Content */
+        main { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        .section-header { margin-bottom: 2.5rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 1rem; }
+        .section-header h2 { font-size: 1.8rem; color: #1a237e; margin-bottom: 0.5rem; }
+        .section-header p { color: #666; font-size: 1.05rem; }
+
+        /* Card Grid */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 5rem; }
+        .card {
+            background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #eee; display: flex; flex-direction: column;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .card-image { height: 180px; background: #e0e0e0; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #999; position: relative; }
+        .card-image.x5-tour { background: linear-gradient(135deg, #b71c1c, #e53935); color: white; }
+        .card-image.x5-orig { background: linear-gradient(135deg, #4a0e0e, #b71c1c); color: white; }
+        .card-image.city-lens { background: linear-gradient(135deg, #1a237e, #3f51b5); color: white; }
+        .card-image.gear { background: linear-gradient(135deg, #004d40, #00897b); color: white; }
+        
+        .card-badge { position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.6); color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+        .card-body h3 { font-size: 1.25rem; margin-bottom: 0.8rem; color: #1a1a1a; line-height: 1.3; }
+        .card-body p { color: #555; font-size: 0.95rem; margin-bottom: 1.5rem; flex: 1; }
+        .card-link { color: #3f51b5; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.3s; }
+        .card-link:hover { gap: 0.8rem; }
+
+        /* City Through the Lens Feature */
+        .flagship-feature {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white; border-radius: 16px; padding: 3rem; margin-bottom: 5rem; position: relative; overflow: hidden;
+        }
+        .flagship-feature::after {
+            content: '🌍'; position: absolute; right: -20px; bottom: -40px; font-size: 15rem; opacity: 0.05; transform: rotate(-15deg);
+        }
+        .flagship-feature h2 { font-size: 2rem; margin-bottom: 1rem; position: relative; z-index: 1; }
+        .flagship-feature .lead { font-size: 1.15rem; opacity: 0.9; margin-bottom: 2rem; max-width: 700px; position: relative; z-index: 1; }
+        
+        .city-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; position: relative; z-index: 1; }
+        .city-card {
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 1.2rem;
+            transition: background 0.3s;
+        }
+        .city-card:hover { background: rgba(255,255,255,0.15); }
+        .city-card h4 { font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .city-card .quote { font-size: 0.85rem; font-style: italic; opacity: 0.8; margin-bottom: 0.8rem; line-height: 1.5; }
+        .city-card .read-more { font-size: 0.8rem; color: #9fa8da; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        .btn-primary {
+            display: inline-block; background: #ff9800; color: #1a1a1a; padding: 0.8rem 2rem; border-radius: 6px;
+            text-decoration: none; font-weight: 700; margin-top: 2rem; transition: background 0.3s; position: relative; z-index: 1;
+        }
+        .btn-primary:hover { background: #ffb74d; }
+
+        /* Newsletter & Footer */
+        .newsletter-hub { background: #fff; border: 2px solid #e0e0e0; border-radius: 12px; padding: 3rem; text-align: center; margin-bottom: 4rem; }
+        .newsletter-hub h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #1a237e; }
+        .newsletter-hub p { color: #666; margin-bottom: 1.5rem; }
+        .newsletter-form { display: flex; max-width: 400px; margin: 0 auto; gap: 0.5rem; }
+        .newsletter-form input { flex: 1; padding: 0.8rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+        .newsletter-form button { background: #3f51b5; color: white; border: none; padding: 0 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+        .newsletter-form button:hover { background: #283593; }
+
+        footer { background: #1a1a1a; color: white; padding: 3rem 2rem; margin-top: 0; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #7986cb; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: #ccc; text-decoration: none; display: block; padding: 0.3rem 0; }
+        .footer-section a:hover { color: #9fa8da; }
+        .affiliate-disclosure { text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid #333; font-size: 0.85rem; color: #888; max-width: 1200px; margin-left: auto; margin-right: auto; }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #1a1a1a; padding: 1rem 2rem; }
+            nav ul.active { display: flex; }
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { gap: 1.5rem; }
+            main { padding: 2rem 1rem; }
+            .flagship-feature { padding: 2rem 1.5rem; }
+            .newsletter-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">Holiday<span>Video</span>Camera</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="/reviews">🎥 Camera Reviews</a></li>
+                    <li><a href="/buying-guides">🛒 Buying Guides</a></li>
+                    <li><a href="/how-to">🎬 How-To Guides</a></li>
+                    <li><a href="/destinations">🏖️ Destinations</a></li>
+                    <li><a href="/editing">✂️ Editing</a></li>
+                    <li><a href="/interviews" class="active">🎙️ Interviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <span class="tag">🎙️ The Interview Hub</span>
+            <h1>Real Conversations with Real Filmmakers</h1>
+            <p>No fluff, no sponsored talking points. Just honest conversations with local creators from around the world, and raw field-test diaries of gear pushed to its absolute limits.</p>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">50</span><span class="stat-label">Cities Interviewed</span></div>
+                <div class="stat"><span class="stat-number">100+</span><span class="stat-label">Hours Recorded</span></div>
+                <div class="stat"><span class="stat-number">3</span><span class="stat-label">Continents Covered</span></div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Featured Series: X5 World Tour -->
+        <section>
+            <div class="section-header">
+                <h2>Featured Series: The Gear Stress-Test Diaries</h2>
+                <p>What happens when you take one camera across 5 continents and refuse to baby it? Read the unfiltered field diaries.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-image x5-tour">
+                        <span class="card-badge">Latest</span>
+                        🌍
+                    </div>
+                    <div class="card-body">
+                        <h3>The Insta360 X5 World Tour: 20 Cities, 5 Continents</h3>
+                        <p>From a Bangkok earthquake to police at the Macao border. The extended 20-city interview covering heat shutdowns, 999-hour uploads, and the cities where the camera thrived.</p>
+                        <a href="/interviews/insta360-x5-20-cities-world-tour" class="card-link">Read the 20-City Tour →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image x5-orig">
+                        <span class="card-badge">Original</span>
+                        🎒
+                    </div>
+                    <div class="card-body">
+                        <h3>Taking the X5 Around the World (12-City Interview)</h3>
+                        <p>The original Q&A. Buying the camera after an earthquake, the Nairobi internet problem, Rio's heat, and the infamous 999-hour cloud upload error.</p>
+                        <a href="/interviews/insta360-x5-global-trip-interview" class="card-link">Read the Original Interview →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image gear">
+                        <span class="card-badge">Written Review</span>
+                        📊
+                    </div>
+                    <div class="card-body">
+                        <h3>Insta360 X5 Global Field Test (Full Article)</h3>
+                        <p>Prefer reading over Q&A? Here is the complete, data-driven written review of the 12-country stress test, including the location comparison table and final verdict.</p>
+                        <a href="/reviews/insta360-x5-global-field-test" class="card-link">Read the Field Test →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flagship: City Through the Lens -->
+        <section class="flagship-feature">
+            <h2>🌍 City Through the Lens: The 50-Part Series</h2>
+            <p class="lead">Our flagship interview project. We sit down with local videographers in the world's biggest cities to ask one question: <em>"How do you actually film your home?"</em> No tourist perspectives, just local reality.</p>
+            
+            <div class="city-grid">
+                <div class="city-card">
+                    <h4>🇯🇵 Tokyo</h4>
+                    <p class="quote">"I sent 200 cold emails before my first 'yes.' Now reputation does the work."</p>
+                    <a href="/city-through-lens/tokyo" class="read-more">Interview with Yuki →</a>
+                </div>
+                <div class="city-card">
+                    <h4>🇵🇹 Lisbon</h4>
+                    <p class="quote">"I shot my first paid gig on a 4-year-old phone. The client cared about the result."</p>
+                    <a href="/city-through-lens/lisbon" class="read-more">Interview with Marco →</a>
+                </div>
+                <div class="city-card">
+                    <h4>🇲🇦 Marrakech</h4>
+                    <p class="quote">"Stop trying to be a 'travel filmmaker.' Be a filmmaker who specializes in food."</p>
+                    <a href="/city-through-lens/marrakech" class="read-more">Interview with Amara →</a>
+                </div>
+                <div class="city-card">
+                    <h4>🇲🇽 Mexico City</h4>
+                    <p class="quote">"Your first 100 videos will be bad. That's not failure, that's tuition."</p>
+                    <a href="/city-through-lens/mexico-city" class="read-more">Interview with Carlos →</a>
+                </div>
+            </div>
+            <a href="/city-through-lens" class="btn-primary">Explore All 50 Cities</a>
+        </section>
+
+        <!-- Upcoming / Teasers -->
+        <section>
+            <div class="section-header">
+                <h2>Upcoming Conversations</h2>
+                <p>What we're currently editing and preparing for the hub.</p>
+            </div>
+            <div class="card-grid">
+                <div class="card" style="opacity: 0.8;">
+                    <div class="card-image" style="background: #333; color: #777;">🎙️</div>
+                    <div class="card-body">
+                        <h3>Editing on the Road: Hotel WiFi & 4K Files</h3>
+                        <p>A roundtable with 3 digital nomad editors on how they manage massive timelines without a desktop rig. Coming next month.</p>
+                        <span class="card-link" style="color: #999; cursor: default;">Coming Soon</span>
+                    </div>
+                </div>
+                <div class="card" style="opacity: 0.8;">
+                    <div class="card-image" style="background: #333; color: #777;">🎙️</div>
+                    <div class="card-body">
+                        <h3>The Ethics of Filming Strangers Abroad</h3>
+                        <p>A candid discussion on consent, cultural differences, and the "street photography" rules that apply to video. Coming next month.</p>
+                        <span class="card-link" style="color: #999; cursor: default;">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-hub">
+            <h3>📬 Get Field Notes & Interview Drops</h3>
+            <p>Join 5,000+ travelers. We send one email a week with our latest interviews, gear deals, and unfiltered field notes.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed! (Demo)');">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="/reviews">🎥 Camera Reviews</a></li>
+                    <li><a href="/buying-guides">🛒 Buying Guides</a></li>
+                    <li><a href="/how-to">🎬 How-To Guides</a></li>
+                    <li><a href="/destinations">🏖️ Destinations</a></li>
+                    <li><a href="/editing">✂️ Editing</a></li>
+                    <li><a href="/interviews">🎙️ Interviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Flagship Series</h3>
+                <ul>
+                    <li><a href="/city-through-lens">🌍 City Through the Lens (50 Cities)</a></li>
+                    <li><a href="/interviews/insta360-x5-20-cities-world-tour">🎒 X5 20-City World Tour</a></li>
+                    <li><a href="/best-holiday-cameras-2026">🏆 Best Cameras of 2026</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="/about">Dawid Millennium</a></li>
+                    <li><a href="/contact">Contact & Pitch</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="affiliate-disclosure">
+            <p>Some buying guides on this site contain affiliate links. If you buy through them we may earn a commission at no extra cost to you. Our rankings are based on real travel testing.</p>
+            <p>&copy; 2026 Holiday Video Camera | Dawid Millennium — Travel Videographer & Founder</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
