@@ -26,9 +26,9 @@ jobs:
         env:
           # if you want to override default seed, you can set env vars in the script to read from
           # (not required if site_crawler.py has correct seed)
-          # SITE_DOMAIN: dawidmillenium-design.github.io
-          # SITE_PATH_PREFIX: /VideoCameraHoliday
-          :
+          SITE_DOMAIN: dawidmillenium-design.github.io
+          SITE_PATH_PREFIX: /VideoCameraHoliday
+         
 
       - name: Upload reports as artifact
         uses: actions/upload-artifact@v4
