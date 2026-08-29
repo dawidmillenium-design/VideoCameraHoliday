@@ -89,3 +89,13 @@ Quick Reference — All 8 Articles
 16	Best Camera for Iceland	best-camera-for-iceland-travel-guide-2026.html
 17	Sustainable Travel Filmmaking	sustainable-travel-filmmaking-eco-friendly-guide-2026.html
 18	Travel Filmmaking Insurance	travel-filmmaking-insurance-protect-gear-2026.html
+
+
+
+📁 Quick Reference — All 6 Final Articles
+19	Underwater Filmmaking for Beginners	underwater-filmmaking-beginners-guide-2026.html
+20	Timelapse & Hyperlapse for Travel	timelapse-hyperlapse-travel-guide-2026.html
+21	Best Camera for Southeast Asia	best-camera-for-southeast-asia-guide-2026.html
+22	Best Camera for US National Parks	best-camera-for-us-national-parks-guide-2026.html
+23	How to Recover Lost or Corrupted Footage	recover-lost-corrupted-travel-footage-guide-2026.html
+24	Camera Gear Maintenance	camera-gear-maintenance-tips-guide-2026.html
