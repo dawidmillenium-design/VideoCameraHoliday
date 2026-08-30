@@ -66,20 +66,24 @@
     .footer-bottom a { color: #e94560; }
     @media (max-width: 768px) { h1 { font-size: 1.8rem; } .footer-container { grid-template-columns: 1fr 1fr; } }
     </style>
+
+    <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="nav-container">
-            <a href="../" class="logo">📹 Holiday Video Camera</a>
-            <ul class="nav-links">
-                <li><a href="../">Home</a></li>
-                <li><a href="../reviews/">Reviews</a></li>
-                <li><a href="../guides/">Guides</a></li>
-                <li><a href="../how-to/">How-To</a></li>
-                <li><a href="../about/">About</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav class="top-nav" aria-label="Primary navigation">
+  <div class="nav-container">
+    <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a data-section="home" href="/VideoCameraHoliday/">Home</a></li>
+      <li><a data-section="city-through-the-lens" href="/VideoCameraHoliday/city-through-the-lens/">Series</a></li>
+      <li><a data-section="reviews" href="/VideoCameraHoliday/reviews/">Reviews</a><ul class="dropdown-menu"><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></li>
+      <li><a data-section="guides" href="/VideoCameraHoliday/guides/">Buying Guides</a><ul class="dropdown-menu"><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li></ul></li>
+      <li><a data-section="how-to" href="/VideoCameraHoliday/how-to/">How-To</a></li><li><a data-section="destinations" href="/VideoCameraHoliday/destinations/">Destinations</a></li><li><a data-section="editing" href="/VideoCameraHoliday/editing/">Editing</a></li><li><a data-section="comparisons" href="/VideoCameraHoliday/comparisons/">Comparisons</a></li><li><a data-section="about" href="/VideoCameraHoliday/about/">About</a></li>
+    </ul>
+  </div>
+</nav>
+    
     <main class="container">
         <article>
             <div class="article-meta" style="color: #888; font-size: 0.9rem; margin-bottom: 10px;">
@@ -193,13 +197,16 @@
             </section>
         </article>
     </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-section"><h4>How-To</h4><ul><li><a href="../how-to/edit-travel-videos-phone-tablet.html">Edit on Phone</a></li><li><a href="../how-to/iphone-16-pro-video-workflow.html">iPhone Workflow</a></li></ul></div>
-            <div class="footer-section"><h4>Reviews</h4><ul><li><a href="../reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li></ul></div>
-            <div class="footer-section"><h4>About</h4><ul><li><a href="../about/">About Us</a></li><li><a href="../">Home</a></li></ul></div>
-        </div>
-        <div class="footer-bottom"><p>© 2026 <a href="../">Holiday Video Camera</a> — Real travel camera testing.</p></div>
-    </footer>
+    
+<footer class="site-footer">
+  <div class="footer-container">
+    <section class="footer-section"><h4>Series</h4><ul><li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li><li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li></ul></section>
+    <section class="footer-section"><h4>Guides</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Cameras Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li></ul></section>
+    <section class="footer-section"><h4>Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></section>
+    <section class="footer-section"><h4>About</h4><ul><li><a href="/VideoCameraHoliday/about/">About Us</a></li><li><a href="/VideoCameraHoliday/">Home</a></li><li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li></ul></section>
+  </div>
+  <div class="footer-bottom"><p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p></div>
+</footer>
+<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
 </body>
 </html>
