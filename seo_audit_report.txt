@@ -1,0 +1,1097 @@
+SEO AUDIT REPORT
+========================================================================================================================
+
+1. filming-in-rain-bad-weather-protect-gear-2026.html
+   On-Page SEO Score: 85/100
+   Title Length: 60 chars
+   Meta Description Length: 109 chars
+   H1: 1 | H2: 5 | H3: 0
+   Word Count: 829
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: Meta description too short (109 chars); No schema markup detected
+   Top Recommendations: Expand meta description to 150-160 characters; Add structured data (schema.org) markup
+
+2. insta360-ace-pro-3-review.html
+   On-Page SEO Score: 85/100
+   Title Length: 60 chars
+   Meta Description Length: 114 chars
+   H1: 1 | H2: 8 | H3: 5
+   Word Count: 1738
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: Meta description too short (114 chars); No schema markup detected
+   Top Recommendations: Expand meta description to 150-160 characters; Add structured data (schema.org) markup
+
+3. sell-travel-stock-footage-2026.html
+   On-Page SEO Score: 85/100
+   Title Length: 60 chars
+   Meta Description Length: 109 chars
+   H1: 1 | H2: 6 | H3: 10
+   Word Count: 2111
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: Meta description too short (109 chars); No schema markup detected
+   Top Recommendations: Expand meta description to 150-160 characters; Add structured data (schema.org) markup
+
+4. canon-eos-r50-v-creator-kit-test.html
+   On-Page SEO Score: 85/100
+   Title Length: 60 chars
+   Meta Description Length: 119 chars
+   H1: 1 | H2: 10 | H3: 6
+   Word Count: 2084
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: Meta description too short (119 chars); No schema markup detected
+   Top Recommendations: Expand meta description to 150-160 characters; Add structured data (schema.org) markup
+
+5. canon-g7x-mark-iv-review.html
+   On-Page SEO Score: 85/100
+   Title Length: 60 chars
+   Meta Description Length: 111 chars
+   H1: 1 | H2: 8 | H3: 5
+   Word Count: 1721
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: Meta description too short (111 chars); No schema markup detected
+   Top Recommendations: Expand meta description to 150-160 characters; Add structured data (schema.org) markup
+
+6. drone-laws-by-country-travel-guide.html
+   On-Page SEO Score: 85/100
+   Title Length: 60 chars
+   Meta Description Length: 109 chars
+   H1: 1 | H2: 8 | H3: 6
+   Word Count: 2107
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: Meta description too short (109 chars); No schema markup detected
+   Top Recommendations: Expand meta description to 150-160 characters; Add structured data (schema.org) markup
+
+7. index2.html
+   On-Page SEO Score: 90/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 2 | H2: 5 | H3: 10
+   Word Count: 1784
+   Images: 0 (missing alt: 0)
+   Internal Links: 44 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+   Issues: Multiple H1 tags found (2)
+   Top Recommendations: Use only one H1 tag per page
+
+8. best-cameras-fall-travel-photography.html
+   On-Page SEO Score: 90/100
+   Title Length: 60 chars
+   Meta Description Length: 177 chars
+   H1: 1 | H2: 4 | H3: 11
+   Word Count: 1954
+   Images: 0 (missing alt: 0)
+   Internal Links: 67 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: Meta description too long (177 chars); No schema markup detected
+   Top Recommendations: Shorten meta description to 150-160 characters; Add structured data (schema.org) markup
+
+9. best-compact-cameras-travel.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 9 | H3: 6
+   Word Count: 1951
+   Images: 0 (missing alt: 0)
+   Internal Links: 65 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+10. best-travel-tripods-stabilizers-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 148 chars
+   H1: 1 | H2: 5 | H3: 0
+   Word Count: 959
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+11. dubai-traveler-interview.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 133 chars
+   H1: 1 | H2: 8 | H3: 6
+   Word Count: 1420
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+12. drone-laws-for-travelers-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 147 chars
+   H1: 1 | H2: 3 | H3: 5
+   Word Count: 819
+   Images: 0 (missing alt: 0)
+   Internal Links: 17 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+13. vertical-video-settings-travel.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 11 | H3: 6
+   Word Count: 2066
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+14. new-york-traveler-interview.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 7 | H3: 6
+   Word Count: 1525
+   Images: 0 (missing alt: 0)
+   Internal Links: 66 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+15. travel-vlog-seo-titles-tags-thumbnails.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 138 chars
+   H1: 1 | H2: 10 | H3: 7
+   Word Count: 1915
+   Images: 0 (missing alt: 0)
+   Internal Links: 68 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+16. sony-zv-e10-ii-night-market-test.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 10 | H3: 6
+   Word Count: 1938
+   Images: 0 (missing alt: 0)
+   Internal Links: 65 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+17. dji-osmo-pocket-4-vs-insta360-luna-ultra.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 5 | H3: 7
+   Word Count: 2049
+   Images: 0 (missing alt: 0)
+   Internal Links: 63 | External Links: 2
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+18. budget-vs-premium-travel-cameras.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 11 | H3: 7
+   Word Count: 1974
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+19. camera-gear-maintenance-tips-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 148 chars
+   H1: 1 | H2: 5 | H3: 0
+   Word Count: 887
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+20. dji-osmo-action-5-pro-adventure-test.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 11 | H3: 6
+   Word Count: 2099
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+21. fujifilm-x-t6-review.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 7 | H3: 5
+   Word Count: 2003
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 2
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+22. best-camera-for-southeast-asia-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 130 chars
+   H1: 1 | H2: 4 | H3: 0
+   Word Count: 793
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+23. best-wireless-microphones-travel-vlogging-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 58 chars
+   Meta Description Length: 145 chars
+   H1: 1 | H2: 6 | H3: 2
+   Word Count: 862
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+24. dji-osmo-pocket-4p-review.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 151 chars
+   H1: 1 | H2: 10 | H3: 5
+   Word Count: 2180
+   Images: 0 (missing alt: 0)
+   Internal Links: 67 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+25. best-video-camera-family-holiday-fun.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 151 chars
+   H1: 1 | H2: 6 | H3: 22
+   Word Count: 3255
+   Images: 0 (missing alt: 0)
+   Internal Links: 71 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+26. best-travel-mirrorless-cameras-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 155 chars
+   H1: 1 | H2: 8 | H3: 5
+   Word Count: 1569
+   Images: 0 (missing alt: 0)
+   Internal Links: 65 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+27. dji-osmo-action-6-vs-gopro-mission-1-pro.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 155 chars
+   H1: 1 | H2: 7 | H3: 5
+   Word Count: 1950
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 2
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+28. recover-lost-corrupted-travel-footage-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 154 chars
+   H1: 1 | H2: 5 | H3: 0
+   Word Count: 905
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+29. iphone-16-pro-video-workflow.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 142 chars
+   H1: 1 | H2: 6 | H3: 12
+   Word Count: 1416
+   Images: 0 (missing alt: 0)
+   Internal Links: 15 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+30. panasonic-lumix-s9-ii-review.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 6 | H3: 5
+   Word Count: 1945
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 2
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+31. best-cameras-theme-parks-disney.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 8 | H3: 11
+   Word Count: 2504
+   Images: 0 (missing alt: 0)
+   Internal Links: 70 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+32. best-camera-for-iceland-travel-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 159 chars
+   H1: 1 | H2: 4 | H3: 0
+   Word Count: 781
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+33. how-to-travel-with-camera-gear-on-plane-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 140 chars
+   H1: 1 | H2: 6 | H3: 0
+   Word Count: 817
+   Images: 0 (missing alt: 0)
+   Internal Links: 17 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+34. best-cameras-theme-parks.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 147 chars
+   H1: 1 | H2: 6 | H3: 5
+   Word Count: 1561
+   Images: 0 (missing alt: 0)
+   Internal Links: 24 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+35. tokyo-traveler-interview.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 155 chars
+   H1: 1 | H2: 7 | H3: 7
+   Word Count: 1583
+   Images: 0 (missing alt: 0)
+   Internal Links: 69 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+36. free-luts-color-grading-travel-videos-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 136 chars
+   H1: 1 | H2: 5 | H3: 3
+   Word Count: 826
+   Images: 0 (missing alt: 0)
+   Internal Links: 17 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+37. cultural-etiquette-filming-locals-travel-vloggers-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 6 | H3: 0
+   Word Count: 868
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+38. gopro-hero-13-vs-dji-action-6-vs-inst360-ace-pro-2-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 149 chars
+   H1: 1 | H2: 2 | H3: 0
+   Word Count: 844
+   Images: 0 (missing alt: 0)
+   Internal Links: 17 | External Links: 3
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+39. film-in-harsh-sunlight.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 153 chars
+   H1: 1 | H2: 11 | H3: 6
+   Word Count: 1953
+   Images: 0 (missing alt: 0)
+   Internal Links: 63 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+40. solo-travel-accessory-kit-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 2 | H3: 10
+   Word Count: 1695
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+41. best-camera-desert-dusty-conditions.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 152 chars
+   H1: 1 | H2: 9 | H3: 6
+   Word Count: 2038
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+42. best-camera-for-us-national-parks-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 143 chars
+   H1: 1 | H2: 4 | H3: 0
+   Word Count: 769
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+43. Camera-Southeast-Asia-Humidity.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 8 | H3: 15
+   Word Count: 1796
+   Images: 0 (missing alt: 0)
+   Internal Links: 23 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+44. pov-story-time-travel-video-format.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 149 chars
+   H1: 1 | H2: 10 | H3: 6
+   Word Count: 2155
+   Images: 0 (missing alt: 0)
+   Internal Links: 63 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+45. canon-g7x-iv-vs-panasonic-tz300-vs-dji-pocket-3-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 158 chars
+   H1: 1 | H2: 2 | H3: 0
+   Word Count: 871
+   Images: 0 (missing alt: 0)
+   Internal Links: 17 | External Links: 3
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+46. insta360-go-3s-pov-test.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 10 | H3: 6
+   Word Count: 2068
+   Images: 0 (missing alt: 0)
+   Internal Links: 62 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+47. how-to-use-ai-auto-edit-holiday-footage-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 55 chars
+   Meta Description Length: 151 chars
+   H1: 1 | H2: 6 | H3: 0
+   Word Count: 914
+   Images: 0 (missing alt: 0)
+   Internal Links: 17 | External Links: 2
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+48. best-travel-cameras-2026-roundup.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 3 | H3: 14
+   Word Count: 2293
+   Images: 0 (missing alt: 0)
+   Internal Links: 68 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+49. best-travel-camera-bags-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 49 chars
+   Meta Description Length: 133 chars
+   H1: 1 | H2: 5 | H3: 2
+   Word Count: 942
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+50. filming-in-extreme-cold-camera-battery-tips-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 150 chars
+   H1: 1 | H2: 6 | H3: 0
+   Word Count: 851
+   Images: 0 (missing alt: 0)
+   Internal Links: 17 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+51. sell-travel-stock-footage.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 150 chars
+   H1: 1 | H2: 7 | H3: 5
+   Word Count: 1447
+   Images: 0 (missing alt: 0)
+   Internal Links: 15 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+52. ai-video-editing-travel-workflows.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 133 chars
+   H1: 1 | H2: 10 | H3: 6
+   Word Count: 2127
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+53. best-travel-camera-gifts-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 160 chars
+   H1: 1 | H2: 2 | H3: 11
+   Word Count: 1863
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+54. best-camera-european-night-markets.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 134 chars
+   H1: 1 | H2: 9 | H3: 6
+   Word Count: 2028
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+55. why-gimbal-cameras-took-over-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 8 | H3: 6
+   Word Count: 2004
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+56. sustainable-travel-filmmaking-eco-friendly-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 160 chars
+   H1: 1 | H2: 4 | H3: 0
+   Word Count: 794
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+57. best-pocket-gimbal-camera-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 6 | H3: 5
+   Word Count: 1499
+   Images: 0 (missing alt: 0)
+   Internal Links: 62 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+58. underwater-filmmaking-beginners-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 151 chars
+   H1: 1 | H2: 5 | H3: 0
+   Word Count: 822
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+59. best-drone-travel-videography-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 157 chars
+   H1: 1 | H2: 6 | H3: 10
+   Word Count: 1582
+   Images: 0 (missing alt: 0)
+   Internal Links: 62 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+60. audio-tips-noisy-locations.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 151 chars
+   H1: 1 | H2: 11 | H3: 6
+   Word Count: 2089
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+61. best-cameras-cruise-ship.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 130 chars
+   H1: 1 | H2: 6 | H3: 5
+   Word Count: 1362
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+62. london-traveler-interview.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 138 chars
+   H1: 1 | H2: 7 | H3: 7
+   Word Count: 1463
+   Images: 0 (missing alt: 0)
+   Internal Links: 68 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+63. advanced-travel-storytelling-structure-travel-vlog-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 3 | H3: 4
+   Word Count: 841
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+64. how-to-ai-auto-edit-holiday-footage.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 134 chars
+   H1: 1 | H2: 7 | H3: 12
+   Word Count: 2533
+   Images: 0 (missing alt: 0)
+   Internal Links: 61 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+65. how-to-film-yourself-solo-travel-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 158 chars
+   H1: 1 | H2: 4 | H3: 3
+   Word Count: 824
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+66. dji-pocket-4-vs-instal360-luna-ultra-vs-sony-zv-e10-ii-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 144 chars
+   H1: 1 | H2: 2 | H3: 0
+   Word Count: 888
+   Images: 0 (missing alt: 0)
+   Internal Links: 17 | External Links: 3
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+67. best-camera-southeast-asia.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 142 chars
+   H1: 1 | H2: 10 | H3: 6
+   Word Count: 2027
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+68. travel-camera-predictions-2027.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 151 chars
+   H1: 1 | H2: 9 | H3: 7
+   Word Count: 1904
+   Images: 0 (missing alt: 0)
+   Internal Links: 62 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+69. travel-filmmaking-insurance-protect-gear-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 155 chars
+   H1: 1 | H2: 5 | H3: 0
+   Word Count: 841
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 2
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+70. sony-a7cr-vs-fujifilm-x-t50.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 159 chars
+   H1: 1 | H2: 10 | H3: 7
+   Word Count: 2160
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 4
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+71. best-camera-hiking-holidays.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 153 chars
+   H1: 1 | H2: 7 | H3: 19
+   Word Count: 2221
+   Images: 0 (missing alt: 0)
+   Internal Links: 68 | External Links: 3
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+72. fujifilm-x-m5-travel-test.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 124 chars
+   H1: 1 | H2: 11 | H3: 6
+   Word Count: 1968
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+73. best-travel-camera-bags-hard-cases-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 7 | H3: 7
+   Word Count: 2345
+   Images: 0 (missing alt: 0)
+   Internal Links: 67 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+74. insta360-mirrorless-camera-2027.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 6 | H3: 7
+   Word Count: 1879
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+75. panasonic-lumix-tz300-review.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 168 chars
+   H1: 1 | H2: 8 | H3: 5
+   Word Count: 1714
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+76. best-nd-filters-polarizers-travel-video-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 58 chars
+   Meta Description Length: 148 chars
+   H1: 1 | H2: 5 | H3: 0
+   Word Count: 858
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+77. best-camera-for-japan-travel-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 129 chars
+   H1: 1 | H2: 4 | H3: 0
+   Word Count: 828
+   Images: 0 (missing alt: 0)
+   Internal Links: 18 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+78. best-wireless-microphones-travel-vlogging.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 8 | H3: 11
+   Word Count: 2431
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+79. film-sunsets-golden-hour.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 148 chars
+   H1: 1 | H2: 12 | H3: 6
+   Word Count: 2236
+   Images: 0 (missing alt: 0)
+   Internal Links: 60 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+80. best-cameras-cruise-ship-travel.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 7 | H3: 10
+   Word Count: 2263
+   Images: 0 (missing alt: 0)
+   Internal Links: 66 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+81. paris-traveler-interview.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 160 chars
+   H1: 1 | H2: 7 | H3: 6
+   Word Count: 1447
+   Images: 0 (missing alt: 0)
+   Internal Links: 64 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+82. best-portable-power-banks-chargers-travel-filmmakers-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 151 chars
+   H1: 1 | H2: 4 | H3: 0
+   Word Count: 837
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+83. insta360-x5-global-field-test.html
+   On-Page SEO Score: 95/100
+   Title Length: 60 chars
+   Meta Description Length: 171 chars
+   H1: 1 | H2: 11 | H3: 15
+   Word Count: 2933
+   Images: 0 (missing alt: 0)
+   Internal Links: 23 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+   Issues: Meta description too long (171 chars)
+   Top Recommendations: Shorten meta description to 150-160 characters
+
+84. timelapse-hyperlapse-travel-guide-2026.html
+   On-Page SEO Score: 95/100
+   Title Length: 57 chars
+   Meta Description Length: 130 chars
+   H1: 1 | H2: 6 | H3: 0
+   Word Count: 792
+   Images: 0 (missing alt: 0)
+   Internal Links: 16 | External Links: 1
+   Technical: Canonical=True, OG=True, Schema=False
+   Issues: No schema markup detected
+   Top Recommendations: Add structured data (schema.org) markup
+
+85. becoming-a-travel-filmmaker.html
+   On-Page SEO Score: 100/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 8 | H3: 12
+   Word Count: 3224
+   Images: 0 (missing alt: 0)
+   Internal Links: 37 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+
+86. insta360-x5-20-cities-world-tour.html
+   On-Page SEO Score: 100/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 9 | H3: 6
+   Word Count: 3739
+   Images: 0 (missing alt: 0)
+   Internal Links: 23 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+
+87. underwater_filming_travel_guide.html
+   On-Page SEO Score: 100/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 9 | H3: 18
+   Word Count: 2806
+   Images: 0 (missing alt: 0)
+   Internal Links: 29 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+
+88. insta360-x5-global-trip-interview.html
+   On-Page SEO Score: 100/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 7 | H3: 6
+   Word Count: 3307
+   Images: 0 (missing alt: 0)
+   Internal Links: 23 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+
+89. ai-color-grading-audio-cleanup.html
+   On-Page SEO Score: 100/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 9 | H3: 12
+   Word Count: 3158
+   Images: 0 (missing alt: 0)
+   Internal Links: 26 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+
+90. timelapse-hyperlapse-travel.html
+   On-Page SEO Score: 100/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 9 | H3: 16
+   Word Count: 2700
+   Images: 0 (missing alt: 0)
+   Internal Links: 27 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+
+91. gear-maintenance-field-cleaning.html
+   On-Page SEO Score: 100/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 8 | H3: 15
+   Word Count: 3400
+   Images: 0 (missing alt: 0)
+   Internal Links: 25 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+
+92. index.html
+   On-Page SEO Score: 100/100
+   Title Length: 60 chars
+   Meta Description Length: 156 chars
+   H1: 1 | H2: 3 | H3: 9
+   Word Count: 1519
+   Images: 0 (missing alt: 0)
+   Internal Links: 28 | External Links: 0
+   Technical: Canonical=True, OG=True, Schema=True
+
+
+========================================================================================================================
+SUMMARY
+Total Posts: 92
+Average Score: 94.7/100
+Excellent (90+): 86 | Good (75-89): 6 | Fair (60-74): 0 | Poor (<60): 0
