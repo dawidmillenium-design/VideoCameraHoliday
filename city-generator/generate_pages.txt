@@ -1,0 +1,250 @@
+﻿import json
+import os
+
+# Load city data
+with open('cities_data.json', 'r', encoding='utf-8') as f:
+    cities = json.load(f)
+
+# Base URL structure
+base_url = "https://dawidmillenium-design.github.io/VideoCameraHoliday"
+output_dir = "city-through-the-lens"
+
+# Create output directory if not exists
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# HTML Template Function
+def generate_html(city):
+    slug = city['city'].lower().replace(' ', '-')
+    title = f"{city['city']} Filming Guide: {city['camera']} in {city['challenge']}"
+    desc = f"Local {city['city']} videographer reveals exact {city['camera']} settings for shooting {city['attraction']} & {city['challenge']}. Permits, gear, and field-tested tips for filming in {city['country']}."
+    canonical = f"{base_url}/city-through-the-lens/{slug}-interview-preview.html"
+    
+    # Generate Location Cards
+    location_cards = ""
+    for loc in city['locations']:
+        location_cards += f"""
+        <div class="location-card">
+            <h3>{loc['name']}</h3>
+            <p>{loc['tip']}</p>
+        </div>
+        """
+
+    # Generate Coming Soon Questions
+    questions_list = "".join([f"<li>{q}</li>" for q in city['questions']])
+
+    html_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content="{desc}" />
+    <meta name="author" content="Dawid Millennium" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="{canonical}" />
+    <meta property="og:title" content="{title}" />
+    <meta property="og:description" content="{desc}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{canonical}" />
+    <meta property="og:site_name" content="Holiday Video Camera" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:description" content="{desc}" />
+    
+    <!-- CSS STYLES (Same as Tokyo page) -->
+    <style>
+        :root {{ --primary: #e94560; --dark: #111; --darker: #0a0a0a; --light: #f4f4f4; --gray: #ccc; --border: #333; }}
+        body {{ margin: 0; font-family: 'Inter', sans-serif; background: var(--dark); color: var(--light); line-height: 1.6; }}
+        a {{ text-decoration: none; color: inherit; transition: 0.3s; }}
+        ul {{ list-style: none; padding: 0; }}
+        
+        /* Navigation */
+        .top-nav {{ background: var(--darker); border-bottom: 1px solid var(--border); padding: 0 20px; position: sticky; top: 0; z-index: 1000; }}
+        .nav-container {{ max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 70px; }}
+        .logo {{ font-size: 1.5rem; font-weight: bold; color: var(--primary); }}
+        .nav-links {{ display: flex; gap: 30px; }}
+        .nav-links a {{ color: var(--gray); font-weight: 500; }}
+        .nav-links a:hover {{ color: var(--primary); }}
+        
+        /* Breadcrumb */
+        .breadcrumb {{ padding: 20px; font-size: 0.9rem; color: #888; max-width: 1200px; margin: 0 auto; }}
+        .breadcrumb a {{ color: var(--gray); }}
+        .breadcrumb span {{ color: var(--primary); }}
+        
+        /* Header */
+        header {{ text-align: center; padding: 60px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('placeholder-bg.jpg'); background-size: cover; border-bottom: 3px solid var(--primary); }}
+        header h1 {{ font-size: 2.5rem; margin: 0 0 10px; color: #fff; }}
+        header p {{ font-size: 1.2rem; color: var(--gray); max-width: 800px; margin: 0 auto; }}
+        
+        /* Content */
+        .container {{ max-width: 1000px; margin: 40px auto; padding: 0 20px; }}
+        .section {{ margin-bottom: 50px; }}
+        h2 {{ color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; }}
+        h3 {{ color: #fff; margin-top: 30px; }}
+        
+        /* Location Grid */
+        .location-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }}
+        .location-card {{ background: var(--darker); padding: 20px; border-radius: 8px; border: 1px solid var(--border); }}
+        .location-card h3 {{ margin-top: 0; color: var(--primary); }}
+        
+        /* Callout */
+        .callout {{ background: rgba(233, 69, 96, 0.1); border-left: 4px solid var(--primary); padding: 20px; margin: 30px 0; }}
+        
+        /* Footer */
+        footer {{ background: var(--darker); text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); margin-top: 60px; }}
+        .footer-links {{ margin-bottom: 20px; }}
+        .footer-links a {{ margin: 0 15px; color: var(--gray); }}
+        
+        @media(max-width: 768px) {{ .nav-links {{ display: none; }} .header h1 {{ font-size: 1.8rem; }} }}
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{title}",
+      "description": "{desc}",
+      "image": "{base_url}/assets/images/{slug}.jpg",
+      "author": {{
+        "@type": "Person",
+        "name": "Dawid Millennium",
+        "url": "{base_url}"
+      }},
+      "publisher": {{
+        "@type": "Organization",
+        "name": "Holiday Video Camera",
+        "logo": {{
+          "@type": "ImageObject",
+          "url": "{base_url}/assets/logo.png"
+        }}
+      }},
+      "datePublished": "2026-01-15",
+      "mainEntityOfPage": {{
+        "@type": "WebPage",
+        "@id": "{canonical}"
+      }}
+    }}
+    </script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="{base_url}/" class="logo">VideoCameraHoliday</a>
+            <ul class="nav-links">
+                <li><a href="{base_url}/reviews/">Reviews</a></li>
+                <li><a href="{base_url}/guides/">Buying Guides</a></li>
+                <li><a href="{base_url}/destinations/">Destinations</a></li>
+                <li><a href="{base_url}/how-to/">How-To</a></li>
+                <li><a href="{base_url}/city-through-the-lens/" style="color:var(--primary);">City Through the Lens</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="{base_url}/">Home</a> > 
+        <a href="{base_url}/city-through-the-lens/">City Through the Lens</a> > 
+        <span>{city['city']}</span>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Filming in {city['city']}: A Local's Guide</h1>
+        <p>Mastering {city['challenge']} with the {city['camera']} in {city['country']}</p>
+    </header>
+
+    <div class="container">
+        <!-- Introduction -->
+        <article class="section">
+            <p>{city['intro']}</p>
+            <div class="callout">
+                <strong>Key Takeaways:</strong>
+                <ul>
+                    <li>📍 Best Location: {city['attraction']}</li>
+                    <li>📷 Recommended Gear: {city['camera']}</li>
+                    <li>⚠️ Main Challenge: {city['challenge']}</li>
+                    <li>🌤️ Weather: {city['weather'].split('.')[0]}</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Locations -->
+        <section class="section">
+            <h2>🎬 3 Must-Film Locations</h2>
+            <div class="location-grid">
+                {location_cards}
+            </div>
+        </section>
+
+        <!-- Weather -->
+        <section class="section">
+            <h2>🌦️ Weather Reality</h2>
+            <p>{city['weather']}</p>
+        </section>
+
+        <!-- Logistics -->
+        <section class="section">
+            <h2>✈️ Airport Transfer Logistics</h2>
+            <p>{city['airport']}</p>
+        </section>
+
+        <!-- Permits -->
+        <section class="section">
+            <h2>📜 Filming Permits & Etiquette</h2>
+            <p>{city['permits']}</p>
+        </section>
+
+        <!-- Coming Soon -->
+        <section class="section callout">
+            <h2>🎙️ Coming Soon: The Interview</h2>
+            <p>We are currently interviewing a local pro in {city['city']}. Here is what we will ask:</p>
+            <ul>{questions_list}</ul>
+        </section>
+
+        <!-- Collaboration -->
+        <section class="section">
+            <h2>🤝 Are You a Local Videographer?</h2>
+            <p>Do you film in {city['city']}? We want to feature your expertise in this series. Share your local secrets, favorite hidden spots, and survival tips for shooting in {city['challenge']}.</p>
+            <p><strong>Contact us to collaborate!</strong></p>
+        </section>
+        
+        <!-- Conclusion -->
+        <section class="section">
+            <hr style="border-color:var(--border)">
+            <p>Ready to plan your shoot? Return to the <a href="{base_url}/city-through-the-lens/" style="color:var(--primary);text-decoration:underline;">City Through the Lens Hub</a> or check our <a href="{base_url}/guides/best-holiday-video-cameras-2026.html" style="color:var(--primary);text-decoration:underline;">Best Cameras for Travel 2026</a> guide.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="{base_url}/about/">About</a>
+            <a href="{base_url}/contact/">Contact</a>
+            <a href="{base_url}/privacy/">Privacy Policy</a>
+        </div>
+        <p>&copy; 2026 Holiday Video Camera. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+"""
+    return html_content
+
+# Generate files
+for city in cities:
+    slug = city['city'].lower().replace(' ', '-')
+    filename = f"{slug}-interview-preview.html"
+    filepath = os.path.join(output_dir, filename)
+    
+    html = generate_html(city)
+    
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(html)
+    
+    print(f"✅ Generated: {filename}")
+
+print(f"\n🎉 Successfully generated {len(cities)} city pages in '{output_dir}' folder!")
