@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Through the Lens: 50 Local Filmmakers, 50 Cities | Holiday Video Camera</title>
+    <meta name="description" content="Our flagship 50-part interview series. Local videographers in the world's biggest cities share how they really film home. Tokyo, Lisbon, Marrakech, Mexico City, Mumbai and 45 more.">
+    <meta name="keywords" content="City Through the Lens, local filmmaker interviews, travel videography, city filming guide, Tokyo filmmaker, Lisbon filmmaker">
+    <meta property="og:title" content="City Through the Lens: 50 Local Filmmakers, 50 Cities">
+    <meta property="og:description" content="We sit down with local videographers in the world's biggest cities and ask: How do you actually film your home? No tourist perspectives — just local reality.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-lens/">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/./city-through-the-lens/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-lens/#page",
+          "name": "City Through the Lens",
+          "description": "A 50-part interview series featuring local videographers from the world's biggest cities.",
+          "publisher": { "@type": "Organization", "name": "Holiday Video Camera" }
+        },
+        {
+          "@type": "ItemList",
+          "name": "City Through the Lens Episodes",
+          "numberOfItems": 50,
+          "itemListElement": [
+            { "@type": "ListItem", "position": 3, "name": "Tokyo: Yuki on Cold Emailing & Patience", "url": "/city-through-lens/tokyo" },
+            { "@type": "ListItem", "position": 8, "name": "Mexico City: Carlos on Embracing Bad Work", "url": "/city-through-lens/mexico-city" },
+            { "@type": "ListItem", "position": 12, "name": "Lisbon: Marco on Starting with a Phone", "url": "/city-through-lens/lisbon" },
+            { "@type": "ListItem", "position": 19, "name": "Mumbai: Priya on Income Diversity", "url": "/city-through-lens/mumbai" },
+            { "@type": "ListItem", "position": 27, "name": "Marrakech: Amara on Specialization", "url": "/city-through-lens/marrakech" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #2a2a2a; background: #0d1117; }
+
+        header { background: #1a1a1a; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; }
+        .logo span { color: #7986cb; }
+        nav ul { display: flex; list-style: none; gap: 1.8rem; }
+        nav a { color: white; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover, nav a.active { color: #9fa8da; }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0d1117 0%, #1a237e 40%, #283593 70%, #3f51b5 100%);
+            color: white; padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(121,134,203,0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(159,168,218,0.15) 0%, transparent 40%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+        .series-badge { display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 0.4rem 1.2rem; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.1; }
+        .hero h1 em { font-style: normal; color: #9fa8da; }
+        .hero p { font-size: 1.15rem; opacity: 0.85; margin-bottom: 2.5rem; }
+        .hero-stats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 2.5rem; font-weight: 700; color: #9fa8da; display: block; }
+        .stat-label { font-size: 0.8rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Main Content */
+        main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+
+        .about-section {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 2.5rem; margin-bottom: 3rem; color: #e0e0e0;
+        }
+        .about-section h2 { color: #9fa8da; font-size: 1.5rem; margin-bottom: 1rem; }
+        .about-section p { font-size: 1.05rem; margin-bottom: 1rem; opacity: 0.9; }
+
+        .section-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .section-header h2 { font-size: 1.6rem; color: #9fa8da; }
+        .section-header p { color: #888; font-size: 0.95rem; margin-top: 0.3rem; }
+
+        /* Featured Episodes */
+        .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+        .episode-card {
+            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px; padding: 1.8rem; transition: transform 0.3s, border-color 0.3s;
+        }
+        .episode-card:hover { transform: translateY(-4px); border-color: rgba(121,134,203,0.4); }
+        .ep-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .ep-flag { font-size: 2rem; }
+        .ep-city { font-weight: 700; font-size: 1.1rem; color: white; }
+        .ep-person { font-size: 0.85rem; color: #9fa8da; }
+        .ep-quote { font-style: italic; color: #ccc; font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6; }
+        .ep-link { color: #7986cb; font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+        .ep-link:hover { text-decoration: underline; }
+        .ep-number { display: inline-block; background: rgba(121,134,203,0.15); color: #9fa8da; padding: 0.2rem 0.6rem; border-radius: 10px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.8rem; }
+
+        /* Continent Sections */
+        .continent-section { margin-bottom: 3rem; }
+        .continent-title { font-size: 1.2rem; color: #7986cb; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .city-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; }
+        .city-pill {
+            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px; padding: 0.7rem 1rem; text-decoration: none; color: #ccc;
+            font-size: 0.9rem; transition: background 0.3s, border-color 0.3s; display: flex; align-items: center; gap: 0.5rem;
+        }
+        .city-pill:hover { background: rgba(121,134,203,0.1); border-color: rgba(121,134,203,0.3); color: white; }
+        .city-pill .flag { font-size: 1.1rem; }
+        .city-pill .status { margin-left: auto; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 8px; }
+        .status.live { background: rgba(76,175,80,0.15); color: #81c784; }
+        .status.coming { background: rgba(255,193,7,0.15); color: #ffd54f; }
+        .status.planned { background: rgba(255,255,255,0.05); color: #777; }
+
+        /* Lessons Section */
+        .lessons-section {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 2.5rem; margin-bottom: 3rem;
+        }
+        .lessons-section h2 { color: #9fa8da; font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .lesson-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .lesson-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .lesson-num { background: rgba(121,134,203,0.15); color: #9fa8da; width: 2rem; height: 2rem; min-width: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+        .lesson-text { color: #ccc; font-size: 1rem; }
+        .lesson-text strong { color: white; }
+
+        /* Newsletter */
+        .newsletter-cta {
+            background: linear-gradient(135deg, #1a237e, #3f51b5);
+            border-radius: 16px; padding: 3rem; text-align: center; color: white; margin-bottom: 2rem;
+        }
+        .newsletter-cta h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .newsletter-cta p { opacity: 0.85; margin-bottom: 1.5rem; }
+        .nl-form { display: flex; max-width: 400px; margin: 0 auto; gap: 0.5rem; }
+        .nl-form input { flex: 1; padding: 0.9rem; border: none; border-radius: 8px; font-size: 1rem; }
+        .nl-form button { background: #ff9800; color: #1a1a1a; border: none; padding: 0 2rem; border-radius: 8px; font-weight: 700; cursor: pointer; }
+        .nl-form button:hover { background: #ffb74d; }
+
+        /* Footer */
+        footer { background: #0a0e14; color: white; padding: 2.5rem 2rem; margin-top: 2rem; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+        .footer-inner h4 { color: #7986cb; margin-bottom: 0.8rem; font-size: 0.95rem; }
+        .footer-inner a { color: #888; text-decoration: none; display: block; padding: 0.2rem 0; font-size: 0.9rem; }
+        .footer-inner a:hover { color: #9fa8da; }
+        .affiliate { text-align: center; padding-top: 1.5rem; margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.8rem; color: #555; max-width: 1200px; margin-left: auto; margin-right: auto; }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #1a1a1a; padding: 1rem 2rem; }
+            nav ul.active { display: flex; }
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { gap: 1.5rem; }
+            main { padding: 2rem 1rem; }
+            .featured-grid { grid-template-columns: 1fr; }
+            .city-list { grid-template-columns: 1fr 1fr; }
+            .nl-form { flex-direction: column; }
+        }
+    </style>
+
+    <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
+</head>
+<body>
+<nav class="top-nav" aria-label="Primary navigation">
+  <div class="nav-container">
+    <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a data-section="home" href="/VideoCameraHoliday/">Home</a></li>
+      <li><a data-section="city-through-the-lens" href="/VideoCameraHoliday/city-through-the-lens/">Series</a></li>
+      <li><a data-section="reviews" href="/VideoCameraHoliday/reviews/">Reviews</a><ul class="dropdown-menu"><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></li>
+      <li><a data-section="guides" href="/VideoCameraHoliday/guides/">Buying Guides</a><ul class="dropdown-menu"><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li></ul></li>
+      <li><a data-section="how-to" href="/VideoCameraHoliday/how-to/">How-To</a></li><li><a data-section="destinations" href="/VideoCameraHoliday/destinations/">Destinations</a></li><li><a data-section="editing" href="/VideoCameraHoliday/editing/">Editing</a></li><li><a data-section="comparisons" href="/VideoCameraHoliday/comparisons/">Comparisons</a></li><li><a data-section="about" href="/VideoCameraHoliday/about/">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">Holiday<span>Video</span>Camera</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <span class="series-badge">📺 Flagship Series • Season 1</span>
+            <h1>City Through <em>the Lens</em></h1>
+            <p>We sit down with local videographers in the world's biggest cities and ask one question: <strong>"How do you actually film your home?"</strong> No tourist perspectives. Just local reality, honest advice, and the cameras they actually carry.</p>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">50</span><span class="stat-label">Cities</span></div>
+                <div class="stat"><span class="stat-num">50</span><span class="stat-label">Filmmakers</span></div>
+                <div class="stat"><span class="stat-num">6</span><span class="stat-label">Continents</span></div>
+                <div class="stat"><span class="stat-num">3</span><span class="stat-label">Years in Production</span></div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- About -->
+        <div class="about-section">
+            <h2>🎬 About This Series</h2>
+            <p>Every travel video you see online is filmed by an outsider looking in. But the people who know a city best aren't tourists — they're the local creators who film it every single day.</p>
+            <p>City Through the Lens changes the perspective. In each episode, Dawid Millennium sits down with a local videographer and asks them to show their city through their eyes. What gear do they actually use? Where do they film that tourists never find? How do they make money? What do they wish they'd known when they started?</p>
+            <p>The result is 50 honest, unfiltered conversations about filmmaking, creativity, and making it pay — from Tokyo to Marrakech, from Mexico City to Mumbai.</p>
+        </div>
+
+        <!-- Featured Episodes -->
+        <div class="section-header">
+            <h2>⭐ Featured Episodes</h2>
+            <p>The most-watched conversations from the series so far.</p>
+        </div>
+
+        <div class="featured-grid">
+            <div class="episode-card">
+                <span class="ep-number">Episode 3</span>
+                <div class="ep-header">
+                    <span class="ep-flag">🇯🇵</span>
+                    <div>
+                        <div class="ep-city">Tokyo</div>
+                        <div class="ep-person">Yuki — Street & Food Videographer</div>
+                    </div>
+                </div>
+                <p class="ep-quote">"I sent 200 cold emails before my first 'yes.' Now I get 2-3 inquiries per week from referrals. The first year is about volume. After that, reputation does the work."</p>
+                <a href="/city-through-lens/tokyo" class="ep-link">Watch / Read Episode 3 →</a>
+            </div>
+
+            <div class="episode-card">
+                <span class="ep-number">Episode 8</span>
+                <div class="ep-header">
+                    <span class="ep-flag">🇲🇽</span>
+                    <div>
+                        <div class="ep-city">Mexico City</div>
+                        <div class="ep-person">Carlos — Documentary Filmmaker</div>
+                    </div>
+                </div>
+                <p class="ep-quote">"Your first 100 videos will be bad. That's not failure, that's tuition. The only people who 'make it' are the ones who filmed through the bad phase."</p>
+                <a href="/city-through-lens/mexico-city" class="ep-link">Watch / Read Episode 8 →</a>
+            </div>
+
+            <div class="episode-card">
+                <span class="ep-number">Episode 12</span>
+                <div class="ep-header">
+                    <span class="ep-flag">🇵🇹</span>
+                    <div>
+                        <div class="ep-city">Lisbon</div>
+                        <div class="ep-person">Marco — Tourism Content Creator</div>
+                    </div>
+                </div>
+                <p class="ep-quote">"The best camera is the one you have with you. I shot my first paid gig on a 4-year-old phone. The client didn't care about the camera — they cared about the result."</p>
+                <a href="/city-through-lens/lisbon" class="ep-link">Watch / Read Episode 12 →</a>
+            </div>
+
+            <div class="episode-card">
+                <span class="ep-number">Episode 19</span>
+                <div class="ep-header">
+                    <span class="ep-flag">🇮🇳</span>
+                    <div>
+                        <div class="ep-city">Mumbai</div>
+                        <div class="ep-person">Priya — Commercial & Brand Filmmaker</div>
+                    </div>
+                </div>
+                <p class="ep-quote">"Income diversity saved me. When tourism stopped in 2020, I had stock footage, YouTube, and preset sales. If I'd relied only on client work, I'd have been finished."</p>
+                <a href="/city-through-lens/mumbai" class="ep-link">Watch / Read Episode 19 →</a>
+            </div>
+
+            <div class="episode-card">
+                <span class="ep-number">Episode 27</span>
+                <div class="ep-header">
+                    <span class="ep-flag">🇲🇦</span>
+                    <div>
+                        <div class="ep-city">Marrakech</div>
+                        <div class="ep-person">Amara — Food Tourism Specialist</div>
+                    </div>
+                </div>
+                <p class="ep-quote">"Stop trying to be a 'travel filmmaker.' Be a 'filmmaker who specializes in food tourism.' It's narrower, but I'm the first name people think of."</p>
+                <a href="/city-through-lens/marrakech" class="ep-link">Watch / Read Episode 27 →</a>
+            </div>
+        </div>
+
+        <!-- All Episodes by Continent -->
+        <div class="section-header">
+            <h2>🗺️ All 50 Episodes by Region</h2>
+            <p>Explore the complete series. Green = published. Yellow = coming soon. Grey = planned.</p>
+        </div>
+
+        <div class="continent-section">
+            <h3 class="continent-title">🌏 Asia</h3>
+            <div class="city-list">
+                <a href="/city-through-lens/tokyo" class="city-pill"><span class="flag">🇯🇵</span> Tokyo <span class="status live">Live</span></a>
+                <a href="/city-through-lens/hanoi" class="city-pill"><span class="flag">🇻🇳</span> Hanoi <span class="status live">Live</span></a>
+                <a href="/city-through-lens/bali" class="city-pill"><span class="flag">🇮🇩</span> Bali <span class="status live">Live</span></a>
+                <a href="/city-through-lens/bangkok" class="city-pill"><span class="flag">🇹🇭</span> Bangkok <span class="status coming">Soon</span></a>
+                <a href="/city-through-lens/seoul" class="city-pill"><span class="flag">🇰🇷</span> Seoul <span class="status coming">Soon</span></a>
+                <a href="/city-through-lens/singapore" class="city-pill"><span class="flag">🇸🇬</span> Singapore <span class="status planned">Planned</span></a>
+                <a href="/city-through-lens/mumbai" class="city-pill"><span class="flag">🇮🇳</span> Mumbai <span class="status live">Live</span></a>
+                <a href="/city-through-lens/delhi" class="city-pill"><span class="flag">🇮🇳</span> Delhi <span class="status planned">Planned</span></a>
+            </div>
+        </div>
+
+        <div class="continent-section">
+            <h3 class="continent-title">🌍 Europe</h3>
+            <div class="city-list">
+                <a href="/city-through-lens/lisbon" class="city-pill"><span class="flag">🇵🇹</span> Lisbon <span class="status live">Live</span></a>
+                <a href="/city-through-lens/london" class="city-pill"><span class="flag">🇬🇧</span> London <span class="status coming">Soon</span></a>
+                <a href="/city-through-lens/paris" class="city-pill"><span class="flag">🇫🇷</span> Paris <span class="status planned">Planned</span></a>
+                <a href="/city-through-lens/barcelona" class="city-pill"><span class="flag">🇪🇸</span> Barcelona <span class="status planned">Planned</span></a>
+                <a href="/city-through-lens/istanbul" class="city-pill"><span class="flag">🇹🇷</span> Istanbul <span class="status coming">Soon</span></a>
+                <a href="/city-through-lens/reykjavik" class="city-pill"><span class="flag">🇮🇸</span> Reykjavik <span class="status planned">Planned</span></a>
+            </div>
+        </div>
+
+        <div class="continent-section">
+            <h3 class="continent-title">🌎 Americas</h3>
+            <div class="city-list">
+                <a href="/city-through-lens/mexico-city" class="city-pill"><span class="flag">🇲🇽</span> Mexico City <span class="status live">Live</span></a>
+                <a href="/city-through-lens/san-jose" class="city-pill"><span class="flag">🇨🇷</span> San José <span class="status coming">Soon</span></a>
+                <a href="/city-through-lens/rio" class="city-pill"><span class="flag">🇧🇷</span> Rio de Janeiro <span class="status planned">Planned</span></a>
+                <a href="/city-through-lens/bogota" class="city-pill"><span class="flag">🇨🇴</span> Bogotá <span class="status planned">Planned</span></a>
+                <a href="/city-through-lens/lima" class="city-pill"><span class="flag">🇵🇪</span> Lima <span class="status planned">Planned</span></a>
+                <a href="/city-through-lens/new-york" class="city-pill"><span class="flag">🇺🇸</span> New York <span class="status planned">Planned</span></a>
+            </div>
+        </div>
+
+        <div class="continent-section">
+            <h3 class="continent-title">🌍 Africa & Middle East</h3>
+            <div class="city-list">
+                <a href="/city-through-lens/marrakech" class="city-pill"><span class="flag">🇲🇦</span> Marrakech <span class="status live">Live</span></a>
+                <a href="/city-through-lens/nairobi" class="city-pill"><span class="flag">🇰🇪</span> Nairobi <span class="status coming">Soon</span></a>
+                <a href="/city-through-lens/cape-town" class="city-pill"><span class="flag">🇿🇦</span> Cape Town <span class="status planned">Planned</span></a>
+                <a href="/city-through-lens/dubai" class="city-pill"><span class="flag">🇦🇪</span> Dubai <span class="status planned">Planned</span></a>
+                <a href="/city-through-lens/cairo" class="city-pill"><span class="flag">🇪🇬</span> Cairo <span class="status planned">Planned</span></a>
+            </div>
+        </div>
+
+        <!-- Key Lessons -->
+        <div class="lessons-section">
+            <h2>💡 5 Lessons From 50 Conversations</h2>
+            <div class="lesson-item">
+                <span class="lesson-num">1</span>
+                <span class="lesson-text"><strong>Volume beats perfection.</strong> Every filmmaker who "made it" sent hundreds of cold emails, posted hundreds of videos, and pitched dozens of clients before getting consistent work.</span>
+            </div>
+            <div class="lesson-item">
+                <span class="lesson-num">2</span>
+                <span class="lesson-text"><strong>Specialization wins.</strong> The filmmakers earning the most aren't "travel filmmakers" — they're food-tourism filmmakers, adventure-sports filmmakers, or luxury-hotel filmmakers. Narrow beats broad.</span>
+            </div>
+            <div class="lesson-item">
+                <span class="lesson-num">3</span>
+                <span class="lesson-text"><strong>Income diversity is survival.</strong> Every filmmaker who survived 2020 had 3+ revenue streams. Client work alone is too fragile.</span>
+            </div>
+            <div class="lesson-item">
+                <span class="lesson-num">4</span>
+                <span class="lesson-text"><strong>Gear doesn't matter as much as you think.</strong> 38 of 50 filmmakers started with a phone or a sub-$500 camera. Clients care about results, not specs.</span>
+            </div>
+            <div class="lesson-item">
+                <span class="lesson-num">5</span>
+                <span class="lesson-text"><strong>Community compounds.</strong> The filmmakers who grew fastest were the ones who collaborated, referred work, and shared knowledge freely.</span>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter-cta">
+            <h3>📬 Get New Episodes First</h3>
+            <p>Join 5,000+ travelers. Be the first to watch each new City Through the Lens episode.</p>
+            <form class="nl-form" onsubmit="event.preventDefault()">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </main>
+
+    
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+    </script>
+<footer class="site-footer">
+  <div class="footer-container">
+    <section class="footer-section"><h4>Series</h4><ul><li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li><li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li></ul></section>
+    <section class="footer-section"><h4>Guides</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Cameras Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li></ul></section>
+    <section class="footer-section"><h4>Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></section>
+    <section class="footer-section"><h4>About</h4><ul><li><a href="/VideoCameraHoliday/about/">About Us</a></li><li><a href="/VideoCameraHoliday/">Home</a></li><li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li></ul></section>
+  </div>
+  <div class="footer-bottom"><p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p></div>
+</footer>
+<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+</body>
+</html>
