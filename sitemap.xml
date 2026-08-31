@@ -1,3 +1,4 @@
+--- sitemap.xml (原始)
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
@@ -291,4 +292,10 @@
     <url>
         <loc>https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html</loc>
     </url>
+</urlset>
+
++++ sitemap.xml (修改后)
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 </urlset>
