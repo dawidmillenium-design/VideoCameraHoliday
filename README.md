@@ -33,4 +33,12 @@ Southeast Asia
 Purple #7b1fa2
 AI Color & Audio
 3 editing guides
+///
+/////
 
+Added camera settings table with ND filter guide to best-cameras-ski-holidays.html
+Added sand-rescue step-by-step section to gear-maintenance-field-cleaning-travel.html
+Added ski wind noise solutions to audio-tips-noisy-locations.html
+Added thermal management box to insta360-x5-global-field-test.html
+
+////
