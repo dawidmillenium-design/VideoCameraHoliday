@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 NUCLEAR OVERWRITE: Regenerate all city preview pages with accurate JSON data.
 Preserves nav/footer HTML structure but replaces ALL body content.
@@ -9,7 +9,7 @@ import os
 import re
 
 # Load the JSON dataset
-with open('/workspace/city-through-the-lens/JSON.dataset', 'r', encoding='utf-8') as f:
+with open('city-through-the-lens/JSON.dataset', 'r', encoding='utf-8') as f:
     cities_data = json.load(f)
 
 # Template for generating city-specific content
@@ -33,15 +33,15 @@ def generate_city_content(city_data):
     if city == "Bangkok":
         video_embed = '''<div class="video-slot">
   <div class="video-embed">
-    <iframe src="https://www.youtube.com/embed/7_amUIdgHs4" title="Insta360 X5 Field Test — Bangkok, Thailand" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    <iframe src="https://www.youtube.com/embed/7_amUIdgHs4" title="Insta360 X5 Field Test â€” Bangkok, Thailand" frameborder="0" allowfullscreen loading="lazy"></iframe>
   </div>
-  <p class="video-caption">🎬 Real field footage: Insta360 X5 in Bangkok, Thailand</p>
+  <p class="video-caption">ðŸŽ¬ Real field footage: Insta360 X5 in Bangkok, Thailand</p>
 </div>'''
         video_schema = '''<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  "name": "Insta360 X5 Field Test — Bangkok, Thailand",
+  "name": "Insta360 X5 Field Test â€” Bangkok, Thailand",
   "description": "Real-world Insta360 X5 footage shot on location in Bangkok, Thailand by travel videographer Dawid Millennium.",
   "thumbnailUrl": "https://i.ytimg.com/vi/7_amUIdgHs4/hqdefault.jpg",
   "uploadDate": "2026-08-25",
@@ -54,15 +54,15 @@ def generate_city_content(city_data):
     elif city == "Lima":
         video_embed = '''<div class="video-slot">
   <div class="video-embed">
-    <iframe src="https://www.youtube.com/embed/gRWhgo0KBqY" title="Insta360 X5 Peru — Huacachina field footage" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    <iframe src="https://www.youtube.com/embed/gRWhgo0KBqY" title="Insta360 X5 Peru â€” Huacachina field footage" frameborder="0" allowfullscreen loading="lazy"></iframe>
   </div>
-  <p class="video-caption">🎬 Real field footage: Insta360 X5 in Huacachina, Peru — shot by Dawid Millennium</p>
+  <p class="video-caption">ðŸŽ¬ Real field footage: Insta360 X5 in Huacachina, Peru â€” shot by Dawid Millennium</p>
 </div>'''
         video_schema = '''<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  "name": "Insta360 X5 in Peru — Huacachina Desert Oasis (Raw 360 Footage)",
+  "name": "Insta360 X5 in Peru â€” Huacachina Desert Oasis (Raw 360 Footage)",
   "description": "Raw Insta360 X5 360-degree footage filmed on location in Huacachina, Peru by travel videographer Dawid Millennium.",
   "thumbnailUrl": "https://i.ytimg.com/vi/gRWhgo0KBqY/hqdefault.jpg",
   "uploadDate": "2026-07-22",
@@ -75,14 +75,14 @@ def generate_city_content(city_data):
 </script>'''
     else:
         video_embed = '''<div class="video-slot">
-  <div class="video-placeholder">🎬 Field video for this guide coming soon — subscribe on YouTube to see it first</div>
+  <div class="video-placeholder">ðŸŽ¬ Field video for this guide coming soon â€” subscribe on YouTube to see it first</div>
 </div>'''
         video_schema = ''
     
     content = f'''
 <article>
   <nav class="breadcrumbs" aria-label="Breadcrumb">
-    <a href="/">Home</a> › <a href="/city-through-the-lens/">City Through the Lens</a> › <span>{city}</span>
+    <a href="/">Home</a> â€º <a href="/city-through-the-lens/">City Through the Lens</a> â€º <span>{city}</span>
   </nav>
   
   <h1>{city} Through the Lens: Local Filmmaking Insights</h1>
@@ -91,7 +91,7 @@ def generate_city_content(city_data):
   {video_embed}
   
   <section class="quick-takeaways">
-    <h2>🎯 Quick Takeaways for Filming in {city}</h2>
+    <h2>ðŸŽ¯ Quick Takeaways for Filming in {city}</h2>
     <div class="takeaway-box">
       <p><strong>Best Time to Visit:</strong> {weather.split('.')[0] if '.' in weather else weather[:50]}</p>
       <p><strong>Top 3 Landmarks:</strong> {attr1}, {attr2}, {attr3}</p>
@@ -101,7 +101,7 @@ def generate_city_content(city_data):
   </section>
   
   <section class="must-film-locations">
-    <h2>🎬 3 Must-Film Locations in {city}</h2>
+    <h2>ðŸŽ¬ 3 Must-Film Locations in {city}</h2>
     
     <div class="location-card">
       <h3>1. {attr1}</h3>
@@ -120,25 +120,25 @@ def generate_city_content(city_data):
   </section>
   
   <section class="weather-reality">
-    <h2>🌤️ Weather Reality for Videographers</h2>
+    <h2>ðŸŒ¤ï¸ Weather Reality for Videographers</h2>
     <p>{weather}</p>
     <p><strong>Pro Tip:</strong> Always check the forecast before your shoot day. In {city.split()[0] if ' ' in city else city}, weather can change rapidly, so have backup indoor locations ready.</p>
   </section>
   
   <section class="airport-transfer">
-    <h2>✈️ Airport Transfer & Arrival Tips</h2>
+    <h2>âœˆï¸ Airport Transfer & Arrival Tips</h2>
     <p>{airport}</p>
     <p><strong>Gear Transport:</strong> Keep all cameras and lithium batteries in your carry-on. Check local customs rules for professional equipment.</p>
   </section>
   
   <section class="permits-etiquette">
-    <h2>📜 Permits & Local Etiquette</h2>
+    <h2>ðŸ“œ Permits & Local Etiquette</h2>
     <p>{permits}</p>
     <p><strong>Cultural Note:</strong> When filming in {country}, always ask permission before pointing your camera at people, especially in religious or private spaces. A smile and a gesture go a long way.</p>
   </section>
   
   <section class="coming-soon-interview">
-    <h2>🎙️ Coming Soon: Local Videographer Interview</h2>
+    <h2>ðŸŽ™ï¸ Coming Soon: Local Videographer Interview</h2>
     <p>We're reaching out to local creators in {city} to ask:</p>
     <ul>
       <li>What's the one spot tourists always miss that you love filming?</li>
@@ -150,12 +150,12 @@ def generate_city_content(city_data):
   </section>
   
   <section class="call-for-videographer">
-    <h2>📹 Are You a Videographer Based in {city}?</h2>
+    <h2>ðŸ“¹ Are You a Videographer Based in {city}?</h2>
     <p>We're building the ultimate resource for travel filmmakers. If you live in {city} and want to share your local expertise, <a href="/contact/">get in touch</a>. We'd love to feature your insights and footage in our City Through the Lens series.</p>
   </section>
   
   <section class="related-links">
-    <h2>🔗 Related Guides</h2>
+    <h2>ðŸ”— Related Guides</h2>
     <ul>
       <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Video Cameras 2026</a></li>
       <li><a href="/how-to/film-markets-street-food.html">How to Film Street Food Markets</a></li>
@@ -171,7 +171,7 @@ def generate_city_content(city_data):
 for city_data in cities_data:
     city = city_data['city']
     slug = city_data['slug']
-    filename = f"/workspace/city-through-the-lens/{slug}.html"
+    filename = f"city-through-the-lens/{slug}.html"
     
     if not os.path.exists(filename):
         print(f"Skipping {city} - file does not exist")
@@ -247,6 +247,6 @@ for city_data in cities_data:
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(new_html)
     
-    print(f"✅ Regenerated: {city}")
+    print(f"âœ… Regenerated: {city}")
 
-print("\n🎉 All city pages regenerated successfully!")
+print("\nðŸŽ‰ All city pages regenerated successfully!")
