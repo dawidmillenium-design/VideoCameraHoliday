@@ -155,7 +155,7 @@
 /* =========================================
    VIDEO SEO EMBED STYLES
    ========================================= */
-.video-slot { margin: 30px auto; max-width: 400px; }
+.video-slot { margin: 30px auto; max-width: 420px; }
 .video-slot .video-embed { position: relative; aspect-ratio: 9/16;
   border-radius: 12px; overflow: hidden; border: 1px solid #333; }
 .video-slot iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
