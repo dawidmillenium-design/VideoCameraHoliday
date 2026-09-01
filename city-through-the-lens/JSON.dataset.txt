@@ -1,0 +1,22 @@
+# 1. Create a small repair script
+@'
+import json, re
+p = 'city-through-the-lens/JSON.dataset'
+s = open(p, encoding='utf-8').read()
+# remove stray backslashes at line ends / backslash-only lines
+s = re.sub(r'(?m)\\+[ \t\r]*$', '', s)
+try:
+    data = json.loads(s)
+except Exception as e:
+    print('STILL BROKEN:', e)
+    print(repr(s[:300]))
+    raise SystemExit(1)
+open(p, 'w', encoding='utf-8').write(json.dumps(data, ensure_ascii=False, indent=2))
+print('VALID JSON:', len(data), 'cities')
+'@ | Set-Content fix_json.py -Encoding UTF8
+
+# 2. Run the repair
+python fix_json.py
+
+# 3. If it prints "VALID JSON: N cities", run the overwrite script
+python city-through-the-lens\overwrite_all_cities.py
