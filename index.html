@@ -78,6 +78,46 @@
         .footer-container { grid-template-columns: 1fr 1fr; }
         .stats { gap: 20px; }
     }
+         .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .youtube-shorts-embed {
+    position: relative;
+    padding-bottom: 177.77%; /* 9:16 Aspect Ratio for Shorts */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    background-color: #000;
+  }
+  .youtube-shorts-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .video-caption {
+    text-align: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin-top: 0.75rem;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  #latest-camera-tests h2 {
+    text-align: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
     </style>
 
     <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
@@ -186,7 +226,168 @@
   }
 }
 </script>
+<!-- START: Latest Real-World Camera Tests Section -->
+<section id="latest-camera-tests">
+  <h2 style="text-align:center; font-family: system-ui, sans-serif;">Latest Real-World Camera Tests</h2>
+  <div class="video-grid">
 
+    <!-- VIDEO 1: Hanoi Lake View (Insta360 X5) -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/sogIapYPUTs?rel=0" title="Insta360 X5 Hanoi Vietnam Lake View" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Insta360 X5: Morning Rooftop Lake View, Hanoi</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Insta360 X5 Holiday Video Camera Tested in Lake Hanoi Vietnam",
+        "description": "Morning rooftop lake view in Hanoi, Vietnam, captured with the Insta360 X5. Real-world travel camera test.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/sogIapYPUTs/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT30S",
+        "contentUrl": "https://www.youtube.com/watch?v=sogIapYPUTs",
+        "embedUrl": "https://www.youtube.com/embed/sogIapYPUTs",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 2: Zanzibar North Beach (Insta360 X5) - 0:18 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/5PYEdRkayvE?rel=0" title="Zanzibar North Beach Tanzania Insta360 X5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Insta360 X5: 4-Star Beach Resort, Zanzibar</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Zanzibar North Beach Tanzania 4-Star Beach Resort with Insta360 X5",
+        "description": "First-hand footage of a 4-star beach resort on the north beach of Zanzibar, Tanzania, shot on the Insta360 X5.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/5PYEdRkayvE/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT18S",
+        "contentUrl": "https://www.youtube.com/watch?v=5PYEdRkayvE",
+        "embedUrl": "https://www.youtube.com/embed/5PYEdRkayvE",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 3: Male Airport Hot Weather (DJI Action 6) - 0:31 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/1gqozL05z-4?rel=0" title="DJI Osmo Action 6 Male Airport Hot Weather" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">DJI Osmo Action 6: Male Airport, Hot Weather Test</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "DJI Osmo Action 6 Tested Outside Male Airport in Hot Weather",
+        "description": "Real-world heat and durability test of the DJI Osmo Action 6 outside Male Airport in the Maldives.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/1gqozL05z-4/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT31S",
+        "contentUrl": "https://www.youtube.com/watch?v=1gqozL05z-4",
+        "embedUrl": "https://www.youtube.com/embed/1gqozL05z-4",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 4: Maafushi Island Rooftop Pool (Insta360 X5) - 0:31 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/UBlh7-46eFo?rel=0" title="Insta360 X5 Maldives Maafushi Island Rooftop Pool" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Insta360 X5: Maafushi Island Rooftop Ocean View</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Insta360 X5 Maldives Maafushi Island Rooftop Swimming Pool",
+        "description": "Rooftop swimming pool with ocean view on Maafushi Island, Maldives, captured with the Insta360 X5.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/UBlh7-46eFo/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT31S",
+        "contentUrl": "https://www.youtube.com/watch?v=UBlh7-46eFo",
+        "embedUrl": "https://www.youtube.com/embed/UBlh7-46eFo",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 5: Maldives Deep Dive (DJI Action 6) - 0:28 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/-aOaznWSg0k?rel=0" title="DJI Osmo Action 6 Maldives Deep Dive" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">DJI Osmo Action 6: Maldives Deep Dive</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "DJI Osmo Action 6 Maldives Deep Dive",
+        "description": "Underwater deep dive footage in the Maldives testing the waterproof capabilities and color science of the DJI Osmo Action 6.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/-aOaznWSg0k/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT28S",
+        "contentUrl": "https://www.youtube.com/watch?v=-aOaznWSg0k",
+        "embedUrl": "https://www.youtube.com/embed/-aOaznWSg0k",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 6: DJI Osmo Action 6 2026 - 0:33 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/7yxFFJ7ROwk?rel=0" title="DJI Osmo Action 6 2026 Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">DJI Osmo Action 6: 2026 First Look</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "DJI Osmo Action 6 2026 First Impressions",
+        "description": "Initial hands-on testing and first impressions of the DJI Osmo Action 6 in real-world travel conditions.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/7yxFFJ7ROwk/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT33S",
+        "contentUrl": "https://www.youtube.com/watch?v=7yxFFJ7ROwk",
+        "embedUrl": "https://www.youtube.com/embed/7yxFFJ7ROwk",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 7: Hanoi New City Development (Insta360 X5) - 0:29 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/YWpmLYde99s?rel=0" title="Insta360 X5 Hanoi Vietnam New City Development" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Insta360 X5: Hanoi New City Development</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Insta360 X5 Hanoi Vietnam New City Development",
+        "description": "Exploring the new city development in Hanoi, Vietnam, showcasing the stabilization and wide-angle capabilities of the Insta360 X5.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/YWpmLYde99s/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT29S",
+        "contentUrl": "https://www.youtube.com/watch?v=YWpmLYde99s",
+        "embedUrl": "https://www.youtube.com/embed/YWpmLYde99s",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+  </div>
+</section>
+<!-- END: Latest Real-World Camera Tests Section -->
 <footer class="site-footer">
   <div class="footer-container">
     <section class="footer-section"><h4>Series</h4><ul><li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li><li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li></ul></section>
