@@ -151,3 +151,16 @@
     .mega-featured { display: block; }
     .mega-featured-img { height: 100px; }
 }
+
+/* =========================================
+   VIDEO SEO EMBED STYLES
+   ========================================= */
+.video-slot { margin: 30px auto; max-width: 400px; }
+.video-slot .video-embed { position: relative; aspect-ratio: 9/16;
+  border-radius: 12px; overflow: hidden; border: 1px solid #333; }
+.video-slot iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+.video-slot .video-caption { font-size: .85rem; color: #888;
+  text-align: center; margin-top: 8px; }
+.video-placeholder { aspect-ratio: 9/16; background: #111; border: 1px dashed #444;
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  color: #666; font-size: .9rem; text-align: center; padding: 20px; }
