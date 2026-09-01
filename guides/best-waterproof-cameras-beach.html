@@ -101,6 +101,27 @@ td { color: #ccc; }
     .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; }
     .footer-container { grid-template-columns: 1fr 1fr; }
 }
+    /* YouTube Shorts Responsive Embed - 9:16 Aspect Ratio */
+.youtube-shorts-embed {
+  position: relative;
+  padding-bottom: 177.77%; /* 9:16 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 400px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  background-color: #000;
+  border: 1px solid #333;
+}
+.youtube-shorts-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 </style>
 
     <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
@@ -183,7 +204,29 @@ td { color: #ccc; }
 </div>
 
 <h2 id="the-picks">The Best Waterproof Cameras for the Beach</h2>
+<h3>Real Underwater Footage: Big Fish in the Maldives</h3>
+<p>We don't just test in pools. Here is raw footage of colorful big fish in the Maldives, shot with the new DJI Osmo Action 6. Notice the color accuracy at depth and the lack of fogging.</p>
 
+<div class="youtube-shorts-embed">
+  <iframe src="https://www.youtube.com/embed/8FEwgKEJcXU?rel=0" title="Maldives Deep Dive Big Fish DJI Osmo Action 6" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Beautiful Deep Diving and Colorful Big Fish in Maldives - DJI Osmo Action 6",
+  "description": "First-hand underwater footage of colorful big fish in the Maldives, shot with the new DJI Osmo Action 6. Real-world test of waterproof camera capabilities.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/8FEwgKEJcXU/hqdefault.jpg",
+  "uploadDate": "2026-09-01",
+  "duration": "PT59S",
+  "contentUrl": "https://www.youtube.com/watch?v=8FEwgKEJcXU",
+  "embedUrl": "https://www.youtube.com/embed/8FEwgKEJcXU",
+  "publisher": { "@type": "Organization", "name": "Bloggers Travel" },
+  "author": { "@type": "Person", "name": "Bloggers Travel" }
+}
+</script>
+
+<hr style="border: 0; border-top: 1px solid #333; margin: 2rem 0;">
 <h3>1. GoPro Hero 13 Black — Best Overall Beach Camera</h3>
 <p><strong>Verdict: The default choice, and for good reason.</strong> Waterproof to 10 m out of the box, HyperSmooth stabilization that makes wave-battered footage watchable, and lens mods (including an ND filter set that tames harsh midday beach light). The new magnetic mounting makes swapping between a floaty grip and a chest mount quick with sandy hands. It filmed my entire Lombok snorkel trip without a hiccup. Full details in my <a class="content-link" href="../reviews/gopro-hero-13-review.html">GoPro Hero 13 review</a>.</p>
 <ul>
