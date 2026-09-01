@@ -1,0 +1,418 @@
+[
+  {
+    "city": "Bangalore",
+    "country": "India",
+    "slug": "bangalore-videographer-interview",
+    "camera_focus": "Sony A7S III",
+    "challenge": "Traffic & Monsoon Humidity",
+    "intro": "India's Silicon Valley is a paradox of lush gardens and gridlocked traffic. Filming here requires mastering the monsoon humidity and navigating chaotic intersections.",
+    "attractions": [
+      {"name": "Cubbon Park", "tip": "Shoot early morning (6 AM) to avoid crowds. Green canopy provides natural diffusion."},
+      {"name": "MG Road", "tip": "Use a gimbal for walking shots. Traffic is heavy; get permits for tripod use."},
+      {"name": "Lalbagh Botanical Garden", "tip": "Glass house is iconic. Best light at golden hour through the trees."}
+    ],
+    "weather": "Moderate year-round. Heavy rains June-Sept. Carry rain covers.",
+    "airport": "Kempegowda (BLR). 45 mins to city. Pre-book Uber/Ola.",
+    "permits": "Required for commercial shoots in parks. Police verification needed for street interviews."
+  },
+  {
+    "city": "Chennai",
+    "country": "India",
+    "slug": "chennai-videographer-interview",
+    "camera_focus": "Fujifilm X-T5",
+    "challenge": "Extreme Heat & Salt Air",
+    "intro": "A coastal powerhouse with deep cultural roots. The heat is intense, and salt air corrodes gear fast. Protection is key.",
+    "attractions": [
+      {"name": "Marina Beach", "tip": "Second longest in world. Watch out for waves. Sunset shots are mandatory."},
+      {"name": "Kapaleeshwarar Temple", "tip": "No shoes. Shoot from outside walls if inside is restricted. Vibrant colors."},
+      {"name": "George Town", "tip": "Narrow streets. Use a wide lens. Bustling market energy."}
+    ],
+    "weather": "Very hot/humid. Oct-Dec is monsoon. Gear fogging is common.",
+    "airport": "Chennai International (MAA). 30 mins to city. Taxis available.",
+    "permits": "Strict rules near government buildings. Temple filming often restricted."
+  },
+  {
+    "city": "Hyderabad",
+    "country": "India",
+    "slug": "hyderabad-videographer-interview",
+    "camera_focus": "Canon R5",
+    "challenge": "Crowds & Low Light Interiors",
+    "intro": "Home to Charminar and massive tech parks. Contrast between historic darkness and modern brightness. Low light performance matters.",
+    "attractions": [
+      {"name": "Charminar", "tip": "Night shots are best. Crowds are thick; use a monopod."},
+      {"name": "Golconda Fort", "tip": "Sound and light show is popular. Day shoot requires hiking up."},
+      {"name": "Ramoji Film City", "tip": "World's largest film studio. Permits easy to get for creators."}
+    ],
+    "weather": "Hot dry summers. Pleasant winters. Dust is a factor.",
+    "airport": "Rajiv Gandhi (HYD). 45 mins to city. Metro connection planned.",
+    "permits": "Historical sites require ASI permission. Film city has specific packages."
+  },
+  {
+    "city": "Ahmedabad",
+    "country": "India",
+    "slug": "ahmedabad-videographer-interview",
+    "camera_focus": "Nikon Z8",
+    "challenge": "Dust & Intense Sun",
+    "intro": "A heritage city with stunning stepwells and strict alcohol laws. The sun is harsh; dynamic range is your friend.",
+    "attractions": [
+      {"name": "Sabarmati Ashram", "tip": "Gandhi's home. Quiet zones enforced. No tripods inside rooms."},
+      {"name": "Adalaj Stepwell", "tip": "Incredible geometry. Shoot mid-day for shafts of light."},
+      {"name": "Old City (Manek Chowk)", "tip": "Night market is vibrant. Food shots work well here."}
+    ],
+    "weather": "Extremely hot Apr-Jun. Dry rest of year. Dust storms possible.",
+    "airport": "Sardar Vallabhbhai (AMD). 30 mins to city. Cabs easy to find.",
+    "permits": "Ashram has strict rules. Drone ban strictly enforced."
+  },
+  {
+    "city": "Manila",
+    "country": "Philippines",
+    "slug": "manila-videographer-interview",
+    "camera_focus": "DJI Pocket 3",
+    "challenge": "Security & Traffic",
+    "intro": "A city of extreme contrasts. Skyscrapers loom over slums. Security is tight; blending in with a small camera is safer.",
+    "attractions": [
+      {"name": "Intramuros", "tip": "Spanish walled city. Horse carriages make great B-roll. Permit needed for tripods."},
+      {"name": "Binondo (Chinatown)", "tip": "Oldest in world. Narrow alleys. Eat while shooting."},
+      {"name": "Makati Skyline", "tip": "Shoot from rooftop bars. Traffic below is chaotic but visual."}
+    ],
+    "weather": "Tropical. Wet season Jun-Oct. Sudden downpours common.",
+    "airport": "NAIA. Close to city but traffic to exit is terrible. Allow 2 hours.",
+    "permits": "Police often stop filming. Be polite, show ID. Drones strictly banned."
+  },
+  {
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "slug": "jakarta-videographer-interview",
+    "camera_focus": "Insta360 X5",
+    "challenge": "Humidity & Floods",
+    "intro": "The sinking capital. Massive traffic jams and sudden floods. Waterproof gear is non-negotiable.",
+    "attractions": [
+      {"name": "Kota Tua", "tip": "Old town square. Colorful buildings. Very crowded weekends."},
+      {"name": "Monas (National Monument)", "tip": "Iconic spike. Park around it is vast. Good for hyperlapse."},
+      {"name": "Glodok", "tip": "Electronics district. Cyberpunk vibes. Low light challenges."}
+    ],
+    "weather": "Hot/humid year-round. Wet season Nov-Mar. Flash floods frequent.",
+    "airport": "Soekarno-Hatta (CGK). Far from city (1hr+). Train is fastest option.",
+    "permits": "Filming near government buildings risky. Local fixer recommended."
+  },
+  {
+    "city": "Bangkok",
+    "country": "Thailand",
+    "slug": "bangkok-videographer-interview",
+    "camera_focus": "Sony ZV-E1",
+    "challenge": "Heat & Respect for Royalty",
+    "intro": "The ultimate creator hub. Incredible street food and temples. But disrespecting the monarchy or Buddha images leads to arrest.",
+    "attractions": [
+      {"name": "Grand Palace", "tip": "Strict dress code. No video inside main temples. Shoot exterior details."},
+      {"name": "Chatuchak Market", "tip": "Weekend only. Maze-like. Great for POV walking shots."},
+      {"name": "Chao Phraya River", "tip": "Take a long-tail boat. Golden hour on the water is magic."}
+    ],
+    "weather": "Extremely hot Mar-May. Rainy season Jul-Oct. AC is your refuge.",
+    "airport": "Suvarnabhumi (BKK). Efficient train (ARL) to city. Avoid taxis in rush hour.",
+    "permits": "Royal family images forbidden. Temple rules vary; ask guards first."
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "slug": "ho-chi-minh-city-videographer-interview",
+    "camera_focus": "GoPro Hero 13",
+    "challenge": "Motorbike Chaos",
+    "intro": "Energy overload. Millions of motorbikes create a river of traffic. Crossing the street is an extreme sport.",
+    "attractions": [
+      {"name": "Ben Thanh Market", "tip": "Chaotic inside. Better shots outside at night market."},
+      {"name": "War Remnants Museum", "tip": "Somber tone. No flash photography. Respectful behavior required."},
+      {"name": "Nguyen Hue Walking Street", "tip": "Wide boulevard. Perfect for timelapses of crowds."}
+    ],
+    "weather": "Hot year-round. Wet season May-Nov. Afternoon storms predictable.",
+    "airport": "Tan Son Nhat (SGN). Very close to city. Grab bikes are fastest transport.",
+    "permits": "Sensitive about war content. Police may delete footage if angry."
+  },
+  {
+    "city": "Cairo",
+    "country": "Egypt",
+    "slug": "cairo-videographer-interview",
+    "camera_focus": "Canon R6 Mark II",
+    "challenge": "Harassment & Sand",
+    "intro": "Ancient wonders meet chaotic modernity. Constant negotiation with vendors and guards. Sand destroys sensors quickly.",
+    "attractions": [
+      {"name": "Pyramids of Giza", "tip": "Go inside early. Camel rides require hard negotiation. Don't put camera down."},
+      {"name": "Khan el-Khalili", "tip": "Medieval market. Dense crowds. Watch your pockets."},
+      {"name": "Nile Corniche", "tip": "Sunset views. Felucca boats make great B-roll."}
+    ],
+    "weather": "Hot dry days, cool nights. Sandstorms (Khamsin) possible spring.",
+    "airport": "Cairo Intl (CAI). Visa on arrival for many. 45 mins to Giza.",
+    "permits": "Tripod permit mandatory for Pyramids. Police escort often required."
+  },
+  {
+    "city": "Istanbul",
+    "country": "Turkey",
+    "slug": "istanbul-videographer-interview",
+    "camera_focus": "Panasonic S5II",
+    "challenge": "Crowds & Security Checks",
+    "intro": "Where Europe meets Asia. Stunning mosques and bazaars. Security is tight near bridges and squares.",
+    "attractions": [
+      {"name": "Hagia Sophia", "tip": "Now a mosque again. Cover shoulders/knees. Prayer times restrict filming."},
+      {"name": "Grand Bazaar", "tip": "Massive labyrinth. Low light inside. Ask before filming shops."},
+      {"name": "Galata Bridge", "tip": "Fishermen line the sides. Sunset skyline shots are classic."}
+    ],
+    "weather": "Mediterranean. Rainy winters. Hot summers. Windy on the bridge.",
+    "airport": "IST (New airport). Far from city (1hr). Havaist bus is reliable.",
+    "permits": "Professional gear flagged at mosques. Drones heavily restricted."
+  },
+  {
+    "city": "Tehran",
+    "country": "Iran",
+    "slug": "tehran-videographer-interview",
+    "camera_focus": "Fujifilm X-H2S",
+    "challenge": "Strict Regulations & Pollution",
+    "intro": "A misunderstood gem with incredible architecture. Filming rules are strict; women must wear hijab. Air quality varies.",
+    "attractions": [
+      {"name": "Golestan Palace", "tip": "UNESCO site. Mirrors and tiles. Tripods allowed with permit."},
+      {"name": "Tajrish Bazaar", "tip": "Authentic local vibe. Less touristy than Grand Bazaar."},
+      {"name": "Milad Tower", "tip": "Modern skyline view. Best at night."}
+    ],
+    "weather": "Cold winters, hot dry summers. Pollution traps smog in winter.",
+    "airport": "Imam Khomeini (IKA). Strict customs. Declare all gear.",
+    "permits": "Visa required for most. Filming permit mandatory. Female dress code strict."
+  },
+  {
+    "city": "Riyadh",
+    "country": "Saudi Arabia",
+    "slug": "riyadh-videographer-interview",
+    "camera_focus": "Sony A1",
+    "challenge": "Extreme Heat & Conservatism",
+    "intro": "Rapidly opening up. Modern skyscrapers next to old mud forts. Heat is unbearable mid-day. Conservative dress expected.",
+    "attractions": [
+      {"name": "Diriyah", "tip": "Historic birthplace. Mud brick architecture. Night illuminations are great."},
+      {"name": "Kingdom Centre", "tip": "Sky bridge offers city views. Mall inside is luxurious."},
+      {"name": "Al Masmak Fortress", "tip": "Small fort in old town. Good for history segments."}
+    ],
+    "weather": "Scorching summer (50°C+). Pleasant winter. Sand common.",
+    "airport": "King Khalid (RUH). New terminal. Uber/Careem widely available.",
+    "permits": "Tourist visa easy now. Filming permits needed for gov buildings. Respect prayer times."
+  },
+  {
+    "city": "Baghdad",
+    "country": "Iraq",
+    "slug": "baghdad-videographer-interview",
+    "camera_focus": "DJI Osmo Action 5",
+    "challenge": "Security & Checkpoints",
+    "intro": "Rebuilding slowly. High security presence. Checkpoints everywhere. A rugged action cam is best to stay low profile.",
+    "attractions": [
+      {"name": "Al-Mustansiriya University", "tip": "Historic architecture. Ask permission before entering."},
+      {"name": "Tigris River", "tip": "Boat rides available. Sunset views of the city."},
+      {"name": "Mutanabi Street", "tip": "Booksellers street. Cultural heart. Busy Fridays."}
+    ],
+    "weather": "Extremely hot summer. Mild winter. Dust storms frequent.",
+    "airport": "Baghdad Intl (BGW). High security. Escort sometimes required.",
+    "permits": "Fixer essential. Military zones forbidden. Always carry passport."
+  },
+  {
+    "city": "Moscow",
+    "country": "Russia",
+    "slug": "moscow-videographer-interview",
+    "camera_focus": "Nikon Z9",
+    "challenge": "Cold & Bureaucracy",
+    "intro": "Grand scale and cold winters. Red Square is iconic but heavily guarded. Batteries die fast in winter.",
+    "attractions": [
+      {"name": "Red Square", "tip": "No tripods without permit. Guards watch closely. Night shots clear of crowds."},
+      {"name": "Metro Stations", "tip": "Underground palaces. Chandeliers. Rush hour is insane."},
+      {"name": "Gorky Park", "tip": "Modern vibe. Winter ice skating. Summer cafes."}
+    ],
+    "weather": "Freezing winters (-20°C). Snowy. Summers mild. Keep batteries warm.",
+    "airport": "Sheremetyevo/SVO. Aeroexpress train to city. Visa required for most.",
+    "permits": "Kremlin filming banned. Metro filming restricted. Police strict on foreigners."
+  },
+  {
+    "city": "Paris",
+    "country": "France",
+    "slug": "paris-videographer-interview",
+    "camera_focus": "Leica Q3",
+    "challenge": "Pickpockets & Permits",
+    "intro": "The classic dream. Beautiful but crowded. Pickpockets target camera gear. Strict rules on tripods in public spaces.",
+    "attractions": [
+      {"name": "Eiffel Tower", "tip": "Night lights are copyrighted (technically). Shoot from Trocadero."},
+      {"name": "Montmartre", "tip": "Artists square. Cobblestone streets. Watch bags."},
+      {"name": "Seine Riverbanks", "tip": "UNESCO site. Picnic shots popular. Drone ban strict."}
+    ],
+    "weather": "Mild. Rainy autumn. Grey winters. Golden hour in summer long.",
+    "airport": "CDG/Orly. RER train to city. Strikes common; check schedules.",
+    "permits": "Tripod permit needed for public spaces. Eiffel Tower night shot copyright issue."
+  },
+  {
+    "city": "London",
+    "country": "UK",
+    "slug": "london-videographer-interview",
+    "camera_focus": "Sony FX3",
+    "challenge": "Rain & Royal Parks Rules",
+    "intro": "History meets modern finance. Unpredictable rain. Royal Parks have strict commercial filming rules.",
+    "attractions": [
+      {"name": "Westminster", "tip": "Big Ben/Parliament. Crowded. Police monitor tripods."},
+      {"name": "Camden Market", "tip": "Alternative vibe. Narrow stalls. Great food shots."},
+      {"name": "South Bank", "tip": "Street performers. Thames views. Walk from Tate to Tower Bridge."}
+    ],
+    "weather": "Rainy year-round. Overcast. Rare heatwaves. Waterproof gear essential.",
+    "airport": "Heathrow/Gatwick. Express trains expensive. Tube is cheaper.",
+    "permits": "Royal Parks need permit. TFL (Tube) filming requires approval."
+  },
+  {
+    "city": "Kinshasa",
+    "country": "DRC",
+    "slug": "kinshasa-videographer-interview",
+    "camera_focus": "iPhone 16 Pro",
+    "challenge": "Power Cuts & Security",
+    "intro": "Vibrant music capital. Power is unreliable. Phone filmmaking is practical and less threatening than big cameras.",
+    "attractions": [
+      {"name": "Congo River", "tip": "Massive river. Boat traffic. Sunset colors incredible."},
+      {"name": "Marché Central", "tip": "Chaotic market. Fabric sections colorful. Bargain hard."},
+      {"name": "Kin Malebo", "tip": "Waterfront area. Nightlife hub. Music scenes."}
+    ],
+    "weather": "Tropical. Wet/Dry seasons. Humid. Thunderstorms common.",
+    "airport": "N'djili (FIH). Security tight. Arrange pickup in advance.",
+    "permits": "Fixer highly recommended. Police checkpoints common. Avoid political topics."
+  },
+  {
+    "city": "Lagos",
+    "country": "Nigeria",
+    "slug": "lagos-videographer-interview",
+    "camera_focus": "Blackmagic 6K",
+    "challenge": "Traffic ('Go-Slow') & Humidity",
+    "intro": "Africa's giant. Energetic, loud, creative. Traffic is legendary. Humidity fogs lenses instantly.",
+    "attractions": [
+      {"name": "Lekki Conservation Centre", "tip": "Canopy walkway. Monkeys. Nature in the city."},
+      {"name": "Nike Art Gallery", "tip": "5 floors of art. Owner welcomes filmmakers."},
+      {"name": "Third Mainland Bridge", "tip": "Longest in Africa. Shoot from boat below for safety."}
+    ],
+    "weather": "Hot/Humid. Two rainy seasons. Mold is a risk for gear.",
+    "airport": "Murtala Muhammed (LOS). Traffic to exit airport is bad. Helicopter option exists.",
+    "permits": "State film permit required. Police escorts often needed for location shoots."
+  },
+  {
+    "city": "Luanda",
+    "country": "Angola",
+    "slug": "luanda-videographer-interview",
+    "camera_focus": "Canon C70",
+    "challenge": "Cost & Logistics",
+    "intro": "One of the world's most expensive cities. Oil wealth vs poverty. Logistics are hard; bring everything you need.",
+    "attractions": [
+      {"name": "Marginal de Luanda", "tip": "Waterfront promenade. Sunset views. Locals gather here."},
+      {"name": "Fortaleza de São Miguel", "tip": "Old fort. Museum inside. History of slavery."},
+      {"name": "Ilha do Cabo", "tip": "Peninsula with clubs/restaurants. Vibe spot."}
+    ],
+    "weather": "Dry season May-Oct (best). Rainy Nov-Apr. Foggy mornings.",
+    "airport": "Quatro de Fevereiro (LAD). New airport opening soon. Expensive transfers.",
+    "permits": "Visa difficult. Press accreditation needed for professional work."
+  },
+  {
+    "city": "São Paulo",
+    "country": "Brazil",
+    "slug": "sao-paulo-videographer-interview",
+    "camera_focus": "Sony A7IV",
+    "challenge": "Safety & Scale",
+    "intro": "Concrete jungle. Endless skyline. Safety varies by block. Helicopter shots are common for a reason.",
+    "attractions": [
+      {"name": "Avenida Paulista", "tip": "Main avenue. Sunday closed to cars. Museums lined up."},
+      {"name": "Mercado Municipal", "tip": "Stained glass. Mortadella sandwiches. High ceilings."},
+      {"name": "Beco do Batman", "tip": "Graffiti alley. Instagram gold. Safe during day."}
+    ],
+    "weather": "Subtropical. Four seasons in one day. Rain sudden.",
+    "airport": "Guarulhos (GRU). Far away. Congonhas (CGH) closer for domestic.",
+    "permits": "Favela filming dangerous without guide. General city ok but stay alert."
+  },
+  {
+    "city": "Mexico City",
+    "country": "Mexico",
+    "slug": "mexico-city-videographer-interview",
+    "camera_focus": "Fujifilm GFX100",
+    "challenge": "Altitude & Earthquakes",
+    "intro": "High altitude (2250m). Ancient Aztec ruins under modern streets. Incredible food scene. Sirens are constant.",
+    "attractions": [
+      {"name": "Zócalo", "tip": "Huge main square. Cathedral. Flag ceremony."},
+      {"name": "Teotihuacan", "tip": "Pyramids nearby. Climb Sun Pyramid. Hot/dusty."},
+      {"name": "Xochimilco", "tip": "Floating gardens. Trajinera boats. Party atmosphere."}
+    ],
+    "weather": "Spring-like year-round. Rainy summer afternoons. UV high due to altitude.",
+    "airport": "Benito Juárez (MEX). Close to city. Uber safe. Metro busy.",
+    "permits": "Drone laws strict. Archaeological sites have fees/rules."
+  },
+  {
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "slug": "buenos-aires-videographer-interview",
+    "camera_focus": "Panasonic GH6",
+    "challenge": "Late Nights & Inflation",
+    "intro": "Paris of South America. Dinner at 10 PM. Tango culture. Economic volatility affects prices daily.",
+    "attractions": [
+      {"name": "La Boca", "tip": "Colorful houses. Touristy but photogenic. Don't wander off main streets."},
+      {"name": "Recoleta Cemetery", "tip": "Evita's grave. Mausoleums intricate. Quiet respect needed."},
+      {"name": "Puerto Madero", "tip": "Modern docks. Skyscrapers. Bridges lit up at night."}
+    ],
+    "weather": "Four distinct seasons. Hot humid summers. Cool winters.",
+    "airport": "Ezeiza (EZE). Far out. Minibus transfer recommended. Aeroparque for regional.",
+    "permits": "Generally friendly to filmmakers. Tango shows may restrict pro gear."
+  },
+  {
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "slug": "rio-de-janeiro-videographer-interview",
+    "camera_focus": "GoPro Hero 12",
+    "challenge": "Security & Terrain",
+    "intro": "Stunning beauty between mountain and sea. Favelas on hillsides. Safety is paramount; don't flash gear.",
+    "attractions": [
+      {"name": "Christ the Redeemer", "tip": "Iconic. Train or van up. Clouds often block view."},
+      {"name": "Copacabana/Ipanema", "tip": "Beach culture. Volleyball. Sunset drinks."},
+      {"name": "Selarón Steps", "tip": "Colorful tiles. Crowded. Pickpockets active."}
+    ],
+    "weather": "Tropical. Hot year-round. Rainy summer (Dec-Mar).",
+    "airport": "Galeão (GIG). Scenic drive to city. Santos Dumont (SDU) closer.",
+    "permits": "Favela tours only with trusted guides. Beach filming ok, drones restricted."
+  },
+  {
+    "city": "Bogotá",
+    "country": "Colombia",
+    "slug": "bogota-videographer-interview",
+    "camera_focus": "Sony ZV-E10",
+    "challenge": "Altitude & Rain",
+    "intro": "High in the Andes. Cool climate. Graffiti art capital. Traffic is heavy; TransMilenio bus system is useful.",
+    "attractions": [
+      {"name": "La Candelaria", "tip": "Old town. Colonial architecture. Cobblestones."},
+      {"name": "Monserrate", "tip": "Mountain overlooking city. Cable car or funicular. View is amazing."},
+      {"name": "Plaza de Bolívar", "tip": "Main square. Cathedral. Government buildings."}
+    ],
+    "weather": "Cool/Cold. Rainy Apr/May & Oct/Nov. Sun strong due to altitude.",
+    "airport": "El Dorado (BOG). Modern. Close to city. Uber available.",
+    "permits": "Graffiti tours popular. Some areas unsafe at night. Drone permit needed."
+  },
+  {
+    "city": "Lima",
+    "country": "Peru",
+    "slug": "lima-videographer-interview",
+    "camera_focus": "Canon R8",
+    "challenge": "Fog ('Garúa') & Earthquakes",
+    "intro": "Gastronomy capital. Coastal desert. Winter fog blankets the city for months. Ancient ruins everywhere.",
+    "attractions": [
+      {"name": "Miraflores", "tip": "Cliffside parks. Paragliders. Modern malls."},
+      {"name": "Barranco", "tip": "Bohemian district. Bridge of Sighs. Street art."},
+      {"name": "Huaca Pucllana", "tip": "Pyramid in middle of city. Night tours available."}
+    ],
+    "weather": "Desert climate. Humid winter (Jun-Sep) with fog. Sunny summer.",
+    "airport": "Jorge Chávez (LIM). New expansion. Traffic to Miraflores heavy.",
+    "permits": "Archaeological sites have rules. Drone ban near airports/sites."
+  },
+  {
+    "city": "Santiago",
+    "country": "Chile",
+    "slug": "santiago-videographer-interview",
+    "camera_focus": "Nikon Zf",
+    "challenge": "Smog & Mountains",
+    "intro": "Nestled in a valley with snowy peaks. Smog traps in winter. Modern metro system. Very safe compared to neighbors.",
+    "attractions": [
+      {"name": "Cerro San Cristóbal", "tip": "Statue of Virgin. Cable car. Panoramic views."},
+      {"name": "Lastarria", "tip": "Cultural neighborhood. Cafes. Cinema."},
+      {"name": "Mercado Central", "tip": "Iron structure. Seafood. Historic."}
+    ],
+    "weather": "Mediterranean. Hot dry summers. Cool wet winters. Smog alerts common.",
+    "airport": "Arturo Merino (SCL). Efficient. Metro connects to city.",
+    "permits": "Generally easy. Mountain areas may need CONAF permit."
+  }
+]

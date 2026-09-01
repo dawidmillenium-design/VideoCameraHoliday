@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing & AI: Post-Production for Travel Video | Holiday Video Camera</title>
+    <meta name="description" content="AI color grading, audio cleanup, LUTs, frame rates, and editing workflows for travel filmmakers. DaVinci Resolve, CapCut, Premiere compared. Save 12 hours per project.">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Editing & AI Guides",
+      "description": "Post-production guides for travel filmmakers including AI tools, color grading, and audio cleanup.",
+      "publisher": { "@type": "Organization", "name": "Holiday Video Camera" },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AI Color Grading & Audio Cleanup", "url": "/editing/ai-color-grading-audio-cleanup" },
+          { "@type": "ListItem", "position": 2, "name": "AI Editing Workflow for Travel Video", "url": "/editing/ai-editing-workflow" },
+          { "@type": "ListItem", "position": 3, "name": "Best LUTs for Travel Video", "url": "/editing/luts-travel-video" },
+          { "@type": "ListItem", "position": 4, "name": "24fps vs 120fps Holiday Edit", "url": "/editing/24fps-vs-120fps" }
+        ]
+      }
+    }
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#2a2a2a;background:#f8f9fa}
+        header{background:#1a1a1a;color:#fff;padding:1rem 0;position:sticky;top:0;z-index:1000}
+        .nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.5rem;font-weight:700;color:#fff;text-decoration:none}.logo span{color:#7b1fa2}
+        nav ul{display:flex;list-style:none;gap:1.8rem}
+        nav a{color:#fff;text-decoration:none;font-weight:500;font-size:.95rem}
+        nav a:hover,nav a.active{color:#ce93d8}
+        .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+        .hero{background:linear-gradient(135deg,#4a148c,#7b1fa2,#ab47bc);color:#fff;padding:4rem 2rem;text-align:center}
+        .hero h1{font-size:2.4rem;margin-bottom:1rem}.hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto}
+        main{max-width:1100px;margin:0 auto;padding:3rem 2rem}
+        .section-header{margin-bottom:2rem;border-bottom:2px solid #e0e0e0;padding-bottom:1rem}
+        .section-header h2{font-size:1.6rem;color:#4a148c}
+        .featured{background:linear-gradient(135deg,#4a148c,#9c27b0);color:#fff;border-radius:14px;padding:2.5rem;margin-bottom:3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+        .featured h3{font-size:1.4rem;margin-bottom:.8rem}.featured p{opacity:.9;margin-bottom:1.2rem}
+        .featured .btn{display:inline-block;background:#fff;color:#4a148c;padding:.7rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:700}
+        .featured-icon{font-size:4rem}
+        .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+        .card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e8e8e8;transition:transform .3s,box-shadow .3s}
+        .card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,0,0,.08)}
+        .card-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+        .card-img.ai{background:linear-gradient(135deg,#4a148c,#9c27b0)}
+        .card-img.workflow{background:linear-gradient(135deg,#1a237e,#3f51b5)}
+        .card-img.luts{background:linear-gradient(135deg,#e65100,#ff9800)}
+        .card-img.fps{background:linear-gradient(135deg,#004d40,#00897b)}
+        .card-body{padding:1.3rem}
+        .card-body h4{font-size:1.05rem;margin-bottom:.5rem;color:#1a1a1a}
+        .card-body p{font-size:.88rem;color:#666;margin-bottom:1rem}
+        .card-link{color:#7b1fa2;font-weight:600;text-decoration:none;font-size:.9rem}
+        .card-link:hover{text-decoration:underline}
+        .badge{display:inline-block;background:#f3e5f5;color:#6a1b9a;padding:.2rem .6rem;border-radius:10px;font-size:.7rem;font-weight:600;margin-bottom:.5rem}
+        .newsletter{background:#fff;border:2px solid #e0e0e0;border-radius:12px;padding:2.5rem;text-align:center;margin-top:3rem}
+        .newsletter h3{font-size:1.3rem;color:#4a148c;margin-bottom:.5rem}
+        .newsletter p{color:#666;margin-bottom:1.2rem;font-size:.95rem}
+        .nl-form{display:flex;max-width:380px;margin:0 auto;gap:.5rem}
+        .nl-form input{flex:1;padding:.8rem;border:1px solid #ccc;border-radius:6px}
+        .nl-form button{background:#7b1fa2;color:#fff;border:none;padding:0 1.5rem;border-radius:6px;font-weight:600;cursor:pointer}
+        footer{background:#1a1a1a;color:#fff;padding:2.5rem 2rem;margin-top:3rem}
+        .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem}
+        .footer-inner a{color:#aaa;text-decoration:none;display:block;padding:.2rem 0;font-size:.9rem}
+        .footer-inner a:hover{color:#ce93d8}
+        .affiliate{text-align:center;padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid #333;font-size:.8rem;color:#777;max-width:1200px;margin-left:auto;margin-right:auto}
+        @media(max-width:768px){.menu-toggle{display:block}nav ul{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#1a1a1a;padding:1rem 2rem}nav ul.active{display:flex}.hero h1{font-size:1.8rem}.featured{grid-template-columns:1fr}.featured-icon{display:none}.card-grid{grid-template-columns:1fr}.nl-form{flex-direction:column}}
+    </style>
+
+    <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
+</head>
+<body>
+<nav class="top-nav" aria-label="Primary navigation">
+  <div class="nav-container">
+    <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a data-section="home" href="/VideoCameraHoliday/">Home</a></li>
+      <li><a data-section="city-through-the-lens" href="/VideoCameraHoliday/city-through-the-lens/">Series</a></li>
+      <li><a data-section="reviews" href="/VideoCameraHoliday/reviews/">Reviews</a><ul class="dropdown-menu"><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></li>
+      <li><a data-section="guides" href="/VideoCameraHoliday/guides/">Buying Guides</a><ul class="dropdown-menu"><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li></ul></li>
+      <li><a data-section="how-to" href="/VideoCameraHoliday/how-to/">How-To</a></li><li><a data-section="destinations" href="/VideoCameraHoliday/destinations/">Destinations</a></li><li><a data-section="editing" href="/VideoCameraHoliday/editing/">Editing</a></li><li><a data-section="comparisons" href="/VideoCameraHoliday/comparisons/">Comparisons</a></li><li><a data-section="about" href="/VideoCameraHoliday/about/">About</a></li>
+    </ul>
+  </div>
+</nav>
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">Holiday<span>Video</span>Camera</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>✂️ Editing & AI</h1>
+        <p>Color grading, audio cleanup, AI workflows, and frame rate mastery. Everything you need to turn raw travel footage into cinematic stories.</p>
+    </div>
+
+    <main>
+        <div class="featured">
+            <div>
+                <span class="badge" style="background:rgba(255,255,255,.2);color:#fff">Featured Guide</span>
+                <h3>AI Color Grading & Audio Cleanup: The 2026 Toolkit</h3>
+                <p>DaVinci Resolve vs CapCut vs Premiere. Match 3 cameras, fix wind noise, and save 12 hours per project. After 500+ edits, here's exactly what to automate.</p>
+                <a href="/editing/ai-color-grading-audio-cleanup" class="btn">Read the Full Guide →</a>
+            </div>
+            <div class="featured-icon">🤖</div>
+        </div>
+
+        <div class="section-header"><h2>All Editing Guides</h2></div>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-img workflow">🔄</div>
+                <div class="card-body">
+                    <span class="badge">Workflow</span>
+                    <h4>AI Editing Workflow for Travel Video</h4>
+                    <p>The complete pipeline from import to export. What AI handles, what you handle, and the tools that save hours.</p>
+                    <a href="/editing/ai-editing-workflow" class="card-link">Read guide →</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img luts">🎨</div>
+                <div class="card-body">
+                    <span class="badge">Color Grading</span>
+                    <h4>Best LUTs for Travel Video (Free & Paid)</h4>
+                    <p>Cinematic looks for beach, city, jungle, and night footage. Tested on DJI, GoPro, and iPhone footage.</p>
+                    <a href="/editing/luts-travel-video" class="card-link">Read guide →</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img fps">🎞️</div>
+                <div class="card-body">
+                    <span class="badge">Frame Rates</span>
+                    <h4>24fps vs 120fps Holiday Edit</h4>
+                    <p>When to shoot slow-motion, how to speed-ramp, and syncing footage to music beat-perfect.</p>
+                    <a href="/editing/24fps-vs-120fps" class="card-link">Read guide →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="newsletter">
+            <h3>📬 Get Editing Tips Weekly</h3>
+            <p>Join 5,000+ travelers. One editing technique or AI tool recommendation every week.</p>
+            <form class="nl-form" onsubmit="event.preventDefault()"><input type="email" placeholder="Your email" required><button>Subscribe</button></form>
+        </div>
+    </main>
+
+    
+    <script>function toggleMenu(){document.getElementById('navMenu').classList.toggle('active')}</script>
+<footer class="site-footer">
+  <div class="footer-container">
+    <section class="footer-section"><h4>Series</h4><ul><li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li><li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li></ul></section>
+    <section class="footer-section"><h4>Guides</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Cameras Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li></ul></section>
+    <section class="footer-section"><h4>Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></section>
+    <section class="footer-section"><h4>About</h4><ul><li><a href="/VideoCameraHoliday/about/">About Us</a></li><li><a href="/VideoCameraHoliday/">Home</a></li><li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li></ul></section>
+  </div>
+  <div class="footer-bottom"><p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p></div>
+</footer>
+<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+</body>
+</html>
