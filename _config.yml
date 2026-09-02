@@ -1,0 +1,8 @@
+# Polyglot settings
+languages: ["en", "de", "es", "ja"]
+default_lang: "en"
+exclude_from_localization: ["assets", "images", "javascripts", "stylesheets", "sitemap.xml", "robots.txt", "googlef5307df871e4912d.html", "BingSiteAuth.xml", "JSON.dataset", "*.py", "*.yml", "*.txt", "*.md"]
+parallel_localization: true
+
+# Optional: set default locale for URL
+# default_locale: "en"
