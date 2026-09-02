@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Put all your global CSS and meta tags here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- DYNAMIC SEO TAGS -->
     <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="canonical" href="{{ page.canonical_url }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ page.canonical_url }}">
+    <meta property="og:type" content="article">
+    
+    <!-- Paste your massive <style> CSS block right here -->
+    <style>
+        :root {
+            --ocean-blue: #0077b6;
+            /* ... rest of your styles ... */
+        }
+    </style>
 </head>
-<body>
+<body id="top">
+
+    <!-- This injects the menu -->
     {% include header.html %}
 
-    <!-- This is where your specific blog post content will go -->
+    <!-- This is where the blog post content gets injected -->
     {{ content }}
 
+    <!-- This injects the footer -->
     {% include footer.html %}
+
 </body>
 </html>
