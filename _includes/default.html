@@ -3,6 +3,18 @@
 <head>
     <!-- Put all your global CSS and meta tags here -->
     <title>{{ page.title }}</title>
+    {% if page.lang %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ site.url }}{{ page.url | absolute_url }}">
+{% endif %}
+{% for lang in site.languages %}
+  {% if lang == site.default_lang %}
+    {% assign alternate_url = page.url | remove_first: '/de/' | remove_first: '/es/' | remove_first: '/ja/' | remove_first: '/en/' %}
+  {% else %}
+    {% assign alternate_url = '/' | append: lang | append: (page.url | remove_first: '/de/' | remove_first: '/es/' | remove_first: '/ja/' | remove_first: '/en/') %}
+  {% endif %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ alternate_url }}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url | remove_first: '/de/' | remove_first: '/es/' | remove_first: '/ja/' | remove_first: '/en/' }}">
 </head>
 <body>
     {% include header.html %}
