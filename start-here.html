@@ -11,69 +11,589 @@
 <meta property="og:description" content="Find the best travel cameras, destination guides, and our free packing checklist.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/start-here.html">
-<link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
+
 <style>
-/* Fallback styles if site-shell.css fails to load */
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; margin: 0; }
+/* ===== RESET & BASE ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+a { color: #e94560; text-decoration: none; }
+a:hover { text-decoration: underline; }
 .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-.top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
-.top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
-.top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; }
-.top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
-.top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; }
-.top-nav .nav-links a:hover { color: #e94560; }
-header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
-header h1 { font-size: 2.4rem; color: #fff; margin-bottom: 15px; }
-header .subtitle { font-size: 1.15rem; color: #888; max-width: 680px; margin: 0 auto; }
+
+/* ===== TOP NAVIGATION ===== */
+.top-nav {
+    background: #111;
+    border-bottom: 2px solid #e94560;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #e94560;
+}
+.logo:hover { text-decoration: none; }
+
+/* Mobile Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+    padding: 0 8px;
+    color: #ccc;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/* Navigation Links - Desktop */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+    align-items: center;
+}
+.nav-links > li > a {
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-links > li > a:hover,
+.nav-links > li > a:focus {
+    background: #1a1a2e;
+    color: #e94560;
+}
+.nav-links > li > a.active {
+    color: #e94560;
+    background: #1a1a2e;
+}
+
+/* Mega Menu */
+.mega-item {
+    position: relative;
+}
+.mega-trigger {
+    cursor: pointer;
+}
+.mega-trigger .arrow {
+    font-size: 0.6rem;
+    margin-left: 4px;
+    transition: transform 0.2s;
+}
+.mega-trigger[aria-expanded="true"] .arrow {
+    transform: rotate(180deg);
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a2e;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    padding: 24px 28px;
+    min-width: 700px;
+    border: 1px solid #333;
+    z-index: 1001;
+}
+.mega-menu.open {
+    display: block;
+}
+.mega-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 28px;
+}
+.mega-column h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #e94560;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+.mega-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.mega-column ul li {
+    margin-bottom: 6px;
+}
+.mega-column ul li a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    display: block;
+    padding: 4px 0;
+}
+.mega-column ul li a:hover {
+    color: #e94560;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-bottom: 2px solid #e94560;
+}
+header h1 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+header .subtitle {
+    font-size: 1.15rem;
+    color: #888;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ===== ARTICLE ===== */
 article { padding: 40px 20px; }
-h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-.related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
-.related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s; display: block; }
-.related-card:hover { border-color: #e94560; transform: translateY(-3px); }
-.related-card h4 { color: #e94560; margin-top: 0; font-size: 1.1rem; }
-.related-card p { font-size: 0.9rem; color: #888; margin-bottom: 0; line-height: 1.5; }
-.site-footer { background: #111; border-top: 2px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
-.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
-.footer-section h4 { color: #e94560; font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; }
-.footer-section ul { list-style: none; margin: 0; padding: 0; }
-.footer-section a { color: #888; text-decoration: none; font-size: 0.9rem; }
-.footer-section a:hover { color: #e94560; }
-.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
+h2 {
+    color: #e94560;
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+.related-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+.related-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s;
+    display: block;
+}
+.related-card:hover {
+    border-color: #e94560;
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+.related-card h4 {
+    color: #e94560;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+.related-card p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: #111;
+    border-top: 2px solid #e94560;
+    padding: 48px 20px 24px;
+    margin-top: 40px;
+}
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 32px;
+}
+.footer-section h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #e94560;
+    margin: 0 0 12px 0;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-section ul li {
+    margin-bottom: 6px;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+.footer-section ul li a:hover {
+    color: #e94560;
+}
+.footer-bottom {
+    max-width: 1280px;
+    margin: 32px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+}
+.footer-bottom a {
+    color: #e94560;
+    text-decoration: none;
+}
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #0a0a0a;
+        padding: 80px 24px 40px;
+        overflow-y: auto;
+        z-index: 999;
+        gap: 4px;
+        align-items: stretch;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links > li > a {
+        padding: 12px 16px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        color: #ccc;
+    }
+    .nav-links > li > a:hover {
+        background: #1a1a2e;
+    }
+    .mega-item {
+        position: static;
+    }
+    .mega-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 8px 0 8px 20px;
+        min-width: unset;
+        background: #111;
+        margin-top: 4px;
+    }
+    .mega-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .mega-column h4 {
+        font-size: 0.9rem;
+        color: #e94560;
+    }
+    .mega-column ul li a {
+        color: #aaa;
+    }
+    /* Close button for mobile */
+    .nav-links::before {
+        content: "✕ Close";
+        display: block;
+        text-align: right;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 8px 16px;
+        cursor: pointer;
+        color: #ccc;
+        border-bottom: 1px solid #333;
+        margin-bottom: 16px;
+    }
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
 </style>
 </head>
 <body>
 
-<!-- TOP NAVIGATION -->
-<nav class="top-nav" aria-label="Primary navigation">
-  <div class="nav-container">
-    <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
-    <ul class="nav-links">
-      <li><a href="/VideoCameraHoliday/">Home</a></li>
-      <li><a href="/VideoCameraHoliday/start-here.html" style="color: #e94560; font-weight: bold;">Start Here</a></li>
-      <li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
-      <li><a href="/VideoCameraHoliday/guides/">Guides</a></li>
-      <li><a href="/VideoCameraHoliday/city-through-the-lens/">50 Cities</a></li>
-      <li><a href="/VideoCameraHoliday/free/travel-camera-packing-checklist.html">Free Checklist</a></li>
-    </ul>
-  </div>
+<!-- ===== NEW MEGA MENU NAVIGATION ===== -->
+<nav class="top-nav" aria-label="Main Navigation">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-menu-toggle"
+                aria-expanded="false"
+                aria-controls="primary-nav-links"
+                onclick="toggleMobileMenu()">
+            <span class="hamburger-icon">☰</span>
+            <span class="sr-only">Open main menu</span>
+        </button>
+
+        <!-- Primary Navigation Links -->
+        <ul id="primary-nav-links" class="nav-links">
+            <li><a href="/VideoCameraHoliday/">Home</a></li>
+
+            <!-- GUIDES MEGA MENU -->
+            <li class="mega-item">
+                <a href="/VideoCameraHoliday/guides/" class="mega-trigger active"
+                   aria-expanded="false"
+                   aria-controls="mega-guides"
+                   onclick="toggleMegaMenu(event, 'mega-guides')">
+                    Guides <span class="arrow">▼</span>
+                </a>
+                <div id="mega-guides" class="mega-menu" role="group" aria-label="Guides">
+                    <div class="mega-container">
+                        <div class="mega-column">
+                            <h4>🛒 Buying Guides</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Best Compact for City Breaks</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>🏔️ Adventure Guides</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Best for Hiking</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Best for Skiing</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/best-camera-southeast-asia.html">Best for Southeast Asia</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>📋 Planning &amp; Tips</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/state-of-travel-cameras-2026.html">State of Travel Cameras</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/camera-gifts-for-travelers.html">Camera Gifts for Travelers</a></li>
+                                <li><a href="/VideoCameraHoliday/guides/what-to-film-european-night-markets.html">Filming Night Markets</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- REVIEWS MEGA MENU -->
+            <li class="mega-item">
+                <a href="/VideoCameraHoliday/reviews/" class="mega-trigger"
+                   aria-expanded="false"
+                   aria-controls="mega-reviews"
+                   onclick="toggleMegaMenu(event, 'mega-reviews')">
+                    Reviews <span class="arrow">▼</span>
+                </a>
+                <div id="mega-reviews" class="mega-menu" role="group" aria-label="Reviews">
+                    <div class="mega-container">
+                        <div class="mega-column">
+                            <h4>🎬 Action Cameras</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+                                <li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+                                <li><a href="/VideoCameraHoliday/reviews/insta360-x4-review.html">Insta360 X4</a></li>
+                                <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">DJI Action 5 Pro</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>📸 Gimbal &amp; Pocket</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+                                <li><a href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Roundup</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>📱 Vlogging &amp; Mirrorless</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+                                <li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony ZV-E10 II</a></li>
+                                <li><a href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
+                                <li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- HOW-TO MEGA MENU -->
+            <li class="mega-item">
+                <a href="/VideoCameraHoliday/how-to/" class="mega-trigger"
+                   aria-expanded="false"
+                   aria-controls="mega-howto"
+                   onclick="toggleMegaMenu(event, 'mega-howto')">
+                    How-To <span class="arrow">▼</span>
+                </a>
+                <div id="mega-howto" class="mega-menu" role="group" aria-label="How-To Guides">
+                    <div class="mega-container">
+                        <div class="mega-column">
+                            <h4>🎬 Filming Techniques</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Videos</a></li>
+                                <li><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+                                <li><a href="/VideoCameraHoliday/how-to/film-in-harsh-sunlight.html">Film in Harsh Sunlight</a></li>
+                                <li><a href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html">Film in Rain</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>🔧 Technical Skills</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+                                <li><a href="/VideoCameraHoliday/how-to/audio-tips-noisy-locations.html">Audio Tips for Noisy Places</a></li>
+                                <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Choose a Memory Card</a></li>
+                                <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Your Footage</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- DESTINATIONS MEGA MENU -->
+            <li class="mega-item">
+                <a href="/VideoCameraHoliday/destinations/" class="mega-trigger"
+                   aria-expanded="false"
+                   aria-controls="mega-destinations"
+                   onclick="toggleMegaMenu(event, 'mega-destinations')">
+                    Destinations <span class="arrow">▼</span>
+                </a>
+                <div id="mega-destinations" class="mega-menu" role="group" aria-label="Destinations">
+                    <div class="mega-container">
+                        <div class="mega-column">
+                            <h4>🏖️ Beach &amp; Water</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+                                <li><a href="/VideoCameraHoliday/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>🏔️ Adventure</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+                                <li><a href="/VideoCameraHoliday/destinations/best-cameras-desert-travel.html">Desert Travel</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>🏙️ City Breaks</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">City Break Guide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- EDITING MEGA MENU -->
+            <li class="mega-item">
+                <a href="/VideoCameraHoliday/editing/" class="mega-trigger"
+                   aria-expanded="false"
+                   aria-controls="mega-editing"
+                   onclick="toggleMegaMenu(event, 'mega-editing')">
+                    Editing <span class="arrow">▼</span>
+                </a>
+                <div id="mega-editing" class="mega-menu" role="group" aria-label="Editing">
+                    <div class="mega-container">
+                        <div class="mega-column">
+                            <h4>✂️ Software &amp; Apps</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
+                                <li><a href="/VideoCameraHoliday/editing/post-travel-videos-youtube.html">Post to YouTube</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>🎨 Color &amp; Style</h4>
+                            <ul>
+                                <li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">Color Grading Guide</a></li>
+                                <li><a href="/VideoCameraHoliday/24fps-vs-120fps-holiday-edit-ai-music-sync.html">24fps vs 120fps</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- COMPARISONS -->
+            <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
+
+            <!-- CITY SERIES -->
+            <li><a href="/VideoCameraHoliday/city-through-the-lens/">🌍 City Series</a></li>
+
+            <!-- START HERE (highlighted) -->
+            <li><a href="/VideoCameraHoliday/start-here.html" class="active">Start Here</a></li>
+        </ul>
+    </div>
 </nav>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <header>
     <h1>Start Here: Your Fast-Track Guide</h1>
     <p class="subtitle">New to Holiday Video Camera? I've tested 50+ cameras across 3 continents. Here is the fastest way to find exactly what you need.</p>
 </header>
 
-<!-- MAIN CONTENT -->
+<!-- ===== MAIN CONTENT ===== -->
 <article class="container">
-    
-    <!-- [INSERT YOUR EXISTING "START HERE" CONTENT HERE] -->
+
     <p style="font-size: 1.1rem; color: #ccc;">Welcome! If you are looking for our top overall recommendation, read our <a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html" style="color: #e94560;">Best Holiday Cameras 2026 Guide</a>. If you want our free 47-item packing checklist, <a href="/VideoCameraHoliday/free/travel-camera-packing-checklist.html" style="color: #e94560;">download it here</a>.</p>
 
-    <!-- NEW INJECTED SECTION -->
     <h2>🔍 Looking for Something Specific?</h2>
     <div class="related-articles">
-        
+
         <a href="/VideoCameraHoliday/guides/best-camera-kids-record-vacations.html" class="related-card">
             <h4>🧸 Best Cameras for Kids</h4>
             <p>Durable, drop-proof picks for children to record their own vacations.</p>
@@ -85,7 +605,7 @@ h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; border-bottom: 1px 
         </a>
 
         <a href="/VideoCameraHoliday/guides/quiet-camera-recording-tourist-spots.html" class="related-card">
-            <h4>🤫 Quiet & Discreet Cameras</h4>
+            <h4>🤫 Quiet &amp; Discreet Cameras</h4>
             <p>Silent shutters for museums, churches, and crowded tourist spots.</p>
         </a>
 
@@ -103,43 +623,166 @@ h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; border-bottom: 1px 
 
 </article>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-container">
-    <section class="footer-section">
-      <h4>Series</h4>
-      <ul>
-        <li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li>
-        <li><a href="/VideoCameraHoliday/start-here.html">Start Here</a></li>
-      </ul>
-    </section>
-    <section class="footer-section">
-      <h4>Guides</h4>
-      <ul>
-        <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
-        <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
-      </ul>
-    </section>
-    <section class="footer-section">
-      <h4>Free Resources</h4>
-      <ul>
-        <li><a href="/VideoCameraHoliday/free/travel-camera-packing-checklist.html">Packing Checklist</a></li>
-        <li><a href="/VideoCameraHoliday/guides/state-of-travel-cameras-2026-data-report.html">2026 Data Report</a></li>
-      </ul>
-    </section>
-    <section class="footer-section">
-      <h4>About</h4>
-      <ul>
-        <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
-        <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
-      </ul>
-    </section>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 <a href="/VideoCameraHoliday/" style="color:#e94560; text-decoration:none;">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
-  </div>
+<!-- ===== NEW FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+        <!-- Column 1: Series -->
+        <div class="footer-section">
+            <h4>🎬 Series</h4>
+            <ul>
+                <li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li>
+                <li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li>
+                <li><a href="/VideoCameraHoliday/interviews/">All Interviews</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 2: Top Buying Guides -->
+        <div class="footer-section">
+            <h4>🛒 Top Buying Guides</h4>
+            <ul>
+                <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Holiday Cameras</a></li>
+                <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Camera Checklist</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Popular Reviews -->
+        <div class="footer-section">
+            <h4>📸 Popular Reviews</h4>
+            <ul>
+                <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">DJI Action 5 Pro</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: How-To Essentials -->
+        <div class="footer-section">
+            <h4>🎬 How-To Essentials</h4>
+            <ul>
+                <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html">Film in Rain</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 5: Destinations -->
+        <div class="footer-section">
+            <h4>🏖️ Destinations</h4>
+            <ul>
+                <li><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+                <li><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+                <li><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+                <li><a href="/VideoCameraHoliday/destinations/best-cameras-desert-travel.html">Desert Travel</a></li>
+                <li><a href="/VideoCameraHoliday/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 6: About -->
+        <div class="footer-section">
+            <h4>ℹ️ About</h4>
+            <ul>
+                <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
+                <li><a href="/VideoCameraHoliday/">Home</a></li>
+                <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+    </div>
 </footer>
 
-<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// ===== MOBILE MENU TOGGLE =====
+function toggleMobileMenu() {
+    var nav = document.getElementById('primary-nav-links');
+    var toggle = document.querySelector('.mobile-menu-toggle');
+    var isOpen = nav.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+// Close mobile menu when a link is clicked
+document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.querySelectorAll('#primary-nav-links a');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            var nav = document.getElementById('primary-nav-links');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                var toggle = document.querySelector('.mobile-menu-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+});
+
+// ===== MEGA MENU TOGGLE (Desktop & Mobile) =====
+function toggleMegaMenu(event, menuId) {
+    event.preventDefault();
+    var trigger = event.currentTarget;
+    var menu = document.getElementById(menuId);
+    var isOpen = menu.classList.toggle('open');
+
+    trigger.setAttribute('aria-expanded', isOpen);
+
+    // Close other open mega menus
+    if (isOpen) {
+        var openMenus = document.querySelectorAll('.mega-menu.open');
+        openMenus.forEach(function(otherMenu) {
+            if (otherMenu.id !== menuId) {
+                otherMenu.classList.remove('open');
+                var otherTrigger = document.querySelector('[aria-controls="' + otherMenu.id + '"]');
+                if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+}
+
+// ===== CLOSE MEGA MENUS ON ESCAPE KEY =====
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        var openMenus = document.querySelectorAll('.mega-menu.open');
+        openMenus.forEach(function(menu) {
+            menu.classList.remove('open');
+            var trigger = document.querySelector('[aria-controls="' + menu.id + '"]');
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        });
+        var nav = document.getElementById('primary-nav-links');
+        if (nav && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            var toggle = document.querySelector('.mobile-menu-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+    }
+});
+
+// ===== CLICK OUTSIDE TO CLOSE MEGA MENUS =====
+document.addEventListener('click', function(e) {
+    var isClickInsideNav = e.target.closest('.top-nav');
+    if (!isClickInsideNav) {
+        var openMenus = document.querySelectorAll('.mega-menu.open');
+        openMenus.forEach(function(menu) {
+            menu.classList.remove('open');
+            var trigger = document.querySelector('[aria-controls="' + menu.id + '"]');
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        });
+    }
+});
+</script>
+
 </body>
 </html>
