@@ -24,12 +24,32 @@
     .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
     .top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
     .top-nav .nav-links li { position: relative; }
+    .top-nav .nav-links li.mega-item { position: static; }
     .top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
     .top-nav .nav-links a:hover, .top-nav .nav-links a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
-    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #1a1a2e; border: 1px solid #333; border-top: 2px solid #e94560; border-radius: 0 0 8px 8px; min-width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); list-style: none; padding: 8px 0; }
-    .top-nav .nav-links li:hover .dropdown-menu { display: block; }
-    .dropdown-menu a { padding: 10px 20px !important; font-size: 0.85rem !important; border-bottom: 1px solid #222; }
-    .dropdown-menu a:last-child { border-bottom: none; }
+    
+    /* MEGA MENU STYLES */
+    .mega-menu { 
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background: #1a1a2e; 
+        border-top: 2px solid #e94560; 
+        border-bottom: 1px solid #333; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+        z-index: 1000; 
+        padding: 30px 20px;
+    }
+    .top-nav .nav-links li.mega-item:hover .mega-menu { display: block; }
+    .mega-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+    .mega-column h4 { color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    .mega-column ul { list-style: none; margin: 0; padding: 0; }
+    .mega-column li { margin-bottom: 8px; }
+    .mega-column a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; display: block; padding: 2px 0; }
+    .mega-column a:hover { color: #fff; text-decoration: underline; }
+
     .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
     header { text-align: center; padding: 60px 20px 50px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
     h1 { font-size: 2.6rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
@@ -72,342 +92,316 @@
     .footer-section a:hover { color: #e94560; }
     .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
     .footer-bottom a { color: #e94560; text-decoration: none; }
-    @media (max-width: 768px) {
-        h1 { font-size: 1.8rem; } .subtitle { font-size: 1rem; }
-        .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; }
+    
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 2rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .youtube-shorts-embed {
+        position: relative;
+        padding-bottom: 177.77%; /* 9:16 Aspect Ratio for Shorts */
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        background-color: #000;
+    }
+    .youtube-shorts-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .video-caption {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        margin-top: 0.75rem;
+        color: #ccc;
+        font-weight: 600;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    #latest-camera-tests h2 {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* RESPONSIVE MEGA MENU & BASE STYLES */
+    @media (max-width: 1024px) {
+        .mega-menu { 
+            position: static; 
+            display: block !important; 
+            border: none; 
+            box-shadow: none; 
+            padding: 10px 0;
+            background: transparent;
+        }
+        .mega-container { 
+            grid-template-columns: 1fr; 
+            gap: 15px;
+        }
+        .mega-column { 
+            background: #111; 
+            padding: 15px; 
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .top-nav .nav-links { 
+            flex-direction: column; 
+            width: 100%;
+            display: none;
+        }
+        .top-nav .nav-links.active { 
+            display: flex; 
+        }
+        .top-nav .nav-links li.mega-item { 
+            width: 100%;
+        }
+        h1 { font-size: 1.8rem; } 
+        .subtitle { font-size: 1rem; }
         .footer-container { grid-template-columns: 1fr 1fr; }
         .stats { gap: 20px; }
     }
-         .video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .youtube-shorts-embed {
-    position: relative;
-    padding-bottom: 177.77%; /* 9:16 Aspect Ratio for Shorts */
-    height: 0;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    background-color: #000;
-  }
-  .youtube-shorts-embed iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-  .video-caption {
-    text-align: center;
-    font-family: system-ui, -apple-system, sans-serif;
-    margin-top: 0.75rem;
-    color: #333;
-    font-weight: 600;
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-  #latest-camera-tests h2 {
-    text-align: center;
-    font-family: system-ui, -apple-system, sans-serif;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-  }
-        /* MEGA MENU STYLES */
-.top-nav .nav-links li.mega-item { position: static; }
-.mega-menu { 
-    display: none; 
-    position: absolute; 
-    top: 100%; 
-    left: 0; 
-    width: 100%; 
-    background: #1a1a2e; 
-    border-top: 2px solid #e94560; 
-    border-bottom: 1px solid #333; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-    z-index: 1000; 
-    padding: 30px 20px;
-}
-.top-nav .nav-links li.mega-item:hover .mega-menu { display: block; }
-.mega-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
-.mega-column h4 { color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-.mega-column ul { list-style: none; margin: 0; padding: 0; }
-.mega-column li { margin-bottom: 8px; }
-.mega-column a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; display: block; padding: 2px 0; }
-.mega-column a:hover { color: #fff; text-decoration: underline; }
-
-/* Enhanced dropdown for mobile */
-@media (max-width: 1024px) {
-    .mega-menu { 
-        position: static; 
-        display: block !important; 
-        border: none; 
-        box-shadow: none; 
-        padding: 10px 0;
-        background: transparent;
-    }
-    .mega-container { 
-        grid-template-columns: 1fr; 
-        gap: 15px;
-    }
-    .mega-column { 
-        background: #111; 
-        padding: 15px; 
-        border-radius: 8px;
-        margin-bottom: 10px;
-    }
-    .top-nav .nav-links { 
-        flex-direction: column; 
-        width: 100%;
-        display: none;
-    }
-    .top-nav .nav-links.active { 
-        display: flex; 
-    }
-    .top-nav .nav-links li.mega-item { 
-        width: 100%;
-    }
-}
     </style>
-    
 
     <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
 </head>
 <body>
 
-    <nav class="top-nav" aria-label="Primary navigation">
-    <div class="nav-container">
-        <a href="/" class="logo">📹 Holiday Video Camera</a>
-        <button class="mobile-menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
-        <ul class="nav-links">
-            <li><a href="/" class="active">Home</a></li>
-            
-            <!-- GUIDES MEGA MENU -->
-            <li class="mega-item">
-                <a href="./guides/">Guides ▼</a>
-                <div class="mega-menu">
-                    <div class="mega-container">
-                        <div class="mega-column">
-                            <h4>🛒 Buying Guides</h4>
-                            <ul>
-                                <li><a href="./guides/best-budget-holiday-camera-under-500.html">Best Budget Holiday Camera Under 500</a></li>
-                                <li><a href="./guides/best-camera-hiking-holidays.html">Best Camera Hiking Holidays</a></li>
-                                <li><a href="./guides/best-camera-ski-holidays.html">Best Camera Ski Holidays</a></li>
-                                <li><a href="./guides/best-camera-southeast-asia.html">Best Camera Southeast Asia</a></li>
-                                <li><a href="./guides/best-compact-cameras-city-breaks.html">Best Compact Cameras City Breaks</a></li>
-                                <li><a href="./guides/best-holiday-video-cameras-2026.html">Best Holiday Video Cameras</a></li>
-                                <li><a href="./guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras Travel</a></li>
-                                <li><a href="./guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras Beach</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>🏖️ Destination Guides</h4>
-                            <ul>
-                                <li><a href="./guides/best-camera-hiking-holidays.html">Best Camera Hiking Holidays</a></li>
-                                <li><a href="./guides/best-camera-ski-holidays.html">Best Camera Ski Holidays</a></li>
-                                <li><a href="./guides/best-camera-southeast-asia.html">Best Camera Southeast Asia</a></li>
-                                <li><a href="./guides/best-compact-cameras-city-breaks.html">Best Compact Cameras City Breaks</a></li>
-                                <li><a href="./guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras Beach</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>📋 Planning & Tips</h4>
-                            <ul>
-                                <li><a href="./guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
-                                <li><a href="./guides/state-of-travel-cameras-2026.html">State Of Travel Cameras 2026</a></li>
-                                <li><a href="./guides/travel-camera-checklist-2026.html">Travel Camera Checklist 2026</a></li>
-                                <li><a href="./guides/what-to-film-european-night-markets.html">What To Film European Night Markets</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>🎯 Quick Links</h4>
-                            <ul>
-                                <li><a href="./guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
-                                <li><a href="./guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
-                                <li><a href="./guides/travel-camera-checklist-2026.html">Camera Checklist</a></li>
-                                <li><a href="./guides/state-of-travel-cameras-2026.html">State of Cameras</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            
-            <!-- REVIEWS MEGA MENU -->
-            <li class="mega-item">
-                <a href="./reviews/">Reviews ▼</a>
-                <div class="mega-menu">
-                    <div class="mega-container">
-                        <div class="mega-column">
-                            <h4>📸 Gimbal Cameras</h4>
-                            <ul>
-                                <li><a href="./reviews/dji-osmo-action-5-review.html">Dji Osmo Action 5 Review</a></li>
-                                <li><a href="./reviews/dji-osmo-pocket-3-review.html">Dji Osmo Pocket 3 Review</a></li>
-                                <li><a href="./reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Cameras 2026 Roundup</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>🎬 Action Cameras</h4>
-                            <ul>
-                                <li><a href="./reviews/dji-osmo-action-5-review.html">Dji Osmo Action 5 Review</a></li>
-                                <li><a href="./reviews/gopro-hero-13-review.html">GoPro Hero 13 Review</a></li>
-                                <li><a href="./reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S Hands Free Review</a></li>
-                                <li><a href="./reviews/insta360-x4-review.html">Insta360 X4 Review</a></li>
-                                <li><a href="./reviews/insta360-x5-review.html">Insta360 X5 Review</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>📱 Vlogging & Mirrorless</h4>
-                            <ul>
-                                <li><a href="./reviews/canon-eos-r50-v-creator-kit-review.html">Canon Eos R50 V Creator Kit Review</a></li>
-                                <li><a href="./reviews/canon-powershot-v10-review.html">Canon Powershot V10 Review</a></li>
-                                <li><a href="./reviews/fujifilm-x-m5-travel-review.html">Fujifilm X M5 Travel Review</a></li>
-                                <li><a href="./reviews/iphone-16-pro-video-review.html">Iphone 16 Pro Video Review</a></li>
-                                <li><a href="./reviews/nikon-z50-ii-creator-kit-review.html">Nikon Z50 Ii Creator Kit Review</a></li>
-                                <li><a href="./reviews/sony-zv-1-ii-review.html">Sony Zv 1 Ii Review</a></li>
-                                <li><a href="./reviews/sony-zv-e10-ii-night-market-review.html">Sony Zv E10 Ii Night Market Review</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>🎥 Roundups</h4>
-                            <ul>
-                                <li><a href="./reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Cameras</a></li>
-                                <li><a href="./reviews/budget-4k-camcorder-roundup.html">Budget 4K Camcorders</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            
-            <!-- HOW-TO MEGA MENU -->
-            <li class="mega-item">
-                <a href="./how-to/">How-To ▼</a>
-                <div class="mega-menu">
-                    <div class="mega-container">
-                        <div class="mega-column">
-                            <h4>🎬 Filming Techniques</h4>
-                            <ul>
-                                <li><a href="./how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
-                                <li><a href="./how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
-                                <li><a href="./how-to/film-in-rain-protect-gear.html">Film In Rain Protect Gear</a></li>
-                                <li><a href="./how-to/film-markets-street-food.html">Film Markets Street Food</a></li>
-                                <li><a href="./how-to/film-sunsets-golden-hour.html">Film Sunsets Golden Hour</a></li>
-                                <li><a href="./how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>🔧 Technical Skills</h4>
-                            <ul>
-                                <li><a href="./how-to/audio-tips-noisy-locations.html">Audio Tips Noisy Locations</a></li>
-                                <li><a href="./how-to/backup-travel-photos-videos.html">Backup Travel Photos Videos</a></li>
-                                <li><a href="./how-to/choose-memory-card-4k-video.html">Choose Memory Card 4K Video</a></li>
-                                <li><a href="./how-to/edit-travel-videos-phone-tablet.html">Edit Travel Videos Phone Tablet</a></li>
-                                <li><a href="./how-to/stabilize-videos-without-gimbal.html">Stabilize Videos Without Gimbal</a></li>
-                                <li><a href="./how-to/vertical-video-settings-travel.html">Vertical Video Settings Travel</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4> Quick Tips</h4>
-                            <ul>
-                                <li><a href="./how-to/stabilize-videos-without-gimbal.html">No Gimbal Needed</a></li>
-                                <li><a href="./how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                                <li><a href="./how-to/choose-memory-card-4k-video.html">Memory Cards</a></li>
-                                <li><a href="./how-to/film-better-holiday-videos.html">Better Videos</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            
-            <!-- DESTINATIONS MEGA MENU -->
-            <li class="mega-item">
-                <a href="./destinations/">Destinations ▼</a>
-                <div class="mega-menu">
-                    <div class="mega-container">
-                        <div class="mega-column">
-                            <h4>️ Beach & Water</h4>
-                            <ul>
-                                <li><a href="./destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                                <li><a href="./destinations/underwater-camera-guide.html">Underwater Guide</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>️ Adventure</h4>
-                            <ul>
-                                <li><a href="./destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                                <li><a href="./destinations/best-cameras-desert-travel.html">Desert Travel</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>🏙️ City Breaks</h4>
-                            <ul>
-                                <li><a href="./destinations/best-cameras-city-breaks.html">City Breaks</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            
-            <!-- EDITING MEGA MENU -->
-            <li class="mega-item">
-                <a href="./editing/">Editing ▼</a>
-                <div class="mega-menu">
-                    <div class="mega-container">
-                        <div class="mega-column">
-                            <h4>✂️ Editing Software</h4>
-                            <ul>
-                                <li><a href="./editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
-                                <li><a href="./editing/post-travel-videos-youtube.html">Post to YouTube</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>🎨 Color & Style</h4>
-                            <ul>
-                                <li><a href="./editing/color-grading-travel-videos.html">Color Grading</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            
-            <!-- COMPARISONS MEGA MENU -->
-            <li class="mega-item">
-                <a href="./comparisons/">Comparisons ▼</a>
-                <div class="mega-menu">
-                    <div class="mega-container">
-                        <div class="mega-column">
-                            <h4>⚔️ Head-to-Head</h4>
-                            <ul>
-                                <li><a href="./comparisons/action-camera-vs-gimbal-camera.html">Action Camera Vs Gimbal Camera</a></li>
-                                <li><a href="./comparisons/budget-vs-premium-travel-cameras.html">Budget Vs Premium Travel Cameras</a></li>
-                                <li><a href="./comparisons/dji-pocket-3-vs-gopro-hero-13.html">Dji Pocket 3 Vs Gopro Hero 13</a></li>
-                                <li><a href="./comparisons/iphone-16-pro-vs-dedicated-camera.html">Iphone 16 Pro Vs Dedicated Camera</a></li>
-                                <li><a href="./comparisons/sony-a7cr-vs-fujifilm-x-t50.html">Sony A7Cr Vs Fujifilm X T50</a></li>
-                            </ul>
-                        </div>
-                        <div class="mega-column">
-                            <h4>💰 Value Picks</h4>
-                            <ul>
-                                <li><a href="./comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li>
-                                <li><a href="./comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            
-            <!-- CITY THROUGH THE LENS -->
-            <li><a href="./city-through-the-lens/">🌍 City Series</a></li>
-        </ul>
-    </div>
+<nav class="top-nav" aria-label="Primary navigation">
+  <div class="nav-container">
+    <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <ul class="nav-links">
+      <li><a data-section="home" href="/VideoCameraHoliday/" class="active">Home</a></li>
+      
+      <!-- GUIDES MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/guides/">Guides ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>🛒 Buying Guides</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Best Budget Holiday Camera Under 500</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Best Camera Hiking Holidays</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Best Camera Ski Holidays</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-camera-southeast-asia.html">Best Camera Southeast Asia</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Best Compact Cameras City Breaks</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Holiday Video Cameras</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras Travel</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras Beach</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🏖️ Destination Guides</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Best Camera Hiking Holidays</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Best Camera Ski Holidays</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-camera-southeast-asia.html">Best Camera Southeast Asia</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Best Compact Cameras City Breaks</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras Beach</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>📋 Planning & Tips</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
+                <li><a href="/VideoCameraHoliday/guides/state-of-travel-cameras-2026.html">State Of Travel Cameras</a></li>
+                <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
+                <li><a href="/VideoCameraHoliday/guides/what-to-film-european-night-markets.html">What To Film European Night Markets</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🎯 Quick Links</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+                <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+                <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Camera Checklist</a></li>
+                <li><a href="/VideoCameraHoliday/guides/state-of-travel-cameras-2026.html">State of Cameras</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- REVIEWS MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/reviews/">Reviews ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>📸 Gimbal Cameras</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">Dji Osmo Action 5 Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">Dji Osmo Pocket 3 Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Cameras Roundup</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🎬 Action Cameras</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">Dji Osmo Action 5 Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13 Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S Hands Free Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/insta360-x4-review.html">Insta360 X4 Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5 Review</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>📱 Vlogging & Mirrorless</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon Eos R50 V Creator Kit Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/canon-powershot-v10-review.html">Canon Powershot V10 Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/fujifilm-x-m5-travel-review.html">Fujifilm X M5 Travel Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">Iphone 16 Pro Video Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/nikon-z50-ii-creator-kit-review.html">Nikon Z50 Ii Creator Kit Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony Zv 1 Ii Review</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony Zv E10 Ii Night Market Review</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🎥 Roundups</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Cameras</a></li>
+                <li><a href="/VideoCameraHoliday/reviews/budget-4k-camcorder-roundup.html">Budget 4K Camcorders</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- HOW-TO MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/how-to/">How-To ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>🎬 Filming Techniques</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html">Film In Rain Protect Gear</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/film-markets-street-food.html">Film Markets Street Food</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/film-sunsets-golden-hour.html">Film Sunsets Golden Hour</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🔧 Technical Skills</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/how-to/audio-tips-noisy-locations.html">Audio Tips Noisy Locations</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Travel Photos Videos</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Choose Memory Card 4K Video</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/edit-travel-videos-phone-tablet.html">Edit Travel Videos Phone Tablet</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilize Videos Without Gimbal</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/vertical-video-settings-travel.html">Vertical Video Settings Travel</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>⚡ Quick Tips</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">No Gimbal Needed</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Memory Cards</a></li>
+                <li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Better Videos</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- DESTINATIONS MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/destinations/">Destinations ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>🏖️ Beach & Water</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+                <li><a href="/VideoCameraHoliday/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🏔️ Adventure</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+                <li><a href="/VideoCameraHoliday/destinations/best-cameras-desert-travel.html">Desert Travel</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🏙️ City Breaks</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- EDITING MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/editing/">Editing ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>✂️ Editing Software</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
+                <li><a href="/VideoCameraHoliday/editing/post-travel-videos-youtube.html">Post to YouTube</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🎨 Color & Style</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">Color Grading</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- COMPARISONS MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/comparisons/">Comparisons ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>⚔️ Head-to-Head</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/comparisons/action-camera-vs-gimbal-camera.html">Action Camera Vs Gimbal Camera</a></li>
+                <li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget Vs Premium Travel Cameras</a></li>
+                <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Dji Pocket 3 Vs Gopro Hero 13</a></li>
+                <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">Iphone 16 Pro Vs Dedicated Camera</a></li>
+                <li><a href="/VideoCameraHoliday/comparisons/sony-a7cr-vs-fujifilm-x-t50.html">Sony A7Cr Vs Fujifilm X T50</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>💰 Value Picks</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li>
+                <li><a href="/VideoCameraHoliday/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- CITY THROUGH THE LENS & ABOUT -->
+      <li><a data-section="city-through-the-lens" href="/VideoCameraHoliday/city-through-the-lens/">🌍 City Series</a></li>
+      <li><a data-section="about" href="/VideoCameraHoliday/about/">About</a></li>
+    </ul>
+  </div>
 </nav>
-    
-
-
 
 <header>
     <h1>📹 Holiday Video Camera</h1>
@@ -421,7 +415,6 @@
 </header>
 
 <article class="container">
-
     <p><strong>Holiday Video Camera is an independent travel-camera review site where every recommendation comes from filming real trips, not reading spec sheets.</strong> If you want one answer fast: for most travelers in 2026, the <a class="content-link" href="./reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a> is the best all-round holiday video camera, the <a class="content-link" href="./reviews/gopro-hero-13-review.html">GoPro Hero 13</a> is the best for beach and adventure, and your <a class="content-link" href="./reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a> is already better than you think. Every pick below links to a full field review.</p>
 
     <div class="takeaways">
@@ -459,11 +452,9 @@
         </div>
     </div>
 
-    
     <div class="takeaways newsletter" style="text-align:center;">
         <h3>📬 Get Weekly Camera Deals &amp; Field Notes</h3>
         <p style="color:#888;">Join 5,000+ travelers who get our best holiday camera reviews and exclusive deals. No spam, unsubscribe anytime.</p>
-        <!-- NEWSLETTER: replace form action with your email provider embed URL (Mailchimp, ConvertKit, Beehiiv) -->
         <form action="#" method="post">
             <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address" style="padding:12px 16px;border-radius:30px;border:1px solid #333;background:#0a0a0a;color:#e0e0e0;width:260px;max-width:100%;margin-right:10px;">
             <button type="submit" class="btn">Subscribe</button>
@@ -471,10 +462,7 @@
     </div>
 
     <p class="affiliate-note">Some buying guides on this site contain affiliate links. If you buy through them we may earn a commission at no extra cost to you. Our rankings are based on real travel testing.</p>
-
 </article>
-
-
 
 <script type="application/ld+json">
 {
@@ -496,6 +484,7 @@
   }
 }
 </script>
+
 <!-- START: Latest Real-World Camera Tests Section -->
 <section id="latest-camera-tests">
   <h2 style="text-align:center; font-family: system-ui, sans-serif;">Latest Real-World Camera Tests</h2>
@@ -589,8 +578,6 @@
       </script>
     </div>
 
-
-
     <!-- VIDEO 6: DJI Osmo Action 6 2026 - 0:33 -->
     <div>
       <div class="youtube-shorts-embed">
@@ -637,8 +624,9 @@
 
   </div>
 </section>
-    <a href="camera-tests.html" style="color:#e94560; font-weight:bold;">🎥 View Real-World Camera Tests (Maldives, Vietnam, Zanzibar)</a>
+<a href="camera-tests.html" style="color:#e94560; font-weight:bold; display:block; text-align:center; margin-top:2rem;">🎥 View Real-World Camera Tests (Maldives, Vietnam, Zanzibar)</a>
 <!-- END: Latest Real-World Camera Tests Section -->
+
 <footer class="site-footer">
   <div class="footer-container">
     <section class="footer-section"><h4>Series</h4><ul><li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li><li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li></ul></section>
