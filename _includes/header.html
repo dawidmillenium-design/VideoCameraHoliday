@@ -223,4 +223,15 @@
       <li><a data-section="about" href="/VideoCameraHoliday/about/">About</a></li>
     </ul>
   </div>
+  {% assign current_url = page.url | remove_first: '/de/' | remove_first: '/es/' | remove_first: '/ja/' | remove_first: '/en/' %}
+{% for lang in site.languages %}
+  {% if lang == site.default_lang %}
+    {% assign lang_url = current_url %}
+  {% else %}
+    {% assign lang_url = '/' | append: lang | append: current_url %}
+  {% endif %}
+  <a href="{{ lang_url | relative_url }}" {% if lang == page.lang %}class="active"{% endif %}>
+    {{ lang | upcase }}
+  </a>
+{% endfor %}
 </nav>
