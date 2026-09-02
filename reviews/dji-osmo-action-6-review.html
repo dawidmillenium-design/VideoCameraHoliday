@@ -156,134 +156,97 @@
             color: var(--white);
         }
 
-        /* MEGA MENU STYLES */
-        .top-nav {
-            background: #111;
-            border-bottom: 2px solid var(--accent);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
+   /* MEGA MENU STYLES */
+        .top-nav {            
+            background: #111;            
+            border-bottom: 2px solid var(--accent);            
+            position: sticky;            
+            top: 0;            
+            z-index: 1000;            
+            font-family: system-ui, -apple-system, sans-serif;        }
+        .nav-container {            
+            max-width: 1400px;            
+            margin: 0 auto;            
+            display: flex;            
+            align-items: center;            
+            justify-content: space-between;            
+            padding: 0 20px;            
+            height: 60px;        }
+        .logo {            
+            font-size: 1.3rem;            
+            font-weight: 700;            
+            color: var(--accent);            
+            text-decoration: none;            
+            display: flex;            
+            align-items: center;            
+            gap: 8px;        }
+        .nav-links {            
+            display: flex;            
+            list-style: none;            
+            gap: 0;            
+            margin: 0;            
+            padding: 0;        }
+        .nav-links > li {            
+            position: relative; /* CRITICAL: Keeps dropdown tethered to the list item */        }
+        .nav-links a {            
+            color: #ccc;            
+            text-decoration: none;            
+            padding: 18px 16px;            
+            display: block;            
+            font-size: 0.9rem;            
+            font-weight: 500;            
+            transition: all 0.3s;        }
+        .nav-links a:hover, .nav-links a.active {            
+            color: var(--accent);            
+            background: rgba(233, 69, 96, 0.1);        }
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            height: 60px;
-        }
-
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--accent);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links > li {
-            position: relative;
-        }
-
-        .nav-links a {
-            color: #ccc;
-            text-decoration: none;
-            padding: 18px 16px;
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent);
-            background: rgba(233, 69, 96, 0.1);
-        }
-
-        /* Mega Menu Logic */
-        .mega-item {
-            position: static;
-        }
-
-        .mega-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: #1a1a2e;
-            border-top: 2px solid var(--accent);
-            padding: 30px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            z-index: 999;
-        }
-
-        .mega-item:hover .mega-menu {
-            display: block;
-        }
-
-        .mega-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            padding: 0 20px;
-        }
-
-        .mega-column h4 {
-            color: var(--accent);
-            font-size: 1rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-        }
-
-        .mega-column ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .mega-column li {
-            margin-bottom: 10px;
-        }
-
-        .mega-column a {
-            color: #aaa;
-            font-size: 0.9rem;
-            padding: 0 !important;
-            background: none !important;
-        }
-
-        .mega-column a:hover {
-            color: var(--white);
-            padding-left: 5px !important;
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--accent);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+        /* Mega Menu Logic Fixed */        .mega-item {            
+            position: relative; /* CRITICAL FIX: Replaces 'position: static' */        }
+        .mega-menu {            
+            display: none;            
+            position: absolute;            
+            top: 100%;            
+            left: 50%;            
+            transform: translateX(-50%); /* Centers the dropdown nicely under the menu item */            background: #1a1a2e;            
+            border-radius: 12px;            
+            border-top: 2px solid var(--accent);            
+            padding: 24px 28px;            
+            min-width: 700px;            
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);            
+            z-index: 1001;            
+            border: 1px solid #333;        }
+        .mega-item:hover .mega-menu {            
+            display: block;        }
+        .mega-container {            
+            max-width: 1200px;            
+            margin: 0 auto;            
+            display: grid;            
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));            
+            gap: 28px;            
+            padding: 0;        }
+        .mega-column h4 {            
+            color: var(--accent);            
+            font-size: 0.8rem;            
+            margin-bottom: 15px;            
+            text-transform: uppercase;            
+            letter-spacing: 0.5px;            
+            border-bottom: 1px solid #333;            
+            padding-bottom: 10px;        }
+        .mega-column ul {            
+            list-style: none;            
+            margin: 0;            
+            padding: 0;        }
+        .mega-column li {            
+            margin-bottom: 6px;        }
+        .mega-column a {            
+            color: #aaa;            
+            font-size: 0.9rem;            
+            padding: 4px 0 !important;            
+            background: none !important;        }
+        .mega-column a:hover {            
+            color: var(--accent);            
+            padding-left: 0 !important;            
+            background: none !important;        }
 
         /* MEGA FOOTER STYLES */
         .site-footer {
