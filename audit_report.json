@@ -1,0 +1,5491 @@
+{
+  "audit_summary": {
+    "css_files_analyzed": 4,
+    "total_css_rules": 144,
+    "defined_classes": 29,
+    "used_classes": 585,
+    "unused_classes": 1,
+    "conflicting_rules": 6,
+    "color_pairs_analyzed": 240,
+    "wcag_failing_combinations": 18,
+    "wcag_passing_combinations": 222,
+    "footer_contrast_issues": 0
+  },
+  "css_audit": {
+    "css_files_analyzed": [
+      "mega-menu.css",
+      "repo_audit/mega-menu.css",
+      "repo_audit/assets/site-shell.css",
+      "assets/site-shell.css"
+    ],
+    "total_rules": 144,
+    "duplicate_selectors": [],
+    "conflicting_rules": [
+      {
+        "selector": ".mega-menu",
+        "property": "border-top",
+        "site_shell_value": "1px solid #333",
+        "mega_menu_value": "2px solid #e94560"
+      },
+      {
+        "selector": ".mega-menu",
+        "property": "background",
+        "site_shell_value": "#111",
+        "mega_menu_value": "transparent"
+      },
+      {
+        "selector": ".mega-menu",
+        "property": "padding",
+        "site_shell_value": "15px 0",
+        "mega_menu_value": "10px 0"
+      },
+      {
+        "selector": ".mega-menu",
+        "property": "display",
+        "site_shell_value": "none",
+        "mega_menu_value": "block !important"
+      },
+      {
+        "selector": ".mega-menu",
+        "property": "z-index",
+        "site_shell_value": "9999",
+        "mega_menu_value": "1000"
+      },
+      {
+        "selector": ".mega-container",
+        "property": "gap",
+        "site_shell_value": "20px",
+        "mega_menu_value": "15px"
+      }
+    ],
+    "unused_classes": [
+      "btn-affiliate-small"
+    ],
+    "all_defined_classes": [
+      "pros-box",
+      "video-caption",
+      "btn-bh",
+      "top-nav",
+      "mega-menu",
+      "site-footer",
+      "video-slot",
+      "mega-featured-img",
+      "btn-affiliate",
+      "video-embed",
+      "nav-links",
+      "mega-item",
+      "buy-box",
+      "cons-box",
+      "price",
+      "video-placeholder",
+      "active",
+      "footer-container",
+      "footer-bottom",
+      "pros-cons-box",
+      "btn-amazon",
+      "dropdown-arrow",
+      "buy-buttons",
+      "footer-section",
+      "mega-featured",
+      "mega-container",
+      "mega-column",
+      "tag",
+      "btn-affiliate-small"
+    ],
+    "all_used_classes": [
+      "featured-grid",
+      "pros-box",
+      "table-responsive",
+      "score-phone",
+      "category-tag",
+      "hub-hero",
+      "article-card",
+      "final-pick",
+      "interviewer",
+      "score-number",
+      "speed-badge",
+      "sr-only",
+      "footer-links",
+      "routine-card",
+      "timeline-item",
+      "coming-soon-interview",
+      "back-to-top",
+      "color-yellow",
+      "depth-tech",
+      "tie",
+      "lesson-text",
+      "tested-badge",
+      "checklist-item",
+      "ep-header",
+      "winner-badge",
+      "pillar",
+      "hero-stats",
+      "post-header",
+      "city-tag",
+      "compare-table-wrap",
+      "best-for",
+      "series-badge",
+      "toc-h3",
+      "sea",
+      "article-grid",
+      "stab",
+      "trust-bar",
+      "gear-section",
+      "speaker-name",
+      "specs-grid",
+      "high",
+      "stat-item",
+      "coming",
+      "video-caption",
+      "decision-path",
+      "color-green",
+      "post-tags",
+      "compatibility-table",
+      "mega-menu",
+      "packing-name",
+      "hero-people",
+      "gear-grid",
+      "post-content",
+      "score-details",
+      "must-film-locations",
+      "region-title",
+      "idea-grid",
+      "review",
+      "guide",
+      "author-avatar",
+      "arrow",
+      "difficulty-easy",
+      "gear-item",
+      "related-articles",
+      "breadcrumb",
+      "badge-recommended",
+      "card-title",
+      "rain",
+      "role",
+      "video-sample-grid",
+      "packing-check",
+      "breadcrumbs",
+      "dji",
+      "step-grid",
+      "warning-box",
+      "planned-angle",
+      "depth-range",
+      "badge-pro",
+      "camera-card",
+      "editorial-box",
+      "pick-icon",
+      "after",
+      "top-nav",
+      "footer-credit",
+      "answer",
+      "btn-primary",
+      "verdict-phone",
+      "tip-grid",
+      "maintenance",
+      "video-grid",
+      "ep-city",
+      "ep-flag",
+      "region-box",
+      "score-fill",
+      "author-text",
+      "skip-link",
+      "spec-label",
+      "badge-ok",
+      "${statusClass}",
+      "step-number",
+      "verdict-summary",
+      "comparison-gopro",
+      "winner-camera",
+      "related-card",
+      "cleaning-steps",
+      "label",
+      "step-card",
+      "rumor-box",
+      "qf-item",
+      "rating",
+      "card-header",
+      "stat-grid",
+      "success",
+      "winner-dji",
+      "badge-silver",
+      "logo",
+      "decision-tree",
+      "btn-outline",
+      "badge-street",
+      "tip-box",
+      "maintenance-grid",
+      "video-embed",
+      "scenario-box",
+      "trust-inner",
+      "cards",
+      "ai",
+      "comparison-row",
+      "video-container",
+      "ep-link",
+      "accessory-card",
+      "cold",
+      "vs-divider",
+      "header-inner",
+      "class-rating",
+      "sitemap-card",
+      "key-takeaways",
+      "post-footer",
+      "badge-slow",
+      "pros-cons-mini",
+      "faq-item",
+      "step-content",
+      "data-box",
+      "iceland",
+      "decision-tool",
+      "affiliate-note",
+      "kit-list",
+      "software-header",
+      "item",
+      "site-footer",
+      "accessory",
+      "capacity-calculator",
+      "section-label",
+      "tool-card",
+      "career",
+      "difficulty-badge",
+      "site-logo",
+      "city",
+      "category-banner",
+      "stat",
+      "attribution",
+      "warning",
+      "callout",
+      "step-guide",
+      "calc-resolution",
+      "section",
+      "review-score",
+      "menu-toggle",
+      "workflow",
+      "featured-visual",
+      "packing-list",
+      "nav-link",
+      "featured-icon",
+      "pros-mini",
+      "planned",
+      "badge-coming",
+      "setting-item",
+      "permits-etiquette",
+      "q-badge",
+      "software-card",
+      "country-card",
+      "danger-box",
+      "read-more",
+      "software-tag",
+      "content-image",
+      "revenue-card",
+      "comparison-table",
+      "sitemap-grid",
+      "hamburger-icon",
+      "flag",
+      "ep-person",
+      "checklist-text",
+      "mobile-toggle",
+      "gear-box",
+      "logo-text",
+      "youtube-shorts-embed",
+      "before-after",
+      "color-bar",
+      "newsletter-cta",
+      "technique-grid",
+      "environment-grid",
+      "container",
+      "videographer-badge",
+      "step-item",
+      "software-price",
+      "compare-badge",
+      "ba-card",
+      "decision-box",
+      "paid",
+      "country",
+      "workflow-steps",
+      "mega-container",
+      "cons",
+      "intro",
+      "settings-grid",
+      "test-condition",
+      "iceland-grid",
+      "icon",
+      "vs-device",
+      "content-link",
+      "vs-camera",
+      "newsletter-section",
+      "series-complete",
+      "top-pick",
+      "strategy-grid",
+      "comparison-dji",
+      "pure-video",
+      "badge-nice",
+      "check-list",
+      "score-dji",
+      "badge-high-capacity",
+      "active",
+      "depth-level",
+      "class-speed",
+      "author-bio",
+      "insurance-grid",
+      "qa-block",
+      "buy-buttons",
+      "city-grid",
+      "review-image",
+      "depth-freedive",
+      "content",
+      "card-category",
+      "verdict-camera",
+      "cat-name",
+      "location-card",
+      "mega-column",
+      "camera-type-grid",
+      "before",
+      "x5-orig",
+      "hero-badges",
+      "video-sample",
+      "badge",
+      "color-orange",
+      "newsletter-inner",
+      "product-grid",
+      "tag-free",
+      "idea-card",
+      "score-gopro",
+      "color-loss-chart",
+      "difficulty",
+      "author-info",
+      "faq-answer",
+      "good",
+      "calc-bitrate",
+      "category",
+      "field-test",
+      "technique-card",
+      "winner-gopro",
+      "newsletter-hub",
+      "featured-interview",
+      "flagship-feature",
+      "caption",
+      "winner-phone",
+      "page-header",
+      "video-placeholder",
+      "decision-item",
+      "mega-trigger",
+      "power-grid",
+      "interview-label",
+      "camera-title",
+      "badge-essential",
+      "category-grid",
+      "editor-intro",
+      "income-range",
+      "time-badge",
+      "vs-header",
+      "difficulty-medium",
+      "fps",
+      "cta-button",
+      "pros-cons",
+      "category-header",
+      "internal-link",
+      "desert",
+      "btn-affiliate",
+      "stat-number",
+      "hero-image-container",
+      "airport-transfer",
+      "score-camera",
+      "mega-item",
+      "price-tag",
+      "workflow-step",
+      "f-stat",
+      "tag-pro",
+      "persona-box",
+      "hero",
+      "f-stat-num",
+      "footer-container",
+      "env-card",
+      "badge-snorkel",
+      "cat-grid",
+      "lead",
+      "footer-section",
+      "meta",
+      "camera-name",
+      "btn",
+      "badge-call",
+      "stat-num",
+      "x5-tour",
+      "site-header",
+      "nl-form",
+      "badge-reliable",
+      "technique-number",
+      "calc-hours",
+      "packing-price",
+      "continent-section",
+      "status-good",
+      "pro",
+      "prompt-example",
+      "avatar",
+      "status-medium",
+      "email-template",
+      "sony",
+      "verdict-dji",
+      "quick-answer",
+      "ai-tool",
+      "feature-image",
+      "card-grid",
+      "mega-featured-img",
+      "name",
+      "test-badge",
+      "badge-best",
+      "site-nav",
+      "hard",
+      "badge-premium",
+      "subtitle",
+      "collab-box",
+      "packing-category",
+      "lesson-card",
+      "timelapse",
+      "logo-icon",
+      "pros-cons-box",
+      "decision-result",
+      "person",
+      "badge-vlog",
+      "mobile-menu-toggle",
+      "checklist-check",
+      "section-header",
+      "region-section",
+      "continent-title",
+      "site-title",
+      "mega-featured",
+      "share-buttons",
+      "technique",
+      "live",
+      "qf-a",
+      "badge-gold",
+      "spec-value",
+      "underwater",
+      "footer-grid",
+      "card",
+      "article-intro",
+      "hero-image",
+      "color-red",
+      "city-content",
+      "verdict-score",
+      "gear-card",
+      "person-info",
+      "score-bar",
+      "ep-number",
+      "trust-item",
+      "affiliate-disclosure",
+      "packing-grid",
+      "gopro-win",
+      "step-list",
+      "related-tag",
+      "buy-box",
+      "interviewee",
+      "city-proposal",
+      "duration",
+      "video-figure",
+      "comparison-label",
+      "btn-group",
+      "footer-bottom",
+      "toc",
+      "beach",
+      "footer-col",
+      "badge-zoom",
+      "steps",
+      "cta-box",
+      "badge-top-pick",
+      "gear-starter",
+      "city-feature",
+      "city-card",
+      "price-tier",
+      "conclusion-box",
+      "software-name",
+      "stars",
+      "backup",
+      "qf-q",
+      "free",
+      "error-search",
+      "checklist",
+      "phone-win",
+      "main-nav",
+      "feature-label",
+      "winner",
+      "credentials",
+      "tag-paid",
+      "hero-badge",
+      "medium",
+      "search-bar",
+      "timeline",
+      "winner-box",
+      "pros",
+      "article-link",
+      "content-wrapper",
+      "table-wrap",
+      "class-name",
+      "ski",
+      "byline",
+      "card-img",
+      "articles",
+      "num",
+      "dropdown-arrow",
+      "verdict-box",
+      "winner-indicator",
+      "insta",
+      "camera-header",
+      "seo-internal-links",
+      "bad",
+      "gopro",
+      "tag-excellent",
+      "rating-item",
+      "compare-table",
+      "easy",
+      "dji-win",
+      "speed-class-diagram",
+      "status",
+      "hero-cta",
+      "video-slot",
+      "quickfire",
+      "scenario-winner",
+      "park-grid",
+      "city-pill",
+      "spec-item",
+      "nav-container",
+      "comparison-camera",
+      "price",
+      "accessory-header",
+      "category-label",
+      "faq-section",
+      "badge-good",
+      "calc-row",
+      "depth-scuba",
+      "lesson-num",
+      "tool-grid",
+      "author-box",
+      "quick-takeaways",
+      "gear",
+      "dropdown-menu",
+      "settings-card",
+      "pick-content",
+      "test-scenario",
+      "question",
+      "btn-secondary",
+      "camera-type-box",
+      "card-badge",
+      "sustainability",
+      "technique-title",
+      "btn-bh",
+      "status-bad",
+      "last-updated",
+      "card-body",
+      "trust-label",
+      "status-badge",
+      "lessons-section",
+      "city-lens",
+      "nav-links",
+      "badge-versatile",
+      "winner-card",
+      "badge-budget",
+      "hero-content",
+      "lut-download",
+      "post-list",
+      "city-list",
+      "technique-header",
+      "badge-all",
+      "howto-steps",
+      "highlight",
+      "ep-quote",
+      "lesson-item",
+      "date",
+      "card-link",
+      "diy",
+      "pullquote",
+      "post",
+      "accessory-title",
+      "card-recommendation",
+      "internal-links",
+      "structure-grid",
+      "cat-icon",
+      "episode-card",
+      "challenge",
+      "danger-level",
+      "depth-chart",
+      "verdict-grid",
+      "revenue-grid",
+      "depth-label",
+      "city-img",
+      "badge-dive",
+      "weather-reality",
+      "page-subtitle",
+      "comparison-section",
+      "workflow-box",
+      "region-label",
+      "compare",
+      "spec-sheet",
+      "summary-box",
+      "packing-item",
+      "video-card",
+      "city-excerpt",
+      "comparison-phone",
+      "camera-win",
+      "quote",
+      "card-image",
+      "hero-inner",
+      "videographer-name",
+      "stats",
+      "speaker",
+      "city-title",
+      "related-grid",
+      "cat-card",
+      "error-page",
+      "sustainability-grid",
+      "error-actions",
+      "quality-tag",
+      "featured",
+      "badge-bronze",
+      "f-stat-label",
+      "destination-grid",
+      "subject",
+      "stat-label",
+      "category-icon",
+      "article-meta",
+      "footer-note",
+      "x-list",
+      "faq-question",
+      "faq",
+      "takeaways",
+      "newsletter",
+      "japan-grid",
+      "mini-avatar",
+      "cons-mini",
+      "prompt-box",
+      "filter-grid",
+      "cons-box",
+      "post-meta",
+      "error-popular",
+      "depth-snorkel",
+      "verdict-gopro",
+      "about-section",
+      "featured-stats",
+      "etiquette-grid",
+      "country-guide",
+      "post-date",
+      "newsletter-form",
+      "btn-amazon",
+      "card-top",
+      "trust-number",
+      "kit-item",
+      "luts",
+      "verdict",
+      "tag",
+      "pro-tip",
+      "depth"
+    ]
+  },
+  "wcag_audit": {
+    "color_pairs_analyzed": 240,
+    "failing_combinations": [
+      {
+        "file": "repo_audit/assets/site-shell.css",
+        "selector": ".video-placeholder",
+        "fg_color": "#666",
+        "bg_color": "#111",
+        "fg_rgb": [
+          102,
+          102,
+          102
+        ],
+        "bg_rgb": [
+          17,
+          17,
+          17
+        ],
+        "contrast_ratio": 3.2886796803751475,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/assets/site-shell.css",
+        "selector": ".btn-affiliate-small",
+        "fg_color": "#fff",
+        "bg_color": "#e94560",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          233,
+          69,
+          96
+        ],
+        "contrast_ratio": 3.828705872517646,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": true
+      },
+      {
+        "file": "assets/site-shell.css",
+        "selector": ".video-placeholder",
+        "fg_color": "#666",
+        "bg_color": "#111",
+        "fg_rgb": [
+          102,
+          102,
+          102
+        ],
+        "bg_rgb": [
+          17,
+          17,
+          17
+        ],
+        "contrast_ratio": 3.2886796803751475,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": true
+      },
+      {
+        "file": "assets/site-shell.css",
+        "selector": ".btn-affiliate-small",
+        "fg_color": "#fff",
+        "bg_color": "#e94560",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          233,
+          69,
+          96
+        ],
+        "contrast_ratio": 3.828705872517646,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": true
+      },
+      {
+        "file": "destinations/index2.html",
+        "selector": "<span inline>",
+        "fg_color": "#fff",
+        "bg_color": "rgba(255,255,255,.2)",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "contrast_ratio": 1.0,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "reviews/index2.html",
+        "selector": "<span inline>",
+        "fg_color": "#fff",
+        "bg_color": "rgba(255,255,255,.2)",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "contrast_ratio": 1.0,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "repo_audit/destinations/index2.html",
+        "selector": "<span inline>",
+        "fg_color": "#fff",
+        "bg_color": "rgba(255,255,255,.2)",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "contrast_ratio": 1.0,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "repo_audit/reviews/index2.html",
+        "selector": "<span inline>",
+        "fg_color": "#fff",
+        "bg_color": "rgba(255,255,255,.2)",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "contrast_ratio": 1.0,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/index3.html",
+        "selector": "<footer inline>",
+        "fg_color": "#666",
+        "bg_color": "#0f0f1a",
+        "fg_rgb": [
+          102,
+          102,
+          102
+        ],
+        "bg_rgb": [
+          15,
+          15,
+          26
+        ],
+        "contrast_ratio": 3.314160538625788,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/editing/index2.html",
+        "selector": "<span inline>",
+        "fg_color": "#fff",
+        "bg_color": "rgba(255,255,255,.2)",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "contrast_ratio": 1.0,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "repo_audit/interviews/index.html",
+        "selector": "<div inline>",
+        "fg_color": "#777",
+        "bg_color": "#333",
+        "fg_rgb": [
+          119,
+          119,
+          119
+        ],
+        "bg_rgb": [
+          51,
+          51,
+          51
+        ],
+        "contrast_ratio": 2.8214385789826286,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "repo_audit/interviews/index.html",
+        "selector": "<div inline>",
+        "fg_color": "#777",
+        "bg_color": "#333",
+        "fg_rgb": [
+          119,
+          119,
+          119
+        ],
+        "bg_rgb": [
+          51,
+          51,
+          51
+        ],
+        "contrast_ratio": 2.8214385789826286,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "repo_audit/how-to/index2.html",
+        "selector": "<span inline>",
+        "fg_color": "#fff",
+        "bg_color": "rgba(255,255,255,.2)",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "contrast_ratio": 1.0,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "city-through-the-lens/index3.html",
+        "selector": "<footer inline>",
+        "fg_color": "#666",
+        "bg_color": "#0f0f1a",
+        "fg_rgb": [
+          102,
+          102,
+          102
+        ],
+        "bg_rgb": [
+          15,
+          15,
+          26
+        ],
+        "contrast_ratio": 3.314160538625788,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": true
+      },
+      {
+        "file": "editing/index2.html",
+        "selector": "<span inline>",
+        "fg_color": "#fff",
+        "bg_color": "rgba(255,255,255,.2)",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "contrast_ratio": 1.0,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "interviews/index.html",
+        "selector": "<div inline>",
+        "fg_color": "#777",
+        "bg_color": "#333",
+        "fg_rgb": [
+          119,
+          119,
+          119
+        ],
+        "bg_rgb": [
+          51,
+          51,
+          51
+        ],
+        "contrast_ratio": 2.8214385789826286,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "interviews/index.html",
+        "selector": "<div inline>",
+        "fg_color": "#777",
+        "bg_color": "#333",
+        "fg_rgb": [
+          119,
+          119,
+          119
+        ],
+        "bg_rgb": [
+          51,
+          51,
+          51
+        ],
+        "contrast_ratio": 2.8214385789826286,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      },
+      {
+        "file": "how-to/index2.html",
+        "selector": "<span inline>",
+        "fg_color": "#fff",
+        "bg_color": "rgba(255,255,255,.2)",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "contrast_ratio": 1.0,
+        "is_footer": false,
+        "passes_aa_normal": false,
+        "passes_aa_large": false
+      }
+    ],
+    "passing_combinations": [
+      {
+        "file": "repo_audit/assets/site-shell.css",
+        "selector": ".btn-amazon",
+        "fg_color": "#000",
+        "bg_color": "#ff9900",
+        "fg_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bg_rgb": [
+          255,
+          153,
+          0
+        ],
+        "contrast_ratio": 9.808493114301314,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/assets/site-shell.css",
+        "selector": ".btn-bh",
+        "fg_color": "#fff",
+        "bg_color": "#000",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          0,
+          0,
+          0
+        ],
+        "contrast_ratio": 21.0,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "assets/site-shell.css",
+        "selector": ".btn-amazon",
+        "fg_color": "#000",
+        "bg_color": "#ff9900",
+        "fg_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bg_rgb": [
+          255,
+          153,
+          0
+        ],
+        "contrast_ratio": 9.808493114301314,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "assets/site-shell.css",
+        "selector": ".btn-bh",
+        "fg_color": "#fff",
+        "bg_color": "#000",
+        "fg_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bg_rgb": [
+          0,
+          0,
+          0
+        ],
+        "contrast_ratio": 21.0,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "destinations/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "es/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "es/reviews/insta360-go-3s-hands-free-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "comparisons/iphone-16-pro-vs-dedicated-camera.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "comparisons/sony-a7cr-vs-fujifilm-x-t50.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "comparisons/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "comparisons/budget-vs-premium-travel-cameras.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "comparisons/action-camera-vs-gimbal-camera.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "comparisons/dji-pocket-3-vs-gopro-hero-13.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/beijing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/buenos-aires-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/tianjin-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/beijing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/kinshasa-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/cairo-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/bangkok-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/lagos-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/ho-chi-minh-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/mexico-city-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/guangzhou-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/xian-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/nanjing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/bangalore-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/luanda-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/tehran-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/nagoya-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/bogota-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/istanbul-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/lima-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/hong-kong-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/chennai-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/rio-de-janeiro-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/ahmedabad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/hyderabad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/baghdad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/sao-paulo-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/foshan-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/manila-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/santiago-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/moscow-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/shenyang-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/riyadh-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/chengdu-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/hangzhou-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/jakarta-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/paris-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/dongguan-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/shenzhen-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-generator/city-through-the-lens/london-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "guides/best-vlogging-cameras-travel-2026.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "guides/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "guides/state-of-travel-cameras-2026.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "guides/camera-gifts-for-travelers.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "guides/travel-camera-checklist-2026.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "guides/best-camera-southeast-asia.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "guides/what-to-film-european-night-markets.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "ja/reviews/insta360-go-3s-hands-free-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/sony-zv-e10-ii-night-market-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/insta360-go-3s-hands-free-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/fujifilm-x-m5-travel-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/canon-eos-r50-v-creator-kit-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/nikon-z50-ii-creator-kit-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/pocket-cinema-cameras-2026-roundup.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/om-system-om-3-travel-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "reviews/budget-4k-camcorder-roundup.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "jp/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/destinations/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/es/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/es/reviews/insta360-go-3s-hands-free-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/comparisons/iphone-16-pro-vs-dedicated-camera.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/comparisons/sony-a7cr-vs-fujifilm-x-t50.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/comparisons/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/comparisons/budget-vs-premium-travel-cameras.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/comparisons/action-camera-vs-gimbal-camera.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/comparisons/dji-pocket-3-vs-gopro-hero-13.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/beijing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/buenos-aires-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/tianjin-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/beijing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/kinshasa-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/cairo-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/bangkok-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/lagos-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/ho-chi-minh-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/mexico-city-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/guangzhou-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/xian-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/nanjing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/bangalore-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/luanda-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/tehran-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/nagoya-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/bogota-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/istanbul-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/lima-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/hong-kong-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/chennai-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/rio-de-janeiro-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/ahmedabad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/hyderabad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/baghdad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/sao-paulo-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/foshan-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/manila-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/santiago-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/moscow-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/shenyang-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/riyadh-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/chengdu-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/hangzhou-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/jakarta-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/paris-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/dongguan-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/shenzhen-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-generator/city-through-the-lens/london-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/guides/best-vlogging-cameras-travel-2026.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/guides/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/guides/state-of-travel-cameras-2026.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/guides/camera-gifts-for-travelers.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/guides/travel-camera-checklist-2026.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/guides/best-camera-southeast-asia.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/guides/what-to-film-european-night-markets.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/ja/reviews/insta360-go-3s-hands-free-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/sony-zv-e10-ii-night-market-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/insta360-go-3s-hands-free-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/fujifilm-x-m5-travel-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/canon-eos-r50-v-creator-kit-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/nikon-z50-ii-creator-kit-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/pocket-cinema-cameras-2026-roundup.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/om-system-om-3-travel-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/reviews/budget-4k-camcorder-roundup.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/jp/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/tianjin-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/beijing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/kinshasa-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/lagos-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/dhaka-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/osaka-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/karachi-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/shanghai-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/guangzhou-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/xian-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/nanjing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/bangalore-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/lahore-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/luanda-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/tehran-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/nagoya-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/hong-kong-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/chennai-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/ahmedabad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/hyderabad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/baghdad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/kolkata-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/foshan-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/moscow-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/shenyang-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/riyadh-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/chongqing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/hangzhou-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/dongguan-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/city-through-the-lens/shenzhen-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/editing/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/de/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/de/reviews/insta360-go-3s-hands-free-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/interviews/sell-travel-stock-footage-2026.html",
+        "selector": "<p inline>",
+        "fg_color": "#ccc",
+        "bg_color": "#111",
+        "fg_rgb": [
+          204,
+          204,
+          204
+        ],
+        "bg_rgb": [
+          17,
+          17,
+          17
+        ],
+        "contrast_ratio": 11.758344285642144,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/how-to/film-yourself-solo.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/how-to/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/how-to/film-sunsets-golden-hour.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/how-to/film-in-harsh-sunlight.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/how-to/audio-tips-noisy-locations.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/how-to/vertical-video-settings-travel.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "repo_audit/how-to/film-markets-street-food.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/tianjin-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/beijing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/kinshasa-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/lagos-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/dhaka-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/osaka-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/karachi-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/shanghai-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/guangzhou-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/xian-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/nanjing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/bangalore-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/lahore-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/luanda-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/tehran-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/nagoya-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/hong-kong-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/chennai-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/ahmedabad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/hyderabad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/baghdad-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/kolkata-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/foshan-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/moscow-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/shenyang-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/riyadh-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/chongqing-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/hangzhou-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/dongguan-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "city-through-the-lens/shenzhen-interview-preview.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "editing/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "de/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "de/reviews/insta360-go-3s-hands-free-review.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "interviews/sell-travel-stock-footage-2026.html",
+        "selector": "<p inline>",
+        "fg_color": "#ccc",
+        "bg_color": "#111",
+        "fg_rgb": [
+          204,
+          204,
+          204
+        ],
+        "bg_rgb": [
+          17,
+          17,
+          17
+        ],
+        "contrast_ratio": 11.758344285642144,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "how-to/film-yourself-solo.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "how-to/index.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "how-to/film-sunsets-golden-hour.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "how-to/film-in-harsh-sunlight.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "how-to/audio-tips-noisy-locations.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "how-to/vertical-video-settings-travel.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      },
+      {
+        "file": "how-to/film-markets-street-food.html",
+        "selector": "<input inline>",
+        "fg_color": "#e0e0e0",
+        "bg_color": "#0a0a0a",
+        "fg_rgb": [
+          224,
+          224,
+          224
+        ],
+        "bg_rgb": [
+          10,
+          10,
+          10
+        ],
+        "contrast_ratio": 14.997646132614666,
+        "is_footer": false,
+        "passes_aa_normal": true,
+        "passes_aa_large": true
+      }
+    ],
+    "footer_issues": []
+  }
+}
