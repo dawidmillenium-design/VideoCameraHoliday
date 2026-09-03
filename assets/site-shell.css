@@ -193,3 +193,17 @@
   .pros-cons-box { grid-template-columns: 1fr; }
   .pros-box { border-right: none; border-bottom: 1px solid #333; }
 }
+/* ========= WCAG CONTRAST FIXES (site-wide) ========= */
+/* 1. Plain links: replace invisible browser blue/purple */
+a { color: #66b3ff; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: #b39ddb; }
+a:hover, a:focus { color: #ffffff; }
+
+/* 2. Too-dark gray micro-text (3.3:1 -> 6.6:1) */
+.footer-bottom, .last-updated, .affiliate-note, .footer-about { color: #999 !important; }
+
+/* 3. Homepage video captions (1.6:1 -> 12:1) */
+.video-caption { color: #ccc !important; }
+
+/* 4. CTA buttons: white-on-red 3.9:1 -> dark-on-light-red 7.6:1 */
+.btn, .btn-affiliate-small { background: #ff6b6b !important; color: #111 !important; }
