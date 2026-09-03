@@ -9,29 +9,38 @@ venv/
 .mypy_cache/
 .pytest_cache/
 
-# Logs and temp files
+# Build artifacts
+dist/
+build/
+target/
+
+# Package managers
+package-lock.json
+
+# Logs
 *.log
 *.tmp
 *.swp
 
-# Environment
+# Environment files
 .env
 .env.local
 *.env.*
 
-# Editors
+# Editor/IDE files
 .vscode/
 .idea/
+*.swp
+*.swo
+*.tmp
 
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Distribution artifacts
-dist/
-build/
-target/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
 
 # Compressed files
 *.zip
@@ -56,4 +65,28 @@ target/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# MyPy cache
+.mypy_cache/
+.pytest_cache/
+
+# Gradle
+.gradle/
+
+# Julia
+julia-*/
+
+# Zig
+zig*/
+
+# Temporary files
+*.tmp
+*~
+.DS_Store
+Thumbs.db
 ```
