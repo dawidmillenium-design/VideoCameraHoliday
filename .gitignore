@@ -1,32 +1,7 @@
 ```
-# Dependencies
-node_modules/
+# Build artifacts
+city-interview-preview/
 
-# Environment
-.env
-.env.local
-*.env.*
-
-# Logs and temp files
-*.log
-*.tmp
-
-# Build/dist artifacts
-dist/
-build/
-*.pyc
-__pycache__/
-
-# Editors
-.vscode/
-.idea/
-
-# Coverage reports
-.coverage
-coverage/
-htmlcov/
-
-# Reports
-*.json
-*.md
+# HTML files (if generated)
+*.html
 ```
