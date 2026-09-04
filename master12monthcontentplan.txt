@@ -1,0 +1,72 @@
+Here is the **Master Content Backlog (Months 5–12)**. 
+
+This list is derived directly from the **Mega-Menu architecture** in your `index.html`. By building out these remaining articles, you will ensure that every single link in your navigation has a high-quality, SEO-optimized destination page. This eliminates 404 errors, maximizes internal link equity, and establishes total topical authority for "Holiday Video Camera."
+
+I have organized them by **Category & SEO Priority** so you can tackle them strategically.
+
+---
+
+### 📸 1. The Remaining Flagship Reviews (High Affiliate Conversion)
+*These articles target users at the bottom of the funnel who are ready to buy. They should be heavily linked from your "Best Of" guides.*
+
+| SEO File Name | Target Camera / Topic | Primary Keywords | Internal Linking Strategy |
+| :--- | :--- | :--- | :--- |
+| `insta360-x5-360-travel-review.html` | **Insta360 X5** | `Insta360 X5 review`, `invisible drone effect`, `360 travel camera` | Link to "Action vs Gimbal" & "Best Adventure Cameras". |
+| `dji-osmo-action-5-pro-low-light-review.html` | **DJI Osmo Action 5 Pro** | `DJI Action 5 Pro review`, `action camera low light`, `GoPro alternative` | Link to "Hero 13 Black vs Action 5" comparison. |
+| `sony-zv-e10-ii-night-market-vlog-test.html` | **Sony ZV-E10 II** | `Sony ZV-E10 II review`, `APS-C vlog camera`, `low light vlogging` | Link to "ZV-1 II Lisbon" & "Night Market Audio Guide". |
+| `insta360-go-3s-hands-free-travel-review.html` | **Insta360 Go 3S** | `Insta360 Go 3S review`, `hands free travel camera`, `tiny vlog camera` | Link to "Best Budget Cameras Under $500". |
+| `canon-eos-r50-v-creator-kit-travel-review.html` | **Canon EOS R50** | `Canon R50 travel review`, `beginner mirrorless camera`, `vlogging kit` | Link to "iPhone vs Dedicated Camera". |
+
+### 🛒 2. Niche Buying Guides (High-Volume Top of Funnel)
+*These are your "Pillar Pages." They will draw in massive organic search traffic from people planning specific types of trips.*
+
+| SEO File Name | Topic / Scenario | Primary Keywords | Internal Linking Strategy |
+| :--- | :--- | :--- | :--- |
+| `best-budget-holiday-camera-under-500.html` | **Budget Guide** | `best camera under 500`, `budget travel camera`, `cheap vlog camera` | Link to Insta360 Go 3S, older Sony models, and used gear tips. |
+| `best-camera-southeast-asia-backpacking.html` | **SE Asia / Monsoon** | `camera for Southeast Asia`, `humidity camera gear`, `backpack vlog setup` | Link to "Bangkok Pocket 4P", "Night Market Audio", "Rain Protection". |
+| `best-waterproof-cameras-beach-holidays.html` | **Beach / Sand** | `waterproof beach camera`, `sand proof camera`, `snorkeling gear` | Link to "Maldives GoPro Test" & "Underwater Guide". |
+| `best-cameras-desert-travel-dust-heat.html` | **Desert / Heat** | `camera for desert travel`, `dust proof camera`, `heat protection gear` | Link to "Winter Wonderland" (extreme weather contrast). |
+| `best-vlogging-cameras-travel-2026.html` | **Vlogging Roundup** | `best travel vlog camera 2026`, `solo travel vlog setup` | Link to ZV-1 II, ZV-E10 II, and Pocket 4P. |
+
+### 🎬 3. Advanced "How-To" & Technical Skills (Trust & Dwell Time)
+*These articles solve specific pain points, keeping users on your site longer and encouraging newsletter signups.*
+
+| SEO File Name | Topic / Skill | Primary Keywords | Internal Linking Strategy |
+| :--- | :--- | :--- | :--- |
+| `stabilize-videos-without-gimbal.html` | **Handheld Techniques** | `stabilize video without gimbal`, `ninja walk technique`, `handheld vlogging` | Link to "ZV-1 II Active Mode" & "Hero 13 HyperSmooth". |
+| `film-in-harsh-sunlight-nd-filters.html` | **Exposure / ND Filters** | `film in harsh sunlight`, `ND filter for travel`, `variable ND guide` | Link to "Lisbon B-Roll" & "Spring Packing Checklist". |
+| `edit-travel-videos-phone-tablet.html` | **Mobile Editing** | `edit travel video on phone`, `CapCut travel edit`, `iPad video editing` | Link to "Color Grading" & "Post to YouTube". |
+| `choose-memory-card-4k-10bit-video.html` | **Storage / Tech** | `best SD card for 4K`, `V30 vs V60 vs V90`, `travel backup drive` | Link to "Spring Packing Checklist" & "Backup Footage". |
+| `film-yourself-solo-travel-tripod.html` | **Solo Filming** | `how to film yourself solo`, `travel tripod setup`, `ActiveTrack tutorial` | Link to "Pocket 4P ActiveTrack" & "Best Solo Vlog Cameras". |
+
+### ✂️ 4. Post-Production & Editing (Bottom of Funnel)
+*Targeting creators who already have their gear but need help making the footage look professional.*
+
+| SEO File Name | Topic / Skill | Primary Keywords | Internal Linking Strategy |
+| :--- | :--- | :--- | :--- |
+| `color-grading-travel-videos-d-log.html` | **Color Grading** | `color grade travel video`, `D-Log M to Rec709`, `cinematic travel LUTs` | Link to "Maldives Underwater Color Fix" & "Lisbon B-Roll". |
+| `best-editing-apps-holiday-footage.html` | **Software Roundup** | `best video editing app travel`, `CapCut vs LumaFusion`, `Premiere Rush` | Link to "Edit on Phone" & "AI Music Sync". |
+| `post-travel-videos-youtube-hotel-wifi.html` | **Workflow / Upload** | `upload YouTube slow wifi`, `travel vlog workflow`, `proxy editing` | Link to "Backup Footage" & "Memory Card Guide". |
+
+### ⚔️ 5. Head-to-Head Comparisons (Decision Stage)
+*Capturing users who are stuck between two choices. These pages have incredibly high click-through rates to affiliate links.*
+
+| SEO File Name | Matchup | Primary Keywords | Internal Linking Strategy |
+| :--- | :--- | :--- | :--- |
+| `action-camera-vs-gimbal-camera.html` | **GoPro vs Pocket** | `action camera vs gimbal`, `GoPro vs DJI Pocket`, `which travel camera` | Link to "Santorini Showdown" & individual reviews. |
+| `budget-vs-premium-travel-cameras.html` | **Value vs Flagship** | `budget vs premium camera`, `is expensive camera worth it` | Link to "Under $500 Guide" vs "Ultimate Holiday Guide". |
+| `sony-a7c-ii-vs-fujifilm-x-t50-travel.html` | **Mirrorless Battle** | `Sony A7C II vs Fuji X-T50`, `compact mirrorless travel`, `full frame vs APS-C` | Link to "Best Mirrorless for Travel" & "Lens Packing Guide". |
+| `dji-osmo-action-5-vs-gopro-hero-13-black.html`| **Action Battle** | `DJI Action 5 vs GoPro 13`, `best action camera 2026` | Link to "Maldives Underwater" & "Alps Hiking". |
+
+---
+
+### 🚀 How to Execute This Backlog:
+You now have a complete **32-Article Master SEO Blueprint** for *Holiday Video Camera*. 
+
+1. **Months 1-4 (Completed):** You have the core pillars, the main camera reviews (Pocket 4P, Hero 13 Black, ZV-1 II), and the extreme destination tests.
+2. **Months 5-8 (Next Phase):** Focus on the **Flagship Reviews** (Insta360 X5, DJI Action 5) and the **Niche Buying Guides** (Under $500, SE Asia, Beach). This will immediately multiply your affiliate revenue streams.
+3. **Months 9-12 (Final Phase):** Fill out the **How-To** and **Editing** sections to capture long-tail search traffic and build deep trust with your audience.
+
+**What would you like to do next?**
+* Reply with **"Generate [Article Name]"** (e.g., *Generate Best Budget Holiday Camera Under 500*) and I will write the full, production-ready HTML file with the exact mega-menu, footer, and schema markup.
+* Reply with **"Update Mega Menu"** and I will provide the updated HTML snippet for your `index.html` navigation so you can start linking to the new articles we've created in Months 1-4!
