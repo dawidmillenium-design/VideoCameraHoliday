@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cámara de Vídeo para Vacaciones: Pruebas Reales de Cámaras de Viaje, Sin Tablas de Laboratorio</title>
+    <meta name="description" content="Cámara de Vídeo para Vacaciones prueba cámaras de vídeo en viajes reales: playa, esquí, ciudad y desierto. Reseñas honestas, guías de compra y tutoriales de filmación desde la carretera, no desde el laboratorio.">
+    <meta name="author" content="Dawid Millennium">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/es/">
+    <meta name="google-site-verification" content="ddryQTwrxDAxNvgfjcrTs2eW06UebOvdNums43rTfJc" />
+    <meta property="og:title" content="Cámara de Vídeo para Vacaciones: Pruebas Reales de Cámaras de Viaje, Sin Tablas de Laboratorio">
+    <meta property="og:description" content="Reseñas honestas de cámaras de vídeo, guías de compra y tutoriales de filmación — cada producto probado en vacaciones reales.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/es/">
+    <meta property="og:site_name" content="Cámara de Vídeo para Vacaciones">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+    .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+    .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
+    .top-nav .nav-links li { position: relative; }
+    .top-nav .nav-links li.mega-item { position: static; }
+    .top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
+    .top-nav .nav-links a:hover, .top-nav .nav-links a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+    
+    /* MEGA MENU STYLES */
+    .mega-menu { 
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background: #1a1a2e; 
+        border-top: 2px solid #e94560; 
+        border-bottom: 1px solid #333; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+        z-index: 1000; 
+        padding: 30px 20px;
+    }
+    .top-nav .nav-links li.mega-item:hover .mega-menu { display: block; }
+    .mega-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+    .mega-column h4 { color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    .mega-column ul { list-style: none; margin: 0; padding: 0; }
+    .mega-column li { margin-bottom: 8px; }
+    .mega-column a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; display: block; padding: 2px 0; }
+    .mega-column a:hover { color: #fff; text-decoration: underline; }
+
+    .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
+    header { text-align: center; padding: 60px 20px 50px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+    h1 { font-size: 2.6rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
+    .subtitle { font-size: 1.2rem; color: #888; max-width: 680px; margin: 0 auto 25px; }
+    .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 25px; }
+    .stat { text-align: center; }
+    .stat .num { font-size: 2rem; font-weight: 700; color: #e94560; }
+    .stat .label { font-size: 0.85rem; color: #888; }
+    article { padding: 40px 20px; }
+    h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+    p { margin-bottom: 20px; font-size: 1.05rem; }
+    a.content-link { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
+    a.content-link:hover { color: #ff6b6b; }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 30px 0; }
+    .cat-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; text-decoration: none; color: inherit; transition: border-color 0.2s; display: block; }
+    .cat-card:hover { border-color: #e94560; }
+    .cat-card h3 { color: #e94560; margin: 0 0 10px; font-size: 1.2rem; }
+    .cat-card p { font-size: 0.92rem; color: #888; margin: 0; }
+    .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+    .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+    .related-card:hover { border-color: #e94560; }
+    .related-card h4 { color: #e94560; margin-top: 0; }
+    .related-card p { font-size: 0.9rem; color: #888; margin-bottom: 0; }
+    .author-box { display: flex; align-items: center; gap: 15px; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 25px 0; }
+    .author-avatar { width: 50px; height: 50px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+    .author-info h4 { color: #fff; margin: 0 0 5px; font-size: 1rem; }
+    .author-info p { color: #888; font-size: 0.85rem; margin: 0; }
+    .takeaways { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; }
+    .takeaways h3 { color: #e94560; margin-top: 0; }
+    .takeaways ul { margin-left: 20px; margin-bottom: 0; }
+    ul { margin-left: 20px; margin-bottom: 20px; }
+    li { margin-bottom: 10px; }
+    .affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
+    .site-footer { background: #111; border-top: 2px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+    .footer-section h4 { color: #e94560; font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-section ul { list-style: none; margin: 0; padding: 0; }
+    .footer-section li { margin-bottom: 8px; }
+    .footer-section a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .footer-section a:hover { color: #e94560; }
+    .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
+    .footer-bottom a { color: #e94560; text-decoration: none; }
+    
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 2rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .youtube-shorts-embed {
+        position: relative;
+        padding-bottom: 177.77%; /* 9:16 Aspect Ratio for Shorts */
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        background-color: #000;
+    }
+    .youtube-shorts-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .video-caption {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        margin-top: 0.75rem;
+        color: #ccc;
+        font-weight: 600;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    #latest-camera-tests h2 {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* RESPONSIVE MEGA MENU & BASE STYLES */
+    @media (max-width: 1024px) {
+        .mega-menu { 
+            position: static; 
+            display: block !important; 
+            border: none; 
+            box-shadow: none; 
+            padding: 10px 0;
+            background: transparent;
+        }
+        .mega-container { 
+            grid-template-columns: 1fr; 
+            gap: 15px;
+        }
+        .mega-column { 
+            background: #111; 
+            padding: 15px; 
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .top-nav .nav-links { 
+            flex-direction: column; 
+            width: 100%;
+            display: none;
+        }
+        .top-nav .nav-links.active { 
+            display: flex; 
+        }
+        .top-nav .nav-links li.mega-item { 
+            width: 100%;
+        }
+        h1 { font-size: 1.8rem; } 
+        .subtitle { font-size: 1rem; }
+        .footer-container { grid-template-columns: 1fr 1fr; }
+        .stats { gap: 20px; }
+    }
+    </style>
+
+    <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
+</head>
+<body>
+
+<nav class="top-nav" aria-label="Navegación primaria">
+  <div class="nav-container">
+    <a class="logo" href="/VideoCameraHoliday/es/">📹 Cámara de Vídeo para Vacaciones</a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Alternar navegación" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+    <ul class="nav-links">
+      <li><a data-section="home" href="/VideoCameraHoliday/es/" class="active">Inicio</a></li>
+      
+      <!-- GUIDES MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/es/guides/">Guías ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>🛒 Guías de compra</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/guides/best-budget-holiday-camera-under-500.html">Mejor cámara económica para vacaciones por menos de 500 €</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-camera-hiking-holidays.html">Mejor cámara para vacaciones de senderismo</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-camera-ski-holidays.html">Mejor cámara para vacaciones de esquí</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-camera-southeast-asia.html">Mejor cámara para el sudeste asiático</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-compact-cameras-city-breaks.html">Mejores cámaras compactas para escapadas urbanas</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-holiday-video-cameras-2026.html">Mejores cámaras de vídeo para vacaciones 2026</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-vlogging-cameras-travel-2026.html">Mejores cámaras para vlogging de viaje</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-waterproof-cameras-beach.html">Mejores cámaras resistentes al agua para la playa</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🏖️ Guías de destinos</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/guides/best-camera-hiking-holidays.html">Mejor cámara para senderismo</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-camera-ski-holidays.html">Mejor cámara para esquí</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-camera-southeast-asia.html">Mejor cámara para el sudeste asiático</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-compact-cameras-city-breaks.html">Mejores cámaras compactas para escapadas urbanas</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-waterproof-cameras-beach.html">Mejores cámaras resistentes al agua para la playa</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>📋 Planificación y consejos</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/guides/camera-gifts-for-travelers.html">Regalos de cámaras para viajeros</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/state-of-travel-cameras-2026.html">Estado de las cámaras de viaje 2026</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/travel-camera-checklist-2026.html">Lista de verificación de cámara de viaje 2026</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/what-to-film-european-night-markets.html">Qué filmar en mercados nocturnos europeos</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🎯 Enlaces rápidos</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/guides/best-holiday-video-cameras-2026.html">Mejores cámaras 2026</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/best-budget-holiday-camera-under-500.html">Menos de 500 €</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/travel-camera-checklist-2026.html">Lista de verificación</a></li>
+                <li><a href="/VideoCameraHoliday/es/guides/state-of-travel-cameras-2026.html">Estado de las cámaras</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- REVIEWS MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/es/reviews/">Reseñas ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>📸 Cámaras con cardán</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/reviews/dji-osmo-action-5-review.html">Reseña DJI Osmo Action 5</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/dji-osmo-pocket-3-review.html">Reseña DJI Osmo Pocket 3</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/pocket-cinema-cameras-2026-roundup.html">Resumen de cámaras de cine de bolsillo</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🎬 Cámaras de acción</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/reviews/dji-osmo-action-5-review.html">Reseña DJI Osmo Action 5</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/gopro-hero-13-review.html">Reseña GoPro Hero 13</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/insta360-go-3s-hands-free-review.html">Reseña Insta360 Go 3S manos libres</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/insta360-x4-review.html">Reseña Insta360 X4</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/insta360-x5-review.html">Reseña Insta360 X5</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>📱 Vlogging y sin espejo</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/reviews/canon-eos-r50-v-creator-kit-review.html">Reseña Canon EOS R50 V Creator Kit</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/canon-powershot-v10-review.html">Reseña Canon PowerShot V10</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/fujifilm-x-m5-travel-review.html">Reseña de viaje Fujifilm X-M5</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/iphone-16-pro-video-review.html">Reseña de vídeo iPhone 16 Pro</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/nikon-z50-ii-creator-kit-review.html">Reseña Nikon Z50 II Creator Kit</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/sony-zv-1-ii-review.html">Reseña Sony ZV-1 II</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/sony-zv-e10-ii-night-market-review.html">Reseña Sony ZV-E10 II en mercado nocturno</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🎥 Resúmenes</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/reviews/pocket-cinema-cameras-2026-roundup.html">Cámaras de cine de bolsillo</a></li>
+                <li><a href="/VideoCameraHoliday/es/reviews/budget-4k-camcorder-roundup.html">Videocámaras 4K económicas</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- HOW-TO MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/es/how-to/">Cómo hacer ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>🎬 Técnicas de filmación</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/how-to/film-better-holiday-videos.html">Filmar mejores vídeos de vacaciones</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/film-in-harsh-sunlight.html">Filmar con luz solar intensa</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/film-in-rain-protect-gear.html">Filmar bajo la lluvia y proteger el equipo</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/film-markets-street-food.html">Filmar mercados y comida callejera</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/film-sunsets-golden-hour.html">Filmar atardeceres y hora dorada</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/film-yourself-solo.html">Filmarte a ti mismo en solitario</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🔧 Habilidades técnicas</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/how-to/audio-tips-noisy-locations.html">Consejos de audio para lugares ruidosos</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/backup-travel-photos-videos.html">Hacer copias de seguridad de fotos y vídeos de viaje</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/choose-memory-card-4k-video.html">Elegir tarjeta de memoria para vídeo 4K</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/edit-travel-videos-phone-tablet.html">Editar vídeos de viaje en teléfono o tableta</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/stabilize-videos-without-gimbal.html">Estabilizar vídeos sin cardán</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/vertical-video-settings-travel.html">Ajustes de vídeo vertical para viajes</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>⚡ Consejos rápidos</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/how-to/stabilize-videos-without-gimbal.html">No se necesita cardán</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/backup-travel-photos-videos.html">Copia de seguridad del metraje</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/choose-memory-card-4k-video.html">Tarjetas de memoria</a></li>
+                <li><a href="/VideoCameraHoliday/es/how-to/film-better-holiday-videos.html">Mejores vídeos</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- DESTINATIONS MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/es/destinations/">Destinos ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>🏖️ Playa y agua</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/destinations/best-cameras-beach-holidays.html">Vacaciones en la playa</a></li>
+                <li><a href="/VideoCameraHoliday/es/destinations/underwater-camera-guide.html">Guía submarina</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🏔️ Aventura</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/destinations/best-cameras-ski-holidays.html">Vacaciones de esquí</a></li>
+                <li><a href="/VideoCameraHoliday/es/destinations/best-cameras-desert-travel.html">Viajes al desierto</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🏙️ Escapadas urbanas</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/destinations/best-cameras-city-breaks.html">Escapadas urbanas</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- EDITING MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/es/editing/">Edición ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>✂️ Software de edición</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/editing/best-editing-apps-holiday-footage.html">Mejores aplicaciones de edición</a></li>
+                <li><a href="/VideoCameraHoliday/es/editing/post-travel-videos-youtube.html">Publicar en YouTube</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>🎨 Color y estilo</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/editing/color-grading-travel-videos.html">Etalonaje de color para vídeos de viaje</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- COMPARISONS MEGA MENU -->
+      <li class="mega-item">
+        <a href="/VideoCameraHoliday/es/comparisons/">Comparativas ▼</a>
+        <div class="mega-menu">
+          <div class="mega-container">
+            <div class="mega-column">
+              <h4>⚔️ Cara a cara</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/comparisons/action-camera-vs-gimbal-camera.html">Cámara de acción vs cámara con cardán</a></li>
+                <li><a href="/VideoCameraHoliday/es/comparisons/budget-vs-premium-travel-cameras.html">Cámaras de viaje económicas vs premium</a></li>
+                <li><a href="/VideoCameraHoliday/es/comparisons/dji-pocket-3-vs-gopro-hero-13.html">DJI Pocket 3 vs GoPro Hero 13</a></li>
+                <li><a href="/VideoCameraHoliday/es/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone 16 Pro vs cámara dedicada</a></li>
+                <li><a href="/VideoCameraHoliday/es/comparisons/sony-a7cr-vs-fujifilm-x-t50.html">Sony A7CR vs Fujifilm X-T50</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>💰 Selecciones de valor</h4>
+              <ul>
+                <li><a href="/VideoCameraHoliday/es/comparisons/budget-vs-premium-travel-cameras.html">Económico vs premium</a></li>
+                <li><a href="/VideoCameraHoliday/es/comparisons/action-camera-vs-gimbal-camera.html">Acción vs cardán</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <!-- CITY THROUGH THE LENS & ABOUT -->
+      <li><a data-section="city-through-the-lens" href="/VideoCameraHoliday/es/city-through-the-lens/">🌍 Serie de ciudades</a></li>
+      <li><a data-section="about" href="/VideoCameraHoliday/es/about/">Acerca de</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+    <h1>📹 Cámara de Vídeo para Vacaciones</h1>
+    <p class="subtitle">Pruebas reales de cámaras de viaje — sin tablas de laboratorio. Cada cámara en este sitio fue filmada en vacaciones reales: playas, pistas de esquí, mercados nocturnos y senderos del desierto.</p>
+    <div class="stats">
+        <div class="stat"><div class="num">50+</div><div class="label">Cámaras probadas</div></div>
+        <div class="stat"><div class="num">28</div><div class="label">Guías detalladas</div></div>
+        <div class="stat"><div class="num">50</div><div class="label">Ciudades en nuestra serie</div></div>
+        <div class="stat"><div class="num">2026</div><div class="label">Últimos modelos</div></div>
+    </div>
+</header>
+
+<article class="container">
+    <p><strong>Cámara de Vídeo para Vacaciones es un sitio independiente de reseñas de cámaras de viaje donde cada recomendación proviene de filmar viajes reales, no de leer hojas de especificaciones.</strong> Si quieres una respuesta rápida: para la mayoría de los viajeros en 2026, la <a class="content-link" href="./reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a> es la mejor cámara de vídeo para vacaciones todo en uno, la <a class="content-link" href="./reviews/gopro-hero-13-review.html">GoPro Hero 13</a> es la mejor para playa y aventura, y tu <a class="content-link" href="./reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a> ya es mejor de lo que piensas. Cada selección a continuación enlaza a una reseña de campo completa.</p>
+
+    <div class="takeaways">
+        <h3>⚡ Por qué confiar en este sitio</h3>
+        <ul>
+            <li><strong>Solo viajes reales:</strong> cámaras probadas en vacaciones reales por el sudeste asiático, Europa y Sudamérica.</li>
+            <li><strong>Sin tablas de laboratorio:</strong> juzgamos el metraje como lo harás tú: en un teléfono, bajo el sol, después de un largo día.</li>
+            <li><strong>Todos los presupuestos cubiertos:</strong> desde <a class="content-link" href="./guides/best-budget-holiday-camera-under-500.html">cámaras por menos de 500 €</a> hasta equipos 360° profesionales.</li>
+            <li><strong>Actualizado para 2026:</strong> todas las guías revisadas con los modelos de este año.</li>
+        </ul>
+    </div>
+
+    <h2>Explora el sitio</h2>
+    <div class="cat-grid">
+        <a class="cat-card" href="./reviews/"><h3>🎥 Reseñas de cámaras</h3><p>8 reseñas de campo en profundidad: DJI Pocket 3, GoPro Hero 13, Insta360 X5, Sony ZV-1 II y más.</p></a>
+        <a class="cat-card" href="./guides/"><h3>🛒 Guías de compra</h3><p>Mejores cámaras para vacaciones 2026, selecciones económicas por menos de 500 €, resistentes al agua, compactas, kits de esquí y senderismo.</p></a>
+        <a class="cat-card" href="./how-to/"><h3>🎬 Guías prácticas</h3><p>Estabilizar sin cardán, proteger el equipo en la lluvia, hacer copias de seguridad en el camino, elegir tarjetas de memoria.</p></a>
+        <a class="cat-card" href="./destinations/"><h3>🏖️ Destinos</h3><p>La cámara adecuada para playa, escapada urbana, esquí, submarina y desierto.</p></a>
+        <a class="cat-card" href="./editing/"><h3>✂️ Edición</h3><p>Etalonaje de color para metraje de viaje, mejores aplicaciones de edición y publicación en YouTube desde el wifi del hotel.</p></a>
+        <a class="cat-card" href="./city-through-the-lens/"><h3>🌍 City Through the Lens</h3><p>Nuestra serie de 50 entrevistas: videógrafos locales en las ciudades más grandes del mundo comparten cómo filman realmente su hogar.</p></a>
+    </div>
+
+    <h2>Empieza aquí: Guías más leídas</h2>
+    <div class="related-articles">
+        <a class="related-card" href="./guides/best-holiday-video-cameras-2026.html"><h4>Mejores cámaras de vídeo para vacaciones 2026</h4><p>La reseña insignia — 8 selecciones probadas para cada tipo de viaje y presupuesto.</p></a>
+        <a class="related-card" href="./destinations/best-cameras-beach-holidays.html"><h4>Mejores cámaras para vacaciones en la playa</h4><p>Sal, arena y esnórquel: qué sobrevive realmente a la playa.</p></a>
+        <a class="related-card" href="./24fps-vs-120fps-holiday-edit-ai-music-sync.html"><h4>Edición de vacaciones 24fps vs 120fps</h4><p>Sincroniza metraje de viaje en cámara lenta con música generada por IA, al ritmo perfecto.</p></a>
+    </div>
+
+    <div class="author-box">
+        <div class="author-avatar">🎬</div>
+        <div class="author-info">
+            <h4>Dawid Millennium — Videógrafo de viajes y fundador</h4>
+            <p>Vlogger de viajes desde 2019. Más de 50 cámaras probadas en vacaciones reales en tres continentes. Cada guía en este sitio está escrita a partir de metraje grabado en el campo.</p>
+        </div>
+    </div>
+
+    <div class="takeaways newsletter" style="text-align:center;">
+        <h3>📬 Recibe ofertas de cámaras y notas de campo semanales</h3>
+        <p style="color:#888;">Únete a más de 5.000 viajeros que reciben nuestras mejores reseñas de cámaras de vacaciones y ofertas exclusivas. Sin spam, cancela cuando quieras.</p>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="tu@email.com" required aria-label="Dirección de correo electrónico" style="padding:12px 16px;border-radius:30px;border:1px solid #333;background:#0a0a0a;color:#e0e0e0;width:260px;max-width:100%;margin-right:10px;">
+            <button type="submit" class="btn">Suscribirse</button>
+        </form>
+    </div>
+
+    <p class="affiliate-note">Algunas guías de compra en este sitio contienen enlaces de afiliado. Si compras a través de ellos, podemos ganar una comisión sin costo adicional para ti. Nuestras clasificaciones se basan en pruebas de viaje reales.</p>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Cámara de Vídeo para Vacaciones",
+  "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/es/",
+  "description": "Pruebas reales de cámaras de viaje — reseñas honestas de cámaras de vídeo, guías de compra y tutoriales de filmación desde la carretera, no desde el laboratorio.",
+  "inLanguage": "es",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cámara de Vídeo para Vacaciones",
+    "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/es/"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Dawid Millennium",
+    "jobTitle": "Videógrafo de viajes"
+  }
+}
+</script>
+
+<!-- START: Latest Real-World Camera Tests Section -->
+<section id="latest-camera-tests">
+  <h2 style="text-align:center; font-family: system-ui, sans-serif;">Últimas pruebas de cámaras en el mundo real</h2>
+  <div class="video-grid">
+
+    <!-- VIDEO 1: Hanoi Lake View (Insta360 X5) -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/sogIapYPUTs?rel=0" title="Insta360 X5 Hanoi Vietnam vista al lago" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Insta360 X5: Vista matutina al lago desde la azotea, Hanoi</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Insta360 X5 Cámara de vídeo para vacaciones probada en el lago de Hanoi, Vietnam",
+        "description": "Vista matutina al lago desde la azotea en Hanoi, Vietnam, capturada con la Insta360 X5. Prueba real de cámara de viaje.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/sogIapYPUTs/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT30S",
+        "contentUrl": "https://www.youtube.com/watch?v=sogIapYPUTs",
+        "embedUrl": "https://www.youtube.com/embed/sogIapYPUTs",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 2: Zanzibar North Beach (Insta360 X5) - 0:18 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/5PYEdRkayvE?rel=0" title="Zanzíbar playa norte Tanzania Insta360 X5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Insta360 X5: Resort de playa de 4 estrellas, Zanzíbar</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Playa norte de Zanzíbar Tanzania resort de playa de 4 estrellas con Insta360 X5",
+        "description": "Metraje de primera mano de un resort de playa de 4 estrellas en la playa norte de Zanzíbar, Tanzania, grabado con la Insta360 X5.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/5PYEdRkayvE/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT18S",
+        "contentUrl": "https://www.youtube.com/watch?v=5PYEdRkayvE",
+        "embedUrl": "https://www.youtube.com/embed/5PYEdRkayvE",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 3: Male Airport Hot Weather (DJI Action 6) - 0:31 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/1gqozL05z-4?rel=0" title="DJI Osmo Action 6 Aeropuerto de Malé clima caluroso" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">DJI Osmo Action 6: Aeropuerto de Malé, prueba de calor</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "DJI Osmo Action 6 probada frente al aeropuerto de Malé en clima caluroso",
+        "description": "Prueba real de calor y durabilidad de la DJI Osmo Action 6 frente al aeropuerto de Malé en las Maldivas.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/1gqozL05z-4/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT31S",
+        "contentUrl": "https://www.youtube.com/watch?v=1gqozL05z-4",
+        "embedUrl": "https://www.youtube.com/embed/1gqozL05z-4",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 4: Maafushi Island Rooftop Pool (Insta360 X5) - 0:31 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/UBlh7-46eFo?rel=0" title="Insta360 X5 Maldivas Isla Maafushi piscina en azotea" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Insta360 X5: Piscina en azotea con vista al mar, Isla Maafushi</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Insta360 X5 Maldivas Isla Maafushi piscina en azotea",
+        "description": "Piscina en azotea con vista al mar en la Isla Maafushi, Maldivas, capturada con la Insta360 X5.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/UBlh7-46eFo/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT31S",
+        "contentUrl": "https://www.youtube.com/watch?v=UBlh7-46eFo",
+        "embedUrl": "https://www.youtube.com/embed/UBlh7-46eFo",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 6: DJI Osmo Action 6 2026 - 0:33 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/7yxFFJ7ROwk?rel=0" title="DJI Osmo Action 6 2026 Reseña" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">DJI Osmo Action 6: Primer vistazo 2026</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "DJI Osmo Action 6 2026 Primeras impresiones",
+        "description": "Pruebas prácticas iniciales y primeras impresiones de la DJI Osmo Action 6 en condiciones reales de viaje.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/7yxFFJ7ROwk/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT33S",
+        "contentUrl": "https://www.youtube.com/watch?v=7yxFFJ7ROwk",
+        "embedUrl": "https://www.youtube.com/embed/7yxFFJ7ROwk",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+    <!-- VIDEO 7: Hanoi New City Development (Insta360 X5) - 0:29 -->
+    <div>
+      <div class="youtube-shorts-embed">
+        <iframe src="https://www.youtube.com/embed/YWpmLYde99s?rel=0" title="Insta360 X5 Hanoi Vietnam nuevo desarrollo urbano" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Insta360 X5: Nuevo desarrollo urbano de Hanoi</p>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Insta360 X5 Hanoi Vietnam nuevo desarrollo urbano",
+        "description": "Explorando el nuevo desarrollo urbano en Hanoi, Vietnam, mostrando la estabilización y las capacidades de gran angular de la Insta360 X5.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/YWpmLYde99s/hqdefault.jpg",
+        "uploadDate": "2026-09-01",
+        "duration": "PT29S",
+        "contentUrl": "https://www.youtube.com/watch?v=YWpmLYde99s",
+        "embedUrl": "https://www.youtube.com/embed/YWpmLYde99s",
+        "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+      }
+      </script>
+    </div>
+
+  </div>
+</section>
+<a href="camera-tests.html" style="color:#e94560; font-weight:bold; display:block; text-align:center; margin-top:2rem;">🎥 Ver pruebas de cámaras en el mundo real (Maldivas, Vietnam, Zanzíbar)</a>
+<!-- END: Latest Real-World Camera Tests Section -->
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <section class="footer-section">
+      <h4>🎬 Serie</h4>
+      <ul>
+        <li><a href="/VideoCameraHoliday/es/city-through-the-lens/">City Through the Lens</a></li>
+        <li><a href="/VideoCameraHoliday/es/city-through-the-lens/#faq">FAQ de la serie</a></li>
+      </ul>
+    </section>
+    
+    <section class="footer-section">
+      <h4>🛒 Guías de compra principales</h4>
+      <ul>
+        <li><a href="/VideoCameraHoliday/es/guides/best-holiday-video-cameras-2026.html">Mejores cámaras 2026</a></li>
+        <li><a href="/VideoCameraHoliday/es/guides/best-budget-holiday-camera-under-500.html">Menos de 500 €</a></li>
+        <li><a href="/VideoCameraHoliday/es/guides/best-waterproof-cameras-beach.html">Cámaras resistentes al agua</a></li>
+        <li><a href="/VideoCameraHoliday/es/guides/best-camera-hiking-holidays.html">Cámaras para senderismo</a></li>
+      </ul>
+    </section>
+    
+    <section class="footer-section">
+      <h4>📸 Reseñas populares</h4>
+      <ul>
+        <li><a href="/VideoCameraHoliday/es/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+        <li><a href="/VideoCameraHoliday/es/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+        <li><a href="/VideoCameraHoliday/es/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+        <li><a href="/VideoCameraHoliday/es/reviews/dji-osmo-action-5-review.html">DJI Action 5 Pro</a></li>
+      </ul>
+    </section>
+    
+    <section class="footer-section">
+      <h4>🎬 Esenciales de cómo hacer</h4>
+      <ul>
+        <li><a href="/VideoCameraHoliday/es/how-to/stabilize-videos-without-gimbal.html">Estabilizar sin cardán</a></li>
+        <li><a href="/VideoCameraHoliday/es/how-to/backup-travel-photos-videos.html">Copia de seguridad</a></li>
+        <li><a href="/VideoCameraHoliday/es/how-to/film-yourself-solo.html">Filmarte solo</a></li>
+        <li><a href="/VideoCameraHoliday/es/how-to/choose-memory-card-4k-video.html">Elegir tarjeta de memoria</a></li>
+      </ul>
+    </section>
+    
+    <section class="footer-section">
+      <h4>🏖️ Destinos</h4>
+      <ul>
+        <li><a href="/VideoCameraHoliday/es/destinations/best-cameras-beach-holidays.html">Vacaciones en la playa</a></li>
+        <li><a href="/VideoCameraHoliday/es/destinations/best-cameras-ski-holidays.html">Vacaciones de esquí</a></li>
+        <li><a href="/VideoCameraHoliday/es/destinations/best-cameras-city-breaks.html">Escapadas urbanas</a></li>
+        <li><a href="/VideoCameraHoliday/es/destinations/underwater-camera-guide.html">Guía submarina</a></li>
+      </ul>
+    </section>
+    
+    <section class="footer-section">
+      <h4>✂️ Edición y comparativas</h4>
+      <ul>
+        <li><a href="/VideoCameraHoliday/es/editing/color-grading-travel-videos.html">Etalonaje de color</a></li>
+        <li><a href="/VideoCameraHoliday/es/editing/best-editing-apps-holiday-footage.html">Aplicaciones de edición</a></li>
+        <li><a href="/VideoCameraHoliday/es/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
+        <li><a href="/VideoCameraHoliday/es/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs cámara</a></li>
+      </ul>
+    </section>
+    
+    <section class="footer-section">
+      <h4>ℹ️ Acerca de</h4>
+      <ul>
+        <li><a href="/VideoCameraHoliday/es/about/">Acerca de nosotros</a></li>
+        <li><a href="/VideoCameraHoliday/es/">Inicio</a></li>
+        <li><a href="/VideoCameraHoliday/es/sitemap.xml">Mapa del sitio</a></li>
+      </ul>
+    </section>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2026 <a href="/VideoCameraHoliday/es/">Cámara de Vídeo para Vacaciones</a> — Pruebas reales de cámaras de viaje. Sin tablas de laboratorio.</p>
+  </div>
+</footer>
+<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+</body>
+</html>

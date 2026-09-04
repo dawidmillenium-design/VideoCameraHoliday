@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4K Memory Cards: V30 vs V60 vs V90 | Holiday Video Camera</title>
+<meta name="description" content="V30 vs V60 vs V90 explained simply: real bitrate math for GoPro, Pocket 3 and mirrorless cameras, capacity planning per trip day, and spotting fake cards.">
+<meta name="author" content="Dawid Millennium">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">
+<meta property="og:title" content="4K Memory Cards: V30 vs V60 vs V90 | Holiday Video Camera">
+<meta property="og:description" content="V30 vs V60 vs V90 explained simply: real bitrate math for GoPro, Pocket 3 and mirrorless cameras, capacity planning per trip day, and spotting fake cards.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">
+<meta property="og:site_name" content="Holiday Video Camera">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+.top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+.top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
+.top-nav .nav-links li { position: relative; }
+.top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
+.top-nav .nav-links a:hover, .top-nav .nav-links a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #1a1a2e; border: 1px solid #333; border-top: 2px solid #e94560; border-radius: 0 0 8px 8px; min-width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); list-style: none; padding: 8px 0; }
+.top-nav .nav-links li:hover .dropdown-menu { display: block; }
+.dropdown-menu a { padding: 10px 20px !important; font-size: 0.85rem !important; border-bottom: 1px solid #222; }
+.dropdown-menu a:last-child { border-bottom: none; }
+.mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
+header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+header .logo { font-size: 1.5rem; font-weight: 700; color: #e94560; text-decoration: none; display: inline-block; margin-bottom: 15px; }
+h1 { font-size: 2.4rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
+.subtitle { font-size: 1.15rem; color: #888; max-width: 680px; margin: 0 auto 15px; }
+.meta { color: #888; font-size: 0.9rem; }
+.meta span { margin: 0 10px; }
+.breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: #888; }
+.breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
+.breadcrumb li { display: flex; align-items: center; }
+.breadcrumb li:not(:last-child)::after { content: ">"; margin: 0 10px; color: #555; }
+.breadcrumb a { color: #e94560; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+article { padding: 40px 20px; }
+h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+h3 { color: #fff; font-size: 1.3rem; margin: 30px 0 12px; }
+p { margin-bottom: 20px; font-size: 1.05rem; }
+a.content-link { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
+a.content-link:hover { color: #ff6b6b; }
+.author-box { display: flex; align-items: center; gap: 15px; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 25px 0; }
+.author-avatar { width: 50px; height: 50px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+.author-info h4 { color: #fff; margin: 0 0 5px; font-size: 1rem; }
+.author-info p { color: #888; font-size: 0.85rem; margin: 0; }
+.last-updated { color: #666; font-size: 0.8rem; margin-top: 5px; }
+.toc { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: #e94560; }
+.toc ul { list-style: none; margin-left: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: #ccc; text-decoration: none; }
+.toc a:hover { color: #e94560; }
+.takeaways { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; }
+.takeaways h3 { color: #e94560; margin-top: 0; }
+.takeaways ul { margin-left: 20px; margin-bottom: 0; }
+.tip-box { background: rgba(52, 152, 219, 0.1); border-left: 4px solid #3498db; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+.tip-box strong { color: #3498db; }
+.warning-box { background: rgba(243, 156, 18, 0.1); border-left: 4px solid #f39c12; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+.warning-box strong { color: #f39c12; }
+ul { margin-left: 20px; margin-bottom: 20px; }
+li { margin-bottom: 10px; }
+.faq-section { margin: 30px 0; }
+.faq-item { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 20px 0; }
+.faq-question { color: #fff; font-size: 1.15rem; margin: 0 0 12px; }
+.faq-answer p { color: #ccc; margin: 0; }
+.related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+.related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+.related-card:hover { border-color: #e94560; }
+.related-card h4 { color: #e94560; margin-top: 0; }
+.related-card p { font-size: 0.9rem; color: #888; margin-bottom: 0; }
+table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #333; }
+th { color: #e94560; background: #111; }
+td { color: #ccc; }
+.btn-group { display: flex; gap: 15px; flex-wrap: wrap; margin: 25px 0; }
+.btn { display: inline-block; padding: 12px 30px; background: #e94560; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600; transition: background 0.3s; border: none; cursor: pointer; }
+.btn:hover { background: #ff6b6b; }
+.btn-outline { background: transparent; border: 2px solid #e94560; color: #fff; }
+.btn-outline:hover { background: #e94560; }
+.affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
+.site-footer { background: #111; border-top: 2px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+.footer-section h4 { color: #e94560; font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+.footer-section ul { list-style: none; margin: 0; padding: 0; }
+.footer-section li { margin-bottom: 8px; }
+.footer-section a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+.footer-section a:hover { color: #e94560; }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
+.footer-bottom a { color: #e94560; }
+@media (max-width: 768px) {
+    h1 { font-size: 1.7rem; } .subtitle { font-size: 1rem; }
+    .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; }
+    .footer-container { grid-template-columns: 1fr 1fr; }
+}
+</style>
+
+    <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
+</head>
+<body>
+<nav class="top-nav" aria-label="Primary navigation">
+  <div class="nav-container">
+    <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a data-section="home" href="/VideoCameraHoliday/">Home</a></li>
+      <li><a data-section="city-through-the-lens" href="/VideoCameraHoliday/city-through-the-lens/">Series</a></li>
+      <li><a data-section="reviews" href="/VideoCameraHoliday/reviews/">Reviews</a><ul class="dropdown-menu"><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></li>
+      <li><a data-section="guides" href="/VideoCameraHoliday/guides/">Buying Guides</a><ul class="dropdown-menu"><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li></ul></li>
+      <li><a data-section="how-to" href="/VideoCameraHoliday/how-to/">How-To</a></li><li><a data-section="destinations" href="/VideoCameraHoliday/destinations/">Destinations</a></li><li><a data-section="editing" href="/VideoCameraHoliday/editing/">Editing</a></li><li><a data-section="comparisons" href="/VideoCameraHoliday/comparisons/">Comparisons</a></li><li><a data-section="about" href="/VideoCameraHoliday/about/">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+<a href="../" class="logo">📹 Holiday Video Camera</a>
+<h1>How to Choose a Memory Card for 4K Holiday Video (V30 vs V60 vs V90 Explained)</h1>
+<p class="subtitle">Speed classes in plain English, real bitrate math for GoPro, Pocket 3 and mirrorless cameras, capacity planning per trip day, and how to dodge fake cards.</p>
+<div class="meta"><span>📅 August 25, 2026</span><span>⏱️ 8 min read</span><span>✅ Updated: August 25, 2026</span></div>
+</header>
+<div class="breadcrumb">
+<div class="container" style="padding:0;">
+<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="../"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="../how-to/"><span itemprop="name">How-To</span></a><meta itemprop="position" content="2"></li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Memory Cards for 4K</span><meta itemprop="position" content="3"></li>
+</ol>
+</div>
+</div>
+<article class="container">
+<div class="author-box">
+<div class="author-avatar">📹</div>
+<div class="author-info">
+<h4>Dawid Millennium — Travel Videographer</h4>
+<p>I lost three days of Marrakech footage to a counterfeit card in 2021 — since then, storage is the one part of my kit I never improvise.</p>
+<p class="last-updated">🕐 Last updated: August 25, 2026</p>
+</div>
+</div>
+<div class="toc">
+<h3>In This Guide</h3>
+<ul>
+<li><a href="#speed-classes">Speed Classes Explained</a></li>
+<li><a href="#bitrate-math">Real Bitrate Math</a></li>
+<li><a href="#capacity">Capacity Per Trip Day</a></li>
+<li><a href="#fake-cards">Fake Card Warning</a></li>
+<li><a href="#mistakes">Common Mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#related">Related Articles</a></li>
+</ul>
+</div>
+
+<p><strong>For 4K holiday video, buy a V30-rated microSD from a reputable brand (SanDisk, Samsung, or Lexar) purchased from an official store — that covers GoPro, DJI, and most cameras up to about 100–200 Mbps. You only need V60 or V90 if your mirrorless camera shoots high-bitrate All-I codecs above 200 Mbps.</strong> Capacity-wise, plan for roughly 100–200 GB per heavy shooting day at 4K. That's the whole answer; the details below will save you from both overpaying and from the fake-card trap that burns thousands of travelers every year.</p>
+
+<p>I learned this in a Marrakech market, where a "512GB SanDisk Extreme" for a suspiciously good price turned out to be a 16GB card in disguise. It reported 512GB to the camera, recorded happily over itself, and silently destroyed three days of footage. More on spotting those fakes below — it nearly ended this blog before it started.</p>
+
+<div class="takeaways">
+<h3>Key Takeaways</h3>
+<ul>
+<li>V30 (30 MB/s minimum sustained write) is enough for nearly all consumer 4K cameras, including GoPro Hero 13 and DJI Pocket 3.</li>
+<li>V60/V90 only matter for mirrorless cameras recording high-bitrate All-I codecs (200–600+ Mbps).</li>
+<li>Bitrate math: Mbps ÷ 8 × 60 = MB per minute. A 100 Mbps camera eats about 750 MB per minute, ~45 GB per hour.</li>
+<li>Carry two 256GB cards rather than one 512GB — a dead card then costs half a trip, not all of it.</li>
+<li>Buy only from official stores, and test every new card with a full-capacity checker tool before your trip.</li>
+</ul>
+</div>
+
+<h2 id="speed-classes">Speed Classes Explained in Plain English</h2>
+<p>Memory card labels are an alphabet soup (C10, U3, V30, A2...), but for video only one matters: the <strong>V rating</strong>, or Video Speed Class. It guarantees a minimum sustained write speed — the number that determines whether your camera can keep writing a 4K stream without dropping frames or stopping mid-clip.</p>
+<table>
+<tr><th>Rating</th><th>Minimum Write</th><th>What It Handles</th><th>Typical Price (256GB)</th></tr>
+<tr><td>V30</td><td>30 MB/s (240 Mbps)</td><td>4K up to ~200 Mbps: GoPro, DJI Pocket 3, most mirrorless Long GOP</td><td>Around $20–35</td></tr>
+<tr><td>V60</td><td>60 MB/s (480 Mbps)</td><td>High-bitrate 4K, some All-I codecs, 4K/120 on some bodies</td><td>Around $60–90</td></tr>
+<tr><td>V90</td><td>90 MB/s (720 Mbps)</td><td>600+ Mbps All-I, 8K, burst RAW on flagship bodies</td><td>Around $150–250+</td></tr>
+</table>
+<p>Two things the marketing won't tell you. First, the giant "200MB/s" printed on the front is the <em>read</em> speed — it matters only when offloading to your computer, not for recording. Second, an "A2" app-performance rating means nothing for video. Ignore both; find the little "V" number in the specs.</p>
+<div class="tip-box">
+<strong>Tip:</strong> On cameras with CFexpress slots (many full-frame mirrorless), the SD slot is usually the bottleneck for high-bitrate modes. Check your manual: some cameras silently disable their best codecs when only an SD card is present.
+</div>
+
+<h2 id="bitrate-math">The Real Bitrate Math for Popular Travel Cameras</h2>
+<p>Here's the math that ends all forum arguments: your camera's bitrate (in Mbps) ÷ 8 = the MB/s it needs to write continuously. Keep 2x headroom and you're safe.</p>
+<table>
+<tr><th>Camera</th><th>Typical Max 4K Bitrate</th><th>Write Speed Needed</th><th>Minimum Card</th></tr>
+<tr><td><a class="content-link" href="../reviews/gopro-hero-13-review.html">GoPro Hero 13 Black</a></td><td>~120 Mbps</td><td>15 MB/s</td><td>V30</td></tr>
+<tr><td><a class="content-link" href="../reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></td><td>~130 Mbps</td><td>~17 MB/s</td><td>V30</td></tr>
+<tr><td>Action cams (DJI Action 5 Pro)</td><td>~130 Mbps</td><td>~17 MB/s</td><td>V30</td></tr>
+<tr><td>Mirrorless, Long GOP 4K</td><td>100–200 Mbps</td><td>12–25 MB/s</td><td>V30</td></tr>
+<tr><td>Mirrorless, 4K All-I</td><td>400–600 Mbps</td><td>50–75 MB/s</td><td>V60 or V90</td></tr>
+</table>
+<p>Notice something? Every mainstream travel camera — the ones in our <a class="content-link" href="../guides/best-holiday-video-cameras-2026.html">best holiday video cameras of 2026</a> guide — sits comfortably under V30's guarantee. V60/V90 is money spent on capability your camera can't use. The exception: if you shoot All-I on a full-frame mirrorless, check your manual's exact requirements and don't cheap out.</p>
+
+<h2 id="capacity">Capacity Planning: How Much Per Trip Day?</h2>
+<p>Using the same math, a 100 Mbps stream records about 750 MB per minute — call it 45 GB per hour of footage. Real-world daily totals from my own trips:</p>
+<ul>
+<li><strong>Light shooter</strong> (photos + short clips, ~20 min of video/day): 20–30 GB/day. A 128GB card covers a week.</li>
+<li><strong>Typical vlogger</strong> (~1 hour of 4K/day): 45–60 GB/day. A 256GB card covers 4–5 days.</li>
+<li><strong>Heavy shooter</strong> (4K/60, lots of slow motion, 2+ hours/day): 100–150 GB/day. Carry multiple 256GB cards.</li>
+</ul>
+<p>My standard travel loadout: two 256GB V30 cards in rotation plus nightly offload to a phone or SSD (the full system is in <a class="content-link" href="../how-to/backup-travel-photos-videos.html">backing up without a laptop</a>). Two mid-size cards beat one huge one: cards fail, get lost, and get stolen — splitting your footage splits the risk. And make sure the cards you already own aren't slowing down your edit: slow cards also bottleneck transfers when you <a class="content-link" href="../how-to/edit-travel-videos-phone-tablet.html">edit travel videos on your phone</a>.</p>
+
+<h2 id="fake-cards">Fake Memory Cards: The Warning Nobody Heeds</h2>
+<p>Counterfeit cards are epidemic on big marketplaces and in tourist-area electronics shops. The scam: a cheap 16–32GB card is reprogrammed to report 256GB or 512GB. It works fine until the real capacity fills — then it silently overwrites your oldest footage. You won't know until you try to watch it.</p>
+<div class="warning-box">
+<strong>Warning:</strong> Red flags of a fake card: a price far below other sellers, blurry or misaligned printing on the label, missing holographic packaging, and a marketplace seller with no brand authorization. If a 512GB card costs $25, it is not a 512GB card.
+</div>
+<p>Protect yourself three ways. First, buy only from the brand's official store or authorized retailers — boring advice that would have saved my Marrakech footage. Second, test every new card before your trip with a free full-capacity tool (h2testw on Windows, F3 on Mac/Linux): it writes and verifies the entire card and takes a couple of hours, run it overnight. Third, watch for cards that run hot or randomly stop recording mid-clip — classic counterfeit symptoms.</p>
+
+<h2 id="mistakes">Common Memory Card Mistakes</h2>
+<ul>
+<li><strong>Buying V90 for a camera that maxes at 120 Mbps.</strong> That's $150 for nothing. Read your camera's bitrate spec first.</li>
+<li><strong>Formatting cards in the computer instead of the camera.</strong> Always format in-camera to avoid file-system quirks that cause recording errors.</li>
+<li><strong>Filling cards to 100%.</strong> Keep 10% free; completely full cards are more prone to corruption and failed final writes.</li>
+<li><strong>Reusing a card for years.</strong> Flash wears out. Cards on heavy rotation for 2–3+ years get retired to backup duty.</li>
+<li><strong>Buying at your destination.</strong> Airport and tourist-shop cards are overpriced at best, fake at worst. Stock up before you fly — and test them, as covered above.</li>
+</ul>
+<p>I put every card through this exact gauntlet before it joins the kit I use for the <a class="content-link" href="../city-through-the-lens/">City Through the Lens</a> series, where a corrupted card would mean losing a city episode entirely. For camera-specific card picks, check the storage sections of my <a class="content-link" href="../reviews/insta360-x5-review.html">Insta360 X5 review</a> and <a class="content-link" href="../reviews/dji-osmo-action-5-review.html">DJI Osmo Action 5 Pro review</a>.</p>
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-section">
+<div class="faq-item">
+<h3 class="faq-question">Is V30 fast enough for 4K video?</h3>
+<div class="faq-answer"><p>Yes for nearly all consumer cameras. V30 guarantees 30 MB/s (240 Mbps) sustained write, while cameras like the GoPro Hero 13 and DJI Osmo Pocket 3 record at around 120-130 Mbps. You only need V60 or V90 for high-bitrate All-I codecs above roughly 200 Mbps on mirrorless cameras.</p></div>
+</div>
+<div class="faq-item">
+<h3 class="faq-question">How much memory card capacity do I need for a week of travel?</h3>
+<div class="faq-answer"><p>It depends on how much you film. Light shooters need about 20-30 GB per day, typical vloggers 45-60 GB per day at 4K, and heavy shooters 100-150 GB per day. Two 256GB cards with nightly offloading to a phone or SSD covers almost any trip.</p></div>
+</div>
+<div class="faq-item">
+<h3 class="faq-question">How can I tell if a memory card is fake?</h3>
+<div class="faq-answer"><p>Fake cards report a large capacity but only contain a small amount of real storage. Red flags include prices far below other sellers, blurry label printing, and recording that stops randomly. Test every new card with a free full-capacity checker like h2testw or F3 before your trip.</p></div>
+</div>
+<div class="faq-item">
+<h3 class="faq-question">Should I buy one big card or several smaller ones?</h3>
+<div class="faq-answer"><p>Several smaller ones. Two 256GB cards cost about the same as one 512GB card, but if a card fails, is lost, or is stolen, you only lose half your footage. Rotate cards daily and offload to a second device every night.</p></div>
+</div>
+</div>
+<h2 id="related">Related Articles</h2>
+<div class="related-articles">
+<a href="../how-to/backup-travel-photos-videos.html" class="related-card"><h4>Back Up Footage Without a Laptop</h4><p>Cards fill up fast at 4K — here's the phone-and-SSD system for offloading nightly.</p></a>
+<a href="../reviews/gopro-hero-13-review.html" class="related-card"><h4>GoPro Hero 13 Black Review</h4><p>Real-world recording bitrates and which cards kept up in heat and water.</p></a>
+<a href="../guides/best-holiday-video-cameras-2026.html" class="related-card"><h4>Best Holiday Video Cameras 2026</h4><p>The cameras these cards will live in, ranked after real trip testing.</p></a>
+</div>
+<p class="affiliate-note">This how-to guide contains no affiliate links — just field-tested advice from real trips. When we do link to our camera reviews, rankings there are based on real travel testing.</p>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How-To",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Memory Cards for 4K",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Choose a Memory Card for 4K Holiday Video (V30 vs V60 vs V90 Explained)",
+  "description": "V30 vs V60 vs V90 explained simply: real bitrate math for GoPro, Pocket 3 and mirrorless cameras, capacity planning per trip day, and spotting fake cards.",
+  "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html",
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "author": {
+    "@type": "Person",
+    "name": "Dawid Millennium",
+    "jobTitle": "Travel Videographer",
+    "description": "Travel vlogger since 2019; has tested 50+ cameras on real trips across Southeast Asia, Europe, and South America."
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Holiday Video Camera",
+    "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+  },
+  "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is V30 fast enough for 4K video?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes for nearly all consumer cameras. V30 guarantees 30 MB/s (240 Mbps) sustained write, while cameras like the GoPro Hero 13 and DJI Osmo Pocket 3 record at around 120-130 Mbps. You only need V60 or V90 for high-bitrate All-I codecs above roughly 200 Mbps on mirrorless cameras."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much memory card capacity do I need for a week of travel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on how much you film. Light shooters need about 20-30 GB per day, typical vloggers 45-60 GB per day at 4K, and heavy shooters 100-150 GB per day. Two 256GB cards with nightly offloading to a phone or SSD covers almost any trip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I tell if a memory card is fake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fake cards report a large capacity but only contain a small amount of real storage. Red flags include prices far below other sellers, blurry label printing, and recording that stops randomly. Test every new card with a free full-capacity checker like h2testw or F3 before your trip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I buy one big card or several smaller ones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several smaller ones. Two 256GB cards cost about the same as one 512GB card, but if a card fails, is lost, or is stolen, you only lose half your footage. Rotate cards daily and offload to a second device every night."
+      }
+    }
+  ]
+}
+</script>
+<footer class="site-footer">
+  <div class="footer-container">
+    <section class="footer-section"><h4>Series</h4><ul><li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li><li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li></ul></section>
+    <section class="footer-section"><h4>Guides</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Cameras Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li></ul></section>
+    <section class="footer-section"><h4>Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></section>
+    <section class="footer-section"><h4>About</h4><ul><li><a href="/VideoCameraHoliday/about/">About Us</a></li><li><a href="/VideoCameraHoliday/">Home</a></li><li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li></ul></section>
+  </div>
+  <div class="footer-bottom"><p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p></div>
+</footer>
+<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+</body>
+</html>
