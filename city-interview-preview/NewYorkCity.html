@@ -8,130 +8,131 @@
     <meta name="author" content="Dawid Millennium">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/New-York.html">
-    
-    <!-- Open Graph -->
     <meta property="og:title" content="New York City Filmmaker's Guide: Permits & Best Locations">
     <meta property="og:description" content="From Brooklyn Bridge sunrises to Times Square chaos—how to film NYC legally, safely, and cinematically without getting shut down.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/New-York.html">
     <meta property="og:site_name" content="Holiday Video Camera">
-    
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NYC Filmmaker's Guide: Permits & Best Locations">
-    <meta name="twitter:description" content="Essential guide to filming in New York: Permit laws, best spots, and safety tips for the Big Apple.">
-
     <style>
-        /* EXACT CSS FROM ABOUT.HTML REFERENCE */
-        :root { --primary: #e94560; --bg-dark: #0a0a0a; --bg-card: #111; --text-main: #e0e0e0; --text-muted: #888; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: var(--bg-dark); color: var(--text-main); line-height: 1.7; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        a { color: #6db3f2; text-decoration: underline; text-underline-offset: 3px; transition: color 0.3s; }
-        a:hover { color: var(--primary); }
-        
-        /* Top Navigation */
-        .top-nav { background: #111; border-bottom: 2px solid var(--primary); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
-        .logo { font-size: 1.3rem; font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-        .nav-links { display: flex; list-style: none; height: 100%; margin: 0; padding: 0; }
-        .nav-links > li { position: relative; height: 100%; display: flex; align-items: center; }
-        .nav-links > li > a { color: #ccc; text-decoration: none; padding: 18px 16px; display: flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; height: 100%; }
-        .nav-links > li > a:hover, .nav-links > li > a.active { color: var(--primary); background: rgba(233, 69, 96, 0.1); }
-        .dropdown-arrow { font-size: 0.7rem; transition: transform 0.3s; }
-        .nav-links > li:hover .dropdown-arrow { transform: rotate(180deg); }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        a { color: #6db3f2; text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: #9ecbff; }
+        a:visited { color: #b48ae0; }
 
-        /* Mega Menu */
-        .mega-menu { position: absolute; top: 100%; left: 0; min-width: 620px; background: #1a1a2e; border: 1px solid #333; border-top: 3px solid var(--primary); border-radius: 0 0 8px 8px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1001; box-shadow: 0 20px 40px rgba(0,0,0,0.5); padding: 20px; }
-        .nav-links > li:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        /* Top Navigation with Mega Menu */
+        .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+        .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+        .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .top-nav .nav-links { display: flex; list-style: none; margin: 0; padding: 0; height: 100%; }
+        .top-nav .nav-links > li { position: relative; height: 100%; display: flex; align-items: center; }
+        .top-nav .nav-links > li > a { color: #ccc; text-decoration: none; padding: 18px 16px; display: flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; height: 100%; cursor: pointer; }
+        .top-nav .nav-links > li > a:hover, .top-nav .nav-links > li > a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+        .dropdown-arrow { font-size: 0.7rem; transition: transform 0.3s; }
+        .top-nav .nav-links > li:hover .dropdown-arrow { transform: rotate(180deg); }
+
+        .mega-menu { position: absolute; top: 100%; left: 0; min-width: 620px; background: #1a1a2e; border: 1px solid #333; border-top: 3px solid #e94560; border-radius: 0 0 8px 8px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1001; box-shadow: 0 20px 40px rgba(0,0,0,0.5); padding: 20px; }
+        .top-nav .nav-links > li:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
         .mega-menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .mega-menu-column h4 { color: var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
-        .mega-menu-column ul { list-style: none; }
+        .mega-menu-column h4 { color: #e94560; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .mega-menu-column ul { list-style: none; margin: 0; padding: 0; }
         .mega-menu-column ul li { margin-bottom: 8px; }
         .mega-menu-column ul li a { color: #bbb; text-decoration: none; font-size: 0.85rem; display: block; padding: 3px 0; }
-        .mega-menu-column ul li a:hover { color: var(--primary); padding-left: 5px; }
+        .mega-menu-column ul li a:hover { color: #e94560; padding-left: 5px; }
         .mega-menu-footer { margin-top: 15px; padding-top: 15px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; }
-        .mega-menu-footer a { color: var(--primary); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
-        .mobile-menu-toggle { display: none; background: none; border: none; color: var(--primary); font-size: 1.5rem; cursor: pointer; }
+        .mega-menu-footer a { color: #e94560; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+        .mega-menu-footer a:hover { text-decoration: underline; }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
 
-        /* Header & Breadcrumb */
-        header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid var(--primary); }
-        header .logo { display: inline-flex; margin-bottom: 15px; }
+        header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+        header .logo { font-size: 1.5rem; font-weight: 700; color: #e94560; text-decoration: none; display: inline-block; margin-bottom: 15px; }
         h1 { font-size: 2.4rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
-        .subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 15px; }
-        .meta { color: var(--text-muted); font-size: 0.9rem; }
+        .subtitle { font-size: 1.15rem; color: #888; max-width: 680px; margin: 0 auto 15px; }
+        .meta { color: #888; font-size: 0.9rem; }
         .meta span { margin: 0 10px; }
-        .breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: var(--text-muted); }
-        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: 0 auto; }
+
+        .breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: #888; }
+        .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
         .breadcrumb li { display: flex; align-items: center; }
         .breadcrumb li:not(:last-child)::after { content: "›"; margin: 0 10px; color: #555; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
 
-        /* Article Content */
-        article { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
-        h2 { color: var(--primary); font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        article { padding: 40px 20px; }
+        h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
         h3 { color: #fff; font-size: 1.3rem; margin: 30px 0 12px; }
         p { margin-bottom: 20px; font-size: 1.05rem; }
-        ul { margin-left: 20px; margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-        
-        /* Boxes & Tables */
-        .quick-answer { background: rgba(233, 69, 96, 0.08); border-left: 4px solid var(--primary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
-        .takeaways { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 30px 0; }
-        .takeaways h3 { color: var(--primary); margin-top: 0; }
+        .author-box { display: flex; align-items: center; gap: 15px; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 25px 0; }
+        .author-avatar { width: 50px; height: 50px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .author-info h4 { color: #fff; margin: 0 0 5px; font-size: 1rem; }
+        .author-info p { color: #888; font-size: 0.85rem; margin: 0; }
+        .last-updated { color: #666; font-size: 0.8rem; margin-top: 5px; }
+        .toc { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 30px 0; }
+        .toc h3 { margin-top: 0; color: #e94560; }
+        .toc ul { list-style: none; margin-left: 0; }
+        .toc li { margin-bottom: 8px; }
+        .toc a { color: #ccc; text-decoration: none; }
+        .toc a:hover { color: #e94560; }
+        .takeaways { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; }
+        .takeaways h3 { color: #e94560; margin-top: 0; }
+        .takeaways ul { margin-left: 20px; margin-bottom: 0; }
         .tip-box { background: rgba(52, 152, 219, 0.1); border-left: 4px solid #3498db; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
         .tip-box strong { color: #3498db; }
         .warning-box { background: rgba(243, 156, 18, 0.1); border-left: 4px solid #f39c12; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
         .warning-box strong { color: #f39c12; }
-        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
-        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #333; }
-        th { color: var(--primary); background: #111; }
-        td { color: #ccc; }
-        
-        /* FAQ & Related */
+        ul { margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+        .faq-section { margin: 30px 0; }
         .faq-item { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 20px 0; }
         .faq-question { color: #fff; font-size: 1.15rem; margin: 0 0 12px; }
         .faq-answer p { color: #ccc; margin: 0; }
         .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
-        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; display: block; }
-        .related-card:hover { border-color: var(--primary); }
-        .related-card h4 { color: var(--primary); margin-top: 0; }
-        .related-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0; }
+        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .related-card:hover { border-color: #e94560; }
+        .related-card h4 { color: #e94560; margin-top: 0; }
+        .related-card p { font-size: 0.9rem; color: #888; margin-bottom: 0; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #333; }
+        th { color: #e94560; background: #111; }
+        td { color: #ccc; }
+        
         .affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
 
         /* Footer */
-        footer.site-footer { background: #111; border-top: 3px solid var(--primary); padding: 50px 20px 20px; margin-top: 40px; }
+        footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-        .footer-column h4 { color: var(--primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
-        .footer-column ul { list-style: none; }
+        .footer-column h4 { color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .footer-column ul { list-style: none; margin: 0; padding: 0; }
         .footer-column ul li { margin-bottom: 8px; }
         .footer-column ul li a { color: #999; text-decoration: none; font-size: 0.85rem; }
-        .footer-column ul li a:hover { color: var(--primary); }
-        .footer-brand { color: var(--primary); font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .footer-column ul li a:hover { color: #e94560; }
+        .footer-brand { color: #e94560; font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
         .footer-about { color: #777; font-size: 0.85rem; line-height: 1.6; }
         .footer-bottom { max-width: 1200px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #666; }
         .footer-bottom a { color: #888; text-decoration: none; }
-        .footer-bottom a:hover { color: var(--primary); }
+        .footer-bottom a:hover { color: #e94560; }
         .footer-social { display: flex; gap: 15px; }
+        .footer-social a { color: #888; text-decoration: none; font-size: 0.85rem; }
+        .footer-social a:hover { color: #e94560; }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-container { flex-wrap: wrap; height: auto; padding: 10px 15px; }
-            .nav-links { flex-wrap: wrap; width: 100%; display: none; }
-            .nav-links.active { display: flex; flex-direction: column; height: auto; }
-            .nav-links > li { width: 100%; height: auto; }
-            .nav-links > li > a { width: 100%; padding: 15px; }
+            .top-nav .nav-container { flex-wrap: wrap; height: auto; padding: 10px 15px; }
+            .top-nav .nav-links { flex-wrap: wrap; width: 100%; }
+            .top-nav .nav-links > li > a { padding: 10px 12px; font-size: 0.8rem; }
             .mega-menu { min-width: 100%; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; border-top: 1px solid #333; border-radius: 0; display: none; padding: 10px; }
-            .nav-links > li:hover .mega-menu { display: block; }
+            .top-nav .nav-links > li:hover .mega-menu, .top-nav .nav-links > li:focus-within .mega-menu { display: block; }
             .mega-menu-grid { grid-template-columns: 1fr; gap: 15px; }
             .footer-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             h1 { font-size: 1.8rem; }
             .mobile-menu-toggle { display: block; }
         }
-        @media (max-width: 480px) { .footer-container { grid-template-columns: 1fr; } }
+        @media (max-width: 480px) {
+            .footer-container { grid-template-columns: 1fr; }
+        }
     </style>
-
-    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -139,268 +140,227 @@
       "headline": "New York City Filmmaker's Guide: Permits & Best Locations",
       "author": { "@type": "Person", "name": "Dawid Millennium" },
       "datePublished": "2026-09-04",
-      "publisher": { "@type": "Organization", "name": "Holiday Video Camera" },
-      "description": "Complete NYC filming guide: Brooklyn Bridge permits, Subway rules, Central Park restrictions, and drone bans."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "City Guides",
-        "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "New York",
-        "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/New-York.html"
-      }]
+      "publisher": { "@type": "Organization", "name": "Holiday Video Camera" }
     }
     </script>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav class="top-nav" role="navigation" aria-label="Main Navigation">
-    <div class="nav-container">
-        <a href="/VideoCameraHoliday/" class="logo" aria-label="Holiday Video Camera Home">📹 Holiday Video Camera</a>
-        <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <ul class="nav-links" role="menubar">
-            <li role="none"><a href="/VideoCameraHoliday/" role="menuitem">Home</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/city-through-the-lens/" role="menuitem">Series</a></li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/reviews/" role="menuitem" aria-haspopup="true" aria-expanded="false">Reviews <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu" aria-label="Reviews Menu">
-                    <div class="mega-menu-grid">
-                        <div class="mega-menu-column"><h4>Camera Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Mirrorless Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50</a></li><li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony ZV-E10 II</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Accessory Reviews</h4><ul><li><a href="/VideoCameraHoliday/accessories/best-camera-strap-hiking.html">Camera Straps</a></li><li><a href="/VideoCameraHoliday/accessories/best-camera-bags-travel.html">Camera Bags</a></li></ul></div>
+    <nav class="top-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="/VideoCameraHoliday/" class="logo" aria-label="Holiday Video Camera Home">📹 Holiday Video Camera</a>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="/VideoCameraHoliday/" role="menuitem">Home</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/city-through-the-lens/" role="menuitem">Series</a></li>
+                <li role="none">
+                    <a href="/VideoCameraHoliday/reviews/" role="menuitem" aria-haspopup="true" aria-expanded="false">Reviews <span class="dropdown-arrow">▼</span></a>
+                    <div class="mega-menu" role="menu" aria-label="Reviews Menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column"><h4>Camera Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Accessory Reviews</h4><ul><li><a href="/VideoCameraHoliday/accessories/best-microphones-travel-vlogging-2026.html">Microphones</a></li><li><a href="/VideoCameraHoliday/accessories/best-lightweight-tripods-travel-2026.html">Tripods</a></li></ul></div>
+                        </div>
+                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/reviews/">View All Reviews →</a></div>
                     </div>
-                    <div class="mega-menu-footer"><a href="/VideoCameraHoliday/reviews/">View All Reviews →</a></div>
-                </div>
-            </li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/guides/" class="active" role="menuitem" aria-haspopup="true" aria-expanded="false">Buying Guides <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu" aria-label="Guides Menu">
-                    <div class="mega-menu-grid">
-                        <div class="mega-menu-column"><h4>Top Picks</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Vlogging Cameras</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>By Activity</h4><ul><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Cameras</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Career & Tips</h4><ul><li><a href="/VideoCameraHoliday/guides/becoming-travel-filmmaker-career-guide-2026.html">Becoming a Travel Filmmaker</a></li><li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Videos</a></li></ul></div>
+                </li>
+                <li role="none">
+                    <a href="/VideoCameraHoliday/guides/" role="menuitem" aria-haspopup="true" aria-expanded="false">Buying Guides <span class="dropdown-arrow">▼</span></a>
+                    <div class="mega-menu" role="menu" aria-label="Guides Menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column"><h4>Top Picks</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Vlogging Cameras</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>By Activity</h4><ul><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Cameras</a></li></ul></div>
+                        </div>
+                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/guides/">View All Guides →</a></div>
                     </div>
-                    <div class="mega-menu-footer"><a href="/VideoCameraHoliday/guides/">View All Guides →</a></div>
-                </div>
-            </li>
-            <li role="none"><a href="/VideoCameraHoliday/how-to/" role="menuitem">How-To</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/destinations/" role="menuitem">Destinations</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/editing/" role="menuitem">Editing</a></li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/comparisons/" role="menuitem" aria-haspopup="true" aria-expanded="false">Comparisons <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu" aria-label="Comparisons Menu">
-                    <div class="mega-menu-grid">
-                        <div class="mega-menu-column"><h4>Camera vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li><li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs Sony ZV-E10 II</a></li><li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Accessory Face-offs</h4><ul><li><a href="/VideoCameraHoliday/comparisons/peak-design-vs-blackrapid.html">Peak Design vs BlackRapid</a></li><li><a href="/VideoCameraHoliday/comparisons/dji-vs-gopro.html">DJI vs GoPro</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Smartphone vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated Camera</a></li></ul></div>
-                    </div>
-                    <div class="mega-menu-footer"><a href="/VideoCameraHoliday/comparisons/">View All Comparisons →</a></div>
-                </div>
-            </li>
-            <li role="none"><a href="/VideoCameraHoliday/about/" role="menuitem">About</a></li>
-        </ul>
-    </div>
-</nav>
-
-<!-- Breadcrumb -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            <li><a href="/VideoCameraHoliday/">Home</a></li>
-            <li><a href="/VideoCameraHoliday/city-interview-preview/">City Guides</a></li>
-            <li>New York</li>
-        </ol>
-    </div>
-</nav>
-
-<!-- Header -->
-<header>
-    <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
-    <h1>New York City Filmmaker's Guide: Best Spots & Permit Laws</h1>
-    <p class="subtitle">From Brooklyn Bridge sunrises to Times Square chaos—how to film NYC legally, safely, and cinematically without getting shut down.</p>
-    <p class="meta"><span>📅 September 4, 2026</span><span>⏱️ 8 min read</span></p>
-</header>
-
-<!-- Article -->
-<article class="container">
-    <div class="quick-answer">
-        <h3>⚡ Quick Answer</h3>
-        <p><strong>Permits:</strong> Required for commercial shoots in parks and on bridges (NYC Mayor's Office). <strong>Subway:</strong> Personal filming OK with small gear; commercial requires MTA permit. <strong>Drone:</strong> Completely banned in all 5 boroughs without FAA/City waiver (nearly impossible for tourists). <strong>Gear:</strong> DJI Pocket 3 for crowds, Sony A7S III for low light.</p>
-    </div>
-
-    <div class="takeaways">
-        <h3>Key Takeaways</h3>
-        <ul>
-            <li><strong>Drone Ban:</strong> NYC has some of the strictest drone laws in the US. Do not fly in the city unless you have specific FAA waivers and NYPD approval.</li>
-            <li><strong>Permit-Free Zones:</strong> Sidewalks (if not blocking traffic) and most indoor locations (with owner permission) don't need permits for small crews.</li>
-            <li><strong>Subway Rules:</strong> No tripods, no lights, no extra cables. Handheld only for personal use. Commercial shoots require MTA permit ($2,000+).</li>
-            <li><strong>Safety:</strong> Gear theft is real. Never leave bags unattended. Use discreet camera bags.</li>
-        </ul>
-    </div>
-
-    <h2 id="locations">Top 5 Filming Locations in NYC</h2>
-    <!-- INSERT THIS BLOCK AFTER LOCATIONS / BEFORE SETTINGS -->
-<div class="tip-box" style="border-left-color: #e94560; background: rgba(233, 69, 96, 0.05);">
-    <h3 style="color: #e94560; margin-top: 0;">🎒 Gear Used in This City</h3>
-    <p>Filming in New York requires lightweight, secure gear. Here is what I carried for this guide:</p>
-    <ul style="margin-left: 20px; margin-bottom: 15px;">
-        <li><strong>Tripod:</strong> A compact carbon fiber model (under 500g) to fit in my bag while navigating the Subway. <a href="/VideoCameraHoliday/accessories/best-lightweight-tripods-travel-2026.html" class="content-link">See our Top 5 Lightweight Tripods →</a></li>
-        <li><strong>Bag:</strong> An anti-theft carry-on backpack to protect gear in crowded areas like Times Square. <a href="/VideoCameraHoliday/accessories/best-camera-bags-carry-on-travel-2026.html" class="content-link">See our Best Camera Bags Guide →</a></li>
-    </ul>
-</div>
-    <h3>1. Brooklyn Bridge (Sunrise)</h3>
-    <p>The iconic shot. Start on the Brooklyn side (DUMBO) and walk towards Manhattan at sunrise (06:00) to avoid crowds. The pedestrian path gets packed by 09:00.</p>
-    <p><strong>Permit Note:</strong> Tripods require a permit from the NYC Mayor's Office. Handheld vlogging is generally tolerated if you keep moving.</p>
-    <p><strong>Settings:</strong> f/8 for sharpness, ND filter for motion blur on the walk.</p>
-
-    <h3>2. Central Park (Bethesda Terrace)</h3>
-    <p>Classic movie location. Bethesda Fountain and the arcade offer great acoustics and light. Great for interviews or B-roll.</p>
-    <p><strong>Permit Note:</strong> Commercial filming requires a permit from NYC Parks. Personal handheld use is fine.</p>
-
-    <h3>3. Times Square (Night)</h3>
-    <p>Neon overload. Best shot after midnight when crowds thin slightly. The sheer brightness of the billboards means you can shoot at low ISO even at night.</p>
-    <p><strong>Safety:</strong> Watch out for costumed characters demanding tips. Don't engage if you don't want to pay.</p>
-
-    <h3>4. DUMBO (Washington Street)</h3>
-    <p>The famous "Empire State Building framed by brick buildings" shot. Very popular, so expect other photographers. Early morning is key.</p>
-
-    <h3>5. The High Line</h3>
-    <p>Elevated park with unique perspectives of the city and Hudson Yards. Good for walking shots. No tripods allowed.</p>
-
-    <h2 id="settings">Recommended Camera Settings</h2>
-    <table>
-        <tr><th>Scenario</th><th>ISO</th><th>Aperture</th><th>Shutter</th><th>Notes</th></tr>
-        <tr><td>Brooklyn Bridge Sunrise</td><td>100</td><td>f/8</td><td>1/100</td><td>Use ND for motion blur</td></tr>
-        <tr><td>Times Square Night</td><td>800-1600</td><td>f/2.8</td><td>1/60</td><td>Bright billboards help exposure</td></tr>
-        <tr><td>Subway (Handheld)</td><td>3200+</td><td>f/1.8</td><td>1/60</td><td>No lights allowed</td></tr>
-        <tr><td>Central Park Interview</td><td>400</td><td>f/2.8</td><td>1/125</td><td>External mic essential</td></tr>
-    </table>
-
-    <h2 id="laws">Permits & Filming Laws</h2>
-    <div class="warning-box">
-        <strong>⚠️ Critical:</strong> <strong>Commercial Permits:</strong> Any filming for profit (including monetized YouTube channels, though enforcement varies) technically requires a permit from the <a href="#" class="content-link">NYC Mayor's Office of Media and Entertainment</a>. Fines can be up to $1,000. Small handheld crews often fly under the radar, but tripods/lighting will get you stopped.
-    </div>
-    <p><strong>Subway (MTA) Rules:</strong> Personal photography/videography is allowed without a permit as long as you don't block traffic, use tripods, or use lights. Commercial shoots require an MTA permit which costs $2,000+ for a half day.</p>
-    <p><strong>Drone Law:</strong> NYC Administrative Code §10-126 prohibits launching or landing drones in NYC without permission from the NYPD. Combined with FAA restrictions over populated areas, effectively a total ban for travelers.</p>
-
-    <h2 id="safety">Safety & Etiquette</h2>
-    <p><strong>Gear Security:</strong> NYC is generally safe, but opportunistic theft happens. Never set your bag down to frame a shot. Use a wrist strap. In crowded subways, wear your backpack on your front.</p>
-    <p><strong>Privacy:</strong> New Yorkers are used to cameras, but don't film people aggressively close-up without permission. Street photography is legal in public spaces, but be respectful.</p>
-    <p><strong>Tripod Aggression:</strong> If you set up a tripod without a permit in a busy spot, police or security <em>will</em> ask you to move. Don't argue; just pack up and move to a sidewalk spot.</p>
-
-    <h2 id="faq">FAQ</h2>
-    <div class="faq-item">
-        <h3 class="faq-question">Can I fly my drone in Central Park?</h3>
-        <div class="faq-answer"><p>No. Drones are banned in all NYC parks and effectively banned city-wide due to NYPD regulations and FAA airspace restrictions. Confiscation is a real risk.</p></div>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">Do I need a permit for a travel vlog?</h3>
-        <div class="faq-answer"><p>Technically, if your channel is monetized, it's commercial. However, the city primarily targets large productions with tripods and lights. Small handheld vloggers are rarely stopped, but proceed at your own risk.</p></div>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">Is filming in the Subway allowed?</h3>
-        <div class="faq-answer"><p>Yes, for personal use. You cannot use tripods, lights, or reflectors. You cannot block doors or aisles. Be prepared to move if an MTA worker asks.</p></div>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">What about filming inside shops?</h3>
-        <div class="faq-answer"><p>Always ask permission. Private property owners can ban filming. Most small bodegas don't care if you're quick, but larger stores may say no.</p></div>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">Best time to film to avoid crowds?</h3>
-        <div class="faq-answer"><p>05:30–07:30 AM is the golden window. Times Square and Brooklyn Bridge are surprisingly empty then. Midday (12:00–14:00) is the worst for crowds.</p></div>
-    </div>
-
-    <h2 id="related">Related Articles</h2>
-    <div class="related-articles">
-        <a class="related-card" href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">
-            <h4>Best Compact Cameras for Cities</h4>
-            <p>Discreet gear for urban shooting.</p>
-        </a>
-        <a class="related-card" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">
-            <h4>DJI Pocket 3 Review</h4>
-            <p>The ultimate travel vlogging camera.</p>
-        </a>
-        <a class="related-card" href="/VideoCameraHoliday/city-interview-preview/London.html">
-            <h4>London Filmmaker's Guide</h4>
-            <p>Another busy metropolis comparison.</p>
-        </a>
-    </div>
-
-    <p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
-</article>
-
-<!-- Footer -->
-<footer class="site-footer" role="contentinfo" aria-label="Site Footer">
-    <div class="footer-container">
-        <div class="footer-column">
-            <div class="footer-brand">📹 Holiday Video Camera</div>
-            <p class="footer-about">Real travel camera testing. No lab charts — just what survives hand luggage, beaches, mountains, and city breaks. Written by videographers who actually travel.</p>
-        </div>
-        <div class="footer-column">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
-                <li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
-                <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
-                <li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
-                <li><a href="/VideoCameraHoliday/how-to/">How-To</a></li>
-                <li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
+                </li>
+                <li role="none"><a href="/VideoCameraHoliday/how-to/" role="menuitem">How-To</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/destinations/" role="menuitem">Destinations</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/editing/" role="menuitem">Editing</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/comparisons/" role="menuitem">Comparisons</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/about/" role="menuitem">About</a></li>
             </ul>
         </div>
-        <div class="footer-column">
-            <h4>Popular Articles</h4>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="/VideoCameraHoliday/">Home</a></li>
+                <li><a href="/VideoCameraHoliday/city-interview-preview/">City Guides</a></li>
+                <li>New York City</li>
+            </ol>
+        </div>
+    </nav>
+
+    <header>
+        <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
+        <h1>New York City Filmmaker's Guide: Best Spots & Permit Laws</h1>
+        <p class="subtitle">From Brooklyn Bridge sunrises to Times Square chaos—how to film NYC legally, safely, and cinematically without getting shut down.</p>
+        <p class="meta"><span>📅 September 4, 2026</span><span>⏱️ 8 min read</span></p>
+    </header>
+
+    <article class="container">
+        <div class="author-box">
+            <div class="author-avatar">🗽</div>
+            <div class="author-info">
+                <h4>Dawid Millennium — Urban Videographer</h4>
+                <p>Filmed across all 5 boroughs. Specialized in navigating crowds and permit laws.</p>
+                <p class="last-updated">🕐 Last updated: September 4, 2026</p>
+            </div>
+        </div>
+
+        <div class="toc">
+            <h3>In This Guide</h3>
             <ul>
-                <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li>
-                <li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs ZV-E10 II</a></li>
-                <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
-                <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
+                <li><a href="#quick-answer">Quick Answer</a></li>
+                <li><a href="#locations">Top 5 Filming Locations</a></li>
+                <li><a href="#gear">Gear Used in This City</a></li>
+                <li><a href="#settings">Recommended Camera Settings</a></li>
+                <li><a href="#laws">Permits & Drone Laws</a></li>
+                <li><a href="#safety">Safety & Etiquette</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#related">Related Articles</a></li>
             </ul>
         </div>
-        <div class="footer-column">
-            <h4>Connect</h4>
+
+        <div class="quick-answer" id="quick-answer">
+            <h3>⚡ Quick Answer</h3>
+            <p><strong>Best spots:</strong> Brooklyn Bridge (sunrise), Central Park (Bethesda Terrace), DUMBO (Washington St), The High Line (sunset). <strong>Drone law:</strong> Completely banned in all 5 boroughs without FAA/City waiver (nearly impossible). <strong>Gear:</strong> Compact mirrorless or DJI Pocket 3. Avoid large tripods on sidewalks.</p>
+        </div>
+
+        <div class="takeaways">
+            <h3>Key Takeaways</h3>
             <ul>
-                <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
-                <li><a href="/VideoCameraHoliday/contact.html">Contact</a></li>
-                <li><a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a></li>
-                <li><a href="/VideoCameraHoliday/terms.html">Terms of Use</a></li>
-                <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
+                <li><strong>Permits:</strong> Required for commercial shoots in parks (Central Park) and on bridges (Brooklyn Bridge). Personal handheld vlogging is usually tolerated.</li>
+                <li><strong>Subway Rules:</strong> No tripods, no lights, no blocking doors. Personal filming OK with small gear. Commercial requires MTA permit.</li>
+                <li><strong>Drone Ban:</strong> NYC has the strictest drone laws in the US. Do not fly unless you have specific written authorization.</li>
+                <li><strong>Safety:</strong> Keep gear secured. Pickpockets target tourists with expensive cameras in crowded areas like Times Square.</li>
             </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <div>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a>. All rights reserved.</div>
-        <div class="footer-social">
-            <a href="#" aria-label="Follow us on YouTube">YouTube</a>
-            <a href="#" aria-label="Follow us on Instagram">Instagram</a>
-            <a href="#" aria-label="Follow us on Twitter">Twitter</a>
-            <a href="#" aria-label="Subscribe to RSS">RSS</a>
+
+        <h2 id="locations">Top 5 Filming Locations in NYC</h2>
+        <h3>1. Brooklyn Bridge</h3>
+        <p>Iconic skyline views. Film from the pedestrian walkway. Sunrise (6 AM) is the only time you'll avoid crowds. Manhattan Bridge view from Washington Street in DUMBO is also classic.</p>
+        <p><strong>Permit:</strong> Required for commercial shoots with tripods. Handheld personal use is generally fine.</p>
+
+        <h3>2. Central Park (Bethesda Terrace)</h3>
+        <p>The heart of the park. Great for timelapses and walking shots. The Bow Bridge and Great Lawn are also iconic.</p>
+        <p><strong>Rule:</strong> Commercial filming requires a permit from NYC Parks. No drones allowed.</p>
+
+        <h3>3. The High Line</h3>
+        <p>Elevated park with unique city perspectives. Best filmed early morning or late evening. Sunset over the Hudson River is stunning.</p>
+
+        <h3>4. Times Square</h3>
+        <p>Neon chaos. Best at night for the full effect. Use a fast lens (f/1.8) and high ISO. Be prepared for aggressive street performers.</p>
+
+        <h3>5. DUMBO (Brooklyn)</h3>
+        <p>Cobblestone streets with Manhattan Bridge framing. Washington Street is the famous shot. Very crowded on weekends; go weekday mornings.</p>
+
+        <!-- === NEW INTERNAL LINKING SECTION START === -->
+        <h2 id="gear">🎒 Gear Used in This City</h2>
+        <p>Filming in New York requires lightweight, secure gear. You'll be walking 15,000+ steps a day and navigating crowded subways. Here is exactly what I carried for this guide:</p>
+        
+        <div class="tip-box" style="border-left-color: #e94560; background: rgba(233, 69, 96, 0.05);">
+            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <li><strong>Tripod:</strong> A compact carbon fiber model (under 500g) to fit in my bag while navigating the Subway. Large tripods attract unwanted attention and are banned in many spots. <br>👉 <a href="/VideoCameraHoliday/accessories/best-lightweight-tripods-travel-2026.html" style="color:#e94560; font-weight:600; text-decoration:underline;">See our Top 5 Lightweight Tripods for Travel →</a></li>
+                <li style="margin-top:15px;"><strong>Bag:</strong> An anti-theft carry-on backpack to protect gear in crowded areas like Times Square and the 4/5/6 train during rush hour. <br>👉 <a href="/VideoCameraHoliday/accessories/best-camera-bags-carry-on-travel-2026.html" style="color:#e94560; font-weight:600; text-decoration:underline;">See our Best Camera Bags for Carry-On Guide →</a></li>
+            </ul>
         </div>
-    </div>
-</footer>
+        <!-- === NEW INTERNAL LINKING SECTION END === -->
 
-<script>
-    // Mobile Menu Toggle
-    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-        this.setAttribute('aria-expanded', navLinks.classList.contains('active'));
-    });
-</script>
+        <h2 id="settings">Recommended Camera Settings</h2>
+        <table>
+            <tr><th>Scenario</th><th>ISO</th><th>Aperture</th><th>Shutter</th><th>Notes</th></tr>
+            <tr><td>Daylight (Street)</td><td>100</td><td>f/5.6</td><td>1/125</td><td>Deep depth of field</td></tr>
+            <tr><td>Night (Times Sq)</td><td>1600-3200</td><td>f/1.8</td><td>1/60</td><td>Fast lens essential</td></tr>
+            <tr><td>Subway Interior</td><td>800</td><td>f/2.8</td><td>1/60</td><td>Stabilization ON</td></tr>
+            <tr><td>Skyline Timelapse</td><td>100</td><td>f/8</td><td>1/100</td><td>Tripod required</td></tr>
+        </table>
 
+        <h2 id="laws">Permits & Drone Laws</h2>
+        <div class="warning-box">
+            <strong>⚠️ Critical:</strong> <strong>Drone flight is banned</strong> in all 5 boroughs without explicit FAA and City permission. Fines up to $2,000. Commercial filming in Parks (Central, Bryant, etc.) requires a permit from NYC Parks Dept.
+        </div>
+        <p><strong>MTA Subway Rules:</strong> Personal filming with handheld cameras is allowed. No tripods, no lights, no blocking doors or platforms. Commercial shoots require an MTA permit ($150+).</p>
+
+        <h2 id="safety">Safety & Etiquette</h2>
+        <p><strong>Pickpockets:</strong> High risk in Times Square, on the 4/5/6 trains, and at major tourist attractions. Use a bag with lockable zippers. Never leave gear unattended.</p>
+        <p><strong>Street Performers:</strong> In Times Square and Union Square, many costumed characters expect payment ($5-10) if you film them. Some are aggressive; just keep walking.</p>
+        <p><strong>Privacy:</strong> New Yorkers are used to cameras, but don't film people in compromising situations. Public space filming is legal, but use common sense.</p>
+
+        <h2 id="faq">FAQ</h2>
+        <div class="faq-item">
+            <h3 class="faq-question">Can I fly my drone in Central Park?</h3>
+            <div class="faq-answer"><p>No. Drones are banned in all NYC parks and most of the city airspace. The only legal way is with specific FAA waivers and NYPD approval, which are rarely granted to tourists.</p></div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Do I need a permit to vlog in Times Square?</h3>
+            <div class="faq-answer"><p>For handheld, personal vlogging, no permit is needed. If you set up a tripod, lights, or reflectors, you will be shut down by police without a commercial permit.</p></div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Is it safe to film at night?</h3>
+            <div class="faq-answer"><p>Most tourist areas (Midtown, Brooklyn, DUMBO) are safe and well-lit. Avoid isolated parts of parks after dark. Stay aware of your surroundings.</p></div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Can I film inside the Subway?</h3>
+            <div class="faq-answer"><p>Yes, for personal use. Keep the camera small, don't block doors, and no tripods. Flash photography is discouraged. Commercial shoots need an MTA permit.</p></div>
+        </div>
+
+        <h2 id="related">Related Articles</h2>
+        <div class="related-articles">
+            <a class="related-card" href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html"><h4>Best Vlogging Cameras</h4><p>Perfect for busy city streets.</p></a>
+            <a class="related-card" href="/VideoCameraHoliday/accessories/best-camera-bags-carry-on-travel-2026.html"><h4>Best Anti-Theft Camera Bags</h4><p>Keep your gear safe in crowds.</p></a>
+            <a class="related-card" href="/VideoCameraHoliday/city-interview-preview/London.html"><h4>London Filmmaker's Guide</h4><p>Another dense metropolis comparison.</p></a>
+        </div>
+        
+        <p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
+    </article>
+
+    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-brand">📹 Holiday Video Camera</div>
+                <p class="footer-about">Real travel camera testing. No lab charts — just what survives hand luggage, beaches, mountains, and city breaks. Written by videographers who actually travel.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
+                    <li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/">How-To</a></li>
+                    <li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Popular Articles</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li>
+                    <li><a href="/VideoCameraHoliday/accessories/best-lightweight-tripods-travel-2026.html">Best Lightweight Tripods</a></li>
+                    <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
+                    <li><a href="/VideoCameraHoliday/accessories/best-camera-bags-carry-on-travel-2026.html">Best Camera Bags</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
+                    <li><a href="/VideoCameraHoliday/contact.html">Contact</a></li>
+                    <li><a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/VideoCameraHoliday/terms.html">Terms of Use</a></li>
+                    <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a>. All rights reserved.</div>
+            <div class="footer-social">
+                <a href="#" aria-label="Follow us on YouTube">YouTube</a>
+                <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+                <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                <a href="#" aria-label="Subscribe to RSS">RSS</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
