@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Filmmaker Guides: Locations, Laws & Settings | Holiday Video Camera</title>
+    <meta name="description" content="Complete filmmaker's guides for 27+ cities worldwide. Find drone laws, permit requirements, best filming locations, camera settings, and safety tips for every destination.">
+    <meta name="author" content="Dawid Millennium">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/">
+    <meta property="og:title" content="City Filmmaker Guides: Locations, Laws & Settings">
+    <meta property="og:description" content="Master filming in 27+ cities. Drone laws, permits, best spots, and camera settings for travel videographers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/">
+    <meta property="og:site_name" content="Holiday Video Camera">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        a { color: #6db3f2; text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: #9ecbff; }
+        a:visited { color: #b48ae0; }
+
+        /* Top Navigation with Mega Menu (Identical to Site) */
+        .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+        .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+        .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .top-nav .nav-links { display: flex; list-style: none; margin: 0; padding: 0; height: 100%; }
+        .top-nav .nav-links > li { position: relative; height: 100%; display: flex; align-items: center; }
+        .top-nav .nav-links > li > a { color: #ccc; text-decoration: none; padding: 18px 16px; display: flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; height: 100%; cursor: pointer; }
+        .top-nav .nav-links > li > a:hover, .top-nav .nav-links > li > a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+        .dropdown-arrow { font-size: 0.7rem; transition: transform 0.3s; }
+        .top-nav .nav-links > li:hover .dropdown-arrow { transform: rotate(180deg); }
+
+        .mega-menu { position: absolute; top: 100%; left: 0; min-width: 620px; background: #1a1a2e; border: 1px solid #333; border-top: 3px solid #e94560; border-radius: 0 0 8px 8px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1001; box-shadow: 0 20px 40px rgba(0,0,0,0.5); padding: 20px; }
+        .top-nav .nav-links > li:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .mega-menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .mega-menu-column h4 { color: #e94560; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .mega-menu-column ul { list-style: none; margin: 0; padding: 0; }
+        .mega-menu-column ul li { margin-bottom: 8px; }
+        .mega-menu-column ul li a { color: #bbb; text-decoration: none; font-size: 0.85rem; display: block; padding: 3px 0; }
+        .mega-menu-column ul li a:hover { color: #e94560; padding-left: 5px; }
+        .mega-menu-footer { margin-top: 15px; padding-top: 15px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; }
+        .mega-menu-footer a { color: #e94560; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+        .mega-menu-footer a:hover { text-decoration: underline; }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
+
+        /* Header */
+        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+        header h1 { font-size: 2.8rem; color: #fff; margin-bottom: 15px; line-height: 1.2; }
+        .subtitle { font-size: 1.2rem; color: #aaa; max-width: 700px; margin: 0 auto 25px; }
+        .search-box { max-width: 500px; margin: 0 auto; position: relative; }
+        .search-box input { width: 100%; padding: 15px 20px; border-radius: 30px; border: 2px solid #333; background: #111; color: #fff; font-size: 1rem; outline: none; transition: border-color 0.3s; }
+        .search-box input:focus { border-color: #e94560; }
+
+        /* Breadcrumb */
+        .breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: #888; }
+        .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
+        .breadcrumb li { display: flex; align-items: center; }
+        .breadcrumb li:not(:last-child)::after { content: "›"; margin: 0 10px; color: #555; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        /* Grid Layout */
+        .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 40px 20px; }
+        .city-card { background: #111; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+        .city-card:hover { transform: translateY(-5px); border-color: #e94560; }
+        .city-card-header { background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%); padding: 20px; border-bottom: 1px solid #333; }
+        .city-card h3 { color: #e94560; margin: 0 0 5px; font-size: 1.4rem; }
+        .city-card .region { color: #888; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        .city-card-body { padding: 20px; flex-grow: 1; }
+        .city-card-body p { color: #ccc; font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6; }
+        .city-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: #222; color: #aaa; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; border: 1px solid #333; }
+        .tag.drone { color: #f39c12; border-color: #f39c12; }
+        .tag.permit { color: #e74c3c; border-color: #e74c3c; }
+        .tag.night { color: #3498db; border-color: #3498db; }
+
+        /* Footer */
+        footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .footer-column h4 { color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .footer-column ul { list-style: none; margin: 0; padding: 0; }
+        .footer-column ul li { margin-bottom: 8px; }
+        .footer-column ul li a { color: #999; text-decoration: none; font-size: 0.85rem; }
+        .footer-column ul li a:hover { color: #e94560; }
+        .footer-brand { color: #e94560; font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .footer-about { color: #777; font-size: 0.85rem; line-height: 1.6; }
+        .footer-bottom { max-width: 1200px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #666; }
+        .footer-bottom a { color: #888; text-decoration: none; }
+        .footer-bottom a:hover { color: #e94560; }
+        .footer-social { display: flex; gap: 15px; }
+        .footer-social a { color: #888; text-decoration: none; font-size: 0.85rem; }
+        .footer-social a:hover { color: #e94560; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .top-nav .nav-container { flex-wrap: wrap; height: auto; padding: 10px 15px; }
+            .top-nav .nav-links { flex-wrap: wrap; width: 100%; }
+            .top-nav .nav-links > li > a { padding: 10px 12px; font-size: 0.8rem; }
+            .mega-menu { min-width: 100%; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; border-top: 1px solid #333; border-radius: 0; display: none; padding: 10px; }
+            .top-nav .nav-links > li:hover .mega-menu, .top-nav .nav-links > li:focus-within .mega-menu { display: block; }
+            .mega-menu-grid { grid-template-columns: 1fr; gap: 15px; }
+            .footer-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            header h1 { font-size: 2rem; }
+            .mobile-menu-toggle { display: block; }
+        }
+        @media (max-width: 480px) {
+            .footer-container { grid-template-columns: 1fr; }
+            .city-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "City Filmmaker Guides",
+      "description": "Complete filmmaker's guides for 27+ cities worldwide.",
+      "publisher": { "@type": "Organization", "name": "Holiday Video Camera" }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="/VideoCameraHoliday/" class="logo" aria-label="Holiday Video Camera Home">📹 Holiday Video Camera</a>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="/VideoCameraHoliday/" role="menuitem">Home</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/city-through-the-lens/" role="menuitem">Series</a></li>
+                <li role="none">
+                    <a href="/VideoCameraHoliday/reviews/" role="menuitem" aria-haspopup="true" aria-expanded="false">Reviews <span class="dropdown-arrow">▼</span></a>
+                    <div class="mega-menu" role="menu" aria-label="Reviews Menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column"><h4>Camera Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Mirrorless Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50</a></li><li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony ZV-E10 II</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Accessory Reviews</h4><ul><li><a href="/VideoCameraHoliday/accessories/best-camera-strap-hiking.html">Camera Straps</a></li><li><a href="/VideoCameraHoliday/accessories/best-camera-bags-travel.html">Camera Bags</a></li></ul></div>
+                        </div>
+                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/reviews/">View All Reviews →</a></div>
+                    </div>
+                </li>
+                <li role="none">
+                    <a href="/VideoCameraHoliday/guides/" class="active" role="menuitem" aria-haspopup="true" aria-expanded="false">Buying Guides <span class="dropdown-arrow">▼</span></a>
+                    <div class="mega-menu" role="menu" aria-label="Guides Menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column"><h4>Top Picks</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Vlogging Cameras</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>By Activity</h4><ul><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Cameras</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Career & Tips</h4><ul><li><a href="/VideoCameraHoliday/guides/becoming-travel-filmmaker-career-guide-2026.html">Becoming a Travel Filmmaker</a></li><li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Videos</a></li></ul></div>
+                        </div>
+                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/guides/">View All Guides →</a></div>
+                    </div>
+                </li>
+                <li role="none"><a href="/VideoCameraHoliday/how-to/" role="menuitem">How-To</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/destinations/" role="menuitem">Destinations</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/editing/" role="menuitem">Editing</a></li>
+                <li role="none">
+                    <a href="/VideoCameraHoliday/comparisons/" role="menuitem" aria-haspopup="true" aria-expanded="false">Comparisons <span class="dropdown-arrow">▼</span></a>
+                    <div class="mega-menu" role="menu" aria-label="Comparisons Menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column"><h4>Camera vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li><li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs Sony ZV-E10 II</a></li><li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Accessory Face-offs</h4><ul><li><a href="/VideoCameraHoliday/comparisons/peak-design-vs-blackrapid.html">Peak Design vs BlackRapid</a></li><li><a href="/VideoCameraHoliday/comparisons/dji-vs-gopro.html">DJI vs GoPro</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Smartphone vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated Camera</a></li></ul></div>
+                        </div>
+                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/comparisons/">View All Comparisons →</a></div>
+                    </div>
+                </li>
+                <li role="none"><a href="/VideoCameraHoliday/about/" role="menuitem">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="/VideoCameraHoliday/">Home</a></li>
+                <li>City Guides</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>City Filmmaker Guides</h1>
+            <p class="subtitle">Drone laws, permit requirements, best locations, and camera settings for 27+ cities worldwide.</p>
+            <div class="search-box">
+                <input type="text" id="citySearch" placeholder="Search cities (e.g., Tokyo, Paris, New York)..." onkeyup="filterCities()">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="city-grid" id="cityGrid">
+            <!-- Europe -->
+            <a href="Amsterdam.html" class="city-card">
+                <div class="city-card-header"><h3>Amsterdam</h3><span class="region">Netherlands</span></div>
+                <div class="city-card-body"><p>Canal reflections, cycling etiquette, and strict city-center drone bans.</p><div class="city-tags"><span class="tag drone">No Drones</span><span class="tag">Cycling</span></div></div>
+            </a>
+            <a href="Athens.html" class="city-card">
+                <div class="city-card-header"><h3>Athens</h3><span class="region">Greece</span></div>
+                <div class="city-card-body"><p>Acropolis blue hour, tripod restrictions at ruins, and ancient light.</p><div class="city-tags"><span class="tag permit">Permits Needed</span><span class="tag">Ruins</span></div></div>
+            </a>
+            <a href="Barcelona.html" class="city-card">
+                <div class="city-card-header"><h3>Barcelona</h3><span class="region">Spain</span></div>
+                <div class="city-card-body"><p>Gaudi architecture, La Rambla crowds, and beach sunset spots.</p><div class="city-tags"><span class="tag drone">No Drones</span><span class="tag">Architecture</span></div></div>
+            </a>
+            <a href="Berlin.html" class="city-card">
+                <div class="city-card-header"><h3>Berlin</h3><span class="region">Germany</span></div>
+                <div class="city-card-body"><p>Street art, government no-fly zones, and club culture low-light.</p><div class="city-tags"><span class="tag drone">Strict Bans</span><span class="tag night">Night Life</span></div></div>
+            </a>
+            <a href="Budapest.html" class="city-card">
+                <div class="city-card-header"><h3>Budapest</h3><span class="region">Hungary</span></div>
+                <div class="city-card-body"><p>Thermal bath filming, Parliament night shots, and Danube cruises.</p><div class="city-tags"><span class="tag">Waterproof</span><span class="tag night">Night Shots</span></div></div>
+            </a>
+            <a href="Copenhagen.html" class="city-card">
+                <div class="city-card-header"><h3>Copenhagen</h3><span class="region">Denmark</span></div>
+                <div class="city-card-body"><p>Hygge lifestyle, cycling filming, and Tivoli Gardens rules.</p><div class="city-tags"><span class="tag">Cycling</span><span class="tag">Design</span></div></div>
+            </a>
+            <a href="Dubai.html" class="city-card">
+                <div class="city-card-header"><h3>Dubai</h3><span class="region">UAE</span></div>
+                <div class="city-card-body"><p>Futuristic skyline, desert dunes, and strict commercial permits.</p><div class="city-tags"><span class="tag permit">Strict Permits</span><span class="tag">Desert</span></div></div>
+            </a>
+            <a href="Florence.html" class="city-card">
+                <div class="city-card-header"><h3>Florence</h3><span class="region">Italy</span></div>
+                <div class="city-card-body"><p>Renaissance art, Duomo climb, and Uffizi no-video rules.</p><div class="city-tags"><span class="tag permit">Museum Bans</span><span class="tag">Art</span></div></div>
+            </a>
+            <a href="Istanbul.html" class="city-card">
+                <div class="city-card-header"><h3>Istanbul</h3><span class="region">Turkey</span></div>
+                <div class="city-card-body"><p>Mosque interiors, bazaar chaos, and prayer time restrictions.</p><div class="city-tags"><span class="tag">Culture</span><span class="tag">Markets</span></div></div>
+            </a>
+            <a href="Lisbon.html" class="city-card">
+                <div class="city-card-header"><h3>Lisbon</h3><span class="region">Portugal</span></div>
+                <div class="city-card-body"><p>Tram 28 stabilization, cobblestone hills, and azulejos details.</p><div class="city-tags"><span class="tag">Stabilization</span><span class="tag">Hills</span></div></div>
+            </a>
+            <a href="London.html" class="city-card">
+                <div class="city-card-header"><h3>London</h3><span class="region">UK</span></div>
+                <div class="city-card-body"><p>Royal Parks permits, Tube filming bans, and iconic landmarks.</p><div class="city-tags"><span class="tag drone">No Drones</span><span class="tag permit">Strict Rules</span></div></div>
+            </a>
+            <a href="Madrid.html" class="city-card">
+                <div class="city-card-header"><h3>Madrid</h3><span class="region">Spain</span></div>
+                <div class="city-card-body"><p>Plaza life, late night tapas, and Retiro Park restrictions.</p><div class="city-tags"><span class="tag night">Night Life</span><span class="tag">Food</span></div></div>
+            </a>
+            <a href="Milan.html" class="city-card">
+                <div class="city-card-header"><h3>Milan</h3><span class="region">Italy</span></div>
+                <div class="city-card-body"><p>Fashion district, Duomo square rules, and Navigli canals.</p><div class="city-tags"><span class="tag">Fashion</span><span class="tag">Architecture</span></div></div>
+            </a>
+            <a href="Moscow.html" class="city-card">
+                <div class="city-card-header"><h3>Moscow</h3><span class="region">Russia</span></div>
+                <div class="city-card-body"><p>Red Square security, Metro grandeur, and winter battery care.</p><div class="city-tags"><span class="tag drone">Strict Bans</span><span class="tag">Winter</span></div></div>
+            </a>
+            <a href="Paris.html" class="city-card">
+                <div class="city-card-header"><h3>Paris</h3><span class="region">France</span></div>
+                <div class="city-card-body"><p>Eiffel Tower copyright, Louvre bans, and Seine blue hour.</p><div class="city-tags"><span class="tag drone">No Fly</span><span class="tag permit">Copyright</span></div></div>
+            </a>
+            <a href="Prague.html" class="city-card">
+                <div class="city-card-header"><h3>Prague</h3><span class="region">Czechia</span></div>
+                <div class="city-card-body"><p>Charles Bridge crowds, castle permits, and medieval streets.</p><div class="city-tags"><span class="tag">History</span><span class="tag">Crowds</span></div></div>
+            </a>
+            <a href="Rome.html" class="city-card">
+                <div class="city-card-header"><h3>Rome</h3><span class="region">Italy</span></div>
+                <div class="city-card-body"><p>Colosseum permits, Vatican bans, and fountain close-ups.</p><div class="city-tags"><span class="tag permit">Strict Permits</span><span class="tag">Ancient</span></div></div>
+            </a>
+            <a href="Santorini.html" class="city-card">
+                <div class="city-card-header"><h3>Santorini</h3><span class="region">Greece</span></div>
+                <div class="city-card-body"><p>Sunset crowds in Oia, white wall exposure, and caldera views.</p><div class="city-tags"><span class="tag">Sunset</span><span class="tag">Exposure</span></div></div>
+            </a>
+            <a href="Stockholm.html" class="city-card">
+                <div class="city-card-header"><h3>Stockholm</h3><span class="region">Sweden</span></div>
+                <div class="city-card-body"><p>Archipelago boat shoots, Vasa Museum light, and Nordic seasons.</p><div class="city-tags"><span class="tag">Nature</span><span class="tag night">Midnight Sun</span></div></div>
+            </a>
+            <a href="Venice.html" class="city-card">
+                <div class="city-card-header"><h3>Venice</h3><span class="region">Italy</span></div>
+                <div class="city-card-body"><p>Canal boat stability, St. Mark's rules, and acqua alta safety.</p><div class="city-tags"><span class="tag">Water</span><span class="tag drone">No Drones</span></div></div>
+            </a>
+            <a href="Vienna.html" class="city-card">
+                <div class="city-card-header"><h3>Vienna</h3><span class="region">Austria</span></div>
+                <div class="city-card-body"><p>Imperial palaces, coffee house etiquette, and classical music venues.</p><div class="city-tags"><span class="tag">Culture</span><span class="tag">Interiors</span></div></div>
+            </a>
+
+            <!-- Asia & Pacific -->
+            <a href="Bali.html" class="city-card">
+                <div class="city-card-header"><h3>Bali</h3><span class="region">Indonesia</span></div>
+                <div class="city-card-body"><p>Rice terraces, temple ceremonies, and religious drone bans.</p><div class="city-tags"><span class="tag drone">Religious Bans</span><span class="tag">Nature</span></div></div>
+            </a>
+            <a href="Hong-Kong.html" class="city-card">
+                <div class="city-card-header"><h3>Hong Kong</h3><span class="region">China</span></div>
+                <div class="city-card-body"><p>Neon nights, MTR subway bans, and typhoon gear protection.</p><div class="city-tags"><span class="tag night">Neon</span><span class="tag permit">Subway Bans</span></div></div>
+            </a>
+            <a href="Shenzhen.html" class="city-card">
+                <div class="city-card-header"><h3>Shenzhen</h3><span class="region">China</span></div>
+                <div class="city-card-body"><p>Tech hubs, neon lights, and high-security zone restrictions.</p><div class="city-tags"><span class="tag drone">Strict Bans</span><span class="tag">Tech</span></div></div>
+            </a>
+            <a href="Singapore.html" class="city-card">
+                <div class="city-card-header"><h3>Singapore</h3><span class="region">Singapore</span></div>
+                <div class="city-card-body"><p>Gardens by the Bay, humidity protection, and public order laws.</p><div class="city-tags"><span class="tag permit">Strict Laws</span><span class="tag">Modern</span></div></div>
+            </a>
+            <a href="Sydney.html" class="city-card">
+                <div class="city-card-header"><h3>Sydney</h3><span class="region">Australia</span></div>
+                <div class="city-card-body"><p>Opera House permits, harbor no-fly zones, and beach glare.</p><div class="city-tags"><span class="tag drone">Harbor Ban</span><span class="tag">Beach</span></div></div>
+            </a>
+            <a href="Tokyo.html" class="city-card">
+                <div class="city-card-header"><h3>Tokyo</h3><span class="region">Japan</span></div>
+                <div class="city-card-body"><p>Shibuya crossing, temple etiquette, and strict airspace laws.</p><div class="city-tags"><span class="tag drone">No Fly</span><span class="tag">Culture</span></div></div>
+            </a>
+
+            <!-- Americas -->
+            <a href="New-York.html" class="city-card">
+                <div class="city-card-header"><h3>New York</h3><span class="region">USA</span></div>
+                <div class="city-card-body"><p>Brooklyn Bridge permits, Subway rules, and total drone ban.</p><div class="city-tags"><span class="tag drone">Total Ban</span><span class="tag permit">Permits</span></div></div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-brand">📹 Holiday Video Camera</div>
+                <p class="footer-about">Real travel camera testing. No lab charts — just what survives hand luggage, beaches, mountains, and city breaks. Written by videographers who actually travel.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
+                    <li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/">How-To</a></li>
+                    <li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Popular Articles</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs ZV-E10 II</a></li>
+                    <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
+                    <li><a href="/VideoCameraHoliday/contact.html">Contact</a></li>
+                    <li><a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/VideoCameraHoliday/terms.html">Terms of Use</a></li>
+                    <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a>. All rights reserved.</div>
+            <div class="footer-social">
+                <a href="#" aria-label="Follow us on YouTube">YouTube</a>
+                <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+                <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                <a href="#" aria-label="Subscribe to RSS">RSS</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterCities() {
+            const input = document.getElementById('citySearch');
+            const filter = input.value.toUpperCase();
+            const grid = document.getElementById('cityGrid');
+            const cards = grid.getElementsByClassName('city-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const h3 = cards[i].getElementsByTagName('h3')[0];
+                const region = cards[i].getElementsByClassName('region')[0];
+                const txtValue = h3.textContent || h3.innerText;
+                const regValue = region.textContent || region.innerText;
+                
+                if (txtValue.toUpperCase().indexOf(filter) > -1 || regValue.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
