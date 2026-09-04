@@ -4,115 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venice Filmmaker's Guide: Canals, Masks & Permits | Holiday Video Camera</title>
-    <meta name="description" content="Ultimate guide to filming in Venice: Gondola etiquette, St. Mark's Square restrictions, camera settings for canals, and avoiding crowds.">
+    <meta name="description" content="Ultimate guide to filming in Venice: Grand Canal shots, St. Mark's Square permits, drone bans, and camera settings for water reflections and mask festivals.">
     <meta name="author" content="Dawid Millennium">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/Venice.html">
     <meta property="og:title" content="Venice Filmmaker's Guide: Canals, Masks & Permits">
-    <meta property="og:description" content="Master filming in Venice: Gondola rules, St. Mark's restrictions, and how to capture empty canals at sunrise.">
+    <meta property="og:description" content="Master filming in Venice: Gondola etiquette, flood protection for gear, and navigating crowds in the world's most unique city.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/Venice.html">
     <meta property="og:site_name" content="Holiday Video Camera">
     <meta name="twitter:card" content="summary_large_image">
     <style>
-        /* CSS VARIABLES & RESET */
-        :root { --primary: #e94560; --bg: #0a0a0a; --surface: #111; --text: #e0e0e0; --text-muted: #888; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-        
-        /* LAYOUT & TYPOGRAPHY */
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        a { color: #6db3f2; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
-        a:hover { color: var(--primary); }
-        h1, h2, h3 { line-height: 1.2; margin-bottom: 1rem; }
-        h1 { font-size: 2.4rem; color: #fff; }
-        h2 { color: var(--primary); font-size: 1.8rem; margin-top: 40px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        h3 { color: #fff; font-size: 1.3rem; margin-top: 30px; }
-        p { margin-bottom: 20px; font-size: 1.05rem; color: #ccc; }
-        ul, ol { margin-left: 20px; margin-bottom: 20px; color: #ccc; }
-        li { margin-bottom: 10px; }
+        a { color: #6db3f2; text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: #9ecbff; }
+        a:visited { color: #b48ae0; }
 
-        /* NAVIGATION (MEGA MENU) */
-        .top-nav { background: var(--surface); border-bottom: 2px solid var(--primary); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
-        .logo { font-size: 1.3rem; font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-        .nav-links { display: flex; list-style: none; height: 100%; gap: 5px; }
-        .nav-links > li { position: relative; height: 100%; display: flex; align-items: center; }
-        .nav-links > li > a { color: #ccc; text-decoration: none; padding: 18px 16px; display: flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; height: 100%; }
-        .nav-links > li > a:hover, .nav-links > li > a.active { color: var(--primary); background: rgba(233, 69, 96, 0.1); }
+        /* Top Navigation with Mega Menu */
+        .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+        .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+        .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .top-nav .nav-links { display: flex; list-style: none; margin: 0; padding: 0; height: 100%; }
+        .top-nav .nav-links > li { position: relative; height: 100%; display: flex; align-items: center; }
+        .top-nav .nav-links > li > a { color: #ccc; text-decoration: none; padding: 18px 16px; display: flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; height: 100%; cursor: pointer; }
+        .top-nav .nav-links > li > a:hover, .top-nav .nav-links > li > a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
         .dropdown-arrow { font-size: 0.7rem; transition: transform 0.3s; }
-        .nav-links > li:hover .dropdown-arrow { transform: rotate(180deg); }
+        .top-nav .nav-links > li:hover .dropdown-arrow { transform: rotate(180deg); }
 
-        /* MEGA MENU DROPDOWN */
-        .mega-menu { position: absolute; top: 100%; left: 0; min-width: 600px; background: #1a1a2e; border: 1px solid #333; border-top: 3px solid var(--primary); border-radius: 0 0 8px 8px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1001; box-shadow: 0 20px 40px rgba(0,0,0,0.5); padding: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .nav-links > li:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .mega-menu h4 { color: var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; grid-column: span 3; }
-        .mega-menu ul { list-style: none; margin: 0; padding: 0; grid-column: span 1; }
-        .mega-menu ul li { margin-bottom: 8px; }
-        .mega-menu ul li a { color: #bbb; text-decoration: none; font-size: 0.85rem; display: block; padding: 3px 0; }
-        .mega-menu ul li a:hover { color: var(--primary); padding-left: 5px; }
-        .mobile-toggle { display: none; background: none; border: none; color: var(--primary); font-size: 1.5rem; cursor: pointer; }
+        .mega-menu { position: absolute; top: 100%; left: 0; min-width: 620px; background: #1a1a2e; border: 1px solid #333; border-top: 3px solid #e94560; border-radius: 0 0 8px 8px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1001; box-shadow: 0 20px 40px rgba(0,0,0,0.5); padding: 20px; }
+        .top-nav .nav-links > li:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .mega-menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .mega-menu-column h4 { color: #e94560; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .mega-menu-column ul { list-style: none; margin: 0; padding: 0; }
+        .mega-menu-column ul li { margin-bottom: 8px; }
+        .mega-menu-column ul li a { color: #bbb; text-decoration: none; font-size: 0.85rem; display: block; padding: 3px 0; }
+        .mega-menu-column ul li a:hover { color: #e94560; padding-left: 5px; }
+        .mega-menu-footer { margin-top: 15px; padding-top: 15px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; }
+        .mega-menu-footer a { color: #e94560; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+        .mega-menu-footer a:hover { text-decoration: underline; }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
 
-        /* BREADCRUMBS */
-        .breadcrumb { padding: 15px 20px; background: var(--surface); font-size: 0.85rem; color: var(--text-muted); }
-        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-        .breadcrumb li:not(:last-child)::after { content: "›"; margin-left: 10px; color: #555; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+        header .logo { font-size: 1.5rem; font-weight: 700; color: #e94560; text-decoration: none; display: inline-block; margin-bottom: 15px; }
+        h1 { font-size: 2.4rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
+        .subtitle { font-size: 1.15rem; color: #888; max-width: 680px; margin: 0 auto 15px; }
+        .meta { color: #888; font-size: 0.9rem; }
+        .meta span { margin: 0 10px; }
 
-        /* HEADER */
-        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid var(--primary); }
-        header .logo { justify-content: center; margin-bottom: 20px; font-size: 1.5rem; }
-        .subtitle { font-size: 1.2rem; color: #888; max-width: 700px; margin: 0 auto 20px; }
-        .meta { color: #666; font-size: 0.9rem; display: flex; justify-content: center; gap: 15px; }
+        .breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: #888; }
+        .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
+        .breadcrumb li { display: flex; align-items: center; }
+        .breadcrumb li:not(:last-child)::after { content: "›"; margin: 0 10px; color: #555; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
 
-        /* CONTENT BOXES */
-        .quick-answer { background: rgba(233, 69, 96, 0.08); border-left: 4px solid var(--primary); padding: 25px; margin: 30px 0; border-radius: 0 8px 8px 0; }
-        .quick-answer h3 { margin-top: 0; color: var(--primary); }
-        .takeaways { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 30px 0; }
-        .takeaways h3 { color: var(--primary); margin-top: 0; }
+        article { padding: 40px 20px; }
+        h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        h3 { color: #fff; font-size: 1.3rem; margin: 30px 0 12px; }
+        p { margin-bottom: 20px; font-size: 1.05rem; }
+        .author-box { display: flex; align-items: center; gap: 15px; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 25px 0; }
+        .author-avatar { width: 50px; height: 50px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .author-info h4 { color: #fff; margin: 0 0 5px; font-size: 1rem; }
+        .author-info p { color: #888; font-size: 0.85rem; margin: 0; }
+        .last-updated { color: #666; font-size: 0.8rem; margin-top: 5px; }
+        .toc { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 30px 0; }
+        .toc h3 { margin-top: 0; color: #e94560; }
+        .toc ul { list-style: none; margin-left: 0; }
+        .toc li { margin-bottom: 8px; }
+        .toc a { color: #ccc; text-decoration: none; }
+        .toc a:hover { color: #e94560; }
+        .takeaways { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; }
+        .takeaways h3 { color: #e94560; margin-top: 0; }
+        .takeaways ul { margin-left: 20px; margin-bottom: 0; }
         .tip-box { background: rgba(52, 152, 219, 0.1); border-left: 4px solid #3498db; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
-        .tip-box strong { color: #3498db; display: block; margin-bottom: 5px; }
+        .tip-box strong { color: #3498db; }
         .warning-box { background: rgba(243, 156, 18, 0.1); border-left: 4px solid #f39c12; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
-        .warning-box strong { color: #f39c12; display: block; margin-bottom: 5px; }
-
-        /* TABLES */
-        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: #111; border-radius: 8px; overflow: hidden; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
-        th { background: #1a1a2e; color: var(--primary); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
-        td { color: #ccc; font-size: 0.95rem; }
-        tr:last-child td { border-bottom: none; }
-
-        /* FAQ */
+        .warning-box strong { color: #f39c12; }
+        ul { margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+        .faq-section { margin: 30px 0; }
         .faq-item { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 20px 0; }
-        .faq-question { color: #fff; font-size: 1.1rem; margin: 0 0 10px; font-weight: 600; }
-        .faq-answer { color: #ccc; font-size: 0.95rem; }
+        .faq-question { color: #fff; font-size: 1.15rem; margin: 0 0 12px; }
+        .faq-answer p { color: #ccc; margin: 0; }
+        .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .related-card:hover { border-color: #e94560; }
+        .related-card h4 { color: #e94560; margin-top: 0; }
+        .related-card p { font-size: 0.9rem; color: #888; margin-bottom: 0; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #333; }
+        th { color: #e94560; background: #111; }
+        td { color: #ccc; }
+        .affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
 
-        /* RELATED CARDS */
-        .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 0; }
-        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.3s, transform 0.2s; }
-        .related-card:hover { border-color: var(--primary); transform: translateY(-3px); }
-        .related-card h4 { color: var(--primary); margin: 0 0 10px; font-size: 1.1rem; }
-        .related-card p { font-size: 0.9rem; color: #888; margin: 0; }
+        /* Footer */
+        footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .footer-column h4 { color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .footer-column ul { list-style: none; margin: 0; padding: 0; }
+        .footer-column ul li { margin-bottom: 8px; }
+        .footer-column ul li a { color: #999; text-decoration: none; font-size: 0.85rem; }
+        .footer-column ul li a:hover { color: #e94560; }
+        .footer-brand { color: #e94560; font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .footer-about { color: #777; font-size: 0.85rem; line-height: 1.6; }
+        .footer-bottom { max-width: 1200px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #666; }
+        .footer-bottom a { color: #888; text-decoration: none; }
+        .footer-bottom a:hover { color: #e94560; }
+        .footer-social { display: flex; gap: 15px; }
+        .footer-social a { color: #888; text-decoration: none; font-size: 0.85rem; }
+        .footer-social a:hover { color: #e94560; }
 
-        /* FOOTER */
-        footer.site-footer { background: #111; border-top: 3px solid var(--primary); padding: 60px 20px 20px; margin-top: 60px; }
-        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-col h4 { color: var(--primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
-        .footer-col ul { list-style: none; padding: 0; margin: 0; }
-        .footer-col ul li { margin-bottom: 12px; }
-        .footer-col a { color: #999; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-        .footer-col a:hover { color: var(--primary); }
-        .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 20px; border-top: 1px solid #333; text-align: center; color: #666; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-        .affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 40px; padding: 20px; background: #0a0a0a; border-radius: 8px; border: 1px solid #222; }
-
-        /* RESPONSIVE */
+        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-toggle { display: block; }
-            .mega-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; border-top: 1px solid #333; padding: 15px; grid-template-columns: 1fr; }
-            .mega-menu h4 { grid-column: span 1; }
-            .mega-menu ul { grid-column: span 1; margin-bottom: 20px; }
+            .top-nav .nav-container { flex-wrap: wrap; height: auto; padding: 10px 15px; }
+            .top-nav .nav-links { flex-wrap: wrap; width: 100%; }
+            .top-nav .nav-links > li > a { padding: 10px 12px; font-size: 0.8rem; }
+            .mega-menu { min-width: 100%; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; border-top: 1px solid #333; border-radius: 0; display: none; padding: 10px; }
+            .top-nav .nav-links > li:hover .mega-menu, .top-nav .nav-links > li:focus-within .mega-menu { display: block; }
+            .mega-menu-grid { grid-template-columns: 1fr; gap: 15px; }
+            .footer-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             h1 { font-size: 1.8rem; }
-            .footer-bottom { flex-direction: column; text-align: center; }
+            .mobile-menu-toggle { display: block; }
+        }
+        @media (max-width: 480px) {
+            .footer-container { grid-template-columns: 1fr; }
         }
     </style>
     <script type="application/ld+json">
@@ -122,261 +139,234 @@
       "headline": "Venice Filmmaker's Guide: Canals, Masks & Permits",
       "author": { "@type": "Person", "name": "Dawid Millennium" },
       "datePublished": "2026-09-04",
-      "publisher": { "@type": "Organization", "name": "Holiday Video Camera" },
-      "description": "Ultimate guide to filming in Venice: Gondola etiquette, St. Mark's Square restrictions, camera settings for canals, and avoiding crowds."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "City Guides",
-        "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-interview-preview/"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Venice"
-      }]
+      "publisher": { "@type": "Organization", "name": "Holiday Video Camera" }
     }
     </script>
 </head>
 <body>
-
-<!-- NAVIGATION -->
-<nav class="top-nav" role="navigation" aria-label="Main Navigation">
-    <div class="nav-container">
-        <a href="/VideoCameraHoliday/" class="logo" aria-label="Holiday Video Camera Home">📹 Holiday Video Camera</a>
-        <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
-        <ul class="nav-links" role="menubar">
-            <li role="none"><a href="/VideoCameraHoliday/" role="menuitem">Home</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/city-through-the-lens/" role="menuitem">Series</a></li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/reviews/" role="menuitem" aria-haspopup="true">Reviews <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu">
-                    <h4>Camera Reviews</h4>
-                    <ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul>
-                    <h4>Mirrorless Reviews</h4>
-                    <ul><li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50</a></li><li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony ZV-E10 II</a></li></ul>
-                    <h4>Accessory Reviews</h4>
-                    <ul><li><a href="/VideoCameraHoliday/accessories/best-camera-strap-hiking.html">Camera Straps</a></li><li><a href="/VideoCameraHoliday/accessories/best-camera-bags-travel.html">Camera Bags</a></li></ul>
-                </div>
-            </li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/guides/" class="active" role="menuitem" aria-haspopup="true">Buying Guides <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu">
-                    <h4>Top Picks</h4>
-                    <ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Vlogging Cameras</a></li></ul>
-                    <h4>By Activity</h4>
-                    <ul><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Cameras</a></li></ul>
-                    <h4>Career & Tips</h4>
-                    <ul><li><a href="/VideoCameraHoliday/guides/becoming-travel-filmmaker-career-guide-2026.html">Becoming a Travel Filmmaker</a></li><li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Videos</a></li></ul>
-                </div>
-            </li>
-            <li role="none"><a href="/VideoCameraHoliday/how-to/" role="menuitem">How-To</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/destinations/" role="menuitem">Destinations</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/editing/" role="menuitem">Editing</a></li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/comparisons/" role="menuitem" aria-haspopup="true">Comparisons <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu">
-                    <h4>Camera vs Camera</h4>
-                    <ul><li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li><li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs ZV-E10 II</a></li></ul>
-                    <h4>Smartphone vs Camera</h4>
-                    <ul><li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li></ul>
-                </div>
-            </li>
-            <li role="none"><a href="/VideoCameraHoliday/about/" role="menuitem">About</a></li>
-        </ul>
-    </div>
-</nav>
-
-<!-- BREADCRUMB -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            <li><a href="/VideoCameraHoliday/">Home</a></li>
-            <li><a href="/VideoCameraHoliday/city-interview-preview/">City Guides</a></li>
-            <li>Venice</li>
-        </ol>
-    </div>
-</nav>
-
-<!-- HEADER -->
-<header>
-    <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
-    <h1>Venice Filmmaker's Guide: Canals, Masks & Permits</h1>
-    <p class="subtitle">Navigate the floating city: How to film gondolas legally, avoid St. Mark's crowds, and capture misty morning canals.</p>
-    <div class="meta">
-        <span>📅 September 4, 2026</span>
-        <span>⏱️ 7 min read</span>
-    </div>
-</header>
-
-<!-- ARTICLE -->
-<article class="container">
-    <div class="quick-answer">
-        <h3>⚡ Quick Answer</h3>
-        <p><strong>Best spots:</strong> Rialto Bridge (sunrise), Dorsoduro (quiet canals), Burano (colorful houses). <strong>Gondola rule:</strong> Ask permission before filming gondoliers; tipping expected. <strong>Gear:</strong> Polarizer for water glare, waterproof bag for vaporetto splashes.</p>
-    </div>
-
-    <div class="takeaways">
-        <h3>Key Takeaways</h3>
-        <ul>
-            <li><strong>Crowd Strategy:</strong> Venice is empty only between 05:30–07:30. After 09:00, it's impassable.</li>
-            <li><strong>Water Reflection:</strong> Use a Circular Polarizer (CPL) to cut glare off canals and see underwater details.</li>
-            <li><strong>Gondola Etiquette:</strong> Filming gondoliers without permission is frowned upon. A €2-5 tip usually grants consent.</li>
-            <li><strong>Flood Risk:</strong> Acqua Alta (Oct-Jan) can flood streets. Keep gear elevated in waterproof bags.</li>
-        </ul>
-    </div>
-
-    <h2 id="locations">Top 5 Filming Locations in Venice</h2>
-    
-    <h3>1. Rialto Bridge (Sunrise)</h3>
-    <p>The iconic arch over the Grand Canal. At 06:00, you'll have it mostly to yourself. Film the gondolas passing underneath and the morning mist rising off the water.</p>
-    <p><strong>Settings:</strong> f/8 for sharpness, ISO 200, Shutter 1/50. Use ND filter if sun is bright.</p>
-
-    <h3>2. Dorsoduro District</h3>
-    <p>Quiet, authentic canals away from tourist hordes. Perfect for handheld walking shots, local life, and reflections in calm water.</p>
-    <p><strong>Tip:</strong> Get lost intentionally here. The best shots are in unnamed alleyways.</p>
-
-    <h3>3. Burano Island</h3>
-    <p>Famous for brightly colored fishermen's houses. Short vaporetto ride away. Incredible for vibrant, saturated footage.</p>
-    <p><strong>Settings:</strong> Lower saturation in-camera to avoid clipping neon colors. Shoot midday when colors pop.</p>
-
-    <h3>4. St. Mark's Square (Piazza San Marco)</h3>
-    <p>Grand but chaotic. Film the basilica facade early. Avoid tripods here (strictly banned without permit).</p>
-    <p><strong>Warning:</strong> Pickpockets operate heavily here. Keep bags zipped and in front.</p>
-
-    <h3>5. Ponte dei Sospiri (Bridge of Sighs)</h3>
-    <p>Best viewed from the bridge next to it or from a gondola. Classic romantic shot. Crowded all day.</p>
-
-    <h2 id="settings">Recommended Camera Settings</h2>
-    <table>
-        <tr><th>Scenario</th><th>ISO</th><th>Aperture</th><th>Shutter</th><th>Notes</th></tr>
-        <tr><td>Canal Sunrise</td><td>100</td><td>f/8</td><td>1/60</td><td>Use CPL for water</td></tr>
-        <tr><td>Interior Basilica</td><td>1600+</td><td>f/2.8</td><td>1/50</td><td>No flash/tripod</td></tr>
-        <tr><td>Burano Colors</td><td>100</td><td>f/5.6</td><td>1/200</td><td>Protect highlights</td></tr>
-        <tr><td>Vaporetto Ride</td><td>400</td><td>f/4</td><td>1/125</td><td>Stabilization ON</td></tr>
-    </table>
-
-    <h2 id="laws">Permits & Filming Laws</h2>
-    <div class="warning-box">
-        <strong>⚠️ Critical:</strong> <strong>Tripods banned</strong> in St. Mark's Square and major bridges without a permit from the Venice Film Commission. Handheld is fine. Commercial shoots require advance booking and fees.
-    </div>
-    <p><strong>Gondola Filming:</strong> Gondoliers are independent contractors. Filming them working without consent can lead to confrontation. A small tip (€2-5) usually solves this.</p>
-    <p><strong>Drone Law:</strong> Strictly NO FLY ZONE over Venice historic center. Fines are heavy and enforcement is active.</p>
-
-    <h2 id="safety">Safety & Etiquette</h2>
-    <p><strong>Acqua Alta (Flooding):</strong> Oct-Jan high tides flood streets. Wear boots, keep camera bags high. Salt water damages electronics instantly.</p>
-    <p><strong>Pickpockets:</strong> Extreme risk on Vaporetto boats and St. Mark's Square. Never put camera down on cafe tables.</p>
-    <p><strong>Respect Locals:</strong> Don't block narrow bridges for long setups. Let residents pass first.</p>
-
-    <h2 id="faq">FAQ</h2>
-    <div class="faq-item">
-        <h3 class="faq-question">Can I fly a drone in Venice?</h3>
-        <div class="faq-answer"><p>No. Venice historic center is a strict no-fly zone. Enforcement is strict due to crowd safety and privacy laws.</p></div>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">Is it safe to film during Acqua Alta?</h3>
-        <div class="faq-answer"><p>Yes, if you protect gear. Use waterproof housing or dry bags. Salt water is corrosive—rinse gear with fresh water after exposure.</p></div>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">Do I need a permit for YouTube vlogs?</h3>
-        <div class="faq-answer"><p>Personal handheld vlogging is generally tolerated. Tripods, lights, or large crews require a permit from the city.</p></div>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">Best time to avoid crowds?</h3>
-        <div class="faq-answer"><p>05:30–07:30 AM is the only quiet window. In winter (Nov-Feb), crowds are significantly smaller all day.</p></div>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">Can I film inside St. Mark's Basilica?</h3>
-        <div class="faq-answer"><p>Photography is often restricted inside; video is usually prohibited during mass. Check signs at entrance. No flash allowed.</p></div>
-    </div>
-
-    <h2 id="related">Related Articles</h2>
-    <div class="related-articles">
-        <a class="related-card" href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">
-            <h4>Best Waterproof Cameras</h4>
-            <p>For canal splashes and Acqua Alta.</p>
-        </a>
-        <a class="related-card" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">
-            <h4>DJI Pocket 3 Review</h4>
-            <p>Perfect for crowded Venetian alleys.</p>
-        </a>
-        <a class="related-card" href="/VideoCameraHoliday/city-interview-preview/Rome.html">
-            <h4>Rome Filmmaker's Guide</h4>
-            <p>Another Italian classic compared.</p>
-        </a>
-    </div>
-
-    <p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
-</article>
-
-<!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
-    <div class="footer-grid">
-        <div class="footer-col">
-            <h4>Holiday Video Camera</h4>
-            <p style="font-size: 0.9rem; color: #777; margin-bottom: 15px;">Real travel camera testing. No lab charts — just what survives hand luggage, beaches, mountains, and city breaks.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
-                <li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
-                <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
-                <li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
+    <nav class="top-nav" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="/VideoCameraHoliday/" class="logo" aria-label="Holiday Video Camera Home">📹 Holiday Video Camera</a>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="/VideoCameraHoliday/" role="menuitem">Home</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/city-through-the-lens/" role="menuitem">Series</a></li>
+                <li role="none">
+                    <a href="/VideoCameraHoliday/reviews/" role="menuitem" aria-haspopup="true" aria-expanded="false">Reviews <span class="dropdown-arrow">▼</span></a>
+                    <div class="mega-menu" role="menu" aria-label="Reviews Menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column"><h4>Camera Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Mirrorless Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50</a></li><li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony ZV-E10 II</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Accessory Reviews</h4><ul><li><a href="/VideoCameraHoliday/accessories/best-camera-strap-hiking.html">Camera Straps</a></li><li><a href="/VideoCameraHoliday/accessories/best-camera-bags-travel.html">Camera Bags</a></li></ul></div>
+                        </div>
+                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/reviews/">View All Reviews →</a></div>
+                    </div>
+                </li>
+                <li role="none">
+                    <a href="/VideoCameraHoliday/guides/" class="active" role="menuitem" aria-haspopup="true" aria-expanded="false">Buying Guides <span class="dropdown-arrow">▼</span></a>
+                    <div class="mega-menu" role="menu" aria-label="Guides Menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column"><h4>Top Picks</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Vlogging Cameras</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>By Activity</h4><ul><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Cameras</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Career & Tips</h4><ul><li><a href="/VideoCameraHoliday/guides/becoming-travel-filmmaker-career-guide-2026.html">Becoming a Travel Filmmaker</a></li><li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Videos</a></li></ul></div>
+                        </div>
+                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/guides/">View All Guides →</a></div>
+                    </div>
+                </li>
+                <li role="none"><a href="/VideoCameraHoliday/how-to/" role="menuitem">How-To</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/destinations/" role="menuitem">Destinations</a></li>
+                <li role="none"><a href="/VideoCameraHoliday/editing/" role="menuitem">Editing</a></li>
+                <li role="none">
+                    <a href="/VideoCameraHoliday/comparisons/" role="menuitem" aria-haspopup="true" aria-expanded="false">Comparisons <span class="dropdown-arrow">▼</span></a>
+                    <div class="mega-menu" role="menu" aria-label="Comparisons Menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column"><h4>Camera vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li><li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs Sony ZV-E10 II</a></li><li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Accessory Face-offs</h4><ul><li><a href="/VideoCameraHoliday/comparisons/peak-design-vs-blackrapid.html">Peak Design vs BlackRapid</a></li><li><a href="/VideoCameraHoliday/comparisons/dji-vs-gopro.html">DJI vs GoPro</a></li></ul></div>
+                            <div class="mega-menu-column"><h4>Smartphone vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated Camera</a></li></ul></div>
+                        </div>
+                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/comparisons/">View All Comparisons →</a></div>
+                    </div>
+                </li>
+                <li role="none"><a href="/VideoCameraHoliday/about/" role="menuitem">About</a></li>
             </ul>
         </div>
-        <div class="footer-col">
-            <h4>Popular Articles</h4>
-            <ul>
-                <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li>
-                <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
-                <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Legal</h4>
-            <ul>
-                <li><a href="/VideoCameraHoliday/contact.html">Contact</a></li>
-                <li><a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a></li>
-                <li><a href="/VideoCameraHoliday/terms.html">Terms of Use</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div>© 2026 Holiday Video Camera. All rights reserved.</div>
-        <div>
-            <a href="#" style="margin-left: 15px;">YouTube</a>
-            <a href="#" style="margin-left: 15px;">Instagram</a>
-            <a href="#" style="margin-left: 15px;">Twitter</a>
-        </div>
-    </div>
-</footer>
+    </nav>
 
-<script>
-    // Simple Mobile Menu Toggle
-    document.querySelector('.mobile-toggle').addEventListener('click', function() {
-        const nav = document.querySelector('.nav-links');
-        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-        if(nav.style.display === 'flex') {
-            nav.style.flexDirection = 'column';
-            nav.style.position = 'absolute';
-            nav.style.top = '60px';
-            nav.style.left = '0';
-            nav.style.width = '100%';
-            nav.style.background = '#111';
-            nav.style.padding = '20px';
-        }
-    });
-</script>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="/VideoCameraHoliday/">Home</a></li>
+                <li><a href="/VideoCameraHoliday/city-interview-preview/">City Guides</a></li>
+                <li>Venice</li>
+            </ol>
+        </div>
+    </nav>
+
+    <header>
+        <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
+        <h1>Venice Filmmaker's Guide: Best Spots, Settings & Laws</h1>
+        <p class="subtitle">From the Grand Canal to hidden alleyways—how to film Venice's unique beauty, manage acqua alta, and navigate strict permit rules.</p>
+        <p class="meta"><span>📅 September 4, 2026</span><span>⏱️ 7 min read</span></p>
+    </header>
+
+    <article class="container">
+        <div class="author-box">
+            <div class="author-avatar">📹</div>
+            <div class="author-info">
+                <h4>Dawid Millennium — Travel Videographer</h4>
+                <p>Filmed in Venice during Carnival, Biennale, and quiet winters. Expert in water-based cinematography.</p>
+                <p class="last-updated">🕐 Last updated: September 4, 2026</p>
+            </div>
+        </div>
+
+        <div class="toc">
+            <h3>In This Guide</h3>
+            <ul>
+                <li><a href="#quick-answer">Quick Answer</a></li>
+                <li><a href="#locations">Top 5 Filming Locations</a></li>
+                <li><a href="#settings">Recommended Camera Settings</a></li>
+                <li><a href="#laws">Permits & Drone Laws</a></li>
+                <li><a href="#safety">Safety & Etiquette</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#related">Related Articles</a></li>
+            </ul>
+        </div>
+
+        <div class="quick-answer" id="quick-answer">
+            <h3>⚡ Quick Answer</h3>
+            <p><strong>Best spots:</strong> Grand Canal (Rialto Bridge), St. Mark's Square (sunrise), Dorsoduro (quiet canals), Burano (colorful houses). <strong>Drone law:</strong> Strictly banned in all of Venice without special military/civil aviation waiver (nearly impossible). <strong>Gear:</strong> Waterproof housing essential for acqua alta; polarizer for water reflections.</p>
+        </div>
+
+        <div class="takeaways">
+            <h3>Key Takeaways</h3>
+            <ul>
+                <li><strong>Acqua Alta:</strong> Seasonal flooding (Oct-Jan) can reach knee-height. Waterproof boots and dry bags mandatory for gear.</li>
+                <li><strong>Crowd Management:</strong> St. Mark's Square is impassable mid-day. Film at 05:30-06:30 for empty shots.</li>
+                <li><strong>Gondola Etiquette:</strong> Never film gondoliers or passengers without explicit permission. Many refuse tips for photos.</li>
+                <li><strong>Drone Ban:</strong> Absolute no-fly zone over the lagoon and historic center due to air traffic and privacy laws.</li>
+            </ul>
+        </div>
+
+        <h2 id="locations">Top 5 Filming Locations in Venice</h2>
+        <h3>1. Grand Canal & Rialto Bridge</h3>
+        <p>The main artery of Venice. Film vaporettos gliding past palazzos. Best shot from Rialto Bridge at sunrise or from a vaporetto (Line 1) for moving perspectives.</p>
+        <p><strong>Camera Settings:</strong> Aperture f/8 for sharp architecture. Use polarizer to cut glare on water. Shutter 1/100 for smooth boat motion.</p>
+
+        <h3>2. St. Mark's Square (Piazza San Marco)</h3>
+        <p>Iconic square with Basilica and Campanile. Overwhelmingly crowded 09:00-18:00. The only time to film freely is before 07:00.</p>
+        <p><strong>Tip:</strong> Coffee bars around the square charge €10+ for seating, but standing shots are free. Beware of pickpockets in crowds.</p>
+
+        <h3>3. Dorsoduro District</h3>
+        <p>Quieter, artistic neighborhood with authentic canals. Less touristy, great for capturing local life. Peggy Guggenheim Collection nearby.</p>
+
+        <h3>4. Burano Island</h3>
+        <p>Famous for brightly colored fishermen's houses. Short vaporetto ride from Venice. Perfect for vibrant, saturated footage. Less crowded than main island.</p>
+
+        <h3>5. Cannaregio Canal</h3>
+        <p>Local residential area with fewer tourists. Authentic Venetian atmosphere. Good for "hidden Venice" storytelling.</p>
+
+        <h2 id="settings">Recommended Camera Settings</h2>
+        <table>
+            <tr><th>Scenario</th><th>ISO</th><th>Aperture</th><th>Shutter</th><th>Notes</th></tr>
+            <tr><td>Grand Canal Day</td><td>100</td><td>f/8</td><td>1/125</td><td>Polarizer essential</td></tr>
+            <tr><td>St. Mark's Interior</td><td>1600+</td><td>f/2.8</td><td>1/60</td><td>No flash/tripod</td></tr>
+            <tr><td>Burano Colors</td><td>100</td><td>f/5.6</td><td>1/200</td><td>Slightly underexpose</td></tr>
+            <tr><td>Acqua Alta</td><td>400</td><td>f/4</td><td>1/250</td><td>Waterproof housing</td></tr>
+            <tr><td>Carnival Night</td><td>3200+</td><td>f/1.8</td><td>1/60</td><td>Fast prime lens</td></tr>
+        </table>
+
+        <h2 id="laws">Permits & Drone Laws</h2>
+        <div class="warning-box">
+            <strong>⚠️ Critical:</strong> <strong>Drone ban</strong> is strictly enforced over Venice and the lagoon. No flights allowed without rare military/civil aviation waivers. Fines up to €3,000 and confiscation. Commercial filming in St. Mark's Square requires permit from Procuratoria di San Marco (expensive and slow).
+        </div>
+        <p><strong>Tripod Rules:</strong> Tripods generally tolerated in small streets but banned in crowded zones (St. Mark's, Rialto) without permit. Handheld vlogging is fine.</p>
+
+        <h2 id="safety">Safety & Etiquette</h2>
+        <p><strong>Acqua Alta Protection:</strong> During high water (Oct-Jan), streets flood. Use waterproof boots (available locally) and dry bags for camera gear. Salt water damages electronics instantly.</p>
+        <p><strong>Gondola Etiquette:</strong> Gondoliers are working professionals. Do not film them or their passengers without asking first. Many refuse tips for photos/videos. Respect their privacy.</p>
+        <p><strong>Crowd Safety:</strong> Venice gets extremely crowded. Keep gear strapped tight. Pickpockets operate in dense crowds near Rialto and St. Mark's.</p>
+        <div class="tip-box">
+            <strong>Pro Tip:</strong> Get lost! The best shots are in unnamed alleyways away from main tourist routes. Carry a map offline as GPS struggles in narrow streets.
+        </div>
+
+        <h2 id="faq">FAQ</h2>
+        <div class="faq-item">
+            <h3 class="faq-question">Can I fly drones in Venice?</h3>
+            <div class="faq-answer"><p>No. Strict no-fly zone over the entire city and lagoon. Enforcement is heavy due to air traffic (Marco Polo Airport) and privacy concerns. Don't risk it.</p></div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Is filming allowed in St. Mark's Basilica?</h3>
+            <div class="faq-answer"><p>No video recording inside the Basilica. Photos allowed without flash. Crypt and museum have separate rules. Always check signage at entrance.</p></div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">When is the best time to visit?</h3>
+            <div class="faq-answer"><p>November-February (excluding Christmas/Carnival) for fewest crowds. April-May and September-October for best weather. Avoid August (crowded + hot).</p></div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">How do I handle acqua alta?</h3>
+            <div class="faq-answer"><p>Elevated walkways are provided. Wear waterproof boots. Keep gear in dry bags. If water is above knee level, many streets become impassable.</p></div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Can I film on vaporettos?</h3>
+            <div class="faq-answer"><p>Yes, handheld filming is allowed on public vaporettos. Be mindful of other passengers. Tripods block aisles and are discouraged during busy times.</p></div>
+        </div>
+
+        <h2 id="related">Related Articles</h2>
+        <div class="related-articles">
+            <a class="related-card" href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html"><h4>Best Waterproof Cameras</h4><p>For acqua alta and canal shoots.</p></a>
+            <a class="related-card" href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html"><h4>GoPro Hero 13 Review</h4><p>Perfect for waterproof travel filming.</p></a>
+            <a class="related-card" href="/VideoCameraHoliday/city-interview-preview/Rome.html"><h4>Rome Filmmaker's Guide</h4><p>Italian city comparison.</p></a>
+        </div>
+        
+        <p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
+    </article>
+
+    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-brand">📹 Holiday Video Camera</div>
+                <p class="footer-about">Real travel camera testing. No lab charts — just what survives hand luggage, beaches, mountains, and city breaks. Written by videographers who actually travel.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
+                    <li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/">How-To</a></li>
+                    <li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Popular Articles</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs ZV-E10 II</a></li>
+                    <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
+                    <li><a href="/VideoCameraHoliday/contact.html">Contact</a></li>
+                    <li><a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/VideoCameraHoliday/terms.html">Terms of Use</a></li>
+                    <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a>. All rights reserved.</div>
+            <div class="footer-social">
+                <a href="#" aria-label="Follow us on YouTube">YouTube</a>
+                <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+                <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                <a href="#" aria-label="Subscribe to RSS">RSS</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
