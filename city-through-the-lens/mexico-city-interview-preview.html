@@ -73,6 +73,41 @@
         align-items: center;
         gap: 0.25rem;
     }
+    /* --- Lazy-Loaded Video Embed Styles --- */
+.video-section {
+    margin: 3rem 0;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.video-section h2 {
+    font-size: 1.75rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+.video-section .subtitle {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000; /* Shows black while loading */
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 </style>
 
 </head>
@@ -381,7 +416,6 @@
     </style>
 </head>
 <body>
->>>>>>> 9cfc514542dbb7f8f6d2b504fe521f5f283dcce7
 
     <!-- HEADER & MEGA MENU -->
     <header>
@@ -454,7 +488,7 @@
         <h1>Mexico City Through the Lens: Filming the Capital</h1>
         <p class="meta">Updated for 2026 | 12 min read | Field Tested in CDMX</p>
 
-<<<<<<< HEAD
+
 <footer class="site-footer">
         <div class="footer-container">
             <section class="footer-section">
@@ -481,7 +515,25 @@
             <h3>Day 3: Ancient Giants (Teotihuacán)</h3>
             <p><strong>6:00 AM - 11:00 AM:</strong> Take an early Uber to the <strong>Pyramids of the Sun and Moon</strong>. Arriving right at opening time is crucial to avoid crowds. Use a polarizing filter to cut through the high-altitude haze and make the sky pop. The vast open spaces are perfect for drone footage (check local regulations, as drones are restricted in some archaeological zones—always ask on-site!).</p>
         </div>
-
+<section class="video-section">
+    <h2>🎬 Visualize Your Route: Centro Histórico Walking Tour</h2>
+    <p class="subtitle">Not sure how far the Zócalo is from the Palacio de Bellas Artes? Watch this 4K walking tour to plan your morning route and see the exact lighting conditions at 9:00 AM.</p>
+    
+    <div class="video-wrapper">
+        <!-- Replace 'ScMzIvxBSi4' with your actual YouTube Video ID -->
+        <iframe 
+            loading="lazy" 
+            src="https://www.youtube.com/embed/ScMzIvxBSi4" 
+            title="4K Walking Tour of Mexico City Centro Histórico" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <div class="highlight-box" style="margin-top: 1.5rem; margin-bottom: 0;">
+        <strong> Videographer's Tip:</strong> When filming this exact route, start at the <strong>Metro Zócalo exit</strong> right at 8:30 AM. The morning light hits the white marble of the Cathedral beautifully, and the plaza is mostly empty until the 9:00 AM flag ceremony. Use a 24mm wide-angle lens to capture the scale of the buildings!
+    </div>
+</section>
         <div class="content-section">
             <h2>🚕 Transportation Tips for Videographers</h2>
             <p>Mexico City is massive. While the Metro is incredibly cheap (5 MXN), it is heavily crowded during peak hours, making it a nightmare for carrying expensive camera gear.</p>
