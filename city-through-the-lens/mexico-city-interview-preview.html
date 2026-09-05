@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mexico City Through the Lens: Local Videographer Guide | Holiday Video Camera</title>
@@ -253,109 +254,221 @@
 <header>
         <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
         <h1>Beijing Filming Guide: DJI Mini 4 Pro in Dust</h1>
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexico City Interview Preview: Filming the Capital | Holiday Video Camera</title>
+    <meta name="description" content="Explore Mexico City through the lens. Get specific filming itineraries, gear tips, and local insights for capturing CDMX.">
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { color: var(--text); line-height: 1.6; background: var(--light); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
 
-    <div class="hero-image-container" style="margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #333;">
-        <img src="https://loremflickr.com/800/450/mexico,city,zocalo?lock=7708" alt="Cinematic street view of Mexico City showing local atmosphere and lighting conditions for videographers" width="800" height="450" style="width: 100%; height: auto; display: block;" loading="eager">
-        <p style="font-size: 0.8rem; color: #888; margin: 10px 0 0 0; text-align: center;"><em>Figure 1: Typical filming environment in Mexico City.</em></p>
-    </div>
-    <p style="color: #666; font-size: 0.9rem; margin-top: -20px; margin-bottom: 20px;">📅 Last Updated: 2026-08-31</p>
-        <p class="subtitle">
-            One question, asked in the 50 largest metro areas on Earth: how do you really film your hometown?
-            Local shooters answer with gear, settings, light, permits, and etiquette — no lab charts, no stock footage.
-        </p>
-        <div class="meta">
-            <span>📅 September 2, 2026</span>
-            <span>⏱️ 8 min read</span>
-            <span>✅ Updated: September 2, 2026</span>
+        /* --- Header & Mega Menu --- */
+        header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); display: flex; align-items: center; gap: 0.5rem; }
+        
+        .mega-menu { display: flex; gap: 2rem; }
+        .mega-menu > li { position: relative; padding: 1rem 0; }
+        .mega-menu > li > a { font-weight: 600; color: var(--dark); transition: color 0.2s; }
+        .mega-menu > li:hover > a { color: var(--primary); }
+        
+        .dropdown {
+            position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+            background: #fff; border: 1px solid var(--border); border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 1.5rem;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+            min-width: 600px; opacity: 0; visibility: hidden; transition: all 0.3s ease;
+        }
+        .mega-menu > li:hover .dropdown { opacity: 1; visibility: visible; top: 100%; }
+        
+        .dropdown-col h4 { font-size: 0.85rem; text-transform: uppercase; color: var(--primary); margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+        .dropdown-col ul li { margin-bottom: 0.5rem; }
+        .dropdown-col ul li a { font-size: 0.95rem; color: var(--text); }
+        .dropdown-col ul li a:hover { color: var(--primary); text-decoration: underline; }
+
+        /* --- Main Content --- */
+        main { max-width: 900px; margin: 3rem auto; padding: 0 2rem; }
+        h1 { font-size: 2.5rem; color: var(--dark); margin-bottom: 1rem; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 2rem; }
+        .content-section { margin-bottom: 3rem; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { font-size: 1.75rem; color: var(--dark); margin-bottom: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; display: inline-block; }
+        h3 { font-size: 1.25rem; color: var(--dark); margin: 1.5rem 0 0.5rem; }
+        p { margin-bottom: 1rem; }
+        .highlight-box { background: #eff6ff; border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 4px; }
+
+        /* --- Footer --- */
+        footer { background: var(--dark); color: #cbd5e1; padding: 4rem 2rem 2rem; margin-top: 4rem; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .footer-col h4 { color: #fff; margin-bottom: 1rem; font-size: 1.1rem; }
+        .footer-col ul li { margin-bottom: 0.5rem; }
+        .footer-col ul li a:hover { color: #fff; text-decoration: underline; }
+        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid #334155; text-align: center; font-size: 0.9rem; }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .mega-menu { display: none; /* Add mobile toggle logic here */ }
+            .dropdown { min-width: 100%; grid-template-columns: 1fr; position: static; transform: none; box-shadow: none; border: none; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+>>>>>>> 9cfc514542dbb7f8f6d2b504fe521f5f283dcce7
+
+    <!-- HEADER & MEGA MENU -->
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">📹 Holiday Video Camera</a>
+            <nav>
+                <ul class="mega-menu">
+                    <li class="has-dropdown">
+                        <a href="/guides/">Guides</a>
+                        <div class="dropdown">
+                            <div class="dropdown-col">
+                                <h4> Buying Guides</h4>
+                                <ul>
+                                    <li><a href="/guides/best-budget-holiday-camera-under-500.html">Best Budget Under $500</a></li>
+                                    <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
+                                    <li><a href="/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-col">
+                                <h4>🏖️ Destination Guides</h4>
+                                <ul>
+                                    <li><a href="/guides/best-camera-hiking-holidays.html">Hiking Holidays</a></li>
+                                    <li><a href="/guides/best-camera-ski-holidays.html">Ski Holidays</a></li>
+                                    <li><a href="/guides/best-camera-southeast-asia.html">Southeast Asia</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-col">
+                                <h4>📋 Planning & Tips</h4>
+                                <ul>
+                                    <li><a href="/guides/camera-gifts-for-travelers.html">Camera Gifts</a></li>
+                                    <li><a href="/guides/travel-camera-checklist-2026.html">Travel Checklist</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="/reviews/">Reviews</a>
+                        <div class="dropdown">
+                            <div class="dropdown-col">
+                                <h4>📸 Gimbal & Action</h4>
+                                <ul>
+                                    <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
+                                    <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+                                    <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-col">
+                                <h4>📱 Vlogging & Mirrorless</h4>
+                                <ul>
+                                    <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+                                    <li><a href="/reviews/canon-powershot-v10-review.html">Canon PowerShot V10</a></li>
+                                    <li><a href="/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/how-to/">How-To</a></li>
+                    <li><a href="/destinations/">Destinations</a></li>
+                    <li><a href="/editing/">Editing</a></li>
+                    <li><a href="/comparisons/">Comparisons</a></li>
+                    <li><a href="/city-through-the-lens/">City Series</a></li>
+                    <li><a href="/about/">About</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-<main>
-  <article itemscope itemtype="https://schema.org/Article">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="/">Home</a> › <a href="/city-through-the-lens/">Cities</a> › <span>Mexico City</span>
-      </nav>
-      
-      <h1 itemprop="headline">City Through the Lens: Mexico City, Mexico</h1>
-      
-      <p class="intro" itemprop="description">Local videographers reveal how they film their hometown — the real locations, permit hurdles, and techniques you won't find in guidebooks.</p>
-      
-      <div class="video-slot">
-  <div class="video-placeholder">🎬 Local videographer interview coming soon — subscribe on YouTube to see it first</div>
-</div>
-      
-      <section class="quick-takeaways">
-        <h2>Quick Takeaways for Filmmakers</h2>
-        <ul>
-          <li><strong>Best filming season:</strong> Highland subtropical; dry Nov-Apr, wet May-Oct</li>
-          <li><strong>Top 3 landmarks:</strong> Zócalo & Metropolitan Cathedral, Teotihuacán Pyramids, Frida Kahlo Museum (Casa Azul)</li>
-          <li><strong>Main airport:</strong> Benito Juárez</li>
-          <li><strong>Drone rules:</strong>  need SEDENA approval.</li>
-          <li><strong>Featured camera:</strong> Canon EOS R6 II</li>
-        </ul>
-      </section>
-      
-      <section class="must-film-locations">
-        <h2>3 Must-Film Locations in Mexico City</h2>
-        
-        <div class="location-card">
-          <h3>1. Zócalo & Metropolitan Cathedral</h3>
-          <p><strong>Filming Tip:</strong> Largest cathedral Americas; sinking angle; plaza events; drone banned.</p>
-        </div>
-        
-        <div class="location-card">
-          <h3>2. Teotihuacán Pyramids</h3>
-          <p><strong>Filming Tip:</strong> Sun/Moon pyramids; climb early; 50km from city; tour or bus.</p>
-        </div>
-        
-        <div class="location-card">
-          <h3>3. Frida Kahlo Museum (Casa Azul)</h3>
-          <p><strong>Filming Tip:</strong> Coyoacán neighborhood; book weeks ahead; no interior photography.</p>
-        </div>
-      </section>
-      
-      <section class="weather-reality">
-        <h2>Weather Reality Check</h2>
-        <p>Highland subtropical; dry Nov-Apr, wet May-Oct. Mild year-round.</p>
-        <p><strong>Pro tip:</strong> Plan your shoot dates around these conditions. The "best" months mean better light, fewer crowds, and more predictable weather windows.</p>
-      </section>
-      
-      <section class="airport-transfer">
-        <h2>Airport Transfer & Arrival Tips</h2>
-        <p><strong>Benito Juárez (MEX) 30-60min metro/Uber.</strong></p>
-        <p>Factor in transfer time when booking flights. Arriving early gives you buffer for gear checks and acclimatization before shooting.</p>
-      </section>
-      
-      <section class="permits-etiquette">
-        <h2>Permits, Rules & Local Etiquette</h2>
-        <p>Archaeological zones rules. Museums strict. Drones need SEDENA approval.</p>
-        <p><strong>Remember:</strong> Always ask before filming people, especially in religious or residential areas. Respect local customs — it's the difference between getting great footage and being asked to delete it.</p>
-      </section>
-      
-      <section class="coming-soon-interview">
-        <h2>Coming Soon: Local Videographer Interview</h2>
-        <p>We're currently filming interviews with local creators in Mexico City who will share:</p>
-        <ul>
-          <li>How they capture Zócalo & Metropolitan Cathedral without the crowds</li>
-          <li>Their go-to settings for altitude & urban scale</li>
-          <li>Hidden spots tourists never find</li>
-          <li>How to navigate permit requirements as a foreign filmmaker</li>
-        </ul>
-        <p><strong>Are you a videographer based in Mexico City?</strong> <a href="mailto:dawid@holidayvideocamera.com">Contact us</a> to be featured in this series.</p>
-      </section>
-    </div>
-  </article>
-</main>
+    <!-- MAIN CONTENT: MEXICO CITY TRAVEL & FILMING GUIDE -->
+    <main>
+        <h1>Mexico City Through the Lens: Filming the Capital</h1>
+        <p class="meta">Updated for 2026 | 12 min read | Field Tested in CDMX</p>
 
+<<<<<<< HEAD
 <footer class="site-footer">
         <div class="footer-container">
             <section class="footer-section">
                 <h4>🎬 Series</h4>
+=======
+        <div class="content-section">
+            <h2>🌤️ Weather & Best Time to Film</h2>
+            <p>Mexico City sits at 2,240 meters (7,350 ft), giving it a mild, spring-like climate year-round. However, for the best lighting and comfort while carrying gear, aim for the <strong>dry season (November to April)</strong>.</p>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> If you visit between May and October, expect intense afternoon thunderstorms. Film your outdoor B-roll between 8:00 AM and 2:00 PM, and use the rainy afternoons to shoot the stunning, moody interiors of the Palacio de Bellas Artes or the Museo Soumaya.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>️ 3-Day Filming Itinerary</h2>
+            <h3>Day 1: The Historic Heart (Centro Histórico)</h3>
+            <p><strong>7:00 AM - 9:00 AM:</strong> Start at the <strong>Zócalo</strong> and the <strong>Metrobús stop</strong> to capture the morning commute and the flag-raising ceremony. Use a wide-angle lens (like the DJI Osmo Pocket 3's 20mm equivalent) to capture the scale of the <strong>Catedral Metropolitana</strong>.</p>
+            <p><strong>4:00 PM - 6:30 PM:</strong> Head to the <strong>Palacio de Bellas Artes</strong>. The white marble exterior glows beautifully during golden hour. Cross the street to the <strong>Torre Latinoamericana</strong> observation deck for sweeping sunset cityscapes.</p>
+
+            <h3>Day 2: Bohemian Streets & Colors (Coyoacán & Roma)</h3>
+            <p><strong>9:00 AM - 12:00 PM:</strong> Explore <strong>Coyoacán</strong>. The cobblestone streets around the <strong>Jardín Centenario</strong> are perfect for testing your camera's stabilization (especially if you're using the Sony ZV-1 II without a gimbal). Don't miss the vibrant blue exterior of the <strong>Frida Kahlo Museum</strong> (book weeks in advance!).</p>
+            <p><strong>5:00 PM - 8:00 PM:</strong> Walk through <strong>Roma Norte</strong> and <strong>Condesa</strong>. The Art Deco architecture and leafy parks (like Parque México) offer incredible dappled light. This is a great spot to test portrait video modes.</p>
+
+            <h3>Day 3: Ancient Giants (Teotihuacán)</h3>
+            <p><strong>6:00 AM - 11:00 AM:</strong> Take an early Uber to the <strong>Pyramids of the Sun and Moon</strong>. Arriving right at opening time is crucial to avoid crowds. Use a polarizing filter to cut through the high-altitude haze and make the sky pop. The vast open spaces are perfect for drone footage (check local regulations, as drones are restricted in some archaeological zones—always ask on-site!).</p>
+        </div>
+
+        <div class="content-section">
+            <h2>🚕 Transportation Tips for Videographers</h2>
+            <p>Mexico City is massive. While the Metro is incredibly cheap (5 MXN), it is heavily crowded during peak hours, making it a nightmare for carrying expensive camera gear.</p>
+            <ul>
+                <li><strong>Best Option:</strong> Use <strong>Uber</strong> or <strong>DiDi</strong>. They are affordable, safe, and allow you to keep your gear in the car between locations. Always request an "Uber Comfort" or "DiDi Express" for extra legroom for your backpack.</li>
+                <li><strong>Metrobús:</strong> Great for B-roll of local life, but keep your camera bag zipped and in front of you.</li>
+                <li><strong>Walking:</strong> CDMX is very walkable in specific neighborhoods (Roma, Condesa, Centro), but distances between neighborhoods are too far to walk with gear in the midday sun.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>🌮 Food Recommendations (Great for B-Roll & Energy)</h2>
+            <p>Filming makes you hungry! Here is where to eat, and what to film while you eat:</p>
+            <ul>
+                <li><strong>Tacos al Pastor at El Huequito (Centro):</strong> The original spot. Film the vertical spit (trompo) of meat being sliced. It’s a masterclass in food videography. (Calle 5 de Mayo 74).</li>
+                <li><strong>Churros at El Moro (Centro):</strong> Open 24 hours. The dipping of the churros into the thick hot chocolate is a must-capture close-up shot. (Eje Central Lázaro Cárdenas 42).</li>
+                <li><strong>Pujol (Polanco):</strong> If you want high-end B-roll, Chef Enrique Olvera’s restaurant is visually stunning. The famous "mole madre" dish is a work of art. (Tennyson 133).</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>🎭 Cultural Highlights to Capture</h2>
+            <p><strong>Lucha Libre at Arena México:</strong> Held on Tuesday, Friday, and Sunday nights. This is the ultimate test for low-light, high-shutter-speed videography. The colorful masks and fast-paced action will push your camera's autofocus to the limit. Buy tickets via Ticketmaster in advance and aim for the front rows for the best angles.</p>
+            <p><strong>Día de los Muertos (Nov 1-2):</strong> If you are lucky enough to be here, the parade and the altar-building in the Zócalo offer unparalleled cultural footage. Remember to always ask permission before filming close-ups of people's faces or specific family altars.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>🛂 A Quick Note on Visas & Policies</h2>
+            <p><em>Please note that visa policies and entry requirements can change over time. Citizens of the US, Canada, UK, EU, and many other countries do not need a visa for tourism stays up to 180 days, but you must fill out the FMM (Forma Migratoria Múltiple) upon arrival. Always check the official Mexican consulate website for the most current regulations before your trip.</em></p>
+        </div>
+    </main>
+
+    <!-- FOOTER MENU -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>🎬 Latest Real-World Tests</h4>
+>>>>>>> 9cfc514542dbb7f8f6d2b504fe521f5f283dcce7
                 <ul>
-                    <li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li>
-                    <li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li>
+                    <li><a href="#">Insta360 X5: Morning Rooftop Lake View, Hanoi</a></li>
+                    <li><a href="#">DJI Osmo Action 6: Male Airport, Hot Weather Test</a></li>
+                    <li><a href="#">Insta360 X5: 4-Star Beach Resort, Zanzibar</a></li>
                 </ul>
+<<<<<<< HEAD
             </section>
 
             <section class="footer-section">
@@ -410,18 +523,73 @@
 
             <section class="footer-section">
                 <h4>ℹ️ About</h4>
+=======
+            </div>
+            <div class="footer-col">
+                <h4>🛒 Top Buying Guides</h4>
                 <ul>
-                    <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
-                    <li><a href="/VideoCameraHoliday/">Home</a></li>
-                    <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
+                    <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+                    <li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+                    <li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+                    <li><a href="/guides/travel-camera-checklist-2026.html">Camera Checklist</a></li>
                 </ul>
-            </section>
+            </div>
+            <div class="footer-col">
+                <h4>📸 Popular Reviews</h4>
+                <ul>
+                    <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+                    <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+                    <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+                    <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4> How-To Essentials</h4>
+>>>>>>> 9cfc514542dbb7f8f6d2b504fe521f5f283dcce7
+                <ul>
+                    <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+                    <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+                    <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+                    <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>🏖️ Destinations</h4>
+                <ul>
+                    <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+                    <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+                    <li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+                    <li><a href="/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>✂️ Editing & Comparisons</h4>
+                <ul>
+                    <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+                    <li><a href="/editing/best-editing-apps-holiday-footage.html">Editing Apps</a></li>
+                    <li><a href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
+                    <li><a href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Camera</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>🌍 Series & Info</h4>
+                <ul>
+                    <li><a href="/city-through-the-lens/">City Through the Lens</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+            <p>© 2026 Holiday Video Camera — Real travel camera testing. No lab charts.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748b;">Some buying guides on this site contain affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
         </div>
     </footer>
+<<<<<<< HEAD
 <script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+=======
+
+>>>>>>> 9cfc514542dbb7f8f6d2b504fe521f5f283dcce7
 </body>
 </html>
