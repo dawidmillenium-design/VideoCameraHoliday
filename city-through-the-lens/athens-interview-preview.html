@@ -153,55 +153,235 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
   "publisher": { "@type": "Organization", "name": "Holiday Video Camera" }
 }
 </script>
+<link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
 </head>
 <body>
-<nav class="top-nav" role="navigation" aria-label="Main Navigation">
-    <div class="nav-container">
-        <a href="/VideoCameraHoliday/" class="logo" aria-label="Holiday Video Camera Home">📹 Holiday Video Camera</a>
-        <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-        <ul class="nav-links" role="menubar">
-            <li role="none"><a href="/VideoCameraHoliday/" role="menuitem">Home</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/city-through-the-lens/" role="menuitem">Series</a></li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/reviews/" role="menuitem" aria-haspopup="true" aria-expanded="false">Reviews <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu" aria-label="Reviews Menu">
-                    <div class="mega-menu-grid">
-                        <div class="mega-menu-column"><h4>Camera Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Mirrorless Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50</a></li><li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony ZV-E10 II</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Accessory Reviews</h4><ul><li><a href="/VideoCameraHoliday/accessories/best-camera-strap-hiking.html">Camera Straps</a></li><li><a href="/VideoCameraHoliday/accessories/best-camera-bags-travel.html">Camera Bags</a></li></ul></div>
+<nav class="top-nav" aria-label="Primary navigation">
+        <div class="nav-container">
+            <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+            <ul class="nav-links">
+                <li><a data-section="home" href="/VideoCameraHoliday/">Home</a></li>
+
+                <!-- GUIDES MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/guides/" aria-haspopup="true">Guides ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>🛒 Buying Guides</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Best Budget Holiday Camera Under 500</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Best Camera Hiking Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Best Camera Ski Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-southeast-asia.html">Best Camera Southeast Asia</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Best Compact Cameras City Breaks</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Holiday Video Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras Travel</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras Beach</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🏖️ Destination Guides</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Best Camera Hiking Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Best Camera Ski Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-southeast-asia.html">Best Camera Southeast Asia</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Best Compact Cameras City Breaks</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras Beach</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>📋 Planning & Tips</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/state-of-travel-cameras-2026.html">State Of Travel Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/what-to-film-european-night-markets.html">What To Film European Night Markets</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🎯 Quick Links</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Camera Checklist</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/state-of-travel-cameras-2026.html">State of Cameras</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mega-menu-footer"><a href="/VideoCameraHoliday/reviews/">View All Reviews →</a></div>
-                </div>
-            </li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/guides/" class="active" role="menuitem" aria-haspopup="true" aria-expanded="false">Buying Guides <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu" aria-label="Guides Menu">
-                    <div class="mega-menu-grid">
-                        <div class="mega-menu-column"><h4>Top Picks</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Vlogging Cameras</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>By Activity</h4><ul><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Cameras</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Career & Tips</h4><ul><li><a href="/VideoCameraHoliday/guides/becoming-travel-filmmaker-career-guide-2026.html">Becoming a Travel Filmmaker</a></li><li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Videos</a></li></ul></div>
+                </li>
+
+                <!-- REVIEWS MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/reviews/" aria-haspopup="true">Reviews ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>📸 Gimbal Cameras</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">Dji Osmo Action 5 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4P Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Cameras Roundup</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🎬 Action Cameras</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">Dji Osmo Action 5 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-black-review.html">GoPro Hero 13 Black Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S Hands Free Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/insta360-x4-review.html">Insta360 X4 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5 Review</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>📱 Vlogging & Mirrorless</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon Eos R50 V Creator Kit Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/canon-powershot-v10-review.html">Canon Powershot V10 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/fujifilm-x-m5-travel-review.html">Fujifilm X M5 Travel Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">Iphone 16 Pro Video Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/nikon-z50-ii-creator-kit-review.html">Nikon Z50 Ii Creator Kit Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony Zv 1 Ii Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony Zv E10 Ii Night Market Review</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🎥 Roundups</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/budget-4k-camcorder-roundup.html">Budget 4K Camcorders</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mega-menu-footer"><a href="/VideoCameraHoliday/guides/">View All Guides →</a></div>
-                </div>
-            </li>
-            <li role="none"><a href="/VideoCameraHoliday/how-to/" role="menuitem">How-To</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/destinations/" role="menuitem">Destinations</a></li>
-            <li role="none"><a href="/VideoCameraHoliday/editing/" role="menuitem">Editing</a></li>
-            <li role="none">
-                <a href="/VideoCameraHoliday/comparisons/" role="menuitem" aria-haspopup="true" aria-expanded="false">Comparisons <span class="dropdown-arrow">▼</span></a>
-                <div class="mega-menu" role="menu" aria-label="Comparisons Menu">
-                    <div class="mega-menu-grid">
-                        <div class="mega-menu-column"><h4>Camera vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li><li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs Sony ZV-E10 II</a></li><li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Accessory Face-offs</h4><ul><li><a href="/VideoCameraHoliday/comparisons/peak-design-vs-blackrapid.html">Peak Design vs BlackRapid</a></li><li><a href="/VideoCameraHoliday/comparisons/dji-vs-gopro.html">DJI vs GoPro</a></li></ul></div>
-                        <div class="mega-menu-column"><h4>Smartphone vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated Camera</a></li></ul></div>
+                </li>
+
+                <!-- HOW‑TO MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/how-to/" aria-haspopup="true">How‑To ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>🎬 Filming Techniques</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html">Film In Rain Protect Gear</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-markets-street-food.html">Film Markets Street Food</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-sunsets-golden-hour.html">Film Sunsets Golden Hour</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🔧 Technical Skills</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/how-to/audio-tips-noisy-locations.html">Audio Tips Noisy Locations</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Travel Photos Videos</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Choose Memory Card 4K Video</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/edit-travel-videos-phone-tablet.html">Edit Travel Videos Phone Tablet</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilize Videos Without Gimbal</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/vertical-video-settings-travel.html">Vertical Video Settings Travel</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>⚡ Quick Tips</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">No Gimbal Needed</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Memory Cards</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Better Videos</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mega-menu-footer"><a href="/VideoCameraHoliday/comparisons/">View All Comparisons →</a></div>
-                </div>
-            </li>
-            <li role="none"><a href="/VideoCameraHoliday/about/" role="menuitem">About</a></li>
-        </ul>
-    </div>
-</nav>
+                </li>
+
+                <!-- DESTINATIONS MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/destinations/" aria-haspopup="true">Destinations ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>🏖️ Beach & Water</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🏔️ Adventure</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-desert-travel.html">Desert Travel</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🏙️ City Breaks</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- EDITING MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/editing/" aria-haspopup="true">Editing ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>✂️ Editing Software</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
+                                    <li><a href="/VideoCameraHoliday/editing/post-travel-videos-youtube.html">Post to YouTube</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🎨 Color & Style</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">Color Grading</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- COMPARISONS MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/comparisons/" aria-haspopup="true">Comparisons ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>⚔️ Head‑to‑Head</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/comparisons/action-camera-vs-gimbal-camera.html">Action Camera Vs Gimbal Camera</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget Vs Premium Travel Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-4p-vs-gopro-hero-13-black.html">DJI Pocket 4P Vs Gopro Hero 13</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">Iphone 16 Pro Vs Dedicated Camera</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/sony-a7cr-vs-fujifilm-x-t50.html">Sony A7Cr Vs Fujifilm X T50</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>💰 Value Picks</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- CITY & ABOUT -->
+                <li><a data-section="city-through-the-lens" href="/VideoCameraHoliday/city-through-the-lens/" class="active">🌍 City Series</a></li>
+                <li><a data-section="about" href="/VideoCameraHoliday/about/">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
@@ -223,7 +403,7 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
 <article class="container">
     <div class="quick-answer">
         <h3>⚡ Quick Answer</h3>
-        <p>Athens rewards filmmakers who embrace contrast: ancient marble against street art, quiet Orthodox churches beside bustling tavernas. Shoot the Acropolis at sunrise (6:30 AM summer, 7:30 AM winter) from Areopagus Hill for crowd-free shots. Use a DJI Pocket 3 for handheld walking footage through Plaka's narrow streets, or Insta360 X5 for immersive 360° captures of Syntagma Square's changing of the guard. Golden hour hits the Parthenon's west face around 7 PM in summer, creating dramatic shadows through the columns.</p>
+        <p>Athens rewards filmmakers who embrace contrast: ancient marble against street art, quiet Orthodox churches beside bustling tavernas. Shoot the Acropolis at sunrise (6:30 AM summer, 7:30 AM winter) from Areopagus Hill for crowd-free shots. Use a DJI Pocket 4P for handheld walking footage through Plaka's narrow streets, or Insta360 X5 for immersive 360° captures of Syntagma Square's changing of the guard. Golden hour hits the Parthenon's west face around 7 PM in summer, creating dramatic shadows through the columns.</p>
     </div>
 
     <div class="toc">
@@ -255,7 +435,7 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
 
     <h3>2. Plaka District Alleyways</h3>
     <p>Ancient winding streets beneath the Acropolis, filled with bougainvillea, traditional shops, and cats. Best filmed early morning (8-9 AM) or late evening when cruise ship crowds thin. The narrow lanes create natural leading lines.</p>
-    <p><strong>Recommended Settings:</strong> Handheld 4K/30fps with active stabilization (DJI Pocket 3 excels here). f/2.8 for shallow depth of field isolating subjects against blurred backgrounds. ISO 400-800 in shaded alleys.</p>
+    <p><strong>Recommended Settings:</strong> Handheld 4K/30fps with active stabilization (DJI Pocket 4P excels here). f/2.8 for shallow depth of field isolating subjects against blurred backgrounds. ISO 400-800 in shaded alleys.</p>
 
     <h3>3. Syntagma Square – Changing of the Guard</h3>
     <p>The Evzones ceremony at the Tomb of the Unknown Soldier happens hourly on the hour. The Sunday 11 AM parade from Parliament to Syntagma is the most elaborate. Film from the steps in front of Parliament for head-on shots.</p>
@@ -267,7 +447,7 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
 
     <h3>5. Psirri Neighborhood at Night</h3>
     <p>Athens' hippest district transforms after dark: street art, live rebetiko music, crowded mezze tavernas. This is where you capture authentic Athenian nightlife. Film Thursday-Saturday for maximum energy.</p>
-    <p><strong>Recommended Settings:</strong> Low-light champions needed. DJI Pocket 3's 1-inch sensor handles this well at ISO 1600-3200. f/1.8-2.8, 24fps. Embrace available neon and string lights — they create atmospheric bokeh.</p>
+    <p><strong>Recommended Settings:</strong> Low-light champions needed. DJI Pocket 4P's 1-inch sensor handles this well at ISO 1600-3200. f/1.8-2.8, 24fps. Embrace available neon and string lights — they create atmospheric bokeh.</p>
 
     <h2 id="golden-hour">Golden Hour & Blue Hour Times by Season</h2>
     <table>
@@ -282,7 +462,7 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
     </div>
 
     <h2 id="gear-recommendations">Gear Recommendations for Athens</h2>
-    <p><strong>Primary Camera: DJI Osmo Pocket 3</strong> — Perfect for navigating Plaka's crowded streets without drawing attention. The gimbal stabilization handles walking shots through uneven cobblestones smoothly. Battery life easily covers a full morning shoot (3-4 hours).</p>
+    <p><strong>Primary Camera: DJI Osmo Pocket 4P</strong> — Perfect for navigating Plaka's crowded streets without drawing attention. The gimbal stabilization handles walking shots through uneven cobblestones smoothly. Battery life easily covers a full morning shoot (3-4 hours).</p>
     <p><strong>B-Roll Alternative: Insta360 X5</strong> — Capture immersive 360° footage of Syntagma Square ceremonies or Acropolis panoramas. Reframe in post to follow action without worrying about composition during filming. The invisible selfie stick creates unique perspectives around ancient columns.</p>
     <p><strong>Audio: Rode Wireless GO II</strong> — Essential for interviews in windy conditions atop Areopagus Hill. The compact transmitters clip discreetly under clothing. Backup audio with your camera's internal mic for safety.</p>
     <p><strong>Tripod: Peak Design Travel Tripod</strong> — Compact enough for carry-on, sturdy enough for long exposures during blue hour. The low-angle mode works perfectly for ground-level Acropolis shots.</p>
@@ -358,52 +538,80 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
     <p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
 </article>
 
-<footer class="site-footer" role="contentinfo" aria-label="Site Footer">
-    <div class="footer-container">
-        <div class="footer-column">
-            <div class="footer-brand">📹 Holiday Video Camera</div>
-            <p class="footer-about">Real travel camera testing. No lab charts — just what survives hand luggage, beaches, mountains, and city breaks. Written by videographers who actually travel.</p>
+<footer class="site-footer">
+        <div class="footer-container">
+            <section class="footer-section">
+                <h4>🎬 Series</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li>
+                    <li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h4>🛒 Top Buying Guides</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+                    <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+                    <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+                    <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h4>📸 Popular Reviews</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">DJI Pocket 4P</a></li>
+                    <li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-black-review.html">GoPro Hero 13 Black</a></li>
+                    <li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">DJI Action 5 Pro</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h4>🎬 How‑To Essentials</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h4>🏖️ Destinations</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h4>✂️ Editing & Comparisons</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">Color Grading</a></li>
+                    <li><a href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html">Editing Apps</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-4p-vs-gopro-hero-13-black.html">Pocket 3 vs Hero 13</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Camera</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h4>ℹ️ About</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
+                    <li><a href="/VideoCameraHoliday/">Home</a></li>
+                    <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </section>
         </div>
-        <div class="footer-column">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
-                <li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
-                <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
-                <li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
-                <li><a href="/VideoCameraHoliday/how-to/">How-To</a></li>
-                <li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
-            </ul>
+
+        <div class="footer-bottom">
+            <p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
         </div>
-        <div class="footer-column">
-            <h4>Popular Articles</h4>
-            <ul>
-                <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs GoPro 13</a></li>
-                <li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs ZV-E10 II</a></li>
-                <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
-                <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h4>Connect</h4>
-            <ul>
-                <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
-                <li><a href="/VideoCameraHoliday/contact.html">Contact</a></li>
-                <li><a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a></li>
-                <li><a href="/VideoCameraHoliday/terms.html">Terms of Use</a></li>
-                <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a>. All rights reserved.</div>
-        <div class="footer-social">
-            <a href="#" aria-label="Follow us on YouTube">YouTube</a>
-            <a href="#" aria-label="Follow us on Instagram">Instagram</a>
-            <a href="#" aria-label="Follow us on Twitter">Twitter</a>
-            <a href="#" aria-label="Subscribe to RSS">RSS</a>
-        </div>
-    </div>
-</footer>
+    </footer>
+<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
 </body>
 </html>
