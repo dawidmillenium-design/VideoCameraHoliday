@@ -39,6 +39,52 @@
         .stat .label { font-size: 0.85rem; color: #888; }
         .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: #e94560; color: #fff; padding: 8px 16px; border-radius: 0 0 8px 8px; z-index: 9999; text-decoration: none; font-weight: bold; }
         .skip-link:focus { top: 0; }
+    
+        /* Breadcrumb navigation */
+        .breadcrumb {
+            background: #111;
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .breadcrumb .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .breadcrumb ol {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .breadcrumb li {
+            display: inline-flex;
+            align-items: center;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: "›";
+            margin: 0 10px;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .breadcrumb a {
+            color: #e94560;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .breadcrumb a:hover {
+            color: #ff6b6b;
+            text-decoration: underline;
+        }
+        .breadcrumb li:last-child span {
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+
     </style>
 
     <style media="print" id="nonCriticalCSS">
@@ -157,6 +203,31 @@
             <div class="stat"><div class="num">2026</div><div class="label">Latest Advice</div></div>
         </div>
     </header>
+
+        <!-- ===== BREADCRUMB ===== -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/VideoCameraHoliday/">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/VideoCameraHoliday/city-through-the-lens/">
+                            <span itemprop="name">City Through the Lens</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Bangkok</span>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
 
     <!-- ===== MAIN CONTENT ===== -->
     <article class="container" id="main-content">
