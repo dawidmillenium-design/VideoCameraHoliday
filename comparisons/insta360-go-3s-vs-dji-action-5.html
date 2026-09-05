@@ -149,6 +149,7 @@
     @media (max-width: 480px) {
         .footer-container { grid-template-columns: 1fr; }
     }
+<<<<<<< HEAD
 
 /* --- Mobile Menu Styles --- */
 .mobile-menu-toggle {
@@ -208,6 +209,16 @@
     .dropdown-col h4 { font-size: 0.9rem; margin-top: 0.5rem; }
 }
 </style>
+=======
+        .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin: 30px 0; }
+        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .related-card:hover { border-color: #e94560; }
+        .related-card h4 { color: #e94560; margin-top: 0; }
+        .related-card p { font-size: 1.0rem; color: #999; margin-bottom: 0; }
+        .related-section { margin-top: 50px; }
+        .related-section h3 { color: #e94560; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+    </style>
+>>>>>>> 18dda5106699d367b7af4bdc2fdffb21589093bc
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -422,6 +433,44 @@
 
 <!-- Article Content -->
 <article class="container">
+        <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
+        <section class="related-section">
+
+            <h3>📸 Related Reviews</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">
+                    <h4>DJI Osmo Pocket 4 Pro Review</h4>
+                    <p>Ultimate compact gimbal camera for travel.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">
+                    <h4>DJI Osmo Action 5 Pro Review</h4>
+                    <p>Rugged action camera with low-light performance.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/reviews/dji-osmo-action-6-review.html">
+                    <h4>DJI Osmo Action 6 Review</h4>
+                    <p>Deep dive and beach test action camera.</p>
+                </a>
+            </div>
+
+            <h3>⚔️ More Camera Comparisons</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/comparisons/dji-osmo-action-6-vs-gopro-hero-13.html">
+                    <h4>DJI Osmo Action 6 vs GoPro Hero 13</h4>
+                    <p>Latest action cam comparison.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/comparisons/dji-action-5-pro-vs-gopro-hero-13.html">
+                    <h4>DJI Action 5 Pro vs GoPro Hero 13</h4>
+                    <p>Action camera showdown.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/comparisons/action-4-vs-insta360-x5-scuba.html">
+                    <h4>Action 4 vs Insta360 X5 Scuba</h4>
+                    <p>Underwater dive comparison.</p>
+                </a>
+            </div>
+
+        </section>
+
+
     <div class="author-box">
         <div class="author-avatar">🎥</div>
         <div class="author-info">

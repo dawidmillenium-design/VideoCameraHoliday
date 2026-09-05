@@ -131,6 +131,7 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
     .mobile-menu-toggle { display: block; }
 }
 @media (max-width: 480px) { .footer-container { grid-template-columns: 1fr; } }
+<<<<<<< HEAD
 
 /* --- Mobile Menu Styles --- */
 .mobile-menu-toggle {
@@ -190,6 +191,16 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
     .dropdown-col h4 { font-size: 0.9rem; margin-top: 0.5rem; }
 }
 </style>
+=======
+        .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin: 30px 0; }
+        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .related-card:hover { border-color: #e94560; }
+        .related-card h4 { color: #e94560; margin-top: 0; }
+        .related-card p { font-size: 1.0rem; color: #999; margin-bottom: 0; }
+        .related-section { margin-top: 50px; }
+        .related-section h3 { color: #e94560; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+    </style>
+>>>>>>> 18dda5106699d367b7af4bdc2fdffb21589093bc
 </head>
 <body>
 <nav class="top-nav" role="navigation" aria-label="Main Navigation">
@@ -345,7 +356,45 @@ footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 5
 <div class="faq-item"><h3>What's the best camera for Disney World or theme parks?</h3><p>Pocket 3 for its all-day battery and discreet size (no giant cameras blocking parade views). GoPro for roller coaster POV shots. Avoid large mirrorless cameras—they're exhausting to carry for 12-hour park days.</p></div>
 <div class="faq-item"><h3>Can kids edit their own holiday videos?</h3><p>Yes! Apps like CapCut (free) and iMovie (iOS) are intuitive enough for ages 8+. Give them the SD card and let them create their version of the trip—it's often more creative than adult edits.</p></div>
 </div>
-</article>
+
+                <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
+        <section class="related-section">
+
+            <h3>📚 More Buying Guides</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/guides/best-camcorder-family-vacation-2026.html">
+                    <h4>Best Camcorder for Family Vacation</h4>
+                    <p>Zoom and battery for family trips.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">
+                    <h4>Best Compact Cameras for City Breaks 2026</h4>
+                    <p>8 top compacts tested on city breaks.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">
+                    <h4>Best Holiday Video Cameras 2026</h4>
+                    <p>10 tested picks for every budget.</p>
+                </a>
+            </div>
+
+            <h3>🌍 Related City Interviews</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/london-interview-preview.html">
+                    <h4>🇬🇧 London Through the Lens</h4>
+                    <p>Local videographer guide to filming in London.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/tokyo-interview-preview.html">
+                    <h4>🇯🇵 Tokyo Through the Lens</h4>
+                    <p>Local videographer guide to filming in Tokyo.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/new-york-city-interview-preview.html">
+                    <h4>🇺🇸 New York City Through the Lens</h4>
+                    <p>Local videographer guide to filming in New York City.</p>
+                </a>
+            </div>
+
+        </section>
+
+    </article>
 
 <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
 <div class="footer-container">

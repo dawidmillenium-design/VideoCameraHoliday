@@ -303,6 +303,7 @@
                 font-size: 1.2em;
             }
         }
+<<<<<<< HEAD
     
 /* --- Mobile Menu Styles --- */
 .mobile-menu-toggle {
@@ -362,6 +363,16 @@
     .dropdown-col h4 { font-size: 0.9rem; margin-top: 0.5rem; }
 }
 </style>
+=======
+            .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin: 30px 0; }
+        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .related-card:hover { border-color: #e94560; }
+        .related-card h4 { color: #e94560; margin-top: 0; }
+        .related-card p { font-size: 1.0rem; color: #999; margin-bottom: 0; }
+        .related-section { margin-top: 50px; }
+        .related-section h3 { color: #e94560; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+    </style>
+>>>>>>> 18dda5106699d367b7af4bdc2fdffb21589093bc
 </head>
 <body>
     <div class="container">
@@ -483,7 +494,47 @@
             </div>
         </div>
         
-        <footer>
+        
+
+            <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
+        <section class="related-section">
+
+            <h3>📸 More Camera Reviews</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/reviews/budget-4k-camcorder-roundup.html">
+                    <h4>Budget 4K Camcorder Roundup</h4>
+                    <p>Affordable 4K camcorders tested.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">
+                    <h4>Pocket Cinema Cameras 2026</h4>
+                    <p>Cinema-quality in your pocket.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">
+                    <h4>Sony ZV-1 II Review</h4>
+                    <p>1-inch sensor vlogging compact for city breaks.</p>
+                </a>
+            </div>
+
+            <h3>🌍 Related City Interviews</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/london-interview-preview.html">
+                    <h4>🇬🇧 London Through the Lens</h4>
+                    <p>Local videographer guide to filming in London.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/bangkok-interview-preview.html">
+                    <h4>🇹🇭 Bangkok Through the Lens</h4>
+                    <p>Local videographer guide to filming in Bangkok.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/mexico-city-interview-preview.html">
+                    <h4>🇲🇽 Mexico City Through the Lens</h4>
+                    <p>Local videographer guide to filming in Mexico City.</p>
+                </a>
+            </div>
+
+        </section>
+
+
+    <footer>
             <p>&copy; 2026 VideoCameraHoliday. All rights reserved.</p>
             <p class="disclaimer">Disclaimer: This article contains personal experiences and independent testing. Always check the latest prices and availability from authorized retailers.</p>
         </footer>

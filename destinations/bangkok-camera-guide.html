@@ -36,6 +36,7 @@
         .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: #e94560; color: #fff; padding: 8px 16px; border-radius: 0 0 8px 8px; z-index: 9999; text-decoration: none; font-weight: bold; }
         .skip-link:focus { top: 0; }
         .updated-date { color: #666; font-size: 0.9rem; margin-top: 10px; }
+<<<<<<< HEAD
     
 /* --- Mobile Menu Styles --- */
 .mobile-menu-toggle {
@@ -95,6 +96,16 @@
     .dropdown-col h4 { font-size: 0.9rem; margin-top: 0.5rem; }
 }
 </style>
+=======
+            .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin: 30px 0; }
+        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .related-card:hover { border-color: #e94560; }
+        .related-card h4 { color: #e94560; margin-top: 0; }
+        .related-card p { font-size: 1.0rem; color: #999; margin-bottom: 0; }
+        .related-section { margin-top: 50px; }
+        .related-section h3 { color: #e94560; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+    </style>
+>>>>>>> 18dda5106699d367b7af4bdc2fdffb21589093bc
 
     <!-- ========== NON‑CRITICAL CSS ========== -->
     <style media="print" id="nonCriticalCSS">
@@ -647,6 +658,44 @@
         </div>
 
         <!-- Author Box -->
+        <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
+        <section class="related-section">
+
+            <h3>🏖️ More Destination Guides</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">
+                    <h4>Best Cameras for City Breaks</h4>
+                    <p>Urban travel photography guide.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">
+                    <h4>Best Cameras for Beach Holidays</h4>
+                    <p>Tested in sand, salt, and sun.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">
+                    <h4>Best Cameras for Ski Holidays</h4>
+                    <p>Cold-weather slope cameras.</p>
+                </a>
+            </div>
+
+            <h3>🌍 Related City Interviews</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/bangkok-interview-preview.html">
+                    <h4>🇹🇭 Bangkok Through the Lens</h4>
+                    <p>Local videographer guide to filming in Bangkok.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/hanoi-interview-preview.html">
+                    <h4>🇻🇳 Hanoi Through the Lens</h4>
+                    <p>Local videographer guide to filming in Hanoi.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/ho-chi-minh-interview-preview.html">
+                    <h4>🇻🇳 Ho Chi Minh City Through the Lens</h4>
+                    <p>Local videographer guide to filming in Ho Chi Minh City.</p>
+                </a>
+            </div>
+
+        </section>
+
+
         <div class="author-box">
             <div class="author-avatar">🎬</div>
             <div class="author-info">

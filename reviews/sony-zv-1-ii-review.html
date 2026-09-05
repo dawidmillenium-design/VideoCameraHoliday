@@ -101,6 +101,7 @@ td { color: #ccc; }
     .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; }
     .footer-container { grid-template-columns: 1fr 1fr; }
 }
+<<<<<<< HEAD
 
 /* --- Mobile Menu Styles --- */
 .mobile-menu-toggle {
@@ -160,6 +161,16 @@ td { color: #ccc; }
     .dropdown-col h4 { font-size: 0.9rem; margin-top: 0.5rem; }
 }
 </style>
+=======
+        .related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin: 30px 0; }
+        .related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .related-card:hover { border-color: #e94560; }
+        .related-card h4 { color: #e94560; margin-top: 0; }
+        .related-card p { font-size: 1.0rem; color: #999; margin-bottom: 0; }
+        .related-section { margin-top: 50px; }
+        .related-section h3 { color: #e94560; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+    </style>
+>>>>>>> 18dda5106699d367b7af4bdc2fdffb21589093bc
 
     <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
 </head>
@@ -192,6 +203,44 @@ td { color: #ccc; }
     </ol>
 </nav>
 <article class="container">
+        <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
+        <section class="related-section">
+
+            <h3>📸 More Camera Reviews</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">
+                    <h4>Sony ZV-E10 II Night Market Review</h4>
+                    <p>APS-C interchangeable lens for night markets.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">
+                    <h4>Canon EOS R50 V Creator Kit Review</h4>
+                    <p>Entry-level mirrorless with great AF.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/reviews/fujifilm-x-m5-travel-review.html">
+                    <h4>Fujifilm X-M5 Travel Review</h4>
+                    <p>Compact APS-C with film sims for travel.</p>
+                </a>
+            </div>
+
+            <h3>🌍 Related City Interviews</h3>
+            <div class="related-articles">
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/paris-interview-preview.html">
+                    <h4>🇫🇷 Paris Through the Lens</h4>
+                    <p>Local videographer guide to filming in Paris.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/tokyo-interview-preview.html">
+                    <h4>🇯🇵 Tokyo Through the Lens</h4>
+                    <p>Local videographer guide to filming in Tokyo.</p>
+                </a>
+                <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/new-york-city-interview-preview.html">
+                    <h4>🇺🇸 New York City Through the Lens</h4>
+                    <p>Local videographer guide to filming in New York City.</p>
+                </a>
+            </div>
+
+        </section>
+
+
     <div class="author-box">
         <div class="author-avatar">🎥</div>
         <div class="author-info">
