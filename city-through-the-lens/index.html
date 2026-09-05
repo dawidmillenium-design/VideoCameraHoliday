@@ -3,500 +3,987 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Through the Lens: 50+ Global Videography Guides | Holiday Video Camera</title>
-    <meta name="description" content="Explore our City Through the Lens series. Discover how local videographers film in 50+ major cities worldwide, with specific gear tips, itineraries, and B-roll guides.">
-    
+    <title>City Through the Lens – 50+ Global Videography Guides | Holiday Video Camera</title>
+    <meta name="description" content="Explore 50+ city videography guides from local shooters worldwide. Real-world filming tips, gear recommendations, and B-roll ideas for every destination.">
+    <meta name="author" content="Dawid Millennium">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/">
+    <meta name="google-site-verification" content="ddryQTwrxDAxNvgfjcrTs2eW06UebOvdNums43rTfJc" />
+    <meta property="og:title" content="City Through the Lens – 50+ Global Videography Guides">
+    <meta property="og:description" content="Local videographers in 50+ cities share real-world filming tips, gear, and B-roll ideas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/">
+    <meta property="og:site_name" content="Holiday Video Camera">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ========== CRITICAL CSS ========== -->
     <style>
-        /* --- CSS Reset & Variables (Matching your site) --- */
-        :root {
-            --primary: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --text: #334155;
-            --border: #e2e8f0;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
-        body { color: var(--text); line-height: 1.6; background: var(--light); }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+        .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+        .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
+        .top-nav .nav-links li { position: relative; }
+        .top-nav .nav-links li.mega-item { position: static; }
+        .top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
+        .top-nav .nav-links a:hover, .top-nav .nav-links a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+        .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
+        .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: #e94560; color: #fff; padding: 8px 16px; border-radius: 0 0 8px 8px; z-index: 9999; text-decoration: none; font-weight: bold; }
+        .skip-link:focus { top: 0; }
 
-        /* --- Header & Mega Menu (Condensed for brevity, matches your existing) --- */
-        header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); display: flex; align-items: center; gap: 0.5rem; }
-        .mega-menu { display: flex; gap: 2rem; }
-        .mega-menu > li { position: relative; padding: 1rem 0; }
-        .mega-menu > li > a { font-weight: 600; color: var(--dark); transition: color 0.2s; }
-        .mega-menu > li:hover > a { color: var(--primary); }
-        .dropdown {
-            position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-            background: #fff; border: 1px solid var(--border); border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 1.5rem;
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
-            min-width: 600px; opacity: 0; visibility: hidden; transition: all 0.3s ease;
-        }
-        .mega-menu > li:hover .dropdown { opacity: 1; visibility: visible; top: 100%; }
-        .dropdown-col h4 { font-size: 0.85rem; text-transform: uppercase; color: var(--primary); margin-bottom: 0.75rem; letter-spacing: 0.05em; }
-        .dropdown-col ul li { margin-bottom: 0.5rem; }
-        .dropdown-col ul li a { font-size: 0.95rem; color: var(--text); }
-        .dropdown-col ul li a:hover { color: var(--primary); text-decoration: underline; }
+        /* Hero */
+        .hero { text-align: center; padding: 60px 20px 50px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+        .hero h1 { font-size: 2.6rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
+        .hero .subtitle { font-size: 1.2rem; color: #888; max-width: 680px; margin: 0 auto 25px; }
+        .hero .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 25px; }
+        .hero .stat { text-align: center; }
+        .hero .stat .num { font-size: 2rem; font-weight: 700; color: #e94560; }
+        .hero .stat .label { font-size: 0.85rem; color: #888; }
 
-        /* --- Breadcrumb --- */
-        .breadcrumb { max-width: 1200px; margin: 1.5rem auto 0; padding: 0 2rem; font-size: 0.9rem; }
-        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; padding: 0; margin: 0; }
-        .breadcrumb li { display: flex; align-items: center; color: #64748b; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
-        .breadcrumb a:hover { color: var(--dark); text-decoration: underline; }
-        .breadcrumb .separator { color: #cbd5e1; font-size: 1.1rem; margin: 0 0.25rem; }
-        .breadcrumb [aria-current="page"] { color: var(--text); font-weight: 600; }
+        /* Breadcrumb */
+        .breadcrumb { background: #111; padding: 12px 0; border-bottom: 1px solid #333; font-size: 0.85rem; color: #888; }
+        .breadcrumb .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
+        .breadcrumb li { display: inline-flex; align-items: center; }
+        .breadcrumb li:not(:last-child)::after { content: "›"; margin: 0 10px; color: #555; font-size: 1.1rem; }
+        .breadcrumb a { color: #e94560; text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: #ff6b6b; text-decoration: underline; }
+        .breadcrumb li:last-child span { color: #e0e0e0; font-weight: 500; }
 
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(135deg, var(--dark) 0%, #0f172a 100%);
-            color: #fff;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.1rem; color: #cbd5e1; max-width: 700px; margin: 0 auto; }
+        /* City Grid */
+        .region-section { margin-bottom: 50px; }
+        .region-title { color: #e94560; font-size: 1.8rem; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; }
+        .city-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 22px; transition: border-color 0.3s, transform 0.2s; text-decoration: none; color: inherit; }
+        .city-card:hover { border-color: #e94560; transform: translateY(-3px); }
+        .city-card .flag { font-size: 2rem; margin-bottom: 8px; display: block; }
+        .city-card h3 { color: #fff; font-size: 1.2rem; margin: 0 0 8px; }
+        .city-card p { color: #888; font-size: 0.9rem; margin: 0; line-height: 1.5; }
+        .city-card .arrow { color: #e94560; font-size: 0.8rem; margin-top: 8px; display: inline-block; }
 
-        /* --- City Grid Layout --- */
-        main { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; }
-        .region-section { margin-bottom: 3rem; }
-        .region-title { 
-            font-size: 1.5rem; 
-            color: var(--dark); 
-            margin-bottom: 1.5rem; 
-            padding-bottom: 0.5rem; 
-            border-bottom: 2px solid var(--primary); 
-            display: inline-block;
-        }
-        .city-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        .city-card {
-            background: #fff;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .city-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            border-color: var(--primary);
-        }
-        .city-card h3 { font-size: 1.2rem; color: var(--dark); margin-bottom: 0.5rem; }
-        .city-card p { font-size: 0.9rem; color: #64748b; margin-bottom: 1rem; line-height: 1.5; }
-        .city-card .btn-link { 
-            color: var(--primary); 
-            font-weight: 600; 
-            font-size: 0.9rem; 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 0.25rem; 
-        }
-        .city-card .btn-link:hover { text-decoration: underline; }
+        /* Footer */
+        .site-footer { background: #111; border-top: 2px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-section h4 { color: #e94560; font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-section ul { list-style: none; margin: 0; padding: 0; }
+        .footer-section li { margin-bottom: 8px; }
+        .footer-section a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-section a:hover { color: #e94560; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
+        .footer-bottom a { color: #e94560; text-decoration: none; }
 
-        /* --- Footer --- */
-        footer { background: var(--dark); color: #cbd5e1; padding: 4rem 2rem 2rem; margin-top: 4rem; }
-        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-        .footer-col h4 { color: #fff; margin-bottom: 1rem; font-size: 1.1rem; }
-        .footer-col ul li { margin-bottom: 0.5rem; }
-        .footer-col ul li a:hover { color: #fff; text-decoration: underline; }
-        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid #334155; text-align: center; font-size: 0.9rem; }
-
-        /* --- Responsive --- */
-        @media (max-width: 768px) {
-            .mega-menu { display: none; } /* Add mobile toggle logic here */
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero h1 { font-size: 2rem; }
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .top-nav .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+                background: #111;
+                max-height: 80vh;
+                overflow-y: auto;
+                border-top: 2px solid #e94560;
+                padding-bottom: 20px;
+            }
+            .top-nav .nav-links.active { display: flex; }
+            .mega-menu {
+                position: static;
+                display: none !important;
+                border: none;
+                box-shadow: none;
+                padding: 10px 0;
+                background: transparent;
+            }
+            .top-nav .nav-links li.mega-item.open .mega-menu { display: block !important; }
+            .mega-container { grid-template-columns: 1fr; gap: 15px; }
+            .mega-column { background: #111; padding: 15px; border-radius: 8px; margin-bottom: 10px; }
+            .top-nav .nav-links li.mega-item { width: 100%; }
+            .top-nav .nav-links a { padding: 12px 16px; }
+            .mobile-menu-toggle { display: block; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero .subtitle { font-size: 1rem; }
+            .footer-container { grid-template-columns: 1fr 1fr; }
+            .hero .stats { gap: 20px; }
+            .city-grid { grid-template-columns: 1fr 1fr; }
         }
-<<<<<<< HEAD
-    
-/* --- Mobile Menu Styles --- */
-.mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    flex-direction: column;
-    gap: 5px;
-}
-.hamburger-line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--dark);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-.mobile-menu-toggle.active .hamburger-line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.mobile-menu-toggle.active .hamburger-line:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active .hamburger-line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-@media (max-width: 768px) {
-    .mobile-menu-toggle { display: flex; }
-    .mega-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        border-bottom: 1px solid var(--border);
-        flex-direction: column;
-        padding: 1rem;
-        gap: 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-    .mega-menu.active { display: flex; }
-    .mega-menu > li { padding: 0; border-bottom: 1px solid var(--border); }
-    .mega-menu > li > a { display: block; padding: 1rem 0; font-size: 1.1rem; }
-    .dropdown {
-        position: static;
-        transform: none;
-        min-width: 100%;
-        box-shadow: none;
-        border: none;
-        padding: 0 0 1rem 1rem;
-        grid-template-columns: 1fr;
-        opacity: 1;
-        visibility: visible;
-        display: block;
-    }
-    .dropdown-col { margin-bottom: 1rem; }
-    .dropdown-col h4 { font-size: 0.9rem; margin-top: 0.5rem; }
-}
-</style>
-<link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
-=======
+        @media (max-width: 600px) {
+            .city-grid { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr; }
+        }
     </style>
 
-    <!-- JSON-LD Structured Data for Collection/ItemList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "City Through the Lens: Global Videography Guides",
-      "description": "Explore our City Through the Lens series. Discover how local videographers film in 50+ major cities worldwide.",
-      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/",
-      "hasPart": [
-        {
-          "@type": "WebPage",
-          "name": "Mexico City Filming Guide",
-          "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/mexico-city-interview-preview.html"
-        },
-        {
-          "@type": "WebPage",
-          "name": "Tokyo Filming Guide",
-          "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/tokyo-interview-preview.html"
-        },
-        {
-          "@type": "WebPage",
-          "name": "London Filming Guide",
-          "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/london-interview-preview.html"
+    <!-- ========== NON‑CRITICAL CSS (mega‑menu content) ========== -->
+    <style media="print" id="nonCriticalCSS">
+        /* Mega menu styles – identical to main index.html */
+        .mega-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #1a1a2e; border-top: 2px solid #e94560; border-bottom: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 1000; padding: 30px 20px; }
+        .top-nav .nav-links li.mega-item:hover .mega-menu { display: block; }
+        .mega-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+        .mega-column h4 { color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .mega-column ul { list-style: none; margin: 0; padding: 0; }
+        .mega-column li { margin-bottom: 8px; }
+        .mega-column a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; display: block; padding: 2px 0; }
+        .mega-column a:hover { color: #fff; text-decoration: underline; }
+
+        @media (max-width: 1024px) {
+            .top-nav .nav-links li.mega-item.open .mega-menu { display: block !important; }
+            .mega-menu { position: static; display: none !important; border: none; box-shadow: none; padding: 10px 0; background: transparent; }
+            .mega-container { grid-template-columns: 1fr; gap: 15px; }
+            .mega-column { background: #111; padding: 15px; border-radius: 8px; margin-bottom: 10px; }
         }
-      ]
-    }
-    </script>
->>>>>>> 18dda5106699d367b7af4bdc2fdffb21589093bc
+    </style>
 </head>
 <body>
 
-    <!-- HEADER & MEGA MENU -->
-    <header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ===== NAVIGATION (full mega‑menu – same as index.html) ===== -->
+    <nav class="top-nav" aria-label="Primary navigation">
         <div class="nav-container">
-            <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
-            <nav>
-                <ul class="mega-menu">
-                    <li class="has-dropdown">
-                        <a href="/VideoCameraHoliday/guides/">Guides</a>
-                        <div class="dropdown">
-                            <div class="dropdown-col">
+            <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+            <ul class="nav-links">
+                <li><a data-section="home" href="/VideoCameraHoliday/">Home</a></li>
+
+                <!-- GUIDES MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/guides/" aria-haspopup="true">Guides ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
                                 <h4>🛒 Buying Guides</h4>
                                 <ul>
-                                    <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Best Budget Under $500</a></li>
-                                    <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
-                                    <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Best Budget Holiday Camera Under 500</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Best Camera Hiking Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Best Camera Ski Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-southeast-asia.html">Best Camera Southeast Asia</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Best Compact Cameras City Breaks</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Holiday Video Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras Travel</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras Beach</a></li>
                                 </ul>
                             </div>
-                            <div class="dropdown-col">
+                            <div class="mega-column">
                                 <h4>🏖️ Destination Guides</h4>
                                 <ul>
-                                    <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Holidays</a></li>
-                                    <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Holidays</a></li>
-                                    <li><a href="/VideoCameraHoliday/guides/best-camera-southeast-asia.html">Southeast Asia</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Best Camera Hiking Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Best Camera Ski Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-camera-southeast-asia.html">Best Camera Southeast Asia</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Best Compact Cameras City Breaks</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras Beach</a></li>
                                 </ul>
                             </div>
-                            <div class="dropdown-col">
+                            <div class="mega-column">
                                 <h4>📋 Planning & Tips</h4>
                                 <ul>
-                                    <li><a href="/VideoCameraHoliday/guides/camera-gifts-for-travelers.html">Camera Gifts</a></li>
-                                    <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Travel Checklist</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/state-of-travel-cameras-2026.html">State Of Travel Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/what-to-film-european-night-markets.html">What To Film European Night Markets</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🎯 Quick Links</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">Camera Checklist</a></li>
+                                    <li><a href="/VideoCameraHoliday/guides/state-of-travel-cameras-2026.html">State of Cameras</a></li>
                                 </ul>
                             </div>
                         </div>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="/VideoCameraHoliday/reviews/">Reviews</a>
-                        <div class="dropdown">
-                            <div class="dropdown-col">
-                                <h4>📸 Gimbal & Action</h4>
+                    </div>
+                </li>
+
+                <!-- REVIEWS MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/reviews/" aria-haspopup="true">Reviews ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>📸 Gimbal Cameras</h4>
                                 <ul>
-                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
-                                    <li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                                    <li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">Dji Osmo Action 5 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">Dji Osmo Pocket 3 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">Dji Osmo Pocket 4 Pro Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Cameras Roundup</a></li>
                                 </ul>
                             </div>
-                            <div class="dropdown-col">
+                            <div class="mega-column">
+                                <h4>🎬 Action Cameras</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">Dji Osmo Action 5 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-6-review.html">Dji Osmo Action 6 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S Hands Free Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/insta360-x4-review.html">Insta360 X4 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5 Review</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
                                 <h4>📱 Vlogging & Mirrorless</h4>
                                 <ul>
-                                    <li><a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-                                    <li><a href="/VideoCameraHoliday/reviews/canon-powershot-v10-review.html">Canon PowerShot V10</a></li>
-                                    <li><a href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon Eos R50 V Creator Kit Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/canon-powershot-v10-review.html">Canon Powershot V10 Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/fujifilm-x-m5-travel-review.html">Fujifilm X M5 Travel Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">Iphone 16 Pro Video Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/nikon-z50-ii-creator-kit-review.html">Nikon Z50 Ii Creator Kit Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony Zv 1 Ii Review</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony Zv E10 Ii Night Market Review</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🎥 Roundups</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/reviews/budget-4k-camcorder-roundup.html">Budget 4K Camcorders</a></li>
                                 </ul>
                             </div>
                         </div>
-                    </li>
-                    <li><a href="/VideoCameraHoliday/how-to/">How-To</a></li>
-                    <li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
-                    <li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
-                    <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
-                    <li><a href="/VideoCameraHoliday/city-through-the-lens/" style="color: var(--primary);">City Series</a></li>
-                    <li><a href="/VideoCameraHoliday/about/">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+                    </div>
+                </li>
 
-    <!-- BREADCRUMB -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-            <li><a href="/VideoCameraHoliday/">Home</a></li>
-            <li class="separator" aria-hidden="true">›</li>
-            <li aria-current="page">City Through the Lens</li>
-        </ol>
+                <!-- HOW‑TO MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/how-to/" aria-haspopup="true">How‑To ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>🎬 Filming Techniques</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html">Film In Rain Protect Gear</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-markets-street-food.html">Film Markets Street Food</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-sunsets-golden-hour.html">Film Sunsets Golden Hour</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🔧 Technical Skills</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/how-to/audio-tips-noisy-locations.html">Audio Tips Noisy Locations</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Travel Photos Videos</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Choose Memory Card 4K Video</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/edit-travel-videos-phone-tablet.html">Edit Travel Videos Phone Tablet</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilize Videos Without Gimbal</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/vertical-video-settings-travel.html">Vertical Video Settings Travel</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>⚡ Quick Tips</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">No Gimbal Needed</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Memory Cards</a></li>
+                                    <li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Better Videos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- DESTINATIONS MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/destinations/" aria-haspopup="true">Destinations ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>🏖️ Beach & Water</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🏔️ Adventure</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+                                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-desert-travel.html">Desert Travel</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🏙️ City Breaks</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+                                    <li><a href="/VideoCameraHoliday/destinations/bangkok-camera-guide.html">Bangkok Camera Guide</a></li>
+                                    <li><a href="/VideoCameraHoliday/destinations/vietnam-camera-guide.html">Vietnam Camera Guide</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- EDITING MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/editing/" aria-haspopup="true">Editing ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>✂️ Editing Software</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
+                                    <li><a href="/VideoCameraHoliday/editing/post-travel-videos-youtube.html">Post to YouTube</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>🎨 Color & Style</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">Color Grading</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- COMPARISONS MEGA MENU -->
+                <li class="mega-item">
+                    <a href="/VideoCameraHoliday/comparisons/" aria-haspopup="true">Comparisons ▼</a>
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-container">
+                            <div class="mega-column">
+                                <h4>⚔️ Head‑to‑Head</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/comparisons/action-camera-vs-gimbal-camera.html">Action Camera Vs Gimbal Camera</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget Vs Premium Travel Cameras</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Dji Pocket 3 Vs Gopro Hero 13</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">GoPro Hero 13 Vs Sony Zv 1 Ii</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">Iphone 16 Pro Vs Dedicated Camera</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/sony-a7cr-vs-fujifilm-x-t50.html">Sony A7Cr Vs Fujifilm X T50</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>💰 Value Picks</h4>
+                                <ul>
+                                    <li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li>
+                                    <li><a href="/VideoCameraHoliday/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- CITY & ABOUT -->
+                <li><a data-section="city-through-the-lens" href="/VideoCameraHoliday/city-through-the-lens/" class="active">🌍 City Series</a></li>
+                <li><a data-section="about" href="/VideoCameraHoliday/about/">About</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/VideoCameraHoliday/">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">City Through the Lens</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
     <section class="hero">
-        <h1>City Through the Lens 🌍</h1>
-        <p>Discover how local videographers capture the world's most dynamic cities. Get specific filming itineraries, gear recommendations, and B-roll secrets for 50+ global destinations.</p>
+        <h1>🌍 City Through the Lens</h1>
+        <p class="subtitle">Local videographers in 50+ cities share real-world filming tips, gear recommendations, and B-roll ideas – no lab charts, just real streets.</p>
+        <div class="stats">
+            <div class="stat"><div class="num">55</div><div class="label">Cities</div></div>
+            <div class="stat"><div class="num">4</div><div class="label">Continents</div></div>
+            <div class="stat"><div class="num">50+</div><div class="label">Local Videographers</div></div>
+            <div class="stat"><div class="num">2026</div><div class="label">Latest Guides</div></div>
+        </div>
     </section>
 
-    <!-- MAIN CONTENT: CITY GRID -->
-    <main>
-        
-        <!-- THE AMERICAS -->
-        <section class="region-section">
-            <h2 class="region-title">🌎 The Americas</h2>
-            <div class="city-grid">
-                <article class="city-card">
-                    <h3>Mexico City, Mexico</h3>
-                    <p>Filming the vibrant streets, ancient pyramids, and golden hour at Palacio de Bellas Artes.</p>
-                    <a href="mexico-city-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>New York City, USA</h3>
-                    <p>Navigating permits, capturing subway B-roll, and finding quiet corners in the concrete jungle.</p>
-                    <a href="new-york-city-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Buenos Aires, Argentina</h3>
-                    <p>Shooting tango in San Telmo and the colorful streets of La Boca with compact gear.</p>
-                    <a href="buenos-aires-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Bogotá, Colombia</h3>
-                    <p>High-altitude filming tips, capturing street art, and navigating the historic La Candelaria.</p>
-                    <a href="bogota-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Rio de Janeiro, Brazil</h3>
-                    <p>Securing gear on the beach, filming at Christ the Redeemer, and favela tour videography.</p>
-                    <a href="rio-de-janeiro-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Cartagena, Colombia</h3>
-                    <p>Capturing colonial architecture, vibrant street life, and Caribbean coastal lighting.</p>
-                    <a href="cartagena-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-            </div>
-        </section>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="container" id="main-content">
 
         <!-- EUROPE -->
         <section class="region-section">
             <h2 class="region-title">🌍 Europe</h2>
             <div class="city-grid">
-                <article class="city-card">
-                    <h3>London, UK</h3>
-                    <p>Overcoming unpredictable weather, filming iconic landmarks, and navigating drone laws.</p>
-                    <a href="london-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Paris, France</h3>
-                    <p>Cinematic B-roll of the Seine, Eiffel Tower night shots, and café culture videography.</p>
-                    <a href="paris-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Rome, Italy</h3>
-                    <p>Filming ancient ruins at sunrise, navigating crowded piazzas, and food videography.</p>
-                    <a href="rome-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Berlin, Germany</h3>
-                    <p>Capturing gritty street art, techno culture, and the contrast of historic and modern architecture.</p>
-                    <a href="berlin-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Barcelona, Spain</h3>
-                    <p>Shooting Gaudí's masterpieces, beach life, and the bustling Boqueria market.</p>
-                    <a href="barcelona-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Prague, Czech Republic</h3>
-                    <p>Filming gothic architecture, Charles Bridge at dawn, and low-light river scenes.</p>
-                    <a href="prague-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
+                <!-- London -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/london-interview-preview.html">
+                    <span class="flag">🇬🇧</span>
+                    <h3>London</h3>
+                    <p>Filming the Thames, Soho, and hidden corners with Jamie Porter.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Paris -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/paris-interview-preview.html">
+                    <span class="flag">🇫🇷</span>
+                    <h3>Paris</h3>
+                    <p>Eiffel Tower, Montmartre, and the Seine without the crowds.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Berlin -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/berlin-interview-preview.html">
+                    <span class="flag">🇩🇪</span>
+                    <h3>Berlin</h3>
+                    <p>Brandenburg Gate, East Side Gallery, and Berlin's moody streets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Amsterdam -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/amsterdam-interview-preview.html">
+                    <span class="flag">🇳🇱</span>
+                    <h3>Amsterdam</h3>
+                    <p>Canals, cycling culture, and the city's unique light.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Rome -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/rome-interview-preview.html">
+                    <span class="flag">🇮🇹</span>
+                    <h3>Rome</h3>
+                    <p>Colosseum, Vatican, and Roman streets at golden hour.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Barcelona -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/barcelona-interview-preview.html">
+                    <span class="flag">🇪🇸</span>
+                    <h3>Barcelona</h3>
+                    <p>Gaudí, beach, and Gothic Quarter through a local's lens.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Lisbon -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/lisbon-interview-preview.html">
+                    <span class="flag">🇵🇹</span>
+                    <h3>Lisbon</h3>
+                    <p>Portugal's colourful capital – from trams to the coast.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Prague -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/prague-interview-preview.html">
+                    <span class="flag">🇨🇿</span>
+                    <h3>Prague</h3>
+                    <p>Prague Castle, Charles Bridge, and the fairy-tale old town.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Vienna -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/vienna-interview-preview.html">
+                    <span class="flag">🇦🇹</span>
+                    <h3>Vienna</h3>
+                    <p>Imperial palaces, coffeehouse culture, and classical music streets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Budapest -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/budapest-interview-preview.html">
+                    <span class="flag">🇭🇺</span>
+                    <h3>Budapest</h3>
+                    <p>Buda Castle, thermal baths, and the Danube at blue hour.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Athens -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/athens-interview-preview.html">
+                    <span class="flag">🇬🇷</span>
+                    <h3>Athens</h3>
+                    <p>Acropolis, Plaka, and ancient ruins in modern light.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Moscow -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/moscow-interview-preview.html">
+                    <span class="flag">🇷🇺</span>
+                    <h3>Moscow</h3>
+                    <p>Red Square, St Basil's, and Moscow's grand metro stations.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Istanbul -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/istanbul-interview-preview.html">
+                    <span class="flag">🇹🇷</span>
+                    <h3>Istanbul</h3>
+                    <p>Hagia Sophia, the Bosphorus, and East-meets-West street life.</p>
+                    <span class="arrow">→</span>
+                </a>
             </div>
         </section>
 
-        <!-- ASIA & OCEANIA -->
+        <!-- ASIA -->
         <section class="region-section">
-            <h2 class="region-title">🌏 Asia & Oceania</h2>
+            <h2 class="region-title">🌏 Asia</h2>
             <div class="city-grid">
-                <article class="city-card">
-                    <h3>Tokyo, Japan</h3>
-                    <p>Navigating neon-lit streets, temple etiquette, and capturing the perfect cherry blossom shot.</p>
-                    <a href="tokyo-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Bangkok, Thailand</h3>
-                    <p>Shooting bustling night markets, temple golden hour, and managing extreme humidity.</p>
-                    <a href="bangkok-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
+                <!-- Tokyo -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/tokyo-interview-preview.html">
+                    <span class="flag">🇯🇵</span>
+                    <h3>Tokyo</h3>
+                    <p>Neon nights, temples, and the fastest city on earth.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Bangkok -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/bangkok-interview-preview.html">
+                    <span class="flag">🇹🇭</span>
+                    <h3>Bangkok</h3>
+                    <p>Night markets, temples, and bustling canal life.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Beijing -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/beijing-interview-preview.html">
+                    <span class="flag">🇨🇳</span>
+                    <h3>Beijing</h3>
+                    <p>Forbidden City, hutongs, and the Great Wall.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Seoul -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/seoul-interview-preview.html">
+                    <span class="flag">🇰🇷</span>
+                    <h3>Seoul</h3>
+                    <p>Korea's capital – from bustling markets to quiet temples.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Shanghai -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/shanghai-interview-preview.html">
+                    <span class="flag">🇨🇳</span>
+                    <h3>Shanghai</h3>
+                    <p>The Bund, neon skylines, and old shikumen alleyways.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Singapore -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/singapore-interview-preview.html">
+                    <span class="flag">🇸🇬</span>
                     <h3>Singapore</h3>
-                    <p>Filming futuristic architecture, strict drone regulations, and pristine urban landscapes.</p>
-                    <a href="singapore-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Hanoi, Vietnam</h3>
-                    <p>Capturing the chaos of motorbike traffic, street food close-ups, and Hoan Kiem Lake.</p>
-                    <a href="hanoi-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Bali, Indonesia</h3>
-                    <p>Vlogging rice terraces, waterfall shoots, and balancing respect for sacred temple spaces.</p>
-                    <a href="bali-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Seoul, South Korea</h3>
-                    <p>Filming K-culture, palace traditional wear (Hanbok) shoots, and nighttime cityscapes.</p>
-                    <a href="seoul-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
+                    <p>Gardens by the Bay, hawker centres, and futuristic skyline.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Hong Kong -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/hong-kong-interview-preview.html">
+                    <span class="flag">🇭🇰</span>
+                    <h3>Hong Kong</h3>
+                    <p>Symphony of Lights, Victoria Peak, and dense street markets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Dubai -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/dubai-interview-preview.html">
+                    <span class="flag">🇦🇪</span>
+                    <h3>Dubai</h3>
+                    <p>Burj Khalifa, desert dunes, and gold souk nightlife.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Delhi -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/delhi-interview-preview.html">
+                    <span class="flag">🇮🇳</span>
+                    <h3>Delhi</h3>
+                    <p>Red Fort, Chandni Chowk, and Mughal-era street life.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Mumbai -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/mumbai-interview-preview.html">
+                    <span class="flag">🇮🇳</span>
+                    <h3>Mumbai</h3>
+                    <p>Gateway of India, Marine Drive, and Bollywood energy.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Jaipur -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/jaipur-interview-preview.html">
+                    <span class="flag">🇮🇳</span>
+                    <h3>Jaipur</h3>
+                    <p>Amber Fort, pink city walls, and royal palace courtyards.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Hanoi -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/hanoi-interview-preview.html">
+                    <span class="flag">🇻🇳</span>
+                    <h3>Hanoi</h3>
+                    <p>Old Quarter, Hoan Kiem Lake, and vibrant street life.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Ho Chi Minh City -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/ho-chi-minh-interview-preview.html">
+                    <span class="flag">🇻🇳</span>
+                    <h3>Ho Chi Minh City</h3>
+                    <p>Energy of Saigon – from markets to motorbikes.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Chiang Mai -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/chiang-mai-interview-preview.html">
+                    <span class="flag">🇹🇭</span>
+                    <h3>Chiang Mai</h3>
+                    <p>Doi Suthep, Old City temples, and the Night Bazaar.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Siem Reap -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/siem-reap-interview-preview.html">
+                    <span class="flag">🇰🇭</span>
+                    <h3>Siem Reap</h3>
+                    <p>Angkor Wat at sunrise, floating villages, and temple ruins.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Bali -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/bali-interview-preview.html">
+                    <span class="flag">🇮🇩</span>
+                    <h3>Bali</h3>
+                    <p>Rice terraces, temple ceremonies, and surf-beach sunsets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Osaka -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/osaka-interview-preview.html">
+                    <span class="flag">🇯🇵</span>
+                    <h3>Osaka</h3>
+                    <p>Dotonbori neon, Osaka Castle, and street-food paradise.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Nagoya -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/nagoya-interview-preview.html">
+                    <span class="flag">🇯🇵</span>
+                    <h3>Nagoya</h3>
+                    <p>Nagoya Castle, sakae district, and industrial heritage.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Tehran -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/tehran-interview-preview.html">
+                    <span class="flag">🇮🇷</span>
+                    <h3>Tehran</h3>
+                    <p>Golestan Palace, Grand Bazaar, and Alborz mountain backdrops.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Riyadh -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/riyadh-interview-preview.html">
+                    <span class="flag">🇸🇦</span>
+                    <h3>Riyadh</h3>
+                    <p>Diriyah ruins, Kingdom Centre, and desert cityscapes.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Baghdad -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/baghdad-interview-preview.html">
+                    <span class="flag">🇮🇶</span>
+                    <h3>Baghdad</h3>
+                    <p>Tigris riverfront, Mutanabbi Street, and ancient heritage.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Guangzhou -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/guangzhou-interview-preview.html">
+                    <span class="flag">🇨🇳</span>
+                    <h3>Guangzhou</h3>
+                    <p>Canton Tower, Shamian Island, and Pearl River nights.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Shenzhen -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/shenzhen-interview-preview.html">
+                    <span class="flag">🇨🇳</span>
+                    <h3>Shenzhen</h3>
+                    <p>Huaqiangbei electronics, skyscraper parks, and Dafen art village.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Chengdu -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/chengdu-interview-preview.html">
+                    <span class="flag">🇨🇳</span>
+                    <h3>Chengdu</h3>
+                    <p>Pandas, Jinli Street, and Sichuan teahouse culture.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Chongqing -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/chongqing-interview-preview.html">
+                    <span class="flag">🇨🇳</span>
+                    <h3>Chongqing</h3>
+                    <p>Hongya Cave, Yangtze cable car, and the 3D cityscape.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Hangzhou -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/hangzhou-interview-preview.html">
+                    <span class="flag">🇨🇳</span>
+                    <h3>Hangzhou</h3>
+                    <p>West Lake, tea plantations, and Song Dynasty pagodas.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Xi'an -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/xian-interview-preview.html">
+                    <span class="flag">🇨🇳</span>
+                    <h3>Xi'an</h3>
+                    <p>Terracotta Army, Muslim Quarter, and the ancient city wall.</p>
+                    <span class="arrow">→</span>
+                </a>
             </div>
         </section>
 
-        <!-- AFRICA & MIDDLE EAST -->
+        <!-- AMERICAS -->
         <section class="region-section">
-            <h2 class="region-title">🌍 Africa & Middle East</h2>
+            <h2 class="region-title">🌎 Americas</h2>
             <div class="city-grid">
-                <article class="city-card">
-                    <h3>Cairo, Egypt</h3>
-                    <p>Filming the Pyramids of Giza, navigating bazaar crowds, and managing desert dust on gear.</p>
-                    <a href="cairo-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Cape Town, South Africa</h3>
-                    <p>Shooting Table Mountain, coastal drives, and vibrant township storytelling.</p>
-                    <a href="cape-town-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Marrakech, Morocco</h3>
-                    <p>Capturing the sensory overload of the Medina, riad architecture, and desert light.</p>
-                    <a href="marrakech-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Dubai, UAE</h3>
-                    <p>High-contrast desert filming, futuristic skyline B-roll, and strict local filming laws.</p>
-                    <a href="dubai-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
-                <article class="city-card">
-                    <h3>Nairobi, Kenya</h3>
-                    <p>Urban wildlife encounters, startup hub vlogging, and safari transit videography.</p>
-                    <a href="nairobi-interview-preview.html" class="btn-link">View Guide →</a>
-                </article>
+                <!-- New York City -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/new-york-city-interview-preview.html">
+                    <span class="flag">🇺🇸</span>
+                    <h3>New York City</h3>
+                    <p>Times Square, Central Park, and Brooklyn Bridge at blue hour.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Mexico City -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/mexico-city-interview-preview.html">
+                    <span class="flag">🇲🇽</span>
+                    <h3>Mexico City</h3>
+                    <p>Zócalo, Teotihuacán, and Coyoacán's colourful streets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Rio de Janeiro -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/rio-de-janeiro-interview-preview.html">
+                    <span class="flag">🇧🇷</span>
+                    <h3>Rio de Janeiro</h3>
+                    <p>Christ the Redeemer, Copacabana, and the Marvelous City.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Buenos Aires -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/buenos-aires-interview-preview.html">
+                    <span class="flag">🇦🇷</span>
+                    <h3>Buenos Aires</h3>
+                    <p>Tango, steaks, and the European charm of Argentina's capital.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Santiago -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/santiago-interview-preview.html">
+                    <span class="flag">🇨🇱</span>
+                    <h3>Santiago</h3>
+                    <p>Andes backdrop, Plaza de Armas, and San Cristóbal hill views.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Lima -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/lima-interview-preview.html">
+                    <span class="flag">🇵🇪</span>
+                    <h3>Lima</h3>
+                    <p>Miraflores cliffs, colonial centre, and Pacific coast food scene.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Bogotá -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/bogota-interview-preview.html">
+                    <span class="flag">🇨🇴</span>
+                    <h3>Bogotá</h3>
+                    <p>La Candelaria street art, Monserrate, and high-altitude light.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Cartagena -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/cartagena-interview-preview.html">
+                    <span class="flag">🇨🇴</span>
+                    <h3>Cartagena</h3>
+                    <p>Walled old town, colourful colonial streets, and Caribbean humidity.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Guadalajara -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/guadalajara-interview-preview.html">
+                    <span class="flag">🇲🇽</span>
+                    <h3>Guadalajara</h3>
+                    <p>Hospicio Cabañas, Tlaquepaque crafts, and mariachi culture.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- São Paulo -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/sao-paulo-interview-preview.html">
+                    <span class="flag">🇧🇷</span>
+                    <h3>São Paulo</h3>
+                    <p>Avenida Paulista, street art, and the mega-city's vertical energy.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Cusco -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/cusco-interview-preview.html">
+                    <span class="flag">🇵🇪</span>
+                    <h3>Cusco</h3>
+                    <p>Plaza de Armas, Sacsayhuamán, and the gateway to Machu Picchu.</p>
+                    <span class="arrow">→</span>
+                </a>
             </div>
+        </section>
+
+        <!-- AFRICA -->
+        <section class="region-section">
+            <h2 class="region-title">🌍 Africa</h2>
+            <div class="city-grid">
+                <!-- Cairo -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/cairo-interview-preview.html">
+                    <span class="flag">🇪🇬</span>
+                    <h3>Cairo</h3>
+                    <p>Pyramids of Giza, Khan el-Khalili bazaar, and Nile sunsets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Cape Town -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/cape-town-interview-preview.html">
+                    <span class="flag">🇿🇦</span>
+                    <h3>Cape Town</h3>
+                    <p>Table Mountain, V&A Waterfront, and colourful Bo-Kaap streets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Nairobi -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/nairobi-interview-preview.html">
+                    <span class="flag">🇰🇪</span>
+                    <h3>Nairobi</h3>
+                    <p>Nairobi National Park, Giraffe Centre, and city safari sunsets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Lagos -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/lagos-interview-preview.html">
+                    <span class="flag">🇳🇬</span>
+                    <h3>Lagos</h3>
+                    <p>Lekki Conservation Centre, Victoria Island, and Afrobeat energy.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Kinshasa -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/kinshasa-interview-preview.html">
+                    <span class="flag">🇨🇩</span>
+                    <h3>Kinshasa</h3>
+                    <p>Congo River, Académie des Beaux-Arts, and rumba street culture.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Luanda -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/luanda-interview-preview.html">
+                    <span class="flag">🇦🇴</span>
+                    <h3>Luanda</h3>
+                    <p>Marginal waterfront, Fortaleza de São Miguel, and Atlantic sunsets.</p>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Marrakech -->
+                <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/marrakech-interview-preview.html">
+                    <span class="flag">🇲🇦</span>
+                    <h3>Marrakech</h3>
+                    <p>Jemaa el-Fnaa, souks, and Majorelle Garden blue.</p>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section style="text-align:center; margin:60px 0; padding:40px; background:#111; border:1px solid #333; border-radius:12px;">
+            <h2 style="color:#e94560; font-size:1.8rem; margin-bottom:15px;">📬 Are You a Local Videographer?</h2>
+            <p style="color:#888; max-width:600px; margin:0 auto 25px;">We're always looking for new city guides. If you film in a city not yet covered, get in touch – we'd love to feature your work.</p>
+            <a href="/VideoCameraHoliday/about/" class="btn" style="display:inline-block; padding:12px 30px; background:#e94560; color:#fff; text-decoration:none; border-radius:30px; font-weight:600;">Contact Us</a>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>🎬 Latest Real-World Tests</h4>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <section class="footer-section">
+                <h4>🎬 Series</h4>
                 <ul>
-                    <li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5: Hanoi Rooftop View</a></li>
-                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">DJI Action 5: Hot Weather Test</a></li>
-                    <li><a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II: Lisbon Cobblestones</a></li>
+                    <li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li>
+                    <li><a href="/VideoCameraHoliday/city-through-the-lens/#faq">Series FAQ</a></li>
                 </ul>
-            </div>
-            <div class="footer-col">
+            </section>
+            <section class="footer-section">
                 <h4>🛒 Top Buying Guides</h4>
                 <ul>
                     <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
                     <li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
                     <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+                    <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Compact Cameras</a></li>
                 </ul>
-            </div>
-            <div class="footer-col">
+            </section>
+            <section class="footer-section">
                 <h4>📸 Popular Reviews</h4>
                 <ul>
                     <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+                    <li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">DJI Pocket 4 Pro</a></li>
                     <li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                    <li><a href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
+                    <li><a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
                 </ul>
-            </div>
-            <div class="footer-col">
-                <h4>ℹ️ About & Info</h4>
+            </section>
+            <section class="footer-section">
+                <h4>🎬 How‑To Essentials</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+                    <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <h4>🏖️ Destinations</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+                    <li><a href="/VideoCameraHoliday/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <h4>✂️ Editing & Comparisons</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">Color Grading</a></li>
+                    <li><a href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html">Editing Apps</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">GoPro Hero 13 vs Sony ZV-1 II</a></li>
+                    <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Camera</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <h4>ℹ️ About</h4>
                 <ul>
                     <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
-                    <li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li>
+                    <li><a href="/VideoCameraHoliday/">Home</a></li>
                     <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
                 </ul>
-            </div>
+            </section>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Holiday Video Camera — Real travel camera testing. No lab charts.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748b;">Some buying guides on this site contain affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
-        </div.
+            <p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+        </div>
     </footer>
-<<<<<<< HEAD
-<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mega-menu');
-    if (toggleBtn && mobileMenu) {
-        toggleBtn.addEventListener('click', () => {
-            const isActive = mobileMenu.classList.toggle('active');
-            toggleBtn.classList.toggle('active');
-            toggleBtn.setAttribute('aria-expanded', isActive);
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleBtn = document.querySelector('.mobile-menu-toggle');
+            var navLinks = document.querySelector('.top-nav .nav-links');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function(e) {
+                    var expanded = this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
+                    this.setAttribute('aria-expanded', expanded);
+                    navLinks.classList.toggle('active');
+                });
+            }
+            // Mega menu toggle for touch
+            var megaToggles = document.querySelectorAll('.top-nav .nav-links li.mega-item > a[aria-haspopup="true"]');
+            var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            function closeAllMegaMenus() {
+                document.querySelectorAll('.top-nav .nav-links li.mega-item.open').forEach(function(el) {
+                    el.classList.remove('open');
+                });
+            }
+            megaToggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    var parentLi = this.closest('.mega-item');
+                    if (window.innerWidth <= 1024 || isTouchDevice) {
+                        e.preventDefault();
+                        var isOpen = parentLi.classList.contains('open');
+                        closeAllMegaMenus();
+                        if (!isOpen) { parentLi.classList.add('open'); }
+                    }
+                });
+            });
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.mega-item')) { closeAllMegaMenus(); }
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 1024) { closeAllMegaMenus(); }
+            });
         });
-    }
-});
-</script>
-=======
+    </script>
 
->>>>>>> 18dda5106699d367b7af4bdc2fdffb21589093bc
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "headline": "City Through the Lens – 50+ Global Videography Guides",
+      "description": "Explore 50+ city videography guides from local shooters worldwide. Real-world filming tips, gear recommendations, and B-roll ideas.",
+      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/",
+      "author": {
+        "@type": "Person",
+        "name": "Dawid Millennium"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Holiday Video Camera",
+        "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/" },
+        { "@type": "ListItem", "position": 2, "name": "City Through the Lens", "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/" }
+      ]
+    }
+    </script>
 </body>
 </html>
