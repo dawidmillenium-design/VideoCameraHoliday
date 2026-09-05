@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> ... </head>
+<body>
+    <!-- ===== HARDCODED MENU ===== -->
+    <nav class="top-nav" ...> ... </nav>
+
+    <!-- ===== PAGE CONTENT ===== -->
+    <main id="main" class="container">
+        <div class="content-wrapper">
+            ---
+layout: default
+title: "color grading travel videos"
+description: "Travel camera guide and reviews from Holiday Video Camera"
+---<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Grading Travel Videos: Basics | Holiday Video Camera</title>
+<meta name="description" content="A beginner color grading workflow for travel videos that works in any app: exposure-first fixes, white balance for mixed light, one LUT, natural skin tones.">
+<meta name="author" content="Dawid Millennium">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/color-grading-travel-videos.html">
+<meta property="og:title" content="Color Grading Travel Videos: Basics | Holiday Video Camera">
+<meta property="og:description" content="A beginner color grading workflow for travel videos that works in any app: exposure-first fixes, white balance for mixed light, one LUT, natural skin tones.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/color-grading-travel-videos.html">
+<meta property="og:site_name" content="Holiday Video Camera">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+.top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+.top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
+.top-nav .nav-links li { position: relative; }
+.top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
+.top-nav .nav-links a:hover, .top-nav .nav-links a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #1a1a2e; border: 1px solid #333; border-top: 2px solid #e94560; border-radius: 0 0 8px 8px; min-width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); list-style: none; padding: 8px 0; }
+.top-nav .nav-links li:hover .dropdown-menu { display: block; }
+.dropdown-menu a { padding: 10px 20px !important; font-size: 0.85rem !important; border-bottom: 1px solid #222; }
+.dropdown-menu a:last-child { border-bottom: none; }
+.mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
+header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+header .logo { font-size: 1.5rem; font-weight: 700; color: #e94560; text-decoration: none; display: inline-block; margin-bottom: 15px; }
+h1 { font-size: 2.4rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
+.subtitle { font-size: 1.15rem; color: #888; max-width: 680px; margin: 0 auto 15px; }
+.meta { color: #888; font-size: 0.9rem; }
+.meta span { margin: 0 10px; }
+.breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: #888; }
+.breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
+.breadcrumb li { display: flex; align-items: center; }
+.breadcrumb li:not(:last-child)::after { content: ">"; margin: 0 10px; color: #555; }
+.breadcrumb a { color: #e94560; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+article { padding: 40px 20px; }
+h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+h3 { color: #fff; font-size: 1.3rem; margin: 30px 0 12px; }
+p { margin-bottom: 20px; font-size: 1.05rem; }
+a.content-link { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
+a.content-link:hover { color: #ff6b6b; }
+.author-box { display: flex; align-items: center; gap: 15px; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 25px 0; }
+.author-avatar { width: 50px; height: 50px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+.author-info h4 { color: #fff; margin: 0 0 5px; font-size: 1rem; }
+.author-info p { color: #888; font-size: 0.85rem; margin: 0; }
+.last-updated { color: #666; font-size: 0.8rem; margin-top: 5px; }
+.toc { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: #e94560; }
+.toc ul { list-style: none; margin-left: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: #ccc; text-decoration: none; }
+.toc a:hover { color: #e94560; }
+.takeaways { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; }
+.takeaways h3 { color: #e94560; margin-top: 0; }
+.takeaways ul { margin-left: 20px; margin-bottom: 0; }
+.tip-box { background: rgba(52, 152, 219, 0.1); border-left: 4px solid #3498db; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+.tip-box strong { color: #3498db; }
+.warning-box { background: rgba(243, 156, 18, 0.1); border-left: 4px solid #f39c12; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; }
+.warning-box strong { color: #f39c12; }
+ul { margin-left: 20px; margin-bottom: 20px; }
+li { margin-bottom: 10px; }
+.faq-section { margin: 30px 0; }
+.faq-item { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 20px 0; }
+.faq-question { color: #fff; font-size: 1.15rem; margin: 0 0 12px; }
+.faq-answer p { color: #ccc; margin: 0; }
+.related-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+.related-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+.related-card:hover { border-color: #e94560; }
+.related-card h4 { color: #e94560; margin-top: 0; }
+.related-card p { font-size: 0.9rem; color: #888; margin-bottom: 0; }
+table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #333; }
+th { color: #e94560; background: #111; }
+td { color: #ccc; }
+.btn-group { display: flex; gap: 15px; flex-wrap: wrap; margin: 25px 0; }
+.btn { display: inline-block; padding: 12px 30px; background: #e94560; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600; transition: background 0.3s; border: none; cursor: pointer; }
+.btn:hover { background: #ff6b6b; }
+.btn-outline { background: transparent; border: 2px solid #e94560; color: #fff; }
+.btn-outline:hover { background: #e94560; }
+.affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
+.site-footer { background: #111; border-top: 2px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+.footer-section h4 { color: #e94560; font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+.footer-section ul { list-style: none; margin: 0; padding: 0; }
+.footer-section li { margin-bottom: 8px; }
+.footer-section a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+.footer-section a:hover { color: #e94560; }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
+.footer-bottom a { color: #e94560; text-decoration: none; }
+@media (max-width: 768px) {
+    h1 { font-size: 1.7rem; } .subtitle { font-size: 1rem; }
+    .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; }
+    .footer-container { grid-template-columns: 1fr 1fr; }
+}
+</style>
+
+    <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
+</head>
+<body>
+
+
+<header>
+<a href="../" class="logo">📹 Holiday Video Camera</a>
+<h1>Color Grading Travel Videos: A Beginner Workflow That Works on Any App</h1>
+<p class="subtitle">Flat vs standard profiles, exposure-first correction, mixed-light white balance, one-LUT discipline, and natural skin tones — on phone or desktop.</p>
+<div class="meta"><span>📅 August 25, 2026</span><span>⏱️ 9 min read</span><span>✅ Updated: August 25, 2026</span></div>
+</header>
+<div class="breadcrumb">
+<div class="container" style="padding:0;">
+<ol itemscope itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="../"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="../editing/"><span itemprop="name">Editing</span></a><meta itemprop="position" content="2"></li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name">Color Grading Travel Videos</span><meta itemprop="position" content="3"></li>
+</ol>
+</div>
+</div>
+<article class="container">
+<div class="author-box">
+<div class="author-avatar">📹</div>
+<div class="author-info">
+<h4>Dawid Millennium — Travel Videographer</h4>
+<p>I've graded holiday footage on hotel-room laptops and phone screens on night buses — this is the simple order of operations that never fails me.</p>
+<p class="last-updated">🕐 Last updated: August 25, 2026</p>
+</div>
+</div>
+<div class="toc">
+<h3>In This Guide</h3>
+<ul>
+<li><a href="#flat-vs-standard">Flat/Log vs Standard: What to Shoot</a></li>
+<li><a href="#workflow">The Four-Step Grading Workflow</a></li>
+<li><a href="#phone-vs-desktop">Phone Apps vs Desktop Grading</a></li>
+<li><a href="#mistakes">Common Color Grading Mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#related">Related Articles</a></li>
+</ul>
+</div>
+
+<p><strong>Yes — beginners can color grade travel videos, and the workflow is the same in every app: first fix exposure and contrast, then white balance, then apply one LUT or look at low intensity, and finally check skin tones. You do not need to shoot log to get a great result; standard footage graded gently almost always beats log footage graded badly.</strong> I've graded trip films everywhere from a beach bar in Bali to a sleeper train in Vietnam, and this exact order has never let me down.</p>
+
+<p>Color grading has a reputation for being dark magic reserved for people with calibrated monitors and cinema cameras. In reality, holiday footage needs about 80% less work than people think. The difference between "nice phone footage" and "wow, where is that?" is usually three small, boring adjustments done in the right order — not a cinematic teal-and-orange preset.</p>
+
+<div class="takeaways">
+<h3>Key Takeaways</h3>
+<ul>
+<li>Correct first, grade second: exposure and white balance before any creative look.</li>
+<li>Standard picture profiles are fine for most holiday footage; log only pays off in high-contrast scenes like sunsets.</li>
+<li>Pick one LUT per trip and use it at 50–70% intensity for a consistent look.</li>
+<li>Judge skin tones before you judge the scenery — viewers notice faces first.</li>
+<li>CapCut, VN, and LumaFusion can all handle this workflow; DaVinci Resolve is the free desktop upgrade.</li>
+</ul>
+</div>
+
+<h2 id="flat-vs-standard">Flat/Log vs Standard: What Should You Shoot?</h2>
+
+<p>On a beach in Bali last year, I shot the same sunset twice — once in the DJI Osmo Pocket 3's standard color, once in D-Log M. The standard clip was usable after thirty seconds of tweaking. The log clip took ten minutes and looked only slightly better in the sky. That sums up the flat-vs-standard debate for travel video: log gives you more headroom, but it costs you time and skill you may not have on holiday.</p>
+
+<h3>Shoot standard if…</h3>
+<ul>
+<li>You're new to grading, or you edit on your phone while travelling.</li>
+<li>Most of your shooting is in reasonable, even light — cities, overcast days, interiors.</li>
+<li>You'd rather spend evenings at dinner than at a laptop. Standard footage from cameras like the iPhone 16 Pro or Canon PowerShot V10 already looks 90% finished.</li>
+</ul>
+
+<h3>Shoot flat or log if…</h3>
+<ul>
+<li>You film lots of high-contrast scenes: sunsets, bright snow, dark temples against bright sky.</li>
+<li>You're happy to spend real time grading at home after the trip.</li>
+<li>Your camera has a good log implementation — D-Log M on the DJI Osmo Action 5 Pro and Pocket 3, or GP-Log on the GoPro Hero 13 — and you can expose it properly.</li>
+</ul>
+
+<div class="warning-box">
+<strong>Watch out:</strong> log footage looks grey and washed out straight out of camera — that's normal, it's meant to be graded. But if you underexpose log, the shadows turn to mush when you lift them. When in doubt, expose log slightly bright (without clipping the sky) and bring it down in the edit.
+</div>
+
+<p>If you shoot log, your camera maker publishes a free "conversion LUT" that turns log back to normal color — that's always step zero before anything in the workflow below.</p>
+
+<h2 id="workflow">The Four-Step Grading Workflow (Works in Any App)</h2>
+
+<p>Every grading tool — from CapCut's sliders to DaVinci Resolve's color wheels — boils down to the same four moves. Do them in this order, because each step changes how the next one looks.</p>
+
+<h3>Step 1: Fix Exposure and Contrast First</h3>
+<p>Before touching color, make the brightness right. Holiday footage is usually shot in harsh sun, so the typical fix is: pull highlights down to recover the sky, lift shadows slightly so faces under hats aren't black holes, then add a touch of contrast. In CapCut and VN this is the "Adjust" panel; in LumaFusion and Resolve it's the basic wheels. A clip that's correctly exposed already looks "graded" to most viewers.</p>
+
+<h3>Step 2: White Balance in Mixed Holiday Light</h3>
+<p>Travel is the worst-case scenario for white balance: golden-hour streets with blue shop signs, restaurants mixing candlelight and LED panels, hotel rooms with warm lamps and cool window light. Auto white balance often flips mid-clip. The fix: pick one neutral reference (a white napkin, a grey wall, a cloud) and set temperature and tint so it looks neutral — then leave it alone for the whole scene. Slightly warm is forgiving for holiday footage; slightly green is never forgiven. Faces going orange or grey is almost always a white balance problem, not a "grade" problem.</p>
+
+<h3>Step 3: One LUT, One Trip</h3>
+<p>A LUT is just a saved look. The beginner mistake is trying six LUTs per clip; the pro habit is picking one LUT for the whole trip and applying it at reduced intensity — 50 to 70 percent — over your corrected footage. That single decision is what makes a travel film feel cohesive. I used one warm-teal LUT across three weeks in Greece, and people asked what cinema camera I'd used. It was a phone with discipline. Once your look is set, cut it to music properly — my <a class="content-link" href="../24fps-vs-120fps-holiday-edit-ai-music-sync.html">guide to frame rates and AI music sync for holiday edits</a> covers that side of the edit.</p>
+
+<h3>Step 4: Skin Tones Before Scenery</h3>
+<p>Viewers forgive a slightly purple sky; they do not forgive a green face. After your LUT, check every clip with a person in it. Most apps have an HSL (hue/saturation/luminance) panel: if skin looks too orange, desaturate orange slightly or shift its hue a touch toward red; if skin looks grey, your white balance is off — go back to step 2. On phone screens, which are oversaturated by default, skin that looks "vivid" on your phone often looks sunburnt on a TV. Grade skin slightly conservative.</p>
+
+<div class="tip-box">
+<strong>Pro tip:</strong> Grade on the same device you'll watch the final film on most. If your audience watches on phones, do a final check on a phone. And step away for ten minutes before exporting — your eyes adapt to your own grade and start lying to you.
+</div>
+
+<h2 id="phone-vs-desktop">Phone Apps vs Desktop Grading</h2>
+
+<p>I grade roughly half my trip films on a phone or iPad and half at home. If you want the full mobile editing picture beyond just color, my <a class="content-link" href="../how-to/edit-travel-videos-phone-tablet.html">phone and tablet editing workflow</a> covers organization and export too. Here's how the color tools specifically compare:</p>
+
+<table>
+<tr><th>App</th><th>Color tools</th><th>LUT support</th><th>Best for</th></tr>
+<tr><td>CapCut (free)</td><td>Exposure, WB, HSL, curves, filters</td><td>Import custom LUTs, intensity slider</td><td>Quick grades on the road</td></tr>
+<tr><td>VN (free)</td><td>Clean WB/exposure sliders, curves</td><td>LUT import with strength control</td><td>Tidy timeline grading, no watermark</td></tr>
+<tr><td>LumaFusion (~$30, iPad)</td><td>Wheels, scopes, HSL, keyframes</td><td>Full LUT workflow</td><td>Serious grading on a tablet</td></tr>
+<tr><td>DaVinci Resolve (free, desktop)</td><td>Professional wheels, nodes, scopes</td><td>Full LUT workflow</td><td>Deep grades at home, log footage</td></tr>
+</table>
+
+<p>Honest verdict: for standard-profile holiday footage, CapCut or VN on a phone is genuinely enough — the workflow above uses nothing they lack. Desktop Resolve earns its place when you shoot log, need scopes to match cameras, or want to rescue a badly mixed-light scene. The <a class="content-link" href="../reviews/iphone-16-pro-video-review.html">iPhone 16 Pro's video quality</a> is good enough that its standard footage grades beautifully even on the phone itself. I graded much of my recent <a class="content-link" href="../city-through-the-lens/">City Through the Lens</a> series this way — one LUT, phone timeline, done before the flight home.</p>
+
+<h2 id="mistakes">Common Color Grading Mistakes</h2>
+
+<ul>
+<li><strong>Grading before correcting.</strong> Slapping a LUT on badly exposed footage bakes the problems in. Fix exposure and white balance first, always.</li>
+<li><strong>Using a different look per clip.</strong> A beach LUT, a city LUT, and a food LUT in one film looks like three different trips. One LUT per trip.</li>
+<li><strong>Cranking saturation.</strong> Phones oversaturate by default; pushing saturation on top makes skies cartoonish and skin radioactive. If anything, pull saturation down 5–10%.</li>
+<li><strong>Trusting one screen.</strong> Laptop screens are often cool and dim; phones are warm and punchy. Check the export on at least two devices before posting.</li>
+<li><strong>Over-darkening for "cinematic" mood.</strong> Moody grades look great on your monitor and invisible on a phone in daylight. Most travel footage wants to be bright and open.</li>
+<li><strong>Ignoring consistency across cameras.</strong> If you mix a GoPro and a phone, match them at the correction stage before the LUT — otherwise the same LUT produces two different looks.</li>
+</ul>
+
+<p>Once the grade is locked, the rest is packaging — <a class="content-link" href="../editing/best-editing-apps-holiday-footage.html">choosing the right editing app</a> for your device and <a class="content-link" href="../editing/post-travel-videos-youtube.html">exporting and posting to YouTube</a> with the right settings are covered in the companion guides.</p>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq-section">
+<div class="faq-item">
+<h3 class="faq-question">Do I need to shoot log to color grade travel videos?</h3>
+<div class="faq-answer"><p>No. Standard picture profiles from modern cameras like the iPhone 16 Pro, DJI Osmo Pocket 3, and GoPro Hero 13 already have great color, and a gentle exposure-plus-white-balance correction takes them most of the way. Log only pays off in very high-contrast scenes and if you're willing to spend real time grading.</p></div>
+</div>
+<div class="faq-item">
+<h3 class="faq-question">What is a LUT and should beginners use one?</h3>
+<div class="faq-answer"><p>A LUT is a pre-made color look you apply in one click. Beginners absolutely should use one — but only one per trip, applied at 50–70% intensity on top of corrected footage. That's the fastest route to a consistent, professional-looking travel film.</p></div>
+</div>
+<div class="faq-item">
+<h3 class="faq-question">Can I color grade properly on a phone?</h3>
+<div class="faq-answer"><p>Yes. CapCut and VN both have exposure, white balance, HSL, curves, and LUT import with intensity control — everything the four-step workflow needs. Desktop tools like DaVinci Resolve add scopes and finer control, which matter mainly for log footage and problem clips.</p></div>
+</div>
+<div class="faq-item">
+<h3 class="faq-question">Why does my grade look different on my phone and laptop?</h3>
+<div class="faq-answer"><p>Phone screens are brighter, warmer, and oversaturated by default; many laptop screens are dimmer and cooler. Grade conservatively, avoid heavy saturation, and always check the exported file on at least two devices — ideally the device your audience will actually use.</p></div>
+</div>
+</div>
+
+<h2 id="related">Related Articles</h2>
+<div class="related-articles">
+<a class="related-card" href="../24fps-vs-120fps-holiday-edit-ai-music-sync.html">
+<h4>24fps vs 120fps &amp; AI Music Sync</h4>
+<p>Frame rates, slow motion, and cutting your holiday edit to the beat.</p>
+</a>
+<a class="related-card" href="../editing/best-editing-apps-holiday-footage.html">
+<h4>Best Editing Apps for Holiday Footage</h4>
+<p>CapCut, VN, LumaFusion, Resolve and Rush compared for phone, tablet and desktop.</p>
+</a>
+<a class="related-card" href="../editing/post-travel-videos-youtube.html">
+<h4>Post Travel Videos on YouTube</h4>
+<p>Export settings, titles, thumbnails, chapters, and a Shorts strategy for 2026.</p>
+</a>
+</div>
+
+<p class="affiliate-note">This guide contains no affiliate links. Our recommendations are based on real travel testing.</p>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Editing",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Color Grading Travel Videos",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/color-grading-travel-videos.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Color Grading Travel Videos: A Beginner Workflow That Works on Any App",
+  "description": "A beginner color grading workflow for travel videos that works in any app: exposure-first fixes, white balance for mixed light, one LUT, natural skin tones.",
+  "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/color-grading-travel-videos.html",
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "author": {
+    "@type": "Person",
+    "name": "Dawid Millennium",
+    "jobTitle": "Travel Videographer",
+    "description": "Travel vlogger since 2019; has tested 50+ cameras on real trips across Southeast Asia, Europe, and South America."
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Holiday Video Camera",
+    "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+  },
+  "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to shoot log to color grade travel videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Standard picture profiles from modern cameras like the iPhone 16 Pro, DJI Osmo Pocket 3, and GoPro Hero 13 already have great color, and a gentle exposure-plus-white-balance correction takes them most of the way. Log only pays off in very high-contrast scenes and if you're willing to spend real time grading."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a LUT and should beginners use one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A LUT is a pre-made color look you apply in one click. Beginners absolutely should use one — but only one per trip, applied at 50–70% intensity on top of corrected footage. That's the fastest route to a consistent, professional-looking travel film."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I color grade properly on a phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CapCut and VN both have exposure, white balance, HSL, curves, and LUT import with intensity control — everything the four-step workflow needs. Desktop tools like DaVinci Resolve add scopes and finer control, which matter mainly for log footage and problem clips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my grade look different on my phone and laptop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phone screens are brighter, warmer, and oversaturated by default; many laptop screens are dimmer and cooler. Grade conservatively, avoid heavy saturation, and always check the exported file on at least two devices — ideally the device your audience will actually use."
+      }
+    }
+  ]
+}
+</script>
+
+<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+</body>
+</html>
+
+        </div>
+    </main>
+
+    <!-- ===== HARDCODED FOOTER ===== -->
+    <footer class="site-footer" ...> ... </footer>
+</body>
+</html>

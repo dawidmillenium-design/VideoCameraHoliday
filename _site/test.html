@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> ... </head>
+<body>
+    <!-- ===== HARDCODED MENU ===== -->
+    <nav class="top-nav" ...> ... </nav>
+
+    <!-- ===== PAGE CONTENT ===== -->
+    <main id="main" class="container">
+        <div class="content-wrapper">
+            ---
+layout: default
+title: "test"
+description: "Travel camera guide and reviews from Holiday Video Camera"
+---<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJI Osmo Action 6 Review: Maldives Deep Dive & Beach Test | Holiday Video Camera</title>
+    <meta name="description" content="Real-world review of the DJI Osmo Action 6 tested in the Maldives. Deep dive shark encounters, beach stabilization tests vs Insta360 X5, and buying tips from Bangkok.">
+    <meta name="author" content="Dawid Millennium">
+    <meta property="og:title" content="DJI Osmo Action 6 Review: Maldives Deep Dive & Beach Test">
+    <meta property="og:description" content="We took the new DJI Osmo Action 6 to the Maldives for deep dives with tiger sharks and beach tests against the Insta360 X5.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-action-6-review.html">
+    <meta property="og:site_name" content="Holiday Video Camera">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <style>
+        :root {
+            --ocean-blue: #0077b6;
+            --deep-sea: #023e8a;
+            --sand: #f4e4bc;
+            --white: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-light: #4a4a6a;
+            --accent: #e94560;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: #f9fbfd;
+        }
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--deep-sea);
+        }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; margin-top: 2.5rem; }
+        h3 { font-size: 1.5rem; margin-top: 1.5rem; }
+        p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        a { color: var(--ocean-blue); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--accent); }
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .content-wrapper {
+            padding: 40px;
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin: 40px auto;
+            border-radius: 12px;
+            max-width: 900px;
+        }
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, var(--ocean-blue), var(--deep-sea));
+            color: var(--white);
+            border-radius: 12px 12px 0 0;
+            margin: -40px -40px 2rem -40px;
+        }
+        .hero h1 { color: var(--white); margin-bottom: 1rem; }
+        .hero .subtitle { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2rem; }
+        /* Video Embed */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            margin: 2rem 0;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* Images */
+        .review-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        /* Pros & Cons */
+        .verdict-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f0f7ff;
+            border-radius: 12px;
+            border-left: 5px solid var(--ocean-blue);
+        }
+        .pros h3 { color: #2e7d32; }
+        .cons h3 { color: #c62828; }
+        ul { margin-left: 1.5rem; margin-bottom: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        /* Call to Action */
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 2rem 0;
+            transition: transform 0.2s, background 0.3s;
+        }
+        .cta-button:hover {
+            background: #d6304a;
+            transform: translateY(-2px);
+            color: var(--white);
+        }
+        /* MEGA MENU STYLES */
+        .top-nav {
+            background: #111;
+            border-bottom: 2px solid var(--accent);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 60px;
+        }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links > li {
+            position: relative;
+        }
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            padding: 18px 16px;
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+            background: rgba(233, 69, 96, 0.1);
+        }
+        /* Mega Menu Logic Fixed */
+        .mega-item {
+            position: relative;
+        }
+        .mega-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a2e;
+            border-radius: 12px;
+            border-top: 2px solid var(--accent);
+            padding: 24px 28px;
+            min-width: 700px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            z-index: 1001;
+            border: 1px solid #333;
+        }
+        .mega-item:hover .mega-menu {
+            display: block;
+        }
+        .mega-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 28px;
+            padding: 0;
+        }
+        .mega-column h4 {
+            color: var(--accent);
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .mega-column ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .mega-column li {
+            margin-bottom: 6px;
+        }
+        .mega-column a {
+            color: #aaa;
+            font-size: 0.9rem;
+            padding: 4px 0 !important;
+            background: none !important;
+        }
+        .mega-column a:hover {
+            color: var(--accent);
+            padding-left: 0 !important;
+            background: none !important;
+        }
+        /* MEGA FOOTER STYLES */
+        .site-footer {
+            background: #111;
+            border-top: 2px solid var(--accent);
+            padding: 60px 20px 20px;
+            margin-top: 60px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-section h4 {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+        .footer-section a {
+            color: #888;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .mega-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #111;
+                padding: 20px 0;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .mega-menu {
+                position: static;
+                box-shadow: none;
+                border-top: 1px solid #333;
+                padding: 10px 0;
+            }
+            .mega-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .verdict-box {
+                grid-template-columns: 1fr;
+            }
+            .content-wrapper {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            .hero {
+                margin: -20px -20px 2rem -20px;
+                padding: 2rem 1rem;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- MEGA MENU NAVIGATION -->
+
+
+<div class="container">
+    <div class="content-wrapper">
+        <!-- HERO SECTION -->
+        <header class="hero">
+            <h1>DJI Osmo Action 6 Review: Tested in the Maldives</h1>
+            <p class="subtitle">From the streets of Bangkok to the deep reefs of Maafushi, does DJI's latest action cam hold up against shark encounters and harsh sunlight?</p>
+            <a href="https://www.youtube.com/watch?v=7yxFFJ7ROwk&t=20s" class="cta-button">Watch Full Video Showcase →</a>
+        </header>
+        
+        <article>
+            <p>I picked up the <strong>DJI Osmo Action 6</strong> right in the heart of Bangkok, buzzing with excitement just hours before catching my flight to the Maldives. There's something thrilling about testing brand-new gear in one of the world's most demanding environments immediately after unboxing it.</p>
+            
+            <p>This wasn't a lab test. This was a baptism by fire (and saltwater). Over the next week, the camera faced blinding equatorial sun on pristine white sands and the crushing pressure of a deep dive course off the coast of Maafushi. Here is how it performed.</p>
+
+            <img src="https://placehold.co/800x450/0077b6/ffffff?text=Unboxing+in+Bangkok" alt="DJI Osmo Action 6 Unboxing in Bangkok" class="review-image">
+            <p class="caption">Fresh out of the box in Bangkok: The anticipation before the Maldives trip.</p>
+
+            <h2>Surface Testing: Beach Showdown</h2>
+            <p>The first real test happened on the powdery white sands of Maafushi. The sunlight here is unforgiving, creating extreme dynamic range challenges that blow out skies or crush shadows. I ran a side-by-side comparison against the <strong>Insta360 X5</strong> to see which sensor handled the contrast better.</p>
+            
+            <p><strong>Stabilization:</strong> The Action 6's new HorizonSteady algorithm is incredibly smooth. While walking along the shoreline, the footage felt locked to a rail. The Insta360 X5 is great, but the reframing process sometimes introduces slight digital jitter that the Action 6 avoids natively.</p>
+            
+            <p><strong>Color Science:</strong> DJI has tweaked their color profile. The blues of the Indian Ocean popped without looking neon, and the sand retained texture rather than turning into a white blob. The Insta360 leaned slightly cooler, which looked nice but required more grading to match reality.</p>
+
+            <img src="https://placehold.co/800x450/f4e4bc/333333?text=Beach+Showdown:+Action+6+vs+X5" alt="Side by side comparison on Maafushi beach" class="review-image">
+            <p class="caption">The Beach Showdown: DJI Action 6 vs Insta360 X5 in harsh sunlight.</p>
+
+            <!-- VIDEO 6: DJI Osmo Action 6 2026 - 0:33 -->
+            <div>
+              <div class="youtube-shorts-embed">
+                <iframe src="https://www.youtube.com/embed/7yxFFJ7ROwk?rel=0" title="DJI Osmo Action 6 2026 Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <p class="video-caption">DJI Osmo Action 6: 2026 First Look</p>
+              <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "VideoObject",
+                "name": "DJI Osmo Action 6 2026 First Impressions",
+                "description": "Initial hands-on testing and first impressions of the DJI Osmo Action 6 in real-world travel conditions.",
+                "thumbnailUrl": "https://i.ytimg.com/vi/7yxFFJ7ROwk/hqdefault.jpg",
+                "uploadDate": "2026-09-01",
+                "duration": "PT33S",
+                "contentUrl": "https://www.youtube.com/watch?v=7yxFFJ7ROwk",
+                "embedUrl": "https://www.youtube.com/embed/7yxFFJ7ROwk",
+                "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+              }
+              </script>
+            </div>
+
+            <h2>Deep Dive: Sharks & Reefs of Maafushi</h2>
+            <p>The true test of any "action" camera is what happens when you submerge it. I took the Action 6 on a certified deep dive course. At depth, colors usually vanish, turning everything into a monochromatic blue mess. However, the Action 6's native color profile retained surprising amounts of red and orange on the reef fish.</p>
+            
+            <p>The highlight (or perhaps the terrifying peak) of the dive was a close encounter with a <strong>Tiger Shark</strong>. As the predator glided within inches of the lens, the autofocus locked instantly, and the stabilization kept the shot usable despite my elevated heart rate and sudden movements. No housing fogged, no leaks, just pure underwater clarity.</p>
+
+            <div class="video-container">
+                <!-- VIDEO 5: Maldives Deep Dive (DJI Action 6) - 0:28 -->
+                <div>
+                  <div class="youtube-shorts-embed">
+                    <iframe src="https://www.youtube.com/embed/-aOaznWSg0k?rel=0" title="DJI Osmo Action 6 Maldives Deep Dive" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <p class="video-caption">DJI Osmo Action 6: Maldives Deep Dive</p>
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "VideoObject",
+                    "name": "DJI Osmo Action 6 Maldives Deep Dive",
+                    "description": "Underwater deep dive footage in the Maldives testing the waterproof capabilities and color science of the DJI Osmo Action 6.",
+                    "thumbnailUrl": "https://i.ytimg.com/vi/-aOaznWSg0k/hqdefault.jpg",
+                    "uploadDate": "2026-09-01",
+                    "duration": "PT28S",
+                    "contentUrl": "https://www.youtube.com/watch?v=-aOaznWSg0k",
+                    "embedUrl": "https://www.youtube.com/embed/-aOaznWSg0k",
+                    "publisher": { "@type": "Organization", "name": "Bloggers Travel" }
+                  }
+                  </script>
+                </div>
+            </div>
+            
+            <p class="caption">Footage from the deep dive: Tiger Shark encounter captured on DJI Osmo Action 6.</p>
+
+            <h2>Final Verdict</h2>
+            <p>The DJI Osmo Action 6 proves itself as a top-tier travel companion. It bridges the gap between rugged durability and cinematic quality. While the Insta360 X5 offers unique 360 flexibility, the Action 6 wins for point-and-shoot reliability in extreme conditions.</p>
+
+            <div class="verdict-box">
+                <div class="pros">
+                    <h3>👍 The Good</h3>
+                    <ul>
+                        <li>Exceptional dynamic range in harsh sunlight</li>
+                        <li>Flawless underwater performance without housing</li>
+                        <li>Superior horizon leveling stabilization</li>
+                        <li>Accurate color science straight out of camera</li>
+                        <li>Robust build quality survived sand and salt</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>👎 The Bad</h3>
+                    <ul>
+                        <li>Battery life drains faster in 4K/60fps mode</li>
+                        <li>No 360-degree capture capability</li>
+                        <li>Slightly bulkier than the GoPro Hero 13</li>
+                        <li>App connectivity can be finicky in bright sun</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 3rem;">
+                <!-- FIXED: Updated relative path to absolute root-relative path -->
+                <a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html" class="cta-button">See More Waterproof Camera Tests</a>
+            </p>
+        </article>
+    </div>
+</div>
+
+<!-- MEGA FOOTER -->
+
+
+</body>
+</html>
+
+        </div>
+    </main>
+
+    <!-- ===== HARDCODED FOOTER ===== -->
+    <footer class="site-footer" ...> ... </footer>
+</body>
+</html>

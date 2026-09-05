@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> ... </head>
+<body>
+    <!-- ===== HARDCODED MENU ===== -->
+    <nav class="top-nav" ...> ... </nav>
+
+    <!-- ===== PAGE CONTENT ===== -->
+    <main id="main" class="container">
+        <div class="content-wrapper">
+            ---
+layout: default
+title: "index"
+description: "Travel camera guide and reviews from Holiday Video Camera"
+---<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us: Real Travel Camera Testing | Holiday Video Camera</title>
+    <meta name="description" content="Holiday Video Camera tests video cameras on real holidays — beaches, ski slopes, night markets. Meet Dawid Millennium and learn how we test, with no lab charts.">
+    <meta name="author" content="Dawid Millennium">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/about/">
+    <meta property="og:title" content="About Holiday Video Camera: Real Travel Camera Testing">
+    <meta property="og:description" content="Every camera we review was filmed on actual holidays. Meet the team and learn how we test — no lab charts, no spec-sheet reviews.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/about/">
+    <meta property="og:site_name" content="Holiday Video Camera">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+    .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+    .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
+    .top-nav .nav-links li { position: relative; }
+    .top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
+    .top-nav .nav-links a:hover, .top-nav .nav-links a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #1a1a2e; border: 1px solid #333; border-top: 2px solid #e94560; border-radius: 0 0 8px 8px; min-width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); list-style: none; padding: 8px 0; }
+    .top-nav .nav-links li:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { padding: 10px 20px !important; font-size: 0.85rem !important; border-bottom: 1px solid #222; }
+    .dropdown-menu a:last-child { border-bottom: none; }
+    .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
+    header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+    header .logo { font-size: 1.5rem; font-weight: 700; color: #e94560; text-decoration: none; display: inline-block; margin-bottom: 15px; }
+    h1 { font-size: 2.4rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
+    .subtitle { font-size: 1.15rem; color: #888; max-width: 680px; margin: 0 auto 15px; }
+    .breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: #888; }
+    .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
+    .breadcrumb li { display: flex; align-items: center; }
+    .breadcrumb li:not(:last-child)::after { content: ">"; margin: 0 10px; color: #555; }
+    .breadcrumb a { color: #e94560; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    article { padding: 40px 20px; }
+    h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+    h3 { color: #fff; font-size: 1.3rem; margin: 30px 0 12px; }
+    p { margin-bottom: 20px; font-size: 1.05rem; }
+    a.content-link { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
+    a.content-link:hover { color: #ff6b6b; }
+    .author-box { display: flex; align-items: center; gap: 15px; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 25px 0; }
+    .author-avatar { width: 50px; height: 50px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+    .author-info h4 { color: #fff; margin: 0 0 5px; font-size: 1rem; }
+    .author-info p { color: #888; font-size: 0.85rem; margin: 0; }
+    .last-updated { color: #666; font-size: 0.8rem; margin-top: 5px; }
+    .toc { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 30px 0; }
+    .toc h3 { margin-top: 0; color: #e94560; }
+    .toc ul { list-style: none; margin-left: 0; }
+    .toc li { margin-bottom: 8px; }
+    .toc a { color: #ccc; text-decoration: none; }
+    .toc a:hover { color: #e94560; }
+    .takeaways { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; }
+    .takeaways h3 { color: #e94560; margin-top: 0; }
+    .takeaways ul { margin-left: 20px; margin-bottom: 0; }
+    .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin: 30px 0; }
+    .stat { text-align: center; }
+    .stat .num { font-size: 2rem; font-weight: 700; color: #e94560; }
+    .stat .label { font-size: 0.85rem; color: #888; }
+    .editorial-box { background: #111; border: 1px solid #333; border-radius: 12px; padding: 25px; margin: 30px 0; }
+    .editorial-box h3 { color: #e94560; margin-top: 0; }
+    ul { margin-left: 20px; margin-bottom: 20px; }
+    li { margin-bottom: 10px; }
+    .newsletter { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center; }
+    .newsletter h3 { color: #e94560; margin-top: 0; }
+    .newsletter input[type="email"] { padding: 12px 16px; border-radius: 30px; border: 1px solid #333; background: #0a0a0a; color: #e0e0e0; width: 260px; max-width: 100%; margin-right: 10px; }
+    .btn { display: inline-block; padding: 12px 30px; background: #e94560; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600; transition: background 0.3s; border: none; cursor: pointer; }
+    .btn:hover { background: #ff6b6b; }
+    .affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
+    .site-footer { background: #111; border-top: 2px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+    .footer-section h4 { color: #e94560; font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-section ul { list-style: none; margin: 0; padding: 0; }
+    .footer-section li { margin-bottom: 8px; }
+    .footer-section a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .footer-section a:hover { color: #e94560; }
+    .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
+    .footer-bottom a { color: #e94560; text-decoration: none; }
+    @media (max-width: 768px) {
+        h1 { font-size: 1.7rem; } .subtitle { font-size: 1rem; }
+        .top-nav .nav-links { display: none; } .mobile-menu-toggle { display: block; }
+        .footer-container { grid-template-columns: 1fr 1fr; }
+        .newsletter input[type="email"] { width: 100%; margin: 0 0 10px 0; }
+    }
+    </style>
+
+    <link rel="stylesheet" href="/VideoCameraHoliday/assets/site-shell.css">
+</head>
+<body>
+
+
+
+
+<header>
+    <a href="../" class="logo">📹 Holiday Video Camera</a>
+    <h1>About Holiday Video Camera</h1>
+    <p class="subtitle">Real travel camera testing — no lab charts. Every camera on this site was filmed on actual holidays, and judged the way you'll watch the footage: on a phone, in the sun, after a long day.</p>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<div class="container">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="../"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">About Us</span>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+</div>
+</nav>
+
+<article class="container">
+
+    <p><strong>Holiday Video Camera is an independent review site with one rule: we only recommend cameras we have actually filmed holidays with.</strong> No lab charts, no spec-sheet rewrites, no press-release summaries. Since 2019 we have tested more than 50 cameras on real trips across Southeast Asia, Europe, and South America — on beaches, ski slopes, night markets, and desert trails.</p>
+
+    <div class="stats">
+        <div class="stat"><div class="num">50+</div><div class="label">Cameras Tested</div></div>
+        <div class="stat"><div class="num">28+</div><div class="label">In-Depth Guides</div></div>
+        <div class="stat"><div class="num">50</div><div class="label">Cities in Our Series</div></div>
+        <div class="stat"><div class="num">3</div><div class="label">Continents Filmed</div></div>
+    </div>
+
+    <h2 id="mission">Our Mission</h2>
+    <p>To help travelers choose the right camera by showing real footage from real holidays — not lab charts or spec sheets. A camera that wins a studio test can still fail you at a beach in Bali: sand in the gimbal, fog on the lens, a battery that dies in the cold. We test for the moments you actually travel for, like the ones covered in our <a class="content-link" href="../guides/best-holiday-video-cameras-2026.html">best holiday video cameras of 2026</a> roundup.</p>
+
+    <h2 id="how-we-test">How We Test</h2>
+    <p>Every camera on this site goes through the same field protocol before we write a word:</p>
+    <ul>
+        <li><strong>Real trips only:</strong> each camera is taken on at least one genuine holiday — not a weekend in the garden.</li>
+        <li><strong>Multiple conditions:</strong> harsh midday sun, golden hour, low light, rain or humidity where the trip allows it.</li>
+        <li><strong>Judged on a phone:</strong> we review footage the way you will watch it — on a phone screen, in daylight, after a long day.</li>
+        <li><strong>Carried, not curated:</strong> if a camera is annoying to pack, charge, or pull out at the right moment, that counts against it. Our <a class="content-link" href="../guides/best-camera-hiking-holidays.html">hiking camera guide</a> is a good example of weight and battery discipline in practice.</li>
+        <li><strong>No loaner bias:</strong> review units and purchases are treated identically, and rankings never change because of brand relationships.</li>
+    </ul>
+
+    <h2 id="team">Meet the Founder</h2>
+    <div class="author-box">
+        <div class="author-avatar">🎬</div>
+        <div class="author-info">
+            <h4>Dawid Millennium — Travel Videographer &amp; Founder</h4>
+            <p>Travel vlogger since 2019. 50+ cameras tested on real holidays across three continents — Southeast Asia, Europe, and South America. Dawid writes and edits every guide on this site and personally conducts the <a class="content-link" href="../city-through-the-lens/">City Through the Lens</a> interviews with local videographers in the world's 50 biggest cities.</p>
+            <div class="last-updated">CHeck my youtube videos at my youtubec channel: https://www.youtube.com/@airqualityinelevator</div>
+            <div class="last-updated">🕐 My links: linke.to/blognotvideo , sleek.bio/merhujus , linke.ro/seohobbyexpert , pxl.to/7hatfqc</div>
+            <div class="last-updated">🕐 Page last reviewed: August 25, 2026</div>
+        </div>
+    </div>
+
+    <h2 id="editorial-independence">Editorial Independence</h2>
+    <div class="editorial-box">
+        <h3>🛡️ How We Make Money &amp; Why You Can Trust Our Rankings</h3>
+        <ul>
+            <li><strong>Affiliate links:</strong> some buying guides contain affiliate links. If you buy through them we may earn a commission — at no extra cost to you. Commissions never influence rankings.</li>
+            <li><strong>Honest even when it costs us:</strong> if your phone is genuinely good enough, we say so — see our <a class="content-link" href="../reviews/iphone-16-pro-video-review.html">iPhone 16 Pro video review</a> — even though phone recommendations earn us nothing.</li>
+            <li><strong>Interviewees are unpaid:</strong> every expert in our series appears voluntarily and approves their transcript before publication.</li>
+            <li><strong>Corrections:</strong> if we get something wrong, we fix it and date the change.</li>
+        </ul>
+    </div>
+
+    <div class="newsletter" id="newsletter">
+        <h3>📬 Get Weekly Camera Deals &amp; Field Notes</h3>
+        <p style="color:#888;">Join 5,000+ travelers who get our best holiday camera reviews and exclusive deals. No spam, unsubscribe anytime.</p>
+        <!-- NEWSLETTER: replace form action with your email provider embed URL (Mailchimp, ConvertKit, Beehiiv) -->
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </div>
+
+    <p class="affiliate-note">Holiday Video Camera is reader-supported. Some links on this site are affiliate links — rankings are always based on real travel testing.</p>
+
+</article>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"},
+    {"@type": "ListItem", "position": 2, "name": "About Us"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Holiday Video Camera",
+  "description": "Holiday Video Camera is an independent travel camera review site. Every camera is tested on real holidays — no lab charts, no spec-sheet reviews.",
+  "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/about/",
+  "inLanguage": "en",
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Holiday Video Camera",
+    "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/",
+    "founder": {
+      "@type": "Person",
+      "name": "Dawid Millennium",
+      "jobTitle": "Travel Videographer & Founder",
+      "description": "Travel vlogger since 2019; has tested 50+ cameras on real trips across Southeast Asia, Europe, and South America."
+    }
+  }
+}
+</script>
+
+
+<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+</body>
+</html>
+
+        </div>
+    </main>
+
+    <!-- ===== HARDCODED FOOTER ===== -->
+    <footer class="site-footer" ...> ... </footer>
+</body>
+</html>
