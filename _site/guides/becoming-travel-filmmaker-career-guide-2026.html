@@ -212,6 +212,20 @@ Best, Dawid
 
 
 <script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mega-menu');
+    if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+            const isActive = mobileMenu.classList.toggle('active');
+            toggleBtn.classList.toggle('active');
+            toggleBtn.setAttribute('aria-expanded', isActive);
+        });
+    }
+});
+</script>
 </body>
 </html>
 
@@ -220,5 +234,19 @@ Best, Dawid
 
     <!-- ===== HARDCODED FOOTER ===== -->
     <footer class="site-footer" ...> ... </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mega-menu');
+    if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+            const isActive = mobileMenu.classList.toggle('active');
+            toggleBtn.classList.toggle('active');
+            toggleBtn.setAttribute('aria-expanded', isActive);
+        });
+    }
+});
+</script>
 </body>
 </html>
