@@ -1,0 +1,34 @@
+Here’s a summary of everything completed and the remaining roadmap.
+
+✅ What's Completed (The Full List)
+Category	Item	Status
+Cities	Goa, Auckland, Lyon, Salzburg + Destinations Index	✅ Done
+Core Guides	Holiday Video, Waterproof, Compact Travel (Pillar), City Breaks	✅ Done
+Reviews	Fujifilm X100VI, Ricoh GR IV, Panasonic ZS99	✅ Done
+Comparisons	PowerShot V1 vs ZV-1 II + Comparisons Index	✅ Done
+EEAT	About the Author page (with social links)	✅ Done
+Cannibalization	City Breaks vs Travel guide differentiated	✅ Done
+🔍 What's Still on the List (Prioritized)
+Based on the original Gumloop report and our ongoing audit, here are the remaining items:
+
+🟡 Priority 1 – Remaining P1 Gaps (From Gumloop)
+Product	Why It Matters	Suggested Action
+Insta360 X4 / 360 cameras	Away Lands and Micro Four Nerds both feature 360 cams. It's a distinct category you don't cover.	Write a short guide or section for "Best 360 Cameras for Travel".
+Canon EOS R50	Away Lands calls it "Best On A Budget" mirrorless. Captures beginner DSLR/mirrorless traffic.	Write a mini-review or add to the Holiday Video Guide as "Best Entry-Level".
+Sony RX100 VII	Mentioned by Backscatter, TechRadar, and Cotswold as a premium zoom compact.	Add to the Compact Travel guide as an "Also Consider" or write a short review.
+Panasonic Lumix L10	Mentioned by AP and DPReview as "best enthusiast zoom".	Add to the Compact Travel guide as an "Also Consider".
+🟢 Priority 2 – Refinements
+Task	Why It Matters
+Update the Holiday Video Guide	Ensure it explicitly links to the PowerShot V1 vs ZV-1 II comparison and mentions the ZS99 for video users who want zoom.
+Create a "Budget Hub" page	Aggregate all under-$500 recommendations (beach, compact, video) into one dedicated page to capture "budget camera" search traffic.
+🔵 Priority 3 – Maintenance
+Task	Why It Matters
+Audit all meta descriptions & H1s	Ensure every guide and review has a unique, keyword-optimized meta to avoid internal competition.
+Set up a regular content refresh schedule	Mark calendar reminders to update guides (e.g., every 3-6 months) to keep EEAT fresh.
+🚀 What I Recommend You Do Next
+You have two clear paths:
+
+Option	What It Involves	Why You'd Choose This
+A. Tackle the Remaining P1 Gaps	Write/add sections for Insta360 X4, Canon EOS R50, Sony RX100 VII, and Panasonic L10.	You want to capture ALL the product categories mentioned by your competitors and dominate the long-tail keywords.
+B. Update the Holiday Video Guide	Add explicit links and references to PowerShot V1, ZS99, and the new comparisons.	You want to strengthen your primary "video" pillar and ensure it's the ultimate resource (captures video-hybrid traffic).
+C. Create a "Budget Hub"	Build a new page aggregating all under-$500 camera picks across the site.	You want to capture "cheap/budget travel camera" search volume, which is high-intent for beginners.
