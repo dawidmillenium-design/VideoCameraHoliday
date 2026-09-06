@@ -1,4 +1,67 @@
+# robots.txt for Holiday Video Camera
+# https://dawidmillenium-design.github.io/VideoCameraHoliday/robots.txt
+
+# ===== General Crawlers (allow all) =====
 User-agent: *
 Allow: /
 
+# Prevent crawling of duplicate or unnecessary content
+Disallow: /_site/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /assets/
+Disallow: /city-generator/
+Disallow: /city-interview-preview/
+Disallow: /interviews/
+
+# Allow Google to crawl all city pages, reviews, and guides
+Allow: /city-through-the-lens/
+Allow: /reviews/
+Allow: /guides/
+Allow: /destinations/
+Allow: /comparisons/
+Allow: /how-to/
+Allow: /editing/
+Allow: /posts/
+
+# ===== Google =====
+User-agent: Googlebot
+Allow: /
+Disallow: /_site/
+Disallow: /assets/
+
+# ===== Bing =====
+User-agent: bingbot
+Allow: /
+Crawl-delay: 2
+
+# ===== Yandex =====
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# ===== Yahoo (Slurp) =====
+User-agent: slurp
+Allow: /
+Crawl-delay: 2
+
+# ===== Baidu =====
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# ===== Image crawlers =====
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: bingbot-image
+Allow: /
+
+User-agent: YandexImages
+Allow: /
+
+User-agent: Baiduspider-image
+Allow: /
+
+# ===== Sitemap location =====
 Sitemap: https://dawidmillenium-design.github.io/VideoCameraHoliday/sitemap.xml
