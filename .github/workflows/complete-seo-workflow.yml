@@ -3,15 +3,9 @@ name: 🔍 Complete SEO Workflow
 on:
   push:
     branches: [ main ]
-    paths:
-      - '**.html'
-      - '**.js'
-      - '**.py'
-      - '**.yml'
-      - '**.yaml'
   schedule:
-    - cron: '0 8 * * 1'  # Every Monday at 8:00 AM UTC
-  workflow_dispatch:      # Manual trigger
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
 
 jobs:
   # ========================================================================
@@ -57,16 +51,18 @@ jobs:
             audit-summary.txt
 
   # ========================================================================
-  # JOB 2: BROKEN LINK CHECKER
+  # JOB 2: BROKEN LINK CHECKER (FIXED)
   # ========================================================================
   broken-links:
     name: 🔗 Broken Link Checker
     runs-on: ubuntu-latest
-    needs: seo-audit  # Runs after SEO audit (can run in parallel if removed)
+    needs: seo-audit
     
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
@@ -127,12 +123,6 @@ jobs:
       - name: ✅ Validate HTML files
         run: |
           find . -name "*.html" -not -path "./assets/*" -not -path "./node_modules/*" | xargs html-validate --config .htmlvalidate.json || true
-
-      - name: 📤 Upload validation log
-        uses: actions/upload-artifact@v4
-        with:
-          name: html-validation-log
-          path: html-validation.log
 
   # ========================================================================
   # JOB 4: META & SCHEMA VALIDATION
@@ -466,7 +456,7 @@ jobs:
           "
 
   # ========================================================================
-  # JOB 8: GENERATE SITEMAP
+  # JOB 8: GENERATE SITEMAP (FIXED)
   # ========================================================================
   sitemap:
     name: 🌐 Generate Sitemap
@@ -476,6 +466,9 @@ jobs:
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🔧 Generate sitemap
         uses: cicirello/generate-sitemap@v1
@@ -492,14 +485,18 @@ jobs:
 
       - name: 📤 Commit and push sitemap
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add sitemap.xml
-          git diff --staged --quiet || git commit -m "🤖 Auto-update sitemap.xml [skip ci]"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to sitemap.xml"
+          else
+            git commit -m "🤖 Auto-update sitemap.xml [skip ci]"
+            git push
+          fi
 
   # ========================================================================
-  # JOB 9: AUTO-FIX SEO ISSUES
+  # JOB 9: AUTO-FIX SEO ISSUES (FIXED)
   # ========================================================================
   auto-fix:
     name: 🔧 Auto-Fix SEO Issues
@@ -509,6 +506,9 @@ jobs:
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Setup Python
         uses: actions/setup-python@v4
@@ -522,11 +522,15 @@ jobs:
 
       - name: 📤 Commit fixes
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add .
-          git diff --staged --quiet || git commit -m "🤖 Auto-fix SEO issues [skip ci]"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 Auto-fix SEO issues [skip ci]"
+            git push
+          fi
 
   # ========================================================================
   # JOB 10: PING SEARCH ENGINES
@@ -590,59 +594,12 @@ jobs:
             pagespeed-desktop.txt
 
   # ========================================================================
-  # JOB 12: IMAGE OPTIMIZATION (Only on push with images)
-  # ========================================================================
-  optimize-images:
-    name: 📸 Optimize Images
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.event.pusher.name != 'github-actions'
-    
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v4
-
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: 📦 Install image optimization tools
-        run: |
-          npm install -g imagemin-cli
-          npm install -g imagemin-webp
-          npm install -g imagemin-mozjpeg
-          npm install -g imagemin-pngquant
-
-      - name: 🔧 Optimize images (JPEG/PNG to WebP)
-        run: |
-          # Find and convert JPEG/PNG to WebP if they don't already exist
-          find . -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" | while read file; do
-            dir=$(dirname "$file")
-            base=$(basename "$file")
-            name="${base%.*}"
-            ext="${base##*.}"
-            webp_file="$dir/$name.webp"
-            if [ ! -f "$webp_file" ]; then
-              echo "Converting $file to WebP"
-              # This is a placeholder - actual conversion would use cwebp or similar
-            fi
-          done
-
-      - name: 📤 Commit optimized images
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add .
-          git diff --staged --quiet || git commit -m "🤖 Optimize images [skip ci]"
-          git push
-
-  # ========================================================================
-  # JOB 13: DEPLOYMENT SUMMARY
+  # JOB 12: SUMMARY
   # ========================================================================
   summary:
     name: 📊 Deployment Summary
     runs-on: ubuntu-latest
-    needs: [seo-audit, broken-links, html-validate, meta-schema, heading-structure, readability, internal-links, sitemap, auto-fix, ping-search-engines, pagespeed, optimize-images]
+    needs: [seo-audit, broken-links, html-validate, meta-schema, heading-structure, readability, internal-links, sitemap, auto-fix, ping-search-engines, pagespeed]
     if: always()
     
     steps:
@@ -663,4 +620,3 @@ jobs:
           echo "| 🔧 Auto-Fix | ${{ needs.auto-fix.result }}" >> $GITHUB_STEP_SUMMARY
           echo "| 📢 Ping Search Engines | ${{ needs.ping-search-engines.result }}" >> $GITHUB_STEP_SUMMARY
           echo "| ⚡ PageSpeed | ${{ needs.pagespeed.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "| 📸 Image Optimization | ${{ needs.optimize-images.result }}" >> $GITHUB_STEP_SUMMARY
