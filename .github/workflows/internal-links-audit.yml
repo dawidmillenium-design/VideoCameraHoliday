@@ -1,0 +1,97 @@
+name: 🔗 Internal Linking Audit
+
+on:
+  schedule:
+    - cron: '0 11 * * 1'  # Every Monday at 11:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  link-audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install cheerio
+
+      - name: 🔍 Audit internal links
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const cheerio = require('cheerio');
+          
+          // Find all HTML files
+          const pages = {};
+          function walkDir(dir) {
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'assets') {
+                walkDir(fullPath);
+              } else if (file.endsWith('.html') || file.endsWith('.htm')) {
+                pages[fullPath] = { url: fullPath, incoming: 0, outgoing: [] };
+              }
+            }
+          }
+          walkDir('.');
+          
+          // Count incoming links
+          for (const [pagePath, pageData] of Object.entries(pages)) {
+            const content = fs.readFileSync(pagePath, 'utf8');
+            const $ = cheerio.load(content);
+            
+            $('a[href]').each((i, el) => {
+              let href = $(el).attr('href');
+              if (href.startsWith('/')) {
+                href = '.' + href;
+              }
+              if (href.endsWith('.html') || href.endsWith('.htm') || href.endsWith('/')) {
+                if (href.startsWith('./')) href = href.substring(2);
+                // Find matching page
+                for (const [targetPath, targetData] of Object.entries(pages)) {
+                  if (targetPath.endsWith(href) || targetPath.endsWith(href + '.html')) {
+                    targetData.incoming++;
+                    pageData.outgoing.push(targetPath);
+                  }
+                }
+              }
+            });
+          }
+          
+          // Report orphan pages
+          let hasOrphans = false;
+          console.log('📊 INTERNAL LINKING REPORT');
+          console.log('=' .repeat(50));
+          
+          for (const [pagePath, pageData] of Object.entries(pages)) {
+            if (pageData.incoming === 0 && !pagePath.includes('404') && !pagePath.includes('index')) {
+              console.log('⚠️ Orphan page: ' + pagePath);
+              hasOrphans = true;
+            }
+            if (pageData.outgoing.length === 0 && !pagePath.includes('404')) {
+              console.log('⚠️ Page with no outgoing links: ' + pagePath);
+              hasOrphans = true;
+            }
+          }
+          
+          if (!hasOrphans) {
+            console.log('✅ No orphan pages found. Good internal linking structure!');
+          } else {
+            process.exit(1);
+          }
+          "
+
+      - name: 📤 Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: internal-links-report
+          path: internal-links-report.txt
