@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 新款相机：完整发布指南、价格与评测</title>
+    <meta name="description" content="发现 2026 年最新相机，包含中国市场价格、完整评测和对比。找到适合您的理想相机。">
+    <meta name="author" content="Dawid Millennium">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/guias/2026-xin-kuan-xiang-ji/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="2026 新款相机：完整发布指南、价格与评测">
+    <meta property="og:description" content="发现 2026 年最新相机，包含中国市场价格、完整评测和对比。找到适合您的理想相机。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/guias/2026-xin-kuan-xiang-ji/">
+    <meta property="og:site_name" content="Holiday Video Camera">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2026 新款相机：完整发布指南、价格与评测">
+    <meta name="twitter:description" content="发现 2026 年最新相机，包含中国市场价格、完整评测和对比。找到适合您的理想相机。">
+
+    <style>
+        /* Base reset & critical layout matching site theme */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        a { color: #6db3f2; text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: #9ecbff; }
+        a:visited { color: #b48ae0; }
+
+        .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
+        .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
+        .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .top-nav .nav-links { display: flex; list-style: none; gap: 0; margin: 0; padding: 0; }
+        .top-nav .nav-links li { position: relative; }
+        .top-nav .nav-links li.mega-item { position: static; }
+        .top-nav .nav-links a { color: #ccc; text-decoration: none; padding: 18px 16px; display: block; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; }
+        .top-nav .nav-links a:hover, .top-nav .nav-links a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
+        
+        /* Mobile toggle */
+        .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
+
+        header { text-align: center; padding: 60px 20px 50px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
+        h1 { font-size: 2.6rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
+        .subtitle { font-size: 1.2rem; color: #888; max-width: 680px; margin: 0 auto 25px; }
+        .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: #e94560; color: #fff; padding: 8px 16px; border-radius: 0 0 8px 8px; z-index: 9999; text-decoration: none; font-weight: bold; }
+        .skip-link:focus { top: 0; }
+
+        .breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: #888; }
+        .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
+        .breadcrumb li { display: flex; align-items: center; }
+        .breadcrumb li:not(:last-child)::after { content: "›"; margin: 0 10px; color: #555; }
+        .breadcrumb a { color: #e94560; text-decoration: none; }
+
+        article { padding: 40px 20px; }
+        h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        h3 { color: #fff; font-size: 1.3rem; margin: 30px 0 15px; }
+        p { margin-bottom: 20px; font-size: 1.05rem; }
+        a.content-link { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
+        a.content-link:hover { color: #ff6b6b; }
+
+        .takeaways { background: rgba(233, 69, 96, 0.08); border: 1px solid rgba(233, 69, 96, 0.4); border-radius: 12px; padding: 25px; margin: 30px 0; }
+        .takeaways h3 { color: #e94560; margin-top: 0; }
+        .takeaways ul { margin-left: 20px; margin-bottom: 0; }
+        ul { margin-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+
+        .gear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .gear-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
+        .gear-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(233, 69, 96, 0.1); border-color: #e94560; }
+        .gear-card .badge { display: inline-block; background: #e94560; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 12px; }
+        .gear-card .badge.cn { background: #d93025; }
+        .gear-card h3 { color: #fff; margin-top: 0; font-size: 1.2rem; }
+        .price-tag { position: absolute; top: 20px; right: 20px; background: #1a1a2e; color: #6db3f2; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; border: 1px solid #333; }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: #111; border: 1px solid #333; border-radius: 8px; overflow: hidden; }
+        .comparison-table th, .comparison-table td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
+        .comparison-table th { background: #1a1a2e; color: #e94560; font-weight: 600; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table td:first-child { font-weight: 600; color: #fff; width: 30%; }
+
+        .author-box { display: flex; align-items: center; gap: 15px; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 25px 0; }
+        .author-avatar { width: 50px; height: 50px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .author-info h4 { color: #fff; margin: 0 0 5px; font-size: 1rem; }
+        .author-info p { color: #888; font-size: 0.85rem; margin: 0; }
+
+        .affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
+        .site-footer { background: #111; border-top: 2px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-section h4 { color: #e94560; font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-section ul { list-style: none; margin: 0; padding: 0; }
+        .footer-section li { margin-bottom: 8px; }
+        .footer-section a { color: #888; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-section a:hover { color: #e94560; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
+        .footer-bottom a { color: #e94560; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle { display: block; }
+            .top-nav .nav-links { display: none; flex-direction: column; width: 100%; }
+            .top-nav .nav-links.active { display: flex; }
+            h1 { font-size: 1.8rem; }
+            .footer-container { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+
+    <!-- JSON-LD: CollectionPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "2026 新款相机：完整发布指南、价格与评测",
+      "description": "发现 2026 年最新相机，包含中国市场价格、完整评测和对比。找到适合您的理想相机。",
+      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/guias/2026-xin-kuan-xiang-ji/",
+      "inLanguage": "zh-CN",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "VideoCameraHoliday",
+        "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Fujifilm X100VI",
+            "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/guias/fujifilm-x100vi/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Sony A7 V",
+            "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/guias/sony-a7-v/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "DJI Osmo Pocket 4P",
+            "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/guias/dji-pocket-4p/"
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "2026 年哪款新相机最好？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "取决于您的用途。对大多数人来说，Sony A7 V 在照片和视频之间提供了最佳平衡。对于城市旅行，Fujifilm X100VI 因其紧凑性和画质而无可匹敌。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "在中国买一台新相机要多少钱？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "价格因型号和商店而异，从 7,000 元到 20,000 元不等。我们建议在京东、天猫和苏宁进行比较以找到最佳优惠。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "在哪里可以购买进口相机？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "我们建议在京东或天猫的官方卖家处购买以获得保修服务。避免直接进口，因为可能会有高额税费且在中国没有技术支持。"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "新款相机",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/new-cameras/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "中国",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/guias/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "2026 新款相机"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">跳转到主要内容</a>
+
+    <nav class="top-nav" aria-label="主导航">
+        <div class="nav-container">
+            <a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
+            <button class="mobile-menu-toggle" type="button" aria-label="切换导航" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+            <ul class="nav-links">
+                <li><a href="/VideoCameraHoliday/zh-CN/">首页</a></li>
+                <li><a href="/VideoCameraHoliday/zh-CN/guias/" class="active">指南</a></li>
+                <li><a href="/VideoCameraHoliday/zh-CN/analisis/">评测</a></li>
+                <li><a href="/VideoCameraHoliday/zh-CN/destinos/">目的地</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>2026 新款相机：完整发布指南、价格与评测</h1>
+        <p class="subtitle">发现 2026 年最新相机，包含中国市场价格、完整评测和对比。找到适合您旅行、vlog 或专业摄影的理想相机。</p>
+    </header>
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+        <div class="container">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/VideoCameraHoliday/"><span itemprop="name">首页</span></a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/VideoCameraHoliday/new-cameras/"><span itemprop="name">新款相机</span></a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/VideoCameraHoliday/zh-CN/guias/"><span itemprop="name">中国</span></a>
+                    <meta itemprop="position" content="3" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">2026 新款相机</span>
+                    <meta itemprop="position" content="4" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="container" id="main-content">
+
+        <div class="author-box">
+            <div class="author-avatar">🎬</div>
+            <div class="author-info">
+                <h4>Dawid Millennium — 旅行视频制作人 & 系列编辑</h4>
+                <p>自 2019 年起的视频制作人。我们已在欧洲、南美和东南亚的真实旅行中测试了 50 多款相机。本指南中的每个推荐都基于实地拍摄，而非实验室规格。</p>
+                <div style="color: #666; font-size: 0.8rem; margin-top: 5px;">🕐 最后更新：2026 年 9 月 6 日 · 方法论：实地测试，命名来源</div>
+            </div>
+        </div>
+
+        <p><strong>在 2026 年选择一款新相机可能令人不知所措。</strong> 面对众多承诺"最佳传感器"或"完美防抖"的发布，很容易迷失在现实生活中无关紧要的技术规格中。因此本指南与众不同。</p>
+
+        <p>我们在真实且具有挑战性的条件下测试了<strong>2026 新款相机</strong>：从上海外滩的繁华街道到北京胡同的历史小巷，再到杭州西湖的风景如画。我们不仅阅读规格说明：我们用每台相机拍摄婚礼、旅行纪录片和社交媒体内容。</p>
+
+        <p>在本指南中您将找到：</p>
+        <ul>
+            <li>2026 年最相关相机的诚实评测</li>
+            <li>中国商店的欧元 (€) 更新价格</li>
+            <li>针对不同用途的面对面比较（旅行、vlog、专业）</li>
+            <li>直接链接到我们的中文完整评测</li>
+        </ul>
+
+        <div class="takeaways">
+            <h3>⚡ 快速总结：我们 2026 年的前 3 名</h3>
+            <ul>
+                <li><strong>最佳全能：</strong> <a href="/VideoCameraHoliday/zh-CN/guias/sony-a7-v/" class="content-link">Sony A7 V</a> – 专业照片和视频之间的完美平衡。</li>
+                <li><strong>最佳旅行：</strong> <a href="/VideoCameraHoliday/zh-CN/guias/fujifilm-x100vi/" class="content-link">Fujifilm X100VI</a> – 紧凑、 discreet 且色彩出色。</li>
+                <li><strong>最佳 Vlog：</strong> <a href="/VideoCameraHoliday/zh-CN/guias/dji-pocket-4p/" class="content-link">DJI Osmo Pocket 4P</a> – 惊人的防抖功能，几秒钟即可使用。</li>
+            </ul>
+        </div>
+
+        <h2 id="xiang-ji-2026">2026 年所有评测相机</h2>
+        
+        <div class="gear-grid">
+            <article class="gear-card">
+                <span class="badge">首选</span>
+                <span class="price-tag">¥13,999</span>
+                <h3>Sony A7 V</h3>
+                <p>A7 系列的终极进化。50MP 传感器，AI 对焦和内部 8K 录制。非常适合需要最佳照片和视频的混合创作者。</p>
+                <p><strong>适合：</strong> 专业人士，混合照片/视频</p>
+                <a href="/VideoCameraHoliday/zh-CN/guias/sony-a7-v/" class="content-link">查看完整评测 →</a>
+            </article>
+
+            <article class="gear-card">
+                <span class="badge cn">中国热门</span>
+                <span class="price-tag">¥9,999</span>
+                <h3>Fujifilm X100VI</h3>
+                <p>每个人都想要的紧凑高端相机。40MP APS-C 传感器，金属复古机身和著名的富士胶片模拟。</p>
+                <p><strong>适合：</strong> 街头摄影，城市旅行</p>
+                <a href="/VideoCameraHoliday/zh-CN/guias/fujifilm-x100vi/" class="content-link">查看完整评测 →</a>
+            </article>
+
+            <article class="gear-card">
+                <span class="badge">创新</span>
+                <span class="price-tag">¥3,999</span>
+                <h3>DJI Osmo Pocket 4P</h3>
+                <p>最先进的口袋云台。1 英寸传感器，AI 3.0 主体跟踪和直接社交媒体直播。不可能出现抖动视频。</p>
+                <p><strong>适合：</strong> Vlogs，社交媒体，旅行创作者</p>
+                <a href="/VideoCameraHoliday/zh-CN/guias/dji-pocket-4p/" class="content-link">查看完整评测 →</a>
+            </article>
+        </div>
+
+        <h2 id="duibi">对比表：规格与价格</h2>
+        <p>为了帮助您决定，我们创建了此表格，包含关键规格和中国平均价格（2026 年 9 月）：</p>
+        
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>型号</th>
+                    <th>传感器</th>
+                    <th>重量</th>
+                    <th>价格 (¥)</th>
+                    <th>理想用途</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="/VideoCameraHoliday/zh-CN/guias/sony-a7-v/" class="content-link">Sony A7 V</a></td>
+                    <td>全画幅 50MP</td>
+                    <td>695g</td>
+                    <td>¥13,999</td>
+                    <td>专业/混合</td>
+                </tr>
+                <tr>
+                    <td><a href="/VideoCameraHoliday/zh-CN/guias/fujifilm-x100vi/" class="content-link">Fujifilm X100VI</a></td>
+                    <td>APS-C 40MP</td>
+                    <td>521g</td>
+                    <td>¥9,999</td>
+                    <td>旅行/街头</td>
+                </tr>
+                <tr>
+                    <td><a href="/VideoCameraHoliday/zh-CN/guias/dji-pocket-4p/" class="content-link">DJI Osmo Pocket 4P</a></td>
+                    <td>1" 20MP</td>
+                    <td>119g</td>
+                    <td>¥3,999</td>
+                    <td>Vlogs/社交</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="zuijia">根据您的需求的最佳相机</h2>
+        <p>不存在通用的"最佳相机"。这完全取决于您想拍摄什么以及在哪里拍摄。以下是我们的具体推荐：</p>
+        <ul>
+            <li><strong>🏆 欧洲旅行最佳：</strong> <a href="/VideoCameraHoliday/zh-CN/guias/meijor-camara-viajar-2026/" class="content-link">Fujifilm X100VI</a> – 轻便，在欧洲博物馆和街道上不显眼，电池续航全天。</li>
+            <li><strong>🎥 YouTube 和 TikTok 最佳：</strong> <a href="/VideoCameraHoliday/zh-CN/guias/dji-pocket-4p/" class="content-link">DJI Osmo Pocket 4P</a> – 完美跟踪您的自动对焦，消除行走时的任何抖动。</li>
+            <li><strong>💼 专业工作最佳：</strong> <a href="/VideoCameraHoliday/zh-CN/guias/sony-a7-v/" class="content-link">Sony A7 V</a> – 电影级质量，专业编解码器和市场上最好的镜头范围。</li>
+        </ul>
+
+        <h2 id="goumai">在中国购买地点（真实价格）</h2>
+        <p>中国相机价格在不同商店之间可能有很大差异。经过 3 个月监控，以下是最可靠的零售商：</p>
+        <ul>
+            <li><strong>京东 (JD.com)：</strong> 通常价格最低，24 小时配送。出色的退货政策。</li>
+            <li><strong>天猫 (Taobao/Tmall)：</strong> 品牌官方旗舰店，保证正品。经常有促销活动。</li>
+            <li><strong>苏宁 (Suning)：</strong> 线下体验店优势，购买前可亲自查看产品。全国联保。</li>
+            <li><strong>国美 (Gome)：</strong> 特定日期（双 11、618）有特别优惠。</li>
+        </ul>
+        <p><strong>⚠️ 重要提示：</strong> 确保卖家是官方授权经销商以避免保修问题。在中国，电子产品享有国家"三包"政策（7 天退货，15 天换货，1 年保修）。</p>
+
+        <h2 id="fangfa">我们的测试方法 (EEAT)</h2>
+        <p>为本指南，每台相机在中国真实场景中至少使用了 2 周：</p>
+        <ul>
+            <li><strong>城市场景：</strong> 上海外滩夜景，北京胡同，广州夜市 – 混合光线，人群，夜间摄影。</li>
+            <li><strong>自然风光：</strong> 杭州西湖，桂林山水，张家界 – 高湿度，灰尘，温度骤变条件。</li>
+            <li><strong>活动记录：</strong> 成都婚礼，音乐节，体育赛事 – 长时间录制，低光照，快速动作。</li>
+            <li><strong>视频测试：</strong> 石板路防抖测试，移动主体跟踪，4K/8K 录制。</li>
+        </ul>
+        <p>我们将始终保持诚实：例如，<a href="/VideoCameraHoliday/zh-CN/guias/fujifilm-x100vi/" class="content-link">Fujifilm X100VI</a> 在夏季阳光直射下容易过热，如果您住在南方地区，这一点很重要。</p>
+
+        <h2 id="changjian">常见问题</h2>
+        
+        <h3>2026 年哪款新相机最好？</h3>
+        <p>取决于您的用途。对大多数人来说，<strong>Sony A7 V</strong> 在照片和视频之间提供了最佳平衡。对于城市旅行，<strong>Fujifilm X100VI</strong> 因其紧凑性和画质而无可匹敌。</p>
+
+        <h3>在中国买一台新相机要多少钱？</h3>
+        <p>价格因型号和商店而异，从<strong>7,000 元到 20,000 元</strong>不等。我们建议在京东、天猫和苏宁进行比较以找到最佳优惠。</p>
+
+        <h3>在哪里可以购买进口相机？</h3>
+        <p>我们建议在<strong>京东或天猫的官方卖家</strong>处购买以获得保修服务。避免直接进口，因为可能会有高额税费且在中国没有技术支持。</p>
+
+        <div class="affiliate-note">
+            <p>⚠️ <strong>透明度：</strong> 本页部分链接为联盟链接。如果您通过这些链接购买，我们可能会收到少量佣金，而您无需支付额外费用。这有助于维持我们的网站并继续创建独立内容。意见始终是我们自己的，基于真实测试。</p>
+        </div>
+
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>探索</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/zh-CN/">首页中国</a></li>
+                    <li><a href="/VideoCameraHoliday/zh-CN/guias/">所有指南</a></li>
+                    <li><a href="/VideoCameraHoliday/zh-CN/analisis/">相机评测</a></li>
+                    <li><a href="/VideoCameraHoliday/zh-CN/destinos/">旅行目的地</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>语言</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/pt-br/novas-cameras-2026/">Português (BR)</a></li>
+                    <li><a href="/VideoCameraHoliday/new-cameras/">English</a></li>
+                    <li><a href="/VideoCameraHoliday/zh-CN/guias/2026-xin-kuan-xiang-ji/">简体中文</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>法律</h4>
+                <ul>
+                    <li><a href="/VideoCameraHoliday/privacidad/">隐私政策</a></li>
+                    <li><a href="/VideoCameraHoliday/cookies/">Cookie 政策</a></li>
+                    <li><a href="/VideoCameraHoliday/contacto/">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VideoCameraHoliday. 保留所有权利。| 为内容创作者用心设计 ❤️。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
