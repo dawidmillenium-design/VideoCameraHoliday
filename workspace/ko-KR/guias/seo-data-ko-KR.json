@@ -1,0 +1,175 @@
+{
+  "language": "ko-KR",
+  "meta_data": {
+    "title": "신형 카메라 2026: 출시 및 가격 완전 가이드",
+    "description": "2026 년 신형 카메라를 한국 가격, 완전 리뷰, 비교와 함께 만나보세요. 이상적인 카메라를 찾으세요.",
+    "canonical_url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/ko-KR/guias/nuevas-camaras-2026/"
+  },
+  "schema_markup": {
+    "collection_page": {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "신형 카메라 2026: 출시 및 가격 완전 가이드",
+      "description": "2026 년 신형 카메라를 한국 가격, 완전 리뷰, 비교와 함께 만나보세요. 이상적인 카메라를 찾으세요.",
+      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/ko-KR/guias/nuevas-camaras-2026/",
+      "inLanguage": "ko-KR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "VideoCameraHoliday",
+        "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+      }
+    },
+    "faq_page": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "2026 년 최고의 신형 카메라는?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "용도에 따라 다릅니다. 대부분 Sony A7 V 가 사진과 동영상의 균형을 잘 맞춥니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "한국에서 신형 카메라 가격은?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "모델과 매장에 따라 90 만원에서 200 만원까지 다양합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "수입 카메라는 어디서 구매?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "보증을 위해 쿠팡이나 하이마트 공식 판매점을 권장합니다."
+          }
+        }
+      ]
+    },
+    "breadcrumb_list": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/홈"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "신형 카메라",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/홈/신형-카메라"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "한국",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/홈/신형-카메라/한국"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "신형 카메라 2026",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/홈/신형-카메라/한국/신형-카메라-2026"
+        }
+      ]
+    },
+    "meta_title": "신형 카메라 2026: 출시 및 가격 완전 가이드",
+    "meta_description": "2026 년 신형 카메라를 한국 가격, 완전 리뷰, 비교와 함께 만나보세요. 이상적인 카메라를 찾으세요."
+  },
+  "content_brief": {
+    "h2_outline": [
+      "所有 2026 年新相机",
+      "完整对比：规格和价格",
+      "每种摄影师的最佳相机",
+      "在哪里购买（含最新价格）",
+      "我们的测试方法",
+      "常见问题"
+    ],
+    "local_eeat_hooks": [
+      "测试地点：Seoul, Busan, Jeju Island",
+      "本地零售商价格比较：Coupang, Hi-Mart, Gmarket",
+      "真实场景测试：城市街道、自然风光、低光环境",
+      "气候适应性测试：高温、高湿、寒冷条件",
+      "作者资质：10 年以上专业摄影经验"
+    ],
+    "local_pricing_currency": "₩",
+    "local_retailers": [
+      "Coupang",
+      "Hi-Mart",
+      "Gmarket",
+      "11st"
+    ],
+    "test_locations": [
+      "Seoul",
+      "Busan",
+      "Jeju Island",
+      "Gyeongbokgung"
+    ],
+    "target_word_count": 4000,
+    "tone": "专业但友好，使用本地习语",
+    "target_audience": "摄影爱好者和专业视频创作者"
+  },
+  "internal_link_map": {
+    "hub_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/new-cameras/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ko-KR/guias/"
+    ],
+    "cluster_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ko-KR/guias/fujifilm-x100vi/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ko-KR/guias/sony-a7-v/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ko-KR/guias/dji-pocket-4p/"
+    ],
+    "regional_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ko-KR/guias/best-camera-travel/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ko-KR/guias/professional-cameras/"
+    ]
+  },
+  "keywords": {
+    "primary": "신형 카메라 2026",
+    "long_tail": [
+      "2026 년 추천 카메라 한국",
+      "소니 카메라 2026 가격 쿠팡",
+      "캐논 카메라 2026 하이마트",
+      "여행용 카메라 2026 서울",
+      "프로용 카메라 2026 부산"
+    ],
+    "search_intent": "commercial_investigation"
+  },
+  "competitor_data": {
+    "competitor_gaps": [
+      "缺乏本地价格信息（本地货币）",
+      "缺少真实场景测试（本地地点）",
+      "没有视频评测嵌入",
+      "缺少购买指南（本地零售商）",
+      "FAQ 部分不完整"
+    ],
+    "avg_word_count": 2800,
+    "recommended_h2s": [
+      "所有 2026 年新相机",
+      "完整对比：规格和价格",
+      "每种摄影师的最佳相机",
+      "在哪里购买（含最新价格）",
+      "我们的测试方法",
+      "常见问题"
+    ],
+    "missing_schema": [
+      "CollectionPage",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "content_quality_score": 6.5
+  },
+  "eeat_validation": {
+    "author_box": true,
+    "testing_methodology": true,
+    "local_locations": true,
+    "pros_and_cons": true,
+    "last_updated": true
+  }
+}
