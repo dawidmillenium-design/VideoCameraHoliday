@@ -51,7 +51,7 @@ jobs:
             audit-summary.txt
 
   # ========================================================================
-  # JOB 2: BROKEN LINK CHECKER (FIXED)
+  # JOB 2: BROKEN LINK CHECKER
   # ========================================================================
   broken-links:
     name: 🔗 Broken Link Checker
@@ -125,7 +125,7 @@ jobs:
           find . -name "*.html" -not -path "./assets/*" -not -path "./node_modules/*" | xargs html-validate --config .htmlvalidate.json || true
 
   # ========================================================================
-  # JOB 4: META & SCHEMA VALIDATION
+  # JOB 4: META & SCHEMA VALIDATION (FIXED)
   # ========================================================================
   meta-schema:
     name: 📋 Meta & Schema Validation
@@ -202,7 +202,7 @@ jobs:
           "
 
   # ========================================================================
-  # JOB 5: HEADING STRUCTURE AUDIT
+  # JOB 5: HEADING STRUCTURE AUDIT (FIXED)
   # ========================================================================
   heading-structure:
     name: 🎯 Heading Structure Audit
@@ -456,7 +456,7 @@ jobs:
           "
 
   # ========================================================================
-  # JOB 8: GENERATE SITEMAP (FIXED)
+  # JOB 8: GENERATE SITEMAP
   # ========================================================================
   sitemap:
     name: 🌐 Generate Sitemap
@@ -496,7 +496,7 @@ jobs:
           fi
 
   # ========================================================================
-  # JOB 9: AUTO-FIX SEO ISSUES (FIXED)
+  # JOB 9: AUTO-FIX SEO ISSUES
   # ========================================================================
   auto-fix:
     name: 🔧 Auto-Fix SEO Issues
@@ -594,7 +594,7 @@ jobs:
             pagespeed-desktop.txt
 
   # ========================================================================
-  # JOB 12: SUMMARY
+  # JOB 12: SUMMARY (FIXED - No formatting issues)
   # ========================================================================
   summary:
     name: 📊 Deployment Summary
