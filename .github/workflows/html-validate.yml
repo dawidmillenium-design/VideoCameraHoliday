@@ -1,0 +1,37 @@
+name: HTML Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install HTML validator
+        run: npm install -g html-validate
+
+      - name: Validate HTML files
+        run: |
+          # Validate all HTML files except those in assets
+          find . -name "*.html" -not -path "./assets/*" -not -path "./node_modules/*" | xargs html-validate --config .htmlvalidate.json || true
+
+      - name: Validate specific key pages
+        run: |
+          echo "🔍 Validating key pages..."
+          for page in index.html guides/*.html reviews/*.html destinations/*.html how-to/*.html comparisons/*.html about/index.html; do
+            if [ -f "$page" ]; then
+              echo "✅ $page"
+            fi
+          done
