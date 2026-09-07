@@ -1,0 +1,32 @@
+name: Auto-Fix SEO Issues
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  auto-fix:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run SEO fixes
+        run: |
+          python fix-canonicals.py || echo "⚠️ Canonical fix script not found"
+          python fix-titles.py || echo "⚠️ Title fix script not found"
+
+      - name: Commit fixes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "Auto-fix SEO issues [skip ci]"
+          git push
