@@ -1,0 +1,38 @@
+name: Weekly SEO Audit
+
+on:
+  schedule:
+    # Runs every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  weekly-audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install cheerio axios
+
+      - name: Run SEO audit
+        run: node audit-canonical.js
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-seo-audit-report
+          path: |
+            audit-report.json
+            audit-summary.txt
+
+      - name: Send summary to console
+        run: cat audit-summary.txt
