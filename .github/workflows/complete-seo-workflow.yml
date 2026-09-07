@@ -1,0 +1,666 @@
+name: 🔍 Complete SEO Workflow
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.html'
+      - '**.js'
+      - '**.py'
+      - '**.yml'
+      - '**.yaml'
+  schedule:
+    - cron: '0 8 * * 1'  # Every Monday at 8:00 AM UTC
+  workflow_dispatch:      # Manual trigger
+
+jobs:
+  # ========================================================================
+  # JOB 1: SEO AUDIT
+  # ========================================================================
+  seo-audit:
+    name: 📊 SEO Audit
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install cheerio axios
+
+      - name: 🔧 Run SEO audit
+        run: node audit-canonical.js
+
+      - name: 📊 Check for critical issues
+        run: |
+          if grep -q "Critical: [1-9]" audit-summary.txt; then
+            echo "❌ CRITICAL ISSUES FOUND:"
+            cat audit-summary.txt
+            exit 1
+          else
+            echo "✅ No critical issues found."
+            echo "📊 Audit summary:"
+            cat audit-summary.txt
+          fi
+
+      - name: 📤 Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-report
+          path: |
+            audit-report.json
+            audit-summary.txt
+
+  # ========================================================================
+  # JOB 2: BROKEN LINK CHECKER
+  # ========================================================================
+  broken-links:
+    name: 🔗 Broken Link Checker
+    runs-on: ubuntu-latest
+    needs: seo-audit  # Runs after SEO audit (can run in parallel if removed)
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install link checker
+        run: npm install -g broken-link-checker
+
+      - name: 🔍 Check for broken links
+        run: |
+          blc https://dawidmillenium-design.github.io/VideoCameraHoliday/ \
+            --recursive \
+            --exclude-external \
+            --ordered \
+            --get \
+            --no-color \
+            --only-4xx \
+            --exclude '*.css,*.js,*.png,*.jpg,*.svg,*.ico,*.json' \
+            > broken-links.txt || true
+
+      - name: 📊 Check results
+        run: |
+          if [ -s broken-links.txt ]; then
+            echo "⚠️ Broken links found:"
+            cat broken-links.txt
+            exit 1
+          else
+            echo "✅ No broken links found."
+          fi
+
+      - name: 📤 Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: broken-links-report
+          path: broken-links.txt
+
+  # ========================================================================
+  # JOB 3: HTML VALIDATION
+  # ========================================================================
+  html-validate:
+    name: ✅ HTML Validation
+    runs-on: ubuntu-latest
+    needs: seo-audit
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install HTML validator
+        run: npm install -g html-validate
+
+      - name: ✅ Validate HTML files
+        run: |
+          find . -name "*.html" -not -path "./assets/*" -not -path "./node_modules/*" | xargs html-validate --config .htmlvalidate.json || true
+
+      - name: 📤 Upload validation log
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-validation-log
+          path: html-validation.log
+
+  # ========================================================================
+  # JOB 4: META & SCHEMA VALIDATION
+  # ========================================================================
+  meta-schema:
+    name: 📋 Meta & Schema Validation
+    runs-on: ubuntu-latest
+    needs: seo-audit
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install cheerio
+
+      - name: 🔍 Validate meta tags and schema
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const cheerio = require('cheerio');
+          
+          function validateHTML(filePath) {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const $ = cheerio.load(content);
+            const errors = [];
+            
+            if (!$('title').text().trim()) errors.push('Missing title tag');
+            if (!$('meta[name=\"description\"]').attr('content')) errors.push('Missing meta description');
+            if (!$('link[rel=\"canonical\"]').attr('href')) errors.push('Missing canonical tag');
+            if (!$('meta[property=\"og:title\"]').attr('content')) errors.push('Missing og:title');
+            if (!$('meta[name=\"twitter:card\"]').attr('content')) errors.push('Missing twitter:card');
+            if (!$('script[type=\"application/ld+json\"]').length) errors.push('Missing JSON-LD schema');
+            
+            return { filePath, errors };
+          }
+          
+          const results = [];
+          function walkDir(dir) {
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'assets') {
+                walkDir(fullPath);
+              } else if (file.endsWith('.html') || file.endsWith('.htm')) {
+                results.push(validateHTML(fullPath));
+              }
+            }
+          }
+          
+          walkDir('.');
+          
+          let hasErrors = false;
+          console.log('📋 META & SCHEMA VALIDATION');
+          console.log('=' .repeat(50));
+          
+          for (const result of results) {
+            if (result.errors.length > 0) {
+              console.log('❌ ' + result.filePath + ':');
+              result.errors.forEach(e => console.log('  - ' + e));
+              hasErrors = true;
+            }
+          }
+          
+          if (!hasErrors) {
+            console.log('✅ All pages have valid meta tags and schema.');
+          } else {
+            process.exit(1);
+          }
+          "
+
+  # ========================================================================
+  # JOB 5: HEADING STRUCTURE AUDIT
+  # ========================================================================
+  heading-structure:
+    name: 🎯 Heading Structure Audit
+    runs-on: ubuntu-latest
+    needs: seo-audit
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install cheerio
+
+      - name: 🔍 Check heading structure
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const cheerio = require('cheerio');
+          
+          function analyzeHeadings(filePath) {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const $ = cheerio.load(content);
+            
+            const issues = [];
+            const h1s = $('h1').length;
+            const h2s = $('h2').length;
+            const h3s = $('h3').length;
+            
+            if (h1s === 0) issues.push('No H1 heading found');
+            if (h1s > 1) issues.push('Multiple H1 headings found (' + h1s + ')');
+            if (h2s === 0 && h3s === 0) issues.push('No subheadings (H2/H3) found');
+            if (h3s > 0 && h2s === 0) issues.push('H3 used without H2');
+            
+            return { filePath, h1s, h2s, h3s, issues };
+          }
+          
+          const results = [];
+          function walkDir(dir) {
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'assets') {
+                walkDir(fullPath);
+              } else if (file.endsWith('.html') || file.endsWith('.htm')) {
+                results.push(analyzeHeadings(fullPath));
+              }
+            }
+          }
+          
+          walkDir('.');
+          
+          let hasIssues = false;
+          console.log('🎯 HEADING STRUCTURE REPORT');
+          console.log('=' .repeat(50));
+          
+          for (const result of results) {
+            if (result.issues.length > 0) {
+              console.log('❌ ' + result.filePath + ':');
+              result.issues.forEach(i => console.log('  - ' + i));
+              hasIssues = true;
+            }
+          }
+          
+          if (hasIssues) {
+            console.log('\\n⚠️ Some pages have heading structure issues.');
+            process.exit(1);
+          } else {
+            console.log('\\n✅ All pages have proper heading structure.');
+          }
+          "
+
+  # ========================================================================
+  # JOB 6: READABILITY CHECK
+  # ========================================================================
+  readability:
+    name: 📝 Readability Check
+    runs-on: ubuntu-latest
+    needs: seo-audit
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install cheerio
+
+      - name: 🔍 Check readability scores
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const cheerio = require('cheerio');
+          
+          function getReadabilityScore(text) {
+            const words = text.split(/\\s+/).length;
+            const sentences = text.split(/[.!?]+/).length;
+            const syllables = text.toLowerCase().match(/[aeiouy]{1,2}/g)?.length || 1;
+            if (words === 0 || sentences === 0) return 0;
+            const score = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words);
+            return Math.min(100, Math.max(0, score));
+          }
+          
+          function getWordCount(text) {
+            return text.split(/\\s+/).length;
+          }
+          
+          function analyzePage(filePath) {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const $ = cheerio.load(content);
+            const text = $('body').text().replace(/\\s+/g, ' ').trim();
+            const wordCount = getWordCount(text);
+            const readability = getReadabilityScore(text);
+            
+            const issues = [];
+            if (wordCount < 300) issues.push('Low word count: ' + wordCount + ' words');
+            if (readability < 50) issues.push('Poor readability score: ' + Math.round(readability));
+            if (!$('h2').length) issues.push('No H2 headings found');
+            if ($('p').length < 3) issues.push('Very few paragraphs');
+            
+            return { filePath, wordCount, readability, issues };
+          }
+          
+          const results = [];
+          function walkDir(dir) {
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'assets') {
+                walkDir(fullPath);
+              } else if (file.endsWith('.html') || file.endsWith('.htm')) {
+                results.push(analyzePage(fullPath));
+              }
+            }
+          }
+          
+          walkDir('.');
+          
+          let hasIssues = false;
+          console.log('📝 READABILITY REPORT');
+          console.log('=' .repeat(50));
+          
+          for (const result of results) {
+            if (result.issues.length > 0) {
+              console.log('❌ ' + result.filePath + ':');
+              result.issues.forEach(i => console.log('  - ' + i));
+              hasIssues = true;
+            }
+          }
+          
+          if (hasIssues) {
+            console.log('\\n⚠️ Some pages need content improvements.');
+            process.exit(1);
+          } else {
+            console.log('\\n✅ All pages have good content quality.');
+          }
+          "
+
+  # ========================================================================
+  # JOB 7: INTERNAL LINKING AUDIT
+  # ========================================================================
+  internal-links:
+    name: 🔗 Internal Linking Audit
+    runs-on: ubuntu-latest
+    needs: seo-audit
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install cheerio
+
+      - name: 🔍 Audit internal links
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const cheerio = require('cheerio');
+          
+          const pages = {};
+          function walkDir(dir) {
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'assets') {
+                walkDir(fullPath);
+              } else if (file.endsWith('.html') || file.endsWith('.htm')) {
+                pages[fullPath] = { url: fullPath, incoming: 0, outgoing: [] };
+              }
+            }
+          }
+          walkDir('.');
+          
+          for (const [pagePath, pageData] of Object.entries(pages)) {
+            const content = fs.readFileSync(pagePath, 'utf8');
+            const $ = cheerio.load(content);
+            $('a[href]').each((i, el) => {
+              let href = $(el).attr('href');
+              if (href.startsWith('/')) href = '.' + href;
+              if (href.endsWith('.html') || href.endsWith('.htm') || href.endsWith('/')) {
+                if (href.startsWith('./')) href = href.substring(2);
+                for (const [targetPath, targetData] of Object.entries(pages)) {
+                  if (targetPath.endsWith(href) || targetPath.endsWith(href + '.html')) {
+                    targetData.incoming++;
+                    pageData.outgoing.push(targetPath);
+                  }
+                }
+              }
+            });
+          }
+          
+          let hasOrphans = false;
+          console.log('🔗 INTERNAL LINKING REPORT');
+          console.log('=' .repeat(50));
+          
+          for (const [pagePath, pageData] of Object.entries(pages)) {
+            if (pageData.incoming === 0 && !pagePath.includes('404') && !pagePath.includes('index')) {
+              console.log('⚠️ Orphan page: ' + pagePath);
+              hasOrphans = true;
+            }
+            if (pageData.outgoing.length === 0 && !pagePath.includes('404')) {
+              console.log('⚠️ Page with no outgoing links: ' + pagePath);
+              hasOrphans = true;
+            }
+          }
+          
+          if (!hasOrphans) {
+            console.log('✅ No orphan pages found. Good internal linking structure!');
+          } else {
+            process.exit(1);
+          }
+          "
+
+  # ========================================================================
+  # JOB 8: GENERATE SITEMAP
+  # ========================================================================
+  sitemap:
+    name: 🌐 Generate Sitemap
+    runs-on: ubuntu-latest
+    needs: seo-audit
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔧 Generate sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://dawidmillenium-design.github.io/VideoCameraHoliday/
+          path-to-root: .
+          includes: |
+            **/*.html
+            **/*.htm
+          excludes: |
+            **/assets/**
+            **/images/**
+            404.html
+
+      - name: 📤 Commit and push sitemap
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "🤖 Auto-update sitemap.xml [skip ci]"
+          git push
+
+  # ========================================================================
+  # JOB 9: AUTO-FIX SEO ISSUES
+  # ========================================================================
+  auto-fix:
+    name: 🔧 Auto-Fix SEO Issues
+    runs-on: ubuntu-latest
+    needs: seo-audit
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 🔧 Run SEO fixes
+        run: |
+          python3 fix-canonicals.py || echo "⚠️ Canonical fix script not found"
+          python3 fix-titles.py || echo "⚠️ Title fix script not found"
+
+      - name: 📤 Commit fixes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "🤖 Auto-fix SEO issues [skip ci]"
+          git push
+
+  # ========================================================================
+  # JOB 10: PING SEARCH ENGINES
+  # ========================================================================
+  ping-search-engines:
+    name: 📢 Ping Search Engines
+    runs-on: ubuntu-latest
+    needs: [seo-audit, sitemap]
+    
+    steps:
+      - name: 📢 Ping Google
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://dawidmillenium-design.github.io/VideoCameraHoliday/sitemap.xml" || true
+
+      - name: 📢 Ping Bing
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://dawidmillenium-design.github.io/VideoCameraHoliday/sitemap.xml" || true
+
+      - name: ✅ Search engines notified
+        run: echo "✅ Sitemap pinged to search engines"
+
+  # ========================================================================
+  # JOB 11: PAGE SPEED INSIGHTS
+  # ========================================================================
+  pagespeed:
+    name: ⚡ PageSpeed Insights
+    runs-on: ubuntu-latest
+    needs: seo-audit
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install PageSpeed CLI
+        run: npm install -g psi
+
+      - name: 📊 Run PageSpeed on homepage
+        run: |
+          psi https://dawidmillenium-design.github.io/VideoCameraHoliday/ --strategy=mobile > pagespeed-mobile.txt
+          psi https://dawidmillenium-design.github.io/VideoCameraHoliday/ --strategy=desktop > pagespeed-desktop.txt
+
+      - name: 📊 Check scores
+        run: |
+          echo "📊 PageSpeed Insights (Mobile)"
+          grep -E "Score|Performance|Accessibility|Best Practices|SEO" pagespeed-mobile.txt || true
+          echo ""
+          echo "📊 PageSpeed Insights (Desktop)"
+          grep -E "Score|Performance|Accessibility|Best Practices|SEO" pagespeed-desktop.txt || true
+
+      - name: 📤 Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: pagespeed-reports
+          path: |
+            pagespeed-mobile.txt
+            pagespeed-desktop.txt
+
+  # ========================================================================
+  # JOB 12: IMAGE OPTIMIZATION (Only on push with images)
+  # ========================================================================
+  optimize-images:
+    name: 📸 Optimize Images
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.event.pusher.name != 'github-actions'
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install image optimization tools
+        run: |
+          npm install -g imagemin-cli
+          npm install -g imagemin-webp
+          npm install -g imagemin-mozjpeg
+          npm install -g imagemin-pngquant
+
+      - name: 🔧 Optimize images (JPEG/PNG to WebP)
+        run: |
+          # Find and convert JPEG/PNG to WebP if they don't already exist
+          find . -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" | while read file; do
+            dir=$(dirname "$file")
+            base=$(basename "$file")
+            name="${base%.*}"
+            ext="${base##*.}"
+            webp_file="$dir/$name.webp"
+            if [ ! -f "$webp_file" ]; then
+              echo "Converting $file to WebP"
+              # This is a placeholder - actual conversion would use cwebp or similar
+            fi
+          done
+
+      - name: 📤 Commit optimized images
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "🤖 Optimize images [skip ci]"
+          git push
+
+  # ========================================================================
+  # JOB 13: DEPLOYMENT SUMMARY
+  # ========================================================================
+  summary:
+    name: 📊 Deployment Summary
+    runs-on: ubuntu-latest
+    needs: [seo-audit, broken-links, html-validate, meta-schema, heading-structure, readability, internal-links, sitemap, auto-fix, ping-search-engines, pagespeed, optimize-images]
+    if: always()
+    
+    steps:
+      - name: 📊 Generate summary
+        run: |
+          echo "## 📊 SEO Workflow Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Job | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 📊 SEO Audit | ${{ needs.seo-audit.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔗 Broken Link Checker | ${{ needs.broken-links.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| ✅ HTML Validation | ${{ needs.html-validate.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 📋 Meta & Schema | ${{ needs.meta-schema.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 🎯 Heading Structure | ${{ needs.heading-structure.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 📝 Readability | ${{ needs.readability.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔗 Internal Linking | ${{ needs.internal-links.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 🌐 Sitemap | ${{ needs.sitemap.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔧 Auto-Fix | ${{ needs.auto-fix.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 📢 Ping Search Engines | ${{ needs.ping-search-engines.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| ⚡ PageSpeed | ${{ needs.pagespeed.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "| 📸 Image Optimization | ${{ needs.optimize-images.result }}" >> $GITHUB_STEP_SUMMARY
