@@ -1,0 +1,40 @@
+name: Broken Link Checker
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 12 * * 1' # Every Monday at 12:00 PM UTC
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install link checker
+        run: npm install -g broken-link-checker
+
+      - name: Check for broken links
+        run: |
+          blc https://dawidmillenium-design.github.io/VideoCameraHoliday/ --recursive --exclude-external --ordered --get --no-color --only-4xx --exclude '*.css,*.js,*.png,*.jpg,*.svg,*.ico' > broken-links.txt || true
+          if [ -s broken-links.txt ]; then
+            echo "⚠️ Broken links found:"
+            cat broken-links.txt
+            exit 1
+          else
+            echo "✅ No broken links found."
+          fi
+
+      - name: Upload broken links report
+        uses: actions/upload-artifact@v4
+        with:
+          name: broken-links-report
+          path: broken-links.txt
