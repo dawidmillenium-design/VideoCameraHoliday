@@ -1,0 +1,175 @@
+{
+  "language": "it-IT",
+  "meta_data": {
+    "title": "Nuove Fotocamere 2026: Guida Completa a Lanci e Prezzi",
+    "description": "Scopri le nuove fotocamere 2026 con prezzi in Italia, recensioni complete e confronti. Trova la tua fotocamera ideale.",
+    "canonical_url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/it-IT/guias/nuevas-camaras-2026/"
+  },
+  "schema_markup": {
+    "collection_page": {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Nuove Fotocamere 2026: Guida Completa a Lanci e Prezzi",
+      "description": "Scopri le nuove fotocamere 2026 con prezzi in Italia, recensioni complete e confronti. Trova la tua fotocamera ideale.",
+      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/it-IT/guias/nuevas-camaras-2026/",
+      "inLanguage": "it-IT",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "VideoCameraHoliday",
+        "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+      }
+    },
+    "faq_page": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual è la migliore fotocamera nuova del 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dipende dall'uso. Per la maggior parte, la Sony A7 V offre il miglior equilibrio tra foto e video."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto costa una fotocamera nuova in Italia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I prezzi variano da 900€ a 2000€ a seconda del modello e del negozio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dove comprare fotocamere importate in Italia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consigliamo venditori ufficiali su Amazon.it o MediaWorld per la garanzia."
+          }
+        }
+      ]
+    },
+    "breadcrumb_list": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inizio",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/inizio"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Nuove Fotocamere",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/inizio/nuove-fotocamere"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Italia",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/inizio/nuove-fotocamere/italia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Nuove Fotocamere 2026",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/inizio/nuove-fotocamere/italia/nuove-fotocamere-2026"
+        }
+      ]
+    },
+    "meta_title": "Nuove Fotocamere 2026: Guida Completa a Lanci e Prezzi",
+    "meta_description": "Scopri le nuove fotocamere 2026 con prezzi in Italia, recensioni complete e confronti. Trova la tua fotocamera ideale."
+  },
+  "content_brief": {
+    "h2_outline": [
+      "所有 2026 年新相机",
+      "完整对比：规格和价格",
+      "每种摄影师的最佳相机",
+      "在哪里购买（含最新价格）",
+      "我们的测试方法",
+      "常见问题"
+    ],
+    "local_eeat_hooks": [
+      "测试地点：Roma, Milano, Tuscany",
+      "本地零售商价格比较：Amazon.it, MediaWorld, Unieuro",
+      "真实场景测试：城市街道、自然风光、低光环境",
+      "气候适应性测试：高温、高湿、寒冷条件",
+      "作者资质：10 年以上专业摄影经验"
+    ],
+    "local_pricing_currency": "€",
+    "local_retailers": [
+      "Amazon.it",
+      "MediaWorld",
+      "Unieuro",
+      "Euronics"
+    ],
+    "test_locations": [
+      "Roma",
+      "Milano",
+      "Tuscany",
+      "Amalfi Coast"
+    ],
+    "target_word_count": 4000,
+    "tone": "专业但友好，使用本地习语",
+    "target_audience": "摄影爱好者和专业视频创作者"
+  },
+  "internal_link_map": {
+    "hub_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/new-cameras/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-ES/guias/"
+    ],
+    "cluster_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-ES/guias/fujifilm-x100vi/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-ES/guias/sony-a7-v/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-ES/guias/dji-pocket-4p/"
+    ],
+    "regional_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-ES/guias/mejor-camera-viajar-espana/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-ES/guias/camaras-profesionales-barcelona/"
+    ]
+  },
+  "keywords": {
+    "primary": "nuove fotocamere 2026",
+    "long_tail": [
+      "migliori fotocamere nuove 2026 Italia",
+      "fotocamere Sony 2026 prezzo Amazon.it",
+      "fotocamere Canon 2026 MediaWorld",
+      "fotocamere per viaggi 2026 Roma",
+      "fotocamere professionali 2026 Milano"
+    ],
+    "search_intent": "commercial_investigation"
+  },
+  "competitor_data": {
+    "competitor_gaps": [
+      "缺乏本地价格信息（本地货币）",
+      "缺少真实场景测试（本地地点）",
+      "没有视频评测嵌入",
+      "缺少购买指南（本地零售商）",
+      "FAQ 部分不完整"
+    ],
+    "avg_word_count": 2800,
+    "recommended_h2s": [
+      "所有 2026 年新相机",
+      "完整对比：规格和价格",
+      "每种摄影师的最佳相机",
+      "在哪里购买（含最新价格）",
+      "我们的测试方法",
+      "常见问题"
+    ],
+    "missing_schema": [
+      "CollectionPage",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "content_quality_score": 6.5
+  },
+  "eeat_validation": {
+    "author_box": true,
+    "testing_methodology": true,
+    "local_locations": true,
+    "pros_and_cons": true,
+    "last_updated": true
+  }
+}

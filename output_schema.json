@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Global SEO Content Output Schema",
+  "type": "object",
+  "required": ["language", "meta_data", "schema_markup", "content_brief", "internal_link_map"],
+  "properties": {
+    "language": {
+      "type": "string",
+      "description": "ISO 639-1 language code (e.g., 'es-ES', 'de-DE')"
+    },
+    "meta_data": {
+      "type": "object",
+      "required": ["title", "description", "canonical_url"],
+      "properties": {
+        "title": { 
+          "type": "string", 
+          "maxLength": 60,
+          "description": "SEO title tag, must be under 60 characters"
+        },
+        "description": { 
+          "type": "string", 
+          "minLength": 150, 
+          "maxLength": 160,
+          "description": "Meta description, must be 150-160 characters"
+        },
+        "canonical_url": { 
+          "type": "string", 
+          "format": "uri",
+          "description": "Canonical URL for the page"
+        }
+      }
+    },
+    "schema_markup": {
+      "type": "object",
+      "required": ["collection_page", "faq_page", "breadcrumb_list"],
+      "properties": {
+        "collection_page": { 
+          "type": "object", 
+          "description": "JSON-LD for CollectionPage schema"
+        },
+        "faq_page": { 
+          "type": "object", 
+          "description": "JSON-LD for FAQPage with exactly 3 localized questions"
+        },
+        "breadcrumb_list": { 
+          "type": "object", 
+          "description": "JSON-LD for BreadcrumbList schema"
+        }
+      }
+    },
+    "content_brief": {
+      "type": "object",
+      "required": ["h2_outline", "local_eeat_hooks", "local_pricing_currency"],
+      "properties": {
+        "h2_outline": { 
+          "type": "array", 
+          "items": { "type": "string" },
+          "description": "Array of H2 headings for the content structure"
+        },
+        "local_eeat_hooks": { 
+          "type": "array", 
+          "items": { "type": "string" },
+          "description": "Specific local locations, weather conditions, or cultural norms to mention for EEAT"
+        },
+        "local_pricing_currency": { 
+          "type": "string",
+          "description": "Currency symbol for local pricing (€, ¥, $, etc.)"
+        },
+        "local_retailers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of local retailers specific to the target market"
+        },
+        "test_locations": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Specific locations where testing was conducted"
+        },
+        "target_word_count": {
+          "type": "integer",
+          "description": "Target word count for the content"
+        },
+        "tone": {
+          "type": "string",
+          "description": "Tone and style guidelines for the content"
+        },
+        "target_audience": {
+          "type": "string",
+          "description": "Description of the target audience"
+        }
+      }
+    },
+    "internal_link_map": {
+      "type": "object",
+      "required": ["hub_links", "cluster_links", "regional_links"],
+      "properties": {
+        "hub_links": { 
+          "type": "array", 
+          "items": { "type": "string" }, 
+          "minItems": 2,
+          "description": "Links to main hub pages (English pillar, language hub)"
+        },
+        "cluster_links": { 
+          "type": "array", 
+          "items": { "type": "string" }, 
+          "minItems": 3,
+          "description": "Links to cluster pages (specific camera reviews)"
+        },
+        "regional_links": { 
+          "type": "array", 
+          "items": { "type": "string" }, 
+          "minItems": 2,
+          "description": "Links to regional/city-specific guides"
+        }
+      }
+    },
+    "keywords": {
+      "type": "object",
+      "required": ["primary", "long_tail", "search_intent"],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "description": "Primary keyword for the page"
+        },
+        "long_tail": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 5,
+          "description": "Long-tail keyword variations"
+        },
+        "search_intent": {
+          "type": "string",
+          "enum": ["informational", "commercial_investigation", "transactional", "navigational"],
+          "description": "Search intent classification"
+        }
+      }
+    },
+    "competitor_data": {
+      "type": "object",
+      "required": ["competitor_gaps", "avg_word_count", "recommended_h2s"],
+      "properties": {
+        "competitor_gaps": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Content gaps identified in competitor analysis"
+        },
+        "avg_word_count": {
+          "type": "integer",
+          "description": "Average word count of top-ranking competitors"
+        },
+        "recommended_h2s": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Recommended H2 headings based on competitor analysis"
+        },
+        "missing_schema": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Schema types missing from competitor pages"
+        },
+        "content_quality_score": {
+          "type": "number",
+          "description": "Quality score of competitor content (1-10)"
+        }
+      }
+    },
+    "eeat_validation": {
+      "type": "object",
+      "required": ["author_box", "testing_methodology", "local_locations", "pros_and_cons", "last_updated"],
+      "properties": {
+        "author_box": { "type": "boolean" },
+        "testing_methodology": { "type": "boolean" },
+        "local_locations": { "type": "boolean" },
+        "pros_and_cons": { "type": "boolean" },
+        "last_updated": { "type": "boolean" }
+      }
+    }
+  },
+  "additionalProperties": false
+}

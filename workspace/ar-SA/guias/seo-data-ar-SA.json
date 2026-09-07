@@ -1,0 +1,175 @@
+{
+  "language": "ar-SA",
+  "meta_data": {
+    "title": "كاميرات جديدة 2026: دليل كامل للإصدارات والأسعار",
+    "description": "اكتشف الكاميرات الجديدة 2026 مع الأسعار في السعودية، مراجعات كاملة ومقارنات. اعثر على كاميرتك المثالية.",
+    "canonical_url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/ar-SA/guias/nuevas-camaras-2026/"
+  },
+  "schema_markup": {
+    "collection_page": {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "كاميرات جديدة 2026: دليل كامل للإصدارات والأسعار",
+      "description": "اكتشف الكاميرات الجديدة 2026 مع الأسعار في السعودية، مراجعات كاملة ومقارنات. اعثر على كاميرتك المثالية.",
+      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/ar-SA/guias/nuevas-camaras-2026/",
+      "inLanguage": "ar-SA",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "VideoCameraHoliday",
+        "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+      }
+    },
+    "faq_page": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما هي أفضل كاميرا جديدة في 2026؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يعتمد على الاستخدام. لمعظم الناس، Sony A7 V توفر أفضل توازن بين الصور والفيديو."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كم سعر الكاميرا الجديدة في السعودية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تتراوح الأسعار من 900 ر.س إلى 2000 ر.س حسب المتجر والموديل."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "أين يمكن شراء كاميرات مستوردة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نوصي بالبائعين الرسميين على أمازون أو جرير للضمان."
+          }
+        }
+      ]
+    },
+    "breadcrumb_list": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/الرئيسية"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "كاميرات جديدة",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/الرئيسية/كاميرات-جديدة"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "السعودية",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/الرئيسية/كاميرات-جديدة/السعودية"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "كاميرات جديدة 2026",
+          "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/الرئيسية/كاميرات-جديدة/السعودية/كاميرات-جديدة-2026"
+        }
+      ]
+    },
+    "meta_title": "كاميرات جديدة 2026: دليل كامل للإصدارات والأسعار",
+    "meta_description": "اكتشف الكاميرات الجديدة 2026 مع الأسعار في السعودية، مراجعات كاملة ومقارنات. اعثر على كاميرتك المثالية."
+  },
+  "content_brief": {
+    "h2_outline": [
+      "所有 2026 年新相机",
+      "完整对比：规格和价格",
+      "每种摄影师的最佳相机",
+      "在哪里购买（含最新价格）",
+      "我们的测试方法",
+      "常见问题"
+    ],
+    "local_eeat_hooks": [
+      "测试地点：Riyadh, Dubai, Mecca",
+      "本地零售商价格比较：Amazon.sa, Jarir, Extra",
+      "真实场景测试：城市街道、自然风光、低光环境",
+      "气候适应性测试：高温、高湿、寒冷条件",
+      "作者资质：10 年以上专业摄影经验"
+    ],
+    "local_pricing_currency": "ر.س",
+    "local_retailers": [
+      "Amazon.sa",
+      "Jarir",
+      "Extra",
+      "Noon"
+    ],
+    "test_locations": [
+      "Riyadh",
+      "Dubai",
+      "Mecca",
+      "Red Sea Coast"
+    ],
+    "target_word_count": 4000,
+    "tone": "专业但友好，使用本地习语",
+    "target_audience": "摄影爱好者和专业视频创作者"
+  },
+  "internal_link_map": {
+    "hub_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/new-cameras/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ar-SA/guias/"
+    ],
+    "cluster_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ar-SA/guias/fujifilm-x100vi/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ar-SA/guias/sony-a7-v/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ar-SA/guias/dji-pocket-4p/"
+    ],
+    "regional_links": [
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ar-SA/guias/best-camera-travel/",
+      "https://dawidmillenium-design.github.io/VideoCameraHoliday/ar-SA/guias/professional-cameras/"
+    ]
+  },
+  "keywords": {
+    "primary": "كاميرات جديدة 2026",
+    "long_tail": [
+      "أفضل كاميرات جديدة 2026 السعودية",
+      "كاميرات سوني 2026 سعر أمازون",
+      "كاميرات كانون 2026 جرير",
+      "كاميرات للسفر 2026 الرياض",
+      "كاميرات احترافية 2026 دبي"
+    ],
+    "search_intent": "commercial_investigation"
+  },
+  "competitor_data": {
+    "competitor_gaps": [
+      "缺乏本地价格信息（本地货币）",
+      "缺少真实场景测试（本地地点）",
+      "没有视频评测嵌入",
+      "缺少购买指南（本地零售商）",
+      "FAQ 部分不完整"
+    ],
+    "avg_word_count": 2800,
+    "recommended_h2s": [
+      "所有 2026 年新相机",
+      "完整对比：规格和价格",
+      "每种摄影师的最佳相机",
+      "在哪里购买（含最新价格）",
+      "我们的测试方法",
+      "常见问题"
+    ],
+    "missing_schema": [
+      "CollectionPage",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "content_quality_score": 6.5
+  },
+  "eeat_validation": {
+    "author_box": true,
+    "testing_methodology": true,
+    "local_locations": true,
+    "pros_and_cons": true,
+    "last_updated": true
+  }
+}
