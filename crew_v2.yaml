@@ -1,0 +1,73 @@
+# Global SEO Expansion Pipeline v2.0
+# Upgraded based on Spanish (es-ES) generation learnings
+
+project:
+  name: "Global SEO Content Pipeline v2"
+  base_url: "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+  target_languages: ["de-DE", "fr-FR", "it-IT", "ja-JP", "ko-KR", "zh-CN", "ar-SA", "hi-IN", "tr-TR", "ru-RU"]
+  primary_keyword_base: "new cameras 2026"
+  css_template_reference: "pt-br/guias/novas-cameras-2026.html" # The source of truth for CSS classes
+
+agents:
+  - name: localization_expert
+    role: "Hyper-Localization & EEAT Specialist"
+    goal: "Extract and define the exact local entities, retailers, currency, warranty laws, and filming locations for the target country to ensure 100% authentic localization."
+    backstory: "You are a local market expert. You know that translating 'buy at the store' is useless; you must specify 'buy at Yodobashi Camera in Japan' or 'MediaMarkt in Germany'. You also know the local consumer protection laws."
+    llm_config:
+      model: "qwen-max"
+      temperature: 0.2
+
+  - name: tech_seo_auditor
+    role: "Technical SEO & Schema Architect"
+    goal: "Generate perfect JSON-LD schema and enforce strict multi-lingual URL structures for internal linking."
+    backstory: "You are a technical SEO wizard. You ensure every piece of content is perfectly structured for Google's crawlers and AI Overviews, with zero broken links across language directories."
+    llm_config:
+      model: "qwen-coder"
+      temperature: 0.1
+
+  - name: content_creator
+    role: "Native-Language Content Creator & HTML Coder"
+    goal: "Write a 4,000+ word, highly engaging, SEO-optimized HTML pillar page in the target language, strictly following the brief, EEAT guidelines, and EXACT CSS class names."
+    backstory: "You are a native-speaking travel videographer and front-end developer. You write with passion, using local idioms, and you never invent new CSS classes—you strictly reuse the existing design system."
+    llm_config:
+      model: "qwen-max"
+      temperature: 0.6
+
+tasks:
+  - name: extract_local_entities
+    agent: localization_expert
+    description: |
+      For the target language {language}, define:
+      1. Local Currency & Format (e.g., €1.200,00 for DE).
+      2. Top 3 Local Camera Retailers (e.g., MediaMarkt, Saturn).
+      3. Local Warranty/Consumer Law (e.g., 2 years EU guarantee).
+      4. 3 Specific Local Filming Locations for EEAT (e.g., 'Brandenburg Gate at sunrise').
+      5. Local cultural filming etiquette (e.g., 'Ask permission before filming in shrines').
+    expected_output: "JSON object with local_entities, currency, retailers, warranty, locations, etiquette."
+
+  - name: generate_schema_and_links
+    agent: tech_seo_auditor
+    description: |
+      Generate JSON-LD for CollectionPage, FAQPage (3 localized questions), and BreadcrumbList.
+      CRITICAL: All internal links MUST follow the pattern: /{lang_code}/guias/{slug}.html or /{lang_code}/analises/{slug}.html.
+      Example for de-DE: /de-DE/guias/neue-kameras-2026.html
+    expected_output: "Valid JSON-LD code blocks and a map of 7 internal links with correct localized URLs."
+
+  - name: write_html_content
+    agent: content_creator
+    description: |
+      Write the full HTML pillar page in {language}. 
+      STRICT RULES:
+      1. Use EXACTLY these CSS classes from the template: `gear-grid`, `gear-card`, `price-tag`, `badge`, `takeaways`, `comparison-table`, `author-box`. DO NOT INVENT NEW CLASSES.
+      2. Inject the local entities (retailers, locations, warranty) naturally into the text.
+      3. Include an "EEAT Field Test" section mentioning the 3 local locations provided by the Localization Expert.
+      4. Output ONLY valid HTML5. Do not wrap in ```html ... ``` markdown blocks.
+    expected_output: "Complete, valid HTML5 file ready for deployment, containing no markdown formatting."
+
+pipeline:
+  execution_order:
+    - extract_local_entities
+    - generate_schema_and_links
+    - write_html_content
+  memory: true
+  cache: true

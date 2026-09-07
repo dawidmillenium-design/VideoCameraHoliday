@@ -1,0 +1,72 @@
+{
+  "de-DE": {
+    "currency": "€ (EUR)",
+    "retailers": ["MediaMarkt", "Saturn", "Calumet Photographic"],
+    "warranty": "2 Jahre gesetzliche Gewährleistung (EU law)",
+    "locations": ["Brandenburger Tor bei Sonnenaufgang", "Englischer Garten München", "Oberbaumbrücke Berlin"],
+    "etiquette": "Strict privacy laws (KunstUrhG). Do not publish photos of people without consent."
+  },
+  "fr-FR": {
+    "currency": "€ (EUR)",
+    "retailers": ["Fnac", "Darty", "Boulanger"],
+    "warranty": "Garantie légale de conformité de 2 ans",
+    "locations": ["Passage des Panoramas Paris", "Vieux Lyon", "Marché d'Antibes"],
+    "etiquette": "Filming in museums often requires a 'autorisation de tournage'. Street photography is tolerated but be discreet."
+  },
+  "it-IT": {
+    "currency": "€ (EUR)",
+    "retailers": ["Unieuro", "MediaWorld", "Nikon School Italia"],
+    "warranty": "Garanzia legale di 2 anni",
+    "locations": ["Ponte Vecchio Firenze all'alba", "Trastevere Roma", "Canali di Venezia"],
+    "etiquette": "Tripods are often banned inside churches and museums (e.g., Uffizi). Always ask 'Posso fare una foto?'"
+  },
+  "ja-JP": {
+    "currency": "¥ (JPY)",
+    "retailers": ["Yodobashi Camera", "Bic Camera", "Map Camera"],
+    "warranty": "メーカー保証 1 年 (Manufacturer 1-year warranty)",
+    "locations": ["Shibuya Crossing at night", "Senso-ji Temple Asakusa", "Akihabara Electric Town"],
+    "etiquette": "NEVER film people's faces without explicit permission. Drones are heavily restricted in Tokyo. No tripods on crowded sidewalks."
+  },
+  "ko-KR": {
+    "currency": "₩ (KRW)",
+    "retailers": ["Hi-Mart", "Electro Mart", "Yongin Camera Center"],
+    "warranty": "무상 보증 1 년 (1-year free warranty)",
+    "locations": ["Bukchon Hanok Village", "Myeongdong Street at night", "Namsan Tower"],
+    "etiquette": "Filming in palaces (Gyeongbokgung) requires permission for commercial gear. Do not film military zones."
+  },
+  "zh-CN": {
+    "currency": "¥ (CNY)",
+    "retailers": ["JD.com (京东)", "Taobao (天猫)", "Suning (苏宁)"],
+    "warranty": "国家三包政策 (7 天退货，15 天换货，1 年保修)",
+    "locations": ["The Bund Shanghai at night", "Hutongs in Beijing", "West Lake Hangzhou"],
+    "etiquette": "Drones require real-name registration and no-fly zone checks. Avoid filming government buildings or military infrastructure."
+  },
+  "ar-SA": {
+    "currency": "ر.س (SAR)",
+    "retailers": ["Jarir Bookstore", "Extra Stores", "eXtra"],
+    "warranty": "ضمان لمدة سنة واحدة من الوكيل المعتمد",
+    "locations": ["Al-Masjid an-Nabawi Medina", "Riyadh Boulevard", "Jeddah Corniche"],
+    "etiquette": "Avoid filming women without explicit consent. No photography inside mosques during prayer times. Respect modesty laws."
+  },
+  "hi-IN": {
+    "currency": "₹ (INR)",
+    "retailers": ["Croma", "Reliance Digital", "Vijay Sales"],
+    "warranty": "1 वर्ष निर्माता वारंटी + विस्तृत वारंटी उपलब्ध",
+    "locations": ["Gateway of India Mumbai", "Jaipur Amber Fort", "Varanasi Ghats at sunrise"],
+    "etiquette": "Remove shoes before entering temples. Some religious sites prohibit photography. Ask 'kya main photo le sakta hoon?' before filming locals."
+  },
+  "tr-TR": {
+    "currency": "₺ (TRY)",
+    "retailers": ["MediaMarkt Türkiye", "Teknosa", "Vatan Bilgisayar"],
+    "warranty": "2 yıl yasal garanti (Tüketici Kanunu)",
+    "locations": ["Blue Mosque Istanbul at dawn", "Cappadocia hot air balloons", "Galata Tower"],
+    "etiquette": "Permission required for filming inside mosques. Dress modestly when filming religious sites. Avoid political gatherings."
+  },
+  "ru-RU": {
+    "currency": "₽ (RUB)",
+    "retailers": ["DNS", "M.Video", "Foto.ru"],
+    "warranty": "Гарантия 1 год от производителя + защита прав потребителей",
+    "locations": ["Red Square Moscow at sunset", "Hermitage Museum St. Petersburg", "Trans-Siberian Railway"],
+    "etiquette": "No photography in metro stations without permission. Military zones strictly prohibited. Ask 'Можно снять?' before filming people."
+  }
+}
