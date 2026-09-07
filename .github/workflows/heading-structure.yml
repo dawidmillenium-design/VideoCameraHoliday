@@ -1,0 +1,92 @@
+name: 🎯 Heading Structure Audit
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  heading-audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install cheerio
+
+      - name: 🔍 Check heading structure
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const cheerio = require('cheerio');
+          
+          function analyzeHeadings(filePath) {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const $ = cheerio.load(content);
+            
+            const issues = [];
+            const h1s = $('h1').length;
+            const h2s = $('h2').length;
+            const h3s = $('h3').length;
+            
+            if (h1s === 0) issues.push('No H1 heading found');
+            if (h1s > 1) issues.push('Multiple H1 headings found (' + h1s + ')');
+            if (h2s === 0 && h3s === 0) issues.push('No subheadings (H2/H3) found');
+            
+            // Check for skipping levels
+            if (h3s > 0 && h2s === 0) issues.push('H3 used without H2');
+            
+            return { filePath, h1s, h2s, h3s, issues };
+          }
+          
+          const results = [];
+          function walkDir(dir) {
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'assets') {
+                walkDir(fullPath);
+              } else if (file.endsWith('.html') || file.endsWith('.htm')) {
+                results.push(analyzeHeadings(fullPath));
+              }
+            }
+          }
+          
+          walkDir('.');
+          
+          let hasIssues = false;
+          console.log('📊 HEADING STRUCTURE REPORT');
+          console.log('=' .repeat(50));
+          
+          for (const result of results) {
+            if (result.issues.length > 0) {
+              console.log('❌ ' + result.filePath + ':');
+              result.issues.forEach(i => console.log('  - ' + i));
+              hasIssues = true;
+            } else {
+              console.log('✅ ' + result.filePath + ' - H1:' + result.h1s + ' H2:' + result.h2s + ' H3:' + result.h3s);
+            }
+          }
+          
+          if (hasIssues) {
+            console.log('\\n⚠️ Some pages have heading structure issues.');
+            process.exit(1);
+          } else {
+            console.log('\\n✅ All pages have proper heading structure.');
+          }
+          "
+
+      - name: 📤 Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: heading-report
+          path: heading-report.txt
