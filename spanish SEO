@@ -1,0 +1,137 @@
+Here is the complete, production-ready **Internal Linking Architecture Plan for the Spanish (es-ES) Content Cluster**. 
+
+This plan is designed to create a flawless **Hub & Spoke (Silo) structure** that passes maximum link equity, satisfies Google's E-E-A-T requirements, and keeps users engaged on your site—all without relying on external backlinks.
+
+---
+
+### 🏗️ 1. Spanish Content Cluster URL Structure
+
+All Spanish content should reside under the `/es-es/` directory to maintain a clean, crawlable silo structure.
+
+| Page Type | Target Keyword (ES) | Proposed URL Slug | Role in Cluster |
+| :--- | :--- | :--- | :--- |
+| **Hub (Pillar)** | nuevas cámaras 2026 | `/es-es/guias/nuevas-camaras-2026.html` | Central authority page. Links to all spokes. |
+| **Spoke 1** | mejor cámara para viajar 2026 | `/es-es/guias/mejor-camara-para-viajar-2026.html` | Travel-specific intent. |
+| **Spoke 2** | mejores cámaras baratas 2026 | `/es-es/guias/mejores-camaras-baratas-2026.html` | Budget/under 500€ intent. |
+| **Spoke 3** | mejores cámaras para vlogging | `/es-es/guias/mejores-camaras-para-vlogging-2026.html` | Content creator intent. |
+| **Spoke 4** | cámaras deportivas y acuáticas | `/es-es/guias/camaras-deportivas-acuaticas-2026.html` | Action/beach intent. |
+| **Spoke 5** | calendario lanzamientos cámaras | `/es-es/guias/calendario-lanzamientos-camaras-2026.html` | Freshness/News intent. |
+| **Spoke 6** | análisis Fujifilm X100VI España | `/es-es/analisis/fujifilm-x100vi-espana.html` | Deep-dive product review (EEAT booster). |
+
+---
+
+### 🔗 2. Internal Linking Rules & Anchor Text Map
+
+To avoid over-optimization penalties, anchor text must be diverse (exact match, partial match, and natural language). 
+
+#### **Rule A: Pillar to Spokes (Top-Down)**
+The main pillar page (`nuevas-camaras-2026.html`) must contain **at least one contextual link** to every spoke page in its body, plus a dedicated "Related Guides" grid at the bottom.
+
+| Target Spoke | Recommended Anchor Text (Natural Spanish) | Placement |
+| :--- | :--- | :--- |
+| Spoke 1 (Travel) | "mejor cámara para viajar en 2026" | Body paragraph discussing travel scenarios |
+| Spoke 2 (Budget) | "mejores opciones de cámaras baratas por menos de 500€" | Body paragraph discussing budget constraints |
+| Spoke 3 (Vlogging) | "guía de las mejores cámaras para vlogging" | Body paragraph discussing content creation |
+| Spoke 4 (Action) | "cámaras deportivas y acuáticas resistentes" | Body paragraph discussing beach/outdoor use |
+| Spoke 5 (Calendar) | "Calendario de Lanzamientos de Cámaras 2026" | Callout box about upcoming releases |
+| Spoke 6 (Review) | "análisis completo de la Fujifilm X100VI en España" | Body paragraph mentioning the X100VI |
+
+#### **Rule B: Spokes to Pillar (Bottom-Up)**
+**Every single spoke page** must link back to the pillar page within the **first 100 words** of the introduction.
+*   *Example Anchor:* "Como parte de nuestra [guía definitiva de nuevas cámaras en 2026](/es-es/guias/nuevas-camaras-2026.html), hemos evaluado..."
+
+#### **Rule C: Spoke to Spoke (Lateral Linking)**
+Cross-link related spokes to keep users in the silo. 
+*   *Travel Page* → links to *Action Page* with anchor: "si planeas ir a la playa, consulta nuestras [cámaras acuáticas recomendadas](...)".
+*   *Budget Page* → links to *Vlogging Page* with anchor: "para empezar en YouTube sin gastar mucho, mira las [mejores cámaras para vlogging económicas](...)".
+
+---
+
+### 🧩 3. Ready-to-Paste HTML: "Artículos Relacionados" Module
+
+To guarantee consistent internal linking, append this exact HTML block to the bottom of **every page** in the Spanish cluster (just above the footer). It provides 4 strong contextual links per page.
+
+```html
+<!-- ===== RELATED ARTICLES MODULE (Spanish Cluster) ===== -->
+<section class="related-section" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #333;">
+    <h3 style="color: #e94560; font-size: 1.4rem; margin-bottom: 20px;">📚 Guías Relacionadas para tu Próximo Viaje</h3>
+    <div class="gear-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        
+        <a class="gear-card" href="/es-es/guias/mejor-camara-para-viajar-2026.html" style="text-decoration: none; color: inherit; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; transition: border-color 0.2s;">
+            <h4 style="color: #e94560; margin-top: 0; font-size: 1.1rem;">Mejor Cámara para Viajar 2026</h4>
+            <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">Análisis de peso, durabilidad y rendimiento en viajes internacionales.</p>
+        </a>
+
+        <a class="gear-card" href="/es-es/guias/mejores-camaras-baratas-2026.html" style="text-decoration: none; color: inherit; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; transition: border-color 0.2s;">
+            <h4 style="color: #e94560; margin-top: 0; font-size: 1.1rem;">Mejores Cámaras Baratas (<500€)</h4>
+            <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">Opciones de alta calidad que no arruinarán tu presupuesto de viaje.</p>
+        </a>
+
+        <a class="gear-card" href="/es-es/guias/mejores-camaras-para-vlogging-2026.html" style="text-decoration: none; color: inherit; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; transition: border-color 0.2s;">
+            <h4 style="color: #e94560; margin-top: 0; font-size: 1.1rem;">Mejores Cámaras para Vlogging</h4>
+            <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">Equipos con el mejor audio y estabilización para creadores de contenido.</p>
+        </a>
+
+        <a class="gear-card" href="/es-es/guias/calendario-lanzamientos-camaras-2026.html" style="text-decoration: none; color: inherit; background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; transition: border-color 0.2s;">
+            <h4 style="color: #e94560; margin-top: 0; font-size: 1.1rem;">Calendario de Lanzamientos 2026</h4>
+            <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">Fechas estimadas de las próximas cámaras de Sony, Canon y Fujifilm.</p>
+        </a>
+
+    </div>
+</section>
+```
+*(Note: On the specific spoke pages, you can swap out one of these cards for a link back to the main Pillar page to reinforce the Bottom-Up rule).*
+
+---
+
+### 🧠 4. EEAT & Schema Enhancement for Internal Linking
+
+To make the internal linking machine-readable for Google, update the `CollectionPage` or `Article` JSON-LD on the pillar page to explicitly declare the relationship with the spoke pages using the `hasPart` property.
+
+Add this to the `<head>` of `nuevas-camaras-2026.html`:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Nuevas Cámaras 2026: Guía Definitiva",
+  "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-es/guias/nuevas-camaras-2026.html",
+  "inLanguage": "es-ES",
+  "hasPart": [
+    {
+      "@type": "WebPage",
+      "name": "Mejor Cámara para Viajar 2026",
+      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-es/guias/mejor-camara-para-viajar-2026.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Mejores Cámaras Baratas 2026",
+      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-es/guias/mejores-camaras-baratas-2026.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Mejores Cámaras para Vlogging 2026",
+      "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/es-es/guias/mejores-camaras-para-vlogging-2026.html"
+    }
+  ]
+}
+```
+
+---
+
+### ✅ 5. Validation Checklist for the AI Agent (or Manual QA)
+
+Before publishing any Spanish page, run it through this 5-point check:
+1. [ ] **Pillar Link:** Does the page link to `/es-es/guias/nuevas-camaras-2026.html` in the first paragraph?
+2. [ ] **Outbound Cluster Links:** Does the page contain at least 3 contextual links to other pages in the `/es-es/` directory?
+3. [ ] **Anchor Diversity:** Are the anchor texts natural Spanish phrases (not just exact-match keywords stuffed together)?
+4. [ ] **Related Module:** Is the "Guías Relacionadas" HTML block present at the bottom of the `<article>`?
+5. [ ] **No Orphan Pages:** Every new Spanish page is linked from at least 2 other existing pages on the site.
+
+---
+
+### 🚀 Next Step
+Would you like me to:
+1. **Generate the full HTML for Spoke 1** (`mejor-camara-para-viajar-2026.html`) using this exact linking architecture?
+2. **Provide the Python script update** to automatically inject this "Related Articles" module and schema into all generated pages?
+3. **Move on to Option D** (JSON-LD schema templates for all 12 languages)?
