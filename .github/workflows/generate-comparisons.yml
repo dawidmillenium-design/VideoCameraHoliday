@@ -1,0 +1,55 @@
+name: Generate Camera Comparisons
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - cameras.csv
+      - comparison_template.html
+      - generate_comparisons.ps1
+      - tools/generate_comparisons.py
+  pull_request:
+    paths:
+      - cameras.csv
+      - comparison_template.html
+      - generate_comparisons.ps1
+      - tools/generate_comparisons.py
+      - guides/**-vs-*.html
+      - comparisons/index.html
+      - sitemap.xml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate comparison pages
+        run: python3 tools/generate_comparisons.py
+
+      - name: Check internal links and SEO URLs
+        run: python3 tools/check_internal_links.py
+
+      - name: Verify generated files in pull requests
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code
+
+      - name: Commit refreshed pages on main
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "Generated pages are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cameras.csv comparison_template.html generate_comparisons.ps1 tools/generate_comparisons.py guides comparisons/index.html sitemap.xml
+          git commit -m "Regenerate camera comparison pages"
+          git push
