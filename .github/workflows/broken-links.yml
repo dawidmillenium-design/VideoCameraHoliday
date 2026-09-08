@@ -1,64 +1,34 @@
-name: 🔗 Broken Link Checker
+name: Broken Link Checker
 
 on:
+  pull_request:
   push:
-    branches: [ main ]
+    branches: [main]
   schedule:
-    - cron: '0 12 * * 1'
+    - cron: "0 12 * * 1"
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   link-check:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          fetch-depth: 0  # Required for git operations
+          python-version: "3.12"
 
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'  # LTS version (not 20)
+      - name: Validate internal links, fragments, sitemap, and canonicals
+        run: python tools/check_internal_links.py
 
-      - name: 📦 Install link checker
-        run: npm install -g broken-link-checker
-
-      - name: 🔍 Check for broken links
-        id: check-links
-        run: |
-          blc https://dawidmillenium-design.github.io/VideoCameraHoliday/ \
-            --recursive \
-            --exclude-external \
-            --ordered \
-            --get \
-            --no-color \
-            --only-4xx \
-            --exclude '*.css,*.js,*.png,*.jpg,*.svg,*.ico,*.json' \
-            > broken-links.txt || echo "exit_code=$?" >> $GITHUB_OUTPUT
-
-      - name: 📊 Check results
-        run: |
-          if [ -s broken-links.txt ]; then
-            echo "⚠️ Broken links found:"
-            cat broken-links.txt
-            echo "BROKEN_LINKS_FOUND=true" >> $GITHUB_ENV
-            exit 1
-          else
-            echo "✅ No broken links found."
-            echo "BROKEN_LINKS_FOUND=false" >> $GITHUB_ENV
-          fi
-
-      - name: 📤 Upload report (if broken links found)
-        if: env.BROKEN_LINKS_FOUND == 'true'
+      - name: Upload audit report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: broken-links-report
-          path: broken-links.txt
-
-      - name: 📤 Upload report (always)
-        uses: actions/upload-artifact@v4
-        with:
-          name: broken-links-report
-          path: broken-links.txt
+          name: internal-link-audit
+          path: link-audit-report.json
