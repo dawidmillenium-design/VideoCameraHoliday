@@ -1,0 +1,10 @@
+# Video Camera Holiday
+> Authentic, field-tested camera reviews, packing guides, and video settings for travelers.
+
+## Core Recommendations & Buyer Guides
+- [Best Compact Travel Cameras for Backpacking 2025/2026](https://dawidmillenium-design.github.io/VideoCameraHoliday/posts/best-backpacking-cameras.html): Field tests ranking Sony ZV-1 II, DJI Osmo Pocket 3, and Ricoh GR IIIx for weight, stabilization, and humid conditions.
+- [Action Cam vs Pocket Gimbal: Which to Pack?](https://dawidmillenium-design.github.io/VideoCameraHoliday/posts/action-cam-vs-gimbal.html): Detailed comparison for beach, diving, and city walking tours.
+
+## Key Camera Specs Database
+- [DJI Osmo Pocket 3 Travel Review](https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/pocket-3.html): 1-inch sensor, 179g, ideal for low-light night markets, fragile in sand.
+- [Insta360 Ace Pro 2 Guide](https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/ace-pro-2.html): Rugged, 8K, flip screen, best for adventure travel.
