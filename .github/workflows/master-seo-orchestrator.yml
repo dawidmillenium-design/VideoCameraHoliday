@@ -122,7 +122,7 @@ jobs:
       - name: 🟢 Setup Node.js with cache
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: 📦 Install and cache dependencies
@@ -211,7 +211,7 @@ jobs:
 
           if (results.summary.critical > 0) process.exit(1);
           "
-        continue-on-error: true
+        continue-on-error: false
 
       - name: 📤 Upload SEO audit report
         if: always()
@@ -258,7 +258,7 @@ jobs:
           else
             echo "::warning::Link checker script not found"
           fi
-        continue-on-error: true
+        continue-on-error: false
 
       - name: 📤 Upload link audit report
         if: always()
@@ -282,6 +282,9 @@ jobs:
       (needs.pre-check.outputs.run_type == 'full' || needs.pre-check.outputs.run_type == 'fix-only')
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    outputs:
+      fixes_applied: ${{ steps.fix-seo.outputs.fixes_applied }}
+      manual_review_needed: ${{ steps.fix-seo.outputs.manual_review_needed }}
 
     steps:
       - name: 📥 Checkout repository
@@ -296,21 +299,71 @@ jobs:
           python-version: '3.12'
           cache: 'pip'
 
-      - name: 🔧 Run available fix scripts
+      - name: 📦 Install Python dependencies
         run: |
-          echo "Running SEO fix scripts..."
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 lxml requests jsonschema
 
-          if [ -f "fix-canonicals.py" ]; then
-            echo "Fixing canonical URLs..."
-            python fix-canonicals.py || echo "⚠️ Canonical fix failed"
+      - name: 📥 Download SEO audit report
+        uses: actions/download-artifact@v4
+        with:
+          name: seo-audit-${{ github.run_number }}
+          path: .
+        continue-on-error: true
+
+      - name: 🔧 Run comprehensive SEO auto-fix
+        id: fix-seo
+        run: |
+          echo "Starting comprehensive SEO auto-fix..."
+          
+          # Check if audit report exists
+          if [ ! -f "seo-audit-report.json" ]; then
+            echo "::warning::SEO audit report not found. Skipping auto-fix."
+            echo "fixes_applied=0" >> $GITHUB_OUTPUT
+            echo "manual_review_needed=0" >> $GITHUB_OUTPUT
+            exit 0
           fi
-
-          if [ -f "fix-titles.py" ]; then
-            echo "Fixing titles..."
-            python fix-titles.py || echo "⚠️ Title fix failed"
+          
+          # Run the auto-fix script
+          if [ -f "tools/auto_fix_seo.py" ]; then
+            echo "Running auto_fix_seo.py..."
+            python tools/auto_fix_seo.py --dry-run false
+            FIX_RESULT=$?
+            
+            if [ $FIX_RESULT -eq 0 ]; then
+              echo "✅ Auto-fix completed successfully"
+              # Extract stats from report if available
+              if [ -f "auto-fix-report.json" ]; then
+                FIXES=$(python -c "import json; data=json.load(open('auto-fix-report.json')); print(data.get('summary', {}).get('fixed', 0))" 2>/dev/null || echo "0")
+                MANUAL=$(python -c "import json; data=json.load(open('auto-fix-report.json')); print(data.get('summary', {}).get('manual_review', 0))" 2>/dev/null || echo "0")
+                echo "fixes_applied=$FIXES" >> $GITHUB_OUTPUT
+                echo "manual_review_needed=$MANUAL" >> $GITHUB_OUTPUT
+              else
+                echo "fixes_applied=unknown" >> $GITHUB_OUTPUT
+                echo "manual_review_needed=unknown" >> $GITHUB_OUTPUT
+              fi
+            else
+              echo "::error::Auto-fix script failed with exit code $FIX_RESULT"
+              echo "fixes_applied=0" >> $GITHUB_OUTPUT
+              echo "manual_review_needed=0" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "::warning::auto_fix_seo.py not found. Running legacy fix scripts..."
+            
+            # Fallback to legacy scripts
+            if [ -f "fix-canonicals.py" ]; then
+              echo "Fixing canonical URLs..."
+              python fix-canonicals.py || echo "⚠️ Canonical fix failed"
+            fi
+            
+            if [ -f "fix-titles.py" ]; then
+              echo "Fixing titles..."
+              python fix-titles.py || echo "⚠️ Title fix failed"
+            fi
+            
+            echo "fixes_applied=legacy" >> $GITHUB_OUTPUT
+            echo "manual_review_needed=unknown" >> $GITHUB_OUTPUT
           fi
-
-          echo "✅ Fix scripts executed"
         continue-on-error: true
 
       - name: 💾 Commit fixes if any
@@ -319,12 +372,17 @@ jobs:
           git config user.name "GitHub Actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-
+          
           if git diff --staged --quiet; then
             echo "changes_made=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ No changes to commit"
+            echo "ℹ️ No changes to commit - all SEO issues may already be fixed or require manual review"
           else
-            git commit -m "chore: auto-fix SEO issues [skip ci]"
+            git commit -m "chore: auto-fix critical SEO issues [skip ci]
+            
+            Automated fixes applied by Master SEO Orchestrator
+            - Fixed missing titles, descriptions, canonicals, and H1 tags
+            - Generated from seo-audit-report.json
+            - Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo "changes_made=true" >> $GITHUB_OUTPUT
           fi
 
@@ -334,6 +392,17 @@ jobs:
           git push origin HEAD:${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: 📊 Upload auto-fix report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auto-fix-report-${{ github.run_number }}
+          path: |
+            auto-fix-report.json
+            auto-fix-summary.txt
+          retention-days: 30
+          if-no-files-found: ignore
 
   # ========================================================================
   # PHASE 5: GENERATE SITEMAP (Full runs only)
