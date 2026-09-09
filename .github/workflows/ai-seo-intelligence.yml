@@ -611,6 +611,9 @@ jobs:
   # ========================================================================
   # JOB 3: AUTO-APPLY AI FIXES
   # ========================================================================
+    # ========================================================================
+  # JOB 3: AUTO-APPLY AI FIXES
+  # ========================================================================
   apply-fixes:
     name: 🔧 Apply AI Fixes
     needs: [content-optimizer, smart-linking]
@@ -624,6 +627,17 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install beautifulsoup4 lxml
+          echo "✅ Dependencies installed"
 
       - name: 🔧 Apply AI fixes
         run: |
