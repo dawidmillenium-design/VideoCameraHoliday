@@ -1,0 +1,457 @@
+{
+  "base": "https://dawidmillenium-design.github.io/VideoCameraHoliday/",
+  "sitemap_pages": 148,
+  "parsed_pages": 148,
+  "unique_link_targets": 307,
+  "problem_count": 55,
+  "summary": {
+    "canonical_mismatch": 13,
+    "missing_internal_target": 42
+  },
+  "problems": [
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/bangkok-interview-preview.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/extreme-weather-camera-guide.html"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "source": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html",
+      "canonical": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/"
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/contact/",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-360-camera.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-travel-camera-2026.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/budget-camera-guide.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-360.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-action-camera.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-compact.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-gimbal.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-mirrorless.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-vlogging.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/camera-settings-travel.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-g7x3-vs-sony-rx100.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-sony-zv-e10.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/color-grading-basics.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/destination-guide-beach.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/stabilization-tips.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/travel-filming-tips.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/canon-menu-setup.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/color-grading-travel.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/filming-techniques.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/travel-photography-tips.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/video-editing-basics.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/privacy-policy.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/privacy-policy/",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/best-compact-cameras-2026.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/canon-eos-r50-review.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/canon-g7x-mark-iii-review.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/canon-r50-review.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/canon-rf-lenses-guide.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-action-4-review.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-action-4-review.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/gopro-hero-12-review.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/gopro-hero-12.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/sony-zv-e10-review.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html"
+      ]
+    },
+    {
+      "type": "missing_internal_target",
+      "target": "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/sony-zv-e10.html",
+      "sources": [
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html"
+      ]
+    }
+  ]
+}
