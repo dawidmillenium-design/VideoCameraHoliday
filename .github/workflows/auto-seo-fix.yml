@@ -8,7 +8,7 @@ on:
 jobs:
   auto-fix:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,3 +30,153 @@ jobs:
           git add .
           git diff --staged --quiet || git commit -m "Auto-fix SEO issues [skip ci]"
           git push
+
+
++++ .github/workflows/auto-seo-fix.yml (修改后)
+name: Auto-Fix SEO Issues
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Prevent concurrent runs of this workflow
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  auto-fix:
+    name: 🔧 Auto-Fix SEO Issues
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🟢 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 lxml || echo "⚠️ Optional dependencies not installed"
+
+      - name: 🔍 Check for SEO fix scripts
+        id: check-scripts
+        run: |
+          echo "Checking for available SEO fix scripts..."
+          if [ -f "fix-canonicals.py" ]; then
+            echo "canonical_script=true" >> $GITHUB_OUTPUT
+            echo "✅ Found: fix-canonicals.py"
+          else
+            echo "canonical_script=false" >> $GITHUB_OUTPUT
+            echo "⚠️ fix-canonicals.py not found"
+          fi
+
+          if [ -f "fix-titles.py" ]; then
+            echo "title_script=true" >> $GITHUB_OUTPUT
+            echo "✅ Found: fix-titles.py"
+          else
+            echo "title_script=false" >> $GITHUB_OUTPUT
+            echo "⚠️ fix-titles.py not found (will skip)"
+          fi
+
+      - name: 🔧 Run canonical URL fixes
+        if: steps.check-scripts.outputs.canonical_script == 'true'
+        run: |
+          echo "Running canonical URL fixes..."
+          python fix-canonicals.py
+          echo "✅ Canonical fixes completed"
+        continue-on-error: true
+
+      - name: 🔧 Run title fixes
+        if: steps.check-scripts.outputs.title_script == 'true'
+        run: |
+          echo "Running title fixes..."
+          python fix-titles.py
+          echo "✅ Title fixes completed"
+        continue-on-error: true
+
+      - name: 📊 Generate fix summary
+        run: |
+          echo "📝 SEO AUTO-FIX SUMMARY" > seo-fix-summary.txt
+          echo "=====================" >> seo-fix-summary.txt
+          echo "Date: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> seo-fix-summary.txt
+          echo "Branch: ${{ github.ref_name }}" >> seo-fix-summary.txt
+          echo "Commit: ${{ github.sha }}" >> seo-fix-summary.txt
+          echo "" >> seo-fix-summary.txt
+          echo "Scripts executed:" >> seo-fix-summary.txt
+          [ -f "fix-canonicals.py" ] && echo "  ✅ fix-canonicals.py" >> seo-fix-summary.txt
+          [ -f "fix-titles.py" ] && echo "  ✅ fix-titles.py" >> seo-fix-summary.txt
+          echo "" >> seo-fix-summary.txt
+          echo "Changes detected:" >> seo-fix-summary.txt
+          git status --short >> seo-fix-summary.txt || echo "  No changes or git error" >> seo-fix-summary.txt
+          cat seo-fix-summary.txt
+
+      - name: 💾 Commit and push fixes
+        id: commit-changes
+        run: |
+          git config user.name "GitHub Actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+
+          if git diff --staged --quiet; then
+            echo "changes_made=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ No changes to commit"
+          else
+            git commit -m "chore: auto-fix SEO issues [skip ci]
+
+            Automated SEO fixes applied by GitHub Actions
+            - Canonical URLs corrected
+            - Title tags optimized
+
+            Co-Authored-By: GitHub Actions <github-actions[bot]@users.noreply.github.com>"
+            echo "changes_made=true" >> $GITHUB_OUTPUT
+            echo "✅ Changes committed"
+          fi
+
+      - name: 📤 Push changes to repository
+        if: steps.commit-changes.outputs.changes_made == 'true'
+        run: |
+          echo "Pushing changes to ${{ github.ref_name }}..."
+          git push origin HEAD:${{ github.ref_name }}
+          echo "✅ Changes pushed successfully"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📤 Upload fix summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-fix-summary
+          path: seo-fix-summary.txt
+          retention-days: 30
+
+      - name: 🔔 Notify on failure
+        if: failure()
+        run: |
+          echo "::error::SEO Auto-Fix workflow failed!"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo ""
+          echo "Please check the workflow logs for details."
+          # Slack notification (if webhook is configured)
+          if [ -n "${{ secrets.SLACK_WEBHOOK_URL }}" ]; then
+            curl -X POST -H 'Content-type: application/json' \
+              --data "{\"text\":\"❌ SEO Auto-Fix FAILED in ${{ github.repository }}\\nBranch: ${{ github.ref_name }}\\nRun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+              "${{ secrets.SLACK_WEBHOOK_URL }}" || echo "Slack notification failed"
+          fi
