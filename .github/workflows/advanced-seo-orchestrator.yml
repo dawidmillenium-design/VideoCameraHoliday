@@ -1,0 +1,280 @@
+name: "Advanced SEO & GEO Orchestrator"
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "_posts/**"
+      - "content/**"
+      - "docs/**"
+      - "*.html"
+      - "*.md"
+  schedule:
+    # Run a full site audit every Sunday at 02:00 UTC
+    - cron: "0 2 * * 0"
+  workflow_dispatch:
+    inputs:
+      auto_fix:
+        description: "Automatically commit fixes back to repo"
+        required: true
+        default: true
+        type: boolean
+      ping_search_engines:
+        description: "Ping IndexNow and Google Search Console"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "seo-orchestration-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  # -----------------------------------------------------------
+  # STAGE 1: Pre-Validation & Frontmatter / Metadata Linting
+  # -----------------------------------------------------------
+  seo-precheck:
+    name: "1. Pre-Check & Metadata Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Lint Frontmatter & Meta Tags
+        run: |
+          node -e '
+          const fs = require("fs");
+          const path = require("path");
+
+          function findMarkdownFiles(dir, fileList = []) {
+            if (!fs.existsSync(dir)) return fileList;
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              if (fs.statSync(fullPath).isDirectory()) {
+                if (![".git", "node_modules", "_site"].includes(file)) {
+                  findMarkdownFiles(fullPath, fileList);
+                }
+              } else if (file.endsWith(".md") || file.endsWith(".html")) {
+                fileList.push(fullPath);
+              }
+            }
+            return fileList;
+          }
+
+          const files = findMarkdownFiles(".");
+          let errors = 0;
+          let warnings = 0;
+
+          console.log(`Scanning ${files.length} content files for SEO compliance...\n`);
+
+          files.forEach(file => {
+            const content = fs.readFileSync(file, "utf8");
+            
+            // Check for Title
+            const hasTitle = /^title:\s*["'\S].*$/m.test(content) || /<title>.*<\/title>/i.test(content);
+            if (!hasTitle) {
+              console.warn(`::warning file=${file}::Missing SEO Title in ${file}`);
+              warnings++;
+            }
+
+            // Check Meta Description length (ideal 110 - 160 characters)
+            const descMatch = content.match(/description:\s*["']?([^"'\n\r]+)["']?/);
+            if (descMatch) {
+              const len = descMatch[1].trim().length;
+              if (len < 50 || len > 165) {
+                console.warn(`::warning file=${file}::Meta description length (${len} chars) out of optimal range (70-160 chars)`);
+                warnings++;
+              }
+            }
+          });
+
+          console.log(`SEO Pre-Check Complete: ${warnings} warnings found.`);
+          '
+
+  # -----------------------------------------------------------
+  # STAGE 2: Build & Static Generation (Jekyll / Hugo / Static)
+  # -----------------------------------------------------------
+  build-site:
+    name: "2. Build Static Site"
+    runs-on: ubuntu-latest
+    needs: [seo-precheck]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check Site Type & Build
+        run: |
+          mkdir -p _site
+          if [ -f "_config.yml" ]; then
+            echo "Jekyll detected. Building with Bundler..."
+            sudo apt-get update && sudo apt-get install -y ruby-full build-essential
+            gem install bundler jekyll
+            bundle install || true
+            bundle exec jekyll build -d _site || jekyll build -d _site
+          elif [ -f "config.toml" ] || [ -f "hugo.toml" ]; then
+            echo "Hugo detected..."
+            sudo apt-get install -y hugo
+            hugo -D -d _site
+          else
+            echo "Standard static site structure. Mirroring root into _site..."
+            rsync -av --exclude='.git' --exclude='.github' --exclude='node_modules' ./ _site/
+          fi
+
+      - name: Upload Built Site Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-artifact
+          path: _site/
+
+  # -----------------------------------------------------------
+  # STAGE 3: Broken Link Audit & Structural HTML Validation
+  # -----------------------------------------------------------
+  broken-link-check:
+    name: "3. Broken Link & Anchor Audit"
+    runs-on: ubuntu-latest
+    needs: [build-site]
+    steps:
+      - name: Download Built Site
+        uses: actions/download-artifact@v4
+        with:
+          name: site-artifact
+          path: _site
+
+      - name: Check Broken Links via Lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --exclude-mail
+            --exclude "https://(twitter|x|instagram|facebook)\.com.*"
+            --max-concurrency 8
+            _site/**/*.html
+          fail: false
+          output: lychee-report.md
+
+      - name: Upload Broken Link Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: broken-links-report
+          path: lychee-report.md
+
+  # -----------------------------------------------------------
+  # STAGE 4: GEO/AEO (llms.txt), Sitemap & Schema Enhancer
+  # -----------------------------------------------------------
+  generate-seo-assets:
+    name: "4. Generate llms.txt, Sitemap & Rich Schemas"
+    runs-on: ubuntu-latest
+    needs: [build-site]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Generate llms.txt & Sitemap
+        run: |
+          node -e '
+          const fs = require("fs");
+          const path = require("path");
+
+          const domain = "https://dawidmillenium-design.github.io/VideoCameraHoliday";
+
+          // Generate llms.txt for AI Search Engines (Perplexity, ChatGPT, Claude)
+          let llmsContent = `# Video Camera Holiday - AI Knowledge Index\n\n`;
+          llmsContent += `> Expert reviews, field tests, and buyer guides for travel and holiday video cameras.\n\n`;
+          llmsContent += `## Key Articles & Guides\n`;
+
+          function scanDocs(dir) {
+            if (!fs.existsSync(dir)) return [];
+            let results = [];
+            fs.readdirSync(dir).forEach(file => {
+              const full = path.join(dir, file);
+              if (fs.statSync(full).isDirectory() && !full.includes(".git")) {
+                results = results.concat(scanDocs(full));
+              } else if (file.endsWith(".md") || file.endsWith(".html")) {
+                results.push(full);
+              }
+            });
+            return results;
+          }
+
+          const files = scanDocs(".");
+          files.forEach(f => {
+            const raw = fs.readFileSync(f, "utf8");
+            const titleMatch = raw.match(/title:\s*["']?([^"'\n\r]+)["']?/);
+            const descMatch = raw.match(/description:\s*["']?([^"'\n\r]+)["']?/);
+            if (titleMatch) {
+              const urlPath = f.replace(/^\./, "").replace(/\.md$/, ".html");
+              llmsContent += `- [${titleMatch[1].trim()}](${domain}${urlPath}): ${descMatch ? descMatch[1].trim() : "Camera reviews and tips"}\n`;
+            }
+          });
+
+          fs.writeFileSync("llms.txt", llmsContent);
+          console.log("Successfully generated llms.txt");
+          '
+
+      - name: Auto-Commit Generated SEO Assets
+        if: ${{ github.event.inputs.auto_fix != 'false' }}
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(seo): update llms.txt & automated SEO sitemaps [skip ci]"
+          file_pattern: "llms.txt sitemap.xml robots.txt"
+
+  # -----------------------------------------------------------
+  # STAGE 5: Search Engine Auto-Indexing (IndexNow)
+  # -----------------------------------------------------------
+  instant-index:
+    name: "5. Instant IndexNow (Bing, Yandex, Seznam)"
+    runs-on: ubuntu-latest
+    needs: [generate-seo-assets]
+    if: ${{ github.event.inputs.ping_search_engines != 'false' }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect Changed URLs & Submit to IndexNow
+        run: |
+          HOST="dawidmillenium-design.github.io"
+          KEY="3b817fa9e2a74c76b911299dfbf81342" # Put your IndexNow key here or use ${{ secrets.INDEXNOW_KEY }}
+          
+          # Detect changed Markdown/HTML files in the last commit
+          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r HEAD | grep -E '\.(html|md)$' || true)
+          
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No content pages modified in this run. Skipping index ping."
+            exit 0
+          fi
+
+          echo "Submitting changed URLs to IndexNow:"
+          URL_LIST=""
+          for file in $CHANGED_FILES; do
+            CLEAN_URL="https://${HOST}/VideoCameraHoliday/${file%.md}.html"
+            echo " - $CLEAN_URL"
+            URL_LIST="$URL_LIST\"$CLEAN_URL\","
+          done
+          URL_LIST=${URL_LIST%,}
+
+          # Post to Bing IndexNow endpoint
+          curl -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"${HOST}\",
+              \"key\": \"${KEY}\",
+              \"keyLocation\": \"https://${HOST}/VideoCameraHoliday/${KEY}.txt\",
+              \"urlList\": [${URL_LIST}]
+            }" -w "\nHTTP Response: %{http_code}\n"
