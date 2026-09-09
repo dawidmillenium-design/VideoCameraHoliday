@@ -1,0 +1,47 @@
++++ .htaccess (修改后)
+# SEO CANNIBALIZATION AUDIT - 301 REDIRECTS
+# Generated: 2026
+# Purpose: Consolidate link equity from fragmented pages to new Master Guides
+
+RewriteEngine On
+
+# ==========================================
+# RED FLAG 1: SD CARDS (Master: /accessories/best-sd-cards-4k-video-2026.html)
+# ==========================================
+# Redirect old "How-to" guide
+Redirect 301 /how-to/choose-memory-card-4k-video.html /accessories/best-sd-cards-4k-video-2026.html
+
+# Redirect old "Travel Guide"
+Redirect 301 /guides/best-sd-cards-4k-video-travel.html /accessories/best-sd-cards-4k-video-2026.html
+
+
+# ==========================================
+# RED FLAG 2: MICROPHONES (Master: /accessories/best-travel-vlogging-microphones-2026.html)
+# ==========================================
+# Redirect old "Interviews" duplicate
+Redirect 301 /interviews/best-wireless-microphones-travel-vlogging.html /accessories/best-travel-vlogging-microphones-2026.html
+
+# Redirect old "Posts" holiday guide
+Redirect 301 /posts/Best-Microphone-Holiday-Vlogging.html /accessories/best-travel-vlogging-microphones-2026.html
+
+# Redirect old "Interviews" 2026 guide
+Redirect 301 /interviews/best-wireless-microphones-travel-vlogging-2026.html /accessories/best-travel-vlogging-microphones-2026.html
+
+
+# ==========================================
+# RED FLAG 3: TRIPODS (Master: /accessories/best-lightweight-travel-tripods-stabilizers-2026.html)
+# ==========================================
+# Redirect old "Guides" hiking page
+Redirect 301 /guides/best-lightweight-tripods-hiking-travel.html /accessories/best-lightweight-travel-tripods-stabilizers-2026.html
+
+# Redirect old "Interviews" stabilizers page
+Redirect 301 /interviews/best-travel-tripods-stabilizers-2026.html /accessories/best-lightweight-travel-tripods-stabilizers-2026.html
+
+
+# ==========================================
+# RED FLAG 4: POWER BANKS (Master: /accessories/best-power-banks-dji-pocket-3-filmmakers-2026.html)
+# ==========================================
+# Redirect old "Interviews" portable chargers page
+Redirect 301 /interviews/best-portable-power-banks-chargers-travel-filmmakers-2026.html /accessories/best-power-banks-dji-pocket-3-filmmakers-2026.html
+
+# End of SEO Redirects
