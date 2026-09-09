@@ -1,260 +1,183 @@
-name: Global SEO Content Pipeline
+#!/usr/bin/env python3
+"""
+Global SEO Content Pipeline
+Generates multi-language, SEO-optimized HTML content using DeepSeek API.
+"""
 
-on:
-  workflow_dispatch:
-    inputs:
-      brief_id:
-        description: 'Content Brief ID (e.g., comp-2026-001)'
-        required: true
-        default: 'comp-2026-001'
-      languages:
-        description: 'Languages to generate (comma-separated, or "all" for 14 languages)'
-        required: false
-        default: 'all'
-      validate_schema:
-        description: 'Validate output against schema'
-        required: false
-        default: 'true'
-      create_pull_request:
-        description: 'Create PR instead of direct commit'
-        required: false
-        default: 'true'
-  schedule:
-    # Run every Monday at 6 AM UTC for weekly content generation
-    - cron: '0 6 * * 1'
-  push:
-    paths:
-      - 'data/content_briefs/*.json'
+import os
+import json
+import argparse
+import logging
+from datetime import datetime
+from pathlib import Path
+from openai import OpenAI
+from dotenv import load_dotenv
 
-env:
-  PYTHON_VERSION: '3.11'
-  PIP_CACHE_DIR: ~/.cache/pip
+# Load environment variables from .env file
+load_dotenv()
 
-jobs:
-  generate-content:
-    name: Generate Multi-Language Content
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
+# Configure Logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("pipeline.log"),
+        logging.StreamHandler()
+    ]
+)
+
+# Initialize DeepSeek Client (Compatible with OpenAI Python library)
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+if not DEEPSEEK_API_KEY:
+    logging.warning("DEEPSEEK_API_KEY not found in environment variables. Pipeline will fail on generation.")
+
+client = OpenAI(
+    api_key=DEEPSEEK_API_KEY,
+    base_url="https://api.deepseek.com"
+)
+
+def load_brief(brief_path: str) -> dict:
+    """Load and return the JSON content brief."""
+    logging.info(f"Loading brief from: {brief_path}")
+    with open(brief_path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+def build_prompt(brief: dict, target_lang: str) -> str:
+    """Construct the prompt for DeepSeek based on the brief and target language."""
+    lang_name = target_lang.split('-')[0] # e.g., 'es-ES' -> 'es'
     
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+    prompt = f"""You are an expert SEO content writer and travel photography specialist. 
+Your task is to write a comprehensive, highly engaging, and SEO-optimized blog post in {target_lang}.
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'pip'
+# CONTEXT & BRIEF:
+- Title: {brief['meta']['title_en']}
+- Primary Keyword: {brief['seo']['primary_keyword']}
+- Target Audience: Travel photographers and vloggers
+- Word Count Target: ~{brief['meta']['word_count_target']} words
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install jsonschema python-dotenv requests beautifulsoup4 lxml
+# CONTENT OUTLINE:
+{json.dumps(brief['content_brief']['outline'], indent=2)}
 
-      - name: Determine brief ID
-        id: brief
-        run: |
-          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "brief_id=${{ github.event.inputs.brief_id }}" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event_name }}" == "push" ]; then
-            # Extract brief ID from pushed file
-            BRIEF_FILE=$(git diff --name-only HEAD~1 HEAD | grep 'data/content_briefs/' | head -1)
-            BRIEF_ID=$(basename "$BRIEF_FILE" .json)
-            echo "brief_id=$BRIEF_ID" >> $GITHUB_OUTPUT
-          else
-            echo "brief_id=comp-2026-001" >> $GITHUB_OUTPUT
-          fi
+# EEAT REQUIREMENTS (Crucial):
+- Experience: Mention real-world testing locations (Bangkok, Lisbon, Alps, Finland). Use first-person plural ("we tested", "our findings").
+- Expertise: Use correct technical terminology (e.g., 3-axis gimbal, HyperSmooth, 1-inch sensor, f/1.8 aperture).
+- Trustworthiness: Maintain an objective, helpful tone. 
 
-      - name: Determine languages
-        id: languages
-        run: |
-          if [ "${{ github.event.inputs.languages }}" == "all" ] || [ -z "${{ github.event.inputs.languages }}" ]; then
-            echo "languages=en-US es-ES fr-FR de-DE ja-JP ko-KR zh-CN ar-SA hi-IN it-IT tr-TR ru-RU pl-PL th-TH" >> $GITHUB_OUTPUT
-          else
-            echo "languages=${{ github.event.inputs.languages }}" >> $GITHUB_OUTPUT
-          fi
+# FORMATTING RULES:
+1. Output ONLY valid HTML5 (no markdown code blocks like ```html).
+2. Use <h1> for the main title (translate the H1 to {target_lang}).
+3. Use <h2> and <h3> for the outline sections.
+4. Include a comparison table using <table>, <thead>, <tbody>, <tr>, <th>, <td>.
+5. Include the internal links provided in the brief, translating the anchor text to {target_lang} but keeping the target_url exactly as provided.
+6. Ensure the primary keyword appears naturally 2-3 times.
 
-      - name: Validate brief exists
-        run: |
-          if [ ! -f "data/content_briefs/${{ steps.brief.outputs.brief_id }}.json" ]; then
-            echo "❌ Error: Brief file not found: data/content_briefs/${{ steps.brief.outputs.brief_id }}.json"
-            exit 1
-          fi
-          echo "✅ Found brief: ${{ steps.brief.outputs.brief_id }}"
+# INTERNAL LINKS TO INCLUDE:
+{json.dumps(brief['internal_linking_map']['outbound_links'], indent=2)}
 
-      - name: Validate brief against schema
-        if: github.event.inputs.validate_schema == 'true'
-        run: |
-          python -c "
-          import json
-          import jsonschema
-          import sys
-          
-          try:
-              with open('output_schema.json') as f:
-                  schema = json.load(f)
-              with open('data/content_briefs/${{ steps.brief.outputs.brief_id }}.json') as f:
-                  brief = json.load(f)
-              jsonschema.validate(instance=brief, schema=schema)
-              print('✅ Brief validation passed')
-          except jsonschema.ValidationError as e:
-              print(f'❌ Validation failed: {e.message}')
-              sys.exit(1)
-          "
+Begin writing the HTML content now:
+"""
+    return prompt
 
-      - name: Run Global SEO Pipeline
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python global_seo_pipeline.py \
-            --brief "data/content_briefs/${{ steps.brief.outputs.brief_id }}.json" \
-            --languages ${{ steps.languages.outputs.languages }} \
-            --output-dir "content/generated" \
-            --validate-schema \
-            --generate-internal-links \
-            --log-level INFO \
-            --cache-dir ".cache/pipeline"
+def generate_content(prompt: str) -> str:
+    """Call DeepSeek API to generate content."""
+    logging.info("Requesting content generation from DeepSeek...")
+    try:
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[
+                {"role": "system", "content": "You are an expert SEO travel blogger. Output ONLY raw HTML5, no markdown formatting, no explanations."},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.7,
+            max_tokens=4000
+        )
+        content = response.choices[0].message.content
+        # Clean up markdown code blocks if the model adds them anyway
+        if content.startswith("```html"):
+            content = content[7:]
+        if content.endswith("```"):
+            content = content[:-3]
+        return content.strip()
+    except Exception as e:
+        logging.error(f"DeepSeek API Error: {e}")
+        raise
 
-      - name: Count generated files
-        id: count
-        run: |
-          TOTAL_FILES=$(find content/generated -name "*.html" 2>/dev/null | wc -l)
-          echo "total_files=$TOTAL_FILES" >> $GITHUB_OUTPUT
-          echo "✅ Generated $TOTAL_FILES HTML files"
-          
-          # List generated languages
-          echo "Generated languages:"
-          ls -1 content/generated/ 2>/dev/null || echo "No files generated"
-
-      - name: Configure Git
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-      - name: Create Pull Request
-        if: github.event.inputs.create_pull_request == 'true' || github.event_name == 'schedule'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "feat: generate content for ${{ steps.brief.outputs.brief_id }} (${{ steps.count.outputs.total_files }} files)"
-          branch: "content/${{ steps.brief.outputs.brief_id }}"
-          delete-branch: true
-          title: "📝 Add multi-language content: ${{ steps.brief.outputs.brief_id }}"
-          body: |
-            ## Auto-Generated Content
-            
-            **Brief ID:** ${{ steps.brief.outputs.brief_id }}
-            **Languages:** ${{ steps.languages.outputs.languages }}
-            **Files Generated:** ${{ steps.count.outputs.total_files }}
-            
-            ### Generated Content:
-            $(find content/generated -name "*.html" -type f | head -20 | sed 's/^/- /')
-            
-            ### Validation:
-            - ✅ Schema validation passed
-            - ✅ Internal links generated
-            - ✅ SEO metadata added
-            
-            **Automated by:** Global SEO Content Pipeline
-            
-            ---
-            *This PR was automatically generated. Please review before merging.*
-          labels: |
-            automated-pr
-            content-generation
-            seo
-          assignees: dawidmillenium-design
-
-      - name: Direct Commit (if not creating PR)
-        if: github.event.inputs.create_pull_request != 'true' && github.event_name != 'schedule'
-        run: |
-          git add content/generated/
-          git commit -m "feat: generate content for ${{ steps.brief.outputs.brief_id }} (${{ steps.count.outputs.total_files }} files) [skip ci]"
-          git push origin main
-
-      - name: Upload generated content as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: "generated-content-${{ steps.brief.outputs.brief_id }}"
-          path: content/generated/
-          retention-days: 30
-          if-no-files-found: error
-
-      - name: Generate pipeline report
-        run: |
-          cat > pipeline-report-${{ steps.brief.outputs.brief_id }}.md << EOF
-          # Pipeline Execution Report
-          
-          **Brief ID:** ${{ steps.brief.outputs.brief_id }}
-          **Execution Time:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")
-          **Trigger:** ${{ github.event_name }}
-          
-          ## Summary
-          - **Languages Processed:** $(echo "${{ steps.languages.outputs.languages }}" | wc -w)
-          - **Files Generated:** ${{ steps.count.outputs.total_files }}
-          - **Status:** ✅ Success
-          
-          ## Generated Files by Language
-          $(for lang_dir in content/generated/*/; do
-            if [ -d "$lang_dir" ]; then
-              lang=$(basename "$lang_dir")
-              count=$(find "$lang_dir" -name "*.html" | wc -l)
-              echo "- **$lang**: $count files"
-            fi
-          done)
-          
-          ## Validation Results
-          - Schema Validation: ✅ Passed
-          - Internal Links: ✅ Generated
-          - SEO Metadata: ✅ Added
-          EOF
-          
-          cat pipeline-report-${{ steps.brief.outputs.brief_id }}.md
-
-      - name: Upload pipeline report
-        uses: actions/upload-artifact@v4
-        with:
-          name: "pipeline-report-${{ steps.brief.outputs.brief_id }}"
-          path: pipeline-report-${{ steps.brief.outputs.brief_id }}.md
-          retention-days: 90
-
-  post-processing:
-    name: Post-Processing & Notifications
-    runs-on: ubuntu-latest
-    needs: generate-content
-    if: always()
+def generate_schema_html(brief: dict, lang: str) -> str:
+    """Generate localized JSON-LD Schema markup."""
+    schema = brief.get('schema_markup', {})
+    if not schema:
+        return ""
     
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with:
-          pattern: "generated-content-*"
-          merge-multiple: true
-          path: content/generated/
+    # Basic localization of schema (in a full pipeline, you'd translate the schema text too)
+    schema_str = json.dumps(schema, indent=2)
+    return f"<script type=\"application/ld+json\">\n{schema_str}\n</script>"
 
-      - name: Update sitemap
-        run: |
-          if command -v python &> /dev/null; then
-            python generate-sitemap.py --input-dir content/generated/ --output-dir . || echo "Sitemap generation skipped"
-          fi
+def save_output(lang: str, slug: str, html_content: str, schema_html: str, output_dir: str):
+    """Save the generated HTML to the correct language directory."""
+    lang_dir = Path(output_dir) / lang
+    lang_dir.mkdir(parents=True, exist_ok=True)
+    
+    file_path = lang_dir / f"{slug}.html"
+    
+    # Wrap in basic HTML boilerplate if not already present
+    if not html_content.strip().startswith("<!DOCTYPE html>"):
+        final_html = f"""<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{slug.replace('-', ' ').title()}</title>
+    {schema_html}
+</head>
+<body>
+    {html_content}
+</body>
+</html>"""
+    else:
+        # Inject schema into head if it's a full HTML doc
+        final_html = html_content.replace("</head>", f"    {schema_html}\n</head>")
 
-      - name: Notify on success
-        if: needs.generate-content.result == 'success'
-        run: |
-          echo "✅ Global SEO Pipeline completed successfully!"
-          echo "Generated content is ready for review."
-          # Add Slack/Discord notification here if configured
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(final_html)
+    
+    logging.info(f"✅ Successfully saved: {file_path}")
 
-      - name: Notify on failure
-        if: needs.generate-content.result == 'failure'
-        run: |
-          echo "❌ Global SEO Pipeline failed!"
-          echo "Please check the workflow logs for details."
-          exit 1
+def main():
+    parser = argparse.ArgumentParser(description="Global SEO Content Pipeline")
+    parser.add_argument("--brief", required=True, help="Path to the JSON content brief")
+    parser.add_argument("--languages", nargs='+', help="List of languages to generate (e.g., en-US es-ES)")
+    parser.add_argument("--output-dir", default="content/generated", help="Output directory for generated HTML")
+    args = parser.parse_args()
+
+    logging.info("🚀 Starting Global SEO Content Pipeline")
+    
+    # 1. Load Brief
+    brief = load_brief(args.brief)
+    slug = brief['meta']['slug']
+    
+    # Determine languages: use args if provided, else fallback to brief's target_languages
+    languages = args.languages if args.languages else brief['meta']['target_languages']
+    logging.info(f"Target languages: {', '.join(languages)}")
+
+    # 2. Iterate and Generate
+    success_count = 0
+    for lang in languages:
+        logging.info(f"--- Processing Language: {lang} ---")
+        try:
+            prompt = build_prompt(brief, lang)
+            html_content = generate_content(prompt)
+            schema_html = generate_schema_html(brief, lang)
+            save_output(lang, slug, html_content, schema_html, args.output_dir)
+            success_count += 1
+        except Exception as e:
+            logging.error(f"❌ Failed to generate content for {lang}: {e}")
+            continue
+
+    # 3. Summary
+    logging.info("="*50)
+    logging.info(f"🎉 Pipeline Complete! Successfully generated {success_count}/{len(languages)} languages.")
+    logging.info(f"Output directory: {os.path.abspath(args.output_dir)}")
+    logging.info("="*50)
+
+if __name__ == "__main__":
+    main()
