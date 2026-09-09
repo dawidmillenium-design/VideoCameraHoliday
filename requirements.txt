@@ -12,3 +12,9 @@ jsonschema>=4.17.0
 # Additional utilities
 urllib3>=1.26.0
 chardet>=5.0.0
+
+# NEW ARTICLE WORKFLOW THAT USE DEEPSEEK AI
+openai>=1.12.0
+beautifulsoup4>=4.12.3
+lxml>=5.1.0
+python-dotenv>=1.0.0

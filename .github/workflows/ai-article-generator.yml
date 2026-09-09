@@ -1,0 +1,113 @@
+name: 🤖 AI Article Generator (Multi-Language)
+
+on:
+  workflow_dispatch:
+    inputs:
+      article_topic:
+        description: 'Article topic/title (e.g., "Best Camera for Thailand Travel 2026")'
+        required: true
+        default: 'DJI Osmo Pocket 4P vs GoPro Hero 13: Ultimate Travel Comparison'
+      word_count:
+        description: 'Target word count per language'
+        required: false
+        default: '2000'
+      content_type:
+        description: 'Content type'
+        required: true
+        default: 'comparison'
+        type: choice
+        options:
+          - review
+          - comparison
+          - buying-guide
+          - how-to
+          - destination-guide
+      generate_all_languages:
+        description: 'Generate in all 10 languages (or just English)'
+        required: false
+        default: 'true'
+        type: boolean
+
+env:
+  PYTHON_VERSION: '3.11'
+  DEEPSEEK_MODEL: 'deepseek-chat'
+
+jobs:
+  generate-multi-language-articles:
+    name: Generate Multi-Language Articles
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    
+    steps:
+      - name:  Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai python-dotenv beautifulsoup4 lxml requests
+
+      - name: 🔐 Validate API Key
+        run: |
+          if [ -z "${{ secrets.DEEPSEEK_API_KEY }}" ]; then
+            echo "::error::DEEPSEEK_API_KEY secret is not set"
+            exit 1
+          fi
+          echo "✅ API key found"
+
+      - name: 🌍 Generate Articles in All Languages
+        id: generate
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          ARTICLE_TOPIC: ${{ github.event.inputs.article_topic }}
+          WORD_COUNT: ${{ github.event.inputs.word_count }}
+          CONTENT_TYPE: ${{ github.event.inputs.content_type }}
+          GENERATE_ALL_LANGUAGES: ${{ github.event.inputs.generate_all_languages }}
+        run: |
+          python scripts/generate_article_multilang.py
+
+      - name:  Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: 💾 Commit Generated Articles
+        run: |
+          git add generated-content/
+          if ! git diff --staged --quiet; then
+            git commit -m "feat: generate AI articles in 10 languages - ${{ github.event.inputs.article_topic }} [skip ci]"
+            git push origin main
+            echo "✅ Articles committed and pushed"
+          else
+            echo "⚠️ No changes to commit"
+          fi
+
+      - name: 📤 Upload Generated Content
+        uses: actions/upload-artifact@v4
+        with:
+          name: "generated-articles-multilang-${{ github.run_number }}"
+          path: generated-content/
+          retention-days: 30
+
+      - name: ✅ Success Summary
+        run: |
+          echo "## 🎉 Multi-Language Article Generation Complete!"
+          echo ""
+          echo "**Topic:** ${{ github.event.inputs.article_topic }}"
+          echo "**Languages:** 10 (en-US, es-ES, fr-FR, de-DE, ja-JP, ko-KR, zh-CN, pl-PL, th-TH, it-IT)"
+          echo "**Word Count Target:** ${{ github.event.inputs.word_count }} per language"
+          echo "**Content Type:** ${{ github.event.inputs.content_type }}"
+          echo ""
+          echo "📁 Check the 'generated-content/' directory for all language versions."
+          echo ""
+          echo "### Generated Files:"
+          ls -la generated-content/
