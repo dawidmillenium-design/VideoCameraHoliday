@@ -1,12 +1,20 @@
 {
   "summary": {
-    "total_files": 920,
-    "fixed_count": 54,
+    "total_files": 921,
+    "fixed_count": 50,
     "error_count": 0,
-    "unchanged_count": 866,
+    "unchanged_count": 871,
     "dry_run": false
   },
   "results": [
+    {
+      "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/comparisons_original.html",
+      "original_title": "⚔️ Camera Comparisons – Head-to-Head Guides",
+      "new_title": "⚔️ Camera Comparisons – Head-to-Head Guides",
+      "issues": [],
+      "fixed": false,
+      "error": null
+    },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/404.html",
       "original_title": "Page Not Found – Holiday Video Camera",
@@ -1635,10 +1643,10 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/comparisons/index.html",
-      "original_title": "Camera Comparisons 2026 – Head-to-Head Travel Camera Guides | Holiday Video Camera",
+      "original_title": "Camera Comparisons 2026 – Head-to-Head Travel Camera Guides | Holiday Video CameraCamera Comparisons 2026 – Head-to-Head Travel Camera Guides",
       "new_title": "Camera Comparisons 2026 – Head-to-Head Travel Camera Guides",
       "issues": [
-        "too_long (82 chars, max 60)",
+        "too_long (141 chars, max 60)",
         "keyword_stuffing ('camera' appears 3 times)"
       ],
       "fixed": true,
@@ -2772,8 +2780,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html",
-      "original_title": "GoPro Hero 12 vs Canon G7X Mark III – porównanie 2026",
-      "new_title": "GoPro Hero 12 vs Canon G7X Mark III – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -2788,8 +2796,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html",
-      "original_title": "GoPro Hero 12 vs DJI Osmo Action 4 – porównanie 2026",
-      "new_title": "GoPro Hero 12 vs DJI Osmo Action 4 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -2852,8 +2860,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html",
-      "original_title": "GoPro Hero 12 vs Insta360 X4 – porównanie 2026",
-      "new_title": "GoPro Hero 12 vs Insta360 X4 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -2876,8 +2884,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html",
-      "original_title": "Canon EOS R50 vs DJI Osmo Action 4 – porównanie 2026",
-      "new_title": "Canon EOS R50 vs DJI Osmo Action 4 – porównanie 2026",
+      "original_title": "Canon R50 vs DJI Action 4: Mirrorless vs Action Camera 2026",
+      "new_title": "Canon R50 vs DJI Action 4: Mirrorless vs Action Camera 2026",
       "issues": [],
       "fixed": false,
       "error": null
@@ -2924,8 +2932,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html",
-      "original_title": "DJI Osmo Action 4 vs Canon G7X Mark III – porównanie 2026",
-      "new_title": "DJI Osmo Action 4 vs Canon G7X Mark III – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -2996,8 +3004,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html",
-      "original_title": "Sony ZV-E10 vs DJI Osmo Action 4 – porównanie 2026",
-      "new_title": "Sony ZV-E10 vs DJI Osmo Action 4 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -3078,8 +3086,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html",
-      "original_title": "Sony ZV-E10 vs Canon EOS R50 – porównanie 2026",
-      "new_title": "Sony ZV-E10 vs Canon EOS R50 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -3094,8 +3102,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html",
-      "original_title": "Sony ZV-E10 vs Insta360 X4 – porównanie 2026",
-      "new_title": "Sony ZV-E10 vs Insta360 X4 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -3134,16 +3142,16 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html",
-      "original_title": "Canon EOS R50 vs Insta360 X4 – porównanie 2026",
-      "new_title": "Canon EOS R50 vs Insta360 X4 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html",
-      "original_title": "Canon EOS R50 vs GoPro Hero 12 – porównanie 2026",
-      "new_title": "Canon EOS R50 vs GoPro Hero 12 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -3158,8 +3166,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html",
-      "original_title": "DJI Osmo Action 4 vs Insta360 X4 – porównanie 2026",
-      "new_title": "DJI Osmo Action 4 vs Insta360 X4 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -3214,8 +3222,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html",
-      "original_title": "Canon EOS R50 vs Canon G7X Mark III – porównanie 2026",
-      "new_title": "Canon EOS R50 vs Canon G7X Mark III – porównanie 2026",
+      "original_title": "Canon EOS R50 vs Canon G7X Mark III – 2026 Camera Comparison",
+      "new_title": "Canon EOS R50 vs Canon G7X Mark III – 2026 Camera Comparison",
       "issues": [],
       "fixed": false,
       "error": null
@@ -3270,8 +3278,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html",
-      "original_title": "Sony ZV-E10 vs GoPro Hero 12 – porównanie 2026",
-      "new_title": "Sony ZV-E10 vs GoPro Hero 12 – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -3310,8 +3318,8 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html",
-      "original_title": "Sony ZV-E10 vs Canon G7X Mark III – porównanie 2026",
-      "new_title": "Sony ZV-E10 vs Canon G7X Mark III – porównanie 2026",
+      "original_title": "Camera Comparison 2026 | Holiday Video Camera",
+      "new_title": "Camera Comparison 2026 | Holiday Video Camera",
       "issues": [],
       "fixed": false,
       "error": null
@@ -4422,12 +4430,10 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/_layouts/default.html",
-      "original_title": "title }} {% include header",
+      "original_title": "title }} {% include header {% include header",
       "new_title": "title }} {% include header {% include header",
-      "issues": [
-        "too_short (26 chars, min 30)"
-      ],
-      "fixed": true,
+      "issues": [],
+      "fixed": false,
       "error": null
     },
     {
@@ -6500,12 +6506,10 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/_site/guides/ultimate-holiday-video-camera-setup.html",
-      "original_title": "... ... --- layout: default title: \"ultimate holiday video camera",
+      "original_title": "--- layout: default title: \"ultimate holiday video camera",
       "new_title": "--- layout: default title: \"ultimate holiday video camera",
-      "issues": [
-        "too_long (65 chars, max 60)"
-      ],
-      "fixed": true,
+      "issues": [],
+      "fixed": false,
       "error": null
     },
     {
@@ -6536,12 +6540,10 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/_site/guides/best-hybrid-travel-camera-2026.html",
-      "original_title": "... ... --- layout: default title: \"best hybrid travel camera",
+      "original_title": "--- layout: default title: \"best hybrid travel camera",
       "new_title": "--- layout: default title: \"best hybrid travel camera",
-      "issues": [
-        "too_long (61 chars, max 60)"
-      ],
-      "fixed": true,
+      "issues": [],
+      "fixed": false,
       "error": null
     },
     {
@@ -6590,12 +6592,10 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/_site/guides/best-travel-camera-insurance.html",
-      "original_title": "... ... --- layout: default title: \"best travel camera insurance\"",
+      "original_title": "--- layout: default title: \"best travel camera insurance\"",
       "new_title": "--- layout: default title: \"best travel camera insurance\"",
-      "issues": [
-        "too_long (65 chars, max 60)"
-      ],
-      "fixed": true,
+      "issues": [],
+      "fixed": false,
       "error": null
     },
     {
@@ -6618,10 +6618,10 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/_site/guides/best-camera-safari-holiday-video-2026.html",
-      "original_title": "... ... Home › Guides › Safari Camera Guide Best... ... Home › Guides › Safari Camera Guide Best",
+      "original_title": "Home › Guides › Safari Camera Guide BestHome › Guides › Safari Camera Guide Best",
       "new_title": "Home › Guides › Safari Camera Guide Best",
       "issues": [
-        "too_long (96 chars, max 60)"
+        "too_long (80 chars, max 60)"
       ],
       "fixed": true,
       "error": null
@@ -6662,10 +6662,10 @@
     },
     {
       "file": "/home/runner/work/VideoCameraHoliday/VideoCameraHoliday/_site/guides/best-vlogging-camera-beginners-2026.html",
-      "original_title": "... ... Best Vlogging Camera for Beginners 2026 (Under $300... ... Best Vlogging Camera for Beginners 2026 (Under $300",
+      "original_title": "Best Vlogging Camera for Beginners 2026 (Under $300Best Vlogging Camera for Beginners 2026 (Under $300",
       "new_title": "Best Vlogging Camera for Beginners 2026 (Under $300",
       "issues": [
-        "too_long (118 chars, max 60)"
+        "too_long (102 chars, max 60)"
       ],
       "fixed": true,
       "error": null
