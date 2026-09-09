@@ -1,4 +1,4 @@
-name: 🤖 AI Article Generator
+name: 🤖 AI Article Generator (Multi-Language)
 
 on:
   workflow_dispatch:
@@ -7,12 +7,8 @@ on:
         description: 'Article topic/title (e.g., "Best Camera for Thailand Travel 2026")'
         required: true
         default: 'DJI Osmo Pocket 4P vs GoPro Hero 13: Ultimate Travel Comparison'
-      target_language:
-        description: 'Target language code (e.g., en-US, th-TH, pl-PL)'
-        required: true
-        default: 'en-US'
       word_count:
-        description: 'Target word count'
+        description: 'Target word count per language'
         required: false
         default: '2000'
       content_type:
@@ -26,8 +22,8 @@ on:
           - buying-guide
           - how-to
           - destination-guide
-      generate_html:
-        description: 'Generate HTML with schema markup'
+      generate_all_languages:
+        description: 'Generate in all 10 languages (or just English)'
         required: false
         default: 'true'
         type: boolean
@@ -37,22 +33,21 @@ env:
   DEEPSEEK_MODEL: 'deepseek-chat'
 
 jobs:
-  generate-article:
-    name: Generate AI Article
+  generate-multi-language-articles:
+    name: Generate Multi-Language Articles
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     
     steps:
-      - name: 📥 Checkout repository
+      - name:  Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
 
       - name: 🐍 Set up Python
-        uses: actions/setup-node@v4
+        uses: actions/setup-python@v5
         with:
-          node-version: '22'  # Changed
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
 
@@ -69,36 +64,29 @@ jobs:
           fi
           echo "✅ API key found"
 
-      - name:  Generate Article Content
+      - name: 🌍 Generate Articles in All Languages
         id: generate
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           ARTICLE_TOPIC: ${{ github.event.inputs.article_topic }}
-          TARGET_LANGUAGE: ${{ github.event.inputs.target_language }}
           WORD_COUNT: ${{ github.event.inputs.word_count }}
           CONTENT_TYPE: ${{ github.event.inputs.content_type }}
+          GENERATE_ALL_LANGUAGES: ${{ github.event.inputs.generate_all_languages }}
         run: |
-          python scripts/generate_article.py
-
-      - name: 🌐 Generate Multi-Language Versions (Optional)
-        if: github.event.inputs.target_language == 'en-US'
-        run: |
-          echo "Generating additional language versions..."
-          # Add logic here to generate es-ES, fr-FR, de-DE, etc.
-          python scripts/generate_translations.py || echo "Translation script not found"
+          python scripts/generate_article_multilang.py
 
       - name:  Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: 💾 Commit Generated Article
+      - name: 💾 Commit Generated Articles
         run: |
           git add generated-content/
           if ! git diff --staged --quiet; then
-            git commit -m "feat: generate AI article - ${{ github.event.inputs.article_topic }} [skip ci]"
+            git commit -m "feat: generate AI articles in 10 languages - ${{ github.event.inputs.article_topic }} [skip ci]"
             git push origin main
-            echo "✅ Article committed and pushed"
+            echo "✅ Articles committed and pushed"
           else
             echo "⚠️ No changes to commit"
           fi
@@ -106,17 +94,20 @@ jobs:
       - name: 📤 Upload Generated Content
         uses: actions/upload-artifact@v4
         with:
-          name: "generated-article-${{ github.run_number }}"
+          name: "generated-articles-multilang-${{ github.run_number }}"
           path: generated-content/
           retention-days: 30
 
       - name: ✅ Success Summary
         run: |
-          echo "## 🎉 Article Generation Complete!"
+          echo "## 🎉 Multi-Language Article Generation Complete!"
           echo ""
           echo "**Topic:** ${{ github.event.inputs.article_topic }}"
-          echo "**Language:** ${{ github.event.inputs.target_language }}"
-          echo "**Word Count Target:** ${{ github.event.inputs.word_count }}"
+          echo "**Languages:** 10 (en-US, es-ES, fr-FR, de-DE, ja-JP, ko-KR, zh-CN, pl-PL, th-TH, it-IT)"
+          echo "**Word Count Target:** ${{ github.event.inputs.word_count }} per language"
           echo "**Content Type:** ${{ github.event.inputs.content_type }}"
           echo ""
-          echo "📁 Check the 'generated-content/' directory for the article."
+          echo "📁 Check the 'generated-content/' directory for all language versions."
+          echo ""
+          echo "### Generated Files:"
+          ls -la generated-content/
