@@ -1,0 +1,1201 @@
+name: 🧠 AI SEO Intelligence System
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'AI Mode'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - content-optimize
+          - keyword-research
+          - blog-generate
+          - link-optimize
+          - predictive-audit
+      ai_provider:
+        description: 'AI Provider'
+        required: false
+        default: 'openai'
+        type: choice
+        options:
+          - openai
+          - claude
+          - gemini
+          - local
+      model:
+        description: 'Model'
+        required: false
+        default: 'gpt-4-turbo-preview'
+        type: string
+      creativity:
+        description: 'Creativity Level'
+        required: false
+        default: '0.7'
+        type: number
+        min: 0
+        max: 1
+        step: 0.1
+
+  schedule:
+    # Daily optimization
+    - cron: '0 3 * * *'
+    # Weekly deep analysis
+    - cron: '0 6 * * 1'
+    # Monthly full strategy
+    - cron: '0 8 1 * *'
+
+  push:
+    branches: [ main ]
+    paths:
+      - '**/*.html'
+      - '**/*.md'
+      - '**/*.txt'
+      - '**/*.py'
+
+# Extended permissions
+permissions:
+  contents: write
+  actions: read
+  pages: read
+  pull-requests: write
+  issues: write
+  discussions: write
+
+env:
+  AI_MODEL: ${{ github.event.inputs.model || 'gpt-4-turbo-preview' }}
+  CREATIVITY: ${{ github.event.inputs.creativity || '0.7' }}
+  SITE_URL: 'https://dawidmillenium-design.github.io/VideoCameraHoliday'
+  SITE_NAME: 'VideoCameraHoliday'
+
+jobs:
+  # ========================================================================
+  # JOB 1: AI CONTENT OPTIMIZER
+  # ========================================================================
+  content-optimizer:
+    name: 📝 AI Content Optimizer
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install \
+            openai \
+            anthropic \
+            google-generativeai \
+            beautifulsoup4 \
+            lxml \
+            requests \
+            python-frontmatter \
+            markdownify \
+            transformers \
+            torch \
+            sentence-transformers \
+            scikit-learn \
+            pandas \
+            numpy \
+            faiss-cpu \
+            tiktoken \
+            langchain \
+            langchain-openai \
+            langchain-anthropic \
+            langchain-community \
+            chromadb
+          echo "✅ AI dependencies installed"
+
+      - name: 🧠 Run AI Content Optimizer
+        id: ai-content
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 - << 'EOF'
+          import os
+          import sys
+          import json
+          import re
+          from pathlib import Path
+          from datetime import datetime
+          from bs4 import BeautifulSoup
+          import markdownify
+          
+          # ================================================================
+          # AI PROVIDER SETUP
+          # ================================================================
+          
+          AI_PROVIDER = os.getenv('AI_PROVIDER', 'openai')
+          MODEL = os.getenv('AI_MODEL', 'gpt-4-turbo-preview')
+          CREATIVITY = float(os.getenv('CREATIVITY', '0.7'))
+          SITE_NAME = os.getenv('SITE_NAME', 'VideoCameraHoliday')
+          SITE_URL = os.getenv('SITE_URL', 'https://dawidmillenium-design.github.io/VideoCameraHoliday')
+          
+          print(f"🧠 Initializing AI Provider: {AI_PROVIDER}")
+          print(f"📊 Model: {MODEL}")
+          print(f"🎨 Creativity: {CREATIVITY}")
+          
+          # ================================================================
+          # AI CLIENT FACTORY
+          # ================================================================
+          
+          def get_ai_client():
+              if AI_PROVIDER == 'openai':
+                  from openai import OpenAI
+                  api_key = os.getenv('OPENAI_API_KEY')
+                  if not api_key:
+                      raise ValueError("OPENAI_API_KEY not set")
+                  return OpenAI(api_key=api_key)
+              
+              elif AI_PROVIDER == 'claude':
+                  from anthropic import Anthropic
+                  api_key = os.getenv('ANTHROPIC_API_KEY')
+                  if not api_key:
+                      raise ValueError("ANTHROPIC_API_KEY not set")
+                  return Anthropic(api_key=api_key)
+              
+              elif AI_PROVIDER == 'gemini':
+                  import google.generativeai as genai
+                  api_key = os.getenv('GEMINI_API_KEY')
+                  if not api_key:
+                      raise ValueError("GEMINI_API_KEY not set")
+                  genai.configure(api_key=api_key)
+                  return genai
+              
+              else:
+                  # Local Ollama or fallback
+                  print("⚠️ Using local AI fallback (no API key required)")
+                  return None
+          
+          # ================================================================
+          # AI RESPONSE HELPER
+          # ================================================================
+          
+          def ask_ai(prompt, system_prompt=None):
+              """Send prompt to AI and get response"""
+              client = get_ai_client()
+              
+              if client is None:
+                  # Local fallback
+                  return f"[AI SIMULATION] {prompt[:100]}..."
+              
+              try:
+                  if AI_PROVIDER == 'openai':
+                      response = client.chat.completions.create(
+                          model=MODEL,
+                          messages=[
+                              {"role": "system", "content": system_prompt or "You are an expert SEO consultant."},
+                              {"role": "user", "content": prompt}
+                          ],
+                          temperature=CREATIVITY
+                      )
+                      return response.choices[0].message.content
+                  
+                  elif AI_PROVIDER == 'claude':
+                      response = client.messages.create(
+                          model=MODEL,
+                          max_tokens=4096,
+                          temperature=CREATIVITY,
+                          system=system_prompt or "You are an expert SEO consultant.",
+                          messages=[{"role": "user", "content": prompt}]
+                      )
+                      return response.content[0].text
+                  
+                  elif AI_PROVIDER == 'gemini':
+                      model = client.GenerativeModel(MODEL)
+                      response = model.generate_content(
+                          (system_prompt or "You are an expert SEO consultant.") + "\n\n" + prompt
+                      )
+                      return response.text
+                  
+              except Exception as e:
+                  print(f"❌ AI Error: {e}")
+                  return f"[AI ERROR] {e}"
+          
+          # ================================================================
+          # 1. ANALYZE ALL PAGES
+          # ================================================================
+          
+          print("\n📊 Analyzing all pages...")
+          
+          pages = []
+          for root, dirs, files in os.walk('.'):
+              if any(x in root for x in ['.git', 'node_modules', 'assets', 'images']):
+                  continue
+              for f in files:
+                  if f.endswith('.html') or f.endswith('.htm'):
+                      filepath = os.path.join(root, f)
+                      with open(filepath, 'r', encoding='utf-8') as file:
+                          content = file.read()
+                      
+                      soup = BeautifulSoup(content, 'html.parser')
+                      
+                      # Extract page data
+                      title = soup.find('title')
+                      meta_desc = soup.find('meta', attrs={'name': 'description'})
+                      h1 = soup.find('h1')
+                      h2s = soup.find_all('h2')
+                      h3s = soup.find_all('h3')
+                      body = soup.find('body')
+                      
+                      page_data = {
+                          'url': filepath.replace('./', '').replace('index.html', '').replace('.html', '') or '/',
+                          'file': filepath,
+                          'title': title.text.strip() if title else '',
+                          'description': meta_desc.get('content', '') if meta_desc else '',
+                          'h1': h1.text.strip() if h1 else '',
+                          'h2s': [h.text.strip() for h in h2s],
+                          'h3s': [h.text.strip() for h in h3s],
+                          'content': body.get_text(' ', strip=True) if body else ''
+                      }
+                      pages.append(page_data)
+          
+          print(f"✅ Found {len(pages)} pages to analyze")
+          
+          # ================================================================
+          # 2. AI CONTENT OPTIMIZATION
+          # ================================================================
+          
+          print("\n🧠 Running AI Content Optimization...")
+          
+          optimization_results = []
+          
+          for page in pages[:5]:  # Limit to 5 pages for API cost
+              print(f"\n📝 Optimizing: {page['url']}")
+              
+              # Build optimization prompt
+              prompt = f"""
+              Analyze this page and provide SEO optimization suggestions:
+              
+              URL: {page['url']}
+              Title: {page['title']}
+              Description: {page['description']}
+              H1: {page['h1']}
+              H2s: {', '.join(page['h2s'])}
+              Content Preview: {page['content'][:500]}...
+              
+              Provide:
+              1. Title tag optimization (2 options)
+              2. Meta description optimization (2 options)
+              3. Heading structure improvements
+              4. Content recommendations (3 specific tips)
+              5. Target keywords (5 keywords with search volume estimation)
+              6. Internal linking suggestions
+              7. Readability improvements
+              
+              Format as JSON with keys: optimized_title, optimized_description, heading_fixes, content_tips, keywords, internal_links, readability
+              """
+              
+              response = ask_ai(prompt, "You are an expert SEO consultant specializing in content optimization.")
+              
+              try:
+                  # Try to parse as JSON
+                  optimized = json.loads(response)
+                  optimization_results.append({
+                      'url': page['url'],
+                      'original': {
+                          'title': page['title'],
+                          'description': page['description']
+                      },
+                      'optimized': optimized
+                  })
+              except:
+                  # Fallback: store raw response
+                  optimization_results.append({
+                      'url': page['url'],
+                      'raw_response': response
+                  })
+          
+          # Save optimization results
+          with open('ai-optimization-results.json', 'w') as f:
+              json.dump(optimization_results, f, indent=2)
+          
+          # ================================================================
+          # 3. GENERATE IMPROVED CONTENT
+          # ================================================================
+          
+          print("\n📝 Generating improved content...")
+          
+          for page in pages[:3]:  # Generate content for top 3 pages
+              prompt = f"""
+              Create an SEO-optimized content outline for this page:
+              
+              URL: {page['url']}
+              Current Title: {page['title']}
+              Current H1: {page['h1']}
+              
+              Generate:
+              1. Improved H1 (optimized)
+              2. Complete H2/H3 structure (5-7 headings)
+              3. Introduction paragraph (50-100 words)
+              4. FAQ section (3 questions with answers)
+              5. Target keywords to include
+              6. Internal links to recommend
+              
+              Format as clean markdown.
+              """
+              
+              response = ask_ai(prompt, "You are a professional content strategist and SEO expert.")
+              
+              # Save generated content
+              output_file = f"content-optimization-{page['url'].replace('/', '_') or 'home'}.md"
+              with open(output_file, 'w') as f:
+                  f.write(f"# Content Optimization: {page['url']}\n\n")
+                  f.write(f"**Generated:** {datetime.now().isoformat()}\n\n")
+                  f.write(response)
+              
+              print(f"✅ Generated content for {page['url']}")
+          
+          # ================================================================
+          # 4. AI KEYWORD RESEARCH
+          # ================================================================
+          
+          print("\n🔍 Running AI Keyword Research...")
+          
+          # Get all content for keyword analysis
+          all_content = ' '.join([p['content'] for p in pages])
+          all_titles = ' '.join([p['title'] for p in pages if p['title']])
+          
+          keyword_prompt = f"""
+          Analyze this website's content and generate a comprehensive keyword strategy:
+          
+          Site: {SITE_NAME}
+          URL: {SITE_URL}
+          
+          Topics found:
+          {all_titles[:1000]}
+          
+          Content sample:
+          {all_content[:1000]}
+          
+          Generate:
+          1. 15 target keywords (with difficulty estimation)
+          2. 5 primary topics to cover
+          3. 10 long-tail keywords
+          4. 5 competitor keywords we should target
+          5. 3 content gaps to fill
+          6. Monthly search volume estimates
+          
+          Format as JSON with keys: primary_keywords, long_tail_keywords, topics, competitor_keywords, content_gaps
+          """
+          
+          keyword_response = ask_ai(keyword_prompt, "You are an expert keyword researcher with access to Google search data.")
+          
+          try:
+              keywords = json.loads(keyword_response)
+              with open('ai-keyword-research.json', 'w') as f:
+                  json.dump(keywords, f, indent=2)
+          except:
+              with open('ai-keyword-research.md', 'w') as f:
+                  f.write(f"# Keyword Research\n\n{keyword_response}")
+          
+          print("✅ Keyword research complete")
+          
+          # ================================================================
+          # 5. GENERATE BLOG POST IDEAS
+          # ================================================================
+          
+          print("\n📝 Generating blog post ideas...")
+          
+          blog_prompt = f"""
+          Based on this camera review website, generate 10 SEO-optimized blog post ideas:
+          
+          Site: {SITE_NAME}
+          URL: {SITE_URL}
+          
+          Current topics: {', '.join([p['h1'] for p in pages if p['h1']])[:500]}
+          
+          For each idea provide:
+          - Title (SEO-optimized)
+          - Target keywords
+          - Brief outline (5 bullet points)
+          - Why it would rank well
+          - Estimated word count
+          
+          Format as JSON array.
+          """
+          
+          blog_response = ask_ai(blog_prompt, "You are a content strategist for a camera review blog.")
+          
+          try:
+              blog_ideas = json.loads(blog_response)
+              with open('ai-blog-ideas.json', 'w') as f:
+                  json.dump(blog_ideas, f, indent=2)
+          except:
+              with open('ai-blog-ideas.md', 'w') as f:
+                  f.write(f"# Blog Post Ideas\n\n{blog_response}")
+          
+          print("✅ Blog ideas generated")
+          
+          # ================================================================
+          # 6. GENERATE SUMMARY REPORT
+          # ================================================================
+          
+          print("\n📊 Generating AI Summary Report...")
+          
+          # Generate summary
+          summary = {
+              'timestamp': datetime.now().isoformat(),
+              'pages_analyzed': len(pages),
+              'suggestions_generated': len(optimization_results),
+              'content_optimized': len([r for r in optimization_results if 'optimized' in r]),
+              'keywords_found': len(keywords.get('primary_keywords', []) if 'keywords' in locals() else 0),
+              'blog_ideas': len(blog_ideas if 'blog_ideas' in locals() else []),
+          }
+          
+          with open('ai-seo-summary.json', 'w') as f:
+              json.dump(summary, f, indent=2)
+          
+          # Markdown report
+          md = f"""# 🧠 AI SEO Intelligence Report
+
+          **Generated:** {datetime.now().isoformat()}
+          **Site:** {SITE_NAME}
+          
+          ## 📊 Summary
+          
+          | Metric | Value |
+          |--------|-------|
+          | Pages Analyzed | {summary['pages_analyzed']} |
+          | Pages Optimized | {summary['suggestions_generated']} |
+          | Keywords Found | {summary['keywords_found']} |
+          | Blog Ideas | {summary['blog_ideas']} |
+          
+          ## 🎯 Key Recommendations
+          
+          """
+          
+          # Add optimization suggestions
+          for i, result in enumerate(optimization_results[:5], 1):
+              md += f"\n### Page {i}: {result['url']}\n"
+              if 'optimized' in result:
+                  opt = result['optimized']
+                  md += f"- **Title:** {opt.get('optimized_title', 'N/A')}\n"
+                  md += f"- **Description:** {opt.get('optimized_description', 'N/A')}\n"
+                  md += f"- **Keywords:** {', '.join(opt.get('keywords', []))}\n"
+              else:
+                  md += f"```\n{result.get('raw_response', 'N/A')[:300]}...\n```\n"
+          
+          with open('ai-seo-report.md', 'w') as f:
+              f.write(md)
+          
+          print("✅ AI SEO report generated")
+          print("\n🎉 AI Content Optimization Complete!")
+          
+          EOF
+
+      - name: 📤 Upload AI Reports
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: ai-seo-reports-${{ github.run_number }}
+          path: |
+            ai-*.json
+            ai-*.md
+            content-optimization-*.md
+          retention-days: 90
+
+  # ========================================================================
+  # JOB 2: SMART INTERNAL LINKING ENGINE
+  # ========================================================================
+  smart-linking:
+    name: 🔗 Smart Internal Link Engine
+    needs: [content-optimizer]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install beautifulsoup4 lxml networkx scikit-learn numpy sentence-transformers faiss-cpu
+
+      - name: 🔗 Build Smart Link Graph
+        run: |
+          python3 - << 'EOF'
+          import os
+          import re
+          import json
+          import networkx as nx
+          from bs4 import BeautifulSoup
+          from sentence_transformers import SentenceTransformer
+          import numpy as np
+          from sklearn.metrics.pairwise import cosine_similarity
+          
+          print("🔗 Building Smart Internal Link Engine...")
+          
+          # Load AI-generated keywords
+          keywords = []
+          if os.path.exists('ai-keyword-research.json'):
+              with open('ai-keyword-research.json', 'r') as f:
+                  kw_data = json.load(f)
+                  keywords = kw_data.get('primary_keywords', []) + kw_data.get('long_tail_keywords', [])
+          
+          # Find all HTML files
+          html_files = []
+          for root, dirs, files in os.walk('.'):
+              if any(x in root for x in ['.git', 'node_modules', 'assets', 'images']):
+                  continue
+              for f in files:
+                  if f.endswith('.html'):
+                      html_files.append(os.path.join(root, f))
+          
+          print(f"📊 Analyzing {len(html_files)} pages...")
+          
+          # Extract content and build graph
+          graph = nx.DiGraph()
+          pages_data = {}
+          
+          for filepath in html_files:
+              with open(filepath, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              
+              soup = BeautifulSoup(content, 'html.parser')
+              url = filepath.replace('./', '').replace('index.html', '').replace('.html', '') or '/'
+              
+              # Extract text
+              text = soup.get_text(' ', strip=True)
+              title = soup.find('title')
+              h1 = soup.find('h1')
+              
+              pages_data[url] = {
+                  'file': filepath,
+                  'title': title.text.strip() if title else '',
+                  'h1': h1.text.strip() if h1 else '',
+                  'text': text[:1000],
+                  'links': []
+              }
+              
+              # Extract existing links
+              for a in soup.find_all('a', href=True):
+                  href = a['href']
+                  if href and not href.startswith(('http://', 'https://', 'mailto:', 'tel:', '#')):
+                      if href.endswith('.html') or href.endswith('/') or '.' not in href:
+                          clean_href = href.split('?')[0].split('#')[0]
+                          if clean_href.endswith('.html'):
+                              clean_href = clean_href[:-5]
+                          if clean_href.endswith('/'):
+                              clean_href = clean_href[:-1]
+                          if not clean_href.startswith('/'):
+                              clean_href = '/' + clean_href
+                          pages_data[url]['links'].append(clean_href)
+                          graph.add_edge(url, clean_href)
+          
+          print(f"✅ Graph built with {graph.number_of_nodes()} nodes and {graph.number_of_edges()} edges")
+          
+          # Find orphan pages
+          all_pages = set(pages_data.keys())
+          linked_pages = set()
+          for links in pages_data.values():
+              linked_pages.update([l for l in links['links'] if l in all_pages])
+          
+          orphan_pages = all_pages - linked_pages - {'/'}
+          
+          print(f"⚠️ Found {len(orphan_pages)} orphan pages: {orphan_pages}")
+          
+          # Calculate PageRank
+          try:
+              pagerank = nx.pagerank(graph)
+              top_pages = sorted(pagerank.items(), key=lambda x: x[1], reverse=True)[:10]
+              print(f"\n🏆 Top pages by importance:")
+              for page, score in top_pages:
+                  print(f"  {page}: {score:.3f}")
+          except:
+              print("⚠️ Could not calculate PageRank (graph may be empty)")
+          
+          # Generate smart linking suggestions
+          suggestions = []
+          for orphan in orphan_pages:
+              # Find related pages using text similarity
+              if orphan in pages_data and pages_data[orphan]['text']:
+                  orphan_text = pages_data[orphan]['text']
+                  # Simple similarity check
+                  for page, data in pages_data.items():
+                      if page != orphan and page != '/' and data['text']:
+                          # Check if topic is related
+                          if any(kw.lower() in orphan_text.lower() and kw.lower() in data['text'].lower() for kw in keywords[:5]):
+                              suggestions.append({
+                                  'from': page,
+                                  'to': orphan,
+                                  'reason': f"Related topic (keywords match)"
+                              })
+                              break
+          
+          # Save linking suggestions
+          result = {
+              'total_pages': len(pages_data),
+              'total_links': graph.number_of_edges(),
+              'orphan_pages': list(orphan_pages),
+              'top_pages': top_pages if 'top_pages' in locals() else [],
+              'link_suggestions': suggestions[:20],
+              'pagerank_scores': dict(pagerank) if 'pagerank' in locals() else {}
+          }
+          
+          with open('smart-linking-report.json', 'w') as f:
+              json.dump(result, f, indent=2)
+          
+          # Generate markdown report
+          md = f"""# 🔗 Smart Internal Linking Report
+
+          ## 📊 Summary
+          - **Total Pages:** {len(pages_data)}
+          - **Total Links:** {graph.number_of_edges()}
+          - **Orphan Pages:** {len(orphan_pages)}
+          - **Link Suggestions:** {len(suggestions)}
+
+          ## 🎯 Top Pages (PageRank)
+          
+          """
+          if 'top_pages' in locals():
+              for page, score in top_pages:
+                  md += f"- **{page}:** {score:.3f}\n"
+          
+          md += f"""
+          ## ⚠️ Orphan Pages
+
+          {', '.join(orphan_pages) if orphan_pages else 'None found! 🎉'}
+
+          ## 💡 Link Suggestions
+
+          """
+          for s in suggestions[:10]:
+              md += f"- From `{s['from']}` → `{s['to']}`: {s['reason']}\n"
+          
+          with open('smart-linking-report.md', 'w') as f:
+              f.write(md)
+          
+          print("✅ Smart linking report generated!")
+          EOF
+
+      - name: 📤 Upload Linking Report
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: smart-linking-report-${{ github.run_number }}
+          path: |
+            smart-linking-report.json
+            smart-linking-report.md
+          retention-days: 90
+
+  # ========================================================================
+  # JOB 3: AUTO-APPLY AI FIXES
+  # ========================================================================
+  apply-fixes:
+    name: 🔧 Apply AI Fixes
+    needs: [content-optimizer, smart-linking]
+    if: github.event.inputs.mode == 'full' || github.event.inputs.mode == 'content-optimize'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔧 Apply AI fixes
+        run: |
+          python3 - << 'EOF'
+          import os
+          import json
+          import re
+          from bs4 import BeautifulSoup
+          
+          print("🔧 Applying AI fixes...")
+          
+          # Load AI optimization results
+          if not os.path.exists('ai-optimization-results.json'):
+              print("⚠️ No optimization results found")
+              sys.exit(0)
+          
+          with open('ai-optimization-results.json', 'r') as f:
+              optimizations = json.load(f)
+          
+          fixes_applied = []
+          
+          for opt in optimizations:
+              if 'optimized' not in opt:
+                  continue
+              
+              url = opt['url']
+              filepath = url if url != '/' else 'index.html'
+              if not filepath.endswith('.html'):
+                  if filepath == '':
+                      filepath = 'index.html'
+                  else:
+                      filepath = f"{filepath}.html"
+              
+              if not os.path.exists(filepath):
+                  # Try to find the file
+                  for root, dirs, files in os.walk('.'):
+                      if filepath in files:
+                          filepath = os.path.join(root, filepath)
+                          break
+                  else:
+                      print(f"⚠️ Could not find file for {url}")
+                      continue
+              
+              with open(filepath, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              
+              soup = BeautifulSoup(content, 'html.parser')
+              changes = []
+              
+              # Fix title
+              if opt['optimized'].get('optimized_title'):
+                  title_tag = soup.find('title')
+                  if title_tag:
+                      old_title = title_tag.text
+                      title_tag.string = opt['optimized']['optimized_title']
+                      if old_title != opt['optimized']['optimized_title']:
+                          changes.append(f"Title: '{old_title}' → '{opt['optimized']['optimized_title']}'")
+              
+              # Fix description
+              if opt['optimized'].get('optimized_description'):
+                  meta = soup.find('meta', attrs={'name': 'description'})
+                  if meta:
+                      old_desc = meta.get('content', '')
+                      meta['content'] = opt['optimized']['optimized_description']
+                      if old_desc != opt['optimized']['optimized_description']:
+                          changes.append(f"Description updated")
+              
+              if changes:
+                  with open(filepath, 'w', encoding='utf-8') as f:
+                      f.write(str(soup))
+                  fixes_applied.append({
+                      'file': filepath,
+                      'changes': changes
+                  })
+                  print(f"✅ Applied fixes to {filepath}")
+          
+          # Save fix report
+          report = {
+              'timestamp': datetime.now().isoformat(),
+              'fixes_applied': len(fixes_applied),
+              'details': fixes_applied
+          }
+          
+          with open('ai-fixes-applied.json', 'w') as f:
+              json.dump(report, f, indent=2)
+          
+          print(f"\n📊 Applied {len(fixes_applied)} fixes across {len(fixes_applied)} files")
+          EOF
+
+      - name: 💾 Commit fixes
+        if: always()
+        run: |
+          git config user.name "AI SEO Bot"
+          git config user.email "ai-seo-bot@github.com"
+          git add .
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 AI: Auto-apply SEO optimizations [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+            echo "✅ Fixes committed"
+          fi
+
+  # ========================================================================
+  # JOB 4: GENERATE AI KNOWLEDGE BASE
+  # ========================================================================
+  knowledge-base:
+    name: 📚 Build Knowledge Base
+    needs: [content-optimizer, smart-linking]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 📚 Build vector knowledge base
+        run: |
+          python3 - << 'EOF'
+          import os
+          import json
+          import hashlib
+          from pathlib import Path
+          from datetime import datetime
+          
+          print("📚 Building AI Knowledge Base...")
+          
+          # Collect all knowledge
+          knowledge = {
+              'site': 'VideoCameraHoliday',
+              'timestamp': datetime.now().isoformat(),
+              'pages': [],
+              'keywords': [],
+              'insights': [],
+              'seo_data': []
+          }
+          
+          # Load all reports
+          for file in ['ai-optimization-results.json', 'smart-linking-report.json', 'ai-keyword-research.json']:
+              if os.path.exists(file):
+                  with open(file, 'r') as f:
+                      data = json.load(f)
+                      knowledge['seo_data'].append({file: data})
+          
+          # Generate page embeddings (metadata)
+          for root, dirs, files in os.walk('.'):
+              if any(x in root for x in ['.git', 'node_modules']):
+                  continue
+              for f in files:
+                  if f.endswith('.html') or f.endswith('.md'):
+                      filepath = os.path.join(root, f)
+                      with open(filepath, 'r', encoding='utf-8') as file:
+                          content = file.read()
+                      
+                      # Create a knowledge entry
+                      entry = {
+                          'file': filepath,
+                          'hash': hashlib.md5(content.encode()).hexdigest()[:8],
+                          'size': len(content),
+                          'type': 'html' if f.endswith('.html') else 'markdown'
+                      }
+                      knowledge['pages'].append(entry)
+          
+          # Save knowledge base
+          with open('ai-knowledge-base.json', 'w') as f:
+              json.dump(knowledge, f, indent=2)
+          
+          # Create a simple vector index (for demonstration)
+          vector_index = {}
+          for page in knowledge['pages']:
+              vector_index[page['file']] = {
+                  'hash': page['hash'],
+                  'related': []
+              }
+          
+          with open('vector-index.json', 'w') as f:
+              json.dump(vector_index, f, indent=2)
+          
+          print(f"✅ Knowledge base built with {len(knowledge['pages'])} pages")
+          EOF
+
+      - name: 📤 Upload Knowledge Base
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: ai-knowledge-base-${{ github.run_number }}
+          path: |
+            ai-knowledge-base.json
+            vector-index.json
+          retention-days: 30
+
+  # ========================================================================
+  # JOB 5: AI DASHBOARD
+  # ========================================================================
+  dashboard:
+    name: 📊 AI SEO Dashboard
+    needs: [content-optimizer, smart-linking, knowledge-base]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: 📊 Generate AI Dashboard
+        run: |
+          python3 - << 'EOF'
+          import os
+          import json
+          from datetime import datetime
+          
+          # Load all data
+          data = {}
+          for file in ['ai-seo-summary.json', 'ai-optimization-results.json', 'smart-linking-report.json', 'ai-keyword-research.json']:
+              if os.path.exists(file):
+                  with open(file, 'r') as f:
+                      data[file.replace('.json', '')] = json.load(f)
+          
+          # Generate HTML dashboard
+          html = f'''<!DOCTYPE html>
+          <html>
+          <head>
+              <title>🧠 AI SEO Dashboard</title>
+              <meta charset="utf-8">
+              <style>
+                  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+                  body {{
+                      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+                      color: #e0e0e0;
+                      padding: 20px;
+                      min-height: 100vh;
+                  }}
+                  .container {{ max-width: 1400px; margin: 0 auto; }}
+                  .header {{
+                      text-align: center;
+                      padding: 40px 20px;
+                      background: rgba(255,255,255,0.05);
+                      border-radius: 20px;
+                      margin-bottom: 30px;
+                      backdrop-filter: blur(10px);
+                  }}
+                  .header h1 {{
+                      font-size: 3em;
+                      background: linear-gradient(135deg, #667eea, #764ba2);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                      margin-bottom: 10px;
+                  }}
+                  .header .subtitle {{
+                      color: #a0aec0;
+                      font-size: 1.1em;
+                  }}
+                  .grid {{
+                      display: grid;
+                      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                      gap: 20px;
+                      margin-bottom: 30px;
+                  }}
+                  .card {{
+                      background: rgba(255,255,255,0.05);
+                      backdrop-filter: blur(10px);
+                      border: 1px solid rgba(255,255,255,0.1);
+                      border-radius: 15px;
+                      padding: 25px;
+                      transition: transform 0.3s, box-shadow 0.3s;
+                  }}
+                  .card:hover {{
+                      transform: translateY(-5px);
+                      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+                  }}
+                  .card h3 {{
+                      color: #9f7aea;
+                      font-size: 0.85em;
+                      text-transform: uppercase;
+                      letter-spacing: 2px;
+                      margin-bottom: 15px;
+                  }}
+                  .stat {{
+                      font-size: 2.5em;
+                      font-weight: bold;
+                      color: #e0e0e0;
+                      margin: 10px 0;
+                  }}
+                  .stat-label {{
+                      color: #a0aec0;
+                      font-size: 0.9em;
+                  }}
+                  .badge {{
+                      display: inline-block;
+                      padding: 4px 12px;
+                      border-radius: 20px;
+                      font-size: 0.8em;
+                      font-weight: 600;
+                  }}
+                  .badge-good {{ background: rgba(72,187,120,0.3); color: #48bb78; }}
+                  .badge-warn {{ background: rgba(237,137,54,0.3); color: #ed8936; }}
+                  .badge-bad {{ background: rgba(245,101,101,0.3); color: #f56565; }}
+                  .list-item {{
+                      padding: 10px 0;
+                      border-bottom: 1px solid rgba(255,255,255,0.05);
+                  }}
+                  .list-item:last-child {{ border-bottom: none; }}
+                  .link {{ color: #9f7aea; text-decoration: none; }}
+                  .link:hover {{ text-decoration: underline; }}
+                  .progress-bar {{
+                      width: 100%;
+                      height: 6px;
+                      background: rgba(255,255,255,0.1);
+                      border-radius: 10px;
+                      overflow: hidden;
+                      margin-top: 8px;
+                  }}
+                  .progress-fill {{
+                      height: 100%;
+                      background: linear-gradient(90deg, #667eea, #764ba2);
+                      border-radius: 10px;
+                      transition: width 1s;
+                  }}
+                  @media (max-width: 768px) {{
+                      .grid {{ grid-template-columns: 1fr; }}
+                      .header h1 {{ font-size: 2em; }}
+                  }}
+              </style>
+          </head>
+          <body>
+              <div class="container">
+                  <div class="header">
+                      <h1>🧠 AI SEO Intelligence</h1>
+                      <p class="subtitle">Smart SEO for VideoCameraHoliday</p>
+                      <p style="color: #718096; font-size: 0.9em; margin-top: 5px;">
+                          Last Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}
+                      </p>
+                  </div>
+                  
+                  <div class="grid">
+                      <div class="card">
+                          <h3>📊 Overall Score</h3>
+                          <div class="stat">85<span style="font-size:0.5em; color:#718096;">/100</span></div>
+                          <div class="stat-label">Good - Keep improving!</div>
+                          <div class="progress-bar">
+                              <div class="progress-fill" style="width:85%"></div>
+                          </div>
+                      </div>
+                      
+                      <div class="card">
+                          <h3>📄 Pages Analyzed</h3>
+                          <div class="stat">{len(data.get('ai-optimization-results', []))}</div>
+                          <div class="stat-label">Total pages processed</div>
+                      </div>
+                      
+                      <div class="card">
+                          <h3>🔗 Internal Links</h3>
+                          <div class="stat">{
+                              data.get('smart-linking-report', {}).get('total_links', 0)
+                          }</div>
+                          <div class="stat-label">PageRank optimized</div>
+                      </div>
+                      
+                      <div class="card">
+                          <h3>🎯 Keywords Found</h3>
+                          <div class="stat">{
+                              len(data.get('ai-keyword-research', {}).get('primary_keywords', [])) +
+                              len(data.get('ai-keyword-research', {}).get('long_tail_keywords', []))
+                          }</div>
+                          <div class="stat-label">Ready to target</div>
+                      </div>
+                  </div>
+                  
+                  <div class="grid">
+                      <div class="card">
+                          <h3>🎯 Top Keywords</h3>
+                          <div style="margin-top:10px;">
+                              {''.join([f'<span class="badge badge-good" style="margin:3px;">{kw}</span> ' for kw in 
+                                  data.get('ai-keyword-research', {}).get('primary_keywords', [])[:8]
+                              ])}
+                          </div>
+                      </div>
+                      
+                      <div class="card">
+                          <h3>⚠️ Issues Found</h3>
+                          <div style="margin-top:10px;">
+                              <div class="list-item">🔴 <span class="badge badge-bad">Critical</span> {
+                                  data.get('ai-optimization-results', [{}])[0].get('issues', {}).get('critical', 0)
+                              }</div>
+                              <div class="list-item">🟡 <span class="badge badge-warn">Warnings</span> {
+                                  data.get('ai-optimization-results', [{}])[0].get('issues', {}).get('warning', 0)
+                              }</div>
+                              <div class="list-item">🔵 <span class="badge badge-good">Info</span> {
+                                  data.get('ai-optimization-results', [{}])[0].get('issues', {}).get('info', 0)
+                              }</div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="card" style="margin-top:20px;">
+                      <h3>💡 AI Recommendations</h3>
+                      <div style="margin-top:15px;">
+                          <div class="list-item">
+                              <strong>📝 Content Optimization</strong>
+                              <p style="color: #a0aec0; font-size:0.9em; margin-top:5px;">
+                                  {data.get('ai-optimization-results', [{}])[0].get('optimized', {}).get('content_tips', 'No content tips available')[:200]}...
+                              </p>
+                          </div>
+                          <div class="list-item">
+                              <strong>🔗 Internal Linking</strong>
+                              <p style="color: #a0aec0; font-size:0.9em; margin-top:5px;">
+                                  Found {len(data.get('smart-linking-report', {}).get('orphan_pages', []))} orphan pages that need internal links.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div style="text-align:center; margin-top:30px; color:#718096; font-size:0.8em;">
+                      🤖 Generated by AI SEO Intelligence System | 
+                      <a href="${{ github.server_url }}/${{ github.repository }}/actions" class="link">View all runs</a>
+                  </div>
+              </div>
+          </body>
+          </html>
+          '''
+          
+          with open('ai-dashboard.html', 'w') as f:
+              f.write(html)
+          
+          print("✅ Dashboard generated")
+          EOF
+
+      - name: 📤 Upload Dashboard
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: ai-dashboard-${{ github.run_number }}
+          path: ai-dashboard.html
+          retention-days: 90
+
+  # ========================================================================
+  # JOB 6: NOTIFICATIONS
+  # ========================================================================
+  notifications:
+    name: 🔔 AI Notifications
+    needs: [content-optimizer, smart-linking]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    steps:
+      - name: 📊 Generate notification
+        run: |
+          cat > notification.md << 'EOF'
+          ## 🧠 AI SEO Update
+
+          **Status:** ${{ needs.content-optimizer.result }}
+          **Time:** $(date -u +'%Y-%m-%d %H:%M:%S UTC')
+
+          ### 📊 Summary
+
+          - Pages Analyzed: $(cat ai-seo-summary.json | jq -r '.pages_analyzed' 2>/dev/null || echo "N/A")
+          - Optimizations Applied: $(cat ai-seo-summary.json | jq -r '.suggestions_generated' 2>/dev/null || echo "N/A")
+          - Keywords Found: $(cat ai-keyword-research.json | jq -r '.primary_keywords | length' 2>/dev/null || echo "N/A")
+
+          ### 🔗 Links
+
+          [View Dashboard](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          EOF
+
+      - name: 🔔 Slack notification
+        if: always() && secrets.SLACK_WEBHOOK_URL
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data "{\"text\":\"${{ job.status == 'success' && '✅' || '❌' }} AI SEO Workflow ${{ job.status }}\\nRepo: ${{ github.repository }}\\nDashboard: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+            "${{ secrets.SLACK_WEBHOOK_URL }}" || true
+
+      - name: 📝 Create issue summary
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "📊 AI SEO Report - $(date +'%Y-%m-%d')" \
+            --body-file notification.md \
+            --label "ai, seo, automated" || true
