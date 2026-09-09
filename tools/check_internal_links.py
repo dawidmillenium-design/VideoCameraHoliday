@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate sitemap pages, internal anchors, and canonical URLs before deploy."""
 
-from __future__ import annotations
+from __future__ import annotations  # ✅ Correct spacing
 
 import argparse
 import json
