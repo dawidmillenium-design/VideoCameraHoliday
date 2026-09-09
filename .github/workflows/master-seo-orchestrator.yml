@@ -1,0 +1,468 @@
+name: 🚀 Master SEO Orchestrator
+
+on:
+  # Manual trigger for on-demand runs
+  workflow_dispatch:
+    inputs:
+      run_type:
+        description: 'Type of SEO run'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - quick-audit
+          - fix-only
+          - link-check-only
+      notify_on_success:
+        description: 'Send notification on success'
+        required: false
+        default: 'false'
+        type: boolean
+
+  # Scheduled weekly run (Monday 8 AM UTC) - respects free tier limits
+  schedule:
+    - cron: '0 8 * * 1'
+
+  # Run after pushes to main (with delay consideration)
+  push:
+    branches: [ main ]
+    paths:
+      - '**.html'
+      - '**.js'
+      - '**.py'
+      - '.github/workflows/**'
+
+# Prevent concurrent runs - critical for free tier
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name != 'schedule' }}
+
+permissions:
+  contents: write
+  actions: read
+  pages: read
+
+env:
+  # Cache optimization settings
+  PIP_CACHE_DIR: ~/.cache/pip
+  NPM_CONFIG_CACHE: ~/.npm
+
+jobs:
+  # ========================================================================
+  # PHASE 1: PRE-CHECK & VALIDATION
+  # ========================================================================
+  pre-check:
+    name: 🔍 Pre-Check Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      should_run_full: ${{ steps.check.outputs.should_run_full }}
+      run_type: ${{ steps.check.outputs.run_type }}
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: 🔍 Determine run type
+        id: check
+        run: |
+          echo "Determining run type..."
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            RUN_TYPE="${{ github.event.inputs.run_type }}"
+            echo "Manual trigger detected: $RUN_TYPE"
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            RUN_TYPE="full"
+            echo "Scheduled run: full audit"
+          else
+            RUN_TYPE="quick-audit"
+            echo "Push event: quick audit only"
+          fi
+
+          echo "run_type=$RUN_TYPE" >> $GITHUB_OUTPUT
+
+          # Determine if full run should execute
+          if [ "$RUN_TYPE" = "full" ] || [ "$RUN_TYPE" = "quick-audit" ]; then
+            echo "should_run_full=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run_full=false" >> $GITHUB_OUTPUT
+          fi
+
+          echo "✅ Run type determined: $RUN_TYPE"
+
+      - name: 📊 Log workflow info
+        run: |
+          echo "🚀 MASTER SEO ORCHESTRATOR"
+          echo "=========================="
+          echo "Event: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Run Type: ${{ steps.check.outputs.run_type }}"
+          echo ""
+
+  # ========================================================================
+  # PHASE 2: SEO AUDIT (Conditional based on run type)
+  # ========================================================================
+  seo-audit:
+    name: 📊 SEO Audit
+    needs: pre-check
+    if: needs.pre-check.outputs.should_run_full == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Node.js with cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install and cache dependencies
+        run: |
+          npm install cheerio axios
+          echo "✅ Dependencies installed and cached"
+
+      - name: 🔍 Run inline SEO audit
+        run: |
+          echo "Running comprehensive SEO audit..."
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const cheerio = require('cheerio');
+
+          const results = {
+            timestamp: new Date().toISOString(),
+            pages: [],
+            summary: { total: 0, critical: 0, warnings: 0, passed: 0 }
+          };
+
+          function auditPage(filePath) {
+            try {
+              const content = fs.readFileSync(filePath, 'utf8');
+              const \$ = cheerio.load(content);
+              const issues = [];
+
+              // Title check
+              const title = \$('title').text().trim();
+              if (!title) issues.push({ severity: 'critical', issue: 'Missing title' });
+              else if (title.length > 60) issues.push({ severity: 'warning', issue: 'Title too long' });
+
+              // Meta description
+              const desc = \$('meta[name=\"description\"]').attr('content');
+              if (!desc) issues.push({ severity: 'critical', issue: 'Missing description' });
+
+              // Canonical URL
+              if (!\$('link[rel=\"canonical\"]').attr('href')) {
+                issues.push({ severity: 'critical', issue: 'Missing canonical' });
+              }
+
+              // H1 heading
+              const h1s = \$('h1').length;
+              if (h1s === 0) issues.push({ severity: 'critical', issue: 'No H1' });
+              else if (h1s > 1) issues.push({ severity: 'warning', issue: 'Multiple H1s' });
+
+              return { filePath, issues };
+            } catch (e) {
+              return { filePath, error: e.message };
+            }
+          }
+
+          function walkDir(dir) {
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'assets') {
+                walkDir(fullPath);
+              } else if (file.endsWith('.html')) {
+                results.pages.push(auditPage(fullPath));
+              }
+            }
+          }
+
+          walkDir('.');
+
+          // Calculate summary
+          results.summary.total = results.pages.length;
+          results.pages.forEach(p => {
+            if (p.issues?.length === 0) results.summary.passed++;
+            p.issues?.forEach(i => {
+              if (i.severity === 'critical') results.summary.critical++;
+              else if (i.severity === 'warning') results.summary.warnings++;
+            });
+          });
+
+          fs.writeFileSync('seo-audit-report.json', JSON.stringify(results, null, 2));
+
+          console.log('📊 SEO AUDIT RESULTS');
+          console.log('=' .repeat(40));
+          console.log('Total pages:', results.summary.total);
+          console.log('Passed:', results.summary.passed);
+          console.log('Critical:', results.summary.critical);
+          console.log('Warnings:', results.summary.warnings);
+
+          if (results.summary.critical > 0) process.exit(1);
+          "
+        continue-on-error: true
+
+      - name: 📤 Upload SEO audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-${{ github.run_number }}
+          path: seo-audit-report.json
+          retention-days: 30
+          if-no-files-found: warn
+
+  # ========================================================================
+  # PHASE 3: BROKEN LINK CHECKER (Always runs)
+  # ========================================================================
+  broken-link-check:
+    name: 🔗 Broken Link Check
+    needs: pre-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Python with cache
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml
+
+      - name: 🔍 Validate internal links
+        id: link-check
+        run: |
+          echo "Starting link validation..."
+          if [ -f "tools/check_internal_links.py" ]; then
+            python tools/check_internal_links.py
+            echo "✅ Link validation completed"
+          else
+            echo "::warning::Link checker script not found"
+          fi
+        continue-on-error: true
+
+      - name: 📤 Upload link audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-audit-${{ github.run_number }}
+          path: |
+            link-audit-report.json
+            link-audit-summary.txt
+          retention-days: 30
+          if-no-files-found: warn
+
+  # ========================================================================
+  # PHASE 4: AUTO-FIX SEO ISSUES (Conditional)
+  # ========================================================================
+  auto-fix-seo:
+    name: 🔧 Auto-Fix SEO
+    needs: [pre-check, seo-audit, broken-link-check]
+    if: |
+      always() &&
+      (needs.pre-check.outputs.run_type == 'full' || needs.pre-check.outputs.run_type == 'fix-only')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🟢 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 🔧 Run available fix scripts
+        run: |
+          echo "Running SEO fix scripts..."
+
+          if [ -f "fix-canonicals.py" ]; then
+            echo "Fixing canonical URLs..."
+            python fix-canonicals.py || echo "⚠️ Canonical fix failed"
+          fi
+
+          if [ -f "fix-titles.py" ]; then
+            echo "Fixing titles..."
+            python fix-titles.py || echo "⚠️ Title fix failed"
+          fi
+
+          echo "✅ Fix scripts executed"
+        continue-on-error: true
+
+      - name: 💾 Commit fixes if any
+        id: commit
+        run: |
+          git config user.name "GitHub Actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+
+          if git diff --staged --quiet; then
+            echo "changes_made=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ No changes to commit"
+          else
+            git commit -m "chore: auto-fix SEO issues [skip ci]"
+            echo "changes_made=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📤 Push fixes
+        if: steps.commit.outputs.changes_made == 'true'
+        run: |
+          git push origin HEAD:${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ========================================================================
+  # PHASE 5: GENERATE SITEMAP (Full runs only)
+  # ========================================================================
+  generate-sitemap:
+    name: 🌐 Generate Sitemap
+    needs: [pre-check, broken-link-check]
+    if: needs.pre-check.outputs.run_type == 'full'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 🌐 Generate XML sitemap
+        run: |
+          echo "Generating sitemap.xml..."
+          python3 -c "
+          import os
+          from datetime import datetime
+
+          base_url = 'https://dawidmillenium-design.github.io/VideoCameraHoliday/'
+          html_files = []
+
+          for root, dirs, files in os.walk('.'):
+              if any(x in root for x in ['.git', 'node_modules', 'assets']):
+                  continue
+              for f in files:
+                  if f.endswith('.html'):
+                      filepath = os.path.join(root, f).lstrip('./')
+                      html_files.append(filepath)
+
+          print('<?xml version=\"1.0\" encoding=\"UTF-8\"?>')
+          print('<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">')
+
+          today = datetime.now().strftime('%Y-%m-%d')
+          for filepath in sorted(html_files):
+              url = base_url + filepath.replace('index.html', '').rstrip('/')
+              print(f'  <url>')
+              print(f'    <loc>{url}</loc>')
+              print(f'    <lastmod>{today}</lastmod>')
+              print(f'    <changefreq>weekly</changefreq>')
+              print(f'    <priority>0.8</priority>')
+              print(f'  </url>')
+
+          print('</urlset>')
+          " > sitemap.xml
+
+          echo "✅ Sitemap generated with $(grep -c '<url>' sitemap.xml) URLs"
+
+      - name: 📤 Upload sitemap
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitemap-${{ github.run_number }}
+          path: sitemap.xml
+          retention-days: 7
+
+  # ========================================================================
+  # PHASE 6: SUMMARY & NOTIFICATIONS
+  # ========================================================================
+  summary:
+    name: 📋 Workflow Summary
+    needs: [pre-check, seo-audit, broken-link-check, auto-fix-seo, generate-sitemap]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 📊 Generate workflow summary
+        run: |
+          echo "🚀 MASTER SEO WORKFLOW SUMMARY" > workflow-summary.txt
+          echo "==============================" >> workflow-summary.txt
+          echo "" >> workflow-summary.txt
+          echo "Date: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> workflow-summary.txt
+          echo "Repository: ${{ github.repository }}" >> workflow-summary.txt
+          echo "Branch: ${{ github.ref_name }}" >> workflow-summary.txt
+          echo "Commit: ${{ github.sha }}" >> workflow-summary.txt
+          echo "Run Type: ${{ needs.pre-check.outputs.run_type }}" >> workflow-summary.txt
+          echo "" >> workflow-summary.txt
+          echo "Job Results:" >> workflow-summary.txt
+          echo "  - SEO Audit: ${{ needs.seo-audit.result }}" >> workflow-summary.txt
+          echo "  - Link Check: ${{ needs.broken-link-check.result }}" >> workflow-summary.txt
+          echo "  - Auto-Fix: ${{ needs.auto-fix-seo.result }}" >> workflow-summary.txt
+          echo "  - Sitemap: ${{ needs.generate-sitemap.result }}" >> workflow-summary.txt
+          echo "" >> workflow-summary.txt
+          echo "Workflow Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> workflow-summary.txt
+
+          cat workflow-summary.txt
+
+      - name: 📤 Upload summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: workflow-summary-${{ github.run_number }}
+          path: workflow-summary.txt
+          retention-days: 30
+
+      - name: 🔔 Notify on failure
+        if: failure()
+        run: |
+          echo "::error::Master SEO Workflow FAILED!"
+          echo ""
+          echo "Repository: ${{ github.repository }}"
+          echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo ""
+          echo "Please check individual job logs for details."
+
+          # Slack notification
+          if [ -n "${{ secrets.SLACK_WEBHOOK_URL }}" ]; then
+            curl -X POST -H 'Content-type: application/json' \
+              --data "{\"text\":\"❌ Master SEO Workflow FAILED\\nRepo: ${{ github.repository }}\\nRun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+              "${{ secrets.SLACK_WEBHOOK_URL }}" || true
+          fi
+
+      - name: ✅ Notify on success
+        if: success() && github.event.inputs.notify_on_success == 'true'
+        run: |
+          echo "✅ Master SEO Workflow completed successfully!"
+
+          # Slack notification (if configured and requested)
+          if [ -n "${{ secrets.SLACK_WEBHOOK_URL }}" ]; then
+            curl -X POST -H 'Content-type: application/json' \
+              --data "{\"text\":\"✅ Master SEO Workflow SUCCESS\\nRepo: ${{ github.repository }}\\nRun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+              "${{ secrets.SLACK_WEBHOOK_URL }}" || true
+          fi
