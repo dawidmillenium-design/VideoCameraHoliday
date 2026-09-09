@@ -1,101 +1,74 @@
 ```
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env.bak/
+.venv/
+
 # Dependencies
 node_modules/
+julia-*/
+zig*/
 
-# Build artifacts
-dist/
-build/
-target/
-
-# Logs
-*.log
-
-# Environment files
-.env
-.env.local
-*.env.*
-
-# Editor/IDE files
+# IDE and editor files
 .vscode/
 .idea/
 *.swp
 *.swo
 *.tmp
 
-# Python specific
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
+# Logs
+*.log
+
+# Coverage reports
 .coverage
+htmlcov/
 .coverage.*
 .cache
-nosetests.xml
-coverage.xml
-*.cover
-*.db
-*.sqlite
-*.sqlite3
 
-# Node.js specific
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-node_modules/
-dist/
-build/
-coverage/
-.nyc_output/
-.jscpd/
-.mega-linter/
-.eslintcache
+# Environment variables
+.env
+.env.local
+*.env.*
 
 # OS generated files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
-desktop.ini
 
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.swp
-*.swo
+# MyPy cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+# Pytest cache
+.pytest_cache/
 
+# Gradle
+.gradle/
+build/
+
+# Target directories
+target/
 ```
