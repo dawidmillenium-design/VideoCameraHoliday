@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "id": "comp-2026-001",
+    "title_en": "DJI Osmo Pocket 4P vs. GoPro Hero 13 Black vs. Sony ZV-1 II: The Ultimate 2026 Travel Vlogging Camera Showdown",
+    "slug": "dji-osmo-pocket-4p-vs-gopro-hero-13-vs-sony-zv1-ii-travel-vlogging-comparison",
+    "author": "Dawid Millenium",
+    "publish_date": "2026-02-15",
+    "content_type": "comparison",
+    "target_languages": [
+      "en-US", "es-ES", "fr-FR", "de-DE", "ja-JP", 
+      "ko-KR", "zh-CN", "ar-SA", "hi-IN", "it-IT", 
+      "tr-TR", "ru-RU", "pl-PL", "th-TH"
+    ],
+    "word_count_target": 2500
+  },
+  "seo": {
+    "primary_keyword": "best travel vlogging camera 2026",
+    "secondary_keywords": [
+      "DJI Osmo Pocket 4P review",
+      "GoPro Hero 13 Black vs Sony ZV-1 II",
+      "compact vlogging camera for travel",
+      "low light travel camera",
+      "best action camera for vlogging"
+    ],
+    "search_intent": "commercial_investigation",
+    "meta_description_en": "Struggling to choose your 2026 travel vlogging camera? We tested the DJI Osmo Pocket 4P, GoPro Hero 13 Black, and Sony ZV-1 II in real-world conditions to find the ultimate winner.",
+    "focus_keyword_density": 1.5
+  },
+  "content_brief": {
+    "h1": "DJI Osmo Pocket 4P vs. GoPro Hero 13 Black vs. Sony ZV-1 II: The Ultimate 2026 Travel Vlogging Camera Showdown",
+    "introduction": {
+      "hook": "Travel vlogging has evolved, but choosing the right compact camera in 2026 is harder than ever. Should you prioritize ultimate stabilization, rugged durability, or low-light image quality?",
+      "thesis": "After testing these three top-tier cameras across diverse environments—from the humid night markets of Bangkok to the bright streets of Lisbon—we break down exactly which camera deserves a spot in your travel bag.",
+      "key_takeaways": [
+        "DJI Osmo Pocket 4P wins for ultimate portability and plug-and-play stabilization.",
+        "GoPro Hero 13 Black is the undisputed king of extreme sports and weather resistance.",
+        "Sony ZV-1 II offers the best low-light performance and cinematic depth-of-field."
+      ]
+    },
+    "outline": [
+      {
+        "h2": "1. Specs at a Glance: The 2026 Contenders",
+        "h3_points": [
+          "Sensor size and resolution comparison",
+          "Weight and physical dimensions (crucial for travel)",
+          "Battery life and charging options"
+        ],
+        "instruction": "Create a comparison table here. Use data from /data/cameras.json."
+      },
+      {
+        "h2": "2. Real-World Test Scenario A: Walking Tours & Street Vlogging",
+        "h3_points": [
+          "Stabilization test: Osmo's 3-axis gimbal vs. GoPro's HyperSmooth vs. Sony's Active Mode",
+          "Audio quality in windy environments",
+          "Ease of use while walking"
+        ],
+        "instruction": "Reference real-world testing in Lisbon and Bangkok. Emphasize EEAT (Experience)."
+      },
+      {
+        "h2": "3. Real-World Test Scenario B: Low-Light & Night Markets",
+        "h3_points": [
+          "Sensor performance in dim lighting",
+          "Autofocus speed in low light",
+          "Noise levels at high ISO"
+        ],
+        "instruction": "Highlight Sony ZV-1 II's larger sensor advantage here."
+      },
+      {
+        "h2": "4. Real-World Test Scenario C: Adventure & Weather Resistance",
+        "h3_points": [
+          "Waterproof capabilities without a housing",
+          "Durability against drops and dust",
+          "Performance in extreme cold/heat"
+        ],
+        "instruction": "Highlight GoPro Hero 13 Black's ruggedness."
+      },
+      {
+        "h2": "5. The Verdict: Which Camera Should You Buy?",
+        "h3_points": [
+          "Choose the DJI Osmo Pocket 4P if...",
+          "Choose the GoPro Hero 13 Black if...",
+          "Choose the Sony ZV-1 II if..."
+        ],
+        "instruction": "Provide clear, actionable buying advice based on traveler persona."
+      }
+    ],
+    "eeat_signals": {
+      "experience": "Mention specific testing locations (Bangkok, Lisbon, Alps). Use first-person plural ('we tested', 'our findings').",
+      "expertise": "Use correct technical terminology (3-axis gimbal, HyperSmooth 6.0, 1-inch sensor, f/1.8 aperture).",
+      "authoritativeness": "Link to official manufacturer specs and reputable third-party lab tests.",
+      "trustworthiness": "Clearly disclose if any gear was purchased vs. loaned. Provide current, accurate pricing."
+    }
+  },
+  "internal_linking_map": {
+    "outbound_links": [
+      {
+        "anchor_text": "DJI Osmo Pocket 4P full review",
+        "target_url": "/reviews/dji-osmo-pocket-4p.html",
+        "priority": "high"
+      },
+      {
+        "anchor_text": "GoPro Hero 13 Black in-depth analysis",
+        "target_url": "/reviews/gopro-hero-13-black.html",
+        "priority": "high"
+      },
+      {
+        "anchor_text": "Sony ZV-1 II detailed review",
+        "target_url": "/reviews/sony-zv-1-ii.html",
+        "priority": "high"
+      },
+      {
+        "anchor_text": "Best cameras for Southeast Asia travel",
+        "target_url": "/destinations/southeast-asia-camera-guide.html",
+        "priority": "medium"
+      },
+      {
+        "anchor_text": "Ultimate travel vlogging accessories guide",
+        "target_url": "/buying-guides/travel-vlogging-accessories.html",
+        "priority": "medium"
+      }
+    ],
+    "orphan_page_prevention": true
+  },
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "DJI Osmo Pocket 4P vs. GoPro Hero 13 Black vs. Sony ZV-1 II: The Ultimate 2026 Travel Vlogging Camera Showdown",
+        "author": {
+          "@type": "Person",
+          "name": "Dawid Millenium",
+          "url": "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html"
+        },
+        "datePublished": "2026-02-15",
+        "dateModified": "2026-02-15",
+        "publisher": {
+          "@type": "Organization",
+          "name": "VideoCameraHoliday"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which camera is best for beginners in travel vlogging?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The DJI Osmo Pocket 4P is the best choice for beginners due to its intuitive touchscreen interface, built-in 3-axis gimbal for effortless stabilization, and compact size."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the Sony ZV-1 II good for low-light vlogging?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the Sony ZV-1 II features a larger 1-inch sensor and a bright f/1.8-4.0 lens, making it significantly better for low-light environments like night markets or indoor vlogging compared to action cameras."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use the GoPro Hero 13 Black for regular vlogging?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While the GoPro Hero 13 Black excels in stabilization and durability, its ultra-wide lens and smaller sensor make it less ideal for traditional talking-head vlogging, especially in low light."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "media_requirements": {
+    "featured_image": {
+      "alt_text": "DJI Osmo Pocket 4P, GoPro Hero 13 Black, and Sony ZV-1 II cameras arranged on a travel map",
+      "dimensions": "1200x630",
+      "format": "webp"
+    },
+    "inline_images": [
+      {
+        "section": "Specs at a Glance",
+        "alt_text": "Comparison table showing weight, sensor size, and battery life of the three cameras",
+        "type": "infographic"
+      },
+      {
+        "section": "Real-World Test Scenario A",
+        "alt_text": "Side-by-side video frame comparison showing stabilization differences while walking",
+        "type": "screenshot"
+      }
+    ]
+  }
+}
