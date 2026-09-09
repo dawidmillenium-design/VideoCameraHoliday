@@ -1,0 +1,26 @@
+SEO INTERNAL LINK UPDATE LOG
+============================
+
+Files Scanned: 926
+Files Updated: 6
+
+DETAILS:
+
+[UPDATED] /workspace/mega-menu-footer.html
+  - Updated how-to/choose-memory-card-4k-video.html -> accessories/best-sd-cards-4k-video-2026.html
+
+[UPDATED] /workspace/MEGA_MENU_INTEGRATION_EXAMPLE.html
+  - Updated how-to/choose-memory-card-4k-video.html -> accessories/best-sd-cards-4k-video-2026.html
+
+[UPDATED] /workspace/mega-menu-nav.html
+  - Updated how-to/choose-memory-card-4k-video.html -> accessories/best-sd-cards-4k-video-2026.html
+
+[UPDATED] /workspace/accessories/best-travel-camera-external-mic-input-comparison.html
+  - Updated how-to/choose-memory-card-4k-video.html -> accessories/best-sd-cards-4k-video-2026.html
+
+[UPDATED] /workspace/guides/insta360-x4-travel-workflow-ipad-southeast-asia.html
+  - Updated guides/best-lightweight-tripods-hiking-travel.html -> accessories/best-lightweight-travel-tripods-stabilizers-2026.html
+
+[UPDATED] /workspace/destinations/action-camera-white-water-rafting-comparison.html
+  - Updated guides/best-sd-cards-4k-video-travel.html -> accessories/best-sd-cards-4k-video-2026.html
+  - Updated guides/best-lightweight-tripods-hiking-travel.html -> accessories/best-lightweight-travel-tripods-stabilizers-2026.html
