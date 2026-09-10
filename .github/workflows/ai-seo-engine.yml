@@ -1,0 +1,168 @@
+name: 🧠 AI SEO Content Engine
+
+on:
+  # Manual trigger for generating new articles
+  workflow_dispatch:
+    inputs:
+      article_topic:
+        description: 'Article topic/title'
+        required: true
+        default: 'Best Camera for Vlog in Dubai 2026'
+      target_language:
+        description: 'Target language (en-US for all 10)'
+        required: true
+        default: 'en-US'
+        type: choice
+        options:
+          - en-US (All 10 Languages)
+          - es-ES
+          - fr-FR
+          - de-DE
+          - ja-JP
+          - ko-KR
+          - zh-CN
+          - pl-PL
+          - th-TH
+          - it-IT
+      word_count:
+        description: 'Target word count'
+        required: false
+        default: '2000'
+      content_type:
+        description: 'Content type'
+        required: true
+        default: 'comparison'
+        type: choice
+        options:
+          - review
+          - comparison
+          - buying-guide
+          - how-to
+          - destination-guide
+
+  # Scheduled trigger for Content Gap Analysis (Every Monday at 10 AM UTC)
+  schedule:
+    - cron: '0 10 * * 1'
+
+env:
+  PYTHON_VERSION: '3.11'
+  DEEPSEEK_MODEL: 'deepseek-chat'
+
+jobs:
+  # ========================================================================
+  # JOB 1: Content Gap Analyzer (Runs on Schedule)
+  # ========================================================================
+  analyze-content-gaps:
+    name: 🔍 AI Content Gap Analyzer
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    timeout-minutes: 15
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: pip install openai beautifulsoup4 lxml
+
+      - name: 🧠 Analyze Content Gaps
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python scripts/analyze_content_gaps.py
+
+      - name: 💾 Commit Gap Report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content-gap-report.json
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update AI content gap analysis report [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          fi
+
+  # ========================================================================
+  # JOB 2: Multi-Language Article Generator (Runs on Manual Trigger)
+  # ========================================================================
+  generate-articles:
+    name:  Generate Multi-Language Articles
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    timeout-minutes: 60
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: pip install openai python-dotenv beautifulsoup4 lxml requests
+
+      - name: 🔐 Validate API Key
+        run: |
+          if [ -z "${{ secrets.DEEPSEEK_API_KEY }}" ]; then
+            echo "::error::DEEPSEEK_API_KEY secret is not set"
+            exit 1
+          fi
+
+      - name: 🌍 Generate Articles
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          ARTICLE_TOPIC: ${{ github.event.inputs.article_topic }}
+          TARGET_LANGUAGE: ${{ github.event.inputs.target_language }}
+          WORD_COUNT: ${{ github.event.inputs.word_count }}
+          CONTENT_TYPE: ${{ github.event.inputs.content_type }}
+        run: python scripts/generate_article_multilang.py
+
+      # --- NEW: SEO VALIDATION STEP ---
+      - name: 🔍 Validate SEO Quality
+        run: python scripts/validate_seo_quality.py
+        continue-on-error: true # Warns but doesn't block publishing
+
+      # --- NEW: SMART INTERNAL LINKING STEP ---
+      - name: 🔗 Generate Internal Links
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python scripts/generate_internal_links.py
+        continue-on-error: true
+
+      - name: ⚙️ Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name:  Commit Generated Articles
+        run: |
+          git add generated-content/
+          if ! git diff --staged --quiet; then
+            git commit -m "feat: generate AI articles - ${{ github.event.inputs.article_topic }} [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+            echo "✅ Articles committed and pushed"
+          else
+            echo "⚠️ No changes to commit"
+          fi
+
+      - name: 📤 Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: "generated-articles-${{ github.run_number }}"
+          path: generated-content/
+          retention-days: 30
