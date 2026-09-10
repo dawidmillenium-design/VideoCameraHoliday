@@ -39,7 +39,7 @@ jobs:
     timeout-minutes: 60
     
     steps:
-      - name:  Checkout repository
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -75,7 +75,7 @@ jobs:
         run: |
           python scripts/generate_article_multilang.py
 
-      - name:  Configure Git
+      - name: ⚙️ Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -85,6 +85,10 @@ jobs:
           git add generated-content/
           if ! git diff --staged --quiet; then
             git commit -m "feat: generate AI articles in 10 languages - ${{ github.event.inputs.article_topic }} [skip ci]"
+            
+            # 🛠️ FIX: Pull latest changes and rebase to prevent push rejection
+            git pull --rebase origin main
+            
             git push origin main
             echo "✅ Articles committed and pushed"
           else
@@ -110,4 +114,4 @@ jobs:
           echo "📁 Check the 'generated-content/' directory for all language versions."
           echo ""
           echo "### Generated Files:"
-          ls -la generated-content/
+          ls -la generated-content/ || echo "No files found in generated-content/"
