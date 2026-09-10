@@ -1,0 +1,38 @@
+name: Generate AI Knowledge Base
+
+on:
+  workflow_dispatch: # This lets you run it manually by clicking a button
+  push:
+    branches:
+      - main # This runs it automatically when you push to main
+
+jobs:
+  build-knowledge-base:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Download your repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Install Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. Run the Python script you saved in Step 1
+      - name: Run AI Knowledge Base Scanner
+        run: |
+          python scripts/ai_knowledge_base.py \
+            --root . \
+            --output ai-knowledge-base.json \
+            --exclude .git node_modules .github dist build .venv __pycache__ \
+            --verbose
+
+      # 4. Save the resulting JSON file so you can download it
+      - name: Upload Knowledge Base Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-knowledge-base
+          path: ai-knowledge-base.json
