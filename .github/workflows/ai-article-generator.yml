@@ -79,7 +79,8 @@ jobs:
         run: |
           python scripts/organize_generated_articles.py
         env:
-          DRY_RUN: "false"  # Set to "true" for testing
+          # ⚠️ TIP: Change to "true" for your first test run to see where files will go without actually moving them
+          DRY_RUN: "false" 
 
       - name: ⚙️ Configure Git
         run: |
@@ -88,9 +89,11 @@ jobs:
 
       - name: 💾 Commit Generated Articles
         run: |
-          git add generated-content/
+          # ✅ FIX: Use 'git add .' to catch files moved OUT of generated-content/ into their final folders
+          git add .
+          
           if ! git diff --staged --quiet; then
-            git commit -m "feat: generate AI articles in 10 languages - ${{ github.event.inputs.article_topic }} [skip ci]"
+            git commit -m "feat: generate and organize AI articles in 10 languages - ${{ github.event.inputs.article_topic }} [skip ci]"
             
             # 🛠️ FIX: Pull latest changes and rebase to prevent push rejection
             git pull --rebase origin main
@@ -105,7 +108,18 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: "generated-articles-multilang-${{ github.run_number }}"
-          path: generated-content/
+          # Upload the whole repo state or just the target folders to verify
+          path: |
+            comparisons/
+            es-ES/
+            fr-FR/
+            de-DE/
+            ja-JP/
+            ko-KR/
+            zh-CN/
+            pl-PL/
+            th-TH/
+            it-IT/
           retention-days: 30
 
       - name: ✅ Success Summary
@@ -117,7 +131,5 @@ jobs:
           echo "**Word Count Target:** ${{ github.event.inputs.word_count }} per language"
           echo "**Content Type:** ${{ github.event.inputs.content_type }}"
           echo ""
-          echo "📁 Check the 'generated-content/' directory for all language versions."
-          echo ""
-          echo "### Generated Files:"
-          ls -la generated-content/ || echo "No files found in generated-content/"
+          echo "✅ Files have been automatically organized into their correct language/category folders."
+          echo "✅ Changes have been committed and pushed to the main branch."
