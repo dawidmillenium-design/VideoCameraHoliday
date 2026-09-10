@@ -1,163 +1,45 @@
-name: SEO & Quality Audit
+name: SEO & Content Quality Audit
 
 on:
   push:
     branches: [ main ]
-    paths:
-      - '**.html'
-      - '**.json'
-      - '**.py'
-      - 'sitemap.xml'
   pull_request:
     branches: [ main ]
-    paths:
-      - '**.html'
-      - '**.json'
-      - '**.py'
-      - 'sitemap.xml'
-  workflow_dispatch:  # Allow manual trigger
-  schedule:
-    - cron: '0 0 * * 1'  # Run weekly on Monday at midnight UTC
-
-# 🔑 CRITICAL: Permissions required for github-script to comment on PRs and create issues
-permissions:
-  contents: read
-  issues: write
-  pull-requests: write
 
 jobs:
-  audit:
+  seo-audit:
     runs-on: ubuntu-latest
-    name: Run SEO & Quality Audit
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'  # Speeds up subsequent runs
-      
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install beautifulsoup4
-      
-      - name: Run SEO Audit
-        id: audit
+          pip install beautifulsoup4 lxml
+
+      - name: Run Internal Link Audit
         run: |
-          echo "🔍 Running SEO & Quality Audit..."
+          echo "Checking for broken links, orphans, and canonical mismatches..."
           python internal_link_audit.py
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          OUTPUT_FORMAT: markdown
-      
-      - name: Read audit report
-        id: report
+
+      - name: Run Hreflang Consistency Validator
         run: |
-          if [ -f "audit-report.md" ]; then
-            # Use a unique delimiter to avoid conflicts with markdown content
-            echo "report<<MARKDOWN_EOF" >> $GITHUB_OUTPUT
-            cat audit-report.md >> $GITHUB_OUTPUT
-            echo "MARKDOWN_EOF" >> $GITHUB_OUTPUT
-          else
-            echo "report=⚠️ No audit report was generated." >> $GITHUB_OUTPUT
-          fi
-      
-      - name: Comment PR with results
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const report = `${{ steps.report.outputs.report }}`;
-            if (report.includes('No audit report was generated')) {
-              console.log('No report to comment.');
-              return;
-            }
-            
-            // Check if comment already exists to avoid spamming the PR
-            const comments = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-            });
-            
-            const botComment = comments.data.find(comment => 
-              comment.user.type === 'Bot' && 
-              comment.body.includes('📊 SEO & Quality Audit Report')
-            );
-            
-            if (botComment) {
-              await github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: botComment.id,
-                body: report
-              });
-            } else {
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                body: report
-              });
-            }
-      
-      - name: Upload audit report artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: seo-audit-reports
-          path: |
-            audit-report.md
-            link-audit-report.json
-          retention-days: 30
-          if-no-files-found: warn
-      
-      - name: Create issue for review (Scheduled/Manual runs)
-        if: github.event_name != 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const issueBody = `## ⚠️ SEO & Quality Audit Completed
-            
-            The automated SEO and quality audit has run for this repository. 
-            
-            ### 📋 Recommended Actions:
-            1. Download and review the detailed audit reports from the [Workflow Artifacts](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}).
-            2. Focus on files with the lowest scores or missing meta tags.
-            3. Address critical SEO issues (missing canonicals, hreflang inconsistencies).
-            4. Improve EEAT signals and internal linking based on the optimization results.
-            
-            ---
-            *This issue was automatically created by the SEO audit workflow.*`;
-            
-            // Check if a similar issue is already open to avoid duplicates
-            const issues = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-              labels: 'seo-audit'
-            });
-            
-            const existingIssue = issues.data.find(issue => 
-              issue.title.includes('SEO & Quality Audit')
-            );
-            
-            if (existingIssue) {
-              await github.rest.issues.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: existingIssue.number,
-                body: issueBody
-              });
-            } else {
-              await github.rest.issues.create({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                title: '⚠️ SEO & Quality Audit - Review Recommended',
-                body: issueBody,
-                labels: ['seo-audit', 'enhancement']
-              });
-            }
+          echo "Checking hreflang tag consistency..."
+          python scripts/validate_hreflang_consistency.py
+
+      - name: Run Content-Quality Guardrail
+        run: |
+          echo "Checking internal link context for misleading or inaccurate claims..."
+          python scripts/validate_link_context_quality.py
+
+      - name: Check Git Formatting
+        run: |
+          echo "Checking for trailing whitespace and merge conflict markers..."
+          git diff --check
