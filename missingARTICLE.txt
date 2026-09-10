@@ -1,0 +1,239 @@
+table of only the missing articles from your 100-article site architecture:
+
+#
+File
+Title
+Category
+9
+reviews/insta360-go-3s-review.html
+Insta360 GO 3S Review
+Reviews
+16
+reviews/sony-a7c-ii-review.html
+Sony A7C II Review
+Reviews
+18
+reviews/gopro-hero-12-review.html
+GoPro Hero 12 Review (Budget Option)
+Reviews
+20
+reviews/canon-r50-review.html
+Canon EOS R50 Review
+Reviews
+31
+guides/best-camera-for-solo-travel.html
+Best Camera for Solo Travel
+Buying Guides
+32
+guides/best-action-camera-kids.html
+Best Action Cameras for Kids
+Buying Guides
+33
+guides/best-camera-for-food-travel.html
+Best Camera for Food & Culinary Travel
+Buying Guides
+34
+guides/best-night-video-camera-travel.html
+Best Night Video Camera for Travel
+Buying Guides
+35
+guides/best-camera-for-wildlife-safari.html
+Best Camera for Wildlife Safari Holidays
+Buying Guides
+42
+how-to/sunset-golden-hour-filming-tips.html
+Sunset & Golden Hour Filming Tips
+How-To
+43
+how-to/travel-vlog-seo-titles-tags.html
+Travel Vlog SEO: Titles, Tags & Thumbnails
+How-To
+44
+how-to/store-camera-gear-traveling-airplane.html
+How to Store Camera Gear When Traveling by Airplane
+How-To
+45
+how-to/cinematic-travel-videos-budget.html
+Cinematic Travel Videos on a Budget
+How-To
+46
+how-to/travel-video-lighting-guide.html
+Travel Video Lighting Guide: Natural Light Mastery
+How-To
+47
+how-to/solo-travel-vlogging-film-yourself.html
+Solo Travel Vlogging: How to Film Yourself
+How-To
+48
+how-to/clean-camera-sand-salt-water.html
+How to Clean Camera Gear After Beach Holidays
+How-To
+49
+how-to/extend-battery-life-cold-weather.html
+How to Extend Battery Life in Cold Weather
+How-To
+50
+how-to/shoot-vertical-horizontal-same-trip.html
+How to Shoot Vertical & Horizontal on the Same Trip
+How-To
+52
+how-to/drone-laws-every-country-travel.html
+Drone Laws for Every Country: Travel Guide
+How-To
+53
+how-to/instagram-reels-from-holiday-footage.html
+How to Make Instagram Reels from Holiday Footage
+How-To
+54
+how-to/youtube-shorts-travel-editing.html
+YouTube Shorts Travel Editing Workflow
+How-To
+55
+how-to/tiktok-travel-content-strategy.html
+TikTok Travel Content Strategy for 2026
+How-To
+56
+accessories/essential-camera-accessories.html
+Essential Camera Accessories for Holiday Videographers
+Accessories
+57
+accessories/best-camera-bags-travel.html
+Best Camera Bags for Travel 2026
+Accessories
+58
+accessories/best-microphones-travel-vlogging.html
+Best Microphones for Travel Vlogging
+Accessories
+59
+accessories/best-memory-card-4k-holiday.html
+Best Memory Cards for 4K Holiday Video
+Accessories
+60
+accessories/waterproof-cases-beach-holidays.html
+Best Waterproof Cases for Beach Holidays
+Accessories
+61
+accessories/best-tripods-travel-vlogging.html
+Best Tripods for Travel Vlogging
+Accessories
+62
+accessories/best-portable-lights-travel.html
+Best Portable Lights for Travel Video
+Accessories
+64
+accessories/best-power-banks-camera-gear.html
+Best Power Banks for Camera Gear
+Accessories
+65
+accessories/best-lens-filters-travel.html
+Best Lens Filters for Travel Photography
+Accessories
+66
+accessories/best-camera-straps-holiday.html
+Best Camera Straps for Active Holidays
+Accessories
+67
+accessories/best-cleaning-kit-travel-camera.html
+Best Cleaning Kits for Travel Cameras
+Accessories
+73
+destinations/best-cameras-tropical-rainforest.html
+Best Cameras for Tropical Rainforest Holidays
+Destinations
+74
+destinations/best-cameras-cruise-holidays.html
+Best Cameras for Cruise Holidays
+Destinations
+75
+destinations/best-cameras-road-trips.html
+Best Cameras for Road Trips
+Destinations
+76
+destinations/best-cameras-camping-holidays.html
+Best Cameras for Camping Holidays
+Destinations
+77
+destinations/best-cameras-motorcycle-tours.html
+Best Cameras for Motorcycle Tours
+Destinations
+78
+destinations/best-cameras-safari-africa.html
+Best Cameras for African Safari
+Destinations
+79
+destinations/best-cameras-northern-lights.html
+Best Cameras for Northern Lights
+Destinations
+80
+destinations/best-cameras-southeast-asia.html
+Best Cameras for Southeast Asia Travel
+Destinations
+81
+destinations/best-cameras-european-cities.html
+Best Cameras for European City Hopping
+Destinations
+82
+destinations/best-cameras-island-hopping.html
+Best Cameras for Island Hopping
+Destinations
+84
+editing/24fps-vs-120fps-ai-music-sync.html
+The 24fps vs. 120fps Holiday Edit: AI Music Sync
+Editing
+87
+editing/lut-packs-travel-videos-free.html
+Free LUT Packs for Travel Videos
+Editing
+88
+editing/sound-design-travel-videos.html
+Sound Design for Travel Videos
+Editing
+89
+editing/multi-camera-editing-sync.html
+Multi-Camera Editing & Sync for Travel
+Editing
+90
+editing/create-travel-video-montage.html
+How to Create a Travel Video Montage
+Editing
+91
+editing/ai-editing-tools-travel-2026.html
+AI Editing Tools for Travel Videos 2026
+Editing
+92
+editing/export-settings-youtube-instagram.html
+Export Settings for YouTube & Instagram
+Editing
+93
+comparisons/gopro-vs-dji-travel.html
+GoPro vs DJI for Travel: Which Action Camera?
+Comparisons
+94
+comparisons/insta360-x5-vs-gopro-hero-13.html
+Insta360 X5 vs GoPro Hero 13
+Comparisons
+95
+comparisons/iphone-vs-dedicated-camera.html
+iPhone vs Dedicated Camera for Travel
+Comparisons
+96
+comparisons/gopro-hero-13-vs-dji-action-5.html
+GoPro Hero 13 vs DJI Action 5 Pro
+Comparisons
+97
+comparisons/insta360-x4-vs-x5-upgrade.html
+Insta360 X4 vs X5: Worth the Upgrade?
+Comparisons
+98
+comparisons/sony-zv-1-ii-vs-canon-v10.html
+Sony ZV-1 II vs Canon PowerShot V10
+Comparisons
+99
+comparisons/dji-pocket-3-vs-action-5.html
+DJI Osmo Pocket 3 vs Action 5 Pro
+Comparisons
+100
+comparisons/gopro-max-2-vs-insta360-x5.html
+GoPro Max 2 vs Insta360 X5
+Comparisons
+Total Missing: 58 articles
