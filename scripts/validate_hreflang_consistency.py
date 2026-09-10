@@ -47,7 +47,10 @@ def main():
         languages={p["lang"] for p in self_canonical if p["lang"]}
         is_translation_group=len(self_canonical)>1 and len(languages)>1
         if is_translation_group:
-            expected=set(languages)|{"x-default"}
+            alternate_sets=[set(page["alternates"]) for page in self_canonical]
+            expected=set().union(*alternate_sets)
+            if "x-default" not in expected:
+                issues.append(f"{slug}: Missing x-default from translation cluster")
             for page in self_canonical:
                 found=set(page["alternates"])
                 if found!=expected:
