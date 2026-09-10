@@ -5,13 +5,21 @@ on:
     branches: [ main ]
     paths:
       - '**.html'
+      - '**.json'
   pull_request:
     branches: [ main ]
     paths:
       - '**.html'
+      - '**.json'
   workflow_dispatch:  # Allow manual trigger
   schedule:
-    - cron: '0 0 * * 1'  # Run weekly on Monday at midnight
+    - cron: '0 0 * * 1'  # Run weekly on Monday at midnight UTC
+
+# 🔑 CRITICAL: Permissions required for github-script to comment on PRs and create issues
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
   audit:
@@ -26,26 +34,33 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'  # Speeds up subsequent runs
       
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install beautifulsoup4
+          pip install beautifulsoup4 lxml openai python-dotenv
       
       - name: Run SEO Audit
         id: audit
         run: |
-          python scripts/seo-audit.py
+          echo "🔍 Running SEO & Quality Audit..."
+          python scripts/seo_audit.py
         env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OUTPUT_FORMAT: markdown
       
       - name: Read audit report
         id: report
         run: |
-          REPORT=$(cat audit-report.md)
-          echo "report<<EOF" >> $GITHUB_OUTPUT
-          echo "$REPORT" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          if [ -f "audit-report.md" ]; then
+            # Use a unique delimiter to avoid conflicts with markdown content
+            echo "report<<MARKDOWN_EOF" >> $GITHUB_OUTPUT
+            cat audit-report.md >> $GITHUB_OUTPUT
+            echo "MARKDOWN_EOF" >> $GITHUB_OUTPUT
+          else
+            echo "report=⚠️ No audit report was generated." >> $GITHUB_OUTPUT
+          fi
       
       - name: Comment PR with results
         if: github.event_name == 'pull_request'
@@ -53,8 +68,12 @@ jobs:
         with:
           script: |
             const report = `${{ steps.report.outputs.report }}`;
+            if (report.includes('No audit report was generated')) {
+              console.log('No report to comment.');
+              return;
+            }
             
-            // Check if comment already exists
+            // Check if comment already exists to avoid spamming the PR
             const comments = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -67,7 +86,6 @@ jobs:
             );
             
             if (botComment) {
-              // Update existing comment
               await github.rest.issues.updateComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -75,7 +93,6 @@ jobs:
                 body: report
               });
             } else {
-              // Create new comment
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -84,23 +101,38 @@ jobs:
               });
             }
       
-      - name: Upload audit report artifact
+      - name: Upload audit report artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: seo-audit-report
-          path: audit-report.md
+          name: seo-audit-reports
+          path: |
+            audit-report.md
+            ai-seo-summary.json
+            ai-optimization-results.json
+            ai-knowledge-base.json
+            hreflang-validation-report.json
           retention-days: 30
+          if-no-files-found: warn
       
-      - name: Create issue for low scores
-        if: steps.audit.outputs.average_score < 70
+      - name: Create issue for review (Scheduled/Manual runs)
+        if: github.event_name != 'pull_request'
         uses: actions/github-script@v7
         with:
           script: |
-            const avgScore = parseFloat('${{ steps.audit.outputs.average_score }}');
-            const filesScanned = '${{ steps.audit.outputs.files_scanned }}';
-            const errors = '${{ steps.audit.outputs.errors }}';
+            const issueBody = `## ⚠️ SEO & Quality Audit Completed
             
-            // Check if similar issue already exists
+            The automated SEO and quality audit has run for this repository. 
+            
+            ### 📋 Recommended Actions:
+            1. Download and review the detailed audit reports from the [Workflow Artifacts](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}).
+            2. Focus on files with the lowest scores or missing meta tags.
+            3. Address critical SEO issues (missing canonicals, hreflang inconsistencies).
+            4. Improve EEAT signals and internal linking based on the optimization results.
+            
+            ---
+            *This issue was automatically created by the SEO audit workflow.*`;
+            
+            // Check if a similar issue is already open to avoid duplicates
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -109,32 +141,10 @@ jobs:
             });
             
             const existingIssue = issues.data.find(issue => 
-              issue.title.includes('Low SEO & Quality Scores')
+              issue.title.includes('SEO & Quality Audit')
             );
             
-            const issueBody = `## ⚠️ Low SEO & Quality Scores Detected
-            
-            **Average Score:** ${avgScore.toFixed(1)}%
-            **Files Scanned:** ${filesScanned}
-            **Errors:** ${errors}
-            
-            The automated SEO and quality audit found that the average score is below 70%. 
-            
-            ### Recommended Actions:
-            1. Review the detailed audit report in the workflow artifacts
-            2. Focus on files with the lowest scores
-            3. Address critical SEO issues (missing meta tags, alt text)
-            4. Improve EEAT signals (author info, publication dates)
-            5. Add more internal links and improve anchor text
-            6. Fix HTML quality issues (semantic structure, accessibility)
-            
-            [View Full Audit Report](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})
-            
-            ---
-            *This issue was automatically created by the SEO audit workflow.*`;
-            
             if (existingIssue) {
-              // Update existing issue
               await github.rest.issues.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -142,41 +152,11 @@ jobs:
                 body: issueBody
               });
             } else {
-              // Create new issue
               await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                title: '⚠️ Low SEO & Quality Scores - Action Required',
+                title: '⚠️ SEO & Quality Audit - Review Recommended',
                 body: issueBody,
                 labels: ['seo-audit', 'enhancement']
               });
-            }
-      
-      - name: Close resolved issues
-        if: steps.audit.outputs.average_score >= 70
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const issues = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-              labels: 'seo-audit'
-            });
-            
-            for (const issue of issues.data) {
-              if (issue.title.includes('Low SEO & Quality Scores')) {
-                await github.rest.issues.createComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: issue.number,
-                  body: '✅ SEO scores have improved! The average score is now above 70%. Closing this issue.'
-                });
-                await github.rest.issues.update({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: issue.number,
-                  state: 'closed'
-                });
-              }
             }
