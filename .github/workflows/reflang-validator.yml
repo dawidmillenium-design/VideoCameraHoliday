@@ -1,0 +1,66 @@
+name: 🌐 Multi-Language Hreflang & Canonical Validator
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**/*.html'
+  workflow_dispatch:
+  schedule:
+    # Run every Sunday at 3 AM UTC to catch any manual errors
+    - cron: '0 3 * * 0'
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  validate-multilang-seo:
+    name: Validate Hreflang & Canonicals
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 lxml
+
+      - name: 🔍 Run Hreflang Validator
+        run: python scripts/validate_hreflang_consistency.py
+
+      - name: 📊 Show Validation Summary
+        run: |
+          if [ -f "hreflang-validation-report.json" ]; then
+            echo "## 🌐 Hreflang Validation Summary" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            cat hreflang-validation-report.json | python -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          print(f\"**Total Article Groups Checked:** {data['total_groups']}\")
+          print(f\"**Consistent Groups:** {data['consistent_groups']}\")
+          print(f\"**Inconsistent Groups (Errors):** {len(data['issues'])}\")
+          if data['issues']:
+              print(\"\\n### ⚠️ Issues Found:\")
+              for issue in data['issues'][:10]: # Show top 10
+                  print(f\"- **{issue['slug']}**: {issue['reason']}\")
+          " >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: 📤 Upload Detailed Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "hreflang-report-${{ github.run_number }}"
+          path: hreflang-validation-report.json
+          retention-days: 14
