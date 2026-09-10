@@ -8,13 +8,13 @@ on:
       - '**.json'
       - '**.py'
       - 'sitemap.xml'
-      - '**.py'
-      - 'sitemap.xml'
   pull_request:
     branches: [ main ]
     paths:
       - '**.html'
       - '**.json'
+      - '**.py'
+      - 'sitemap.xml'
   workflow_dispatch:  # Allow manual trigger
   schedule:
     - cron: '0 0 * * 1'  # Run weekly on Monday at midnight UTC
