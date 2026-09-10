@@ -1,0 +1,145 @@
+name: 🔧 Auto-Fix Critical SEO Issues
+
+on:
+  workflow_dispatch:
+    inputs:
+      fix_missing_titles:
+        description: 'Fix missing title tags'
+        required: false
+        default: 'true'
+        type: boolean
+      fix_missing_descriptions:
+        description: 'Fix missing meta descriptions'
+        required: false
+        default: 'true'
+        type: boolean
+      fix_missing_canonicals:
+        description: 'Fix missing canonical URLs'
+        required: false
+        default: 'true'
+        type: boolean
+      fix_missing_h1:
+        description: 'Fix missing H1 headings'
+        required: false
+        default: 'true'
+        type: boolean
+      create_backups:
+        description: 'Create .bak backup files before modifying'
+        required: false
+        default: 'true'
+        type: boolean
+      dry_run:
+        description: 'Test mode - show what would be fixed without making changes'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  auto-fix-seo:
+    name: Auto-Fix SEO Issues
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name:  Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 lxml
+
+      - name: 🔍 Check for SEO audit report
+        id: check-report
+        run: |
+          if [ -f "seo-audit-report.json" ]; then
+            echo "report_exists=true" >> $GITHUB_OUTPUT
+            echo "✅ Found seo-audit-report.json"
+          else
+            echo "report_exists=false" >> $GITHUB_OUTPUT
+            echo "⚠️ No seo-audit-report.json found. Run SEO Audit first."
+          fi
+
+      - name: 🔧 Run Auto-Fix Script
+        if: steps.check-report.outputs.report_exists == 'true'
+        env:
+          FIX_TITLES: ${{ github.event.inputs.fix_missing_titles }}
+          FIX_DESCRIPTIONS: ${{ github.event.inputs.fix_missing_descriptions }}
+          FIX_CANONICALS: ${{ github.event.inputs.fix_missing_canonicals }}
+          FIX_H1: ${{ github.event.inputs.fix_missing_h1 }}
+          CREATE_BACKUPS: ${{ github.event.inputs.create_backups }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+        run: python scripts/auto_fix_seo_issues.py
+
+      - name: 📊 Show Fix Summary
+        run: |
+          if [ -f "seo-fix-summary.json" ]; then
+            echo "## 🔧 SEO Auto-Fix Summary" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            cat seo-fix-summary.json | python -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          print(f\"**Total Issues Found:** {data['total_issues']}\")
+          print(f\"**Fixed:** {data['fixed']}\")
+          print(f\"**Skipped:** {data['skipped']}\")
+          print(f\"**Errors:** {data['errors']}\")
+          print()
+          print('### Breakdown by Issue Type:')
+          for issue_type, count in data['by_type'].items():
+              print(f\"- {issue_type}: {count}\")
+          " >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ No fix summary generated"
+          fi
+
+      - name: ⚙️ Configure Git
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name:  Commit SEO Fixes
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git add *.html
+          git add **/*.html
+          if ! git diff --staged --quiet; then
+            git commit -m "fix: auto-fix critical SEO issues (titles, descriptions, canonicals, H1s) [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+            echo "✅ SEO fixes committed and pushed"
+          else
+            echo "⚠️ No changes to commit"
+          fi
+
+      - name: 📤 Upload Fix Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "seo-fix-report-${{ github.run_number }}"
+          path: |
+            seo-fix-summary.json
+            seo-fix-details.json
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: ✅ Success Summary
+        run: |
+          echo "## 🎉 SEO Auto-Fix Complete!"
+          echo ""
+          echo "**Mode:** ${{ github.event.inputs.dry_run == 'true' && 'DRY RUN (no changes made)' || 'LIVE (changes applied)' }}"
+          echo "**Backups Created:** ${{ github.event.inputs.create_backups }}"
+          echo ""
+          echo "Check the 'seo-fix-summary.json' artifact for detailed results."
