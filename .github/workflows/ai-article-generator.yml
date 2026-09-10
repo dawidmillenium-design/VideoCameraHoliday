@@ -75,6 +75,12 @@ jobs:
         run: |
           python scripts/generate_article_multilang.py
 
+      - name: 🗂️ Organize Generated Articles
+        run: |
+          python scripts/organize_generated_articles.py
+        env:
+          DRY_RUN: "false"  # Set to "true" for testing
+
       - name: ⚙️ Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
