@@ -8,8 +8,7 @@ Usage:
     python scripts/ai_knowledge_base.py \
         --root . \
         --output ai-knowledge-base.json \
-        --langs en es fr de it pt pl nl ja ko \
-        --exclude .git node_modules .github dist build
+        --exclude .git node_modules .github dist build .venv __pycache__
 """
 
 from __future__ import annotations
@@ -28,8 +27,6 @@ from typing import Any
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-
-LANG_DIR_PATTERN = re.compile(r"^[a-z]{2}(-[A-Z]{2})?$")  # en, en-US, pt-BR ...
 
 # Common stopwords so keyword extraction isn't polluted
 STOPWORDS = {
@@ -181,11 +178,28 @@ def extract_keywords(text: str, top_n: int = 15) -> list[str]:
     return [w for w, _ in counts.most_common(top_n)]
 
 
+# ---------------------------------------------------------------------------
+# Language detection (UPDATED FOR STEP 2)
+# ---------------------------------------------------------------------------
+
 def detect_language(rel_path: Path) -> str:
-    """Infer language code from the first folder if it matches en / en-US."""
-    if rel_path.parts and LANG_DIR_PATTERN.match(rel_path.parts[0]):
-        return rel_path.parts[0]
-    return "en"
+    """
+    Infer standard language code from the first folder.
+    Normalizes variants like de-DE, de, ja-JP, jp to a single standard code.
+    """
+    if not rel_path.parts:
+        return "en"
+    
+    first_part = rel_path.parts[0].lower()
+    
+    # Split by hyphen to get the base language (e.g., "de-de" -> "de")
+    base_lang = first_part.split('-')[0]
+    
+    # Special case for 'jp' which is a common misnomer for 'ja'
+    if base_lang == 'jp':
+        return 'ja'
+        
+    return base_lang
 
 
 def page_slug(rel_path: Path) -> str:
