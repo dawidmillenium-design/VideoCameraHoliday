@@ -1,0 +1,205 @@
+{
+  "mode": "live",
+  "files_processed": 14,
+  "files_modified": 0,
+  "links_fixed": 0,
+  "fixes_applied": [
+    {
+      "file": "guides/canon-r50-vs-canon-g7x3.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/contact/": "privacy.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-travel-camera-2026.html": "guides/best-hybrid-travel-camera-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-360.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-action-camera.html": "generated-content/comparisons/best-camera-for-food-&-culinary-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-compact.html": "fr-FR/best-compact-camera-for-travel-vlogs-in-europe.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-gimbal.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-mirrorless.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide-vlogging.html": "guides/best-gimbals-travel-vlogging-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-g7x3-vs-sony-rx100.html": "comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-sony-zv-e10.html": "comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/destination-guide-beach.html": "how-to/clean-camera-sand-salt-water.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/canon-menu-setup.html": "MEGA_MENU_INTEGRATION_EXAMPLE.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/color-grading-travel.html": "editing/color-grading-travel-videos.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/filming-techniques.html": "how-to/index2.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/travel-photography-tips.html": "how-to/filming-travel-videos-without-crowds.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/howto/video-editing-basics.html": "editing/color-grading-travel-videos.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/privacy-policy/": "privacy.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/best-compact-cameras-2026.html": "guides/best-compact-cameras-city-breaks.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/canon-eos-r50-review.html": "interviews/canon-eos-r50-v-creator-kit-test.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/canon-g7x-mark-iii-review.html": "guides/insta360-x4-vs-canon-g7x3.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/canon-rf-lenses-guide.html": "start-here.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-action-4-review.html": "pl-PL/dji-osmo-action-4-test.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/gopro-hero-12-review.html": "reviews/gopro-hero-12-review.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/sony-zv-e10-review.html": "reviews/sony-zv-e10-ii-night-market-review.html"
+      }
+    },
+    {
+      "file": "guides/canon-r50-vs-dji-action4.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-360-camera.html": "guides/best-hybrid-travel-camera-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/budget-camera-guide.html": "city-through-the-lens/bangkok-interview-preview.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/camera-settings-travel.html": "guides/travel-video-camera-settings-beginners.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/color-grading-basics.html": "editing/color-grading-travel-videos.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/stabilization-tips.html": "how-to/filming-travel-videos-without-crowds.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/travel-filming-tips.html": "how-to/filming-travel-videos-without-crowds.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/privacy-policy.html": "privacy.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/canon-r50-review.html": "reviews/canon-r50-review.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-action-4-review.html": "pl-PL/dji-osmo-action-4-test.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/gopro-hero-12.html": "comparisons/gopro-hero-12-vs-akaso-brave-7.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/sony-zv-e10.html": "comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html"
+      }
+    },
+    {
+      "file": "guides/canon-r50-vs-gopro-12.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/canon-r50-vs-insta360-x4.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/dji-action4-vs-canon-g7x3.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/dji-action4-vs-insta360-x4.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/gopro-12-vs-canon-g7x3.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/gopro-12-vs-dji-action4.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/gopro-12-vs-insta360-x4.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/sony-zv-e10-vs-canon-g7x3.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/sony-zv-e10-vs-canon-r50.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/sony-zv-e10-vs-dji-action4.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/sony-zv-e10-vs-gopro-12.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    },
+    {
+      "file": "guides/sony-zv-e10-vs-insta360-x4.html",
+      "fixes": {
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-vlogging-camera.html": "guides/best-vlogging-camera-beginners-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/about.html": "interviews/how-to-travel-with-camera-gear-on-plane-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-action-camera.html": "destinations/best-action-camera-white-water-rafting.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/buying-guide.html": "generated-content/comparisons/accessories-best-lens-filters-travel.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/vlogging-audio-tips.html": "th-TH/best-vlogging-camera-for-solo-travel-europe-2026.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/dji-osmo-pocket-3.html": "th-TH/dji-osmo-pocket-3-vs-action-5-pro.html",
+        "https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/insta360-x4.html": "comparisons/insta360-x4-vs-gopro-hero-13-skiing-snowboarding.html"
+      }
+    }
+  ]
+}
