@@ -1,4 +1,4 @@
-name: 🤖 AI Article Generator (Multi-Language)
+name:  AI Article Generator (Multi-Language)
 
 on:
   workflow_dispatch:
@@ -45,7 +45,7 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
 
-      - name: 🐍 Set up Python
+      - name:  Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
@@ -56,7 +56,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install openai python-dotenv beautifulsoup4 lxml requests
 
-      - name: 🔐 Validate API Key
+      - name:  Validate API Key
         run: |
           if [ -z "${{ secrets.DEEPSEEK_API_KEY }}" ]; then
             echo "::error::DEEPSEEK_API_KEY secret is not set"
@@ -79,8 +79,7 @@ jobs:
         run: |
           python scripts/organize_generated_articles.py
         env:
-          # ⚠️ TIP: Change to "true" for your first test run to see where files will go without actually moving them
-          DRY_RUN: "false" 
+          DRY_RUN: "false"
 
       - name: ⚙️ Configure Git
         run: |
@@ -89,13 +88,11 @@ jobs:
 
       - name: 💾 Commit Generated Articles
         run: |
-          # ✅ FIX: Use 'git add .' to catch files moved OUT of generated-content/ into their final folders
           git add .
-          
           if ! git diff --staged --quiet; then
             git commit -m "feat: generate and organize AI articles in 10 languages - ${{ github.event.inputs.article_topic }} [skip ci]"
             
-            # 🛠️ FIX: Pull latest changes and rebase to prevent push rejection
+            # 🛠️ CRITICAL FIX: Pull latest changes and rebase to prevent push rejection
             git pull --rebase origin main
             
             git push origin main
@@ -104,11 +101,10 @@ jobs:
             echo "⚠️ No changes to commit"
           fi
 
-      - name: 📤 Upload Generated Content
+      - name:  Upload Generated Content
         uses: actions/upload-artifact@v4
         with:
           name: "generated-articles-multilang-${{ github.run_number }}"
-          # Upload the whole repo state or just the target folders to verify
           path: |
             comparisons/
             es-ES/
@@ -121,6 +117,7 @@ jobs:
             th-TH/
             it-IT/
           retention-days: 30
+          if-no-files-found: warn
 
       - name: ✅ Success Summary
         run: |
