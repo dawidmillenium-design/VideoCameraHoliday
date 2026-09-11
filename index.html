@@ -75,8 +75,34 @@
         .footer-languages a:hover, .footer-languages a:focus-visible { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
         .footer-languages a[aria-current="page"] { color: #e94560; font-weight: 700; pointer-events: none; }
 
+        /* ===== WhatsApp share button ===== */
+        .share-bar { display: flex; justify-content: center; padding: 2rem 1rem 0.5rem; }
+        .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #25D366; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 0.95rem; transition: background 0.3s, transform 0.15s; }
+        .share-btn:hover, .share-btn:focus-visible { background: #1ebe57; transform: translateY(-1px); outline: 2px solid #25D366; outline-offset: 2px; }
+        .share-btn svg { width: 20px; height: 20px; flex-shrink: 0; fill: currentColor; }
+
+        /* ===== Cookie consent banner ===== */
+        .cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; background: #111; border-top: 2px solid #e94560; color: #e0e0e0; padding: 16px 20px; z-index: 9998; display: none; box-shadow: 0 -4px 20px rgba(0,0,0,0.5); }
+        .cookie-banner.is-visible { display: block; }
+        .cookie-banner-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+        .cookie-banner p { margin: 0; font-size: 0.9rem; color: #ccc; flex: 1 1 320px; }
+        .cookie-banner a { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
+        .cookie-banner-actions { display: flex; gap: 8px; flex-shrink: 0; }
+        .cookie-banner button { padding: 8px 18px; border-radius: 20px; border: none; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: background 0.2s; }
+        .cookie-banner .accept { background: #e94560; color: #fff; }
+        .cookie-banner .accept:hover { background: #ff6b6b; }
+        .cookie-banner .reject { background: transparent; color: #ccc; border: 1px solid #444; }
+        .cookie-banner .reject:hover { background: #222; color: #fff; }
+
+        /* ===== Per-post affiliate disclosure ===== */
+        .affiliate-disclosure { font-size: 0.85rem; color: #bbb; background: rgba(233,69,96,0.08); border-left: 3px solid #e94560; padding: 10px 14px; border-radius: 4px; margin-bottom: 1.5rem; }
+        .affiliate-disclosure strong { color: #e94560; }
+
         @media (max-width: 600px) {
             .lang-bar-inner { font-size: 0.72rem; gap: 0.1rem 0.5rem; padding: 5px 10px; }
+            .cookie-banner-inner { flex-direction: column; align-items: stretch; }
+            .cookie-banner-actions { justify-content: stretch; }
+            .cookie-banner-actions button { flex: 1; }
         }
     </style>
 
@@ -163,6 +189,20 @@
 <body>
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ===== COOKIE CONSENT BANNER ===== -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+        <div class="cookie-banner-inner">
+            <p>
+                We use cookies and third-party embeds (YouTube) to improve your experience and analyze traffic.
+                Read our <a href="/VideoCameraHoliday/privacy/">Privacy Policy</a>.
+            </p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="reject" id="cookieReject">Reject</button>
+                <button type="button" class="accept" id="cookieAccept">Accept All</button>
+            </div>
+        </div>
+    </div>
 
     <!-- ===== LANGUAGE BAR (top) ===== -->
     <div class="lang-bar">
@@ -453,6 +493,12 @@
 
     <!-- ===== MAIN CONTENT ===== -->
     <article class="container" id="main-content">
+
+        <!-- Per-post affiliate disclosure (FTC / Amazon compliant) -->
+        <p class="affiliate-disclosure">
+            <strong>Disclosure:</strong> This page contains affiliate links. If you buy through them, I may earn a commission at no extra cost to you. As an Amazon Associate, I earn from qualifying purchases.
+        </p>
+
         <p><strong>Holiday Video Camera is an independent travel‑camera review site where every recommendation comes from filming real trips, not reading spec sheets.</strong> If you want one answer fast: for most travelers in 2026, the <a class="content-link" href="./reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a> is the best all‑round holiday video camera, the <a class="content-link" href="./reviews/gopro-hero-13-review.html">GoPro Hero 13</a> is the best for beach and adventure, and your <a class="content-link" href="./reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a> is already better than you think. Every pick below links to a full field review.</p>
 
         <div class="takeaways">
@@ -638,6 +684,20 @@
 
     <a href="camera-tests.html" style="color:#e94560; font-weight:bold; display:block; text-align:center; margin-top:2rem;">🎥 View Real‑World Camera Tests (Maldives, Vietnam, Zanzibar)</a>
 
+    <!-- ===== WHATSAPP SHARE ===== -->
+    <div class="share-bar">
+        <a class="share-btn"
+           href="https://wa.me/?text=Check%20out%20Holiday%20Video%20Camera%20%E2%80%94%20real%20travel%20camera%20reviews%20from%20actual%20trips%3A%20https%3A%2F%2Fdawidmillenium-design.github.io%2FVideoCameraHoliday%2F"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Share this site on WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Share on WhatsApp
+        </a>
+    </div>
+
     <!-- ===== FOOTER (full 7-column) ===== -->
     <footer class="site-footer">
         <div class="footer-container">
@@ -706,9 +766,12 @@
                 </ul>
             </section>
             <section class="footer-section">
-                <h4>ℹ️ About</h4>
+                <h4>ℹ️ About &amp; Legal</h4>
                 <ul>
                     <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
+                    <li><a href="/VideoCameraHoliday/privacy/">Privacy Policy</a></li>
+                    <li><a href="/VideoCameraHoliday/terms/">Terms of Service</a></li>
+                    <li><a href="/VideoCameraHoliday/impressum/">Impressum</a></li>
                     <li><a href="/VideoCameraHoliday/">Home</a></li>
                     <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
                 </ul>
@@ -743,6 +806,34 @@
             if (nonCritical) { nonCritical.media = 'all'; }
         })();
     </script>
+
+    <!-- Cookie consent logic -->
+    <script>
+        (function() {
+            var STORAGE_KEY = 'hvc-cookie-consent';
+            var banner = document.getElementById('cookieBanner');
+            if (!banner) return;
+
+            var stored = null;
+            try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+            if (!stored) {
+                // Show after a short delay so it doesn't jump in immediately
+                setTimeout(function() { banner.classList.add('is-visible'); }, 800);
+            }
+
+            function setConsent(value) {
+                try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
+                banner.classList.remove('is-visible');
+            }
+
+            var acceptBtn = document.getElementById('cookieAccept');
+            var rejectBtn = document.getElementById('cookieReject');
+            if (acceptBtn) acceptBtn.addEventListener('click', function() { setConsent('accepted'); });
+            if (rejectBtn) rejectBtn.addEventListener('click', function() { setConsent('rejected'); });
+        })();
+    </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var toggleBtn = document.querySelector('.mobile-menu-toggle');
