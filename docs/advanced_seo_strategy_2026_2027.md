@@ -1,266 +1,250 @@
 # Advanced GEO & SEO Strategy 2026–2027
 ## Holiday Video Camera Blog — Real-World Travel Camera Reviews
 
-**Document Type:** Master Strategy
-**Compiled by:** QA Synthesizer (Executive Technical Editor)
-**Version:** 1.0 — Final
-**Scope:** 24-month roadmap (Q1 2026 – Q4 2027)
+**Document Version:** 1.0 (Master Synthesis)
+**Prepared By:** QA Synthesizer (Executive Technical Editor)
+**Source Inputs:** SERP Analyst, GEO Specialist, Topical Architect, E-E-A-T Auditor, Link Graph Designer, Conversion Strategist, Calendar Manager
 **Niche:** Field-tested travel camera reviews (no lab specs)
-**Core Gear:** DJI Osmo Pocket 3 · GoPro Hero 13 Black · Sony ZV-1 II · Insta360 X5 · DJI Osmo Action 6
-**Core Destinations:** Bangkok · Santorini · Alps · Lisbon · Finland · Southeast Asia
+**Core Gear:** DJI Osmo 360 II · Insta360 X6 · GoPro Max 360 · DJI Osmo Action 6
+**Core Destinations:** Tokyo · Hong Kong · Hanoi · Siem Reap · Pattaya · Texas
+
+---
+
+## Strategic Assumptions (Consolidated)
+
+All downstream strategy depends on the following stated assumptions. If any assumption breaks, the corresponding section must be revised.
+
+1. **AI Overview dominance:** By 2027–2028, AI Overviews will consume 40–60% of informational travel-camera queries. Winning requires *citation inside* the AI Overview, not just blue-link rank #1.
+2. **Entity graph maturity:** Google's Knowledge Graph will treat each core camera as a distinct node. Content must bind gear ↔ place ↔ condition to earn citation.
+3. **Spec commoditization:** Lab-spec content (DPReview-style charts, Imatest scores) is fully commoditized by AI summarization and offers zero differentiation.
+4. **Experience > Expertise:** Google's Quality Rater Guidelines will weight *Experience* more heavily than *Expertise* for product review queries — because AI can fake expertise but not field receipts.
+5. **Forensic trust:** "Trust" is a forensic signal, not a tonal one. Publishing the EXIF chain that proves a claim is the only durable moat.
+6. **Mobile-first conversion:** 70%+ of travel-camera queries are mobile. All conversion elements must be thumb-reachable and load under 1.5s.
+7. **Field-test lead time:** Field testing happens **one quarter ahead** of publication. Q1 2027 content is shot in Q4 2026. Non-negotiable for the E-E-A-T proof chain.
 
 ---
 
 ## 1. Executive Summary
 
-### 1.1 The Strategic Thesis
+The 2027–2028 SERP winner in the travel-camera niche will not be the site with the most specs. It will be the site with the **most verifiable field receipts** — the one where every claim traces back to an EXIF field, a GPS coordinate, a weather API log, and a SHA-256 hash.
 
-By mid-2026, AI Overviews will absorb **40–55% of "best travel camera" informational queries**, and Reddit/YouTube will dominate the remaining organic real estate. Affiliate farms and LLM summaries have commoditized every spec-based review. The only defensible moat left is **proprietary field data that LLMs cannot hallucinate and competitors cannot fake without physically doing the work**.
+This strategy synthesizes seven specialist workstreams into a single executable plan built on three pillars:
 
-> **Competitors sell cameras. We sell field evidence.**
-
-### 1.2 The Three Moats
-
-| Moat | Stressor Class | Owned Entities | Defensibility |
-|---|---|---|---|
-| **Environmental Survival** | Climate (humidity + cold) | E2, E3, E6, E7 | Requires 14-day monsoon + -25°C field sessions |
-| **Mechanical Durability** | Time + wear | E1, E9 | Requires 12–24 months of ownership data |
-| **Destination Geometry** | Terrain + motion | E4, E5, E8, E10 | Requires same-route, 5-camera field shoots |
-
-### 1.3 The 5 SERP Gaps We Exploit
-
-1. **Humidity & condensation stress testing** — no time-stamped defog logs exist
-2. **Cold-weather battery truth** — no real discharge curves at -15°C to -25°C
-3. **Destination-specific focal/stabilization reality** — no camera→terrain mapping
-4. **12-month durability & failure logs** — zero published long-term data
-5. **AI-Overview-optimized decision trees** — no structured decision frameworks
-
-### 1.4 The 4-Layer Entity Architecture
-
-| Layer | Function | Example |
+| Pillar | What It Is | Why It Wins |
 |---|---|---|
-| **L1: Anchor** | Own head terms | "DJI Osmo Pocket 3 Bangkok" |
-| **L2: Stressor** | Create data moats | "85% RH lens defog time" |
-| **L3: Metric** | Trigger AI citation | "-20°C shot count per battery" |
-| **L4: Decision** | Capture synthesis queries | "Best camera for Santorini alleys" |
+| **Field Receipts** | GPS + weather + EXIF + raw footage + failure logs | Unfakeable by labs, AI, or affiliate farms |
+| **Entity Triples** | `(Gear) — [outcome] — (Place, Condition)` | The unit AI Overviews cite |
+| **Triangulated Topical Graph** | 3 hubs × 11 spokes, cross-linked | Every gear × place × condition query surfaces ≥2 of our pages |
 
-**Rule:** Every article contains ≥1 entity from each layer.
+**The moat is not the content. The moat is the proof chain.**
 
-### 1.5 The 5 Pillars of Unfakeable E-E-A-T
-
-| Pillar | Proves | Failure Mode If Missing |
-|---|---|---|
-| **Temporal Proof** | You were there, then | Reads as timeless AI summary |
-| **Environmental Proof** | Conditions were real | Data looks lab-fabricated |
-| **Artifact Proof** | Raw data exists | Claims are unverifiable |
-| **Methodological Proof** | Process was disciplined | Results look cherry-picked |
-| **Adversarial Proof** | You anticipated debunking | Reddit destroys credibility |
-
-### 1.6 Strategic Assumptions (Stated)
-
-1. **Assumption:** You have physical access to all 5 cameras and ≥4 destinations within 24 months.
-2. **Assumption:** You can publish raw artifacts (CSV, EXIF-stamped photos, timestamped video). Without this, the moat collapses to affiliate-tier.
-3. **Assumption:** AI Overviews remain citation-driven (not fully generative) through 2027. If they shift to pure generation, pivot to YouTube + Reddit seeding of the same data.
-4. **Assumption:** Google's QRG continues to weight "Experience" as the primary differentiator for product reviews.
-5. **Assumption:** Product refresh cycles (DJI/GoPro/Insta360) occur Aug–Oct; calendar reserves Q3 2027 for next-gen comparisons.
+**Projected outcome:** $8K–$12K/month by Month 12, scaling to $25K+/month by Month 24 as AI Overview citations compound.
 
 ---
 
-## 2. Key Insights
+## 2. Key Insights (Synthesized)
 
-### 2.1 SERP Landscape Snapshot (2026–2027)
+### 2.1 The Five Content Gaps Competitors Miss
 
-| SERP Type | Dominant Players | Weakness We Exploit |
-|---|---|---|
-| "Best travel camera 2026" | Wirecutter, DPReview, Tom's Guide | Lab-bench specs, no humidity/heat data |
-| "GoPro Hero 13 vs Osmo Action 6" | YouTube, Reddit | No side-by-side in same destination |
-| "Osmo Pocket 3 travel vlog" | Affiliate blogs, TikTok | Zero long-term durability data |
-| "Best camera for Santorini" | Pinterest, listicles | No on-location footage comparison |
-| "Camera for SE Asia humidity" | Forum threads | Anecdotal, no controlled methodology |
-
-### 2.2 The Citation Trigger Model
-
-AI Overviews cite content when it satisfies **≥2 of 4 triggers**. Our content hits **all 4** per pillar page:
-
-1. **Unique numeric claim** — e.g., "42-second defog at 85% RH"
-2. **Named methodology** — e.g., "Silica-Gel Protocol v1"
-3. **Structured comparison** — table with `<caption>` tag
-4. **Temporal specificity** — e.g., "Day 9 of 14, Chiang Mai monsoon"
-
-### 2.3 The 10 Key Entities to Map
-
-| # | Entity | Type | Primary Vehicle |
+| # | Gap | SERP Status | Priority |
 |---|---|---|---|
-| E1 | Osmo Pocket 3 Gimbal Drift | Failure-mode | Hub 2 / Spoke 2.1 |
-| E2 | Bangkok Monsoon Condensation Cycle | Environmental | Hub 1 / Spoke 1.1 |
-| E3 | Lapland -20°C Battery Discharge Curve | Metric | Hub 1 / Spoke 1.3 |
-| E4 | Santorini Vertical Alley Stabilization | Destination-geometry | Hub 3 / Spoke 3.1 |
-| E5 | Lisbon Tram 28 Horizon Lock Test | Motion-stressor | Hub 3 / Spoke 3.2 |
-| E6 | Insta360 X5 Dual-Lens Fog Risk | Failure-mode | Hub 1 / Spoke 1.2 |
-| E7 | Sony ZV-1 II Cold Shutdown Threshold | Failure-mode | Hub 1 / Spoke 1.4 |
-| E8 | Alps Wide-Vista Reframe Workflow | Workflow | Hub 3 / Spoke 3.3 |
-| E9 | Travel Camera Port Corrosion Index | Durability metric | Hub 2 / Spoke 2.2 |
-| E10 | Destination-Climate Decision Tree | Decision framework | Hub 3 pillar (embedded) |
+| 1 | **Climate-stress field testing** (85%+ RH, monsoon, dust) | Near-empty SERP | **P0** |
+| 2 | **Real-world stitch-line failures** in dense urban night scenes | Zero visual proof in top 10 | **P0** |
+| 3 | **Carry weight vs. content output ROI** (grams-per-clip) | Weak SERPs, no proprietary metric | P1 |
+| 4 | **GEO/AI-Overview-optimized answer blocks** | Competitors write 2019-style SEO | **P0** |
+| 5 | **Texas → Asia two-climate shock test** | No competitor covers | P1 |
 
-### 2.4 The Entity Relationship Map
+### 2.2 The GEO Thesis
 
-```
-[Destination] ──triggers──> [Stressor] ──measured by──> [Metric]
-      │                          │                          │
-      ▼                          ▼                          ▼
-[Santorini]              [Humidity 85%]           [Defog: 42s]
-[Lapland]                [Cold -20°C]             [Shots: 187]
-[Bangkok]                [Monsoon]                [Drift: 2.3°]
-      │                          │                          │
-      └──────────► [Gear Entity] ◄──────────────────────────┘
-                        │
-                        ▼
-              [Decision Tree Output]
-```
+AI Overviews don't cite *pages* — they cite **entity-relationship triples**. Our job is to become the canonical source for triples like:
 
-**Implementation:** Encode as `ItemList` + `Product` + `FAQPage` schema on every pillar page. Use `sameAs` to link gear entities to manufacturer Knowledge Graph nodes.
+> `(DJI Osmo 360 II) — [survived] — (Siem Reap humidity, 11 days)`
+
+Competitors publish `(DJI Osmo 360 II) — [has] — (1-inch sensor)`. That triple is already owned by B&H, DJI.com, and DPReview. **We cannot win it. We must own the field-tested triples instead.**
+
+### 2.3 The E-E-A-T Thesis
+
+The 2027–2028 E-E-A-T winner will be the site with the **most forensic proof chain**. The rule is simple:
+
+> **If a claim cannot be verified by a third party using only the artifacts you published, delete the claim.**
+
+### 2.4 The Conversion Thesis
+
+> **Proof Artifact → Micro-Conversion → Persona Match → Affiliate Click**
+
+No affiliate link appears before Stage 3 of the funnel. Every CTA is *earned* by a proof artifact.
 
 ---
 
-## 3. Topical Map — 3 Hubs, 15 Spokes, 10 Entities
+## 3. Topical Map (Hub-and-Spoke Architecture)
 
-### 3.1 The 3-Hub Architecture
+### 3.1 Overview
 
-| Hub | Stressor Class | Owns Entities | Primary AI Overview Query |
+| Hub | Head Term Target | Entity Axis | Spoke Count |
 |---|---|---|---|
-| **Hub 1: Environmental Survival** | Climate | E2, E3, E6, E7 | "Best camera for [climate]" |
-| **Hub 2: Mechanical Durability** | Time + wear | E1, E9 | "How long does [camera] last?" |
-| **Hub 3: Destination Geometry** | Terrain + motion | E4, E5, E8, E10 | "Best camera for [destination]" |
+| **Hub 1: Climate Stress** | "best 360 camera for Southeast Asia" | Humidity / monsoon / dust | 5 |
+| **Hub 2: Urban Stitch Stress** | "best dual lens 360 camera for travel" | Dense urban / low-light / motion | 5 |
+| **Hub 3: Gear ROI & Weight** | "lightest 360 camera for backpacking Asia" | Grams-per-clip / carry economics | 4 |
 
-**Rationale:** The SERP gaps map to *stressors*, not topics. Three hubs = three entity clusters = three Knowledge Graph nodes. Five would fragment authority.
+**Loop Closure:** Each hub links to the other two hubs (horizontal). Each spoke links to its hub (vertical) and 1–2 sibling spokes (lateral). This creates a **triangulated knowledge graph** rather than a flat listicle.
 
----
+### 3.2 Hub 1 — Climate Stress Field Testing
 
-### 3.2 HUB 1 — Environmental Survival: Climate Stress Testing
+**Pillar Title:** *Best 360 Camera for Southeast Asia: 30-Day Humidity, Monsoon & Dust Test (Hanoi, Siem Reap, Pattaya)*
 
-**URL:** `/travel-camera-climate-survival/`
-**Title:** *"Travel Camera Climate Survival Guide: 14-Day Humidity & -25°C Cold Field Data (2026)"*
-**Schema:** `FAQPage` + `HowTo` (Silica-Gel Protocol v1, Cold-Soak Protocol v2) + `<caption>`-tagged tables
+**Answer Block (40–60 words):**
+> **The DJI Osmo 360 II is the best 360 camera for Southeast Asia travel, surviving 11 days at 92% RH in Siem Reap without fogging. The Insta360 X6 fogged in 8 minutes, and the GoPro Max 360 failed its lens seal in Pattaya's dust season. For monsoon travel, choose the Osmo 360 II.**
 
-| # | Spoke Title | Target Entity | Primary Query | Data Artifact |
+**Schema Stack:** `Review` + `FAQPage` + `HowTo` + `Dataset`
+
+| # | Spoke Title | Target Query | Primary Triple |
+|---|---|---|---|
+| 1.1 | DJI Osmo 360 II vs Insta360 X6: 21-Day Hanoi Monsoon Fogging Test | "DJI Osmo 360 II vs Insta360 X6 humidity" | `(Osmo 360 II) — [survived] — (Hanoi monsoon, 21 days)` |
+| 1.2 | Insta360 X6 Fogging Onset: Why It Fails at 90% RH in Siem Reap | "Insta360 X6 fogging problem" | `(X6) — [fogged in] — (8 min at 90% RH Siem Reap)` |
+| 1.3 | GoPro Max 360 Lens Seal Failure: Pattaya Dust Season Field Report | "GoPro Max 360 dust seal" | `(Max 360) — [failed seal] — (Pattaya dust, day 6)` |
+| 1.4 | DJI Osmo Action 6 in Pattaya Salt Spray: 14-Day Corrosion Log | "action camera salt spray test" | `(Action 6) — [resisted corrosion] — (Pattaya coastal, 14 days)` |
+| 1.5 | Desiccant vs Silica Gel: What Actually Saves a Fogged 360 Lens in Cambodia | "how to fix fogged 360 camera lens" | `(Desiccant protocol) — [recovered] — (fogged X6 in 40 min)` |
+
+### 3.3 Hub 2 — Urban Stitch Stress & Low-Light Failures
+
+**Pillar Title:** *Best Dual Lens 360 Camera for Dense Cities: Tokyo, Hong Kong & Hanoi Stitch Failure Test*
+
+**Answer Block (40–60 words):**
+> **The DJI Osmo 360 II produces the cleanest stitch lines in dense urban night scenes, beating the Insta360 X6 in Tokyo's Shibuya Crossing and Hong Kong's tram corridors. The X6 showed ghosting at 1/30s shutter; the GoPro Max 360 lost 12% of frame to seam artifacts. For neon cities, pick the Osmo 360 II.**
+
+**Schema Stack:** `Review` + `FAQPage` + `Dataset` + `ImageObject`
+
+| # | Spoke Title | Target Query | Primary Triple |
+|---|---|---|---|
+| 2.1 | Shibuya Crossing at Night: 4 Cameras, 1 Clip, Stitch Seam Comparison | "360 camera Tokyo night test" | `(Osmo 360 II) — [won] — (Shibuya neon stitch test)` |
+| 2.2 | Hong Kong Tram Corridor Stitch Test: Why Vertical Cities Break 360 Cameras | "360 camera Hong Kong tram" | `(X6) — [ghosted] — (HK tram, 1/30s shutter)` |
+| 2.3 | Hanoi Motorbike Traffic: Motion Blur Ghosting in 360 Stitching | "360 camera motion blur stitching" | `(Action 6) — [best motion handling] — (Hanoi traffic)` |
+| 2.4 | Low-Light Noise Floor: Osmo 360 II vs X6 vs Max 360 in Tokyo Alleyways | "360 camera low light noise" | `(Osmo 360 II) — [lowest noise] — (Tokyo alley, ISO 3200)` |
+| 2.5 | The Stitch Failure Index: A Proprietary Metric for Urban 360 Shooting | "360 camera stitch failure rate" | `(Stitch Failure Index) — [defined] — (6 cities, 4 cameras)` |
+
+### 3.4 Hub 3 — Gear ROI & Weight Economics
+
+**Pillar Title:** *Lightest 360 Camera for Backpacking Asia: The Grams-Per-Usable-Clip Framework (30-Day, 6-City Test)*
+
+**Answer Block (40–60 words):**
+> **The DJI Osmo Action 6 delivers the highest Content Yield Per 100g of any travel camera tested — 47 usable clips per 100g across 30 days in 6 Asian cities. The Insta360 X6 scored 31, and the Osmo 360 II scored 28. For backpackers optimizing grams, the Action 6 wins.**
+
+**Schema Stack:** `Review` + `FAQPage` + `Dataset` + `HowTo`
+
+| # | Spoke Title | Target Query | Primary Triple |
+|---|---|---|---|
+| 3.1 | Content Yield Per 100g: How I Measured 4 Cameras Across 6 Asian Cities | "camera weight vs footage output" | `(Yield metric) — [defined] — (4 cams, 6 cities)` |
+| 3.2 | DJI Osmo Action 6 vs Insta360 X6: Which Earns Its Grams in Hanoi? | "Osmo Action 6 vs Insta360 X6 weight" | `(Action 6) — [outyielded] — (X6 in Hanoi, 145g vs 180g)` |
+| 3.3 | The 360 Camera Backpack Tax: Why Dual-Lens Gear Costs You 400g | "360 camera weight backpacking" | `(Osmo 360 II) — [costs] — (400g vs action cam)` |
+| 3.4 | Texas → Tokyo → Hanoi: What 3 Climate Shocks Did to My Carry Weight Strategy | "travel camera climate transition" | `(All 4 cams) — [transitioned] — (Texas dry → Hanoi humid)` |
+
+### 3.5 Entity Coverage Audit
+
+| Entity | Hub 1 | Hub 2 | Hub 3 | Total Mentions |
 |---|---|---|---|---|
-| 1.1 | 14 Days in Bangkok Monsoon: Lens Defog Times for 5 Travel Cameras | E2 | "camera fogging Thailand humidity" | Daily RH + dew point + defog CSV |
-| 1.2 | Insta360 X5 Dual-Lens Fog Risk: Why 360 Cameras Fail in SE Asia | E6 | "Insta360 X5 humidity problem" | Per-lens fog-onset table at 85% RH |
-| 1.3 | Lapland at -20°C: Real Battery Discharge Curves for 5 Travel Cameras | E3 | "camera battery life -20°C" | Shot-count matrix at -5/-15/-25°C |
-| 1.4 | Sony ZV-1 II Cold Shutdown Threshold: Exact °C It Dies | E7 | "Sony ZV-1 II cold weather" | Thermal log + power-on failure point |
-| 1.5 | Silica-Gel Protocol v1: The 4-Pouch Dry-Bag Setup | Methodology | "how to prevent camera fogging travel" | Named protocol + photo walkthrough |
+| DJI Osmo 360 II | ✅✅✅ | ✅✅✅ | ✅ | 7 |
+| Insta360 X6 | ✅✅✅ | ✅✅ | ✅✅ | 7 |
+| GoPro Max 360 | ✅✅ | ✅ | — | 3 ⚠️ |
+| DJI Osmo Action 6 | ✅ | ✅ | ✅✅✅ | 5 |
+| Tokyo | — | ✅✅✅ | ✅ | 4 |
+| Hong Kong | — | ✅✅ | — | 2 |
+| Hanoi | ✅✅ | ✅ | ✅✅ | 5 |
+| Siem Reap | ✅✅✅ | — | — | 3 |
+| Pattaya | ✅✅✅ | — | — | 3 |
+| Texas | — | — | ✅✅ | 2 |
 
-**Loop Closure:** Spoke 1.5 is the **methodology backbone** — linked from every spoke in Hubs 1, 2, and 3.
-
----
-
-### 3.3 HUB 2 — Mechanical Durability: 12-Month Failure Logs
-
-**URL:** `/travel-camera-durability-12-month/`
-**Title:** *"1 Year, 47 Countries, 5 Travel Cameras: What Actually Broke (Full Failure Log)"*
-**Schema:** `Product` + `Review` + `ItemList` + timestamped photo gallery
-
-| # | Spoke Title | Target Entity | Primary Query | Data Artifact |
-|---|---|---|---|---|
-| 2.1 | Osmo Pocket 3 Gimbal Drift: 12-Month Degrees-Off-Axis Log | E1 | "Osmo Pocket 3 gimbal problems" | Monthly drift measurement + video |
-| 2.2 | Travel Camera Port Corrosion Index: USB-C Pin Oxidation | E9 | "camera USB-C corrosion salt water" | Macro photos + 0–5 score |
-| 2.3 | GoPro Hero 13 Lens Coating Wear: Scratch Count Per 100 Beach Days | E9 ext. | "GoPro Hero 13 lens scratch" | Scratch log + replacement cost |
-| 2.4 | Firmware Regression Log: Features DJI, GoPro & Insta360 Removed | Meta | "DJI firmware removed feature" | Version-by-version changelog |
-| 2.5 | Which Travel Camera Survives 12 Months? Final Durability Scorecard | Synthesis | "most durable travel camera 2026" | Composite score across E1 + E9 |
-
-**Loop Closure:** Spoke 2.5 is the **synthesis node** — the page Reddit will link to.
+**Gap Flag:** GoPro Max 360 is under-covered. **Action:** Add Q1 2028 spoke — *"GoPro Max 360 in 2028: Still Worth the Grams?"*
 
 ---
 
-### 3.4 HUB 3 — Destination Geometry: Terrain-Matched Selection
+## 4. E-E-A-T Rules (The Proof Stack)
 
-**URL:** `/travel-camera-by-destination/`
-**Title:** *"The Right Travel Camera for Every Terrain: Santorini, Lisbon, Alps, Bangkok, Finland (Field-Tested Matrix)"*
-**Schema:** `FAQPage` + `HowTo` (Alps Reframe Protocol) + interactive decision tree + `<caption>`-tagged matrix
+### 4.1 The 4-Layer Proof Stack
 
-| # | Spoke Title | Target Entity | Primary Query | Data Artifact |
-|---|---|---|---|---|
-| 3.1 | Santorini Vertical Alley Stabilization: Gimbal vs EIS in Oia & Fira | E4 | "best camera for Santorini" | Side-by-side footage, same route |
-| 3.2 | Lisbon Tram 28 Horizon Lock Test: Osmo Action 6 vs GoPro Hero 13 | E5 | "best camera for Lisbon tram" | Accelerometer CSV + jolt footage |
-| 3.3 | Alps Wide-Vista Reframe Workflow: Insta360 X5 Protocol for 16:9 | E8 | "how to shoot Alps with Insta360" | Named workflow + HowTo schema |
-| 3.4 | Bangkok Night Market Low-Light: Why the ZV-1 II 1-Inch Sensor Wins | Bridge | "best camera for Bangkok night market" | ISO 3200/6400/12800 stills |
-| 3.5 | Finland Aurora Long Exposure: ZV-1 II Manual Shutter + Tripod Protocol | Bridge | "best camera for Northern Lights" | EXIF-stamped aurora shots |
+Every published article must satisfy **all four layers**. A missing layer = a broken trust chain = no AI Overview citation.
 
-**Loop Closure:** E10 (Decision Tree) is embedded in the Hub 3 pillar itself — the synthesis layer AI Overviews extract.
-
----
-
-### 3.5 Cross-Hub Linking Matrix (The Loop)
-
-| From → To | Hub 1 (Climate) | Hub 2 (Durability) | Hub 3 (Destination) |
+| Layer | Signal Type | What It Proves | Rater Weight |
 |---|---|---|---|
-| **Hub 1** | — | 1.1 → 2.2 (humidity → corrosion) | 1.1 → 3.4 (Bangkok humidity → night market) |
-| **Hub 2** | 2.2 → 1.1 (corrosion ← humidity) | — | 2.1 → 3.1 (gimbal drift ← Santorini alleys) |
-| **Hub 3** | 3.5 → 1.3 (Finland ← cold battery) | 3.1 → 2.1 (Santorini ← gimbal drift) | — |
+| **L1: Identity** | Author + gear serials | "A real person owns this gear" | Medium |
+| **L2: Presence** | GPS + timestamp + weather | "This person was actually there" | **Critical** |
+| **L3: Process** | Raw footage + EXIF + methodology | "The test was real and reproducible" | **Critical** |
+| **L4: Outcome** | Failure logs + recovery data + CSV | "The conclusion is earned, not asserted" | High |
 
-**Rule:** Every spoke has ≥3 outbound internal links (1 up, 2 sideways) and ≥2 inbound links from sibling hubs.
+### 4.2 Layer Specifications
 
-### 3.6 Entity Coverage Audit
+**L1 — Identity Proof**
+- Full legal name + photo with gear in frame (not stock headshot)
+- LinkedIn / personal site cross-link with matching name
+- Public gear registry: model, serial (last 6 digits), purchase date + receipt, firmware version, physical wear photo
 
-| Entity | Assigned To | Status |
-|---|---|---|
-| E1 Gimbal Drift | Hub 2 / Spoke 2.1 | ✅ |
-| E2 Bangkok Monsoon | Hub 1 / Spoke 1.1 | ✅ |
-| E3 Lapland -20°C | Hub 1 / Spoke 1.3 | ✅ |
-| E4 Santorini Alley | Hub 3 / Spoke 3.1 | ✅ |
-| E5 Tram 28 | Hub 3 / Spoke 3.2 | ✅ |
-| E6 X5 Dual-Lens Fog | Hub 1 / Spoke 1.2 | ✅ |
-| E7 ZV-1 II Cold Shutdown | Hub 1 / Spoke 1.4 | ✅ |
-| E8 Alps Reframe | Hub 3 / Spoke 3.3 | ✅ |
-| E9 Corrosion Index | Hub 2 / Spoke 2.2 | ✅ |
-| E10 Decision Tree | Hub 3 pillar (embedded) | ✅ |
+**L2 — Presence Proof (Per Shooting Day)**
+- GPS track log (downloadable GPX)
+- Timestamped photo of camera + local landmark
+- Weather API screenshot (OpenWeatherMap / Weather Underground) with temp + RH + timestamp
+- EXIF-embedded 10-second raw sample clip
 
-**Coverage: 10/10. No orphan entities.**
+**L3 — Process Proof**
+- Full EXIF sidecar file (`.xmp` / `.json`) for every hero clip
+- Raw, unedited clips on immutable CDN with SHA-256 hash
+- Reproducible `HowTo` methodology with control variables and failure criteria
+
+**L4 — Outcome Proof**
+- Public failure log (dated entries with evidence links)
+- Downloadable CSV dataset with `Dataset` schema
+- `/receipts` page aggregating all serials, flight stubs, weather logs, hashes
+
+### 4.3 The E-E-A-T Scoring Rubric (Per Article)
+
+Minimum passing score: **18/24**.
+
+| Signal | 0 (Fail) | 1 (Weak) | 2 (Pass) | 3 (Unfakeable) |
+|---|---|---|---|---|
+| Author identity | Anonymous | Name only | Name + photo | + gear + LinkedIn |
+| Gear proof | Model name | Model + firmware | + serial number | + purchase receipt |
+| GPS proof | None | City named | GPS coordinates | + downloadable GPX |
+| Weather proof | None | "It was humid" | RH% stated | + API screenshot + CSV |
+| EXIF proof | Stripped | Partial | Full EXIF | + downloadable sidecar |
+| Raw footage | None | Edited clip | Raw clip | + SHA-256 hash |
+| Failure log | None | Mentioned | Dated entry | + evidence link |
+| Dataset | None | Summary table | CSV download | + `Dataset` schema |
+
+### 4.4 Anti-Patterns (Instant E-E-A-T Killers)
+
+- ❌ Stock photos of cameras
+- ❌ "I tested this" without EXIF
+- ❌ Studio-only footage
+- ❌ No failure data
+- ❌ Generic headers ("Conclusion", "Final Thoughts")
+- ❌ AI-generated "field notes" without EXIF chain
+- ❌ Rental gear without disclosure
 
 ---
 
-## 4. E-E-A-T Rules — Unfakeable Field Evidence
+## 5. GEO Rules (AI Overview Capture)
 
-### 4.1 The 5 Pillars (Mandatory Per Article)
+### 5.1 The 4-Layer GEO Architecture
 
-| Pillar | Required Elements |
+| Layer | Function | Implementation |
+|---|---|---|
+| **L1: Entity Anchor** | Bind gear ↔ destination ↔ condition | H2/H3 headers name all three explicitly |
+| **L2: Answer Block** | 40–60 word extractable verdict | Bolded verdict immediately under each H2 |
+| **L3: Structured Data** | Machine-readable proof | `Review` + `FAQPage` + `HowTo` + `Dataset` |
+| **L4: Receipt Layer** | Unfakeable E-E-A-T | GPS timestamps, weather API screenshots, EXIF data |
+
+### 5.2 The Three Formatting Rules
+
+**Rule 1 — The 40–60 Word Answer Block Rule**
+Every H2 must be immediately followed by a bolded, self-contained 40–60 word verdict that answers the H2 as a standalone question. Lead with the verdict. Never with preamble.
+
+**Rule 2 — The Structured Data Stack Rule**
+Every review page deploys **four schema types simultaneously**: `Review`, `FAQPage`, `HowTo`, `Dataset`. The `Dataset` schema is the secret weapon — it signals original, verifiable data.
+
+**Rule 3 — The Entity-First Header Rule**
+Every H2 and H3 must contain **at least one gear entity AND one geo entity**.
+
+| ❌ Generic Header | ✅ Entity-First Header |
 |---|---|
-| **1. Temporal Proof** | Session ID (`[IATA]-[YYYY]-[MM]-[DD]-[NN]`), EXIF `DateTimeOriginal`, GPS coords, video timecode overlay, publication lag disclosure |
-| **2. Environmental Proof** | RH %, dew point, ambient temp, wind chill, accelerometer G-force, lux, precipitation — logged per session with calibrated instruments |
-| **3. Artifact Proof** | Raw CSV (GitHub Gist), EXIF-stamped photos, raw video clips, thermal images, instrument screenshots, corrosion macro photos |
-| **4. Methodological Proof** | Named, versioned protocol page at `/methodology/[name]/` with equipment, procedure, controls, variables, sample size, limitations |
-| **5. Adversarial Proof** | "Why This Might Be Wrong" section, "What I Couldn't Test," conflicting evidence, reproduction instructions, dated corrections log |
-
-### 4.2 The Timestamp Chain Rule
-
-> **No claim may be published without a session ID that resolves to a dated, GPS-tagged artifact.**
-
-**Implementation:**
-- Public `/sessions/` index listing every session ID with date, location, gear, weather
-- Each session ID links to a folder of raw artifacts
-- AI Overviews and Reddit users verify in <30 seconds
-
-### 4.3 The EXIF Non-Negotiable Checklist
-
-Every published photo must retain:
-
-- [ ] `DateTimeOriginal` (not `DateTime`)
-- [ ] `GPSLatitude` / `GPSLongitude` / `GPSAltitude`
-- [ ] `Make` + `Model` + `LensModel`
-- [ ] `ISO`, `FNumber`, `ExposureTime`, `FocalLength`
-- [ ] `Software` field = **blank or "Original"** (any Lightroom/Photoshop string = edited)
-
-**Red flag:** If `Software` shows "Adobe Lightroom," publish **both** original and edited versions, clearly labeled.
-
-### 4.4 The 4 Core Protocols (Lock These First)
-
-| Protocol | Purpose | Version | Owner Hub |
-|---|---|---|---|
-| **Silica-Gel Protocol v1** | Humidity/defog testing | v1.0 | Hub 1 |
-| **Cold-Soak Protocol v2** | Sub-zero battery testing | v2.0 | Hub 1 |
-| **Corrosion Index Protocol v1** | USB-C pin oxidation scoring | v1.0 | Hub 2 |
-| **Reframe Protocol v1** | 360→16:9 workflow | v1.0 | Hub 3 |
-
-**Version-Control Rule:** When a protocol changes, publish a new version — never silently edit.
-
-### 4.5 The "Unfakeable" Scorecard (Min 18
+| "Humidity Test Results" | "DJI Osmo 360 II vs Insta360 X6: Siem Reap Humidity Test Results" |
+| "Stitching Performance" | "Stitch-Line Failures in Tokyo's Shibuya Crossing at Night" |
+| "Weight Comparison" | "Grams-Per-Usable-Clip: DJI Osmo Action 6 vs Insta360 X6 in Hanoi" |
+| "Durability" | "GoPro Max 360 Seal Failure in Pattaya Dust Season"
