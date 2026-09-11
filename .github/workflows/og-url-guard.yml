@@ -1,0 +1,30 @@
+name: OG URL and Canonical Guard
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Verify og:url and canonical point to real pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Audit og:url and canonical
+        run: python scripts/audit_og_url.py
+        # Add --strict once every page has og:image + twitter:image,
+        # to enforce presence, not just validity.
