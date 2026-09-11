@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha Maya's Global Lens Quest | Holiday Video Camera</title>
+    <style>
+        :root {
+            --matcha-light: #A8C686;
+            --matcha-dark: #6B8E23;
+            --gold: #FFD700;
+            --bg-dark: #1a1a2e;
+            --text-light: #f0f0f0;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            touch-action: none;
+        }
+        h1 {
+            color: var(--matcha-light);
+            text-shadow: 2px 2px 0px var(--matcha-dark);
+            margin: 10px 0;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        #game-container {
+            position: relative;
+            width: 90vw;
+            max-width: 600px;
+            height: 70vh;
+            max-height: 600px;
+            background: radial-gradient(circle, #2a2a4e 0%, #1a1a2e 100%);
+            border: 4px solid var(--matcha-dark);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(168, 198, 134, 0.3);
+        }
+        /* Funky Global Map Background */
+        .map-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,50 Q40,20 60,50 T100,50' fill='none' stroke='%23A8C686' stroke-width='2'/%3E%3Ccircle cx='30' cy='40' r='5' fill='%23A8C686'/%3E%3Ccircle cx='70' cy='60' r='8' fill='%23A8C686'/%3E%3C/svg%3E");
+            animation: panMap 20s linear infinite;
+        }
+        @keyframes panMap {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+        /* Matcha Maya Hero */
+        #player {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s linear;
+            z-index: 10;
+            filter: drop-shadow(0 0 5px var(--gold));
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+        /* Collectibles & Obstacles */
+        .item {
+            position: absolute;
+            font-size: 24px;
+            animation: popIn 0.3s ease-out, float 2s infinite ease-in-out;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            80% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        /* UI Overlay */
+        #ui-layer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 20;
+            pointer-events: none;
+        }
+        .score-box {
+            background: rgba(0,0,0,0.6);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 2px solid var(--matcha-light);
+            color: var(--gold);
+        }
+        /* Modals */
+        .modal {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 30;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .hidden { display: none !important; }
+        .btn {
+            background: var(--matcha-dark);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: var(--matcha-light);
+            transform: scale(1.05);
+            color: var(--bg-dark);
+        }
+        .ai-tip {
+            background: rgba(168, 198, 134, 0.2);
+            border-left: 4px solid var(--gold);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            max-width: 400px;
+        }
+        /* Mobile Controls */
+        #mobile-controls {
+            display: none;
+            margin-top: 10px;
+            gap: 10px;
+        }
+        .d-pad-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(168, 198, 134, 0.3);
+            border: 2px solid var(--matcha-light);
+            border-radius: 50%;
+            font-size: 24px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+        }
+        @media (max-width: 768px) {
+            #mobile-controls { display: grid; grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🍵 Matcha Maya's Global Lens Quest 📸</h1>
+    
+    <div id="game-container">
+        <div class="map-bg"></div>
+        <div id="ui-layer">
+            <div class="score-box">🍵 Green Gold: <span id="score">0</span></div>
+            <div class="score-box">📍 <span id="location">Loading...</span></div>
+        </div>
+        
+        <div id="player">👩‍💻</div>
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="modal">
+            <h2 style="color: var(--gold);">Ready to Film?</h2>
+            <p>Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move Matcha Maya.</p>
+            <p>Collect 🍵 Matcha Green Gold, 📸 Lenses, and 💾 Memory Cards.</p>
+            <p>Avoid 🪫 Low Battery and 🌧️ Rain!</p>
+            <button class="btn" onclick="startGame()">Start Quest</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="modal hidden">
+            <h2 style="color: #ff6b6b;">Out of Battery!</h2>
+            <p>Final Green Gold Score: <strong id="final-score" style="color: var(--gold); font-size: 1.5rem;">0</strong></p>
+            <div class="ai-tip" id="ai-tip-box">
+                Loading AI Travel Tip...
+            </div>
+            <a id="blog-link" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/" target="_blank" class="btn">Read the Full Camera Review</a>
+            <button class="btn" onclick="resetGame()" style="background: #444; margin-top: 10px;">Play Again</button>
+        </div>
+    </div>
+
+    <div id="mobile-controls">
+        <div></div>
+        <div class="d-pad-btn" ontouchstart="setDir(0, -1)" ontouchend="stopDir()">⬆️</div>
+        <div></div>
+        <div class="d-pad-btn" ontouchstart="setDir(-1, 0)" ontouchend="stopDir()">⬅️</div>
+        <div class="d-pad-btn" ontouchstart="setDir(0, 1)" ontouchend="stopDir()">⬇️</div>
+        <div class="d-pad-btn" ontouchstart="setDir(1, 0)" ontouchend="stopDir()">➡️</div>
+    </div>
+
+    <script>
+        // Game State
+        let score = 0;
+        let isPlaying = false;
+        let playerX = 50, playerY = 50; // Percentages
+        let dx = 0, dy = 0;
+        let speed = 0.8;
+        let items = [];
+        let gameLoopId;
+        let currentLocation = "Bangkok";
+
+        // AI Tips Data (Populated by GitHub Action, fallback provided)
+        const destinationData = {
+            "Bangkok": { tip: "Humidity is your enemy! The GoPro Hero 13 handles Bangkok's heat without overheating. [Read Field Test]", link: "/best-compact-cameras-travel-2026/" },
+            "Santorini": { tip: "Wind is fierce on the cliffs! The DJI Osmo Pocket 3's mechanical gimbal keeps sunset shots perfectly smooth. [Read Review]", link: "/best-holiday-video-cameras-2026/" },
+            "Alps": { tip: "Cold drains batteries fast! Keep your Sony ZV-1 II warm in an inside pocket. [Read Cold Weather Guide]", link: "/best-budget-travel-cameras-under-500/" },
+            "Miami Beach": { tip: "Salt and sand destroy gear. The Insta360 X4 with a protective lens guard is your best bet. [Read Waterproof Guide]", link: "/best-waterproof-cameras-beach/" }
+        };
+
+        const playerEl = document.getElementById('player');
+        const scoreEl = document.getElementById('score');
+        const locationEl = document.getElementById('location');
+        const container = document.getElementById('game-container');
+
+        function startGame() {
+            document.getElementById('start-screen').classList.add('hidden');
+            document.getElementById('game-over-screen').classList.add('hidden');
+            score = 0;
+            scoreEl.innerText = score;
+            playerX = 50; playerY = 50;
+            items = [];
+            isPlaying = true;
+            
+            // Pick random location
+            const locations = Object.keys(destinationData);
+            currentLocation = locations[Math.floor(Math.random() * locations.length)];
+            locationEl.innerText = currentLocation;
+            
+            spawnItem();
+            gameLoopId = requestAnimationFrame(gameLoop);
+        }
+
+        function spawnItem() {
+            if (!isPlaying) return;
+            const types = [
+                { emoji: '🍵', type: 'gold', points: 10 },
+                { emoji: '📸', type: 'gold', points: 15 },
+                { emoji: '💾', type: 'gold', points: 20 },
+                { emoji: '🪫', type: 'bad', points: -50 },
+                { emoji: '🌧️', type: 'bad', points: -30 }
+            ];
+            const item = types[Math.floor(Math.random() * types.length)];
+            const el = document.createElement('div');
+            el.className = 'item';
+            el.innerText = item.emoji;
+            el.style.left = Math.random() * 90 + '%';
+            el.style.top = Math.random() * 90 + '%';
+            container.appendChild(el);
+            items.push({ el, x: parseFloat(el.style.left), y: parseFloat(el.style.top), ...item });
+
+            setTimeout(spawnItem, 1500); // Spawn every 1.5s
+        }
+
+        function gameLoop() {
+            if (!isPlaying) return;
+
+            playerX = Math.max(0, Math.min(95, playerX + dx * speed));
+            playerY = Math.max(0, Math.min(95, playerY + dy * speed));
+            playerEl.style.left = playerX + '%';
+            playerEl.style.top = playerY + '%';
+
+            // Collision Detection
+            for (let i = items.length - 1; i >= 0; i--) {
+                const item = items[i];
+                const dist = Math.sqrt(Math.pow(playerX - item.x, 2) + Math.pow(playerY - item.y, 2));
+                
+                if (dist < 8) { // Collision threshold
+                    if (item.type === 'gold') {
+                        score += item.points;
+                        scoreEl.innerText = score;
+                    } else {
+                        gameOver();
+                        return;
+                    }
+                    item.el.remove();
+                    items.splice(i, 1);
+                }
+            }
+
+            gameLoopId = requestAnimationFrame(gameLoop);
+        }
+
+        function gameOver() {
+            isPlaying = false;
+            cancelAnimationFrame(gameLoopId);
+            document.getElementById('final-score').innerText = score;
+            
+            // Inject AI Tip
+            const data = destinationData[currentLocation];
+            document.getElementById('ai-tip-box').innerText = `🍵 Matcha Maya says: "${data.tip}"`;
+            document.getElementById('blog-link').href = "https://dawidmillenium-design.github.io/VideoCameraHoliday/" + data.link;
+            
+            document.getElementById('game-over-screen').classList.remove('hidden');
+        }
+
+        function resetGame() {
+            items.forEach(i => i.el.remove());
+            items = [];
+            startGame();
+        }
+
+        // Controls
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp' || e.key === 'w') dy = -1;
+            if (e.key === 'ArrowDown' || e.key === 's') dy = 1;
+            if (e.key === 'ArrowLeft' || e.key === 'a') dx = -1;
+            if (e.key === 'ArrowRight' || e.key === 'd') dx = 1;
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (['ArrowUp', 'w', 'ArrowDown', 's'].includes(e.key)) dy = 0;
+            if (['ArrowLeft', 'a', 'ArrowRight', 'd'].includes(e.key)) dx = 0;
+        });
+
+        function setDir(x, y) { dx = x; dy = y; }
+        function stopDir() { dx = 0; dy = 0; }
+    </script>
+</body>
+</html>
