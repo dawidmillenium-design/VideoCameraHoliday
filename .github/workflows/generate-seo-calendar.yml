@@ -1,0 +1,55 @@
+name: Multi-Agent SEO & Content Calendar Generator
+
+on:
+  workflow_dispatch:
+    inputs:
+      year_range:
+        description: 'Target year range for content calendar'
+        required: true
+        default: '2026-2027'
+      focus_destinations:
+        description: 'Specific destinations to prioritize (comma-separated)'
+        required: false
+        default: 'Bangkok, Santorini, Alps, Lisbon, Finland, Southeast Asia'
+      focus_cameras:
+        description: 'Specific cameras to prioritize (comma-separated)'
+        required: false
+        default: 'DJI Osmo Pocket 3, GoPro Hero 13 Black, Sony ZV-1 II, Insta360 X5'
+
+jobs:
+  generate-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create Docs Directory
+        run: mkdir -p docs
+
+      - name: Run Multi-Agent Pipeline
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          YEAR_RANGE: ${{ github.event.inputs.year_range }}
+          FOCUS_DESTINATIONS: ${{ github.event.inputs.focus_destinations }}
+          FOCUS_CAMERAS: ${{ github.event.inputs.focus_cameras }}
+        run: python scripts/multi_agent_pipeline.py
+
+      - name: Commit and Push Generated Docs
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/seo_strategy_2026_2027.md docs/content_calendar_2026_2027.md
+          git commit -m "docs: auto-generate SEO strategy and content calendar 2026-2027 [skip ci]" || echo "No changes to commit"
+          git push
