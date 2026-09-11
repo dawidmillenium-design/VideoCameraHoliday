@@ -1,0 +1,79 @@
+name: Advanced 8-Agent GEO & SEO Strategy Pipeline (DeepSeek-V4.1-Flash)
+
+on:
+  workflow_dispatch:
+    inputs:
+      year_range:
+        description: 'Target year range'
+        required: true
+        default: '2026-2027'
+      focus_destinations:
+        description: 'Destinations (comma-separated)'
+        required: false
+        default: 'Bangkok, Santorini, Alps, Lisbon, Finland, Southeast Asia'
+      focus_cameras:
+        description: 'Cameras (comma-separated)'
+        required: false
+        default: 'DJI Osmo Pocket 3, GoPro Hero 13 Black, Sony ZV-1 II, Insta360 X5, DJI Osmo Action 6'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  generate-advanced-seo:
+    runs-on: ubuntu-latest
+    env:
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      DEEPSEEK_BASE_URL: ${{ secrets.DEEPSEEK_BASE_URL }}
+      DEEPSEEK_MODEL: ${{ secrets.DEEPSEEK_MODEL || 'deepseek-v4.1-flash' }}
+      YEAR_RANGE: ${{ github.event.inputs.year_range }}
+      FOCUS_DESTINATIONS: ${{ github.event.inputs.focus_destinations }}
+      FOCUS_CAMERAS: ${{ github.event.inputs.focus_cameras }}
+
+    steps:
+      - name:  Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0
+
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name:  Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name:  Prepare Output Directory
+        run: mkdir -p docs
+
+      - name: 🚀 Execute 8-Agent DeepSeek Pipeline
+        run: python scripts/advanced_seo_pipeline.py
+        env:
+          GITHUB_STEP_SUMMARY: ${{ github.workspace }}/summary.md
+
+      - name:  Upload Generated Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-strategy-artifacts
+          path: docs/
+          retention-days: 14
+
+      - name: 📝 Post to Job Summary
+        if: always()
+        run: cat summary.md >> $GITHUB_STEP_SUMMARY
+
+      - name: 🔄 Commit and Push Generated Docs
+        if: success()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/advanced_seo_strategy_2026_2027.md docs/advanced_content_calendar_2026_2027.md
+          git diff --staged --quiet || git commit -m "docs: auto-generate advanced 8-agent GEO/SEO strategy [skip ci]"
+          git push origin HEAD:main
