@@ -40,7 +40,7 @@ jobs:
 
       - name: Run Multi-Agent Pipeline
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           YEAR_RANGE: ${{ github.event.inputs.year_range }}
           FOCUS_DESTINATIONS: ${{ github.event.inputs.focus_destinations }}
           FOCUS_CAMERAS: ${{ github.event.inputs.focus_cameras }}
