@@ -217,131 +217,38 @@
     </div>
 
     <script>
-        // Game State
-        let score = 0;
-        let isPlaying = false;
-        let playerX = 50, playerY = 50; // Percentages
-        let dx = 0, dy = 0;
-        let speed = 0.8;
-        let items = [];
-        let gameLoopId;
-        let currentLocation = "Bangkok";
+// Game State
+let score = 0;
+let isPlaying = false;
+let playerX = 50, playerY = 50;
+let dx = 0, dy = 0;
+let speed = 0.8;
+let items = [];
+let gameLoopId;
+let currentLocation = "Bangkok";
+let destinationData = {}; // Will be populated from ai_tips.json
 
-        // AI Tips Data (Populated by GitHub Action, fallback provided)
-        const destinationData = {
-            "Bangkok": { tip: "Humidity is your enemy! The GoPro Hero 13 handles Bangkok's heat without overheating. [Read Field Test]", link: "/best-compact-cameras-travel-2026/" },
-            "Santorini": { tip: "Wind is fierce on the cliffs! The DJI Osmo Pocket 3's mechanical gimbal keeps sunset shots perfectly smooth. [Read Review]", link: "/best-holiday-video-cameras-2026/" },
-            "Alps": { tip: "Cold drains batteries fast! Keep your Sony ZV-1 II warm in an inside pocket. [Read Cold Weather Guide]", link: "/best-budget-travel-cameras-under-500/" },
-            "Miami Beach": { tip: "Salt and sand destroy gear. The Insta360 X4 with a protective lens guard is your best bet. [Read Waterproof Guide]", link: "/best-waterproof-cameras-beach/" }
+// Load AI Tips from DeepSeek-generated JSON
+async function loadAITips() {
+    try {
+        const response = await fetch('ai_tips.json');
+        const data = await response.json();
+        destinationData = data;
+        console.log("✅ Loaded AI Tips:", destinationData);
+    } catch (error) {
+        console.error("❌ Failed to load AI tips, using fallback:", error);
+        // Fallback data if JSON fails to load
+        destinationData = {
+            "Bangkok": { tip: "Humidity is your enemy! The GoPro Hero 13 handles Bangkok's heat without overheating.", link: "/best-compact-cameras-travel-2026/" },
+            "Santorini": { tip: "Wind is fierce on the cliffs! The DJI Osmo Pocket 3's mechanical gimbal keeps sunset shots smooth.", link: "/best-holiday-video-cameras-2026/" },
+            "Alps": { tip: "Cold drains batteries fast! Keep your Sony ZV-1 II warm in an inside pocket.", link: "/best-budget-travel-cameras-under-500/" },
+            "Miami Beach": { tip: "Salt and sand destroy gear. The Insta360 X4 with a protective lens guard is your best bet.", link: "/best-waterproof-cameras-beach/" }
         };
+    }
+}
 
-        const playerEl = document.getElementById('player');
-        const scoreEl = document.getElementById('score');
-        const locationEl = document.getElementById('location');
-        const container = document.getElementById('game-container');
-
-        function startGame() {
-            document.getElementById('start-screen').classList.add('hidden');
-            document.getElementById('game-over-screen').classList.add('hidden');
-            score = 0;
-            scoreEl.innerText = score;
-            playerX = 50; playerY = 50;
-            items = [];
-            isPlaying = true;
-            
-            // Pick random location
-            const locations = Object.keys(destinationData);
-            currentLocation = locations[Math.floor(Math.random() * locations.length)];
-            locationEl.innerText = currentLocation;
-            
-            spawnItem();
-            gameLoopId = requestAnimationFrame(gameLoop);
-        }
-
-        function spawnItem() {
-            if (!isPlaying) return;
-            const types = [
-                { emoji: '🍵', type: 'gold', points: 10 },
-                { emoji: '📸', type: 'gold', points: 15 },
-                { emoji: '💾', type: 'gold', points: 20 },
-                { emoji: '🪫', type: 'bad', points: -50 },
-                { emoji: '🌧️', type: 'bad', points: -30 }
-            ];
-            const item = types[Math.floor(Math.random() * types.length)];
-            const el = document.createElement('div');
-            el.className = 'item';
-            el.innerText = item.emoji;
-            el.style.left = Math.random() * 90 + '%';
-            el.style.top = Math.random() * 90 + '%';
-            container.appendChild(el);
-            items.push({ el, x: parseFloat(el.style.left), y: parseFloat(el.style.top), ...item });
-
-            setTimeout(spawnItem, 1500); // Spawn every 1.5s
-        }
-
-        function gameLoop() {
-            if (!isPlaying) return;
-
-            playerX = Math.max(0, Math.min(95, playerX + dx * speed));
-            playerY = Math.max(0, Math.min(95, playerY + dy * speed));
-            playerEl.style.left = playerX + '%';
-            playerEl.style.top = playerY + '%';
-
-            // Collision Detection
-            for (let i = items.length - 1; i >= 0; i--) {
-                const item = items[i];
-                const dist = Math.sqrt(Math.pow(playerX - item.x, 2) + Math.pow(playerY - item.y, 2));
-                
-                if (dist < 8) { // Collision threshold
-                    if (item.type === 'gold') {
-                        score += item.points;
-                        scoreEl.innerText = score;
-                    } else {
-                        gameOver();
-                        return;
-                    }
-                    item.el.remove();
-                    items.splice(i, 1);
-                }
-            }
-
-            gameLoopId = requestAnimationFrame(gameLoop);
-        }
-
-        function gameOver() {
-            isPlaying = false;
-            cancelAnimationFrame(gameLoopId);
-            document.getElementById('final-score').innerText = score;
-            
-            // Inject AI Tip
-            const data = destinationData[currentLocation];
-            document.getElementById('ai-tip-box').innerText = `🍵 Matcha Maya says: "${data.tip}"`;
-            document.getElementById('blog-link').href = "https://dawidmillenium-design.github.io/VideoCameraHoliday/" + data.link;
-            
-            document.getElementById('game-over-screen').classList.remove('hidden');
-        }
-
-        function resetGame() {
-            items.forEach(i => i.el.remove());
-            items = [];
-            startGame();
-        }
-
-        // Controls
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowUp' || e.key === 'w') dy = -1;
-            if (e.key === 'ArrowDown' || e.key === 's') dy = 1;
-            if (e.key === 'ArrowLeft' || e.key === 'a') dx = -1;
-            if (e.key === 'ArrowRight' || e.key === 'd') dx = 1;
-        });
-
-        document.addEventListener('keyup', (e) => {
-            if (['ArrowUp', 'w', 'ArrowDown', 's'].includes(e.key)) dy = 0;
-            if (['ArrowLeft', 'a', 'ArrowRight', 'd'].includes(e.key)) dx = 0;
-        });
-
-        function setDir(x, y) { dx = x; dy = y; }
-        function stopDir() { dx = 0; dy = 0; }
+// Call this on page load
+loadAITips();
     </script>
 </body>
 </html>
