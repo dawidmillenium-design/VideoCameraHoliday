@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2026 欧洲独自旅行最佳Vlog相机：专业选购指南</h1>
 
 <p>独自踏上欧洲之旅，无论是巴黎的晨光、罗马的巷弄，还是瑞士的雪山，一台称手的Vlog相机是您最忠实的旅伴。作为专注旅行影像的编辑，我深知“轻便”与“画质”之间的平衡有多难。本指南将结合2026年最新市场趋势，从中国消费者的实际需求出发，为您拆解选购要点，并推荐几款经过实地测试的机型。</p>
@@ -181,5 +208,16 @@
             <div itemprop="text">
                 <p>完全没有问题。大疆、影石等品牌在欧洲拥有极高的市场占有率。唯一的考虑是 <strong>GPS记录功能</strong>——部分国产手机或相机在中国境外可能无法使用GPS轨迹记录（受政策限制）。
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

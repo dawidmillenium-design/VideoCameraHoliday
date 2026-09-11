@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Meilleurs Appareils Photo pour l'Island Hopping en France : Le Guide Complet 2024</h1>
 
 <p>Des eaux turquoise du <strong>Parc national de Port-Cros</strong> aux criques granitiques de <strong>Bretagne</strong>, en passant par les calanques de <strong>Marseille</strong> et les îles atlantiques de <strong>Charente-Maritime</strong>, la France offre un terrain de jeu exceptionnel pour les photographes itinérants. Mais l'island hopping — cette pratique qui consiste à enchaîner les îles en ferry, en bateau-taxi ou en voilier — impose des contraintes uniques à votre matériel. Sel, sable, embruns, humidité, transports fréquents et lumière écrasante : choisir le bon appareil photo pour l'island hopping en France n'est pas un détail, c'est la condition sine qua non de photos réussies et d'un matériel qui survit au voyage.</p>
@@ -199,5 +226,16 @@
   <li><strong>Utilisez le polarisant</strong> : il élimine les reflets sur l'eau et intensifie les ciels. Tournez-le pour ajuster l'effet.</li>
   <li><
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

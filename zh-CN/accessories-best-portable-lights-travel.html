@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2025 旅行便携补光灯深度评测：从大理洱海到重庆洪崖洞，哪款才是你的随身光</h1>
 
 <p>过去三年，我带着超过 20 款便携补光灯走遍了中国十几个省份——从海拔 4500 米的稻城亚丁，到湿度常年 80% 以上的广州街头，再到冬季零下 20℃ 的哈尔滨中央大街。作为长期为 VideoCameraHoliday 撰写器材评测的摄影师，我深知旅行补光灯在真实场景中的表现，远比实验室数据更能说明问题。本文基于我个人的实测体验，聚焦「<strong>旅行便携补光灯</strong>」这一品类，帮你避开营销话术，找到真正适合中国旅行场景的那一盏灯。</p>
@@ -225,5 +252,16 @@ A：五款灯均未标注 IP 防水等级。广州雨季实测中，短时间小
 
 <p>经过三个月的跨气候、跨场景实测，我的最终推荐是：<strong>智云 Fiveray M40</strong> 是 2025 年综合表现最均衡的旅行便携补光灯，¥699 的价格在专业档位中性价比突出；如果预算有限，<strong>ulanzi VL120</strong> 以 ¥299 的价格提供了 80% 的核心功能，适合入门用户。无论选择哪款，记住一个原则：<strong>旅行便携补光灯</strong>的价值不在于参数多高，而在于你愿意把它装进包里、带在路上、在需要的时候拿出来用。光，永远是旅行影像中最值得投资的部分。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

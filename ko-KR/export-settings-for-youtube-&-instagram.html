@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>유튜브 &amp; 인스타그램 내보내기 설정 완벽 가이드: 한국 크리에이터를 위한 실전 튜토리얼</h1>
 
 <p>안녕하세요, 여행 사진·영상 콘텐츠를 만들며 수년간 국내외에서 촬영해 온 크리에이터입니다. 서울 홍대 스튜디오부터 제주도 해변, 부산 광안리 야경까지 다양한 환경에서 촬영한 소스를 유튜브와 인스타그램에 올리면서 수많은 시행착오를 겪었습니다. 이 글에서는 한국에서 활동하는 크리에이터가 바로 적용할 수 있는 <strong>유튜브·인스타그램 내보내기(Export) 설정</strong>을 단계별로 알려드립니다. 처음엔 복잡해 보여도 한 번 익히면 5분 안에 끝낼 수 있으니 걱정 마세요.</p>
@@ -219,5 +246,16 @@
   <li><strong>편집용 노트북:</strong> 맥북 프로 M3 Pro(쿠팡·하이마트), LG 그램 16(가성비 좋음)</li>
   <li><
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

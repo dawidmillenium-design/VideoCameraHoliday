@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Action 6 vs GoPro Hero Black 13 : Le Guide Ultime pour Filmer la France</h1>
 
 <p>La France est un pays de contrastes spectaculaires, une toile de fond idéale pour tout vidéaste de voyage. Des falaises de craie d'Étretat aux champs de lavande de Provence, en passant par les ruelles pavées du Marais à Paris, chaque recoin offre une opportunité de capturer des images à couper le souffle. Mais ce terrain de jeu magnifique présente des défis uniques pour votre matériel. C'est ici que le choix de votre caméra d'action devient crucial. Dans ce guide ultime, nous allons comparer les deux géants du secteur : la <strong>DJI Osmo Action 6</strong> et la <strong>GoPro Hero Black 13</strong>, pour déterminer laquelle est la plus apte à documenter votre aventure française.</p>
@@ -158,5 +185,16 @@
 
 <p>En fin de compte, que vous choisissiez la <strong>DJI Osmo Action 6</strong> ou la <strong>GoPro Hero 13</strong>, vous aurez entre les mains un outil exceptionnel. La France, avec sa diversité, vous offrira des images magnifiques. L'important est de sortir, d'explorer, de respecter les lieux et les personnes, et de raconter votre histoire unique. Bon voyage et bon tournage !</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

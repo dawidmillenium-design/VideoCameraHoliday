@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Guía Definitiva de Cámara Ligera para Vlogs en Japón 2026: Equipo y Consejos desde España</h1>
 
 <p>Planificar un viaje a Japón es una experiencia apasionante, pero para los creadores de contenido españoles, la logística del equipo de grabación puede convertirse en un dolor de cabeza. ¿Qué cámara de vlog ligera es la mejor para recorrer Tokio, Kioto u Osaka sin renunciar a la calidad? ¿Cómo afectan las normativas locales y las costumbres japonesas a nuestras grabaciones? Esta guía está diseñada para resolver todas tus dudas, combinando la experiencia práctica de un viajero español con el conocimiento técnico necesario para capturar la esencia de Japón en 2026.</p>
@@ -154,5 +181,16 @@
 <h3>Tokio: La Ciudad del Caos Organizado</h3>
 <p>En Tokio, la clave es la <strong>velocidad</strong>. Usa tu cámara en modo de prioridad de obturación (1/60 o 1/120) para capturar el movimiento de la gente. En Shibuya, colócate en el Starbucks del segundo piso para una toma elevada. En Akihabara, graba los neones con tu lente angular. La Sony ZV-E10 II con su enfoque automático en tiempo real es perfecta para seguir a tu sujeto
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

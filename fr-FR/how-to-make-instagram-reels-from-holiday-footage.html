@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Comment créer des Reels Instagram à partir de vos vidéos de vacances : le guide complet</h1>
 
 <p>Vous rentrez de deux semaines en Provence ou d'un week-end à Étretat, et votre carte SD déborde de rushes magnifiques que personne ne verra jamais ? C'est le sort réservé à 90 % des vidéos de vacances. Pourtant, avec un peu de méthode, ces mêmes images peuvent devenir des Reels qui cumulent des milliers de vues et donnent envie à vos proches (et à de parfaits inconnus) de réserver leur prochain billet de train.</p>
@@ -180,5 +207,16 @@
 
 <p>Transformer vos vidéos de vacances en Reels percutants n'exige ni matériel coûteux ni logiciel professionnel. Une sélection rigoureuse des plans, un montage calé sur la musique, une accroche forte et un export soigné suffisent à produire un contenu qui voyage bien au-delà de votre cercle d'amis. La prochaine fois que vous rentrez d'un séjour — que ce soit dans le Périgord, sur la Côte d'Azur ou en Alsace —, ouvrez votre éditeur le soir même, pendant que les souvenirs sont frais. C'est à ce moment-là que les meilleurs Reels naissent.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

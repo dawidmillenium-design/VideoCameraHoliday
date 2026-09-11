@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Action 6 vs GoPro Hero Black 13: คู่มือเปรียบเทียบกล้องแอคชั่นสำหรับเที่ยวไทยแบบจัดเต็ม</h1>
 
 <p>สวัสดีครับเพื่อนนักเดินทาง! หากคุณกำลังวางแผนทริปสุดมันส์ที่เมืองไทย และกำลังลังเลว่าจะเลือกพก <strong>DJI Osmo Action 6</strong> หรือ <strong>GoPro Hero Black 13</strong> ไปเก็บภาพความประทับใจ บทความนี้คือคำตอบครับ เราจะพาคุณไปเจาะลึกจุดแข็งจุดอ่อนของกล้องแอคชั่นเรือธงทั้งสองรุ่น ผ่านมุมมองของสถานที่ท่องเที่ยวจริงในประเทศไทย พร้อมเทคนิคการถ่ายทำที่คำนึงถึงวัฒนธรรมและกฎหมายท้องถิ่น เพื่อให้คุณได้ฟุตเทจสวยๆ กลับไปเล่าเรื่องราวได้อย่างไม่ติดขัด</p>
@@ -206,5 +233,16 @@
 
 <p>ท้ายที่สุดแล้ว กล้องที่ดีที่สุดคือกล้องที่คุณพกติดตัวไปด้วยเสมอครับ ทั้งสองรุ่นนี้ล้วนเป็นตัวเลือกที่ยอดเยี่ยมสำหรับการผจญภัยในเมืองไทย ขอให้สนุกกับการถ่ายทำ และอย่าลืมเก็บภาพความทรงจำดีๆ กลับมาเล่าให้เพื่อนๆ ฟังนะครับ เที่ยวให้สนุก และรักษาสิ่งแวดล้อมด้วยการไม่ทิ้งขยะลง
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

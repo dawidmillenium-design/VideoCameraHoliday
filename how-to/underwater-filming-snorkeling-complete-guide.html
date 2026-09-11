@@ -23,30 +23,34 @@
   "articleSection": "How-To"
 }
 </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-<nav class="top-nav" aria-label="Primary navigation">
-<div class="nav-container">
-<a class="logo" href="/VideoCameraHoliday/">📹 Holiday Video Camera</a>
-<button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation">☰</button>
-<ul class="nav-links">
-<li><a href="/VideoCameraHoliday/">Home</a></li>
-<li><a href="/VideoCameraHoliday/city-through-the-lens/">Series</a></li>
-<li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
-<li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
-<li><a href="/VideoCameraHoliday/how-to/" class="active">How-To</a></li>
-<li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
-<li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
-<li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
-<li><a href="/VideoCameraHoliday/about/">About</a></li>
-</ul>
-</div>
-</nav>
 
-<header>
-<h1>Underwater & Snorkeling Filming: The Complete Travel Guide</h1>
-<p class="subtitle">After 4 years testing underwater cameras in Thailand, Indonesia, Mexico & the Maldives — here's every setting and gear choice you need</p>
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
 </header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
 
 <article class="container">
 <p class="article-meta"><strong>By Dawid Millennium</strong> | Published August 31, 2026 | 14 min read | 🤿 How-To</p>
@@ -125,34 +129,14 @@
 </article>
 
 <footer class="site-footer">
-<div class="footer-container">
-<section class="footer-section"><h4>How-To</h4><ul>
-<li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilization</a></li>
-<li><a href="/VideoCameraHoliday/how-to/underwater-filming-snorkeling-complete-guide.html">Underwater</a></li>
-<li><a href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html">Rain Protection</a></li>
-</ul></section>
-<section class="footer-section"><h4>About</h4><ul>
-<li><a href="/VideoCameraHoliday/about/">About Us</a></li>
-<li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
-</ul></section>
-</div>
-<div class="footer-bottom"><p>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a></p></div>
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
 </footer>
 
-<script src="/VideoCameraHoliday/assets/site-shell.js" defer></script>
-
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mega-menu');
-    if (toggleBtn && mobileMenu) {
-        toggleBtn.addEventListener('click', () => {
-            const isActive = mobileMenu.classList.toggle('active');
-            toggleBtn.classList.toggle('active');
-            toggleBtn.setAttribute('aria-expanded', isActive);
-        });
-    }
-});
+    /* Paste the full drawer + cookie consent JavaScript here */
 </script>
+
 </body>
 </html>

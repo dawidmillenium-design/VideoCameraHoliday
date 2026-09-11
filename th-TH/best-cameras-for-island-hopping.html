@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องถ่ายรูปที่ดีที่สุดสำหรับทริปเที่ยวเกาะในประเทศไทย: คู่มือฉบับสมบูรณ์สำหรับปี 2025</h1>
 
 <p>ประเทศไทยเป็นหนึ่งในจุดหมายปลายทางยอดนิยมที่สุดในโลกสำหรับการท่องเที่ยวแบบเกาะhopping (Island Hopping) ไม่ว่าจะเป็นหมู่เกาะพีพี เกาะสมุย เกาะเต่า เกาะลันตา หรือหมู่เกาะสิมิลัน ทุกแห่งล้วนมีทิวทัศน์ที่สวยงามจนต้องหยิบกล้องขึ้นมาบันทึกไว้ แต่การถ่ายภาพบนเกาะในประเทศไทยมีความท้าทายเฉพาะตัวที่แตกต่างจากการถ่ายภาพบนแผ่นดินใหญ่ ทั้งแสงแดดจัด ความชื้นสูง ละอองเกลือ ทราย และการเคลื่อนไหวบนเรือ คู่มือนี้จะช่วยคุณเลือกกล้องและอุปกรณ์ที่เหมาะสมที่สุดสำหรับทริปเที่ยวเกาะในเมืองไทย</p>
@@ -195,5 +222,16 @@
 
 <p><strong>คำสำคัญที่เกี่ยวข้อง:</strong> กล้องถ่ายรูปเที่ยวเกาะ, กล้องกันน้ำ, ถ่ายภาพเกาะพีพี, โดรนกฎหมายไทย, กล้อง mirrorless เมืองไทย, ทริปเกาะสมุย, เกาะเต่า underwater photography</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

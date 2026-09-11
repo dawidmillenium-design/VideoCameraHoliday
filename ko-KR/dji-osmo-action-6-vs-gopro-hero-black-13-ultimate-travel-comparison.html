@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <article>
   <h1>DJI Osmo Action 6 vs GoPro Hero Black 13: 대한민국 여행 완벽 비교 가이드</h1>
 
@@ -114,6 +141,16 @@
   <p>두 카메라 모두 한국 여행의 필수품이지만, 선택 기준은 명확합니다. <strong>DJI Osmo Action 6</strong>는 혼자 여행하며 셀카와 먹방, 일상 브이로그를 중점적으로 촬영하는 크리에이터에게 최적화되어 있습니다. 전면 화면과 한국인의 피부 톤에 맞는 색상 표현은 콘텐츠의 완성도를 높여줍니다. 반면, <strong>GoPro Hero Black 13</strong>은 극한의 스포츠, 수중 촬영, 그리고 전문적인 영상미를 추구하는 여행자에게 더 적합합니다. 방수 성능과 저조도 처리 능력은 한국의 다양한 액티비티에서 확실한 우위를 점합니다.</p>
   <p>마지막으로, 어떤 카메라를 선택하든 한국에서 가장 중요한 것은 '존중'입니다. 아름다운 풍경만큼이나 그곳에 사는 사람들의 삶도 소중하다는 것을 잊지 마세요. 카메라를 들이대기 전에 눈을 마주치고 미소를 짓는 것이, 최고의 영상을 만드는 첫걸음입니다. 안전하고 즐거운 한국 여행 되시고, 멋진 추억 담아오세요!</p>
 </article>
-    </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

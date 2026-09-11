@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Die beste Kamera für Wildlife-Safari: Der große Kaufratgeber 2024</h1>
 
 <p>Eine Safari in Afrika, Indien oder im Bayerischen Wald ist ein Erlebnis, das man ein Leben lang in Erinnerung behält. Damit die atemberaubenden Momente – der sprungbereite Gepard, der badende Elefant oder der kreisende Adler – nicht nur in Ihrem Gedächtnis, sondern auch in brillanter Bildqualität festgehalten werden, ist die richtige Kamera entscheidend. In diesem umfassenden Kaufratgeber erfahren Sie, worauf es bei einer Wildlife-Kamera wirklich ankommt, welche Modelle sich für deutsche Fotografen auf Reisen besonders eignen und wie Sie mit Ihrem Budget das Maximum herausholen.</p>
@@ -188,5 +215,16 @@
 
 <p><em>Hinweis: Alle Preise sind unverbindliche Preisempfehlungen und können variieren. Stand: Oktober 2024.</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

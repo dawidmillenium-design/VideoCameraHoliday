@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Las mejores cámaras para unas vacaciones de camping: guía definitiva para fotografiar la España rural</h1>
 
 <p>Dormir bajo un cielo estrellado en Ordesa, despertarse con la niebla sobre los Picos de Europa o capturar el último rayo de sol sobre los acantilados de la Costa da Morte. Las vacaciones de camping en España ofrecen un abanico de escenarios fotográficos difícil de igualar en Europa: desde los bosques atlánticos de Galicia hasta los desiertos volcánicos de Almería, pasando por los valles pirenaicos y las dehesas extremeñas. Pero elegir la cámara adecuada para este tipo de viaje no es lo mismo que preparar un equipo para un safari urbano o un reportaje de estudio. Aquí la polvo, la humedad, la autonomía y la logística del campamento marcan la diferencia entre traer a casa imágenes memorables o un disco duro lleno de fotos borrosas.</p>
@@ -172,5 +199,16 @@
 
 <p>No existe una cámara perfecta para todos los campings españoles, pero sí un enfoque adecuado: prioriza el sellado, la autonomía y la ligereza por encima de la resolución extrema. Una Sony A7 IV o una Fujifilm X-T5 cubrirán la mayoría de situaciones; si tu destino es la España verde o la fotografía de fauna, la OM System OM-1 es difícil de superar; y si tu prioridad es la ast
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

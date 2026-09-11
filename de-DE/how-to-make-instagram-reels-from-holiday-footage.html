@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Instagram Reels aus Urlaubsvideos erstellen: Der komplette Leitfaden für Deutschland</h1>
 
 <p>Sie kommen gerade aus dem Urlaub zurück – vielleicht von der Ostseeküste, aus den bayerischen Alpen oder von einer Städtereise nach Lissabon – und Ihr Smartphone oder Ihre Kamera ist voll mit wunderschönem Videomaterial. Statt diese Aufnahmen auf der Festplatte verstauben zu lassen, können Sie daraus beeindruckende Instagram Reels machen, die Ihre Follower begeistern und Ihre Urlaubserinnerungen lebendig halten.</p>
@@ -244,5 +271,16 @@
 
 <p>Mein wichtigster Tipp aus der Praxis: Fangen Sie einfach an. Ihr erstes Reel wird nicht perfekt sein, und das muss es auch nicht. Jedes weitere Video macht Sie besser. Ob Nordsee, Schwarzwald oder ein
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Jak montować podróżnicze YouTube Shorts – kompletny poradnik krok po kroku</h1>
 
 <p>YouTube Shorts to dziś jedno z najskuteczniejszych narzędzi, dzięki którym możesz pokazać swoje podróżnicze materiały szerokiemu gronu odbiorców – bez konieczności budowania dużego kanału od zera. Krótkie, pionowe filmy z podróży świetnie się rozchodzą, bo algorytm YouTube chętnie promuje treści, które zatrzymują widza na dłużej niż kilka sekund. W tym poradniku przeprowadzę Cię przez cały proces: od planowania zdjęć, przez sprzęt dostępny w Polsce, aż po montaż i publikację. Wszystko na podstawie mojego doświadczenia z nagrywania materiałów m.in. w Bieszczadach, na Mazurach, w Tatrach i podczas miejskich weekendów w Krakowie czy Gdańsku.</p>
@@ -201,5 +228,16 @@ Muzyka: spokojny, rytmiczny utwór. Napisy: „Gdańsk, Polska”.</p>
 
 <p><strong>Muzyka została wyciszona.</strong> YouTube wykrył prawa autorskie. Wymień utwór na ten z YouTube Audio Library lub Epidemic Sound. Sprawd
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

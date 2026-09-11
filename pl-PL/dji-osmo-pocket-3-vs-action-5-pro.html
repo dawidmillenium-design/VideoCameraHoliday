@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 3 vs DJI Action 5 Pro – które narzędzie wideo zabrać w podróż? Praktyczne porównanie</h1>
 
 <p>Rynek kamer podróżniczych w Polsce przeżywa prawdziwy renesans. Jeszcze kilka lat temu wybór był prosty: albo klasyczna kamera sportowa, albo smartfon. Dziś DJI oferuje dwa urządzenia, które na pierwszy rzut oka mają podobne zastosowania, ale w praktyce realizują zupełnie inne filozofie filmowania. <strong>DJI Osmo Pocket 3</strong> to kamera gimbalowa z 1-calowym sensorem, stworzona do stabilnego, kinowego obrazu z ręki. <strong>DJI Action 5 Pro</strong> to natomiast kamera sportowa nowej generacji, która nie boi się wody, błota ani ekstremalnych temperatur.</p>
@@ -234,5 +261,16 @@
 
 <p>DJI Osmo Pocket 3 i DJI Action 5 Pro to dwa różne narzędzia do dwóch różnych zadań. Pocket 3 to kamera do filmowania z ręki, stworzona z myślą o jakości obrazu i stabilności. Action 5 Pro to kamera sportowa, która nie boi się żywio
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

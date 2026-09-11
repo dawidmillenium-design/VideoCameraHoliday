@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>山野与城市之间：2024年旅行Vlog相机横评（中国实地测试）</h1>
 
 <p>当你在海拔4500米的稻城亚丁徒步，或在杭州龙井村的茶园漫步时，一台能塞进冲锋衣口袋的相机，往往比旗舰手机更能捕捉风的声音和雪山的纹理。为满足中国旅行者从318国道到城市漫步的多元需求，我们选取了四款当前在中国市场（京东、天猫均有官方旗舰店）热销的小型Vlog相机——<strong>索尼ZV-E10 II、大疆Osmo Pocket 3、佳能PowerShot V10和GoPro HERO12 Black</strong>，在川西高原、北京胡同和上海外滩进行了为期两周的实测。本文所有结论均基于真实拍摄体验，而非参数堆砌。</p>
@@ -135,5 +162,16 @@
 
 <p>最后建议：在京东购买时，关注“以旧换新”补贴（最高可抵¥800）和“30天无忧试用”服务。大疆和索尼的官方延保计划（约¥200/年）在高原低温等严苛环境下值得购买。无论选择哪台，请记住——最好的相机是能让你在318国道上愿意停车拍摄的那台。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

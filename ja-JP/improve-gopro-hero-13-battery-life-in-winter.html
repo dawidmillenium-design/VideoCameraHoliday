@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>冬のGoPro Hero 13バッテリー持ちを改善する完全ガイド：寒冷地撮影の実践テクニック</h1>
 
 <p>「せっかく北海道で撮影したのに、あっという間にバッテリーが切れてしまった…」そんな経験はありませんか？GoPro Hero 13は前モデルよりバッテリー効率が向上したとはいえ、氷点下の環境ではリチウムイオンバッテリーの化学反応が鈍り、公称の持続時間を大幅に下回ることがあります。私自身、ニセコや蔵王、そして厳冬期の富士山麓でHero 13を酷使してきましたが、工夫次第で撮影可能時間を1.5〜2倍に延ばせることを実感しています。この記事では、日本国内で入手できる機材と、実際のフィールドで検証済みのテクニックをステップ形式で解説します。</p>
@@ -158,5 +185,16 @@ A. MicroSDカードの速度不足が原因かも。SanDisk Extreme ProなどV30
 
 <p>寒冷地でのGoPro Hero 13は、ひと手間かけるだけで驚くほど頼もしくなります。大切なのは「保温」「こまめな電源オフ」「給電併用」の3本柱。そして何より、日本の冬山やスキー場では、バッテリーだけでなく自分自身の防寒も忘れずに。この記事のステップを実践すれば、これまで撮れなかった厳冬期の美しい瞬間を、しっかりと記録に残せるはずです。ぜひ次の週末、近くの雪山や凍った湖で試してみてください。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

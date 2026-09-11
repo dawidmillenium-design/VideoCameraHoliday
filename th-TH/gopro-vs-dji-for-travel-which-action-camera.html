@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>GoPro vs DJI สำหรับการท่องเที่ยว: กล้องแอคชั่นตัวไหนเหมาะกับคุณ?</h1>
 
 <p>ในยุคที่การท่องเที่ยวกลับมาคึกคักอีกครั้ง ชาวไทยจำนวนมากกำลังมองหากล้องแอคชั่นสักตัวเพื่อบันทึกทริปผจญภัยของตัวเอง ไม่ว่าจะเป็นการดำน้ำที่หมู่เกาะสิมิลัน ขับมอเตอร์ไซค์ขึ้นดอยอินทนนท์ หรือเดินป่าในอุทยานแห่งชาติเขาใหญ่ คำถามที่พบบ่อยที่สุดคือ "ควรซื้อ GoPro หรือ DJI ดี?"</p>
@@ -282,5 +309,16 @@
 
 <p><strong>DJI Osmo Action 4</strong> ชนะในด้านเซ็นเซอร์ที่ใหญ่กว่า ให้ภาพในที่แสงน้อยดีกว่า แบตเตอรี่ที่อึดกว่า และการเชื่อมต่อไมค์ภายนอก
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

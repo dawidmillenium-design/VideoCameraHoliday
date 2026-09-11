@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Die beste Nacht-Videokamera für Reisen: Der ultimative Kaufratgeber 2024</h1>
 
 <p>Wer auf Reisen besondere Momente festhalten möchte, steht oft vor einer Herausforderung: Die schönsten Erlebnisse finden häufig bei schwachem Licht statt. Ob der Sonnenuntergang über den Alpen, die beleuchtete Skyline von Tokio oder das Lagerfeuer am Strand von Dänemark – herkömmliche Kameras stoßen bei Nacht schnell an ihre Grenzen. Dieser umfassende Kaufratgeber hilft Ihnen, die richtige Nacht-Videokamera für Ihre Reisebedürfnisse zu finden – verständlich erklärt, praxisnah und speziell auf den deutschen Markt zugeschnitten.</p>
@@ -199,5 +226,16 @@
 
 <p><em>Hinweis: Alle Preise sind unverbindliche Preisempfehlungen und können je nach Händler und Aktionen variieren. Stand: Oktober 2024.</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

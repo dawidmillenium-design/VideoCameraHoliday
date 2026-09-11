@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Guide Caméra pour Filmer les Temples de Kyoto : Étiquette, Matériel et Conseils Vlog</h1>
 
 <p>Kyoto, ancienne capitale impériale du Japon, abrite plus de 1 600 temples bouddhistes et 400 sanctuaires shintoïstes. Pour un vidéaste ou un vlogueur français passionné de voyage, c'est un paradis visuel — mais aussi un véritable exercice d'équilibre entre créativité, respect culturel et contraintes techniques. Ce guide complet vous accompagne dans le choix de votre matériel, la compréhension des règles locales et l'adoption des bonnes pratiques pour filmer les temples de Kyoto sans jamais manquer de respect aux lieux sacrés.</p>
@@ -219,5 +246,16 @@
 
 <p>Dans les intérieurs sombres, montez les ISO (jusqu'à
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

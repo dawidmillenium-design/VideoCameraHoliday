@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Migliori Fotocamere per il City Hopping nelle Città Europee: Guida 2024 per Viaggiatori Esigenti</h1>
 
 <p>Il city hopping europeo è un'esperienza unica: in pochi giorni puoi passare dai canali di Venezia ai vicoli di Lisbona, dalle architetture gotiche di Praga ai boulevard parigini. Ma ogni città ha le sue sfide fotografiche, e scegliere l'attrezzatura giusta può fare la differenza tra scatti memorabili e immagini deludenti. In questa guida ti accompagno nella scelta della fotocamera ideale per il tuo viaggio tra le città europee, con un'attenzione particolare alle regolamentazioni italiane e alle condizioni di scatto reali che incontrerai sul campo.</p>
@@ -196,5 +223,16 @@
 
 <p>Non esiste una fotocamera perfetta per tutti. La scelta dipende
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

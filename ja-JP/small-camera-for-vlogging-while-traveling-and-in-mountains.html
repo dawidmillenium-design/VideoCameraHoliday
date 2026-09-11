@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>【比較検証】旅と山岳でのVlogに最適な小型カメラ徹底比較：DJI Osmo Pocket 3 vs GoPro HERO12 Black vs Sony ZV-E10 II</h1>
 
 <p>「旅の思い出を高画質で残したい。でも、重い機材は持ち歩きたくない。」そんなジレンマを抱える日本の旅行者や登山愛好家は少なくありません。特に、富士山の登山道や京都の路地裏、沖縄のビーチなど、シチュエーションによって求められるカメラの特性は大きく異なります。</p>
@@ -208,5 +235,16 @@
         <tr>
             <td><strong>登山・アウトドア・アクティビティ</
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

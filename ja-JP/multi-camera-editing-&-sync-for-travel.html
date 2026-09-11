@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>旅行動画のマルチカメラ編集＆同期 完全ガイド【日本版】</h1>
 
 <p>「京都の紅葉を、GoProとミラーレスとスマホで撮ったけど、どうやって1本の動画にすればいいの？」——そんな悩みを持つ方は多いはずです。私自身、北海道の雪まつりから沖縄の離島まで、毎回2〜4台のカメラを持ち歩いて旅動画を制作してきました。この記事では、日本国内で手に入る機材を使い、旅行先で撮影した複数カメラの映像を正しく同期させ、テンポよく編集する手順を、実体験ベースで徹底解説します。</p>
@@ -208,5 +235,16 @@
 
 <p>マルチカメラ編集は難しそうに見えますが、<strong>手拍子1回</strong>と<strong>フレームレート統一</strong>さえ押さえれば、驚くほど簡単に始められます。最初はスマホ＋アクションカムの2台から挑戦してみてください。京都の竹林や沖縄のビーチなど、日本の美しい風景を多角的に切り取ることで、あなたの旅行動画は一段と魅力的になります。さあ、次の旅で早速試してみましょう。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

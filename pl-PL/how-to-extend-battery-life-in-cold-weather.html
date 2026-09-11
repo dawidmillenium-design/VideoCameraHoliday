@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Jak przedłużyć żywotność baterii w niskich temperaturach – kompletny poradnik dla fotografów i wideografów</h1>
 
 <p>Zima w Polsce to dla każdego fotografa i wideografa prawdziwy test wytrzymałości – nie tylko naszej, ale przede wszystkim sprzętu. Kiedy temperatura spada poniżej zera, a Ty stoisz na Rynku Głównym w Krakowie albo czekasz na poranne światło nad Morskim Okiem, baterie w Twoim aparacie zaczynają zachowywać się zupełnie inaczej niż latem. Nagle okazuje się, że zapas, który normalnie wystarczał na cały dzień zdjęć, kończy się po godzinie. To nie awaria – to fizyka. Litowo-jonowe ogniwa, które zasilają praktycznie wszystkie współczesne aparaty i kamery, tracą wydajność w niskich temperaturach, a proces ten przyspiesza wraz ze spadkiem wskazań termometru. Dobra wiadomość jest taka, że z odpowiednim przygotowaniem możesz pracować na mrozie przez wiele godzin bez utraty cennych ujęć. W tym poradniku podzielę się sprawdzonymi metodami, które wypracowałem przez lata zimowych plenerów – od Tatr po Suwalski Park Krajobrazowy – i pokażę Ci krok po kroku, jak zadbać o baterie, gdy na zewnątrz jest -15°C.</p>
@@ -163,5 +190,16 @@
 <li><strong>Bateria nagle „umarła”, mimo że wskaźnik pokazywał 40%.</strong> Wyjmij ją, ogrzej w kieszeni przez 5–10 minut, włóż ponownie. Często odzyska część pojemności. Jeśli nie – wymień na zapasową.</li>
 <li><strong>Aparat nie chce się włączyć na mrozie.</strong> Nie panikuj. Włóż aparat pod kurtkę na 10–15 minut, potem spróbuj ponownie. Jeśli to nie pomoże, wyjmij baterię i ogrzej ją w dłoniach.</li>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

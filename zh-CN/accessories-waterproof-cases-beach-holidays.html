@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2024防水相机壳横评：海滩度假浮潜装备怎么选？</h1>
 
 <p>三亚浮潜、普吉岛跳岛、冲绳亲子游——中国旅行者的海滩度假清单里，水下拍摄几乎成了刚需。但手机裸机下水报废的案例每年都在发生，一台靠谱的防水壳或防水相机才是保住素材和钱包的关键。我们花了三周时间，在三亚亚龙湾、深圳大鹏半岛和厦门鼓浪屿实测了市面上五款主流防水方案，从密封结构、光学表现到实际佩戴体验逐一拆解，帮你找到最适合自己行程的那一款。</p>
@@ -230,5 +257,16 @@
 
 <p>无论选择哪款，请记住：每次海水使用后，务必用淡水浸泡并冲洗密封圈，晾干后再收纳。三亚和深圳的潜水店通常提供免费冲洗服务，善加利用能显著延长装备寿命。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

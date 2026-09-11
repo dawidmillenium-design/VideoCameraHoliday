@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Export-Einstellungen für YouTube &amp; Instagram: Der komplette Praxis-Guide für Deutschland</h1>
 
 <p>Du hast stundenlang an deinem Video geschnitten, die Farben perfektioniert und den Sound abgemischt – und jetzt soll alles auf YouTube und Instagram glänzen. Genau hier entscheidet sich, ob dein Material gestochen scharf und flüssig läuft oder ob YouTube es mit hässlichen Kompressionsartefakten zermatscht. In diesem Tutorial zeige ich dir Schritt für Schritt, welche Export-Einstellungen für YouTube und Instagram wirklich funktionieren – basierend auf meiner eigenen Erfahrung aus über zehn Jahren Videoproduktion, unter anderem mit Drehs in Berlin, Hamburg, München und im Schwarzwald.</p>
@@ -170,5 +197,16 @@
 
 <p>Mit den richtigen Export-Einstellungen holst du das Maximum aus deinem Material heraus – egal ob du einen Reise-Vlog von der Ostseeküste oder ein Reel aus dem Münchner Englischen Garten hochlädst. Nimm dir die Zeit, die Bitraten, Codecs und Seitenverhältnisse einmal sauber einzustellen, und speichere sie als Preset in deinem Schnittprogramm. Dann geht der nächste Export in Sekundenschnelle von der Hand. Viel Erfolg beim Upload – ich freue mich, deine Videos auf YouTube und Instagram zu sehen!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

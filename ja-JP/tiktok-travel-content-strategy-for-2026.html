@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2026年版 TikTok 旅行コンテンツ戦略：日本から世界へ発信する完全ガイド</h1>
 
 <p>「旅行動画を TikTok に投稿してみたいけど、何から始めればいいかわからない」。そんな悩みを持つ方に向けて、この記事では2026年のアルゴリズム変化を踏まえた TikTok 旅行コンテンツ戦略を、実際に日本国内・海外で撮影してきた経験をもとにステップ形式で解説します。北海道の美瑛から沖縄の竹富島、さらにはソウルや台北まで、現地で撮影してきたリアルな知見を詰め込みました。読み終わるころには、今日から撮影を始められる状態になっているはずです。</p>
@@ -186,5 +213,16 @@ A. 寺社仏閣や一部の商業施設では撮影禁止・許可制の場所�
 
 <p>2026年の TikTok 旅行コンテンツで成果を出す鍵は、<strong>「行きたくなる情報を、テンポよく、検索に引っかかる形で届ける」</strong>ことです。特別な機材は不要ですが、フック・テロップ・シリーズ化・データ分析の4点は外せません。まずは次の週末、近場の絶景スポットで1本撮ってみてください。最初の1本が、あなたの旅行コンテンツ人生の起点になります。日本には四季折々の美しい場所が無数にあります。その魅力を TikTok で世界に発信していきましょう。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

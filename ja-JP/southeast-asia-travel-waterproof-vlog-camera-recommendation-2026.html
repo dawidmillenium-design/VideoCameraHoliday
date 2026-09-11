@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>【2026年最新】東南アジア旅行×防水Vlogカメラ完全ガイド：日本発・現地で差がつく機材選びと撮影術</h1>
 
 <p>日本の蒸し暑い夏を抜け出し、青く澄んだ海とエキゾチックな文化を求めて東南アジアへ。そんな旅の記憶を鮮明に残すためには、日本の環境とは異なる「高温多湿」「突然のスコール」「塩害」といった過酷な条件下で頼れる防水Vlogカメラが必須です。本記事では、2026年現在の最新モデルを比較しながら、バンコクの喧騒からバリ島の海底まで、シーン別の最適な一台をプロの視点で徹底解説します。さらに、日本の旅行者が現地で陥りがちな撮影マナー違反や法律の落とし穴もフォロー。あなたの旅のクオリティを一段引き上げる、実践的なガイドをお届けします。</p>
@@ -139,5 +166,16 @@
 
 <p><em>※本記事の情報は2026年1月時点のものです。現地の法律や規制は変更される場合があるため、渡航前に必ず各国の大使館や観光局の公式情報を確認してください。</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

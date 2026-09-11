@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>YouTube Shorts 旅行動画の編集ワークフロー完全ガイド｜日本で撮る・作る・伸ばす</h1>
 
 <p>「旅行先で撮った動画がスマホに溜まっているけれど、どう編集すればいいか分からない」。そんな悩みを抱えていませんか。YouTube Shortsは縦型・60秒以内という制約がある一方で、うまく活用すれば旅行の思い出を魅力的に発信でき、チャンネル成長の強力な入口になります。この記事では、京都や沖縄、北海道など日本国内の旅行を例に、撮影から編集、書き出し、投稿までの一連のワークフローを、実際に私が現場で試行錯誤してきた経験をもとにステップ形式で解説します。</p>
@@ -163,5 +190,16 @@ YouTubeアプリまたはPCからアップロードします。タイトルに�
 
 <p>YouTube Shortsの旅行編集は、特別な機材がなくてもスマホ1台で始められます。大切なのは、縦型で短くテンポよく、テロップとBGMで魅力を引き出すこと。そして、投稿を繰り返すうちに自分のスタイルが見えてきます。私も最初は10本投稿するまで手探りでしたが、今では旅行のたびにShortsを撮るのが楽しみになりました。このワークフローを参考に、あなたも次の旅行でぜひ1本作ってみてください。きっと旅の思い出が、誰かの旅のきっかけになるはずです。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

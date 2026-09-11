@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>旅行摄影滤镜选购指南：2024年最值得买的镜头滤镜推荐</h1>
 
 <p>作为一名旅行摄影师，你是否遇到过这样的场景：在青海湖边拍摄时，天空过曝变成一片死白；在桂林漓江边想拍出丝绢流水，却怎么也慢不下来快门；或者在西藏高原上，照片总是灰蒙蒙的，缺少那种通透感？这些问题的答案，很可能就藏在一枚小小的镜头滤镜里。</p>
@@ -181,5 +208,16 @@
 
 <p>最后提醒：滤镜是工具，不是目的。多拍、多练、多感受旅途本身，才是摄影的真正意义。祝你旅途愉快，出片顺利！</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

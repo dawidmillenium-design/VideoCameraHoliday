@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Polska 2026: Kompletny przewodnik po kamerach wideo i aparatach do podróży do Azji Południowo-Wschodniej – sprzęt wodoodporny i vlogi</h1>
 
 <p>Planujesz podróż z Polski do Wietnamu, Tajlandii, Indonezji czy na Filipiny? Jako twórca treści wideo z pewnością zastanawiasz się, jaki sprzęt zabrać, aby przetrwał tropikalny klimat, wilgotność powietrza, piasek i nagłe ulewy. Ten przewodnik powstał z myślą o polskich podróżnikach, którzy chcą nagrywać vlogi w najwyższej jakości, nie rezygnując z mobilności i bezpieczeństwa swojego ekwipunku. Przedstawiamy rekomendacje sprzętu na rok 2026, uwzględniające specyfikę regionu, lokalne przepisy oraz praktyczne aspekty filmowania w Azji Południowo-Wschodniej.</p>
@@ -120,5 +147,16 @@
 
 <h2>Dobór akcesoriów – co
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

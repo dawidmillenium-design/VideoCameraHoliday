@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2026年独自旅行Vlog相机防水推荐：从入门到进阶的终极选购指南</h1>
 
 <p>独自旅行，是探索世界，更是与自我对话。而一台可靠的防水Vlog相机，则是这场对话最忠实的记录者。无论是潜入巴厘岛的碧蓝海底，还是徒步穿越川西的磅礴雨雾，又或是在京都的绵绵细雨中漫步，一台能应对复杂环境、画质出众且便携的设备，决定了你能否将那些转瞬即逝的震撼与感动，化为永恒的数字资产。作为专注于旅行影像的编辑，我深知“防水”并非一个简单的参数，它关乎相机在潮湿、多尘、温差剧变环境下的整体可靠性。本指南将结合2026年最新市场动态，从技术底层逻辑出发，为你剖析选购要点，并推荐几款经过实地验证的机型，助你在独行路上，拍出电影感大片。</p>
@@ -144,5 +171,16 @@
 <h3>Q4: 10-bit Log格式对电脑剪辑压力大吗？</h3>
 <p><strong
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

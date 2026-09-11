@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Quel est le meilleur appareil photo pour un safari animalier ? Guide d'achat complet 2024</h1>
 
 <p>Un safari au Kenya, en Tanzanie, en Afrique du Sud ou au Botswana figure souvent parmi les voyages d'une vie. Entre les grands félins au lever du soleil, les troupeaux d'éléphants à contre-jour et les oiseaux colorés dans la savane, chaque instant mérite d'être immortalisé. Mais quel appareil photo choisir pour rapporter des images à la hauteur de ce spectacle ?</p>
@@ -200,5 +227,16 @@
 <h3>Faut-il un plein format ou un APS-C pour la faune ?</h3>
 <p>Les deux fonctionnent. L'APS-C offre un facteur de recadrage 1,5x qui « allonge » la focale, très utile en safari. Le plein format est meilleur en basse lumière et pour les flous d'arrière-plan. À vous de
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

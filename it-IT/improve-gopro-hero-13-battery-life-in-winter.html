@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Come Migliorare la Durata della Batteria della GoPro Hero 13 in Inverno: Guida Completa</h1>
 
 <p>Se sei un videomaker o un appassionato di avventura, sai bene quanto sia frustrante vedere la batteria della tua GoPro Hero 13 crollare improvvisamente mentre stai riprendendo una discesa sulle Dolomiti o una ciaspolata in Val d'Aosta. Le basse temperature sono il nemico numero uno delle batterie al litio, e la Hero 13, nonostante i miglioramenti rispetto ai modelli precedenti, non fa eccezione. In questa guida ti spiegherò passo dopo passo come affrontare il freddo invernale italiano e massimizzare l'autonomia della tua action cam, basandomi sulla mia esperienza diretta sul campo tra le nevi del Trentino e del Friuli.</p>
@@ -189,5 +216,16 @@
 
 <p>Migliorare la durata della batteria della GoPro Hero 13 in inverno non richiede attrezzature costose o competenze tecniche avanzate. Bastano alcune accortezze, un po' di pianificazione e la giusta attitudine
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

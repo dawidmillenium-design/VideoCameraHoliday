@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 4 Pro am Strand: Der ultimative Schutz-Guide gegen Sand und Feuchtigkeit</h1>
 
 <p>Die Ostsee bei Rügen, der feine Sand der Nordseeinseln oder ein Tag am Chiemsee – Deutschlands Strände und Ufer sind wunderschön, aber für Ihre DJI Osmo Pocket 4 Pro eine echte Herausforderung. Nichts ist ärgerlicher, als nach einem perfekten Urlaubstag festzustellen, dass der Gimbal quietscht, der Autofokus zickt oder Feuchtigkeit im Inneren die Elektronik bedroht. In diesem ausführlichen Tutorial zeige ich Ihnen anhand meiner eigenen Erfahrungen von der Ostseeküste bis zum Badesee, wie Sie Ihre Kamera optimal vor den zwei größten Feinden des Strandes schützen: feinem Sand und salzhaltiger Luftfeuchtigkeit.</p>
@@ -160,5 +187,16 @@
     <li><strong>Fehler 3: Die Kamera in der prallen Sonne liegen lassen.</strong> Die schwarze Kamera kann sich in der Sonne stark aufheizen. Dies kann nicht nur den Akku schädigen, sondern auch die interne Elektronik. Suchen Sie immer Schatten für Ihre Ausrüstung.</li>
     <li><strong>Fehler 4: Die Reinigung
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>热带雨林度假相机推荐：中国云南西双版纳与海南尖峰岭拍摄全指南</h1>
 
 <p>当北方的寒流还在肆虐，云南西双版纳的望天树已经抽出了新芽，海南尖峰岭的云雾正缠绕着桫椤的树冠。对于热爱自然的旅行摄影师来说，中国的热带雨林是无需护照就能抵达的绿色秘境。但这里也是相机的“地狱考场”——95%的湿度、突如其来的暴雨、遮天蔽日的林冠层，都在考验你的器材与判断。这篇文章将结合西双版纳与尖峰岭的具体拍摄场景，帮你选出最适合热带雨林度假的相机，并避开那些只有亲身踩过坑才知道的陷阱。</p>
@@ -185,5 +212,16 @@
 
 <p>没有一台相机能征服所有热带雨林场景，但你的拍摄习惯和旅行方式会帮你缩小选择范围。如果你追求极致画质和全能表现，索尼A7 IV是稳妥之选；如果你计划在尖峰岭进行多日徒步，富士X-T5的轻量优势无可替代；如果你痴迷于在暴雨中拍摄雨林生态，奥林巴斯OM-1的防水性能独树一帜。无论选择哪台相机，请记住：尊重当地文化、遵守保护法规、保护这片珍贵的绿色秘境，比拍到一张好照片更重要。带上合适的器材，保持耐心，西双版纳和尖峰岭的雨林会回馈你意想不到的画面。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

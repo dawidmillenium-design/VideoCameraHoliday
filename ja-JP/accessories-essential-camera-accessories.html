@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>カメラアクセサリー徹底レビュー：日本のフォトグラファーが本当に必要とする必須アイテム</h1>
 
 <p>カメラ本体を購入したばかりのあなたにとって、次に悩むのが「どのカメラアクセサリーを揃えるべきか」という問題ではないでしょうか。筆者はこれまで15年以上にわたり、北海道の雪山から沖縄の珊瑚礁まで、日本全国で撮影を行ってきました。その経験から言えるのは、<strong>必須カメラアクセサリー</strong>を適切に選ぶかどうかが、撮影の成功率と作品の質を大きく左右するということです。</p>
@@ -147,5 +174,16 @@
 
 <p>合計約80,000円の投資になりますが、これはカメラ本体と同等の価値があります。適切なアクセサリーは、あなたの撮影体験を根本から変えてくれます。日本の美しい四季を、最高の状態で記録してください。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

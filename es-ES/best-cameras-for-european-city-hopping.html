@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Las mejores cámaras para hacer city hopping por Europa: guía definitiva para viajeros fotógrafos</h1>
 
 <p>Recorrer varias ciudades europeas en un mismo viaje es uno de los mayores placeres que existen para cualquier aficionado a la fotografía y al vídeo. En pocos días puedes pasar de los callejones empedrados de Toledo a los bulevares haussmannianos de París, o de los canales de Ámsterdam al casco histórico de Lisboa. Pero ese ritmo trepidante también plantea un reto enorme: necesitas un equipo ligero, versátil y discreto que rinda en condiciones muy distintas sin convertirse en un lastre a la espalda.</p>
@@ -195,5 +222,16 @@
 
 <p>Con la cámara adecuada y una actitud respetuosa, cada ciudad se convertirá en un escenario perfecto para tus imágenes. ¡Buen viaje y buenas fotos!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

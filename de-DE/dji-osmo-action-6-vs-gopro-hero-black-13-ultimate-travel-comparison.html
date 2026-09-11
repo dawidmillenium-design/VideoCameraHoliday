@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Action 6 vs. GoPro Hero Black 13: Der ultimative Reise-Vergleich für Deutschland</h1>
 
 <p>Deutschland ist ein Paradies für Reisende, die atemberaubende Landschaften, pulsierende Städte und eine reiche Geschichte erleben möchten. Von den schroffen Gipfeln der Alpen bis zu den historischen Straßen Berlins – das Land bietet eine beeindruckende Vielfalt an Fotomotiven. Doch für aktive Content-Creator stellt sich vor der Reise die entscheidende Frage: Welche Action-Cam ist die beste Begleitung? In diesem ultimativen Vergleich stellen wir die beiden Flaggschiffe <strong>DJI Osmo Action 6</strong> und <strong>GoPro Hero Black 13</strong> gegenüber und analysieren, welche Kamera für die spezifischen Herausforderungen einer Deutschlandreise besser geeignet ist. Wir betrachten nicht nur die technischen Daten, sondern auch die praktischen Aspekte, kulturellen Eigenheiten und rechtlichen Rahmenbedingungen, die Ihre Video-Produktion in Deutschland beeinflussen.</p>
@@ -158,5 +185,16 @@
 
 <p>Für die GoPro empfehlen wir die Anschaffung des <strong>Media Mod</strong>. Dieser Aufsatz verwandelt die Kamera in ein leistungsfähiges Vlogging-Tool. Er bietet einen integrierten Richtmikrofon, der die Audioqualität deutlich verbessert, sowie Anschlüsse für externe Mikrofone und HDMI. Der Media Mod ist besonders nützlich, wenn Sie Interviews mit Einheimischen auf dem <strong>Viktualienmarkt</strong> in München führen möchten. Die GoPro selbst ist zwar wasserdicht, aber der Media Mod ist es nicht. Sie müssen ihn also abnehmen, wenn Sie tauchen oder
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

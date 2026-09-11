@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Come Proteggere DJI Osmo Pocket 4 Pro da Sabbia e Umidità: La Guida Definitiva per l'Italia</h1>
 
 <p>Se sei un videomaker o un semplice appassionato che vive in Italia, sai bene che il nostro paese è un paradiso per le riprese: dalle spiagge della Sardegna alle coste della Costiera Amalfitana, fino ai laghi del Nord. Ma c'è un nemico invisibile e subdolo che può rovinare per sempre il tuo DJI Osmo Pocket 4 Pro (o Pocket 3, il principio è identico): la sabbia fine e l'umidità salmastra.</p>
@@ -161,5 +188,16 @@
     <li><strong>Il gimbal trema o vibra:</strong> Spegni, rimuovi la batteria (se possibile) e metti la camera nel contenitore con riso per 24 ore. Poi riaccendi e calibra il gimbal dall'app DJI Mimo. Se il problema persiste, potrebbe essere un danno meccanico.</li>
     <li><strong>Lo schermo mostra macchie
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

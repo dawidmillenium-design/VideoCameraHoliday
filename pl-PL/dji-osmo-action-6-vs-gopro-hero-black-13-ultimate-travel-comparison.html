@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Action 6 vs GoPro Hero Black 13: Polski Przewodnik dla Podróżników</h1>
 
 <p>Polska to kraj o niezwykłej różnorodności krajobrazowej – od piaszczystych plaż Bałtyku, przez pojezierza Warmii i Mazur, aż po ostre szczyty Tatr. Dla twórców wideo podróżniczych to prawdziwy raj, ale też pole bitwy o idealny kadr. Wybór między DJI Osmo Action 6 a GoPro Hero Black 13 to dylemat, który spędza sen z powiek wielu vlogerom. Ten przewodnik pomoże Ci podjąć decyzję, uwzględniając specyficzne warunki, jakie stwarza Polska – od zmiennej pogody po lokalne przepisy dotyczące filmowania.</p>
@@ -142,5 +169,16 @@
 
 <p>Statyw lub uchwyt – w Polsce często filmujesz z ręki, ale do stabilnych ujęć – np. zachodu słońca nad Bałtykiem – potrzebujesz statywu. Polecam mały, podróżny
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>クルーズ旅行におすすめのカメラ｜日本発着クルーズで最高の思い出を撮る完全ガイド</h1>
 
 <p>日本は四方を海に囲まれ、クルーズ旅行の目的地として世界的にも恵まれた環境にあります。横浜港、神戸港、長崎港、那覇港といった主要港から出発し、瀬戸内海の多島美、富士山を望む駿河湾、離島の絶景まで、船旅ならではの被写体が満載です。本記事では、日本発着のクルーズ旅行で最高の写真を撮るためのカメラ選びを、実際の撮影スポットや気象条件、日本の撮影マナーや法規制も踏まえて徹底解説します。</p>
@@ -157,5 +184,16 @@
 <h2>まとめ：あなたのクルーズスタイルに合ったカメラ選び</h2>
 <p>日本発着のクルーズ旅行は、瀬戸内海の穏やかな風景から沖縄の鮮烈な青、長崎や神戸の夜景まで、驚くほど多様な被写体に恵まれています。機動性を重視するならソニー α7C IIやOM-1 Mark II、色再現性を楽しむなら富士フイルム X-T5、信頼のAFと操作性ならキヤノン EOS R6 Mark IIがおすすめです。どの機種を選んでも、防塵防滴性能と手ブレ補正、そしてRAW撮影ができることが、クルーズ撮影成功の鍵となります。日本の海と港の美しさを、ぜひあなたのカメラで記録してください。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องวิดีโอสำหรับถ่ายกลางคืนสำหรับท่องเที่ยว: คู่มือเลือกซื้อฉบับสมบูรณ์สำหรับคนไทยปี 2025</h1>
 
 <p>การท่องเที่ยวกลางคืนไม่ว่าจะเป็นการเดินตลาดนัดกลางคืนอย่างตลาดจตุจักร ตลาดรถไฟรัชดา หรือถนนคนเดินเชียงใหม่ ไปจนถึงการล่องเรือชมแสงสีในวัดพระแก้วยามค่ำ หรือการเดินป่าในอุทยานแห่งชาติเพื่อดูดาวและสัตว์กลางคืน ล้วนเป็นช่วงเวลาที่หลายคนอยากเก็บไว้เป็นวิดีโอความทรงจำ แต่ปัญหาที่คนไทยส่วนใหญ่เจอบ่อยคือ "ถ่ายกลางคืนแล้วภาพมืด ภาพสั่น ภาพเป็นเม็ดนอยซ์" จนต้องลบไฟล์ทิ้งไปเปล่า ๆ</p>
@@ -188,5 +215,16 @@
 
 <p>อย่าลืมว่าการถ่ายกลางคืนที่ดีไม่ได้ขึ้นอยู่กับกล้องเพียงอย่างเดียว แต่รวมถึงเทคนิคการถือกล้อง การใช้ไฟช่วย และการเตรียมอุปกรณ์สำรองให้พร้อม เมื่อเตรียมตัวดีแล้ว ทุกทริปกลางคืนของคุณจะกลายเป็นวิดีโอความทรง
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

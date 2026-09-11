@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Guía completa: ajustes de exportación para YouTube e Instagram (tutorial paso a paso)</h1>
 
 <p>Si alguna vez has subido un vídeo a YouTube o Instagram y te ha decepcionado el resultado —se ve borroso, los colores están apagados o la plataforma lo ha comprimido hasta dejarlo irreconocible—, el problema casi nunca es la cámara. Casi siempre está en la exportación. He grabado y exportado cientos de horas de vídeo en localizaciones como la Costa Brava, los Picos de Europa o el casco antiguo de Toledo, y puedo asegurarte que dominar los ajustes de exportación marca una diferencia brutal entre un vídeo que parece amateur y otro que parece profesional.</p>
@@ -190,5 +217,16 @@
 
 <p>Con estos pasos y un poco de práctica, tus vídeos se verán nítidos, con colores fieles y sin artefactos de compresión. Y cuando subas ese vídeo de tus vacaciones en la Costa Brava o de un atardecer en Ibiza, se verá exactamente como lo recordabas. Eso es lo que buscamos.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

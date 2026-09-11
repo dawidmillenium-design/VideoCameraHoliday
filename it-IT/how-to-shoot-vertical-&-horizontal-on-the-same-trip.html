@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Come filmare in verticale e orizzontale nello stesso viaggio: guida completa</h1>
 
 <p>Ti è mai capitato di tornare da un viaggio con ore di girato e non sapere come montarlo perché metà del materiale è verticale e metà orizzontale? Succede a tutti, soprattutto da quando i social verticali (Reels, TikTok, Shorts) convivono con il formato orizzontale di YouTube e dei progetti più "cinematografici". La buona notizia è che puoi girare entrambi i formati nello stesso viaggio, senza raddoppiare i tempi e senza impazzire in post-produzione. In questa guida ti spiego, passo per passo, come ho organizzato le mie riprese durante un recente viaggio in Val d'Orcia e nelle Cinque Terre, dove ho prodotto contemporaneamente contenuti verticali per i social e clip orizzontali per un documentario di viaggio.</p>
@@ -172,5 +199,16 @@
 
 <p>Ora non ti resta che prendere la tua attrezzatura, pianificare il prossimo viaggio e mettere in pratica questi passaggi. Buona ripresa, e che la luce sia sempre dalla tua parte.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

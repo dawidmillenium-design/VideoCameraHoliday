@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>邮轮假期最佳相机推荐：从上海吴淞口出发的海上摄影装备指南</h1>
 
 <p>邮轮旅行正在成为中国旅客最热衷的度假方式之一。从上海吴淞口国际邮轮港出发，前往日本福冈、长崎、冲绳，或是南下越南岘港、菲律宾马尼拉，甚至远赴地中海与加勒比海——邮轮把"移动的度假村"和"多目的地探索"合二为一。但很多旅客上船后才发现：手里的设备根本应付不了海上的光线、船上的空间限制，以及靠岸后不同国家的拍摄规定。这篇指南专为中国邮轮旅客撰写，帮你选对相机、拍出好照片，同时避开法律和礼仪上的坑。</p>
@@ -142,5 +169,16 @@
 
 <p>邮轮假期的摄影体验，取决于你是否选对了工具、做足了功课。对大多数中国旅客来说，一台APS-C微单加一支轻便变焦，再配一片CPL和两块备用电池，就能覆盖九成以上的邮轮场景。如果你追求极致轻便，旗舰手机加稳定器也完全够用。关键是：了解海上的光线、空间和法规限制，尊重每一站的文化和拍摄规定，然后把注意力放回旅行本身——最好的相机，永远是那台你愿意随身带着、并且懂得在什么时候按下快门的相机。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

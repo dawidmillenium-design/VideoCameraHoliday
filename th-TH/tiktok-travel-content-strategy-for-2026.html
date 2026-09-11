@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กลยุทธ์คอนเทนต์ท่องเที่ยวบน TikTok ปี 2026: คู่มือฉบับสมบูรณ์สำหรับครีเอเตอร์ไทย</h1>
 
 <p>สวัสดีครับ! ผมชื่อเอก เป็นครีเอเตอร์สายท่องเที่ยวที่ทำ TikTok มากว่า 4 ปี ผ่านการเดินทางทั้งในเชียงใหม่ เกาะพะงัน ปาย และล่าสุดคือเส้นทางรถไฟไทย-ลาว ผมเคยยอดวิวติด 3 ล้านครั้งกับคลิปตลาดน้ำดำเนินสะดวก และเคยล้มเหลวจนคลิปไม่ถึง 500 วิวก็มี บทความนี้ผมจะถ่ายทอดทุกอย่างที่เรียนรู้มาแบบไม่กั๊ก เพื่อให้คุณสร้างคอนเทนต์ท่องเที่ยวบน TikTok ได้อย่างมีกลยุทธ์ในปี 2026</p>
@@ -208,5 +235,16 @@
 
 <p>การทำคอนเทนต์ท่องเที่ยวบน TikTok ในปี 2026 ไม่ใช่แค่ถ่ายสวยแล้วโพสต์ แต่ต้องมีกลยุทธ์ ตั้งแต่การเลือก Niche การเข้าใจอัลกอริทึม การถ่าย ตัดต่อ ไปจนถึงการสร้างชุมชน ผมใช้เวลากว่า 2 ปีกว่าจะเข้าใจ และบทความนี้คือสิ่งที่ผมอยากรู้ตั้งแต่วันแรก เริ่มจาก 1 คลิปต่อวัน ปรับจากข้อมูลจริง แล้วคุณจะเห็นผลลัพธ์ใน 90 วันอย่างแน่นอน สู้ ๆ ครับ แล้วเจอกันบน For You Page!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

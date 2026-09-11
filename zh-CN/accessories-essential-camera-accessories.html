@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>相机配件选购全攻略：2025年最值得入手的必备相机配件实测推荐</h1>
 
 <p>作为一个在摄影行业摸爬滚打八年的器材评测人，我经手过的相机配件少说也有两三百款。从北京五棵松摄影器材城到深圳华强北，从京东自营到闲鱼二手，我几乎把国内能买到的渠道都试了个遍。这篇文章不是简单的产品罗列，而是基于我过去一年在川西高原、城市夜景、人像棚拍等多种场景下的真实使用体验，帮你筛选出真正值得花钱的<strong>相机配件</strong>。无论你用的是索尼A7M4、佳能R6 Mark II还是富士X-T5，这些配件都能让你的拍摄体验提升一个档次。</p>
@@ -216,5 +243,16 @@
 
 <p>希望这篇基于真实使用体验的配件指南能帮你少走弯路。如果你有具体的机身型号或拍摄需求，欢迎在评论区留言，我会根据你的情况给出更精准的建议。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

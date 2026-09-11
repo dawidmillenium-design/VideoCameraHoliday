@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Die beste Kompaktkamera für Reise-Vlogs in Europa: Ein Praxis-Guide für Deutschland</h1>
 
 <p>Willkommen zu Ihrem ultimativen Begleiter für atemberaubende Reise-Vlogs in Europa – mit dem Fokus auf Deutschland. Als leidenschaftlicher Videograf wissen Sie: Die richtige Ausrüstung entscheidet über die Qualität Ihrer Geschichten. In diesem Guide tauchen wir tief in die Welt der Kompaktkameras ein, die speziell für die einzigartigen Herausforderungen des Reisens in Deutschland entwickelt wurden. Wir kombinieren praktische Erfahrung mit kulturellem Feingefühl und zeigen Ihnen, wie Sie mit der perfekten Kamera die Essenz deutscher Städte und Landschaften einfangen – von den belebten Ufern der Spree bis zu den majestätischen Gipfeln der Alpen.</p>
@@ -142,5 +169,16 @@
 
 <p>Unabhängig von Ihrer Wahl: Die wichtigste Ausrüstung ist Ihre Neugier und Ihre Bereitschaft, in die lokale Kultur einzutauchen. Deutschland ist ein Land, das mit offenen Armen empfängt und unzählige visuelle Schätze bereithält. Mit der richtigen Kamera in der Hand und diesen Tipps im Kopf sind Sie bestens gerüstet, um Ihre ganz persönlichen Geschichten aus dem Herzen Europas zu erzählen. Packen Sie Ihre Tasche, laden Sie Ihre Akkus und machen Sie sich bereit für
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

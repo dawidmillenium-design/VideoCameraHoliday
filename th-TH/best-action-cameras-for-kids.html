@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>คู่มือเลือกซื้อ Action Camera สำหรับเด็ก 2024: รุ่นไหนเหมาะกับทริปครอบครัวและกิจกรรมกลางแจ้งของลูกคุณ</h1>
 
 <p>การเดินทางท่องเที่ยวกับเด็กๆ ในยุคนี้ไม่ใช่แค่การถ่ายรูปวิ่งเล่นริมทะเลอีกต่อไป พ่อแม่ยุคใหม่ในประเทศไทยต้องการบันทึกทุกช่วงเวลาของลูกน้อย ไม่ว่าจะเป็นการดำน้ำตื้นที่ภูเก็ต ปีนเขาที่เชียงใหม่ ปั่นจักรยานที่เขาใหญ่ หรือแม้แต่การเล่นสเก็ตที่สวนสาธารณะในกรุงเทพฯ <strong>Action Camera สำหรับเด็ก</strong> จึงกลายเป็นอุปกรณ์ที่ได้รับความนิยมเพิ่มขึ้นอย่างต่อเนื่อง เพราะทนทาน กันน้ำ และใช้งานง่ายกว่ากล้อง DSLR หรือมือถือทั่วไป</p>
@@ -222,5 +249,16 @@
 
 <p>สุดท้าย อย่าลืมสอนให้ลูกดูแลกล้องและแบตเตอรี่อย่างถูกวิธี ซึ่งจะเป็นบทเรียนที่ดีในการรับผิดชอบต่อทรัพย์สินของตัวเอง และจะทำให้การท่องเที่ยวของครอบครัวเต็มไปด้วยความทรงจำที่สวยงามยิ่งขึ้น</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Die beste Kamera für Food- & Culinary-Travel: Der große Kaufratgeber 2025</h1>
 
 <p>Ob Streetfood in Bangkok, ein Michelin-Sternemenü in Kopenhagen oder der heimische Wochenmarkt in München – gutes Essen will nicht nur gegessen, sondern auch festgehalten werden. Wer als Food-Traveler unterwegs ist, steht vor einer besonderen Herausforderung: Die Kamera muss kompakt genug für den Rucksack sein, bei schwachem Restaurantlicht überzeugen und gleichzeitig Nahaufnahmen mit cremigem Bokeh liefern. In diesem Kaufratgeber erklären wir dir Schritt für Schritt, worauf es wirklich ankommt – und welche Modelle sich für deutsche Food- und Reisefotografen 2025 am meisten lohnen.</p>
@@ -191,5 +218,16 @@
 
 <p>Die beste Kamera für Food- & Culinary-Travel gibt es nicht – es kommt auf deine Prioritäten an. Willst du maximale Bildqualität und Flexibilität, ist die <strong>Sony Alpha 6700</strong> unsere Top-Empfehlung.
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

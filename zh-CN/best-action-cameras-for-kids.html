@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2024儿童运动相机选购全指南：带孩子旅行记录精彩瞬间的最佳选择</h1>
 
 <p>带孩子出门旅行，无论是去三亚的海滩堆沙堡、在崇礼的雪场学滑雪，还是周末的公园骑行，一台适合儿童使用的运动相机都能帮孩子用第一视角记录下这些珍贵画面。与成人运动相机不同，儿童运动相机在<strong>操作简易度、机身重量、防摔防水能力和价格</strong>上都有不同的侧重点。本指南将手把手教你如何为孩子挑选一台合适的运动相机，并推荐几款在中国市场容易买到、售后有保障的热门机型。</p>
@@ -183,5 +210,16 @@
 
 <p>购买前记得对比京东、天猫和拼多多的价格，关注大促节点（618、双11）通常有200-500元的优惠。祝你和孩子的下一次旅行拍摄愉快！</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

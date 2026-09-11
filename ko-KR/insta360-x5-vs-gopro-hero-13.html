@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Insta360 X5 vs GoPro Hero 13: 2025년 여행 크리에이터를 위한 완벽 비교 가이드</h1>
 
 <p>2025년, 액션 카메라 시장은 그 어느 때보다 치열합니다. 특히 한국 여행 크리에이터들 사이에서 <strong>Insta360 X5</strong>와 <strong>GoPro Hero 13</strong>는 가장 뜨거운 두 선택지로 떠올랐습니다. 제주도 해녀 체험부터 강원도 스키장, 부산 해운대 드론샷까지 — 어떤 카메라가 여러분의 여행 콘텐츠에 더 적합할까요?</p>
@@ -219,5 +246,16 @@
 
 <p><em>이 리뷰는 2024년 12월부터 2025년 2월까지 실제 한국 및 일본 여행지에서 촬영한 데이터를 기반으로 작성되었습니다. 모든 가격과 스펙은 2025년 1월 기준입니다.</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

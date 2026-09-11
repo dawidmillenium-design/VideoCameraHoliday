@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Cómo mejorar la batería de tu GoPro Hero 13 en invierno: guía completa y probada</h1>
 
 <p>Si has grabado con tu GoPro Hero 13 en la nieve de Sierra Nevada, en los Pirineos o en una mañana gélida en la sierra de Madrid, sabes de lo que hablo: la batería se desploma. Pasas de tener un 80 % a que la cámara se apague sin avisar en cuestión de minutos. No es que tu GoPro esté defectuosa, es química básica: las baterías de ion de litio pierden capacidad de descarga cuando bajan las temperaturas. La buena noticia es que con una serie de hábitos y accesorios puedes recuperar gran parte de esa autonomía perdida. En esta guía te explico, paso a paso y con experiencia real de campo en España, cómo exprimir la batería de tu Hero 13 cuando el mercurio baja de los 5 °C.</p>
@@ -174,5 +201,16 @@
 
 <p>Mejorar la autonomía de la GoPro Hero 13 en invierno no requiere magia, sino entender cómo se comportan las baterías de litio con el frío y aplicar una serie de hábitos sencillos. Calienta las baterías, usa Enduro, baja resolución y fps, desactiva lo que no necesites y lleva repuestos. Con estos pasos, pasarás de grabar 10 minutos a grabar 30 o 40 minutos por batería en condiciones invernales. En mis últimas salidas por la sierra de Guadarrama con -4 °C, aplicando todo esto, conseguí grabar más de dos horas y media con tres baterías, algo impensable si las hubiera llevado en la mochila sin más. Así que ya sabes: la próxima vez que vayas a la nieve, prepara bien el equipo y disfruta de tus grabaciones sin preocuparte por la batería. ¡Nos vemos en las pistas!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

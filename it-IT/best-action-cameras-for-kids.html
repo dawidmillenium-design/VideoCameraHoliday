@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Migliori Action Cam per Bambini: Guida all’Acquisto 2025</h1>
 
 <p>Le action cam per bambini sono diventate uno dei regali più richiesti per compleanni e occasioni speciali. Sempre più genitori italiani cercano una videocamera robusta, semplice da usare e capace di resistere a cadute, sabbia e schizzi d’acqua, senza spendere una fortuna. Che si tratti di una giornata al mare in Liguria, di una settimana sulla neve in Trentino o di un pomeriggio in bicicletta al parco, una action cam per bambini permette ai più piccoli di diventare protagonisti dei propri video, sviluppando creatività e spirito di avventura in totale sicurezza.</p>
@@ -199,5 +226,16 @@
 
 <p>Scegliere la migliore action cam per bambini richiede di bilanciare prezzo, robustezza, semplicità d’uso e qualità video. Per
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

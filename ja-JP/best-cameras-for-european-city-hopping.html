@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>ヨーロッパ都市周遊に最適なカメラガイド｜日本から持って行くべき機材と撮影のコツ</h1>
 
 <p>パリの朝もやに浮かぶセーヌ川、プラハの石畳に落ちる夕陽、リスボンの坂道を走る黄色いトラム。ヨーロッパの都市周遊は、写真を撮るために生まれたような旅です。しかし、日本から持参するカメラ選びを誤ると、重さに疲れ、暗い教会で手ブレし、現地の規制で撮影を断られる——そんな残念な思い出になりかねません。</p>
@@ -153,5 +180,16 @@
 
 <p>パリの朝、プラハの夕暮れ、ローマの石畳、リスボンの坂道。その一瞬を逃さないためには、機材の重さより「持ち歩きたくなるかどうか」が最重要です。現地のルールとマナーを守りながら、あなたの旅の物語を最高の一枚に残してください。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

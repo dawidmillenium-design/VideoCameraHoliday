@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>寒冷地でカメラのバッテリーを長持ちさせる方法：完全ガイド</h1>
 
 <p>冬の北海道や東北、あるいは長野の山あいで撮影していると、満充電にしたはずのバッテリーがみるみる減っていく——そんな経験はありませんか？　私自身、真冬の<a href="#">旭岳</a>でロケ中に予備バッテリー3本をあっという間に使い切り、肝心のダイヤモンドダストの瞬間を逃した苦い思い出があります。それ以来、寒冷地でのバッテリー運用を徹底的に見直し、今では氷点下15度の環境でも一日中撮影できるようになりました。</p>
@@ -148,5 +175,16 @@
 
 <p>寒さに負けない準備を整えて、日本の美しい冬景色を思う存分記録してください。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

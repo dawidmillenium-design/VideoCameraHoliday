@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>ドバイでVlogを撮るための最適なカメラ完全ガイド 2026年版</h1>
 
 <p>灼熱の太陽が照りつける砂漠の高層ビル群、黄金色に輝くアラビア湾、そして世界で最も豪華なモール群。ドバイは、映像クリエイターにとって夢のような撮影地です。しかし、この未来都市でのVlog撮影には、他のどの都市とも異なる特別な挑戦が待ち受けています。本記事では、2026年のドバイで最高のVlogを撮影するためのカメラ選びのポイントを、現地の気候・光線・文化・法律を考慮しながら、日本の映像クリエイター向けに徹底解説します。</p>
@@ -158,5 +185,16 @@
 
 <p><strong>早朝（5:00〜8:00）：</strong> ゴールドスークやスパイススークなど、伝統的な市場の撮影に最適です。観光客が少なく、地元の人々の生活感を捉えることができます
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

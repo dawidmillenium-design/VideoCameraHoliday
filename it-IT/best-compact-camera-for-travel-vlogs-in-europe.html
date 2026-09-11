@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         Ecco la guida completa per videomaker e vlogger in viaggio in Italia, ottimizzata per SEO e conforme ai principi EEAT, con focus su attrezzatura compatta e consigli pratici.
 
 ```html
@@ -200,5 +227,16 @@
         <h3>Roma: La Luce Dorata dei Fori</h3>
         <p><strong>La sfida:</strong> Le dimensioni immense e la folla. <strong>La soluzione:</strong> Sfrutta l'ora d'oro (subito dopo l'alba) per filmare il Colosseo senza turisti. La tua fotocamera compatta eccelle in questa luce calda. Per i vlog parlati, cerca un angolo tranquillo nel quartiere dell'EUR, lontano dal caos,
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

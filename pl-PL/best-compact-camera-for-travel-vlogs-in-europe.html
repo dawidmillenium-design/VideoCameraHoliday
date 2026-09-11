@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepszy kompaktowy aparat do vlogów podróżniczych po Europie: Praktyczny przewodnik dla Polski</h1>
 
 <p>Planujesz vlogować swoją podróż po Europie, a konkretnie po Polsce? To świetny wybór – kraj ten oferuje niezwykłą różnorodność krajobrazów, od bałtyckich plaż po szczyty Tatr, oraz miasta o bogatej historii, które są prawdziwą kopalnią materiałów wideo. Jednak zanim wyruszysz w trasę z walizką pełną sprzętu, warto zastanowić się nad jednym kluczowym elementem – aparatem. W tym przewodniku skupimy się na najlepszych kompaktowych aparatach do vlogów, które sprawdzą się w specyficznych warunkach, jakie zastaniesz w Polsce. Pomożemy Ci wybrać sprzęt, który jest lekki, dyskretny i gotowy na każdą pogodę, a jednocześnie zapewni jakość obrazu godną profesjonalnych produkcji.</p>
@@ -137,5 +164,16 @@
 
 <p>Pamiętaj, że najważniejszy jest nie sprzęt, ale historia, którą op
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

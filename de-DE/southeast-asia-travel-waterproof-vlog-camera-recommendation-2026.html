@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Reisefotografie Südostasien 2026: Der ultimative wasserdichte Vlog-Kamera-Guide für Deutschland-Reisende</h1>
 
 <p>Stellen Sie sich vor: Sie stehen im türkisfarbenen Wasser vor den Inseln von <strong>El Nido auf den Philippinen</strong>, die Sonne brennt auf Ihre Schultern, und direkt vor Ihrer Linse schwimmt eine Schildkröte vorbei. Oder Sie schlendern durch die schwimmenden Märkte von <strong>Bangkok</strong>, während ein tropischer Regenschauer die Gassen in einen Spiegel verwandelt. Für deutsche Reisende ist Südostasien das ultimative Ziel für unvergessliche Momente – aber genau diese Umgebung stellt Ihre Kameraausrüstung vor extreme Herausforderungen. Dieser Guide hilft Ihnen, die richtige wasserdichte Vlog-Kamera für Ihre Reise im Jahr 2026 zu finden und gibt Ihnen wertvolle Tipps für atemberaubende Aufnahmen zwischen <strong>Singapur</strong> und <strong>Vietnam</strong>.</p>
@@ -145,5 +172,16 @@
 
 <p>Denken Sie daran, dass die beste Kamera die ist, die Sie auch wirklich dabei haben und bedienen können. Lassen Sie sich nicht von technischen Details überfordern, sondern konzentrieren Sie sich auf das Wesentliche: die einzigartigen
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

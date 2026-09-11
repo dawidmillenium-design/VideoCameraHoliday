@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Quelle est la meilleure caméra vidéo pour filmer la nuit en voyage ? Guide d'achat 2025</h1>
 
 <p>Filmer la nuit en voyage est l'un des plus grands défis pour les vidéastes amateurs comme confirmés. Que vous exploriez les ruelles illuminées de Kyoto, les marchés nocturnes de Marrakech ou les aurores boréales en Laponie finlandaise, votre caméra doit capturer des images nettes, lumineuses et exploitables malgré un éclairage difficile. Ce guide d'achat vous accompagne pas à pas dans le choix de la meilleure caméra vidéo pour filmer la nuit en voyage, avec des recommandations concrètes adaptées au marché français et à la culture de consommation en France.</p>
@@ -192,5 +219,16 @@
 <h3>Comment éviter le bruit numérique en basse lumière ?</h3>
 <p>Utilisez la plus grande ouverture possible, montez l'ISO juste ce qu'il faut, filmez en 4K (le downscale en 1080p réduit le bruit), activez la réduction de bruit si disponible, et privilégiez un profil Log pour corriger en post-production.</p
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

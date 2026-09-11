@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>【2026年最新】ソロ旅Vlogに最適な防水カメラ完全ガイド｜プロが選ぶおすすめモデルと選び方</h1>
 
 <p>一人旅の思い出を高画質で残したい。雨の日や海辺、川遊び、温泉街の散策中でも安心して撮影できる防水カメラをお探しではありませんか？近年のVlogブームとアウトドア志向の高まりにより、日本のカメラ市場では「タフネスコンデジ」や「アクションカメラ」と呼ばれる防水モデルの需要が急増しています。本記事では、ソロ旅Vlogのスペシャリストである筆者が、2026年最新モデルを徹底比較。あなたの旅のスタイルに最適な一台を、具体的な撮影シーンを想定しながらご紹介します。</p>
@@ -140,5 +167,16 @@
 <p><strong>主なスペック：</strong>1/2.3型センサー / 防水25m / 防塵・耐衝撃（2.0m落下） / フルHD 30p / 光学4倍ズーム / 25mm広角</p>
 <p><strong>こんな旅におすすめ：</strong>「防水カメラに初めて挑戦する」というビギナーのソロトラベラーに自信を持っておすすめできるエントリーモデルです。防水性能は水深25mと、この価格帯では驚異的な数値を誇ります。ダイビングライセンスを持っている方なら、ハウジング不要でそのまま
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

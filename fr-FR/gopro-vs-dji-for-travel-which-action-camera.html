@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>GoPro vs DJI pour le voyage : quelle action camera choisir en 2024 ?</h1>
 
 <p>Choisir une action camera pour voyager est devenu un véritable casse-tête. Deux marques dominent aujourd'hui le marché : <strong>GoPro</strong>, le pionnier historique, et <strong>DJI</strong>, le géant chinois qui bouscule les codes depuis quelques années. Entre la GoPro Hero 12 Black et la DJI Osmo Action 4, les différences se jouent sur des détails qui peuvent pourtant transformer votre expérience de voyage.</p>
@@ -269,5 +296,16 @@
 
 <p><em>Article mis à jour en juin 2024. Les tests ont été réalisés par notre équipe sur plusieurs mois, avec des unités commerciales achetées en France.</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

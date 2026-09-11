@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>【2026年最新】日本旅行向け軽量Vlogカメラ完全ガイド：持ち運びやすさと撮影品質を両立する一台</h1>
 
 <p>日本の風景は、訪れる人々にとって尽きることのないインスピレーションの源です。京都の静謐な禅寺、東京のネオンが輝く交差点、北海道の雄大な自然、そして地元の人々の温かいおもてなし。2026年の日本旅行を計画しているあなたにとって、これらの瞬間を高画質で記録することは、旅の大きな喜びの一つとなるでしょう。</p>
@@ -158,5 +185,16 @@
 
 <h3>2. 機材の
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

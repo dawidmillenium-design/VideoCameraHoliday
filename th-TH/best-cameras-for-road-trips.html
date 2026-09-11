@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องถ่ายรูปที่ดีที่สุดสำหรับการเดินทางด้วยรถยนต์ในประเทศไทย: คู่มือฉบับสมบูรณ์สำหรับนักเดินทางสายถ่ายภาพ</h1>
 
 <p>การเดินทางด้วยรถยนต์ในประเทศไทยเป็นประสบการณ์ที่เปิดโอกาสให้คุณได้ค้นพบความงามที่ซ่อนอยู่ทั่วทุกภูมิภาค ตั้งแต่ทุ่งนาเขียวขจีในภาคเหนือ ไปจนถึงชายหาดทรายขาวในภาคใต้ และวัดวาอารามโบราณในภาคอีสาน การเดินทางแบบ road trip ในเมืองไทยไม่เหมือนที่ไหนในโลก เพราะคุณจะได้สัมผัสทั้งวัฒนธรรม ธรรมชาติ และวิถีชีวิตท้องถิ่นที่หลากหลายในระยะทางเพียงไม่กี่ร้อยกิโลเมตร แต่การจะเก็บภาพความประทับใจเหล่านี้ได้อย่างสมบูรณ์นั้น จำเป็นต้องมีกล้องที่เหมาะสมกับสภาพแวดล้อมและสภาพการเดินทางของแต่ละพื้นที่</p>
@@ -173,5 +200,16 @@
 
 <p>อย่าลืมว่า อุปกรณ์ที่ดีที่สุดคืออุปกรณ์ที่คุณพกติดตัวและใช้เป็น และการเคารพวัฒนธรรมท้องถิ่นคือสิ่งที่สำคัญที่สุดสำหรับช่างภาพที่เดินทางในประเทศไทย</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Jak wydłużyć czas pracy baterii GoPro Hero 13 zimą? Kompletny poradnik</h1>
 
 <p>Zima w Polsce to dla każdego twórcy podróżniczego prawdziwy test sprzętu. Kiedy temperatura spada poniżej zera, a Ty stoisz na Rysach o wschodzie słońca albo nagrywasz kulig w Bieszczadach, bateria w Twojej GoPro Hero 13 potrafi rozładować się w kilka minut. Problem nie leży w samej kamerze — litowo-jonowe ogniwa po prostu tracą wydajność na mrozie. Dobra wiadomość jest taka, że z odpowiednim przygotowaniem możesz nagrywać godzinami nawet przy -15°C. W tym poradniku pokażę Ci dokładnie, jak to zrobić — na podstawie własnych doświadczeń z Tatr, Karkonoszy i Mazur.</p>
@@ -186,5 +213,16 @@
 
 <p>Pamiętaj też, że GoPro Hero 13 to narzędzie. Nie walcz z nim — dostosuj się do warunków. Im lepiej zrozumiesz, jak działa
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>대한민국 로드트립을 위한 최고의 카메라: 한국 도로 여행 사진 완벽 가이드</h1>
 
 <p>대한민국은 세계에서 가장 역동적인 로드트립 여행지 중 하나입니다. 서울의 네온 불빛이 가득한 도심 고속도로에서부터 강원도의 구불구불한 산악 도로, 전라남도의 한적한 해안선, 경상북도의 역사적인 국도에 이르기까지, 이 나라는 차창 밖으로 끝없이 펼쳐지는 시각적 향연을 선사합니다. 하지만 한국에서의 로드트립 사진 촬영은 독특한 도전 과제를 안고 있습니다. 빠르게 변화하는 날씨, 좁은 도로, 터널과 휴게소, 그리고 사진 촬영에 관한 특정 법적·문화적 규정을 이해해야 합니다. 이 가이드는 대한민국 로드트립에서 최고의 결과를 얻을 수 있는 카메라 장비와 실전 팁을 상세히 안내합니다.</p>
@@ -152,5 +179,16 @@
   <li><strong>전라남도 순천만 갈대밭:</strong> 일몰 1시간 전. 가을철(10~11월) 황금빛 갈대가 장관입니다.</li>
   <li><strong>경주 불국사:</strong> 이른 아침(오전
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

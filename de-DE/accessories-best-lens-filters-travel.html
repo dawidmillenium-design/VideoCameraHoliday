@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Die besten Objektivfilter für Reisen: Der ultimative Kaufratgeber 2024</h1>
 
 <p>Sie planen Ihre nächste Fotoreise – vielleicht an die Ostsee, in die Alpen oder nach Südostasien – und fragen sich, welche Objektivfilter wirklich in Ihre Kameratasche gehören? Als leidenschaftlicher Reisefotograf mit über 15 Jahren Erfahrung auf allen Kontinenten kenne ich die Herausforderungen: salzige Meeresluft, grelles Wüstenlicht, dramatische Berglandschaften und die Frage, welches Zubehör den Rucksack nicht unnötig schwer macht.</p>
@@ -216,5 +243,16 @@
 <h3>Sind teure Filter wirklich besser?</h3>
 <p>In den meisten Fällen ja. Teurere Filter bieten eine bessere Vergütung, weniger Reflex
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

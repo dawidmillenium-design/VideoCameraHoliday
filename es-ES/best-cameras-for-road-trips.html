@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Las mejores cámaras para road trips: guía definitiva para viajar por España</h1>
 
 <p>España es, sin duda, uno de los mejores países del mundo para emprender un road trip. En pocos lugares puedes pasar de los acantilados atlánticos de Galicia a los desiertos de Almería, de los Pirineos nevados a las dehesas extremeñas, en apenas unas horas de conducción. Esa diversidad paisajística y lumínica convierte cada kilómetro en una oportunidad fotográfica, pero también en un desafío técnico para cualquier cámara y cualquier fotógrafo.</p>
@@ -241,5 +268,16 @@
 
 <p>Elegir la mejor cámara para un road trip por España depende de tu estilo de viaje, tu presupuesto y el tipo de imágenes que quieras traer a casa. Si buscas versatilidad y calidad de imagen, una full frame como la Sony A7 IV o la Nikon Z6 II son apuestas seguras. Si valoras portabilidad y experiencia fotográfica, la Fujifilm X-T5 es difícil de superar. Y si tu viaje incluye aventura y naturaleza, la OM System OM-1 te acompañará sin que
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

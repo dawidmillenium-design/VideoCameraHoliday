@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Multi-Camera Editing &amp; Sync für Reisevideos: Der komplette Praxis-Leitfaden</h1>
 
 <p>Stell dir vor, du stehst am Brandenburger Tor, die Sonne geht unter, und du filmst mit drei Kameras gleichzeitig: Eine zeigt dein Gesicht, eine die Skyline, eine die Menschenmenge. Später im Schnitt sitzt du vor hunderten Clips und weißt nicht, wo du anfangen sollst. Genau das habe ich 2022 auf einer dreiwöchigen Reise durch Deutschland erlebt – von der Zugspitze bis nach Sylt. Nach über 40 Reisevideos mit Multi-Cam-Setups weiß ich: Mit der richtigen Vorbereitung und einem klaren Workflow sparst du dir Stunden im Schnitt.</p>
@@ -184,5 +211,16 @@ Alle Kameras haben unterschiedliche Farbprofile – das fällt besonders bei GoP
 
 <p>Und denk dran: Die beste Kamera ist die, die du dabei hast. Also pack deine Ausrüstung, fahr nach Berlin, München oder an die Ostsee und fang an zu filmen. Dein nächstes Multi-Cam-Meisterwerk wartet schon.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

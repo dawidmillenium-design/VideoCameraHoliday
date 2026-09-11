@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>เปรียบเทียบ DJI Osmo Pocket 3 vs DJI Action 5 Pro: เลือกกล้องตัวไหนดีสำหรับทริปเที่ยวของคุณ</h1>
 
 <p>ในปี 2024–2025 ตลาดกล้องสำหรับนักเดินทางและครีเอเตอร์ชาวไทยคึกคักเป็นพิเศษ เมื่อ DJI เปิดตัวกล้องสองรุ่นที่ดูเหมือนจะแข่งขันกันเองอย่าง <strong>DJI Osmo Pocket 3</strong> และ <strong>DJI Action 5 Pro</strong> ทั้งสองรุ่นเป็นกล้องที่คนไทยพูดถึงมากในกลุ่ม Facebook อย่าง "กล้องเดินทาง", "Vlog ไทย" และช่อง YouTube สายรีวิว gadget หลายคนถามว่า "ถ้ามีงบประมาณจำกัด ควรซื้อตัวไหน" หรือ "ถ้าจะถ่ายทริปเชียงใหม่–ปาย ควรใช้ตัวไหน" บทความนี้จะเปรียบเทียบอย่างละเอียดจากข้อมูลสเปกจริง การทดสอบใช้งานจริงในสถานการณ์ที่คนไทยเจอบ่อย และสรุปว่าใครควรซื้อตัวไหน</p>
@@ -227,5 +254,16 @@
 
 <p>ก่อนตัดสินใจ แนะนำให้ไปลองจับที่ร้านตัวแทน DJI ในไทย เช่น ที่สยามพารากอนหรือเซ็นทรัลเวิลด์ เพื่อสัมผัสน้ำหนักและขนาดจริง เพราะทั้งสองรุ่นมีขนาดและฟีลลิ่งการใช้งานที่แตกต่างกันชัดเจน</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

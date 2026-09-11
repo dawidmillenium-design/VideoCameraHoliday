@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>野生动物园摄影相机选购指南：2025年最佳旅行相机推荐</h1>
 
 <p>对于热爱自然的中国旅行者来说，一次非洲野生动物园之旅往往是毕生难忘的经历。无论是肯尼亚马赛马拉的角马大迁徙，还是坦桑尼亚塞伦盖蒂的狮子捕猎，能够用相机定格这些震撼瞬间，是每位摄影爱好者的梦想。然而，面对市场上琳琅满目的相机产品，如何选择一台真正适合野生动物园旅行的相机？本文将从实际拍摄场景出发，为您提供一份全面、实用的选购指南。</p>
@@ -185,5 +212,16 @@
 
 <p>选择野生动物园相机，核心是在画质、对焦速度、焦段覆盖和便携性之间找到适合自己预算和需求的平衡点。对于大多数中国旅行者，索尼A7 IV配合200-600mm镜头是当前最均衡的选择；追求极致性价比可选佳能R10套机；专业用户则可考虑尼康Z8。无论选择哪款，提前熟悉操作、准备备用电池和存储卡，才是确保旅途出片的关键。祝您的野生动物园之旅收获满满！</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

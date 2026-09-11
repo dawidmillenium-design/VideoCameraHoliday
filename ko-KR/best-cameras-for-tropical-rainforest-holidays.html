@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>열대우림 휴가를 위한 최고의 카메라: 한국 여행자를 위한 완벽 가이드</h1>
 
 <p>열대우림은 지구상에서 가장 경이로운 촬영 환경 중 하나입니다. 울창한 캐노피 사이로 쏟아지는 빛, 이슬 맺힌 잎사귀, 그리고 짙은 안개가 만들어내는 신비로운 풍경은 어떤 사진작가라도 감탄하게 만듭니다. 하지만 동시에 열대우림은 카메라와 장비에 극한의 도전을 제시하는 곳이기도 합니다. 한국에서 출발하는 여행자라면 장거리 이동, 급격한 기후 변화, 그리고 현지 촬영 규정까지 고려한 철저한 준비가 필요합니다. 이 가이드는 코스타리카, 보르네오, 아마존, 그리고 동남아시아 열대우림을 여행하는 한국 사진가와 여행 크리에이터를 위해 작성되었습니다.</p>
@@ -164,5 +191,16 @@
 
 <p>열대우림은 한국의 사계절과는 전혀 다른
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

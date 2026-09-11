@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>一次旅行同时拍摄竖屏与横屏视频：完整实战教程</h1>
 
 <p>很多人在旅行时都会遇到一个两难选择：拍竖屏适合发抖音、小红书、视频号，拍横屏适合发B站、YouTube、做旅行纪录片。以前的做法是拍两遍，或者拍完横屏再裁成竖屏——前者浪费时间，后者画质损失严重。其实，只要掌握正确的方法和流程，你完全可以在一次旅行中同时获得高质量的竖屏和横屏素材。</p>
@@ -198,5 +225,16 @@
 
 <p>祝你拍出满意的作品，旅途愉快！</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

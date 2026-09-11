@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>คู่มือกล้อง Vlog สุดเบาสำหรับเที่ยวญี่ปุ่น 2026: เลือกอย่างไรให้คุ้มค่าและได้ภาพสวย</h1>
 
 <p>การเดินทางไปญี่ปุ่นในปี 2026 กำลังจะเป็นเทรนด์ใหญ่ของนักท่องเที่ยวไทยอย่างแน่นอน ไม่ว่าจะเป็นฤดูซากุระบานในเดือนเมษายน ใบไม้เปลี่ยนสีในเดือนพฤศจิกายน หรือเทศกาลหิมะที่ฮอกไกโด ญี่ปุ่นคือสวรรค์ของคอนเทนต์ครีเอเตอร์ แต่การถือกล้องหนักๆ เดินทั้งวันในโตเกียวหรือเกียวโตอาจทำให้ความสนุกหายไปครึ่งหนึ่ง บทความนี้จะพาคุณไปรู้จักกับ <strong>กล้อง Vlog เบาๆ ที่เหมาะกับการเที่ยวญี่ปุ่น</strong> พร้อมเทคนิคการถ่ายทำในสถานที่จริง และข้อควรระวังเกี่ยวกับกฎหมายและวัฒนธรรมการถ่ายภาพในญี่ปุ่นที่คนไทยหลายคนอาจไม่รู้</p>
@@ -203,5 +230,16 @@
 <h3>3. การ์ดหน่วยความจำความเร็วสูง</h3>
 <p>การถ่ายวิดีโอ 4K ต้องใช้การ์ดที่มีความเร็วในการเขียนอย่างน้อย <strong>UHS-I V30</strong> หรือ <strong
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

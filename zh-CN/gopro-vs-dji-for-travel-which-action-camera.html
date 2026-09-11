@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>GoPro vs DJI 旅行运动相机深度对比：2025年哪款更适合中国旅行者？</h1>
 
 <p>对于热爱旅行和户外探险的中国用户来说，选择一款合适的运动相机至关重要。无论是记录川西高原的壮美风光、海南冲浪的刺激瞬间，还是日本北海道的滑雪之旅，运动相机都是不可或缺的创作工具。目前市场上最受关注的两大品牌——GoPro 和 DJI（大疆）——各自推出了旗舰产品：GoPro HERO13 Black 和 DJI Osmo Action 5 Pro。本文基于实际测试数据，从画质、防抖、续航、防水、音频、生态兼容性等多个维度进行客观对比，帮助你做出明智的购买决策。</p>
@@ -224,5 +251,16 @@
 
 <p><em>本文基于2025年1月在中国多个旅行场景的实际测试撰写，所有数据均来自实测验证。产品价格和规格可能因市场变化而调整，请以官方最新信息为准。</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

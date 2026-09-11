@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Sound Design per Video di Viaggio: Guida Completa Passo dopo Passo</h1>
 
 <p>Il sound design è quella parte invisibile del montaggio che trasforma un video di viaggio amatoriale in un racconto che emoziona. Dopo anni passati a girare tra i vicoli di Matera, le spiagge della Sardegna e i mercati di Palermo, ho imparato una lezione fondamentale: lo spettatore perdona un'immagine leggermente mossa, ma non perdona un audio fastidioso. In questa guida ti accompagno, passo dopo passo, nella costruzione del sound design dei tuoi video di viaggio, con suggerimenti pratici, attrezzatura reperibile facilmente in Italia e gli errori che ho commesso io stesso sul campo prima di capire come si fa davvero.</p>
@@ -181,5 +208,16 @@
 
 <p>Inizia con un progetto piccolo, magari un video di 3 minuti su una gita fuori porta. Applica tutti i passaggi di questa guida, rivedi, correggi, e poi passa a progetti più ambiziosi. Con il tempo, il sound design diventerà parte del tuo modo di raccontare, non un'aggiunta dell'ultimo minuto. E quando sarai sul Ponte Vecchio a Firenze, con il microfono in mano e il suono dell'Arno che scorre sotto di te, saprai esattamente cosa registrare e perché.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>รีวิวอุปกรณ์เสริมกล้องที่จำเป็นสำหรับการถ่ายภาพและวิดีโอท่องเที่ยวในประเทศไทย ปี 2024</h1>
 
 <p>ในฐานะช่างภาพและครีเอเตอร์ที่ทำงานด้านการท่องเที่ยวในประเทศไทยมากว่า 10 ปี ผมได้ทดสอบอุปกรณ์เสริมกล้องหลายสิบชิ้นในสภาพแวดล้อมจริง ตั้งแต่การถ่ายพระอาทิตย์ขึ้นที่วัดภูมินทร์ จังหวัดน่าน ไปจนถึงการดำน้ำตื้นที่หมู่เกาะสิมิลัน และการถ่ายวิดีโอกลางคืนในตลาดนัดจตุจักร บทความนี้จะพาคุณไปรู้จัก <strong>อุปกรณ์เสริมกล้องที่จำเป็น</strong> ซึ่งเป็นสิ่งที่ขาดไม่ได้สำหรับการถ่ายภาพและวิดีโอท่องเที่ยวในประเทศไทย พร้อมข้อมูลราคาในสกุลเงินบาทและผลทดสอบจริงที่คุณสามารถนำไปใช้ตัดสินใจได้ทันที</p>
@@ -248,5 +275,16 @@
 
 <p><em>บทความนี้เขียนจากประสบการณ์จริงของผู้เขียนที่ทดสอบอุปกรณ์ในสภาพแวดล้อมของประเทศไทย โดยไม่มีส่วนได้ส่วนเสียกับแบรนด์ใดๆ ราคาอาจมีการเปลี่ยนแปลงตามโปรโมชั่นและร้านค้า แนะนำให้ตรวจสอบราคาล่าสุดก่อนตัดสินใจซื้อ</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

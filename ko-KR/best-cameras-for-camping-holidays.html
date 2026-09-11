@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>한국 캠핑 여행을 위한 최고의 카메라: 완벽한 가이드</h1>
 
 <p>한국은 산, 해변, 섬, 계곡이 촘촘하게 모여 있는 나라입니다. 국토 면적은 작지만, 설악산의 화강암 봉우리부터 제주도의 현무암 해안, 다도해의 섬들, 강원도 깊은 숲속 오지 캠핑장까지 다양성은 놀랍습니다. 캠핑과 사진을 함께 즐기려는 여행자에게 한국은 거의 완벽한 무대입니다. 문제는 하나입니다. 어떤 카메라를 가져가야 하는가.</p>
@@ -164,5 +191,16 @@
 
 <p>영상 비중이 높다면 파나소닉 GH6, 악천후 속 캠핑이 많다면 OM System OM-1, 색감 중심이라면 후지필름 X-T5가 좋은 대안입니다. 어떤 카메라를 선택하든, 한국의 캠핑은 장비보다 타이밍과 장소 선정이 사진의 질을 좌우합니다. 일출과 일몰 시간을 미리 확인하고, 광공해 지도를 참고하고, 현지 규정을 존중한다면 한국 캠핑 여행은 평생 남을 사진을 남겨줄 것입니다.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

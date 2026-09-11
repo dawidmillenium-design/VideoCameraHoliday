@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Las mejores cámaras para unas vacaciones en la selva tropical: guía definitiva para fotógrafos viajeros</h1>
 
 <p>La selva tropical es uno de los entornos más fascinantes y, al mismo tiempo, más exigentes para cualquier fotógrafo o videógrafo. Hablamos de ecosistemas donde la humedad relativa supera habitualmente el 85&nbsp;%, las lluvias aparecen sin avisar y la luz se filtra entre el dosel vegetal creando contrastes extremos. Si estás planeando unas vacaciones en la selva y quieres traer a casa imágenes que hagan justicia a lo que has vivido, elegir bien tu equipo marca la diferencia entre un recuerdo memorable y una tarjeta de memoria llena de fotos borrosas o empañadas.</p>
@@ -206,5 +233,16 @@
 
 <p>Más allá del equipo, recuerda que la preparación, el respeto al entorno y la paciencia son tus mejores aliados. La selva no se deja fotografiar fácilmente, pero cuando lo consigues, las imágenes que traes de vuelta tienen una fuerza difícil de igualar. Buena luz —aunque sea poca— y buen viaje.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

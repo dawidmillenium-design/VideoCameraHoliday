@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Guía de cámara para grabar templos de Kioto: etiqueta y equipo para vlogs</h1>
 
 <p>Kioto no es solo un destino; es un plató vivo donde cada sombra, cada piedra cubierta de musgo y cada pórtico de madera milenaria cuentan una historia. Para un creador de contenido, grabar un vlog en los templos de Kioto es una experiencia transformadora, pero también un ejercicio de responsabilidad cultural y técnica. A diferencia de otras ciudades, aquí la línea entre documentar y perturbar es extremadamente fina. Esta guía está diseñada para videógrafos y vloggers que buscan capturar la esencia de Kioto sin faltar al respeto a sus tradiciones, ofreciendo soluciones técnicas para los desafíos únicos de la ciudad y un análisis de la etiqueta local que todo creador debe dominar antes de encender su cámara.</p>
@@ -167,5 +194,16 @@
 
 <p>Grabar un vlog en los templos de Kioto es un privilegio que conlleva una gran responsabilidad. Con el equipo adecuado y un profundo respeto por las normas locales, podrás capturar la belleza efímera de esta ciudad milenaria sin contribuir a la masificación ni a la falta de etiqueta. Recuerda que tu cámara es una herramienta para compartir, no para invadir. Prioriza la experiencia sobre la grabación, y tus imágenes reflejarán esa autenticidad. Kioto te recompensará con momentos irrepetibles: el sonido del viento entre los bambúes, el aroma del incienso en un santuario, la luz dorada sobre un jardín de musgo. Graba
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

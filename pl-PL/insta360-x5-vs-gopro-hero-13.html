@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Insta360 X5 vs GoPro Hero 13 – które narzędzie dla podróżnika wybrać w 2025 roku?</h1>
 
 <p>Wybór między <strong>Insta360 X5</strong> a <strong>GoPro Hero 13</strong> to dziś jedno z najczęstszych dylematów wśród polskich twórców podróżniczych, vlogerów i osób dokumentujących wyprawy. Oba urządzenia trafiły na polski rynek w bardzo zbliżonym czasie i oba celują w ten sam segment – aktywnych użytkowników, którzy chcą nagrywać dynamiczne ujęcia w trudnych warunkach. Różnią się jednak fundamentalnie podejściem do rejestrowania rzeczywistości: Insta360 stawia na obraz 360°, a GoPro na klasyczne, płaskie ujęcie z zaawansowaną stabilizacją.</p>
@@ -234,5 +261,16 @@
 
 <p>Przed zakupem warto wypożyczyć lub przetestować oba modele – wiele polskich sklepów oferuje możliwość zwrotu w ciągu 14 dni, co pozwala sprawdzić, który interfejs i sposób pracy jest Ci bliższy.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

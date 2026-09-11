@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 3 vs DJI Action 5 Pro: comparativa definitiva para viajeros</h1>
 
 <p>Si estás buscando una cámara compacta para tus viajes, es muy probable que hayas acabado dudando entre dos de los modelos más populares de DJI: la <strong>Osmo Pocket 3</strong> y la <strong>Action 5 Pro</strong>. Aunque comparten marca, sensor de 1/1,3 pulgadas y un enfoque claro hacia creadores de contenido, responden a filosofías completamente distintas. Una es una cámara de bolsillo con estabilización mecánica de tres ejes; la otra es una action cam robusta, sumergible y pensada para la acción.</p>
@@ -209,5 +236,16 @@
 
 <p>En resumen: para el <strong>viajero urbanita y creador de contenido</strong>, Osmo Pocket 3. Para el <strong>viajero aventurero y deportista</strong>, Action 5 Pro. Si puedes permitírtelo, ambas se complementan a la perfección en una mochila de viaje.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

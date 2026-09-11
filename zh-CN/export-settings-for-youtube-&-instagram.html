@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>YouTube 与 Instagram 视频导出设置完全教程：从剪辑软件到上传的每一步</h1>
 
 <p>你在青海茶卡盐湖拍了一整天，回到酒店把素材导进电脑，剪完片子却卡在了最后一步——导出设置。码率填多少？H.264 还是 H.265？Instagram 为什么把我的视频压得那么糊？这些问题我在过去几年帮不少国内旅行博主做过后期咨询，发现大家踩的坑高度相似。这篇教程会把 YouTube 和 Instagram 的导出参数讲清楚，并给出你在国内就能买到的设备建议。</p>
@@ -225,5 +252,16 @@
 
 <p>把这套流程跑顺之后，你会发现导出不再是“玄学”。先确定平台，再定参数，最后自检上传——每一步都有明确答案。下次从西藏纳木错或者福建平潭拍完回来，照着这篇教程走一遍，你的片子就能以最好的状态出现在观众面前。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

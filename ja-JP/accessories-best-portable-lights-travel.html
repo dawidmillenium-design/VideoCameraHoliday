@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>旅先の撮影が変わる！持ち運びに最適なポータブルLEDライト徹底レビュー2024</h1>
 
 <p>こんにちは、旅行写真・動画コンテンツを専門とするライターの佐藤です。年間50日以上を国内外の旅先で過ごし、そのたびに撮影機材をトランクに詰め込んでいます。今回は、旅の荷物を最小限に抑えながらも、プロ品質の映像・写真を実現する「<strong>旅行向けポータブルライト</strong>」を徹底的に比較検証しました。</p>
@@ -274,5 +301,16 @@ LightningやMicro-USBのモデルは、ケーブルを別途持参する必要�
 
 <p>最後にひとつ。どんなに優れたライトも、実際に使わなければ意味がありません。まずは自宅近くの夜道やカフェで練習し、光の当て方を体で覚えてから旅に持参することをおすすめします。それでは、良い旅と良い撮影を！</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

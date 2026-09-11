@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Sound Design für Reisevideos: Der komplette Leitfaden für natürlichen und kinoreifen Klang</h1>
 
 <p>Ein Reisevideo ohne guten Ton ist wie ein Schwarzwälder Kirschtorte ohne Sahne – es fehlt das Entscheidende. Während die meisten Filmer stundenlang über Bildkomposition und Kameraeinstellungen nachdenken, wird der Ton oft stiefmütterlich behandelt. Dabei entscheidet gerade der Sound darüber, ob dein Publikum bei einem Sonnenuntergang an der Ostsee Gänsehaut bekommt oder gelangweilt wegklickt. In diesem Tutorial zeige ich dir Schritt für Schritt, wie du professionelles Sound Design für deine Reisevideos umsetzt – mit Praxiswissen aus über zehn Jahren Filmerfahrung zwischen Sylt, Zugspitze und dem Bodensee.</p>
@@ -209,5 +236,16 @@ Lösung: Nutze dein Smartphone als Recorder (z. B. mit der App „Voice Record P
 
 <p>Viel Erfolg beim nächsten Projekt – und dreh den Ton auf!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

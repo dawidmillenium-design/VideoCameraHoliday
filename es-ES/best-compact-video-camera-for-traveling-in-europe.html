@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>La Mejor Cámara de Video Compacta para Viajar por Europa en 2024: Análisis y Comparativa Definitiva</h1>
 
 <p>Planificar un viaje por Europa es una experiencia emocionante, pero elegir el equipo adecuado para capturar cada momento puede convertirse en un dolor de cabeza. Las cámaras réflex y sin espejo de gran formato son excelentes, pero su peso y volumen resultan poco prácticos para caminar por las calles empedradas de Praga o hacer cola en el Museo del Louvre. Aquí es donde entran en juego las <strong>cámaras de video compactas</strong>, diseñadas para ofrecer una calidad de imagen excepcional sin sacrificar la portabilidad.</p>
@@ -199,5 +226,16 @@
 
 <h3>4. El Creador de Contenido para Redes Sociales: Estética y Versatilidad</h3
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

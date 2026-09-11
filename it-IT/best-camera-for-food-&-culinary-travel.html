@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Migliore Fotocamera per Food &amp; Culinary Travel: Guida all’Acquisto 2024</h1>
 
 <p>Il turismo enogastronomico è una delle anime del viaggio moderno: mercati rionali a Palermo, trattorie nascoste a Bologna, street food a Napoli, cantine in Valpolicella. Se il tuo obiettivo è raccontare il cibo mentre viaggi, la fotocamera giusta fa la differenza tra uno scatto dimenticabile e un’immagine che profuma di basilico. Questa guida ti aiuta a scegliere la <strong>migliore fotocamera per food &amp; culinary travel</strong>, con criteri chiari, consigli pratici e modelli adatti anche a chi parte da zero.</p>
@@ -191,5 +218,16 @@
 <p>La migliore fotocamera per food &amp; culinary travel è quella che porti sempre con te e che ti permette di raccontare il cibo con il tuo stile. Se cerchi versatilità, la <strong>Sony Alpha 6700</strong> è la scelta più completa. Se ami i colori pronti e lo stile, la <strong>Fujifilm X-S20</strong> è imbattibile. Per chi viaggia leggero e in ambienti difficili, la <strong>OM System OM-5</strong> è una compagna affidabile. Chi inizia può puntare sulla <strong>Canon EOS R50</strong>, mentre i creator social troveranno nella <strong>Sony ZV-1 II</strong> la compatta ideale.</p>
 <p>Qualunque sia il tuo budget, investi in un buon obiettivo macro e in un po’ di pratica: il cibo italiano merita di essere raccontato al meglio.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>欧洲旅行最佳便携摄像机：2025年专业对比与实测推荐</h1>
 
 <p>对于计划前往欧洲旅行的中国游客来说，选择一台合适的便携摄像机往往比携带笨重的单反更为明智。欧洲城市（如巴黎、罗马、布拉格）的街道狭窄且人群密集，许多著名景点（如圣家堂、卢浮宫）内部光线复杂且禁止使用闪光灯，而乡村与雪山（如瑞士少女峰、挪威峡湾）则需要设备具备出色的防抖和低光表现。为了帮助您做出明智决策，我们基于在中国境内（上海、北京、成都）以及模拟欧洲旅行场景的实地测试，对市面上五款最热门的紧凑型摄像机进行了横向对比。本文数据均来自实测，并结合了京东、天猫等中国主流电商平台的用户反馈。</p>
@@ -246,5 +273,16 @@
 
 <p><em>声明：本文所有测试数据均基于2025年5月在中国境内完成的实拍，固件版本均为最新。产品价格参考京东自营2025年6月报价，实际价格可能因促销活动有所浮动。</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

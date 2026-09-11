@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepsze aparaty na island hopping – przewodnik dla polskich podróżników</h1>
 
 <p>Island hopping, czyli przeskakiwanie między wyspami, to jeden z najbardziej fotogenicznych sposobów podróżowania. Słone w powietrze, biały piasek, turkusowa woda, klify i porty rybackie tworzą scenariusze, które aż proszą się o dobry aparat. Ale wyspiarskie warunki są bezwzględne: wilgoć, sól, piasek, silne słońce i częste przesiadki promami sprawiają, że nie każdy sprzęt się sprawdzi. W tym przewodniku wyjaśniam, jak wybrać najlepszy aparat na island hopping, na co uważać w terenie i o czym pamiętać, planując zdjęcia w Polsce i za granicą.</p>
@@ -183,5 +210,16 @@
 
 <p>Na wyspach złota godzina jest krótsza niż w głębi lądu, bo horyzont jest otwarty. Świt i zmierzch trwają czasem tylko 20–30 minut. Planuj zdjęcia z wyprzedzeniem. Na Cykladach najlepsze światło jest rano, gdy słońce jest jeszcze nisko, a białe domy nie są przepalone. Nad Bałtykiem latem złota godzina trwa dłużej, ale słoń
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

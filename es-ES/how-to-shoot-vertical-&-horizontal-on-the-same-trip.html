@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Cómo grabar en vertical y horizontal en el mismo viaje: guía completa</h1>
 
 <p>Si alguna vez has vuelto de un viaje con cientos de clips y te has dado cuenta de que la mitad no encajan entre sí porque unos son verticales y otros horizontales, esta guía es para ti. Grabar en ambos formatos durante el mismo viaje ya no es una opción: es una necesidad. Las redes sociales premian el vertical, mientras que YouTube, la televisión y los proyectos de archivo siguen pidiendo horizontal. La buena noticia es que puedes cubrir ambos sin duplicar esfuerzos ni volverte loco.</p>
@@ -169,5 +196,16 @@
 
 <p>Así que ya sabes: prepara el equipo, define tu estrategia, graba con intención y organiza sobre la marcha. Tu yo del futuro (y tus seguidores) te lo agradecerán.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

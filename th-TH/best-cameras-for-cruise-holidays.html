@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องถ่ายรูปที่ดีที่สุดสำหรับทริปล่องเรือในประเทศไทย: คู่มือฉบับสมบูรณ์สำหรับนักท่องเที่ยว</h1>
 
 <p>ประเทศไทยเป็นหนึ่งในจุดหมายปลายทางยอดนิยมที่สุดในเอเชียตะวันออกเฉียงใต้สำหรับการล่องเรือสำราญ ด้วยภูมิประเทศที่หลากหลายตั้งแต่เกาะเขาหินปูนในอ่าวพังงา ไปจนถึงวัดวาอารามริมแม่น้ำเจ้าพระยาในกรุงเทพฯ ทริปล่องเรือในไทยจึงเต็มไปด้วยโอกาสในการถ่ายภาพที่ไม่มีวันลืม ไม่ว่าจะเป็นการถ่ายพระอาทิตย์ขึ้นเหนืออ่าวพังงา ภาพหินปูนที่โผล่ขึ้นจากน้ำทะเลสีมรกต ไปจนถึงบรรยากาศตลาดน้ำและวิถีชีวิตชาวไทยริมน้ำ</p>
@@ -188,5 +215,16 @@
 
 <p><em>บทความนี้จัดทำโดยทีมงาน VideoCameraHoliday ผู้เชี่ยวชาญด้านอุปกรณ์ถ่ายภาพสำหรับการท่องเที่ยว โดยอ้างอิงจากประสบการณ์ภาคสนามในเส้นทางล่องเรือไทยและข้อมูลจากหน่วยงานราชการไทยที่เกี่ยวข้อง</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

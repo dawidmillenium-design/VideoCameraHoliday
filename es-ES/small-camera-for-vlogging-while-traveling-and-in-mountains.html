@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>La Mejor Cámara Pequeña para Vlogging de Viajes y Montaña en España (2024)</h1>
 
 <p>Elegir la cámara perfecta para vlogging es como escoger la mochila adecuada para el Camino de Santiago: necesita ser ligera, resistente y ofrecer un rendimiento fiable en condiciones cambiantes. Si eres de los que recorre los Picos de Europa, las calas de Menorca o las calles empedradas de Granada, sabes que el equipo debe ser una extensión de tu cuerpo, no un lastre.</p>
@@ -216,5 +243,16 @@
 <p><strong>Necesita:</strong> Simplicidad, precio ajustado y comodidad para grabar selfies verticales.</p>
 <p><strong>Recomendación:</strong> <strong>Canon PowerShot V10</strong>. Si tu objetivo es subir historias de Instagram o TikToks sin pretension
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

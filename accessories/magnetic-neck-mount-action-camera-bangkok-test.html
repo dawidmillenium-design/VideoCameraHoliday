@@ -73,161 +73,37 @@
     }
     </script>
 
-    <style>
-        /* CORE CSS FROM MAIN INDEX */
-        :root {
-            --primary-color: #e63946;
-            --secondary-color: #1d3557;
-            --accent-color: #457b9d;
-            --text-dark: #333333;
-            --text-light: #f1faee;
-            --bg-light: #ffffff;
-            --bg-off-white: #f8f9fa;
-            --border-color: #dee2e6;
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--bg-off-white); }
-        a { text-decoration: none; color: var(--primary-color); transition: var(--transition); }
-        a:hover { color: var(--secondary-color); }
-        img { max-width: 100%; height: auto; display: block; }
-        
-        /* MEGA MENU STYLES */
-        header { background: var(--bg-light); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--secondary-color); }
-        .main-nav ul { display: flex; list-style: none; gap: 30px; }
-        .main-nav a { color: var(--text-dark); font-weight: 500; padding: 10px 0; position: relative; }
-        .main-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--primary-color); transition: var(--transition); }
-        .main-nav a:hover::after { width: 100%; }
-        
-        /* MEGA MENU DROPDOWN */
-        .has-mega-menu { position: relative; }
-        .mega-menu { 
-            position: absolute; 
-            top: 100%; 
-            left: 50%; 
-            transform: translateX(-50%) translateY(10px); 
-            background: var(--bg-light); 
-            width: 800px; 
-            padding: 30px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-            border-radius: 8px; 
-            opacity: 0; 
-            visibility: hidden; 
-            transition: var(--transition);
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            z-index: 999;
-        }
-        .has-mega-menu:hover .mega-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .mega-column h4 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.1rem; border-bottom: 2px solid var(--border-color); padding-bottom: 8px; }
-        .mega-column ul { list-style: none; }
-        .mega-column li { margin-bottom: 8px; }
-        .mega-column a { color: var(--text-dark); font-size: 0.95rem; display: block; padding: 5px 0; }
-        .mega-column a:hover { color: var(--primary-color); padding-left: 5px; }
-
-        /* ARTICLE CONTENT STYLES */
-        .article-container { max-width: 800px; margin: 40px auto; background: var(--bg-light); padding: 40px; border-radius: 8px; box-shadow: var(--shadow); }
-        .article-header { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
-        .article-meta { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
-        .article-title { font-size: 2.2rem; color: var(--secondary-color); line-height: 1.2; margin-bottom: 15px; }
-        .article-content h2 { color: var(--secondary-color); margin: 35px 0 15px; font-size: 1.8rem; }
-        .article-content h3 { color: var(--accent-color); margin: 25px 0 10px; font-size: 1.4rem; }
-        .article-content p { margin-bottom: 20px; font-size: 1.05rem; }
-        .article-content ul, .article-content ol { margin-bottom: 20px; padding-left: 25px; }
-        .article-content li { margin-bottom: 10px; }
-        .article-content img { margin: 25px 0; border-radius: 6px; box-shadow: var(--shadow); }
-        .article-content blockquote { border-left: 4px solid var(--primary-color); padding: 15px 20px; background: #fff5f5; margin: 25px 0; font-style: italic; }
-        
-        /* TABLE STYLES */
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 30px 0; }
-        .comparison-table th, .comparison-table td { border: 1px solid var(--border-color); padding: 12px; text-align: left; }
-        .comparison-table th { background: var(--secondary-color); color: var(--text-light); }
-        .comparison-table tr:nth-child(even) { background: var(--bg-off-white); }
-        
-        /* PRO TIP BOX */
-        .pro-tip { background: #e3f2fd; border-left: 4px solid var(--accent-color); padding: 20px; margin: 30px 0; border-radius: 0 6px 6px 0; }
-        .pro-tip strong { color: var(--secondary-color); display: block; margin-bottom: 8px; }
-
-        /* INTERNAL LINKS BOX */
-        .internal-links-box { background: var(--bg-off-white); padding: 25px; border-radius: 8px; margin: 40px 0; border: 1px solid var(--border-color); }
-        .internal-links-box h3 { margin-top: 0; color: var(--secondary-color); }
-        .internal-links-box ul { list-style: none; padding: 0; }
-        .internal-links-box li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        .internal-links-box li::before { content: '→'; color: var(--primary-color); position: absolute; left: 0; font-weight: bold; }
-
-        /* FOOTER STYLES */
-        footer { background: var(--secondary-color); color: var(--text-light); padding: 60px 0 30px; margin-top: 60px; }
-        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .footer-column h4 { color: var(--text-light); margin-bottom: 20px; font-size: 1.2rem; border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 8px; }
-        .footer-column ul { list-style: none; }
-        .footer-column li { margin-bottom: 12px; }
-        .footer-column a { color: #ccc; transition: var(--transition); }
-        .footer-column a:hover { color: var(--text-light); padding-left: 5px; }
-        .footer-bottom { text-align: center; padding-top: 30px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: #aaa; font-size: 0.9rem; }
-        
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; height: auto; padding: 15px; }
-            .main-nav ul { flex-direction: column; gap: 15px; margin-top: 15px; text-align: center; }
-            .mega-menu { position: static; transform: none; width: 100%; grid-template-columns: 1fr; opacity: 1; visibility: visible; box-shadow: none; border: 1px solid var(--border-color); margin-top: 15px; }
-            .article-container { margin: 20px; padding: 20px; }
-            .article-title { font-size: 1.8rem; }
-        }
-    </style>
+    
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
 
-    <!-- MEGA MENU HEADER -->
-    <header>
-        <div class="nav-container">
-            <a href="/" class="logo">TravelFilmmaker</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li class="has-mega-menu">
-                        <a href="#">Gear Reviews ▾</a>
-                        <div class="mega-menu">
-                            <div class="mega-column">
-                                <h4>Cameras</h4>
-                                <ul>
-                                    <li><a href="/reviews/best-travel-cameras-2026.html">Best Travel Cameras 2026</a></li>
-                                    <li><a href="/reviews/dji-pocket-4-review.html">DJI Pocket 4 Review</a></li>
-                                    <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II Review</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-column">
-                                <h4>Action Cams</h4>
-                                <ul>
-                                    <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13 Black</a></li>
-                                    <li><a href="/reviews/insta360-ace-pro-review.html">Insta360 Ace Pro</a></li>
-                                    <li><a href="/accessories/magnetic-neck-mount-action-camera-bangkok-test.html">Neck Mounts Tested</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-column">
-                                <h4>Accessories</h4>
-                                <ul>
-                                    <li><a href="/accessories/best-sd-cards-4k-video-2026.html">Best SD Cards 4K</a></li>
-                                    <li><a href="/accessories/best-microphones-travel-vlogging-2026.html">Travel Mics</a></li>
-                                    <li><a href="/accessories/best-lightweight-tripods-travel-2026.html">Lightweight Tripods</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="/guides/">Guides</a></li>
-                    <li><a href="/destinations/">Destinations</a></li>
-                    <li><a href="/editing/">Editing</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
 
-    <!-- MAIN ARTICLE CONTENT -->
-    <main class="article-container">
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main class="article-container">
         <article class="article-content">
             <header class="article-header">
                 <div class="article-meta">
@@ -362,53 +238,16 @@
                 <p><em>Disclosure: This article contains affiliate links. If you purchase through these links, we may earn a small commission at no extra cost to you. This supports our independent testing and reviews.</em></p>
             </div>
         </article>
-    </main>
 
-    <!-- FOOTER WITH MEGA MENU STRUCTURE -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h4>Categories</h4>
-                <ul>
-                    <li><a href="/gear-reviews/">Gear Reviews</a></li>
-                    <li><a href="/how-to-guides/">How-To Guides</a></li>
-                    <li><a href="/destinations/">Destinations</a></li>
-                    <li><a href="/editing-tips/">Editing Tips</a></li>
-                    <li><a href="/interviews/">Creator Interviews</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Top Gear 2026</h4>
-                <ul>
-                    <li><a href="/accessories/best-sd-cards-4k-video-2026.html">Best SD Cards for 4K</a></li>
-                    <li><a href="/accessories/best-microphones-travel-vlogging-2026.html">Best Travel Mics</a></li>
-                    <li><a href="/accessories/best-lightweight-tripods-travel-2026.html">Best Lightweight Tripods</a></li>
-                    <li><a href="/accessories/best-power-banks-travel-filmmakers-2026.html">Best Power Banks</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Popular Destinations</h4>
-                <ul>
-                    <li><a href="/destinations/japan-travel-camera-guide.html">Japan Camera Guide</a></li>
-                    <li><a href="/destinations/southeast-asia-filming.html">Southeast Asia Tips</a></li>
-                    <li><a href="/destinations/europe-vlogging-laws.html">Europe Vlogging Laws</a></li>
-                    <li><a href="/destinations/iceland-action-cam.html">Iceland Action Cam</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/about/">About Us</a></li>
-                    <li><a href="/contact/">Contact</a></li>
-                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
-                    <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Travel Filmmaker Magazine. All rights reserved. | Designed for SEO Performance</p>
-        </div>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
 
 </body>
 </html>

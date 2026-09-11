@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2026년 틱톡 여행 콘텐츠 전략: 한국 크리에이터를 위한 단계별 가이드</h1>
 
 <p>안녕하세요, 여행 사진·영상 콘텐츠 작가로 활동하며 지난 3년간 제주도, 부산, 강릉, 그리고 일본·동남아 현지에서 틱톡 여행 콘텐츠를 직접 기획·촬영·편집해온 경험을 바탕으로 이 가이드를 작성합니다. 2024년 말부터 틱톡의 검색 기능과 추천 알고리즘이 "여행 정보 탐색" 중심으로 재편되면서, 단순히 예쁜 영상만 올리던 계정들은 도달률이 급감했습니다. 반면 "어디서, 언제, 얼마에, 어떻게"를 명확히 답해주는 여행 콘텐츠는 팔로워 수와 무관하게 조회수가 폭발했습니다. 2026년에는 이 흐름이 더욱 강화됩니다. 이 글은 한국에서 활동하는 여행 크리에이터가 틱톡에서 실제로 성과를 내기 위해 필요한 전략을 7단계로 정리한 실전 매뉴얼입니다.</p>
@@ -163,5 +190,16 @@
   <li><strong>해시태그를 30개씩 붙인다:</strong> 5~7개가 적정입니다. #여행 #부산여행 #부산맛집 #해운대 #1박2일코스 #여행팁 #국내여행 정도가 좋습니다.</li>
   <li><strong>업로드 후 바로 앱을 닫는다:</strong> 첫 1시간이 골든타임입니다. 댓글
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

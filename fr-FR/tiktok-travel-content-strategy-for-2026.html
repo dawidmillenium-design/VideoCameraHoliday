@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Stratégie de contenu voyage sur TikTok en 2026 : le guide complet</h1>
 
 <p>Vous rêvez de transformer vos voyages en une audience fidèle sur TikTok ? En 2026, la plateforme a profondément évolué : l'algorithme privilégie la <strong>valeur ajoutée</strong> et la <strong>régularité</strong> plutôt que le simple buzz éphémère. Que vous soyez un créateur basé à Lyon, un baroudeur passionné de randonnée dans les Alpes ou un expatrié qui documente la vie à Lisbonne, ce tutoriel vous donne une méthode concrète, testée sur le terrain, pour bâtir une stratégie de contenu voyage durable et performante.</p>
@@ -208,5 +235,16 @@
 
 <p><strong>Je
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

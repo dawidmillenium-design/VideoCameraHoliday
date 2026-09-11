@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Protéger votre DJI Pocket 4P sur les plages françaises : Le guide complet contre le sable et l'humidité</h1>
 
 <p>La DJI Pocket 4P (ou Pocket 4 Pro) est un outil fantastique pour capturer des souvenirs de vacances, mais les plages françaises, de la Côte d'Azur aux plages de Bretagne, représentent un véritable défi pour ce petit appareil. Le sable fin et l'air salin sont les pires ennemis de votre stabilisateur et de votre objectif. Ayant moi-même filmé des couchers de soleil sur la plage du Prado à Marseille et des sessions de surf à Biarritz, j'ai appris à mes dépens qu'une simple sortie à la plage peut transformer un investissement de 700€ en presse-papier si l'on ne prend pas les précautions nécessaires.</p>
@@ -158,5 +185,16 @@
 
 <p>Malgré toutes les préc
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Guida all'acquisto dei filtri per obiettivi da viaggio: quali scegliere per foto e video</h1>
 
 <p>Chi viaggia con una fotocamera o una videocamera sa bene che la luce è l'elemento più imprevedibile. Un cielo troppo luminoso, un riflesso sul mare, una cascata che "brucia" le alte luci, un tramonto che perde saturazione: sono tutte situazioni in cui un piccolo accessorio può fare una differenza enorme. Stiamo parlando dei <strong>filtri per obiettivi</strong>, probabilmente l'accessorio più sottovalutato dai principianti e più amato dai fotografi e videomaker esperti.</p>
@@ -218,5 +245,16 @@
 <h3>I filtri economici rovinano la qualità delle foto?</h3>
 <p>Possono degradarla, soprattutto controluce o con fonti luminose
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

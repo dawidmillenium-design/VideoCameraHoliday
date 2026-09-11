@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Migliori Fotocamere per Vacanze in Crociera: Guida Completa per il 2025</h1>
 
 <p>Una crociera nel Mediterraneo è uno dei viaggi più affascinanti che si possano intraprendere. Svegliarsi al largo delle <strong>Isole Eolie</strong>, attraccare a <strong>Civitavecchia</strong> per visitare Roma, o navigare lungo la <strong>Costiera Amalfitana</strong> al tramonto: ogni momento merita di essere immortalato. Ma quale fotocamera portare con sé? In questa guida ti aiuterò a scegliere l'attrezzatura fotografica ideale per una vacanza in crociera, con particolare attenzione ai porti italiani e del Mediterraneo, alle condizioni di luce uniche e alle normative locali che ogni fotografo deve conoscere.</p>
@@ -201,5 +228,16 @@
 
 <p><strong>Buon viaggio e buona luce!</strong></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

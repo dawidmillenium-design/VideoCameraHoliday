@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Mejor cámara para viajes gastronómicos y culinarios: Guía de compra 2024</h1>
 
 <p>Si eres un apasionado de la gastronomía y te encanta documentar cada plato que descubres en tus viajes, necesitas una cámara que capture la esencia de la comida con precisión y estilo. Tanto si eres un <strong>foodie</strong> que comparte sus experiencias en redes sociales como si eres un creador de contenido culinario profesional, elegir la cámara adecuada marcará la diferencia entre una foto mediocre y una imagen que despierte el apetito de cualquiera.</p>
@@ -172,5 +199,16 @@
 
 <p>Recuerda que la cámara es solo una herramienta: la luz, la composición y tu ojo para los detalles harán que tus fotos de comida destaquen. ¡Buen viaje y mejor provecho!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

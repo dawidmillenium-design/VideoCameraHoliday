@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>고프로 히어로 13 겨울 배터리 수명 늘리는 방법: 한국 설경 촬영자를 위한 완벽 가이드</h1>
 
 <p>강원도 대관령의 아침 기온이 영하 15도까지 떨어지는 1월, 저는 고프로 히어로 13을 들고 설경을 촬영하러 나섰습니다. 출발 전 100%였던 배터리가 20분 만에 15%로 떨어지는 것을 보고 적잖이 당황했던 기억이 있습니다. 하지만 몇 가지 핵심 원리를 이해하고 나서부터는 영하 10도의 혹한 속에서도 1시간 이상 안정적으로 4K 영상을 촬영할 수 있게 되었습니다. 이 글은 제가 한국의 혹독한 겨울 현장에서 직접 부딪히며 터득한 고프로 히어로 13 배터리 관리 노하우를 단계별로 정리한 것입니다.</p>
@@ -162,5 +189,16 @@
 
 <p>올겨울, 대관령의 새벽 설경이나 태백산의 눈꽃을 고프로로 담아보세요. 준비된 자만이 그 아름다운 순간을 온전히 기록할 수 있습니다. 안전하고 즐거운 겨울 촬영 되시길 바랍니다.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Meilleurs Appareils Photo pour un Road Trip en France : Le Guide Complet 2025</h1>
 
 <p>La France est le pays le plus visité au monde, et pour cause : des falaises de Étretat aux champs de lavande de Provence, des ruelles médiévales de Carcassonne aux cols alpins du Galibier, chaque virage de l'Hexagone offre une carte postale potentielle. Un road trip français, c'est parcourir plus de 1 000 kilomètres de paysages radicalement différents en une semaine — littoral atlantique brumeux, garrigue méditerranéenne écrasée de soleil, vignobles bourguignons, villages perchés du Luberon.</p>
@@ -255,5 +282,16 @@
 
 <p>Il n'existe pas de « meilleur » appareil universel pour un road trip en France. Le choix dépend de votre style :
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2024년 여행용 휴대용 조명 완벽 가이드: 실제 촬영 테스트로 검증한 베스트 5</h1>
 
 <p>여행 사진과 브이로그를 찍다 보면 가장 자주 부딪히는 벽은 바로 <strong>빛</strong>입니다. 특히 한국처럼 일조량과 미세먼지, 계절 변화가 극명한 환경에서는 실내 카페, 야시장, 한옥 골목, 제주 오름 등 촬영지마다 빛의 질이 완전히 달라집니다. 저는 지난 8년간 국내외 여행 콘텐츠를 제작하면서 소형 조명을 40개 이상 직접 사고, 쓰고, 망가뜨렸습니다. 이 글은 그 경험을 바탕으로 <strong>여행용 휴대용 조명</strong>을 실제로 검증한 리뷰입니다. 협찬 없이 자비로 구매한 제품만 다뤘고, 서울·부산·제주·강원 4개 지역에서 6개월간 필드 테스트를 진행했습니다.</p>
@@ -221,5 +248,16 @@
 
 <p>마지막으로 강조하고 싶은 것은, 조명은 카메라보다 먼저 투자할 가치가 있다는 점입니다. 스마트폰 카메라가 아무리 좋아져도 빛이 부족하면 결과물은 한계에 부딪힙니다. 특히 한국의 사계절과 다양한 야외 환경을 고려하면 작은 조명 하나가 여행 영상의 완성도를 완전히 바꿉니다. 이 글이 여러분의 다음 여행 장비 선택에 실질적인 도움이 되길 바랍니다.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

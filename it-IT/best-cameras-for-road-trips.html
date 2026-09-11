@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Migliori Fotocamere per un Road Trip in Italia: Guida Completa 2024</h1>
 
 <p>Un road trip attraverso l'Italia è un'esperienza che combina storia millenaria, paesaggi mozzafiato e culture regionali uniche. Dalle Dolomiti alle coste della Sicilia, ogni chilometro offre opportunità fotografiche irripetibili. Tuttavia, scegliere la fotocamera giusta per documentare questo viaggio richiede una comprensione approfondita delle sfide specifiche che incontrerai lungo le strade italiane.</p>
@@ -290,5 +317,16 @@
 
 <p>Con questa guida completa, sei pronto per catturare la bellezza senza tempo dell'Italia attraverso il tuo obiettivo. Buon viaggio e buona luce!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

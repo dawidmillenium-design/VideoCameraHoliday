@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Accessori essenziali per fotocamere: guida completa 2024</h1>
 
 <p>Dopo aver testato personalmente decine di accessori fotografici in oltre quindici anni di reportage tra le Dolomiti, la Costiera Amalfitana e i vicoli di Napoli, ho imparato una cosa fondamentale: la differenza tra una foto mediocre e uno scatto professionale spesso non sta nel corpo macchina, ma negli <strong>accessori essenziali per fotocamere</strong> che porti nello zaino. In questa recensione analizzo gli accessori che uso quotidianamente, con test sul campo effettuati in condizioni reali italiane, dai -10°C del Passo Giau ai 38°C delle saline di Trapani.</p>
@@ -293,5 +320,16 @@
 
 <p>Gli <strong>accessori essenziali per fotocamere</strong> non sono un costo, ma un investimento nella qualità del vostro lavoro. Che siate paesaggisti delle Dolomiti, wedding photographer in Toscana o street photographer a Roma, il giusto corredo fa la differenza tra un'immagine dimenticabile e uno scatto che racconta una storia. E in un Paese fotogenicamente ricco come l'Italia, sarebbe un peccato non essere preparati a catturarla al meglio.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

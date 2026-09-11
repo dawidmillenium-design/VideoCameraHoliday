@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>고프로 vs DJI 액션캠 여행 비교: 2025년 여행자를 위한 완벽 가이드</h1>
 
 <p>여행 유튜버와 브이로거라면 한 번쯤 고민해봤을 질문이 있습니다. "고프로를 살까, DJI 오즈모 액션을 살까?" 특히 제주도 해녀 체험, 강원도 스키장, 부산 해운대 서핑, 그리고 일본·동남아 여행을 앞둔 한국 여행자들에게 이 선택은 단순한 기기 구매가 아니라 여행 콘텐츠의 질을 좌우하는 결정입니다.</p>
@@ -193,5 +220,16 @@
 
 <p>여행은 한정된 시간과 예산 안에서 최고의 추억을 만드는 과정입니다. 액션캠 선택도 마찬가지입니다. 스펙표의 숫자보다 자신의 실제 촬영 패턴을 먼저 돌아보고, 그에 맞는 기기를 고르는 것이 후회 없는 선택의 시작입니다.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

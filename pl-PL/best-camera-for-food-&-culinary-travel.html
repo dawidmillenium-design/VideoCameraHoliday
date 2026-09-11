@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Jaki aparat do fotografii kulinarnej i podróży? Kompletny przewodnik zakupowy 2024</h1>
 
 <p>Fotografia kulinarna to jedna z najszybciej rozwijających się dziedzin w mediach społecznościowych. Jeśli marzysz o tym, aby Twoje zdjęcia potraw z podróży — od pierogów w Krakowie, przez tapas w Barcelonie, po ramen w Tokio — wyglądały jak z profesjonalnego magazynu, potrzebujesz odpowiedniego sprzętu. W tym przewodniku wyjaśnię, na co zwrócić uwagę przy wyborze aparatu do fotografii kulinarnej w podróży, jakie modele są dostępne na polskim rynku i ile realnie trzeba wydać, aby osiągnąć satysfakcjonujące rezultaty.</p>
@@ -165,5 +192,16 @@
   <li><strong>Używaj jasnego obiektywu.</strong> f/1.8 lub f/2.8 pozwoli Ci uzyskać rozmyte tło i wyeksponować danie.</li>
   <li><strong>Nie bój się kadrować ciasno.</strong> Detale często opowiadają lepszą historię niż cały tal
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

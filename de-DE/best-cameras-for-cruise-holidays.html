@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Die besten Kameras für Kreuzfahrten: Der ultimative Kamera-Guide für Ihre Seereise ab Deutschland</h1>
 
 <p>Kreuzfahrten gehören zu den beliebtesten Urlaubsformen der Deutschen. Ob eine Nordsee-Route ab Hamburg, eine Ostsee-Kreuzfahrt ab Kiel oder Warnemünde, eine Mittelmeer-Tour ab Mallorca oder eine Expeditionsreise in die norwegischen Fjorde – nirgendwo sonst begegnen Ihnen auf engstem Raum so viele unterschiedliche Motive wie an Bord und an Land. Genau deshalb ist die Wahl der richtigen Kamera für eine Kreuzfahrt eine der wichtigsten Entscheidungen vor der Abreise. Dieser Guide zeigt Ihnen praxisnah, welche Kameras sich für Kreuzfahrten eignen, welche Herausforderungen Sie erwarten und worauf Sie bei Fotografie und Videografie auf See und in den Häfen achten sollten.</p>
@@ -184,5 +211,16 @@
 
 <p>Denken Sie daran: Gute Fotos entstehen nicht allein durch Technik, sondern durch den Blick für den Moment. Nehmen Sie sich Zeit, beobachten Sie, und genießen Sie die Reise. Mit der richtigen Ausrüstung und etwas Vorbereitung werden Ihre Kreuzfahrtbilder zu bleibenden Erinnerungen an unvergessliche Momente auf See und in den Häfen dieser Welt.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

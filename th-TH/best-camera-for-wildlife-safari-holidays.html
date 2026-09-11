@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องถ่ายภาพสัตว์ป่าสำหรับทริปซาฟารีที่ดีที่สุด: คู่มือเลือกซื้อฉบับสมบูรณ์สำหรับคนไทย (2025)</h1>
 
 <p>การได้ไปทริปซาฟารีในแอฟริกา ไม่ว่าจะเป็นเซเรนเกติ (Serengeti) ในแทนซาเนีย, มาไซมารา (Masai Mara) ในเคนยา, ครูเกอร์ (Kruger) ในแอฟริกาใต้ หรือแม้แต่ทริปดูสัตว์ป่าในไทยอย่างเขาใหญ่และทับลาน ล้วนเป็นประสบการณ์ครั้งเดียวในชีวิตที่คุณอยากเก็บภาพไว้ให้ดีที่สุด แต่คำถามยอดฮิตที่นักท่องเที่ยวชาวไทยถามบ่อยที่สุดคือ <strong>"ควรเอากล้องตัวไหนไปดี?"</strong></p>
@@ -187,5 +214,16 @@
 <h3>ควรซื้อกล้องใหม่หรือมือสอง?</h3>
 <p>ถ้างบจำกัด กล้องมือสองสภาพดีเป็นทางเลือกที่คุ้มมาก แต่ควรซื้อจากร้านที่มีประกันหรือตรวจ shutter count ก่อน ในไทยมีกลุ่ม Facebook และร้านมือสอง
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

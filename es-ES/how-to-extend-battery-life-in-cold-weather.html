@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Cómo prolongar la vida de la batería en climas fríos: guía definitiva para fotógrafos y videógrafos</h1>
 
 <p>Si alguna vez has visto cómo tu cámara se apaga de repente en plena nevada en la Sierra de Guadarrama, o cómo tu dron pierde potencia a mitad de vuelo sobre los Pirineos en enero, sabes de lo que hablo. Las baterías de ion de litio, que alimentan prácticamente toda nuestra tecnología fotográfica y de vídeo actual, sufren muchísimo con el frío. No es un mito: la química interna se ralentiza, la resistencia interna aumenta y la capacidad útil cae en picado. En esta guía te explico, paso a paso y con ejemplos reales de mis salidas por España, cómo mantener tus baterías vivas y operativas cuando el termómetro baja de los 5 °C.</p>
@@ -172,5 +199,16 @@
 
 <p>Si tienes dudas o quieres compartir tus trucos, déjame un comentario. ¡Nos vemos en la próxima salida!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

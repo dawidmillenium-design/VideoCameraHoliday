@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>露营假期最佳相机推荐：中国户外摄影装备全指南</h1>
 
 <p>露营旅行在中国正以惊人的速度升温。从浙江莫干山的竹林营地，到四川四姑娘山的星空帐篷，再到内蒙古乌兰布统草原的野奢营地，越来越多的旅行者选择背上行囊、支起帐篷，用镜头记录山野间的每一刻。然而，露营场景对摄影器材的要求与城市旅行截然不同——你需要面对低温、潮湿、沙尘、颠簸，甚至没有电源的窘境。这篇文章将结合中国热门露营目的地的实际拍摄条件，为你推荐最适合露营假期的相机与配套装备。</p>
@@ -183,5 +210,16 @@
 
 <p>无论选择哪台相机，请记住：最好的相机是你愿意带出门的那一台。在中国广袤的山野之间，遵守法规、尊重文化、保护环境，然后——按下快门，把露营的星光和晨雾，变成属于你的永恒画面。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Guide d'achat : les meilleurs filtres pour objectif en voyage (2024)</h1>
 
 <p>Vous partez en voyage et vous voulez protéger votre objectif tout en améliorant vos photos ? Les filtres pour objectif sont l'accessoire photo le plus sous-estimé — et pourtant, c'est souvent le premier achat que l'on devrait faire après un boîtier et un objectif. Dans ce guide complet, nous vous expliquons tout ce qu'un photographe voyageur doit savoir avant d'acheter : les types de filtres, les critères techniques à vérifier, et notre sélection des meilleurs modèles disponibles en France, avec des prix indicatifs et des alternatives économiques.</p>
@@ -235,5 +262,16 @@
 
 <p>Bon voyage et bonnes photos !</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

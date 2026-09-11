@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 3 vs Action 5 Pro: Der große Vergleich für Reisefotografen und Videografen</h1>
 
 <p>Wer auf Reisen hochwertige Videos und Fotos aufnehmen möchte, steht 2024 vor einer schwierigen Entscheidung: <strong>DJI Osmo Pocket 3</strong> oder <strong>DJI Osmo Action 5 Pro</strong>? Beide Kameras stammen vom Marktführer DJI, beide sind in Deutschland flächendeckend erhältlich – bei MediaMarkt, Saturn, Amazon.de sowie bei Fachhändlern wie Foto Erhardt oder Calumet – und beide richten sich an Reisende, Vlogger und Abenteurer. Doch sie verfolgen grundlegend unterschiedliche Konzepte.</p>
@@ -268,5 +295,16 @@
   <li><strong>Reisende</strong>, die viel mit Helm oder Brustgurt filmen</li>
   <li><strong>Preisbewusste</strong>, die eine günstigere Allround-Kamera suchen
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

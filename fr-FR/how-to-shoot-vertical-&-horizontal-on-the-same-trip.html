@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Comment filmer en vertical et en horizontal lors du même voyage : le guide complet</h1>
 
 <p>Vous partez en road trip en Provence, vous montez à la Tour Eiffel, ou vous longez la côte bretonne à vélo. À un moment, vous voulez publier une story Instagram en vertical. À un autre, vous rêvez d'un montage YouTube en 16:9. Et là, la question fatidique tombe : faut-il filmer deux fois chaque scène ?</p>
@@ -223,5 +250,16 @@
 
 <p>Filmer en vertical et en horizontal lors du même voyage n'est pas une contrainte, c'est une méthode. En filmant en 4K horizontal, en composant au centre, en tournant quelques plans dédiés et en recadrant avec intention, vous repartez avec des rushes exploitables dans tous les formats.</
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

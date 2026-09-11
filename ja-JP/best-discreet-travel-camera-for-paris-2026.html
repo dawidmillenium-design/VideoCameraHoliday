@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2026年パリ旅行に最適な「目立たない」旅行カメラ徹底比較：日本からの視点で選ぶベスト3</h1>
 
 <p>2026年、パリ。ルーブル美術館の混雑、モンマルトルの路地、セーヌ川の夕暮れ。美しい瞬間を高画質で残したいけれど、大きなカメラを首から下げて観光客と認識されたくない、スリのリスクも気になる。そんなジレンマを抱える日本の旅行者に向けて、今回は「携帯性」と「ステルス性」に特化したカメラを徹底比較します。</p>
@@ -244,5 +271,16 @@
 
 <p>その理由は、単に「目立たない」だけではありません。パリという街は、光と影のコントラストが非常に強く、天候も変わりやすいです。RX100 VIIは
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

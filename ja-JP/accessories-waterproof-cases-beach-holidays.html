@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>海辺の休日に最適な防水ケース徹底比較｜GoPro・DJI・Insta360・スマホ用を実際のビーチで検証</h1>
 
 <p>夏の沖縄、湘南、伊豆——日本の海辺はシュノーケリングからビーチパーティーまで楽しみが尽きません。しかし、カメラやスマートフォンを波や砂から守る防水ケース選びで迷っていませんか？本記事では、VideoCameraHoliday編集部が実際に2024年夏、沖縄・恩納村、静岡・白浜、神奈川・由比ガ浜の3か所で防水ケースを実地テストしました。GoPro、DJI Osmo Action、Insta360、そしてスマホ用ケースの4カテゴリを、防水性能・操作性・価格・日本国内での入手性の観点から徹底比較します。</p>
@@ -237,5 +264,16 @@
 
 <p>2024年夏の海辺の思い出を、最高の映像で残しましょう。本記事の比較が、あなたの防水ケース選びの一助となれば幸いです。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepsze kamery sportowe dla dzieci – kompletny przewodnik zakupowy 2024</h1>
 
 <p>Kamery sportowe dla dzieci to świetny sposób, aby zachęcić najmłodszych do aktywnego spędzania czasu, dokumentowania rodzinnych wakacji i rozwijania kreatywności. W przeciwieństwie do drogich modeli dla dorosłych, dziecięce kamery action są lżejsze, prostsze w obsłudze i znacznie bardziej odporne na upadki. W tym przewodniku wyjaśniamy, na co zwrócić uwagę przy wyborze, i polecamy sprawdzone modele dostępne w polskich sklepach.</p>
@@ -218,5 +245,16 @@
 
 <h2>Podsum
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

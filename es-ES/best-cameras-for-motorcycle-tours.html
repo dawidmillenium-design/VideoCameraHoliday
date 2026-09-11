@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Las mejores cámaras para rutas en moto por España: guía completa 2024</h1>
 
 <p>España es, sin duda, uno de los mejores países del mundo para recorrer sobre dos ruedas. Desde los puertos de los Pirineos hasta las carreteras infinitas de Castilla-La Mancha, pasando por la costa brava del Mediterráneo o los paisajes volcánicos de Canarias, cada ruta ofrece una paleta visual distinta que merece ser capturada con la cámara adecuada. En esta guía te contamos qué cámaras funcionan mejor en una ruta motera por España, teniendo en cuenta las condiciones reales de nuestras carreteras, la normativa local y las particularidades culturales de cada región.</p>
@@ -170,5 +197,16 @@
 
 <p>Lo importante es que elijas una cámara que te permita disfrutar del viaje sin preocupaciones, que se adapte a las condiciones reales de las carreteras españolas y que te ayude a capturar la esencia de un país diverso, luminoso y profundamente fotogénico. Buen viaje y buenas fotos.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

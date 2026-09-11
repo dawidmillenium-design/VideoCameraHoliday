@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepszy aparat do vlogów podróżniczych dla solo podróżników w 2026 roku – lekki, kompaktowy i niezawodny</h1>
 
 <p>Planujesz samotną podróż i chcesz uwiecznić ją w formie vloga? Wybór odpowiedniego aparatu to kluczowa decyzja. Jako osoba podróżująca solo, potrzebujesz sprzętu, który będzie <strong>lekki, kompaktowy, a jednocześnie oferujący znakomitą jakość obrazu</strong> – bez kompromisów w kwestii funkcji niezbędnych do nagrywania dynamicznych materiałów. W 2026 roku rynek oferuje wiele fascynujących opcji, ale nie każda będzie odpowiednia do samotnych wypraw. W tym przewodniku pomożemy Ci wybrać idealny aparat, biorąc pod uwagę specyfikę podróżowania w pojedynkę, polskie realia cenowe oraz Twoje umiejętności.</p>
@@ -141,5 +168,16 @@
     <p><strong>Specyfikacja:</strong> Matryca Micro Cztery Trzecie (20 MP), nagrywanie 4K/30p, wbudowany mikrofon z technologią Nokia OZO, ekran dotykowy obracany o 180 stopni, waga ok. 352g.</p>
     <p><strong>Dlaczego warto:</strong> To najtańszy aparat na tej liście, ale oferuje coś, czego nie znajdziesz w droższych modelach – <strong>rewelacyjny wbudowany mikrofon</strong> z możliwością nagrywania dźwięku przestrzennego i trybem redukcji szumów wiatru. To idealne rozwiązanie, gdy nie chcesz dokupować dodatkowego mikrofonu. Aparat ma również świetny system autofokusa z detekcją twarzy i oczu, a dzięki technologii MFT, obiektywy są
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

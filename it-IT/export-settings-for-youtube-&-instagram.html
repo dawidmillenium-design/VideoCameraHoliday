@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Guida Completa: Impostazioni di Esportazione per YouTube e Instagram</h1>
 
 <p>Se sei un videomaker, un content creator o semplicemente un appassionato di viaggi che vuole condividere i propri ricordi, la fase di esportazione è il momento cruciale in cui tutto il tuo duro lavoro prende forma. Dopo aver girato per le strade di Roma, catturato i tramonti sulle Cinque Terre o registrato l'atmosfera vibrante di Napoli, l'ultima cosa che vuoi è che il tuo video appaia sfocato, pixellato o con colori spenti una volta caricato online.</p>
@@ -232,5 +259,16 @@ Dipende dalla lunghezza e risoluzione. Un video 4K di 10 minuti può richiedere 
 
 <p>Esportare correttamente è l'ultimo miglio del tuo viaggio creativo. Con le impostazioni gi
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

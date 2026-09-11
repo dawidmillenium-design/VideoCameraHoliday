@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>旅行動画のサウンドデザイン完全ガイド：風音・雑踏・BGMを味方につける実践テクニック</h1>
 
 <p>こんにちは。年間80本以上の旅行動画を撮影・編集している映像クリエイターです。京都の竹林、沖縄の海辺、北海道の雪原——日本各地で撮影してきて痛感したのは、<strong>「映像のクオリティを決めるのは画質よりも音」</strong>だということです。実際、視聴者が「なんかいい動画だな」と感じる要素の約50%は音響設計にあると言われています。</p>
@@ -215,5 +242,16 @@ Premiere Proの「DeNoise」やDaVinciの「Noise Reduction」を使い、エア
 
 <p>まずは今日、手持ちのスマホで部屋の環境音を10秒録音するところから始めましょう。それが、あなたのサウンドデザインの第一歩です。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

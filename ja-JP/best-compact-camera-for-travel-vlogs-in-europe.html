@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>ヨーロッパ旅行Vlogに最適なコンパクトカメラ完全ガイド：日本からの視点で選ぶ2024年最新モデル</h1>
 
 <p>日本の夏の蒸し暑さから逃れ、石畳の美しい街並みや夕暮れ時の荘厳な教会を撮影したい——そんなヨーロッパ旅行を計画しているあなたへ。この記事では、日本人旅行者目線で「ヨーロッパVlogに最適なコンパクトカメラ」を徹底解説します。パスポート取得から現地での撮影マナーまで、実践的な情報をお届けします。</p>
@@ -162,5 +189,16 @@
 
 <p>一方で、<strong>万が一カメラが故障した場合の保険</strong>には必ず加入しておきたいところです。クレジットカードに付帯する旅行保険でも、携行品損害としてカバーされる場合がありますが、カメラのような高
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>GoPro vs DJI dla podróżników: którą kamerę akcji wybrać w 2025 roku?</h1>
 
 <p>Planujesz wakacje i chcesz uwiecznić je w ruchu? Wybór między GoPro a DJI to dziś jedno z najczęstszych dylematów polskich podróżników. Oba systemy trafiły na rynek z jasnym celem: być najlepszym towarzyszem wypraw — od tatrzańskich szlaków, przez mazurskie jeziora, aż po egzotyczne plaże. W tym artykule porównujemy <strong>GoPro Hero 13 Black</strong> z <strong>DJI Osmo Action 5 Pro</strong> na podstawie realnych testów, specyfikacji i scenariuszy podróżniczych typowych dla Polaków. Nie znajdziesz tu marketingowego bełkotu — tylko dane, które pomogą Ci podjąć świadomą decyzję.</p>
@@ -252,5 +279,16 @@
 
 <p>Zanim podejmiesz decyzję, zastanów się, gdzie naprawdę będziesz nagrywać. To najważniejsze pytanie — ważniejsze niż jakakolwiek specyfikacja.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

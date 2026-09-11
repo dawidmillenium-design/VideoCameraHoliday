@@ -16,73 +16,7 @@
     <meta property="og:url" content="https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/travel-camera-checklist-2026.html">
     <meta property="og:site_name" content="Holiday Video Camera">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        a { color: #6db3f2; text-decoration: underline; text-underline-offset: 3px; }
-        a:hover { color: #9ecbff; }
-
-        /* Nav & Header (Condensed for brevity, matches site) */
-        .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
-        .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
-        .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; }
-        .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
-        header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
-        header .logo { font-size: 1.5rem; font-weight: 700; color: #e94560; text-decoration: none; display: inline-block; margin-bottom: 15px; }
-        h1 { font-size: 2.4rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
-        .subtitle { font-size: 1.15rem; color: #888; max-width: 680px; margin: 0 auto 15px; }
-
-        article { padding: 40px 20px; }
-        h2 { color: #e94560; font-size: 1.6rem; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 1px solid #333; }
-        h3 { color: #fff; font-size: 1.2rem; margin: 20px 0 10px; }
-        p { margin-bottom: 20px; font-size: 1.05rem; }
-        
-        /* Interactive Checklist UI */
-        .checklist-controls { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; align-items: center; }
-        .btn { padding: 10px 20px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; }
-        .btn-primary { background: #e94560; color: #fff; }
-        .btn-primary:hover { background: #ff6b6b; }
-        .btn-secondary { background: #333; color: #ccc; border: 1px solid #444; }
-        .btn-secondary:hover { background: #444; color: #fff; }
-
-        .progress-container { flex-grow: 1; min-width: 200px; }
-        .progress-bar-bg { background: #222; border-radius: 10px; height: 24px; overflow: hidden; border: 1px solid #333; position: relative; }
-        .progress-bar-fill { background: linear-gradient(90deg, #e94560, #ff6b6b); height: 100%; width: 0%; transition: width 0.4s ease; }
-        .progress-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.85rem; font-weight: 700; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
-
-        .checklist-category { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
-        .checklist-category h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
-        
-        .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 15px; }
-        .checklist-item-wrapper { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 6px; transition: background 0.2s; }
-        .checklist-item-wrapper:hover { background: #1a1a2e; }
-        .checklist-item-wrapper.checked label { text-decoration: line-through; color: #666; }
-        
-        .checklist-item { width: 20px; height: 20px; accent-color: #e94560; cursor: pointer; flex-shrink: 0; }
-        .checklist-item-wrapper label { cursor: pointer; font-size: 0.95rem; color: #ccc; transition: all 0.2s; }
-
-        .pro-tip { background: #1a1a2e; border-left: 4px solid #6db3f2; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem; color: #aaa; }
-        .pro-tip strong { color: #6db3f2; }
-
-        /* Footer */
-        footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 40px 20px; margin-top: 40px; text-align: center; color: #666; font-size: 0.85rem; }
-
-        /* PRINT STYLES (Crucial for Save as PDF) */
-        @media print {
-            body { background: #fff !important; color: #000 !important; font-size: 12pt; }
-            .top-nav, .site-footer, .checklist-controls, .no-print, header, .breadcrumb { display: none !important; }
-            article { padding: 0; }
-            h1 { color: #000 !important; font-size: 20pt; border-bottom: 2px solid #000; }
-            h2 { color: #000 !important; font-size: 16pt; border-bottom: 1px solid #ccc; }
-            .checklist-category { border: 1px solid #ccc !important; background: #fff !important; break-inside: avoid; page-break-inside: avoid; margin-bottom: 15px; }
-            .checklist-category h3 { color: #000 !important; }
-            .checklist-item-wrapper label { color: #000 !important; }
-            .checklist-item-wrapper.checked label { color: #888 !important; }
-            .pro-tip { border-left-color: #000 !important; background: #f9f9f9 !important; color: #000 !important; }
-            .checklist-item { accent-color: #000 !important; }
-        }
-    </style>
+    
 
     <!-- JSON-LD: Article Schema -->
     <script type="application/ld+json">
@@ -95,22 +29,36 @@
       "publisher": { "@type": "Organization", "name": "Holiday Video Camera" }
     }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <nav class="top-nav" role="navigation">
-        <div class="nav-container">
-            <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
-            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation">☰</button>
-        </div>
-    </nav>
 
-    <header>
-        <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
-        <h1>Ultimate Travel Camera Packing Checklist 2026</h1>
-        <p class="subtitle">Never forget your SD cards at the hotel again. Check off your gear, track your progress, and print your list before you fly.</p>
-    </header>
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
 
-    <article class="container">
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<article class="container">
         
         <div class="checklist-controls no-print">
             <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save as PDF</button>
@@ -219,66 +167,15 @@
         <p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. Our rankings are based on real travel testing.</p>
     </article>
 
-    <footer class="site-footer">
-        <p>© 2026 <a href="/VideoCameraHoliday/" style="color:#e94560;">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
 
-    <script>
-        // Interactive Checklist Logic
-        const checkboxes = document.querySelectorAll('.checklist-item');
-        const progressBar = document.getElementById('progress-bar');
-        const progressText = document.getElementById('progress-text');
-        const totalItems = checkboxes.length;
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
 
-        // Load saved state from LocalStorage
-        function loadState() {
-            checkboxes.forEach(cb => {
-                const id = cb.id;
-                if (localStorage.getItem(id) === 'checked') {
-                    cb.checked = true;
-                    cb.closest('.checklist-item-wrapper').classList.add('checked');
-                }
-            });
-            updateProgress();
-        }
-
-        // Save state and update UI on change
-        checkboxes.forEach(cb => {
-            cb.addEventListener('change', () => {
-                const wrapper = cb.closest('.checklist-item-wrapper');
-                if (cb.checked) {
-                    localStorage.setItem(cb.id, 'checked');
-                    wrapper.classList.add('checked');
-                } else {
-                    localStorage.removeItem(cb.id);
-                    wrapper.classList.remove('checked');
-                }
-                updateProgress();
-            });
-        });
-
-        // Update progress bar
-        function updateProgress() {
-            const checkedCount = document.querySelectorAll('.checklist-item:checked').length;
-            const percent = Math.round((checkedCount / totalItems) * 100);
-            progressBar.style.width = percent + '%';
-            progressText.textContent = percent + '% Packed (' + checkedCount + '/' + totalItems + ')';
-        }
-
-        // Reset checklist
-        function resetChecklist() {
-            if (confirm('Are you sure you want to reset the entire checklist?')) {
-                checkboxes.forEach(cb => {
-                    cb.checked = false;
-                    cb.closest('.checklist-item-wrapper').classList.remove('checked');
-                    localStorage.removeItem(cb.id);
-                });
-                updateProgress();
-            }
-        }
-
-        // Initialize
-        loadState();
-    </script>
 </body>
 </html>

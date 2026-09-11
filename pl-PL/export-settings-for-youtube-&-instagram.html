@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Eksport wideo na YouTube i Instagram – kompletny poradnik ustawień dla twórców z Polski</h1>
 
 <p>Nagrywasz filmy z podróży, vlogi znad Bałtyku, materiał z Tatr albo relacje z weekendu w Kazimierzu Dolnym? Świetnie. Ale nawet najlepszy materiał nakręcony w plenerze straci cały swój urok, jeśli źle go wyeksportujesz. Rozmyty obraz, „kanciaste" ujęcia podczas szybkiego panoramowania, zniekształcone kolory albo ogromny plik, który ładuje się godzinami – to wszystko skutki błędnych ustawień eksportu.</p>
@@ -215,5 +242,16 @@
   <li><strong>Kolory wyglądają inaczej po uploadzie.</strong> To normalne – platformy kompresują materiał. Upewnij się, że eksportujesz w Rec. 709 i nie używasz HDR. Możesz też delikatnie podbić kontrast przed eksportem.</li>
   <li><strong>Instagram nie chce przyjąć pliku.</strong> Sprawdź, czy plik nie jest za duży (limit to 4 GB dla
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

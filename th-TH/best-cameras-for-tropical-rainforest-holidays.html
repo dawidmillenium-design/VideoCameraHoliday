@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องถ่ายรูปที่ดีที่สุดสำหรับวันหยุดในป่าฝนเขตร้อนของประเทศไทย</h1>
 
 <p>ประเทศไทยเป็นหนึ่งในจุดหมายปลายทางยอดนิยมสำหรับนักท่องเที่ยวที่หลงใหลธรรมชาติและป่าฝนเขตร้อน ไม่ว่าจะเป็นป่าดิบชื้นในอุทยานแห่งชาติเขาใหญ่ ป่าดงดิบในเขตรักษาพันธุ์สัตว์ป่าห้วยขาแข้ง หรือป่าชายเลนและป่าฝนในภาคใต้อย่างอุทยานแห่งชาติเขาสก การเดินทางท่องเที่ยวในป่าฝนเขตร้อนของไทยนั้นเต็มไปด้วยโอกาสในการถ่ายภาพที่หาได้ยาก ไม่ว่าจะเป็นสัตว์ป่า นกหายาก น้ำตก หมอกยามเช้า และพืชพรรณที่อุดมสมบูรณ์ แต่การถ่ายภาพในสภาพแวดล้อมแบบนี้ก็มาพร้อมกับความท้าทายที่แตกต่างจากการถ่ายภาพท่องเที่ยวทั่วไป บทความนี้จะแนะนำกล้องและอุปกรณ์ที่เหมาะสมสำหรับวันหยุดในป่าฝนเขตร้อนของประเทศไทย พร้อมทั้งข้อควรระวังด้านกฎหมายและวัฒนธรรมท้องถิ่นที่นักถ่ายภาพควรรู้</p>
@@ -179,5 +206,16 @@
 
 <p><em>หมายเหตุ: ก่อนเดินทางไปถ่ายภาพในอุทยานแห่งชาติใด ๆ ควรตรวจสอบกฎระเบียบล่าสุดจากเว็บไซต์กรมอุทยานแห่งชาติ สัตว์ป่า และพันธุ์พืช (www.dnp.go.th) และสำนักงานการบินพลเรือนแห่งประเทศไทย (www.caat.or.th) สำหรับการใช้งานโดรน</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

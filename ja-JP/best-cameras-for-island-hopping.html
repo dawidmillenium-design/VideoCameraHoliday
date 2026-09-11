@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>離島巡りに最適なカメラガイド｜瀬戸内海・沖縄・五島列島で失敗しない機材選び</h1>
 
 <p>日本の島巡りは、フェリーのデッキから見る多島海の風景、集落の石垣、夕暮れの漁港、そして島独特の祭事まで、被写体の宝庫です。しかし本土の撮影とは異なり、<strong>潮風・塩害・船の揺れ・限られた充電環境・飛行機やフェリーの荷物制限</strong>という特有の制約がつきまといます。この記事では、瀬戸内海（直島・小豆島・豊島）、沖縄離島（石垣島・竹富島・宮古島）、長崎の五島列島といった具体的な撮影地を想定し、島巡りに本当に向いたカメラとレンズ、そして日本ならではの撮影マナーと法規制を整理します。</p>
@@ -159,5 +186,16 @@
 
 <p>瀬戸内海の多島美、沖縄の白砂と青、五島列島の祈りの風景。それぞれの島で、あなたの機材がベストな一枚を残せることを願っています。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

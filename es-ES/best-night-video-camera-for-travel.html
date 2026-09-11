@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Mejor cámara de vídeo nocturna para viajar: guía de compra definitiva</h1>
 
 <p>Cuando pensamos en grabar nuestros viajes, casi siempre imaginamos escenas soleadas: playas, montañas, calles llenas de vida. Pero algunos de los momentos más memorables ocurren cuando cae la noche: una cena en un callejón de Nápoles, el cielo estrellado en el Pirineo, un mercado nocturno en Marrakech o las luces de Tokio reflejadas en el asfalto mojado. Grabar bien en esas condiciones separa un recuerdo borroso de un vídeo que querrás volver a ver una y otra vez.</p>
@@ -185,5 +212,16 @@
 
 <p>Sea cual sea tu elección, recuerda que la mejor cámara es la que llevas contigo y con la que te sientes cómodo grabando. Practica antes de viajar, conoce sus límites en condiciones de poca luz y no tengas miedo de subir el ISO cuando la escena lo requiera. Las mejores historias de viaje también se cuentan de noche.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

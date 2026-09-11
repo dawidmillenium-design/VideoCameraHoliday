@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <article>
   <h1>2024 여행 브이로그 카메라 비교: 산과 여행지를 위한 최고의 선택</h1>
   <p>주말마다 북한산을 오르거나, 제주도 올레길을 걸으며 브이로그를 남기는 것이 일상이 된 요즘입니다. 스마트폰만으로는 부족한 화질과 마이크 성능에 아쉬움을 느끼는 분들이 많으실 텐데요. 특히 산악 지형과 여행지라는 열악한 조건에서도 안정적으로 작동하는 '작은 카메라'를 찾는 것은 생각보다 까다로운 일입니다. 이번 기사에서는 국내에서 정식 출시되어 구매가 용이하고, 실제 한국의 험준한 산과 도심 여행지에서 테스트를 거친 인기 모델 4가지를 비교 분석합니다. 단순 스펙 나열이 아닌, 한국의 까다로운 환경에서의 실사용 데이터를 바탕으로 여러분의 지갑을 열게 할 최적의 선택지를 찾아드리겠습니다.</p>
@@ -179,5 +206,16 @@
   <p><strong>추천 모델: 소니 ZV-E10 II</strong></p>
   <p>도심은 산악 지형보다 빛이 풍부하고 평지가 많아, 무거운 렌즈 교환식 카메라의 단점보다 APS-C 센서의 화질 우위가 훨씬 크게 작용합니다. 특히 카페의 어두운 조명에서도 노이즈 없이 크림 같은 보케(배경 흐림)를 만들어내는 능력은 스마트폰과 확실히 차별화되는 지점입니다. 주변인들의 시선을 신경 쓰지 않고 전문가 수준의 영상을 만들고 싶다면
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

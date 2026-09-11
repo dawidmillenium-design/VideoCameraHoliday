@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>京都の寺院で撮影するための完全ガイド：Vlogカメラ選びと撮影エチケット</h1>
 
 <p>京都は、日本の歴史と文化が息づく街です。清水寺、金閣寺、伏見稲荷大社、嵐山の竹林など、世界中の旅行者が一度は訪れたいと願う名所が点在しています。近年はVlog文化の広がりにより、旅の思い出を動画で記録する方も増えました。しかし、京都の寺院や神社は信仰の場であり、文化財保護の観点から撮影に関する独自のルールが存在します。この記事では、京都の寺院でVlog撮影を楽しむために知っておきたいカメラの選び方、撮影エチケット、そして場所ごとの注意点を詳しく解説します。</p>
@@ -217,5 +244,16 @@
 
 <p>最後に、京都の寺院は生きている信仰の場です。カメラを向ける前に、一度深呼吸をして、その場の空気を感じてみてください。その瞬間が、最高のVlogの始まりになるはずです。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

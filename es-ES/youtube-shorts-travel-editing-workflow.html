@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Cómo editar YouTube Shorts de viajes: flujo de trabajo completo paso a paso</h1>
 
 <p>Grabar un Short de viaje que enganche no depende solo de la cámara. Lo que marca la diferencia es el flujo de trabajo: cómo organizas el material, cómo lo cortas y cómo lo exportas para que YouTube lo trate bien. Después de varios años grabando por España y media Europa con el móvil y con cámara, he afinado un método que me permite publicar un Short de calidad en menos de una hora desde que llego al hotel. Te lo cuento entero, con pasos concretos y errores que yo mismo he cometido.</p>
@@ -204,5 +231,16 @@
 
 <p>He grabado Shorts en la Costa Brava, en los Picos de Europa, en Sevilla y en la Ribeira Sacra. Lo que mejor me ha funcionado es la simplicidad: un lugar, una idea, un gancho. No intentes contar todo el viaje en 45 segundos. Cuenta un momento. La edición debe ser rápida, pero el resultado debe sentirse cuidado. Con este flujo, puedes publicar un Short al día sin morir en el intento. Y recuerda: el mejor Short es el que se entiende sin sonido y sin contexto. Si lo consigues, el algoritmo y los espectadores lo agradecerán.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

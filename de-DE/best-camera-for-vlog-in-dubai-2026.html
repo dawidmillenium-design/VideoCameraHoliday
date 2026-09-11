@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Beste Kamera für Vlog in Dubai 2026: Der Ultimative Guide für atemberaubende Reisevideos</h1>
 
 <p>Dubai ist ein Paradies für Vlogger – eine Stadt, die wie eine Fata Morgana aus der Wüste wächst und mit Superlativen nur so um sich wirft. Von den futuristischen Türmen der Skyline bis zu den goldenen Dünen der Rub al-Chali bietet das Emirat eine unglaubliche visuelle Vielfalt. Doch während die Stadt wie geschaffen für atemberaubende Inhalte ist, stellt sie auch besondere Anforderungen an deine Ausrüstung. Die sengende Hitze, das grelle Wüstenlicht und die extremen Kontraste zwischen Innen- und Außenbereichen können selbst der besten Kamera zu schaffen machen. In diesem Guide erfährst du, welche Kamera 2026 die beste Wahl für deinen Dubai-Vlog ist, welche Locations sich lohnen und wie du die lokalen Regeln respektierst – denn kulturelle Sensibilität ist hier genauso wichtig wie die richtige Linse.</p>
@@ -145,5 +172,16 @@
 <li><strong>Plane deine Drehorte im Voraus:</strong> Dubai ist riesig, und die Verkehrszeiten können unberechenbar sein. Erstelle eine Liste mit Locations und Routen, um Zeit zu sparen.</li>
 <li
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

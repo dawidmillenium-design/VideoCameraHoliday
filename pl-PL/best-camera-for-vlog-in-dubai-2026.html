@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepszy Aparat do Vloga w Dubaju 2026: Poradnik dla Podróżników z Polski</h1>
 
 <p>Dubaj to miasto, które wymyka się wszelkim konwencjom. To kraina architektonicznych cudów, złotych plaż i futurystycznych krajobrazów, która przyciąga twórców treści z całego świata. Jednak dla polskiego vlogera, planującego nagrania w tym emirackim państwie, kluczowe jest zrozumienie specyfiki miejsca, lokalnych przepisów oraz wyzwań technicznych. W tym przewodniku przygotowanym przez ekspertów VideoCameraHoliday, rozłożymy na czynniki pierwsze kwestię wyboru sprzętu, abyś mógł wrócić do Polski z materiałem, który zapiera dech w piersiach.</p>
@@ -134,5 +161,16 @@
     <li><strong>Souk Madinat Jumeirah:</strong> To stylizowany na starożytny kompleks z kanałami wodnymi. Wieczorem, gdy zapalają się tysiące świateł, miejsce to wygląda bajecznie. Nagrywaj z łodzi abra (przeprawa kosztuje kilka dirhamów), aby uzyskać dynamiczne ujęcia z wody. Stabilizacja w aparacie lub na gimbalu będzie tu kluczowa.</li>
     <li><strong>Pustynia (Dubai Desert Conservation Reserve):</strong> Safari po pustyni to obowiązkowy punkt. Wstrząsy podczas jazdy po wydmach są ogromne. Użyj kamery z dobrą stabilizacją elektroniczną (np. GoPro Hero 12 lub DJI Osmo Pocket 3) zam
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

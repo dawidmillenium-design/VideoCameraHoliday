@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>旅行用ナイトビデオカメラ完全購入ガイド｜暗所撮影に強いおすすめ機種と選び方</h1>
 
 <p>夜の旅行シーンを美しく残したいなら、暗所性能に優れたビデオカメラ選びが重要です。夜景、イルミネーション、夜市、星空、居酒屋での団らん——日本の旅行では夜の思い出が多く、スマートフォンでは限界を感じる場面も少なくありません。本記事では、旅行向けナイトビデオカメラの選び方と、日本国内で購入できるおすすめ機種を価格帯別に徹底解説します。</p>
@@ -182,5 +209,16 @@
 
 <p>夜の旅行シーンを美しく残すには、センサーサイズ、F値、手ブレ補正の3点を軸に選ぶことが重要です。携帯性重視なら<strong>DJI Osmo Pocket 3</strong>、国内サポートと安心感なら<strong>Sony FDR-AX45A</strong>、アクティブな旅行なら<strong>GoPro HERO12 Black</strong>がおすすめ。予算と撮影スタイルに合わせて、後悔のない一台を選んでください。夜の思い出は、昼とは違う特別な輝きがあります。ぜひ本ガイドを参考に、あなたの旅の夜を映像で残してください。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

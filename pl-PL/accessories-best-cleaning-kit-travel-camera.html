@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Zestaw do czyszczenia aparatu podróżnego – test najlepszych akcesoriów w polskich warunkach</h1>
 
 <p>Po ośmiu latach fotografowania w podróży – od Tatr przez Bieszczady po nadmorskie plaże Bałtyku – nauczyłem się jednej rzeczy: nawet najlepszy aparat nie zrobi dobrego zdjęcia, jeśli matryca i obiektyw są pokryte kurzem, piaskiem i solą. W tym artykule dzielę się wynikami testów zestawów do czyszczenia aparatu, które sprawdziłem osobiście podczas kilku wypraw w Polsce. To nie jest teoretyczny przegląd specyfikacji – to praktyczny przewodnik po akcesoriach, które naprawdę warto zabrać ze sobą.</p>
@@ -258,11 +285,16 @@
 
 <p>Pamiętaj: <strong>zestaw do czyszczenia aparatu podróżnego</strong> to nie jednorazowy wydatek, lecz element stałego wyposażenia. W polskich war
     </main>
-    <div style="text-align: center; margin: 30px 0; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4e 100%); border-radius: 15px; border: 3px solid #6B8E23;">
-  <h2 style="color: #A8C686; margin-bottom: 10px;"> Play Matcha Maya's Global Lens Quest!</h2>
-  <p style="color: #f0f0f0; margin-bottom: 20px;">Collect Green Gold 🍵, avoid disasters, and unlock AI-powered camera tips from Matcha Maya!</p>
-  <iframe src="/VideoCameraHoliday/game/" width="100%" height="600px" style="border: none; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.3);"></iframe>
-  <p style="color: #FFD700; font-size: 0.9rem; margin-top: 10px;">🏆 New AI tips added monthly via DeepSeek!</p>
-</div>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

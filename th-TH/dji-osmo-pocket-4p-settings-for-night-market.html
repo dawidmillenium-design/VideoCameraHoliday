@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>ตั้งกล้อง DJI Osmo Pocket 4P ถ่ายตลาดนัดกลางคืนให้สวยปังแบบมือโปร (ฉบับเมืองไทย)</h1>
 
 <p>สวัสดีครับเพื่อนๆ ชาวนักถ่ายวิดีโอทุกคน! เชื่อว่าหลายคนที่ซื้อ <strong>DJI Osmo Pocket 4P</strong> (หรือ Pocket 4 Pro) มาคงมีคำถามเดียวกันว่า "จะตั้งค่ายังไงให้ถ่ายตลาดนัดกลางคืนในเมืองไทยออกมาสวย ไม่ดาร์กเกินไป ไม่เบลอ และได้ฟีลเหมือนในรีวิว?"</p>
@@ -186,5 +213,16 @@
     <li><strong>เดินถ่ายแล้วภาพเบลอ (Motion Blur มากไป):</strong> ถ้าเราตั้งชัตเตอร์ไว้ที่ 1/30 แล้วเดินเร็วเกินไป ภาพจะเบลอทั้งเฟรม ไม่ใช่แค่ฉากหลัง ให้เดินช้าลง ใช้โหมดการเดิน (Walking Mode) ในตัวกล้อง ซึ่งจะช่วยปรับ Gimbal ให้รับแรงสั่นสะเทือนจากการเดินได้ดีขึ้น</li>
     <li><strong>ไม่พกผ้าเช็ดเลนส์:</strong> อากาศ
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

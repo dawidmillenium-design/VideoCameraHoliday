@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 3 vs DJI Action 5 Pro: quale scegliere per i tuoi viaggi?</h1>
 
 <p>Se stai cercando una videocamera compatta da portare in viaggio, è molto probabile che tu ti sia imbattuto in due nomi: <strong>DJI Osmo Pocket 3</strong> e <strong>DJI Osmo Action 5 Pro</strong>. Sono entrambe firmate DJI, sono entrambe piccole, ma nascono per scopi molto diversi. In questo confronto dettagliato, basato su test reali effettuati in diverse località italiane, ti aiutiamo a capire quale delle due fa per te, in base al tipo di viaggio, al contenuto che vuoi creare e al budget.</p>
@@ -228,5 +255,16 @@
 
 <p><em>Nota: prezzi e disponibilità possono variare. Le prove sul campo sono state effettuate con unità retail acquistate autonomamente, senza influenze da parte di DJI. Questo articolo non contiene link affiliati.</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

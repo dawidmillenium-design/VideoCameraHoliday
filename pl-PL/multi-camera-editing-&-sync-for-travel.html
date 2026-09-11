@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Edycja i synchronizacja wielokamerowa w podróży – kompletny poradnik</h1>
 
 <p>Wracasz z wakacji w Bieszczadach albo z weekendu w Gdańsku i masz na karcie pamięci materiał z telefonu, z action camera i z lustrzanki? Nagrałeś ten sam moment z trzech różnych miejsc, ale pliki leżą w trzech folderach, z trzema różnymi znacznikami czasu i trzema różnymi poziomami dźwięku. Brzmi znajomo? Ten poradnik przeprowadzi Cię krok po kroku przez cały proces edycji wielokamerowej – od przygotowania sprzętu, przez synchronizację, aż po finalny montaż. Wszystko z perspektywy podróżnika, który kręci w Polsce i za granicą, a nie w klimatyzowanym studiu.</p>
@@ -166,5 +193,16 @@
 
 <h2
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

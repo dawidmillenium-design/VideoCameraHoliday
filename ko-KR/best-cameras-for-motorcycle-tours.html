@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>한국 오토바이 투어를 위한 최고의 카메라: 라이더를 위한 완벽 가이드</h1>
 
 <p>대한민국의 구불구불한 산악 도로와 해안선을 따라 오토바이를 타고 달리며 그 아름다움을 담아내는 것은 모든 라이더의 꿈입니다. 동해안의 일출부터 지리산의 굽이치는 와인딩 로드, 제주도의 에메랄드빛 해안도로까지, 한국은 오토바이 투어와 사진 촬영 모두에 있어 놀라운 배경을 제공합니다. 하지만 진동, 날씨 변화, 그리고 이동 중 촬영의 특수성 때문에 일반적인 카메라 선택 가이드로는 부족합니다. 이 가이드는 한국에서 오토바이 투어를 즐기며 최고의 순간을 기록하고자 하는 라이더를 위해 작성되었습니다.</p>
@@ -176,5 +203,16 @@
 
 <p><em>참고: 본 가이드는 2024년 기준 한국 도로교통법 및 문화재보호법을 준수하여 작성되었습니다. 촬영 전 항상 현지 규정을 확인하시기 바랍니다.</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

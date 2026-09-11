@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Insta360 X5 对比 GoPro Hero 13：2025 年中国旅行者终极运动相机对决</h1>
 
 <p>如果你正在计划一次穿越西藏的公路旅行、徒步虎跳峡，或者在日本滑雪，你很可能正在这两款相机之间犹豫：<strong>Insta360 X5</strong> 和 <strong>GoPro Hero 13</strong>。它们都宣称自己是终极旅行伴侣，但它们的拍摄方式截然不同。本对比基于在中国及周边地区的实际使用体验，帮助你根据旅行风格做出正确选择。</p>
@@ -268,5 +295,16 @@
 
 <p>最终，最好的相机是你能随身携带并经常使用的那一款。两款相机都是顶级产品，选择取决于你的旅行风格和创作需求。无论你选择哪款，都祝你在 2025 年的旅途中拍出精彩的作品。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

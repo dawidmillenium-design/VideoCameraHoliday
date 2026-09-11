@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Insta360 X5 vs GoPro Hero 13: quale action camera scegliere per i tuoi viaggi nel 2025</h1>
 
 <p>Se stai pianificando un viaggio tra i borghi della Toscana, un road trip lungo la Costiera Amalfitana o un'immersione nelle acque cristalline della Sardegna, la scelta dell'action camera giusta può fare la differenza tra un ricordo sfocato e un filmato da mostrare agli amici. In questo confronto mettiamo a diretto confronto due delle action camera più discusse del 2025: la <strong>Insta360 X5</strong> e la <strong>GoPro Hero 13 Black</strong>. Abbiamo testato entrambe sul campo in scenari reali italiani, dallo scioglimento delle nevi in Val Gardena alle strade strette dei centri storici, per offrirti dati concreti e consigli pratici.</p>
@@ -199,5 +226,16 @@
 
 <p>Entrambe sono ottime compagne di viaggio. Valuta le tue priorità, prova a testarle se possibile in un negozio, e ricorda che l'attrezzatura migliore è quella che ti fa venire voglia di uscire e riprendere. Buon viaggio e buone riprese!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

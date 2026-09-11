@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>방수 케이스 &amp; 액션캠 완벽 비교: 2024년 여름 해변 휴가를 위한 최적의 선택</h1>
 
 <p>여름 휴가철이 다가오면 한국인 여행자들의 가장 큰 고민 중 하나는 바로 '물놀이 중에도 안전하게 사진과 영상을 남길 수 있을까'입니다. 제주 협재해수욕장의 에메랄드빛 바다, 부산 해운대의 활기찬 파도, 강원도 양양의 서핑 스팟까지 — 물과 함께하는 순간을 제대로 담기 위해서는 적합한 방수 장비가 필수입니다.</p>
@@ -246,5 +273,16 @@
 
 <p>어떤 장비를 선택하든, 여행 전 충분한 연습과 철저한 사후 관리가 중요합니다. 물놀이 후에는 반드시 민물 세척과 건조를 잊지 마세요. 안전하고 즐거운 여름 휴가 되시길 바랍니다.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

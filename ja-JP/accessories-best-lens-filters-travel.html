@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>旅行写真が劇的に変わる！レンズフィルター完全ガイド【2024年最新版】</h1>
 
 <p>「旅行先で撮った写真がなんだか曇って見える」「青空が白飛びしてしまう」「水面やガラスの反射が気になる」——そんな悩みを解決するのが<strong>レンズフィルター</strong>です。カメラ本体やレンズに投資する方は多い一方で、フィルターの重要性を見過ごしている方も少なくありません。実は、たった一枚のフィルターが旅行写真のクオリティを劇的に向上させるのです。</p>
@@ -201,5 +228,16 @@
 
 <p>日本のカメラ店は品揃えが豊富で、スタッフの知識も高いため、実店舗で相談しながら選ぶのも楽しい経験です。次の旅行に向けて、ぜひお気に入りの一枚を見つけてください。あなたの旅行写真が、きっとワンランク上の作品になるはずです。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

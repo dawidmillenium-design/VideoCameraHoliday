@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>YouTube＆Instagram用の書き出し設定 完全ガイド【日本版】</h1>
 
 <p>「撮影はうまくいったのに、書き出したら画質がガクッと落ちた」「Instagramにアップしたら妙に粗く見える」——そんな経験はありませんか？実は、動画の仕上がりを決めるのは撮影機材よりも<strong>書き出し（エクスポート）設定</strong>であることが少なくありません。この記事では、東京・大阪・京都などで旅動画やVlogを撮影してきた筆者の実体験をもとに、YouTubeとInstagramそれぞれに最適な書き出し設定を、初心者の方でも迷わないよう手順形式で解説します。</p>
@@ -196,5 +223,16 @@
 <p><strong>Instagram（縦型リール）</strong>：1080×1920、30fps、H.264、10〜15 Mbps、AAC 192kbps、MP4。</p>
 <p>最初は完璧を目指さず、まずはこの設定で1本書き出してみてください。書き出しは「撮影の集大成」であり、ここで手を抜くと旅の思い出が台無しになります。逆に、ここさえ押さえれば、あなたの動画はぐっと見違えます。ぜひ次の旅動画で試してみてくださいね。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

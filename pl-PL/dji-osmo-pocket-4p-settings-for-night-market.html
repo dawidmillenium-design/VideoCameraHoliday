@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 4P: Ustawienia na Nocny Market w Polsce – Kompletny Poradnik</h1>
 
 <p>Nocne markety, jarmarki świąteczne i festiwale street foodu to jedne z najbardziej klimatycznych miejsc w Polsce, które aż proszą się o uwiecznienie. Migoczące światełka, kolorowe stragany, unoszący się zapach grzanego wina i oscypków – to sceneria, która potrafi zachwycić. Jednak uchwycenie tej magii smartfonem bywa rozczarowujące. Na szczęście masz w ręku narzędzie, które powstało właśnie do takich zadań – <strong>DJI Osmo Pocket 4P</strong> (lub jego wcześniejsza wersja – Pocket 3, która ma identyczną matrycę).</p>
@@ -167,5 +194,16 @@
     <li><strong>Ujęcia z dołu:</strong> Kamera Osmo jest mała. Wykorzystaj to! Połóż ją na ziemi i nagraj ujęcie "z żabiej perspektywy" na rozświetlone drzewa lub dachy straganów. To doda dynamiki.</li>
     <li><strong>Ruch z tłumem:</strong> Stań w miejscu i pozwól, aby ludzie przechodzili obok kamery. Dzięki stabilizacji gimbal i czasowi 1/60 uzyskasz efekt "rozmazanego" tłumu w ruchu,
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

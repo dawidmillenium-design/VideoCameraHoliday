@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Die beste wasserdichte Kamera für Solo-Reise-Vlogs 2026: Ein umfassender Kaufratgeber</h1>
 
 <p>Sie träumen von einem Jahr in Südostasien, einem Roadtrip durch die norwegischen Fjorde oder einem Tauchurlaub auf den Malediven? Als Solo-Reisender ist Ihre Kamera Ihr wichtigster Begleiter – sie dokumentiert nicht nur Ihre Erlebnisse, sondern ist auch Ihr kreatives Werkzeug, um Geschichten zu erzählen. Doch wenn Sie allein unterwegs sind, ist Ihre Ausrüstung besonders exponiert: Regen, Spritzwasser, Sand und Staub sind ständige Begleiter. Ein wasserdichter Vlog-Begleiter ist daher keine Option, sondern eine Notwendigkeit. Dieser Ratgeber hilft Ihnen, die perfekte Kamera für Ihre Abenteuer im Jahr 2026 zu finden – mit klaren Kaufkriterien, konkreten Empfehlungen und Antworten auf die häufigsten Fragen.</p>
@@ -158,5 +185,16 @@
 <h3>Kann ich mit einer Action-Cam auch gute Interviews filmen?</h3>
 <p>Ja, mit Einschränkungen. Die eingebauten Mikrofone sind meistens gut, aber bei Wind brauchen Sie einen externen Windschutz (Fell-Windjammer). Die GoPro und DJI bieten Adapter für Funkmikrofone, aber die Hand
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

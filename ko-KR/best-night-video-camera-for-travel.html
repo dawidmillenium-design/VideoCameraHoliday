@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>여행용 야간 촬영 최적의 비디오 카메라 구매 가이드 (2024 한국어판)</h1>
 
 <p>여행 중 밤거리의 네온사인, 별이 쏟아지는 캠핑장, 야시장의 활기찬 풍경을 담고 싶다면 일반 스마트폰 카메라로는 한계가 있습니다. 특히 한국인 여행자들은 유튜브 브이로그, 인스타그램 릴스, 틱톡 등 숏폼 콘텐츠를 위해 야간 영상 품질을 중요하게 생각합니다. 이 가이드는 <strong>야간 여행 영상 촬영에 최적화된 비디오 카메라</strong>를 처음 구매하는 분들도 쉽게 이해할 수 있도록 핵심 구매 기준, 실제 추천 제품(한국 가격 포함), 예산별 선택지, FAQ까지 모두 담았습니다. 2024년 10월 기준 국내 온라인 최저가를 반영했으며, 쿠팡, 네이버쇼핑, 11번가 등 한국 소비자들이 주로 이용하는 채널의 가격대를 기준으로 작성했습니다.</p>
@@ -177,5 +204,16 @@
 <h3>Q2. 야간 촬영 시 삼각대가 꼭 필요한가요?</h3>
 <p>IBIS가 뛰어난 카메라(소니 ZV-E1, 파나소닉 S5 II)는 삼각대 없이도 핸드헬드 촬영이 가능합니다. 하지만 장노출이나 타임랩스에는 삼각대가 필수입니다. 여행용으로
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

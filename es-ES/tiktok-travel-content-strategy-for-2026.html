@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Estrategia de contenido de viajes en TikTok para 2026: guía completa paso a paso</h1>
 
 <p>Si estás leyendo esto es porque quieres convertir tus viajes en contenido que funcione en TikTok durante 2026. Y déjame decirte algo desde ya: el panorama ha cambiado mucho. Lo que funcionaba en 2023 (transiciones rápidas, música trending sin más) ya no basta. En 2026, TikTok premia la narrativa auténtica, la utilidad real y la consistencia temática. He estado grabando contenido de viajes por España y Latinoamérica durante los últimos cuatro años, y en esta guía te comparto exactamente lo que estoy aplicando ahora mismo con resultados medibles.</p>
@@ -196,5 +223,16 @@
 
 <p>Empieza hoy con el paso 1: define tu ángulo. Luego graba tu primer vídeo esta semana. No esperes a tener el equipo perfecto ni a estar en el destino soñado. La estrategia se construye grabando, publicando y aprendiendo. Nos vemos en el "Para ti".</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

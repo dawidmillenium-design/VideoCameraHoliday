@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>교토 사찰 브이로그 촬영 완벽 가이드: 카메라 선택부터 촬영 예절까지</h1>
 
 <p>교토는 일본에서도 손꼽히는 사찰 밀집 지역으로, 세계 각지의 여행 브이로거들이 찾는 촬영 성지입니다. 하지만 한국 여행자 입장에서는 일본 특유의 촬영 예절과 사찰별 규정을 미리 숙지하지 않으면 낭패를 보기 쉽습니다. 이 가이드는 교토 사찰 브이로그를 처음 준비하는 분들을 위해 촬영 환경, 카메라 추천, 현지 규정, 실전 팁을 한국어로 정리했습니다. 특히 한국에서 출국하기 전에 반드시 확인해야 할 사항과, 교토 현지에서 실제로 마주치는 촬영 제약을 중심으로 다룹니다.</p>
@@ -158,5 +185,16 @@
 
 <p>마지막으로, 교토는 계절마다 전혀 다른 얼굴을 보여줍니다. 벚꽃 시즌(3월 말~4월 초), 단풍 시즌(11월 중순~12월 초)에는 인파가 극에 달하므로, 가능하다면 비수기인 6월이나 9월에 방문해 여유롭게 촬영하는 것을 추천합니다. 어떤 계절이든, 교토의 사찰은 카메라를 든 여행자에게 깊은 영감을 줄 것입니다.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

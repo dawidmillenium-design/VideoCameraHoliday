@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Le Migliori Luci Portatili per Viaggiare: Recensione Completa e Test sul Campo</h1>
 
 <p>Dopo anni passati a inseguire l'ora blu sulle Dolomiti, a filmare interni di trulli in Puglia e a documentare mercati notturni a Palermo, ho imparato una lezione fondamentale: la luce è tutto, ma quella che porti con te conta ancora di più. In questa recensione analizzo le <strong>migliori luci portatili da viaggio</strong> che ho testato personalmente negli ultimi diciotto mesi, tra scatti fotografici e riprese video in giro per l'Italia. Non troverete specifiche copiate da schede tecniche: troverete quello che funziona davvero quando sei in movimento, con poco spazio in valigia e nessuna presa di corrente a disposizione.</p>
@@ -201,5 +228,16 @@ Contro: potenza bassa, autonomia scarsa, non adatta a riprese impegnative.</p>
 
 <p>Un consiglio finale maturato dopo tanti viaggi: non comprare la luce più potente, compra quella che userai davvero. Ho visto troppi fotografi lasciare a casa luci pesanti perché "tanto non serve". La luce migliore è quella che hai con te quando il momento giusto arriva. E in Italia, tra un vicolo di Napoli, un chiostro a Roma o un mercato a Bologna, il momento giusto arriva sempre.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

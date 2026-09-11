@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>아이를 위한 최고의 액션 카메라 구매 가이드: 2024년 한국 부모를 위한 완벽 정리</h1>
 
 <p>아이가 처음으로 액션 카메라를 갖게 되는 순간은 가족 여행의 역사가 바뀌는 순간입니다. 제주도 해변에서 파도에 뛰어드는 장면, 강원도 스키장에서 첫 슬로프를 내려오는 모습, 할머니 댁 마당에서 강아지와 뒹구는 일상까지—아이의 눈높이에서 담긴 영상은 어른이 찍은 어떤 영상보다 생생합니다. 하지만 시중에는 수십 종의 액션 카메라가 쏟아져 나오고 있고, 가격은 3만 원대부터 60만 원대까지 천차만별입니다. 이 가이드는 한국에서 아이용 액션 카메라를 고르는 부모님을 위해, 실제 여행 상황에 맞춘 선택 기준과 검증된 제품 추천, 그리고 예산별 대안까지 한 번에 정리했습니다.</p>
@@ -177,5 +204,16 @@
   <li><strong>정품 vs 병행수입:</strong> 쿠팡과 네이버 스마트스토어에서 '정품' 표기를 확인하세요. GoPro와 DJI는 한국 공식 A/S가 가능하지만, 병행수입은 해외 배송이 필요합니다.</li>
   <li><strong>중고 거래:</strong> 중고나라와 번개장터에서 GoPro HERO9~11을 20만~30만 원에 구할 수 있습니다. 아이 첫 카메라로 중고 프리미엄을 고르는 것도 현명합니다.</li>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

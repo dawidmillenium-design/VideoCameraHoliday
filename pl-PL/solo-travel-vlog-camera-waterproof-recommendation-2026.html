@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepszy wodoodporny aparat do vlogów podróżniczych solo w 2026 roku – obszerny poradnik zakupowy</h1>
 
 <p>Podróżowanie solo to jedna z najpiękniejszych form odkrywania świata, ale niesie ze sobą specyficzne wyzwania – zwłaszcza gdy chcesz uwiecznić swoje przygody w formie vloga. Musisz być jednocześnie operatorem, bohaterem i reżyserem. Kluczową kwestią staje się sprzęt, który wybaczy błędy, przetrwa trudne warunki i nie będzie wymagał studiów filmowych, by uzyskać zachwycający obraz.</p>
@@ -138,5 +165,16 @@
 <p><strong>Średnia cena w Polsce:</strong> <strong>2 400 zł</strong></p>
 <p><strong>Dla kogo?</strong> Dla vlogera, który
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

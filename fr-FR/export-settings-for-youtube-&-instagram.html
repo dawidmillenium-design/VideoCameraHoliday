@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Réglages d'export pour YouTube et Instagram : le guide complet (2025)</h1>
 
 <p>Vous venez de tourner une vidéo magnifique au Mont-Saint-Michel, sur la Promenade des Anglais à Nice ou dans les ruelles de Lyon. Vous avez passé des heures au montage. Et là, la question fatidique arrive : <strong>quels réglages d'export choisir pour YouTube et Instagram ?</strong> Une mauvaise configuration peut transformer une image superbe en bouillie pixelisée, surtout sur mobile. Dans ce tutoriel, je partage mon expérience de terrain — plus de 400 vidéos exportées pour des chaînes françaises — pour vous éviter les pièges classiques.</p>
@@ -250,5 +277,16 @@
 
 <p>Prenez le temps de faire un export test, comparez, ajustez. Chaque chaîne a ses spécificités, et l'expérience reste le meilleur professeur. Bon montage, et à bientôt sur vos chaînes !</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

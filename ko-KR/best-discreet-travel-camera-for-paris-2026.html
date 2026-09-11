@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -196,5 +223,16 @@
 <p><strong>추천: 파나소닉 루믹스 S9</strong></p>
 <p>사진보다 영상 촬영 비중이 높다면 S9이 놀라운 가성비를 제공합니다. 이 카메라에는 'LUT' 기능이 내장되어 있어, 파리의 아침, 낮, 밤에 맞는 색상 보정을 카메라 내부에서 바로 적용할 수 있습니다. 특히 한국의 MZ 세대 사이에서 유행하는 '브이로그' 촬영 시, 별도의 색보정 프로그램 없이도 감각적인 영상을 뽑아낼 수 있습니다. 단점은 바디가 플라스틱 재질이라 고급스러운 느낌이 덜하고, 방진방적이 되지 않아 비 오는 날 파리에서 사용하기에는 불안하다는 점입니다. 가벼운 우산을 항상 챙기는 것이 좋
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

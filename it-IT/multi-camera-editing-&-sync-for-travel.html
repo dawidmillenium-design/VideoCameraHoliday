@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Montaggio Multi-Camera e Sincronizzazione per Video di Viaggio: Guida Completa</h1>
 
 <p>Se stai pianificando un viaggio in Italia e vuoi portare a casa un video che non sia la solita sequenza di clip traballanti, il montaggio multi-camera è la tecnica che fa la differenza. Che tu stia documentando un matrimonio a Matera, un road trip in Toscana, o un'escursione sul Sentiero degli Dei, gestire più angolazioni sincronizzate ti permette di raccontare una storia con ritmo cinematografico.</p>
@@ -177,5 +204,16 @@
 
 <p>Il montaggio multi-camera è una competenza che si affina con la pratica. Inizia con due angolazioni, poi aggiungi la terza. Con questi passaggi e un po' di pazienza, i tuoi video di viaggio in Italia avranno un livello cinematografico che farà invidia a molti. Buon montaggio!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

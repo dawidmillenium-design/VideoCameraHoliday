@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>คู่มือแก้ไขและซิงก์วิดีโอหลายกล้องสำหรับทริปท่องเที่ยว (ฉบับสมบูรณ์)</h1>
 
 <p>สวัสดีครับ/ค่ะ นักตัดต่อมือใหม่และมืออาชีพทุกท่าน! หากคุณเคยกลับจากทริปเกาะพีพีหรือเชียงใหม่พร้อมการ์ดความจำเต็มไปด้วยไฟล์วิดีโอจากกล้อง 3-4 ตัว ทั้งกล้อง DSLR, Mirrorless, GoPro, DJI Osmo Action และมือถือ แล้วต้องนั่งปวดหัวอยู่หน้าคอมพิวเตอร์เพราะไม่รู้จะเริ่มซิงก์เสียงกับภาพยังไง บทความนี้เขียนขึ้นเพื่อคุณโดยเฉพาะครับ</p>
@@ -178,5 +205,16 @@
 
 <p>ขอให้สนุกกับการตัดต่อ และอย่าลืมสำรองข้อมูลทุกครั้งนะครับ!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

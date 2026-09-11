@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Reisevideo-Montage erstellen: Das komplette Tutorial für Einsteiger und Fortgeschrittene</h1>
 
 <p>Eine Reisevideo-Montage verwandelt hunderte einzelne Clips in eine Geschichte, die Freunde, Familie und Follower wirklich zu Ende schauen. Ob nach dem Urlaub an der Ostsee, einer Wanderung durch den Schwarzwald oder einer Städtereise nach Wien – die Montage ist der Schritt, an dem aus Rohmaterial ein Erlebnis wird. In diesem Tutorial zeige ich dir Schritt für Schritt, wie du eine professionelle Reisevideo-Montage erstellst, welche Ausrüstung sich in Deutschland bewährt und welche Fehler du von Anfang an vermeiden solltest.</p>
@@ -177,5 +204,16 @@
 
 <p>Und denk daran: Perfektion ist nicht das Ziel. Eine ehrliche, gut erzählte Montage berührt mehr als technische Perfektion ohne Seele. Also: Ran an die Timeline, und viel Spaß beim Schneiden!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

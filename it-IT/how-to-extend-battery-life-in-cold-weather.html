@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Come prolungare la durata della batteria con il freddo: guida completa per fotografi e videomaker</h1>
 
 <p>Chiunque abbia scattato foto in montagna o girato video in inverno conosce quella sensazione: la batteria segna il 60%, poi improvvisamente il 20%, e dopo pochi minuti la fotocamera si spegne. Il freddo è il nemico numero uno delle batterie al litio, e in Italia abbiamo paesaggi che mettono a dura prova le nostre attrezzature: dalle Dolomiti alla Val d'Aosta, dai boschi del Trentino alle albe ghiacciate in Pianura Padana. In questa guida ti spiego, passo dopo passo, come prolungare la durata delle batterie con il freddo, basandomi su anni di uscite sul campo tra neve, ghiaccio e temperature sotto lo zero.</p>
@@ -188,5 +215,16 @@ In molte località italiane (Cortina, Livigno, Cervinia) i negozi di fotografia 
 
 <h2>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

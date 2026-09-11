@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>เปรียบเทียบเคสกันน้ำสำหรับกล้องถ่ายวิดีโอ: คู่มือฉบับสมบูรณ์สำหรับทริปทะเลในประเทศไทย</h1>
 
 <p>การเดินทางไปทะเลในประเทศไทยเป็นกิจกรรมยอดนิยมของนักท่องเที่ยวทั้งชาวไทยและชาวต่างชาติ ไม่ว่าจะเป็นเกาะพีพี หมู่เกาะสิมิลัน หาดป่าตอง เกาะสมุย หรือเกาะเต่า การถ่ายภาพและวิดีโอใต้น้ำหรือบริเวณชายหาดเป็นสิ่งที่หลายคนต้องการบันทึกไว้เป็นความทรงจำ แต่ความเสี่ยงจากน้ำทะเล ทราย และความชื้นสูงอาจสร้างความเสียหายให้กับกล้องราคาแพงได้ภายในไม่กี่วินาที</p>
@@ -279,5 +306,16 @@
 
 <p>สำหรับผู้ที่กำลังมองหาเคสกันน้ำในประเทศไทย แนะนำให้ซื้อจากตัวแทนจำหน่ายอย่างเป็นทางการ เพื่อรับประกันและบริการหลังการขายที่เชื่อถือได้ เช่น ร้านกล้องชั้นนำในห้างสรรพสินค้าหรือร้านออนไลน์ที่มีรีวิวจากผู้ใช้จริงในประเทศไทย</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

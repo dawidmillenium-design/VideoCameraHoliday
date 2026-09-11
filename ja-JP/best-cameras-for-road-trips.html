@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>日本国内のロードトリップに最適なカメラ完全ガイド｜絶景を逃さない機材選びと撮影のコツ</h1>
 
 <p>日本は、海沿いのワインディングロードから雪の峠、桜並木の農道まで、車で巡るからこそ出会える絶景の宝庫です。北海道の広大な直線道路、瀬戸内海の島々を結ぶ橋、富士山を望む富士五湖周辺、九州の阿蘇カルデラ——これらを「旅の記憶」として美しく残すには、シーンに合ったカメラ選びが欠かせません。本記事では、日本でのロードトリップという特有の条件を踏まえ、撮影地ごとの課題、おすすめ機材、そして現地の法律やマナーまでを実践的に解説します。</p>
@@ -164,5 +191,16 @@
 
 <p>安全運転で、最高の一枚を。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

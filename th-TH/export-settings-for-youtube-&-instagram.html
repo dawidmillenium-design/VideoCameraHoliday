@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>ตั้งค่า Export วิดีโอสำหรับ YouTube และ Instagram ฉบับสมบูรณ์ (คู่มือสำหรับครีเอเตอร์ไทย)</h1>
 
 <p>สวัสดีครับ/ค่ะ เพื่อนนักสร้างคอนเทนต์ชาวไทยทุกท่าน หากคุณเคยถ่ายวิดีโอสวย ๆ จากเชียงใหม่ ไปจนถึงหาดป่าตอง แล้วเจอปัญหาว่า "ทำไมอัปโหลด YouTube แล้วภาพไม่คมเหมือนในคอม" หรือ "ทำไมลง Instagram Reels แล้วสีเพี้ยน ภาพแตก" บทความนี้จะตอบทุกคำถามแบบละเอียดทีละขั้นตอนครับ</p>
@@ -273,5 +300,16 @@
 
 <p>เริ่มต้นจากการ Export สำหรับ YouTube ที่คุณภาพสูงสุด แล้วค่อยปรับเป็น 1080p สำหรับ Instagram อย่าลืมตรวจสอบไฟล์ก่อนอัปโหลดทุกครั้ง และหมั่นทดลองเพื่อหาค่าที่เหมาะกับสไตล์ของคุณมากที่สุด ขอให้สนุกกับการสร้างคอนเทนต์ครับ/ค่ะ</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

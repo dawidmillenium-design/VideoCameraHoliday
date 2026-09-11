@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Cómo hacer Instagram Reels con vídeos de tus vacaciones: guía completa paso a paso</h1>
 
 <p>Volver de unas vacaciones con la tarjeta de memoria llena de clips es una sensación agridulce: tienes material increíble, pero no sabes por dónde empezar. Después de años grabando viajes por toda España —desde los acantilados de la Costa da Morte hasta los patios de Córdoba en mayo— he aprendido que un buen Reel de viaje no depende de tener la cámara más cara, sino de saber contar una historia en menos de 90 segundos. En esta guía te explico exactamente cómo transformar tus vídeos de vacaciones en Reels que la gente quiera ver hasta el final.</p>
@@ -198,5 +225,16 @@
 
 <p>Y recuerda: un Reel es una historia, no un álbum de fotos. Empieza con un gancho, desarrolla con ritmo y cierra con una emoción o una llamada a la acción. Con estos pasos y un poco de práctica, tus vídeos de vacaciones se convertirán en contenido que la gente querrá guardar y compartir. ¡A por ello!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

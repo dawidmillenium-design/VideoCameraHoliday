@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Les meilleurs éclairages portables pour voyager : notre test terrain en France</h1>
 
 <p>En tant que photographe et vidéaste basé à Lyon, je passe une bonne partie de l'année sur les routes de France et d'Europe. Entre les ruelles sombres du Vieux-Port de Marseille, les intérieurs de châteaux de la Loire et les bivouacs dans le Vercors, j'ai appris une chose : sans un bon éclairage portable, vos plus belles images restent dans l'ombre. Cet article est le fruit de plusieurs mois de tests réels, souvent dans des conditions difficiles, pour vous aider à choisir l'<strong>accessoire d'éclairage portable</strong> qui correspond vraiment à votre pratique de voyage.</p>
@@ -206,5 +233,16 @@
 
 <p>Quel que soit votre choix, rappelez-vous que l'<strong>accessoire d'éclairage portable</strong> idéal est celui que vous emporterez réellement. Un modèle à 200 € qui reste à la maison ne vaut rien. Un modèle à 40 € qui vous suit partout vaut de l'or. Testez, comparez, et adaptez votre choix à votre style de voyage. La lumière, c'est comme le reste : c'est sur le terrain qu'on apprend.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

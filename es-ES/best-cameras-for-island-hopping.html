@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Las mejores cámaras para islas: guía definitiva para fotografiar el paraíso</h1>
 
 <p>Saltar de isla en isla es uno de los mayores placeres que ofrece el Mediterráneo. Desde las calas turquesa de Menorca hasta los acantilados volcánicos de Lanzarote, pasando por la luz dorada de Formentera o el ambiente marinero de las Islas Cíes, cada archipiélago plantea un reto fotográfico distinto. Elegir la cámara adecuada marca la diferencia entre traer un puñado de recuerdos decentes o un reportaje que capture de verdad la esencia del viaje.</p>
@@ -216,5 +243,16 @@
 
 <p>Buen viaje y buenas luces.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

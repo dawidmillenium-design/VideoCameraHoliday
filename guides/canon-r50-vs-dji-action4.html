@@ -11,65 +11,17 @@
 <meta content="article" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html" rel="canonical"/>
+
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
 <style>
-        :root { --primary: #2563eb; --secondary: #1e40af; --accent: #f59e0b; --dark: #1f2937; --light: #f3f4f6; }
-        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--dark); margin: 0; padding-top: 80px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        nav { position: fixed; top: 0; width: 100%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; padding: 1rem 0; }
-        .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
-        .menu { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
-        .menu-item { position: relative; cursor: pointer; }
-        .menu-link { text-decoration: none; color: var(--dark); font-weight: 500; }
-        .dropdown { position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); min-width: 200px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s; border-radius: 8px; overflow: hidden; }
-        .menu-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown a { display: block; padding: 12px 20px; text-decoration: none; color: var(--dark); border-bottom: 1px solid var(--light); }
-        .dropdown a:hover { background: var(--light); color: var(--primary); }
-        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 4rem 0; text-align: center; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .breadcrumb { font-size: 0.9rem; opacity: 0.9; margin-bottom: 1rem; }
-        .breadcrumb a { color: white; text-decoration: underline; }
-        .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
-        .camera-card { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--light); }
-        .camera-card.winner { border: 2px solid var(--accent); position: relative; }
-        .camera-card.winner::before { content: "Editor's Choice"; position: absolute; top: -12px; right: 20px; background: var(--accent); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
-        .camera-name { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: var(--primary); }
-        .pros-cons h3 { font-size: 1.1rem; margin-top: 1.5rem; border-bottom: 2px solid var(--light); padding-bottom: 0.5rem; }
-        .pros-cons ul { padding-left: 1.2rem; }
-        .pros-cons li { margin-bottom: 0.5rem; }
-        table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--light); }
-        th { background: var(--light); font-weight: 600; }
-        .verdict { background: var(--light); padding: 2rem; border-radius: 12px; margin: 3rem 0; }
-        .verdict h2 { color: var(--secondary); }
-        .eea-section { background: #fffbeb; border-left: 4px solid var(--accent); padding: 2rem; margin: 3rem 0; border-radius: 0 8px 8px 0; }
-        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .trust-card { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; }
-        .trust-icon { font-size: 2rem; margin-bottom: 0.5rem; }
-        .related-resources { margin: 4rem 0; }
-        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-        .resource-card { background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--light); transition: transform 0.2s; }
-        .resource-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .resource-card h4 { margin-top: 0; color: var(--primary); }
-        .resource-links a { display: block; margin-bottom: 0.5rem; color: var(--dark); text-decoration: none; font-size: 0.95rem; }
-        .resource-links a:hover { color: var(--primary); text-decoration: underline; }
-        footer { background: var(--dark); color: white; padding: 4rem 0 2rem; margin-top: 4rem; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
-        .footer-col h4 { color: var(--accent); margin-bottom: 1.5rem; }
-        .footer-col ul { list-style: none; padding: 0; }
-        .footer-col li { margin-bottom: 0.8rem; }
-        .footer-col a { color: #d1d5db; text-decoration: none; transition: color 0.2s; }
-        .footer-col a:hover { color: white; }
-        .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; }
-        @media (max-width: 768px) {
-            .menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: white; flex-direction: column; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-            .menu.active { display: flex; }
-            .mobile-toggle { display: block; }
-            .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; padding-left: 1rem; display: none; }
-            .menu-item:hover .dropdown { display: block; }
-        }
-    </style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
 <nav>
@@ -165,6 +117,16 @@
 <div class="copyright">© 2026 Holiday Video Camera. All rights reserved. | Expert Travel Videography Guides.</div>
 </div>
 </footer>
-<script>function toggleMenu() { document.getElementById('mainMenu').classList.toggle('active'); }</script>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

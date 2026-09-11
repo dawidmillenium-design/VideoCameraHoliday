@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>여행 영상 사운드 디자인 완벽 가이드: 현장 녹음부터 최종 믹싱까지</h1>
 
 <p>여행 영상의 완성도를 결정짓는 것은 화려한 영상미가 아니라 <strong>소리</strong>입니다. 실제로 시청자들은 화질이 조금 떨어져도 소리가 좋으면 영상을 끝까지 보지만, 반대로 영상이 아무리 아름다워도 소리가 답답하면 10초 만에 이탈합니다. 저는 지난 5년간 제주 올레길, 부산 감천문화마을, 강릉 안목해변, 그리고 일본·태국·베트남 등지에서 여행 영상을 제작하면서 사운드 디자인의 중요성을 뼈저리게 체감했습니다. 이 가이드는 한국에서 촬영하고 편집하는 여행 크리에이터를 위해, 현장 녹음부터 최종 믹싱까지 단계별로 정리한 실전 튜토리얼입니다.</p>
@@ -193,5 +220,16 @@
 
 <p>여행 영상의 사운드 디자인은 하루아침에 완성되지 않습니다. 제주에서 시작해 전국 방방곡곡, 그리고 해외까지 다니며 100편이 넘는 영상을 만들면서 깨달은 것은 <strong>“좋은 사운드는 좋은 습관에서 나온다”</strong>는 사실입니다. 현장에서 30초만 더 녹음하고, 편집에서 10분만 더 다듬으면 여러분의 여행 영상은 한 단계 위로 도약합니다. 오늘 이 가이드를 들고 가까운 한강이나 광안리 해변에서 앰비언스 녹음부터 시작해보세요. 그 작은 시도가 여러분의 채널을 바꿔놓을 것입니다.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

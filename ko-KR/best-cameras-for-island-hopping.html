@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>한국 섬 여행을 위한 최고의 카메라: 2025년 완벽 가이드</h1>
 
 <p>한국의 섬들은 동북아시아에서 가장 다양한 사진 촬영 환경을 제공합니다. 제주도의 화산 지형부터 울릉도의 깎아지른 절벽, 신안의 갯벌, 통영의 한려수도까지 — 각 섬마다 빛과 풍경이 완전히 다릅니다. 이 가이드는 한국 섬 여행(도서 여행)에 최적화된 카메라 선택과 실전 촬영 팁을 다룹니다.</p>
@@ -183,5 +210,16 @@
 <li>여분 배터리 3~4개</li>
 <li>메모리 카드 128GB 이상 2~3개</li
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

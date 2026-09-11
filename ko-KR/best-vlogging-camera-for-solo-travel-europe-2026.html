@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <article>
   <h1>2026 유럽 배낭여행을 위한 최고의 브이로그 카메라 완벽 가이드: 솔로 여행자를 위한 현명한 선택</h1>
   <p>혼자 떠나는 유럽 여행, 그 설렘만큼이나 중요한 것이 바로 추억을 생생하게 기록하는 장비 선택입니다. 특히 브이로그를 계획하고 있다면, 가볍지만 화질이 뛰어나고 장시간 촬영에도 무리가 없는 카메라가 필수적입니다. 2026년 현재, 시장에는 수많은 옵션이 존재하지만 어떤 카메라가 정말 '나'에게 맞는지 선택하기란 쉽지 않습니다. 이 가이드는 대한민국 여행자들의 실제 사용 환경과 쇼핑 습관을 고려하여, 유럽 솔로 여행에 최적화된 브이로그 카메라를 고르는 기준부터 추천 제품까지 상세히 안내합니다.</p>
@@ -138,5 +165,16 @@
   <h3>100만원 미만: 중고 시장을 활용한 전략</h3>
   <p>만약 예산이 100만원 미만이라면, 앞서 언급한 <strong>DJ
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

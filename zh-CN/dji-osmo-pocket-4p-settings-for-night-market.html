@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 4P 夜市拍摄终极设置指南：从入门到出片</h1>
 
 <p>夜市，是人间烟火气的集散地，是美食与光影的交响曲。对于旅行者来说，记录下这些活色生香的瞬间，远比单纯的打卡照更有意义。而DJI Osmo Pocket 4P（以下简称Pocket 4P），凭借其小巧的机身、强大的云台稳定性和出色的画质，无疑是拍摄夜市Vlog和短片的绝佳伴侣。但很多朋友拿到机器后，面对熙熙攘攘的人群和复杂的光线，往往拍出的画面不是过曝就是模糊，或者缺乏电影感。</p>
@@ -128,5 +155,16 @@
 
 <p>现在，带上你的Pocket 4P，去记录属于你的中国夜市故事吧！</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

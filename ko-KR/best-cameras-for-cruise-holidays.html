@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>크루즈 여행을 위한 최고의 카메라: 한국 출발 크루즈 완벽 가이드</h1>
 
 <p>부산항과 인천항에서 출발하는 크루즈 여행이 매년 증가하면서, 한국인 여행자들에게 크루즈는 이제 특별한 휴가 형태로 자리 잡았습니다. 일본, 중국, 대만, 동남아시아를 잇는 크루즈 노선은 물 위에서의 낭만과 다양한 기항지 탐방을 동시에 즐길 수 있는 매력적인 여행입니다. 하지만 크루즈 여행은 일반 육상 여행과는 전혀 다른 사진 촬영 환경을 제공합니다. 좁은 선실, 끊임없이 움직이는 갑판, 강한 해풍, 염분, 그리고 급변하는 조명 조건은 카메라와 사진가 모두에게 도전적인 과제입니다.</p>
@@ -161,5 +188,16 @@
 <h3>한국 및 기항지 촬영 관련 법규</h3>
 <p>대한민국에서는 공공장소에서의 촬영 자체는 자유롭지만, 타인의 초상권과 사생활을 침해하지 않아야 합니다
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

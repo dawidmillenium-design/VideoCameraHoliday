@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Fundas acuáticas para cámaras: comparativa para vacaciones de playa</h1>
 
 <p>Llegar a la playa con la cámara y no poder meterte en el agua con ella es una de las frustraciones más comunes del viajero fotógrafo. La solución pasa por una funda estanca, pero el mercado ofrece opciones muy distintas: desde bolsas universales de 20 euros hasta carcasas rígidas específicas de más de 300. En este artículo comparamos las alternativas más relevantes para quien planea unas vacaciones de playa, con datos de pruebas reales realizadas en costas españolas y con la disponibilidad actual en el mercado español como referencia.</p>
@@ -223,5 +250,16 @@
 
 <p>En el contexto español, con playas tan diversas como las de Cádiz, Baleares o Costa Brava, la clave está en elegir la funda que se adapte a tu cámara y a tu tipo de viaje. No compres la más cara por inercia ni la más barata por ahorro: piensa en qué fotos quieres hacer y cuánto estás dispuesto a arriesgar tu equipo. Con la información de esta comparativa, tienes todo lo necesario para decidir.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

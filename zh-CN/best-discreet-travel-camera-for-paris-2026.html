@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2026年巴黎旅行相机终极对决：五款“低调神器”实测横评（中国旅行者视角）</h1>
 
 <p>巴黎，2026年。奥运会余温未散，这座光之城依然是全球旅行者（尤其是中国游客）心中的顶级目的地。然而，随着治安问题的讨论和“反拍照”情绪的微妙存在，携带一台<strong>“过于专业”</strong>的相机，可能会让你在蒙马特高地或卢浮宫前成为“显眼包”，甚至面临不必要的风险。与此同时，中国旅行者对于旅行记录的需求早已超越“到此一游”，他们追求的是<strong>“画质、便携、低调”</strong>的完美平衡。</p>
@@ -265,5 +292,16 @@
 
 <p><strong>特别提示：</strong>富士X100VI依然是一
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

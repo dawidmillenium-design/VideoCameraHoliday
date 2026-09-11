@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Jak Zabezpieczyć DJI Pocket 4P na Polskiej Plaży: Kompletny Poradnik Przetrwania w Piasku i Wilgoci</h1>
 
 <p>Polskie wybrzeże Bałtyku, mazurskie plaże czy piaszczyste brzegi jezior to miejsca, które aż proszą się o uwiecznienie na filmie. Niestety, dla Twojego DJI Pocket 4P (lub Pocket 3, jeśli masz starszy model – zasady są identyczne) są to środowiska wyjątkowo wrogie. Jako osoba, która przez trzy sezony testowała kieszonkowe gimbale od Świnoujścia po Hel, mogę Ci powiedzieć jedno: piasek to nie jest po prostu brud – to ścierniwo, które potrafi w kilka sekund zniszczyć delikatny silniczek gimbala, a wilgoć to cichy zabójca elektroniki.</p>
@@ -140,5 +167,16 @@
 
 <p>Innym razem, nad jeziorem Mamry, zauważyłem, że po
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

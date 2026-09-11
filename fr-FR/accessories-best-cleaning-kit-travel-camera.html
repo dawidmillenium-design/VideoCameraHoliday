@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Le Meilleur Kit de Nettoyage pour Appareil Photo de Voyage : Notre Test Complet en France</h1>
 
 <p>Après avoir trimballé mon boîtier plein format à travers la Bretagne pluvieuse, les calanques poussiéreuses de Marseille et les marchés humides de Rungis, j'ai appris une chose essentielle : un capteur sale ruine irrémédiablement une photo de voyage. Que vous photographiiez les toits de Paris au lever du jour ou les vagues de Biarritz, la poussière, le sable et les embruns sont vos pires ennemis. C'est pourquoi j'ai testé pendant six mois une dizaine de solutions pour déterminer le meilleur <strong>kit de nettoyage pour appareil photo de voyage</strong>. Voici mon verdict sans concession, avec des prix en euros et des situations de terrain bien françaises.</p>
@@ -217,5 +244,16 @@
 
 <p><em>Prix vérifiés en février 2025 chez Digit-Photo, Miss Numerique et Amazon.fr. Les tarifs peuvent varier selon les promotions.</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

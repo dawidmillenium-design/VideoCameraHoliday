@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องพกพาสายเที่ยวสุดเนียน สำหรับกรุงปารีส 2026: คู่มือเปรียบเทียบฉบับคนไทย</h1>
 
 <p>ปารีสในปี 2026 คือฝันของนักเดินทางชาวไทยหลายคน ไม่ว่าจะไปชมวิวหอไอเฟลยามค่ำคืน จิบกาแฟที่ร้าน Montmartre หรือเดินช็อปปิ้งที่ Galeries Lafayette สิ่งหนึ่งที่ขาดไม่ได้คือ "กล้องถ่ายรูป" แต่การสะพายกล้องใหญ่โตในเมืองที่ขึ้นชื่อเรื่องมิจฉาชีพและนักล้วงกระเป๋านั้นช่างเสี่ยงเหลือเกิน บทความนี้จะพาคุณไปพบกับกล้อง "เนียน ๆ" ที่ทั้งเล็ก เบา และได้ภาพสวยระดับโปร เพื่อให้การเที่ยวปารีสของคุณปลอดภัยและได้ภาพประทับใจกลับมาแบบไม่ต้องหวาดระแวง</p>
@@ -203,5 +230,16 @@
 
 <p><strong>คำแนะนำสุดท้าย:</strong> ลองนึกภาพตัวเองกำลังเดินอยู่ที่ถนนช็องเซลีเซ อยากได้ภาพแบบไหน? ถ้าอยากได้ภาพตึก Arc de Triomphe ทั้งแบบใกล้และไกล ให้เลือก Sony ถ้าอยากได้ภาพตัวเองกับเพื่อนหน้าคาเฟ่ตอนกลางคืนที่สวย ๆ
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

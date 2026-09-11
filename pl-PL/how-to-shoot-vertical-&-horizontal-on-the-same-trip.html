@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Jak Nagrywać Pion i Poziom na Jednym Wyjeździe: Kompletny Poradnik dla Twórców Wideo</h1>
 
 <p>Każdy, kto choć raz wrócił z podróży z materiałem, który świetnie wyglądał na telefonie, a na komputerze okazał się nie do użycia, wie, o czym mówię. Przez lata pracy jako operator i montażysta przejechałem Polskę wzdłuż i wszerz — od klifów w Gdyni Orłowie, przez wąwozy Ojcowskiego Parku Narodowego, po szczyty Tatr i Bieszczadów. I wielokrotnie przekonałem się, że największym wrogiem dobrego materiału nie jest słaby sprzęt, lecz chaos w orientacji kadru. Ten poradnik pokaże Ci, jak profesjonalnie nagrywać jednocześnie w pionie i poziomie podczas jednego wyjazdu — bez dublowania każdej sceny i bez tracenia połowy dnia na ustawianie statywu.</p>
@@ -178,5 +205,16 @@
 
 <p>Wieczorem nad Morskim Okiem nagrywasz poziomy timelapse zachodu słońca (statyw, interwał
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

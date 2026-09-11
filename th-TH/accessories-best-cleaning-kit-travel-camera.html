@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>รีวิวชุดทำความสะอาดกล้องที่ดีที่สุดสำหรับกล้องท่องเที่ยว: ประสบการณ์ตรงจากการใช้งานจริงในประเทศไทย</h1>
 
 <p>ในฐานะช่างภาพท่องเที่ยวที่เดินทางทั่วประเทศไทยมากว่า 12 ปี ตั้งแต่ยอดดอยอินทนนท์ที่หนาวเย็นไปจนถึงหาดทรายที่ร้อนชื้นของภูเก็ต ผมเรียนรู้ด้วยประสบการณ์ตรงว่าอุปกรณ์ทำความสะอาดกล้องที่ดีไม่ใช่แค่ของเสริม แต่เป็นสิ่งจำเป็นที่ขาดไม่ได้ ฝุ่นละออง คราบเหงื่อ ละอองเกลือทะเล และความชื้นสูงของเมืองไทยสามารถทำลายเซ็นเซอร์และเลนส์ราคาแพงได้ภายในไม่กี่สัปดาห์หากไม่ดูแลอย่างถูกวิธี</p>
@@ -187,5 +214,16 @@
 
 <p>สุดท้ายนี้ จำไว้ว่าการถ่ายภาพท่องเที่ยวในประเทศไทยมีความท้าทายเฉพาะตัว ทั้งความชื้น ฝุ่น เกลือ และแสงแดดจัด การมี <strong>ชุดทำความสะอาดกล้อง</strong> ที่เหมาะสมไม่ใช่ค่าใช้จ่ายฟุ่มเฟือย แต่เป็นการลงทุนที่ช่วยให้คุณถ่ายภาพได้อย่างมั่นใจในทุกทริป และทำให้กล้องคู่ใจอยู่กับคุณไปได้อีกหลายปี</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

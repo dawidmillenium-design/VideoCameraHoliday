@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <article>
     <h1>La Mejor Cámara Discreta para Viajar a París en 2026: Análisis Comparativo Definitivo</h1>
     <p>París es, sin lugar a dudas, la capital mundial de la fotografía callejera y de la estética cinematográfica. Sin embargo, viajar a la Ciudad de la Luz en 2026 presenta un dilema único para el fotógrafo moderno: <strong>¿cómo capturar la esencia del Barrio Latino sin cargar con un equipo que grite "turista"?</strong> La seguridad, la discreción y la calidad de imagen son ahora más importantes que nunca.</p>
@@ -181,5 +208,16 @@
     <p>Después de semanas de pruebas, analizando la logística del viaje, la seguridad y la calidad de salida, en <em>VideoCameraHoliday</em> tenemos un ganador claro según el perfil, pero si tenemos que elegir una para el viajero general, nos decantamos por la <strong>Fujifilm X100VI</strong>.</p>
     <p><strong>¿Por qué?</strong> Porque es el equilibrio perfecto entre calidad de imagen, video y experiencia de uso. La Ricoh es demasiado limitada en video y su
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

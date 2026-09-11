@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>รีวิวไฟถ่ายภาพแบบพกพาสำหรับทริปท่องเที่ยว: 6 รุ่นที่ดีที่สุดสำหรับช่างภาพสายเดินทางในไทย</h1>
 
 <p>ในฐานะช่างภาพท่องเที่ยวที่ออกกองถ่ายทั้งในกรุงเทพฯ เชียงใหม่ ภูเก็ต และเกาะต่างๆ มากว่า 8 ปี ผมเรียนรู้ว่าอุปกรณ์ชิ้นเดียวที่เปลี่ยนคุณภาพภาพกลางคืนได้มากที่สุดไม่ใช่เลนส์แพง แต่เป็น <strong>ไฟถ่ายภาพแบบพกพาสำหรับทริปท่องเที่ยว</strong> ที่หยิบใส่กระเป๋าได้จริง บทความนี้คือผลจากการทดสอบจริงในสภาพแสงที่ท้าทายของเมืองไทย ตั้งแต่ถนนข้าวสารยามค่ำ วัดพระธาตุดอยสุเทพตอนพระอาทิตย์ตก ไปจนถึงการถ่ายดาวกลางคืนที่อุทยานแห่งชาติเขาใหญ่</p>
@@ -264,5 +291,16 @@
 
 <p>หว
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Migliori Fotocamere per Viaggi in Moto: Guida Completa per l'Italia</h1>
 
 <p>L'Italia è una delle destinazioni più iconiche al mondo per i viaggi in moto. Dai tornanti leggendari delle Dolomiti alle strade costiere della Costiera Amalfitana, passando per le colline toscane del Chianti e le strade bianche della Val d'Orcia, ogni chilometro offre scenari mozzafiato che meritano di essere catturati. Ma quale fotocamera scegliere per documentare al meglio un viaggio in moto nel Bel Paese? Questa guida ti aiuterà a scegliere l'attrezzatura fotografica ideale, tenendo conto delle sfide uniche del territorio italiano, delle normative locali e delle esigenze pratiche di chi viaggia su due ruote.</p>
@@ -183,5 +210,16 @@
 
 <p>Buona strada e buona luce!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

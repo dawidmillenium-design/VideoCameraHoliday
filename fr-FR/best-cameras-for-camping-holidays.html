@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Meilleurs Appareils Photo pour des Vacances en Camping en France : Le Guide Complet 2024</h1>
 
 <p>Des calanques de Cassis aux volcans d'Auvergne, en passant par les pinèdes des Landes et les lacs alpins, la France offre un terrain de jeu inépuisable pour les campeurs photographes. Que vous plantiez votre tente sous les pins maritimes de l'Atlantique, que vous installiez votre van au bord du Lac d'Annecy ou que vous randonniez dans le Parc National des Écrins, le choix de votre appareil photo déterminera la qualité de vos souvenirs — et votre confort une fois de retour au bivouac.</p>
@@ -253,5 +280,16 @@
 
 <p>Le meilleur appareil photo pour un camping en France dépend de votre style de voyage. Pour un van life polyvalent, le <strong>Sony A7C II</strong> reste notre recommandation principale. Pour les randonnées humides en Bretagne ou dans les Vosges, l'<strong>OM System OM-5</strong> est imbattable. Les familles apprécieront le <strong>Canon EOS R8</strong>, tandis que les créatifs choisiront le <strong>Nikon Z fc</strong> pour son charme. Enfin, une <strong>GoPro</strong> complètera votre kit pour les activités nautiques.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

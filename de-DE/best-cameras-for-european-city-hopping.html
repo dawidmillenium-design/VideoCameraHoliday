@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Die besten Kameras für den europäischen Städtetrip – Der ultimative Kamera-Guide für Deutschland und Europa</h1>
 
 <p>Wer mit der Kamera durch Europas Städte zieht, kennt das Dilemma: Die schönsten Motive lauern oft genau dann, wenn das Licht schwierig, die Menschenmenge dicht und das Wetter launisch ist. Ob beim Fotografieren des Brandenburger Tors im Morgengrauen, beim Streifzug durch die verwinkelten Gassen von Rothenburg ob der Tauber oder beim nächtlichen Spaziergang über die Prager Karlsbrücke – die Wahl der richtigen Kamera entscheidet darüber, ob aus einer Reise bleibende Bilder werden oder nur Erinnerungen auf der Festplatte verstauben.</p>
@@ -192,5 +219,16 @@ Die OM-5 (früher Olympus) ist eine Micro-Four-Thirds-Kamera, die sich durch ihr
   <li><strong>Backup nicht vergessen:</strong> Sichern Sie Ihre Bilder abends auf einem Laptop oder einer externen Festplatte. Eine verlorene Speicherkarte kann eine ganze Reise ruinieren.</li>
   <li><strong>Respektieren Sie lokale Bräuche:</strong> In manchen
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

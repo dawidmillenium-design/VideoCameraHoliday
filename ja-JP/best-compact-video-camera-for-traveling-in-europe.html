@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>ヨーロッパ旅行に最適な小型ビデオカメラ徹底比較：日本からの旅行者視点で選ぶ2025年最新モデル</h1>
 
 <p>ヨーロッパ旅行の思い出を、高画質な動画で残したい。そう考えたとき、スマートフォンのカメラで十分ではないかと思うかもしれません。しかし、歴史的建造物のディテール、夕暮れ時の美しい街並み、移動中の車窓からの風景——これらの一瞬を、手ブレなく、長時間撮影できる専用デバイスの価値は今もなお健在です。特に日本からヨーロッパへの旅行は長期にわたることが多く、バッテリー容量や収納性、そして何より「旅先での失敗」を防ぐ信頼性が求められます。</p>
@@ -230,5 +257,16 @@
 <p><strong>おすすめ：Panasonic LUMIX TZ99</strong><br>
 光学30倍ズームは、遠くの山々や湖を引き寄せて撮影するのに最適です。また、電車の窓ガラスにレンズを密着させて撮影すれば、映り込みを防ぎつつ、手ブレを物理的に抑えることができます。TZ99はレンズ鏡筒が沈胴式のため、電車の座席のテ
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

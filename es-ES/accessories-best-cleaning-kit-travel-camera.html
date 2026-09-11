@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Kit de limpieza para cámara de viaje: análisis del mejor kit de limpieza para tu cámara</h1>
 
 <p>Después de más de una década fotografiando por toda España —desde la humedad persistente de la costa gallega hasta el polvo de las Bardenas Reales o la calima que de vez en cuando tiñe de naranja los cielos de Murcia—, he aprendido una lección que ningún manual te enseña: la suciedad es el enemigo silencioso de tus fotos. Un sensor manchado, una lente con huellas o un ocular empañado pueden arruinar una sesión entera, y más cuando estás de viaje y no tienes un taller cerca. Por eso, cuando me propuse analizar en profundidad el mejor <strong>kit de limpieza para cámara de viaje</strong>, no me limité a leer especificaciones: me llevé varios modelos al campo, los probé en condiciones reales y comparé resultados.</p>
@@ -212,5 +239,16 @@
 
 <p>Y un último consejo que he aprendido a base de errores: limpia la cámara <em>antes</em> de guardarla, no cuando llegues a casa. El polvo y la humedad actúan rápido, y una limpieza a tiempo evita males mayores. Un buen <strong>kit de limpieza para cámara de viaje</strong> no es un gasto, es un seguro para tus fotos. Y si eliges bien, te durará años.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

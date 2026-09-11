@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 3 对比 Action 5 Pro：2025 年旅行 Vlog 相机怎么选？</h1>
 
 <p>如果你正在为下一次旅行挑选一台随身影像设备，大疆（DJI）的两款产品几乎一定会出现在你的候选清单里：主打三轴机械云台的口袋云台相机 <strong>Osmo Pocket 3</strong>，以及主打超强防抖与耐用性的运动相机 <strong>Osmo Action 5 Pro</strong>。两者价格区间接近，却面向完全不同的拍摄需求。本文基于我们在中国多个旅行场景下的实际测试，从规格、画质、防抖、收音、续航到真实使用体验，帮你做出更理性的购买决策。</p>
@@ -236,5 +263,16 @@
 
 <p>希望这篇基于中国旅行实拍场景的对比能帮你做出更清晰的选择。如果你有具体的拍摄需求，欢迎在评论区留言，我们会根据你的场景给出更针对性的建议。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

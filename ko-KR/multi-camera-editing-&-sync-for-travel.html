@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>여행 영상 멀티캠 편집 & 싱크 완벽 가이드: 스마트폰부터 미러리스까지</h1>
 
 <p>여행 영상을 만들다 보면 한 대의 카메라로는 담기 어려운 순간이 있습니다. 제주도 올레길을 걸으며 앞을 비추는 액션캠, 뒤에서 다가오는 친구를 담는 스마트폰, 그리고 풍경을 넓게 잡는 미러리스. 이 세 대의 영상을 하나로 엮으면 여행의 입체감이 완전히 달라집니다. 저는 지난 3년간 국내외 여행지에서 멀티캠 촬영을 해왔고, 처음에는 싱크가 어긋나 밤새 편집하던 시절도 있었습니다. 이 가이드는 그 시행착오를 줄여드리기 위한 실전 매뉴얼입니다.</p>
@@ -153,5 +180,16 @@
 
 <p>다음 여행지에서 멀티캠으로 담은 영상을 편집하다 보면, 그 순간의 공기와 소리가 다시 살아나는 경험을 하게 될 것입니다. 지금 바로 카메라 두 대를 꺼내 손뼉을 쳐보세요.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

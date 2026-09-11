@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Migliore Fotocamera per Safari Fotografici: Guida all'Acquisto 2025</h1>
 
 <p>Un safari fotografico in Africa rappresenta il sogno nel cassetto di molti appassionati di fotografia italiani. Che si tratti del <strong>Masai Mara</strong> in Kenya, del <strong>Kruger</strong> in Sudafrica o del <strong>Serengeti</strong> in Tanzania, la scelta della fotocamera giusta può fare la differenza tra scatti indimenticabili e immagini sfocate di animali in fuga. Questa guida ti accompagnerà nella scelta della migliore fotocamera per safari, considerando caratteristiche tecniche, budget e le esigenze specifiche di chi parte dall'Italia per un viaggio in Africa.</p>
@@ -211,5 +238,16 @@
 
 <p>Qualunque sia la tua scelta, ricorda che l'attrezzatura è solo uno strumento. La pazienza, la conoscenza degli animali e la capacità di anticipare i movimenti
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องถ่ายรูปที่ดีที่สุดสำหรับทริปมอเตอร์ไซค์ในประเทศไทย: คู่มือฉบับสมบูรณ์สำหรับนักเดินทางสายลุย</h1>
 
 <p>การขับมอเตอร์ไซค์ท่องเที่ยวในประเทศไทยเป็นประสบการณ์ที่ไม่มีอะไรเทียบได้ คุณจะได้สัมผัสเส้นทางโค้งพันเคียวบนถนนแม่ฮ่องสอน–ปาย กลิ่นไอของข้าวเหนียวปิ้งยามเช้าในหมู่บ้านบนดอยสูง และแสงทองยามพระอาทิตย์ตกที่สะพานข้ามแม่น้ำโขงในเชียงคาน แต่การจะเก็บทุกช่วงเวลานั้นไว้ได้ คุณต้องมีกล้องที่เหมาะกับสภาพอากาศร้อนชื้น ฝุ่นละออง และการสั่นสะเทือนจากมอเตอร์ไซค์</p>
@@ -213,5 +240,16 @@
 
 <p><strong>คำสำคัญในการค้นหา:</strong> กล้องถ่ายรูปสำหรับมอเตอร์ไซค์, ทริปมอเตอร์ไซค์ไทย, ถ่ายภาพท่องเที่ยวเชียงใหม่, กล้องกันฝุ่น, ถ่ายภาพดอยอินทนนท์, เส้นทางแม่ฮ่องสอนปาย, ถ่ายภาพเชียงคาน, กฎหมายถ่ายภาพไทย, โดรนไทย, กล้องท่องเที่ยว</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

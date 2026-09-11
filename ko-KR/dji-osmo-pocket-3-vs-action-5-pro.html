@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI 오즈모 포켓 3 vs 액션 5 프로: 한국 여행자를 위한 완벽 비교 가이드</h1>
 
 <p>2024년 DJI는 두 가지 야심찬 카메라를 연이어 출시했습니다. 하나는 짐벌 일체형 포켓 카메라 <strong>DJI 오즈모 포켓 3</strong>, 다른 하나는 견고한 액션캠 <strong>DJI 액션 5 프로</strong>입니다. 두 제품 모두 "여행 브이로그"를 표방하지만, 실제로는 완전히 다른 촬영 경험을 제공합니다. 이 글은 서울·부산·제주 등 국내 주요 여행지에서 두 카메라를 직접 비교 테스트한 결과를 바탕으로, 어떤 사용자에게 어떤 제품이 더 적합한지 데이터 중심으로 분석합니다.</p>
@@ -222,5 +249,16 @@
   <li>물놀이, 액티비티, 액션 촬영이 많다</li>
   <li>초광각 화각이 필요하다</
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

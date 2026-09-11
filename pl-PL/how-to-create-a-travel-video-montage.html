@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Jak Stworzyć Montaż Wideo z Podróży – Kompletny Poradnik Krok po Kroku</h1>
 
 <p>Marzysz o tym, aby Twój film z wakacji wyglądał jak profesjonalny klip podróżniczy, który zachwyci rodzinę i znajomych? Dobrze trafiłeś. W tym poradniku przeprowadzę Cię przez cały proces tworzenia montażu wideo z podróży – od planowania ujęć, przez dobór sprzętu dostępnego w Polsce, aż po finalny eksport gotowego filmu. Nie musisz być profesjonalistą. Wystarczy odrobina cierpliwości, kilka sprawdzonych narzędzi i chęć do nauki.</p>
@@ -186,5 +213,16 @@
   <li><strong>Za długa muzyka i za krótki materiał.</strong> Jeśli muzyka ma 4 minuty, a Ty masz 2 minuty ujęć, nie rozciągaj na siłę. Lepiej skrócić utwór.</li>
   <li><strong>Przesadna korekcja kolorów.</
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Leichte Vlog-Kamera für Japan 2026: Der ultimative Guide für kreative Reisefilmer</h1>
 
 <p>Japan ist zweifellos eines der faszinierendsten Reiseziele für visuelle Geschichtenerzähler. Die Mischung aus pulsierenden Megacitys, ruhigen Tempelgärten, atemberaubenden Berglandschaften und einer tief verwurzelten Kultur des Respekts bietet unendliche Möglichkeiten für authentische Vlogs. Doch die besonderen Lichtverhältnisse, die räumliche Enge in Städten wie Tokio oder Kyoto und die strikte Einhaltung lokaler Etikette stellen spezifische Anforderungen an deine Ausrüstung. Dieser Guide richtet sich an reisebegeisterte Filmemacher aus Deutschland, die für ihre Japan-Reise 2026 eine leichte, aber leistungsstarke Vlog-Kamera suchen. Wir kombinieren praktische Tipps mit kulturellen Einblicken, damit du nicht nur atemberaubende Bilder, sondern auch respektvolle und unvergessliche Erlebnisse festhältst.</p>
@@ -115,5 +142,16 @@
 <h3>4. Reinigung und Schutz vor Feuchtigkeit</h3>
 <p>Japan kann im Sommer sehr feucht und schwül sein. Ein Mikrofasertuch ist unerlässlich, um Linsen und Displays von Schweiß und Feuchtigkeit zu befreien. Ein kleiner Blasebalg (Gummiball) hilft, Staub von der Linse zu entfernen, ohne sie zu zerkratzen. Für Regentage oder spontane Schauer ist ein leichter Regenschutz für die Kamera oder ein einfacher Plastikbeutel mit Gummiband ein Lebensretter. Viele Tempel haben Innenräume mit Tatami-Matten, wo du deine Schuhe ausziehen musst. Achte darauf, dass deine Kameratasche nicht auf dem Boden steht, sondern an einem Haken oder in deiner Nähe aufbewahrt wird, um die Tradition zu respekt
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>2026 혼자 떠나는 여행, 완벽한 방수 브이로그 카메라 구매 가이드 (솔직한 비교 리뷰)</h1>
 
 <p>안녕하세요, 여행 크리에이터를 꿈꾸는 분들! 혼자 떠나는 여행, 특히 스쿠버다이빙, 서핑, 계곡 트레킹, 또는 갑작스런 소나기가 두려운 도시 여행까지. '물'은 여행 영상의 퀄리티를 좌우하는 가장 큰 변수이자, 카메라 고장의 주범이기도 합니다. 2026년, 이제는 방수 기능이 '옵션'이 아닌 '필수'가 된 시대입니다. 이 가이드에서는 초보자도 이해하기 쉽도록, 혼자 여행하며 나만의 인생샷과 브이로그를 남기고 싶은 분들을 위해 2026년형 방수 카메라 선택 기준부터 추천 제품, 그리고 현명한 구매 팁까지 낱낱이 파헤쳐 보겠습니다.</p>
@@ -134,5 +161,16 @@
 <p><strong>핵심 스펙:</strong> 8K 360도 촬영, 10m 방수(본체), AI 기반 자동 편집, 플로우스테이트(FlowState) 안정화</p>
 <p><strong>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

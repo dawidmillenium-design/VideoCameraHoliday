@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>วิธีถนอมแบตเตอรี่ในสภาพอากาศหนาว: คู่มือฉบับสมบูรณ์สำหรับช่างภาพและนักเดินทางชาวไทย</h1>
 
 <p>สวัสดีครับเพื่อนๆ ช่างภาพและนักเดินทางชาวไทยทุกท่าน! ผมเชื่อว่าหลายคนคงเคยเจอปัญหาเดียวกันกับผม นั่นคือเวลาที่เราไปเที่ยวต่างประเทศในฤดูหนาว หรือแม้แต่ไปเชียงใหม่ ดอยอินทนนท์ ในช่วงเดือนธันวาคม-มกราคม แบตเตอรี่กล้องและมือถือของเราก็หมดเร็วแบบผิดปกติ จนบางครั้งทำให้พลาดช่วงเวลาสำคัญที่รอมาแรมปี</p>
@@ -236,5 +263,16 @@
     <h3>ลืมปิดกล้องก่อนเปลี่ยนแบตเตอรี่</h3>
     <p>การเปลี่ยนแบตเตอรี่ขณะกล้องเปิดอยู่ อาจทำให้เกิดไฟกระชากและความเสียหายต่อวงจรได้ ควรปิดกล้องก่อนเปลี่ยนแบ
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

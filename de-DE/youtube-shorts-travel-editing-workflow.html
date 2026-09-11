@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>YouTube Shorts Travel Editing Workflow: Der komplette Guide für unterwegs</h1>
 
 <p>Du bist gerade von einer Reise zurückgekommen – vielleicht von der Berliner East Side Gallery, von den bayerischen Alpen oder von einem Wochenendtrip nach Lissabon – und dein Smartphone quillt über vor vertikalen Clips. Jetzt willst du daraus YouTube Shorts machen, die nicht nur aussehen wie Urlaubsvideos, sondern wie professioneller Content. Genau hier setzt dieser Workflow an.</p>
@@ -202,5 +229,16 @@
 
 <p>YouTube Shorts Travel Editing ist kein Hexenwerk. Mit dem richtigen Workflow, einer schlanken Ausrüstung und ein paar Grundregeln für Schnitt, Ton und Metadaten kannst du aus jeder Reise Content machen, der gesehen wird. Der wichtigste Tipp: Übe den Workflow, bis er sitzt. Je routinierter du wirst, desto schneller gehst du vom Rohmaterial zum fertigen Short – und desto mehr Zeit bleibt dir, die Reise selbst zu genießen.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

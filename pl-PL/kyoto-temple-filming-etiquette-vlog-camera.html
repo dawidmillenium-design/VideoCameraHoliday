@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Filmowanie w świątyniach Kioto – przewodnik po etykiecie i sprzęcie dla vlogerów</h1>
 
 <p>Kioto to jedno z tych miejsc, które niemal domagają się, by je nagrywać. Tysiące świątyń, bambusowe lasy, czerwone bramy torii i ogrody zen tworzą scenerię, jakiej nie znajdziesz nigdzie indziej na świecie. Dla vlogerów podróżniczych to wręcz wymarzone tło. Problem w tym, że Kioto to nie tylko plan filmowy – to żywe miejsce kultu, w którym codziennie modlą się mieszkańcy, odbywają się ceremonie, a mnisi pielęgnują tradycję sięgającą setek lat. Zanim wyciągniesz kamerę w Kinkaku-ji czy Fushimi Inari, warto zrozumieć, gdzie kończy się twórczość, a zaczyna brak szacunku. Ten przewodnik pomoże Ci nagrać świetny materiał i jednocześnie zachować się jak świadomy gość.</p>
@@ -180,5 +207,16 @@
 
 <p>Pamiętaj: świątynia to nie plan filmowy. To żywe miejsce kultu. Twoja kamera to narzędzie, nie przepustka. Używaj jej mądrze.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

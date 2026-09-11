@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepsze aparaty na road trip po Polsce – kompletny przewodnik dla podróżujących fotografów</h1>
 
 <p>Polska to kraj, który potrafi zaskoczyć fotografa na każdym kroku. Od szerokich plaż Bałtyku, przez mgliste szczyty Tatr, po tętniące życiem uliczki krakowskiego Kazimierza – road trip po Polsce to prawdziwy maraton dla sprzętu fotograficznego. W tym przewodniku podpowiem, jaki aparat sprawdzi się najlepiej podczas podróży samochodem po Polsce, na co uważać w polskich warunkach i jak połączyć pasję fotografowania z poszanowaniem lokalnych przepisów oraz kultury.</p>
@@ -166,5 +193,16 @@
 
 <p>Polska to kraj, który nagradza cierpliwych fotografów. Mgła nad Mazurami, złote światło na tatrzańskich graniach, mokry bruk na krakowskim Kazimierzu – te obrazy zostaną z Tobą na zawsze. Wybierz sprzęt, który pozwoli Ci je uchwycić, i ruszaj w drogę. Szerokiej drogi i dobrych kadrów!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>혹한기 배터리 수명 늘리는 방법: 한국 겨울 아웃도어·여행 완벽 가이드</h1>
 
 <p>영하 10도의 강원도 산속에서 카메라 배터리가 30분 만에 방전되는 걸 보고 허탈했던 기억이 있습니다. 서울에서 출발할 때는 100%였는데, 눈 덮인 설악산에 도착하자마자 배터리 표시가 20%로 뚝 떨어졌죠. 그날 이후로 저는 겨울철 배터리 관리법을 제대로 파기 시작했고, 지금은 영하 15도에서도 하루 종일 촬영이 가능할 정도로 노하우가 쌓였습니다. 이 글에서는 한국의 혹독한 겨울 환경에서 배터리 수명을 최대한 늘리는 실전 방법을 단계별로 알려드리겠습니다.</p>
@@ -177,5 +204,16 @@
 
 <p>겨울철 배터리 관리는 결국 <strong>온도 유지</strong>와 <strong>습기 차단</strong> 두 가지로 요약됩니다. 이 원리만 이해하면 강원도 산속이든 한강변 야경 촬영이든, 어떤 환경에서도 배터리를 오래 쓸 수 있습니다. 저도 처음에는 설악산에서 배터리 3개를 다 써버리고 허탈해했지만, 지금은 이 방법들 덕분에 겨울 출사가 오히려 더 즐거워졌습니다. 오늘 알려드린 단계를 하나씩 실천해보시면, 이번 겨울에는 배터리 걱정 없이 멋진 순간을 담을 수 있을 겁니다. 안전하게, 그리고 따뜻하게 촬영하세요!</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

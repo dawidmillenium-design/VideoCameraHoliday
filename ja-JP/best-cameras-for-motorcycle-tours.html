@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>日本で最高のカメラ：バイクツーリングのためのカメラガイド</h1>
 
 <p>日本ほどバイクツーリングと写真撮影が完璧に融合する国は他にありません。北海道の広大なラベンダー畑から、瀬戸内海の島々を結ぶしまなみ海道、富士山を仰ぐ箱根ターンパイク、そして九州の阿蘇山麓の草原道路まで、日本は世界でも類を見ない多様なライディングコースと被写体を提供してくれます。しかし、バイクツーリング中の撮影は、単に「良いカメラ」を選べば済む話ではありません。振動、天候、限られた収納スペース、そして日本特有の撮影マナーや法規制まで考慮する必要があります。</p>
@@ -192,5 +219,16 @@
 
 <p>最後に、日本での撮影では常に「安全第一」を心がけてください。美しい風景を撮るために無理な停車をしたり、交通法規を無視したりすることは絶対に避けましょう。そして、日本の文化とマナーを尊重しながら、あなただけの最高の一枚を見つけてください。良い旅を、そして良い写真を！</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

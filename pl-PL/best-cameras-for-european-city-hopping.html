@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepsze aparaty do zwiedzania europejskich miast – przewodnik dla podróżników z Polski</h1>
 
 <p>Skakanie po europejskich miastach to jedno z najbardziej satysfakcjonujących doświadczeń dla każdego podróżnika. Paryż, Rzym, Barcelona, Lizbona, Praga, Wiedeń, Budapeszt – każde z tych miejsc oferuje zupełnie inne wyzwania fotograficzne. Wąskie uliczki, monumentalna architektura, zatłoczone place, słabe oświetlenie w katedrach i muzeach, a do tego zmienne europejskie warunki pogodowe. Ten przewodnik pomoże Ci wybrać idealny aparat na city break, niezależnie od tego, czy wybierasz się na weekend do Berlina, czy planujesz dwutygodniową wyprawę po basenie Morza Śródziemnego.</p>
@@ -177,5 +204,16 @@
 
 <p>Nie ma jednego idealnego aparatu do zwiedzania europejskich miast. Wszystko zależy od Twoich priorytetów. Jeśli liczy się jakość obrazu i mobilność – Sony A7C II lub Canon EOS R8. Jeśli kochasz klasyczny styl i kolory – Fujifilm X-T5. Jeśli chcesz minimalizmu – Panasonic Lumix GX9 lub smartfon. Jeśli nagrywasz wideo – Sony ZV-E10. Najważniejsze, aby aparat nie przeszkadzał Ci w odkrywaniu miasta. Najlepszy sprzęt to ten, który masz przy
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

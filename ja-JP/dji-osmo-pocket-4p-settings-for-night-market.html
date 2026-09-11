@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Pocket 4P（仮称）で夜の屋台をプロ級に撮る！ 完全設定ガイド</h1>
 
 <p>こんにちは！ 東京を拠点に活動する旅行映像クリエイターです。これまでに、大阪の道頓堀、福岡の屋台、京都の祇園祭の夜店など、日本全国の「夜の屋台」を撮影してきました。今回は、そんな経験を活かし、DJI Osmo Pocketシリーズ（最新モデルを「4P」と仮定）を使って、**夜の屋台を映画のように美しく撮影するための設定**を徹底解説します。</p>
@@ -207,5 +234,16 @@
 
 <h3>失敗4： バ
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Najlepszy kompaktowy aparat wideo do podróży po Europie – porównanie 2025</h1>
 
 <p>Planując podróż po Europie, niezależnie czy to weekendowy wypad do Pragi, objazdówka po Chorwacji, czy tygodniowy city break w Rzymie, stajesz przed kluczowym pytaniem: jak uwiecznić te chwile bez dźwigania ciężkiego, profesjonalnego sprzętu? Smartfon często okazuje się niewystarczający – brakuje mu stabilizacji przy dłuższych nagraniach, zmiennej ogniskowej i dobrego mikrofonu. Z pomocą przychodzą kompaktowe kamery wideo, które łączą jakość obrazu z poręcznością. Na polskim rynku dostępnych jest kilka modeli, które dominują w rankingach. W tym artykule, opartym na rzeczywistych testach w polskich realiach (od Bałtyku po Tatry), porównamy cztery najlepsze propozycje: Sony ZV-1 II, DJI Osmo Pocket 3, GoPro Hero 12 Black oraz Panasonic Lumix G100 (z obiektywem kit). Sprawdzimy, która z nich najlepiej sprawdzi się jako <strong>kompaktowy aparat wideo do podróży po Europie</strong>.</p>
@@ -186,5 +213,16 @@
 <h2>Dostępność i serwis w Polsce – praktyczny aspekt zakupu</h2>
 <p>Zakup sprzętu w Polsce to nie tylko cena, ale też dostępność serwisu i gwarancji. Wszystkie cztery modele są oficjalnie dystrybuowane w kraju. Sony i Panasonic mają rozbudowaną sieć autoryzowanych serwisów w Warszawie, Krakowie i Poznaniu. DJI i GoPro opierają się głównie na ser
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

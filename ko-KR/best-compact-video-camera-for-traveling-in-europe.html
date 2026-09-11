@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>유럽 여행을 위한 최고의 컴팩트 비디오 카메라: 2024년 한국 시장 비교 분석</h1>
 
 <p>유럽 여행은 인생의 큰 이벤트입니다. 좁은 골목, 웅장한 성당, 해 질 녘의 석양까지, 그 순간들을 영상으로 생생하게 담고 싶은 것은 모든 여행자의 바람일 것입니다. 하지만 스마트폰만으로는 부족함을 느끼는 순간이 분명히 옵니다. 특히 유럽의 복잡한 조명 환경과 빠르게 움직이는 장면들 앞에서 말이죠. 이 글에서는 한국에서 구매 가능하고, 실제 한국인 여행자들이 자주 찾는 컴팩트 비디오 카메라 3종을 국내 테스트 환경과 유럽 여행 시나리오를 결합하여 비교 분석합니다. 객관적인 데이터와 실제 사용 경험을 바탕으로, 여러분의 유럽 여행 파트너를 선택하는 데 도움을 드리겠습니다.</p>
@@ -164,5 +191,16 @@
 
 <p>결론적으로, 유럽 여행용 컴팩트 카메라 시장에서 소니 ZV-E10 II는 '영상 성능의 왕', 후지필름 X100 VI는 '감성의 왕', 파나소닉 TZ90은 '실용성의 왕'이라고 정의할 수 있습니다. 이 글을 통해 여러분의 여행 계획과 촬영 스타일에 가장 잘 맞는 카메라를 선택하여, 잊지 못할 유럽의
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

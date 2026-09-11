@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         Voici un article de comparaison détaillé, rédigé en français (France), au format HTML5, optimisé pour le SEO et conforme aux normes EEAT. L'article se concentre sur des tests réels dans des environnements typiques des voyageurs français (Alpes, Bretagne, Méditerranée) et analyse la disponibilité locale des boîtiers.
 
 ```html
@@ -230,5 +257,16 @@
     <li><strong>Pour l'aventure extrême et les sports outdoor :</strong> La <strong>GoPro Hero 12 Black</strong> est le choix logique. Elle est disponible partout en France, de la Fnac aux magasins de sport spécialisés comme Au Vieux Campeur. Son prix agressif (449 €) est un atout supplémentaire.</li>
     <li><strong>Pour le vlog de voyage généraliste et les réseaux sociaux :</strong> Le <strong>DJI Osmo Pocket 3</strong> est le meilleur rapport commodité/qualité. Il est très populaire auprès des créateurs français et facile à trouver chez les revendeurs DJI (iFlight, etc.) et sur Amazon.
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

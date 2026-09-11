@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Sound Design pour Vidéos de Voyage : Le Guide Complet pour des Ambiances Sonores Professionnelles</h1>
 
 <p>Vous rentrez d'un voyage en Bretagne ou d'un séjour à Marrakech avec des images magnifiques, mais une fois le montage terminé, quelque chose cloche. Les images sont belles, mais le son est plat, amateur, sans vie. Le sound design, ou design sonore, est ce qui transforme une simple vidéo de vacances en un film de voyage immersif. C'est l'élément que 90 % des créateurs négligent, et pourtant, c'est souvent ce qui fait la différence entre une vidéo regardée 30 secondes et une vidéo regardée jusqu'au bout.</p>
@@ -233,5 +260,16 @@
 
 <p><strong>Problème : le son est métallique après dé-bruitage.</strong> Solution : réduisez l'intensité du dé-bruiteur de 30 %, ou appliquez un léger égaliseur pour réchauffer les basses (boost à 100-200
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

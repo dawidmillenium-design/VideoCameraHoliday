@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Pocket 4P 沙滩与高湿环境完全防护指南：从器材准备到实战拍摄</h1>
 
 <p>作为一名常年奔波于中国沿海城市（从三亚的亚龙湾到青岛的石老人，再到厦门的环岛路）的旅行摄影师，我深知海滩拍摄的诱惑与风险。DJI Pocket 4P（我习惯称它为“口袋灵眸”）凭借其小巧机身和一英寸传感器，是我行李箱中永远的神器。但它的开放式结构（无内置ND、无防水壳）在沙滩和海风面前，确实显得“娇贵”。在广西北海的涠洲岛，我曾亲眼见过一位游客的Pocket 3因海沙卡入云台电机而发出异响，最终不得不返厂维修。今天，我将结合在中国沿海实拍的经验，为你提供一套从出发前到回家后的全流程防护方案，确保你的设备在咸湿的海风中安然无恙。</p>
@@ -150,5 +177,16 @@
 
 <p><em>（本文基于作者在中国沿海城市多次实地拍摄经验总结，具体产品型号及服务政策请以DJI官网最新信息为准。）</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>如何制作旅行视频混剪：从素材到成片的完整教程</h1>
 
 <p>旅行视频混剪（Travel Video Montage）是把一段旅程中最精彩的画面、声音和情绪浓缩成2到5分钟短片的创作方式。它不同于流水账式的旅行记录，而是通过节奏、音乐和剪辑点的配合，让观众在几分钟内感受到你旅途中的高光时刻。无论你是用手机拍摄的普通旅行者，还是带着微单和稳定器的进阶创作者，只要掌握一套清晰的流程，都能做出值得反复观看的作品。</p>
@@ -136,5 +163,16 @@
 
 <p>旅行混剪没有标准答案。你不需要昂贵的设备，也不需要电影学院的专业训练。真正重要的是你对那段旅程的感受，以及你愿意花时间把感受翻译成画面和声音。我在第一次剪川西视频时，花了整整两个周末，导出后看了几十遍，虽然现在回头看有很多瑕疵，但那种“把旅行变成作品”的满足感，是任何照片都无法替代的。拿起你的素材，打开剪辑软件，从第一步开始。你的下一支混剪，会比上一支更好。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

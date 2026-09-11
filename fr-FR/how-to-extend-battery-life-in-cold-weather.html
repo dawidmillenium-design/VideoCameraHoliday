@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Comment prolonger l'autonomie de vos batteries par temps froid : le guide complet</h1>
 
 <p>Que vous soyez photographe de paysage en train de capturer le lever de soleil sur le Mont-Blanc, vidéaste animalier dans les Vosges en janvier, ou créateur de contenu en reportage à Lille par -5 °C, une chose est certaine : le froid est l'ennemi juré de vos batteries. Après plus de quinze ans à sillonner les Alpes, le Jura et les Pyrénées avec un sac rempli de boîtiers et de drones, j'ai appris à la dure que l'autonomie annoncée par les fabricants fond comme neige au soleil dès que le thermomètre descend sous les 5 °C.</p>
@@ -192,5 +219,16 @@
 
 <p>Bon tournage, et que la lumière hivernale soit avec vous !</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

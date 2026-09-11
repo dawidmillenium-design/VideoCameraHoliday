@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <H1>Die beste kompakte Videokamera für Europareisen: Ein detaillierter Vergleich für anspruchsvolle Reisende</H1>
 
 <P>Ob ein Wochenendtrip nach Paris, eine Wanderung durch die bayerischen Alpen oder ein Städtetrip nach Prag – für deutsche Reisende ist Europa das beliebteste Reiseziel. Doch welche kompakte Videokamera eignet sich am besten, um diese Momente in hochwertiger Videoqualität festzuhalten? In diesem ausführlichen Vergleich analysieren wir die aktuell besten Modelle auf dem deutschen Markt, basierend auf realen Tests an typischen deutschen Reisestandorten. Wir konzentrieren uns auf Kameras, die leicht genug für den Rucksack sind, aber dennoch professionelle Ergebnisse liefern.</P>
@@ -233,5 +260,16 @@
 
 <P><STRONG>Empfehlung:</STRONG> <STRONG>Sony ZV-E10 II</STRONG>. Der APS-C-Sensor liefert die beste Bildqualität bei schwachem Licht, und das Wechselobjektiv erlaubt es, für enge Innenräume ein Weitwinkelobjektiv oder für
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

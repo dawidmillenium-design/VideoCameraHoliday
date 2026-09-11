@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Insta360 X5 vs GoPro Hero 13 徹底比較：日本の旅行シーンで選ぶべきはどっち？</h1>
 
 <p>旅行の思い出を360度で残したいのか、それとも手ブレ補正の効いた臨場感ある映像を撮りたいのか——。Insta360 X5とGoPro Hero 13は、どちらも2025年のアクションカメラ市場を代表するモデルですが、その設計思想は大きく異なります。本記事では、筆者が実際に東京・京都・沖縄の旅行シーンで両機材を撮影テストし、スペックだけでなく「日本の旅行者が実際に使う場面」に焦点を当てて比較します。購入を検討している方に向けて、どちらが自分の旅スタイルに合うのかを判断できる材料を提供します。</p>
@@ -242,5 +269,16 @@
 
 <p>最終的には、家電量販店で実機を手に取り、アプリの操作感を確認してから購入することをおすすめします。どちらも2025年時点でトップクラスのアクションカメラであり、後悔のない選択をしてください。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

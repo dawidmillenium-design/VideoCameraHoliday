@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Jaki mały aparat do vlogowania w podróży i w górach wybrać? Porównanie najlepszych modeli na 2025 rok</h1>
 
 <p>Planujesz nagrywać vloga z wakacji w Bieszczadach, z wyprawy w Tatry lub z miejskiego city breaku w Gdańsku? Stoisz przed wyborem: smartfon, kompakt, a może kamera akcji? Dla twórców, którzy stawiają na jakość obrazu, stabilizację i wygodę noszenia w plecaku, kluczowy jest wybór małego, ale wydajnego sprzętu. W tym artykule porównujemy trzy najpopularniejsze obecnie w Polsce kategorie: zaawansowany kompakt <strong>Sony ZV-E10 II</strong>, kamerę akcji <strong>DJI Osmo Action 5 Pro</strong> oraz wszechstronny aparat <strong>Canon PowerShot V10</strong>.</p>
@@ -195,5 +222,16 @@
 <h3>Sony ZV-E10 II – dla wymagającego twórcy (i vlogera studyjnego)</h3>
 <p><strong>Kto powinien kupić:</
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

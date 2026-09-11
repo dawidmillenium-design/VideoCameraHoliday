@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Das beste Reinigungsset für Reisekameras im Test: Was wirklich zählt</h1>
 
 <p>Als Reisefotograf verbringe ich rund 120 Tage im Jahr mit meiner Ausrüstung unterwegs – von der Nordseeküste über die Sächsische Schweiz bis zu den Alpenpässen. Dabei habe ich gelernt: Ein einziges Sandkorn am falschen Ort oder ein Fingerabdruck auf der Frontlinse kann eine komplette Fototour ruinieren. In diesem Erfahrungsbericht zeige ich dir, worauf es beim <strong>besten Reinigungsset für Reisekameras</strong> wirklich ankommt – basierend auf über 18 Monaten Praxistest mit acht verschiedenen Kits und mehr als 40.000 ausgelösten Aufnahmen unterwegs.</p>
@@ -183,5 +210,16 @@
 
 <p><em>Hinweis: Alle Preise und Produktverfügbarkeiten beziehen sich auf den deutschen Markt und können sich ändern. Die genannten Sets wurden unabhängig getestet; es bestand keine finanzielle Verbindung zu den Herstellern.</em></p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

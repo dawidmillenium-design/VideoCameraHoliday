@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Come Creare Instagram Reels dai Filmati delle Vacanze: Guida Completa Passo dopo Passo</h1>
 
 <p>Hai appena trascorso una settimana meravigliosa in Costiera Amalfitana, tra Sorrento e Positano, e ora hai sul telefono trecento clip che non hai ancora guardato. Oppure sei tornato da un weekend sulle Dolomiti, con il drone pieno di riprese del Lago di Braies all'alba. In entrambi i casi, sai già che quei video meritano di essere visti, ma trasformarli in un Reel che funzioni davvero è un'altra storia.</p>
@@ -208,5 +235,16 @@
   <li><strong>Smartphone</strong>: iPhone 14 o 15, oppure Samsung Galaxy S23/S24. Ottima stabilizzazione e video 4K.</li>
   <li><strong>Gimbal</strong>: DJI Osmo Mobile 6 (circa 150€). Disponibile su Amazon.it e MediaWorld. Perfetto per riprese fluide in movimento.</
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

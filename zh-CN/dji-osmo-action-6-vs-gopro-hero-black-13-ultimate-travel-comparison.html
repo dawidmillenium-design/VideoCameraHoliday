@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>DJI Osmo Action 6 vs GoPro Hero Black 13：中国旅行终极对比评测</h1>
 
 <p>从上海外滩的璀璨灯火到张家界云雾缭绕的砂岩峰林，从川西高原的雪山圣湖到福建土楼的百年夯土墙，中国为旅行创作者提供了无与伦比的视觉宝库。然而，在这片广袤土地上拍摄运动相机，意味着要面对从-20℃的东北雪原到40℃的吐鲁番荒漠，从海拔5200米的珠峰大本营到潮湿闷热的江南梅雨季——这正是考验DJI Osmo Action 6与GoPro Hero Black 13的终极战场。作为长期在中国拍摄的旅行影像团队，我们将在真实场景中对比这两款旗舰运动相机，帮你做出最明智的旅行装备选择。</p>
@@ -129,5 +156,16 @@
 
 <p>最后提醒：出行前务必检查固件更新。DJI在2025年3月发布了针对中国地区GPS偏移的修正补丁，而GoPro的Quik应用也在4月更新中优化了微信分享功能。带上你的Osmo Action 6或Hero Black 13，去发现中国——这片土地上的每一次快门，都值得被认真对待。</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>Insta360 X5 vs GoPro Hero 13: Der große Vergleich für Reisefotografen und Videografen</h1>
 
 <p>Wer auf Reisen besondere Momente festhalten möchte, steht 2025 vor einer spannenden Wahl: Die <strong>Insta360 X5</strong> und die <strong>GoPro Hero 13</strong> gehören zu den gefragtesten Action-Kameras auf dem deutschen Markt. Beide Hersteller versprechen beeindruckende Bildqualität, robuste Bauweise und innovative Funktionen – doch sie verfolgen grundlegend unterschiedliche Ansätze. Während die Insta360 X5 auf 360-Grad-Aufnahmen setzt, bleibt die GoPro Hero 13 der klassischen Action-Kamera treu.</p>
@@ -276,5 +303,16 @@
 
 <p>Beide Kameras sind in Deutschland problemlos erhältlich und werden von einer wachsenden Community unterstützt. Letztendlich gilt: Die beste Kamera ist diejenige, die Sie gerne mit auf Reisen nehmen – und die zu Ihrem persönlichen Stil passt.</p>
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

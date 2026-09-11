@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         Ecco l'articolo comparativo dettagliato, ottimizzato per SEO e conforme alle linee guida EEAT, in formato HTML valido.
 
 <h1>La Migliore Fotocamera Discreta per Viaggiare a Parigi nel 2026: Test sul Campo e Confronto Dettagliato</h1>
@@ -234,5 +261,16 @@
 
 <p>Indipendentemente dalla fotocamera scelta, vi consigliamo di acquistare una <strong>custodia rigida semirigida</strong> e una <strong>traccola anti-taglio</strong> (come quelle prodotte da Pacsafe). A Parigi, la metropolitana (Metro) è il punto più a rischio per i furti. Tenete sempre la fotocamera davanti a voi, mai sul fianco o dietro. E ricordate: la fotocamera migliore è quella che vi fa sentire sicuri e che vi permette di
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>

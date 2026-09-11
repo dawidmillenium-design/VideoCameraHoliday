@@ -21,116 +21,7 @@
     <meta name="twitter:title" content="Best Vlogging Cameras for Travel 2026: Top Picks & Field Tests">
     <meta name="twitter:description" content="Discover the best vlogging cameras for travel in 2026. We compare the DJI Osmo Pocket 4P, Canon PowerShot V1, and Sony ZV-1 II.">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        a { color: #6db3f2; text-decoration: underline; text-underline-offset: 3px; }
-        a:hover { color: #9ecbff; }
-        a:visited { color: #b48ae0; }
-
-        .top-nav { background: #111; border-bottom: 2px solid #e94560; position: sticky; top: 0; z-index: 1000; }
-        .top-nav .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 60px; }
-        .top-nav .logo { font-size: 1.3rem; font-weight: 700; color: #e94560; text-decoration: none; display: flex; align-items: center; gap: 8px; }
-        .top-nav .nav-links { display: flex; list-style: none; margin: 0; padding: 0; height: 100%; }
-        .top-nav .nav-links > li { position: relative; height: 100%; display: flex; align-items: center; }
-        .top-nav .nav-links > li > a { color: #ccc; text-decoration: none; padding: 18px 16px; display: flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; transition: all 0.3s; height: 100%; cursor: pointer; }
-        .top-nav .nav-links > li > a:hover, .top-nav .nav-links > li > a.active { color: #e94560; background: rgba(233, 69, 96, 0.1); }
-        .dropdown-arrow { font-size: 0.7rem; transition: transform 0.3s; }
-        .top-nav .nav-links > li:hover .dropdown-arrow { transform: rotate(180deg); }
-
-        .mega-menu { position: absolute; top: 100%; left: 0; min-width: 620px; background: #1a1a2e; border: 1px solid #333; border-top: 3px solid #e94560; border-radius: 0 0 8px 8px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1001; box-shadow: 0 20px 40px rgba(0,0,0,0.5); padding: 20px; }
-        .top-nav .nav-links > li:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .mega-menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .mega-menu-column h4 { color: #e94560; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; }
-        .mega-menu-column ul { list-style: none; margin: 0; padding: 0; }
-        .mega-menu-column ul li { margin-bottom: 8px; }
-        .mega-menu-column ul li a { color: #bbb; text-decoration: none; font-size: 0.85rem; display: block; padding: 3px 0; }
-        .mega-menu-column ul li a:hover { color: #e94560; padding-left: 5px; }
-        .mega-menu-footer { margin-top: 15px; padding-top: 15px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; }
-        .mega-menu-footer a { color: #e94560; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
-        .mega-menu-footer a:hover { text-decoration: underline; }
-        .mobile-menu-toggle { display: none; background: none; border: none; color: #e94560; font-size: 1.5rem; cursor: pointer; }
-
-        header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 2px solid #e94560; }
-        header .logo { font-size: 1.5rem; font-weight: 700; color: #e94560; text-decoration: none; display: inline-block; margin-bottom: 15px; }
-        h1 { font-size: 2.4rem; color: #fff; margin-bottom: 15px; line-height: 1.25; }
-        .subtitle { font-size: 1.15rem; color: #888; max-width: 680px; margin: 0 auto 15px; }
-        .meta { color: #888; font-size: 0.9rem; }
-        .meta span { margin: 0 10px; }
-
-        .breadcrumb { padding: 15px 20px; background: #111; font-size: 0.85rem; color: #888; }
-        .breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; }
-        .breadcrumb li { display: flex; align-items: center; }
-        .breadcrumb li:not(:last-child)::after { content: "›"; margin: 0 10px; color: #555; }
-        .breadcrumb a { color: #e94560; text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-
-        article { padding: 40px 20px; }
-        h2 { color: #e94560; font-size: 1.8rem; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 1px solid #333; }
-        h3 { color: #fff; font-size: 1.3rem; margin: 30px 0 12px; }
-        p { margin-bottom: 20px; font-size: 1.05rem; }
-        a.content-link { color: #e94560; text-decoration: underline; text-underline-offset: 3px; }
-        a.content-link:hover { color: #ff6b6b; }
-        .quick-answer { background: #1a1a2e; border-left: 4px solid #e94560; padding: 20px 25px; margin: 30px 0; border-radius: 0 8px 8px 0; }
-        .quick-answer h3 { color: #e94560; margin-top: 0; font-size: 1.2rem; }
-        
-        .gear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
-        .gear-card { background: #111; border: 1px solid #333; border-radius: 12px; padding: 20px; transition: transform 0.2s, box-shadow 0.2s; }
-        .gear-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(233, 69, 96, 0.1); border-color: #e94560; }
-        .gear-card .badge { display: inline-block; background: #e94560; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 12px; }
-        .gear-card .badge.new { background: #16a34a; }
-        .gear-card .badge.watch { background: #f59e0b; }
-        .gear-card h3 { color: #fff; margin-top: 0; font-size: 1.2rem; }
-        
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: #111; border: 1px solid #333; border-radius: 8px; overflow: hidden; }
-        .comparison-table th, .comparison-table td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
-        .comparison-table th { background: #1a1a2e; color: #e94560; font-weight: 600; }
-        .comparison-table tr:last-child td { border-bottom: none; }
-        .comparison-table td:first-child { font-weight: 600; color: #fff; width: 25%; }
-
-        ul { margin-left: 20px; margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-        .faq-section { margin: 30px 0; }
-        details { background: #111; border-radius: 8px; margin-bottom: 15px; padding: 15px 20px; border: 1px solid #333; }
-        details summary { cursor: pointer; color: #e94560; font-weight: 600; font-size: 1.05rem; }
-        details p { margin-top: 10px; margin-bottom: 0; }
-        .affiliate-note { font-size: 0.85rem; color: #666; text-align: center; margin-top: 30px; padding: 15px; background: #0a0a0a; border-radius: 8px; }
-        .highlight-box { background: #1a1a2e; border-left: 4px solid #6db3f2; padding: 20px 25px; margin: 30px 0; border-radius: 0 8px 8px 0; }
-
-        footer.site-footer { background: #111; border-top: 3px solid #e94560; padding: 50px 20px 20px; margin-top: 40px; }
-        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-        .footer-column h4 { color: #e94560; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
-        .footer-column ul { list-style: none; margin: 0; padding: 0; }
-        .footer-column ul li { margin-bottom: 8px; }
-        .footer-column ul li a { color: #999; text-decoration: none; font-size: 0.85rem; }
-        .footer-column ul li a:hover { color: #e94560; }
-        .footer-brand { color: #e94560; font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-        .footer-about { color: #777; font-size: 0.85rem; line-height: 1.6; }
-        .footer-bottom { max-width: 1200px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #666; }
-        .footer-bottom a { color: #888; text-decoration: none; }
-        .footer-bottom a:hover { color: #e94560; }
-        .footer-social { display: flex; gap: 15px; }
-        .footer-social a { color: #888; text-decoration: none; font-size: 0.85rem; }
-        .footer-social a:hover { color: #e94560; }
-
-        @media (max-width: 768px) {
-            .top-nav .nav-container { flex-wrap: wrap; height: auto; padding: 10px 15px; }
-            .mobile-menu-toggle { display: block; }
-            .top-nav .nav-links { flex-wrap: wrap; width: 100%; display: none; flex-direction: column; }
-            .top-nav .nav-links.active { display: flex; }
-            .top-nav .nav-links > li { width: 100%; height: auto; }
-            .top-nav .nav-links > li > a { padding: 12px 15px; font-size: 0.9rem; border-bottom: 1px solid #222; }
-            .mega-menu { min-width: 100%; position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; border-top: 1px solid #333; border-radius: 0; display: none; padding: 10px; background: #0f0f1a; }
-            .top-nav .nav-links > li:hover .mega-menu, .top-nav .nav-links > li:focus-within .mega-menu { display: block; }
-            .mega-menu-grid { grid-template-columns: 1fr; gap: 15px; }
-            .footer-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            h1 { font-size: 1.8rem; }
-            .comparison-table { font-size: 0.9rem; }
-            .comparison-table th, .comparison-table td { padding: 10px; }
-        }
-        @media (max-width: 480px) { .footer-container { grid-template-columns: 1fr; } }
-    </style>
+    
 
     <!-- JSON-LD: Article Schema -->
     <script type="application/ld+json">
@@ -179,74 +70,36 @@
       ]
     }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <nav class="top-nav" role="navigation" aria-label="Main Navigation">
-        <div class="nav-container">
-            <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
-            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-            <ul class="nav-links" role="menubar">
-                <li role="none"><a href="/VideoCameraHoliday/" role="menuitem">Home</a></li>
-                <li role="none"><a href="/VideoCameraHoliday/city-through-the-lens/" role="menuitem">Series</a></li>
-                <li role="none">
-                    <a href="/VideoCameraHoliday/reviews/" role="menuitem" aria-haspopup="true" aria-expanded="false">Reviews <span class="dropdown-arrow">▼</span></a>
-                    <div class="mega-menu" role="menu" aria-label="Reviews Menu">
-                        <div class="mega-menu-grid">
-                            <div class="mega-menu-column"><h4>Camera Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4P</a></li><li><a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/VideoCameraHoliday/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></div>
-                            <div class="mega-menu-column"><h4>Mirrorless Reviews</h4><ul><li><a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50</a></li><li><a href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony ZV-E10 II</a></li></ul></div>
-                            <div class="mega-menu-column"><h4>Accessory Reviews</h4><ul><li><a href="/VideoCameraHoliday/accessories/best-camera-strap-hiking.html">Camera Straps</a></li><li><a href="/VideoCameraHoliday/accessories/">Camera Bags</a></li></ul></div>
-                        </div>
-                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/reviews/">View All Reviews →</a></div>
-                    </div>
-                </li>
-                <li role="none">
-                    <a href="/VideoCameraHoliday/guides/" class="active" role="menuitem" aria-haspopup="true" aria-expanded="false">Buying Guides <span class="dropdown-arrow">▼</span></a>
-                    <div class="mega-menu" role="menu" aria-label="Guides Menu">
-                        <div class="mega-menu-grid">
-                            <div class="mega-menu-column"><h4>Top Picks</h4><ul><li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">Vlogging Cameras</a></li></ul></div>
-                            <div class="mega-menu-column"><h4>By Activity</h4><ul><li><a href="/VideoCameraHoliday/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li><li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof</a></li><li><a href="/VideoCameraHoliday/guides/best-camera-ski-holidays.html">Ski Cameras</a></li></ul></div>
-                            <div class="mega-menu-column"><h4>Career & Tips</h4><ul><li><a href="/VideoCameraHoliday/guides/becoming-travel-filmmaker-career-guide-2026.html">Becoming a Travel Filmmaker</a></li><li><a href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">Film Better Videos</a></li></ul></div>
-                        </div>
-                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/guides/">View All Guides →</a></div>
-                    </div>
-                </li>
-                <li role="none"><a href="/VideoCameraHoliday/how-to/" role="menuitem">How-To</a></li>
-                <li role="none"><a href="/VideoCameraHoliday/destinations/" role="menuitem">Destinations</a></li>
-                <li role="none"><a href="/VideoCameraHoliday/editing/" role="menuitem">Editing</a></li>
-                <li role="none">
-                    <a href="/VideoCameraHoliday/comparisons/" role="menuitem" aria-haspopup="true" aria-expanded="false">Comparisons <span class="dropdown-arrow">▼</span></a>
-                    <div class="mega-menu" role="menu" aria-label="Comparisons Menu">
-                        <div class="mega-menu-grid">
-                            <div class="mega-menu-column"><h4>Camera vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/dji-pocket-4p-vs-gopro-hero-13-black.html">Pocket 4P vs GoPro 13</a></li><li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs Sony ZV-E10 II</a></li><li><a href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">Budget vs Premium</a></li></ul></div>
-                            <div class="mega-menu-column"><h4>Accessory Face-offs</h4><ul><li><a href="/VideoCameraHoliday/comparisons/peak-design-vs-blackrapid.html">Peak Design vs BlackRapid</a></li><li><a href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">DJI vs GoPro</a></li></ul></div>
-                            <div class="mega-menu-column"><h4>Smartphone vs Camera</h4><ul><li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated Camera</a></li></ul></div>
-                        </div>
-                        <div class="mega-menu-footer"><a href="/VideoCameraHoliday/comparisons/">View All Comparisons →</a></div>
-                    </div>
-                </li>
-                <li role="none"><a href="/VideoCameraHoliday/about/" role="menuitem">About</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="container">
-            <ol>
-                <li><a href="/VideoCameraHoliday/">Home</a></li>
-                <li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
-                <li>Best Vlogging Cameras 2026</li>
-            </ol>
-        </div>
-    </nav>
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
 
-    <header>
-        <a href="/VideoCameraHoliday/" class="logo">📹 Holiday Video Camera</a>
-        <h1>Best Vlogging Cameras for Travel 2026: Top Picks & Field Tests</h1>
-        <p class="subtitle">From the neon streets of Bangkok to the cobblestones of Lisbon, we tested the year's top vlogging rigs to find out what actually works on the road.</p>
-        <p class="meta"><span>📅 September 6, 2026</span><span>⏱️ 10 min read</span></p>
-    </header>
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
 
-    <article class="container">
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<article class="container">
         <div class="quick-answer">
             <h3>⚡ Quick Answer: The Best Vlogging Cameras of 2026</h3>
             <p>The vlogging landscape has shifted in 2026. For pure, walk-and-talk cinematic stability, the <strong>DJI Osmo Pocket 4P</strong> (and the still-excellent Pocket 3) remains unbeatable. For traditional compact vlogging with superior audio, the new <strong>Canon PowerShot V1</strong> has taken the crown from Sony. And for outdoor, on-the-go creators battling wind and noise, the <strong>Sony ZV-1 II</strong> is still the undisputed king. Here is our comprehensive, field-tested breakdown.</p>
@@ -268,158 +121,16 @@
                 </ul>
                 <p><em>Compare it directly against the ZV-1 II in our <a href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html" class="content-link">Sony ZV-1 II Review</a>.</em></p>
             </article>
-        </div>
 
-        <h2>🎬 The Successor Question: DJI Osmo Pocket 4P vs Pocket 3</h2>
-        <p>The biggest question we get right now is: <em>"Should I buy the Pocket 3 or wait for the Pocket 4?"</em> The <strong>DJI Osmo Pocket 4P</strong> is now shipping, and TechRadar and DPReview have already crowned it the "Best Video Camera for Travel." We took the Pocket 4P through the chaotic night markets of Bangkok for our <a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html" class="content-link">Bangkok Low-Light Field Test</a>, and here is the verdict:</p>
-        
-        <div class="highlight-box">
-            <strong>🌍 Travel Planner's Verdict:</strong> The Pocket 4P features a 20% brighter screen (crucial for filming in harsh sunlight) and a new "AI Subject Lock" that never loses your face even when you turn your back to the camera. However, the <a href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html" class="content-link">original Pocket 3</a> is now available at a steep discount. If you are on a budget, the Pocket 3 is still 90% of the camera. If you want the absolute best and don't mind paying the early-adopter tax, get the 4P.
-        </div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
 
-        <h2>🎙️ Best Vlogging Camera Outdoors & On-the-Go: Sony ZV-1 II</h2>
-        <p>Wirecutter and top travel creators continue to rank the <strong>Sony ZV-1 II</strong> as the best vlogging camera for outdoors and on-the-go use, and for good reason. When you are <a href="/VideoCameraHoliday/how-to/film-yourself-solo.html" class="content-link">filming yourself solo</a> on a windy cliffside in Ireland or a busy street in Tokyo, audio is everything. The ZV-1 II's directional 3-capsule mic with its included windscreen perfectly isolates your voice from background noise. Plus, the 18-50mm equivalent lens is wide enough to capture you and a stunning landmark in the same frame without needing a bulky wide-angle attachment.</p>
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
 
-        <h2>🌐 Best 360 & Miniature Cameras for Travel Vlogs</h2>
-        <p>Not every vlog requires a traditional camera. TechRadar and Micro Four Nerds are heavily pushing the "invisible selfie stick" and miniature form factors for 2026. If you want to capture immersive B-roll or hands-free POV shots while hiking or skiing, look here:</p>
-        <ul>
-            <li><strong>Insta360 X4:</strong> The king of 8K 360 video. Reframe your shots in post-production to get drone-like follow angles without actually flying a drone (which is banned in many national parks).</li>
-            <li><strong>Insta360 Go Ultra:</strong> The ultimate miniature vlogging camera. Weighing less than an ounce, you can magnetically clip it to your shirt for seamless, conversational POV vlogs that feel incredibly intimate.</li>
-            <li><strong>DJI Osmo 360:</strong> DJI's new entry into the 360 space features incredible integration with their Mimo app, making editing 360 footage on a phone faster than ever.</li>
-        </ul>
-        <p><em>See how the X4 performs in the field in our <a href="/VideoCameraHoliday/reviews/insta360-x4-review.html" class="content-link">Insta360 X4 Review</a>.</em></p>
-
-        <h2>🎓 Best Vlogging Camera for Beginners</h2>
-        <p>If you are stepping up from your smartphone and don't want to deal with interchangeable lenses or complex menus, the <strong>Canon EOS R50</strong> (specifically the <a href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html" class="content-link">V-Creator Kit</a>) is the perfect starting point. It features Canon's legendary color science, a fully articulating screen, and a "Movie Digital IS" that smooths out your walking footage remarkably well. It's lightweight, affordable, and grows with you as you learn manual settings.</p>
-
-        <h2>📊 Head-to-Head: The 2026 Vlogging Heavyweights</h2>
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th>DJI Osmo Pocket 4P</th>
-                    <th>Canon PowerShot V1</th>
-                    <th>Sony ZV-1 II</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Stabilization</td>
-                    <td>3-Axis Mechanical Gimbal</td>
-                    <td>Electronic (Movie Digital IS)</td>
-                    <td>Electronic (Active Mode)</td>
-                </tr>
-                <tr>
-                    <td>Sensor Size</td>
-                    <td>1-inch CMOS</td>
-                    <td>1.2-inch CMOS</td>
-                    <td>1-inch Exmor RS</td>
-                </tr>
-                <tr>
-                    <td>Audio Quality</td>
-                    <td>Good (Needs DJI Mic for wind)</td>
-                    <td>Excellent (New multi-capsule)</td>
-                    <td>Excellent (Directional 3-capsule)</td>
-                </tr>
-                <tr>
-                    <td>Best Use Case</td>
-                    <td>Cinematic walking B-roll</td>
-                    <td>Food, low-light, static vlogs</td>
-                    <td>Outdoor, on-the-go, windy areas</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            <details>
-                <summary>Is the DJI Osmo Pocket 4P worth waiting for over the Pocket 3?</summary>
-                <p>If you need the absolute latest specs and can find it in stock, the Pocket 4P offers improved low-light performance and a brighter screen. However, the Pocket 3 remains the best value in 2026 and is readily available, making it the smarter buy for most travelers right now.</p>
-            </details>
-            <details>
-                <summary>What is the best compact camera for video in 2026?</summary>
-                <p>The Canon PowerShot V1 is currently ranked as the best compact camera for video by top photography publications. It offers a larger sensor than the Sony ZV-1 II and superior built-in audio, making it the ultimate point-and-shoot for travel vloggers.</p>
-            </details>
-            <details>
-                <summary>What is the best vlogging camera for outdoors and on-the-go?</summary>
-                <p>The Sony ZV-1 II is the undisputed king of on-the-go vlogging. Its directional 3-capsule microphone perfectly isolates your voice from wind and street noise, while the 1-inch sensor handles changing outdoor lighting beautifully.</p>
-            </details>
-            <details>
-                <summary>Do I need a 360 camera for travel vlogging?</summary>
-                <p>Not necessarily, but it's a game-changer for B-roll. Cameras like the Insta360 X4 allow you to capture immersive environments and create "tiny planet" or drone-like follow shots without the legal headaches of flying a drone in foreign countries.</p>
-            </details>
-        </div>
-        
-        <h2>Final Thoughts & Next Steps</h2>
-        <p>The best vlogging camera for your 2026 travels depends entirely on your style. If you want cinematic, floating walking shots, grab the <strong>DJI Osmo Pocket 4P</strong>. If you prioritize audio and low-light performance in a traditional compact body, the <strong>Canon PowerShot V1</strong> is the new king. And if you are battling the elements outdoors, the <strong>Sony ZV-1 II</strong> remains unbeatable.</p>
-        <p>Want to see how these cameras stack up against action cams for extreme travel? Check out our <a href="/VideoCameraHoliday/comparisons/dji-pocket-4p-vs-gopro-hero-13-black.html" class="content-link">DJI Pocket 4P vs GoPro Hero 13 Black</a> comparison, or see our overall top picks in the <a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html" class="content-link">Best Holiday Video Cameras of 2026</a> roundup.</p>
-        
-        <p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. Our rankings are based on real travel testing, not lab charts.</p>
-    </article>
-
-    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <div class="footer-brand">📹 Holiday Video Camera</div>
-                <p class="footer-about">Real travel camera testing. No lab charts — just what survives hand luggage, beaches, mountains, and city breaks.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
-                    <li><a href="/VideoCameraHoliday/reviews/">Reviews</a></li>
-                    <li><a href="/VideoCameraHoliday/comparisons/">Comparisons</a></li>
-                    <li><a href="/VideoCameraHoliday/destinations/">Destinations</a></li>
-                    <li><a href="/VideoCameraHoliday/how-to/">How-To</a></li>
-                    <li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Popular Articles</h4>
-                <ul>
-                    <li><a href="/VideoCameraHoliday/comparisons/dji-pocket-4p-vs-gopro-hero-13-black.html">Pocket 4P vs GoPro 13</a></li>
-                    <li><a href="/VideoCameraHoliday/comparisons/canon-r50-vs-sony-zv-e10-ii-youtube.html">Canon R50 vs ZV-E10 II</a></li>
-                    <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
-                    <li><a href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="/VideoCameraHoliday/about/">About Us</a></li>
-                    <li><a href="/VideoCameraHoliday/contact.html">Contact</a></li>
-                    <li><a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/VideoCameraHoliday/terms.html">Terms of Use</a></li>
-                    <li><a href="/VideoCameraHoliday/sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div>© 2026 <a href="/VideoCameraHoliday/">Holiday Video Camera</a>. All rights reserved.</div>
-            <div class="footer-social">
-                <a href="#" aria-label="YouTube">YouTube</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
-                <a href="#" aria-label="RSS">RSS</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Menu Toggle Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleBtn = document.querySelector('.mobile-menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            
-            if (toggleBtn && navLinks) {
-                toggleBtn.addEventListener('click', () => {
-                    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-                    toggleBtn.setAttribute('aria-expanded', !isExpanded);
-                    navLinks.classList.toggle('active');
-                    toggleBtn.innerHTML = isExpanded ? '☰' : '✕';
-                });
-            }
-        });
-    </script>
 </body>
 </html>

@@ -59,9 +59,36 @@
     }
 }
     </script>
+<!-- Design B: Critical CSS + non-critical CSS + hreflang -->
+<style>
+    /* Paste the full Design B CSS from your tested file here */
+    :root {
+        --bg:           #0b0b0f;
+        --surface:      #14141a;
+        /* ... all other variables ... */
+    }
+    /* ... all other CSS rules ... */
+</style>
 </head>
 <body>
-    <main>
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="/VideoCameraHoliday/">
+            <span aria-hidden="true">📹</span>
+            <span>Holiday Video Camera</span>
+        </a>
+        <!-- ... the rest of the header markup ... -->
+    </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- ... the entire drawer markup ... -->
+</aside>
+
+<main>
         <h1>กล้องถ่ายรูปที่ดีที่สุดสำหรับทริปแคมป์ปิ้งในประเทศไทย: คู่มือฉบับสมบูรณ์สำหรับสายลุย</h1>
 
 <p>การแคมป์ปิ้งในประเทศไทยไม่ใช่แค่การนอนเต็นท์กลางป่า แต่คือการได้ตื่นมาพร้อมหมอกเช้าที่ดอยอินทนนท์ นั่งดูดาวบนอุทยานแห่งชาติเขาใหญ่ หรือชมพระอาทิตย์ตกเหนือผืนน้ำที่เขื่อนศรีนครินทร์ และสำหรับนักท่องเที่ยวหลายคน ช่วงเวลาที่ดีที่สุดของทริปคือการได้บันทึกภาพเหล่านั้นไว้อย่างสวยงาม แต่การถ่ายภาพในทริปแคมป์ปิ้งเมืองไทยมี "บททดสอบ" ที่แตกต่างจากทริปถ่ายภาพทั่วไปอย่างมาก ทั้งความชื้นสูง ฝนที่มาแบบไม่บอกกล่าว ฝุ่นละออง แมลง และน้ำหนักสัมภาระที่ต้องแบกขึ้นเขา บทความนี้จะพาคุณไปรู้จักกล้องถ่ายรูปที่เหมาะกับแคมป์ปิ้งในไทย พร้อมสถานที่ถ่ายภาพจริง ข้อจำกัดทางเทคนิค และกฎหมายท้องถิ่นที่ต้องรู้ก่อนกดชัตเตอร์</p>
@@ -198,5 +225,16 @@
 <li><strong>เช็ดทำความสะอาดทันที</strong> – ใช้ผ้าไมโครไฟเบอร์เช็ดตัวกล้องและเลนส์</li>
 <li><strong>เป่าฝุ่นออก</strong> – ใช้ blower เป่าช
     </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <!-- ... the entire footer markup ... -->
+    </div>
+</footer>
+
+<script>
+    /* Paste the full drawer + cookie consent JavaScript here */
+</script>
+
 </body>
 </html>
