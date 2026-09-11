@@ -1,242 +1,252 @@
-# 24-Month Editorial Calendar (2027-2028)
+# 24-Month Editorial Calendar (2026-2027-2028)
 
-# 24-Month Editorial Calendar: Holiday Video Camera Blog (2027–2028)
+# 24-Month Editorial Calendar: Holiday Video Camera Blog (2026–2028)
 
-**Role:** Calendar Manager (Editorial Director) | **Method:** Seasonality-Aligned Field Test Sequencing | **Objective:** Publish each content asset *when the search demand peaks*, not when it's convenient to write.
-
----
-
-## Strategic Assumptions (Stated Upfront)
-
-1. **Assumption:** Search demand for Southeast Asia travel-camera queries peaks **Nov–Feb** (dry season = trip planning + actual travel). Content must publish **6–8 weeks before peak** to earn AI Overview citations before the surge.
-2. **Assumption:** Texas-origin content peaks **May–Aug** (summer travel planning + extreme heat testing window). This anchors the "Two-Climate Shock" narrative.
-3. **Assumption:** Each quarter delivers **3 assets minimum** (1 Comparison, 1 Destination Guide, 1 Tutorial) mapped to the Topical Architect's 3 hubs and the GEO Specialist's entity triples.
-4. **Assumption:** Field testing happens **1 quarter ahead** of publication. Q1 2027 content is shot in Q4 2026. This is non-negotiable for the E-E-A-T proof chain.
-5. **Assumption:** The `/receipts` page launches **Week 1, Q1 2027** — before any article publishes. No proof chain = no content.
-6. **Assumption:** Q3–Q4 are **monsoon/typhoon season** in target destinations (Hanoi, Siem Reap, Pattaya). This is a *feature*, not a bug — it's when the climate-stress content is most defensible.
+**Calendar Manager's Note:** This calendar operationalizes the SERP Gap Analysis, GEO Strategy, Topical Map, E-E-A-T Audit, Link Graph, and Conversion Strategy into a quarter-by-quarter publishing schedule. Each quarter delivers exactly **1 Comparison, 1 Destination Guide, and 1 Tutorial** — the three content archetypes that map to the three Hubs (Loadout, Destination Trip Reports, Tropical Survival). Publication cadence: **3 posts/quarter (12/year)** to protect E-E-A-T depth over volume.
 
 ---
 
-## Calendar Architecture Overview
+## H2: Strategic Assumptions (Stated Upfront)
 
-| Quarter | Theme | Primary Entity Axis | Peak Search Window | Field Test Window |
-|---|---|---|---|---|
-| **Q1 2027** | Foundation + Monsoon Proof | Climate Stress (Hub 1) | Nov 2027 – Feb 2028 | Oct–Dec 2026 |
-| **Q2 2027** | Urban Stitch Dominance | Urban Stitch (Hub 2) | Mar–May 2028 | Jan–Mar 2027 |
-| **Q3 2027** | Weight Economics + Texas Origin | Gear ROI (Hub 3) | Jun–Aug 2028 | Apr–Jun 2027 |
-| **Q4 2027** | Two-Climate Shock + Holiday | Cross-Hub Bridge | Sep–Dec 2028 | Jul–Sep 2027 |
-| **Q1 2028** | Refresh + Legacy Audit | GoPro Max 360 Gap | Nov 2028 – Feb 2029 | Oct–Dec 2027 |
-| **Q2 2028** | Deep Dive + Dataset Expansion | All Hubs | Mar–May 2029 | Jan–Mar 2028 |
-| **Q3 2028** | Yield Calculator + Tool Launch | Hub 3 Amplification | Jun–Aug 2029 | Apr–Jun 2028 |
-| **Q4 2028** | 24-Month Retrospective + 2029 Strategy | Full Graph | Sep–Dec 2029 | Jul–Sep 2028 |
+1. **Publication cadence:** 3 posts per quarter (1 Comparison + 1 Destination Guide + 1 Tutorial). This is deliberately conservative — the E-E-A-T Auditor's Proof Block, Environmental Table, Receipt Wall, and Regret Log requirements make each post a 15–25 hour production.
+2. **Trip cadence:** Author travels to 1–2 destinations per quarter, generating raw footage for 2–3 posts. Calendar is sequenced so trips feed posts, not the reverse.
+3. **Gear refresh assumption:** Hero 13 Black, Insta360 X5, and Osmo Action 6 remain the core gear through Q4 2027. Hero 14/15, X6, and Osmo Action 7 assumed available Q1 2028 — calendar reserves Q1 2028 for refresh posts.
+4. **Phase alignment:** Q1 2026–Q4 2026 = Phase 1 (authority). Q1 2027–Q4 2027 = Phase 2 (GEO capture). Q1 2028–Q4 2028 = Phase 3 (defend + expand).
+5. **Zero-competition land-grabs prioritized:** Coppacaban Beach, Siem Reap, Fukuoka, and Nairobi are scheduled early because SERP competition is near-zero.
+6. **Affiliate density caps honored:** Phase 1 = 1 link/1,000 words; Phase 2 = 2; Phase 3 = 3.
 
 ---
 
-## Q1 2027: Foundation + Monsoon Proof
+## H2: 2026 — PHASE 1: Own the Long Tail (Authority Building)
 
-**Strategic Focus:** Launch the `/receipts` trust anchor, publish Hub 1 (Climate Stress), and capture the Nov 2027 – Feb 2028 Southeast Asia planning surge.
-
-**Field Test Window:** Oct–Dec 2026 (Hanoi, Siem Reap, Pattaya — monsoon tail + early dry season)
-
-### Asset 1 — Comparison
-**Title:** *DJI Osmo 360 II vs Insta360 X6: 21-Day Hanoi Monsoon Fogging Test*
-- **Target Query:** "DJI Osmo 360 II vs Insta360 X6 humidity"
-- **Primary Triple:** `(Osmo 360 II) — [survived] — (Hanoi monsoon, 21 days)`
-- **Publish Date:** **Week 3, January 2027**
-- **Schema:** `Review` + `Dataset` (fogging onset CSV)
-- **Proof Artifacts:** GPS track log, weather API screenshots (min. 3/day), EXIF sidecar files, SHA-256 raw footage hashes
-- **Hub:** Hub 1 (Climate Stress)
-- **Sibling Links:** → 1.2 (X6 fogging), → 1.3 (Max 360 Pattaya)
-
-### Asset 2 — Destination Guide
-**Title:** *Siem Reap 360 Camera Guide: Where to Shoot Angkor Wat Without Fogging Your Lens*
-- **Target Query:** "best camera for Angkor Wat" / "360 camera Siem Reap"
-- **Primary Triple:** `(Osmo 360 II) — [recommended for] — (Angkor Wat sunrise, 92% RH)`
-- **Publish Date:** **Week 2, February 2027**
-- **Schema:** `HowTo` (shooting protocol) + `FAQPage`
-- **Proof Artifacts:** Temple GPS coordinates, sunrise timestamps, dew point logs, before/after fogging photos
-- **Hub:** Hub 1
-- **Sibling Links:** → 1.1 (Hanoi test), → 1.5 (desiccant recovery)
-
-### Asset 3 — Tutorial
-**Title:** *How to Prevent 360 Lens Fogging in 90%+ Humidity: The Desiccant Protocol*
-- **Target Query:** "how to fix fogged 360 camera lens" / "prevent camera fogging humidity"
-- **Primary Triple:** `(Desiccant protocol) — [recovered] — (fogged X6 in 40 min)`
-- **Publish Date:** **Week 4, March 2027**
-- **Schema:** `HowTo` + `FAQPage`
-- **Proof Artifacts:** Timed recovery video (raw), desiccant brand comparison, sealed-bag test photos
-- **Hub:** Hub 1
-- **Sibling Links:** → 1.2 (X6 fogging), → Hub 3 (weight of desiccant kits)
-
-**Q1 2027 KPI Targets:** 3 assets live, `/receipts` page indexed, Hub 1 pillar published, 8% `/receipts` CTR baseline established.
+**Phase Goal:** Publish 12 posts establishing the entity graph (Camera × Destination × Failure Mode). Build Proof Archive to 5,000 subscribers. Zero-competition land-grabs first.
 
 ---
 
-## Q2 2027: Urban Stitch Dominance
+### H3: Q1 2026 — Foundation Quarter (Hub 1 Launch)
 
-**Strategic Focus:** Publish Hub 2 (Urban Stitch Stress) and capture the Mar–May 2028 Tokyo/Hong Kong cherry blossom + spring travel surge.
+**Trip:** Bangkok, Thailand (14 days, March 2026)
 
-**Field Test Window:** Jan–Mar 2027 (Tokyo, Hong Kong — winter neon + spring transition)
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 1 | **Comparison** | GoPro Hero 13 vs Insta360 X5 vs DJI Osmo Action 6: 14-Day Bangkok Humidity Test (Full Data) | Hub 1 | "gopro hero 13 vs insta360 x5 humidity" | Day-by-day fog onset + overheat shutdown temp table |
+| 2 | **Destination Guide** | Bangkok in 14 Days: Which Camera Actually Survived the Humidity? | Hub 2 | "best camera for bangkok" | Usage Share % (X5 62% / Hero 13 28% / Osmo 10%) |
+| 3 | **Tutorial** | The Dew-Point Fogging Formula: How to Predict Camera Fogging Before You Fly | Hub 1 | "action camera fogging prevention" | Interactive dew-point calculator (lead magnet LM1) |
 
-### Asset 1 — Comparison
-**Title:** *Shibuya Crossing at Night: DJI Osmo 360 II vs Insta360 X6 vs GoPro Max 360 Stitch Seam Comparison*
-- **Target Query:** "best 360 camera for Tokyo night" / "360 camera stitch line problems"
-- **Primary Triple:** `(Osmo 360 II) — [cleanest stitch] — (Shibuya neon, 1/30s shutter)`
-- **Publish Date:** **Week 2, April 2027**
-- **Schema:** `Review` + `ImageObject` (side-by-side seam crops) + `Dataset` (Stitch Failure Index)
-- **Proof Artifacts:** Raw 30-second clips from all 4 cameras, EXIF exposure triangle, GPS coordinates at Shibuya Crossing, SHA-256 hashes
-- **Hub:** Hub 2 (Urban Stitch)
-- **Sibling Links:** → 2.2 (HK tram), → 2.4 (low-light noise)
+**Deliverables:**
+- Hub 1 pillar page live (`/tropical-camera-survival/`)
+- Proof Archive email capture live (LM1: Dew-Point Calculator)
+- Raw footage folder published (412 GB, view-only)
+- 3 cross-hub links established per Link Graph Designer matrix
 
-### Asset 2 — Destination Guide
-**Title:** *Hong Kong 360 Camera Guide: Tram Corridors, Vertical Cities & Stitch Failure Zones*
-- **Target Query:** "360 camera Hong Kong tram" / "best camera for Hong Kong travel"
-- **Primary Triple:** `(X6) — [ghosted] — (HK tram, 1/30s shutter)`
-- **Publish Date:** **Week 3, May 2027**
-- **Schema:** `HowTo` + `FAQPage` + `Dataset` (stitch failure map by HK district)
-- **Proof Artifacts:** Tram route GPS log, altitude data (relevant for Peak Tram), stitch failure timestamps
-- **Hub:** Hub 2
-- **Sibling Links:** → 2.1 (Shibuya), → 2.3 (Hanoi traffic)
-
-### Asset 3 — Tutorial
-**Title:** *How to Shoot 360 Video in Dense Urban Night Scenes Without Stitch Ghosting*
-- **Target Query:** "360 camera motion blur stitching" / "how to avoid stitch lines 360"
-- **Primary Triple:** `(Action 6) — [best motion handling] — (Hanoi traffic, 1/60s shutter)`
-- **Publish Date:** **Week 4, June 2027**
-- **Schema:** `HowTo` + `FAQPage`
-- **Proof Artifacts:** Shutter speed comparison clips, motion blur ghosting maps, ISO noise floor samples
-- **Hub:** Hub 2
-- **Sibling Links:** → 2.4 (low-light noise), → Hub 1 (humidity affects stitch)
-
-**Q2 2027 KPI Targets:** Hub 2 pillar live, Stitch Failure Index published as proprietary metric, 15% EXIF view rate, 22% persona table click rate.
+**KPIs:** 3 posts live, 500 email subscribers, 1 AI Overview citation attempt.
 
 ---
 
-## Q3 2027: Weight Economics + Texas Origin
+### H3: Q2 2026 — Zero-Competition Land-Grab Quarter
 
-**Strategic Focus:** Publish Hub 3 (Gear ROI) and capture the Jun–Aug 2028 summer backpacking + Texas heat testing surge.
+**Trip:** Siem Reap, Cambodia (10 days, May 2026) + Coppacaban Beach (5 days, June 2026)
 
-**Field Test Window:** Apr–Jun 2027 (Texas dry heat + multi-city Asia weight test)
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 4 | **Comparison** | Insta360 X5 vs GoPro Hero 13: Temple Reframing vs POV (Siem Reap Field Data) | Hub 2 | "best camera for angkor wat" | Temple-restriction compliance log + sunrise shot success rate |
+| 5 | **Destination Guide** | Coppacaban Beach: The Camera Nobody Reviews (Full 5-Day Field Test) | Hub 2 | "coppacaban beach camera" | First-ever published camera data for this destination |
+| 6 | **Tutorial** | How to Fix Insta360 X5 Lens Fogging in 22 Minutes (The $4 Silica Pack Method) | Hub 1 | "insta360 x5 fogging fix" | 22-min fog onset data + fix verification photos |
 
-### Asset 1 — Comparison
-**Title:** *DJI Osmo Action 6 vs Insta360 X6: Which Earns Its Grams in Hanoi?*
-- **Target Query:** "Osmo Action 6 vs Insta360 X6 weight" / "lightest 360 camera for backpacking Asia"
-- **Primary Triple:** `(Action 6) — [outyielded] — (X6 in Hanoi, 145g vs 180g)`
-- **Publish Date:** **Week 2, July 2027**
-- **Schema:** `Review` + `Dataset` (Content Yield Per 100g CSV) + `HowTo` (yield calculation)
-- **Proof Artifacts:** Weight scale photos (calibrated), usable clip counts, 30-day itinerary GPS log
-- **Hub:** Hub 3 (ROI)
-- **Sibling Links:** → 3.1 (yield metric), → 3.3 (400g backpack tax)
+**Deliverables:**
+- Hub 2 pillar page live (`/destination-trip-reports/`)
+- Spoke 2.5 (Coppacaban) expected to rank #1 within 4–6 weeks
+- Lead magnet LM3 (Field Test Archive) launched
+- First Receipt Wall published (silica pack purchase)
 
-### Asset 2 — Destination Guide
-**Title:** *Hanoi 360 Camera Guide: Motorbike Traffic, Monsoon Timing & the Grams-Per-Clip Math*
-- **Target Query:** "best camera for Hanoi travel" / "360 camera Vietnam"
-- **Primary Triple:** `(Action 6) — [best for] — (Hanoi motorbike traffic, 145g)`
-- **Publish Date:** **Week 3, August 2027**
-- **Schema:** `HowTo` + `FAQPage` + `Dataset` (Hanoi shooting spots + weight impact)
-- **Proof Artifacts:** Old Quarter GPS track, motorbike traffic timestamps, weight-on-back photos
-- **Hub:** Hub 3
-- **Sibling Links:** → 3.2 (Action 6 vs X6), → Hub 1 (Hanoi monsoon)
-
-### Asset 3 — Tutorial
-**Title:** *How to Calculate Content Yield Per 100g: The Backpacker's Camera ROI Framework*
-- **Target Query:** "camera weight vs footage output" / "travel camera ROI"
-- **Primary Triple:** `(Yield metric) — [defined] — (4 cams, 6 cities, 30 days)`
-- **Publish Date:** **Week 4, September 2027**
-- **Schema:** `HowTo` + `Dataset` (yield scores) + `FAQPage`
-- **Proof Artifacts:** Downloadable CSV, calculation spreadsheet, raw clip count logs
-- **Hub:** Hub 3
-- **Sibling Links:** → 3.2 (Action 6 vs X6), → 3.4 (Texas transition)
-
-**Q3 2027 KPI Targets:** Hub 3 pillar live, Content Yield Per 100g metric published, 12% CSV download rate, 6% affiliate CTR baseline.
+**KPIs:** 6 posts live, 1,500 subscribers, 2 posts ranking top 10.
 
 ---
 
-## Q4 2027: Two-Climate Shock + Holiday
+### H3: Q3 2026 — Failure-Mode Deep Dive Quarter
 
-**Strategic Focus:** Publish the bridge spoke (Texas → Asia transition) and capture the Sep–Dec 2028 holiday travel + gift-buying surge.
+**Trip:** Hanoi, Vietnam (10 days, August 2026) + Maldives (7 days, September 2026)
 
-**Field Test Window:** Jul–Sep 2027 (Texas summer heat → Asia transition)
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 7 | **Comparison** | Osmo Action 6 vs GoPro Hero 13: Salt-Air Corrosion After 30 Days in the Maldives | Hub 1 | "action camera saltwater corrosion" | Corrosion photo log + port-seal degradation timeline |
+| 8 | **Destination Guide** | Hanoi in 10 Days: Why the Insta360 X5 Fogged in 22 Minutes (And How I Fixed It) | Hub 2 | "best camera for hanoi" | Hourly dew-point table + fog timestamp log |
+| 9 | **Tutorial** | Battery Swelling in the Tropics: How to Detect It Before It Ruins Your Trip | Hub 1 | "action camera battery swelling" | Battery cycle count + swelling onset table per camera |
 
-### Asset 1 — Comparison
-**Title:** *Texas → Tokyo → Hanoi: What 3 Climate Shocks Did to 4 Travel Cameras*
-- **Target Query:** "travel camera climate transition" / "camera condensation humidity shock"
-- **Primary Triple:** `(All 4 cams) — [transitioned] — (Texas 100°F/20% RH → Hanoi 90°F/90% RH)`
-- **Publish Date:** **Week 2, October 2027**
-- **Schema:** `Review` + `Dataset` (condensation onset times) + `HowTo` (transition protocol)
-- **Proof Artifacts:** Flight boarding pass photos, DFW + NRT + HAN airport weather screenshots, internal condensation photos, EXIF timestamp gap analysis
-- **Hub:** Bridge Spoke (links Hub 1 + Hub 2 + Hub 3)
-- **Sibling Links:** → 1.1 (Hanoi monsoon), → 2.1 (Tokyo stitch), → 3.1 (yield metric)
+**Deliverables:**
+- Spoke 1.3 (Maldives corrosion) + Spoke 1.5 (battery swelling) live
+- First warranty claim timeline published (Osmo Action 6)
+- Environmental Proof Tables standardized across all posts
 
-### Asset 2 — Destination Guide
-**Title:** *Tokyo Holiday 360 Camera Guide: Neon, Shrines & Winter Stitch Challenges*
-- **Target Query:** "best camera for Tokyo holiday" / "360 camera Tokyo winter"
-- **Primary Triple:** `(Osmo 360 II) — [recommended for] — (Tokyo winter, low-light shrines)`
-- **Publish Date:** **Week 3, November 2027**
-- **Schema:** `HowTo` + `FAQPage` + `Dataset` (Tokyo shooting spots by stitch difficulty)
-- **Proof Artifacts:** Shrine GPS coordinates, winter weather logs, low-light EXIF samples
-- **Hub:** Hub 2
-- **Sibling Links:** → 2.1 (Shibuya), → 2.4 (low-light noise)
-
-### Asset 3 — Tutorial
-**Title:** *How to Transition Cameras from Dry Heat to Tropical Humidity Without Condensation Damage*
-- **Target Query:** "camera condensation prevention" / "how to avoid lens fogging travel"
-- **Primary Triple:** `(Transition protocol) — [prevented] — (condensation in 4 cams)`
-- **Publish Date:** **Week 4, December 2027**
-- **Schema:** `HowTo` + `FAQPage`
-- **Proof Artifacts:** Sealed-bag protocol video, desiccant timing chart, before/after condensation photos
-- **Hub:** Bridge Spoke
-- **Sibling Links:** → 1.5 (desiccant recovery), → 3.4 (Texas transition)
-
-**Q4 2027 KPI Targets:** Bridge spoke live, 3-hub triangulation complete, 8% affiliate CTR, 4% email capture rate.
+**KPIs:** 9 posts live, 3,000 subscribers, 4 posts ranking top 10.
 
 ---
 
-## Q1 2028: Refresh + Legacy Audit
+### H3: Q4 2026 — Decision Framework Quarter (Hub 3 Launch)
 
-**Strategic Focus:** Close the GoPro Max 360 entity gap (flagged by Topical Architect) and refresh Hub 1 content with 2028 field data.
+**Trip:** Cartagena, Colombia (7 days, November 2026)
 
-**Field Test Window:** Oct–Dec 2027 (second monsoon cycle — comparative data)
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 10 | **Comparison** | I Brought All 3 Cameras to Cartagena — Here's Which One I Actually Used | Hub 3 | "which camera to bring to colombia" | Usage Share % table + gimbal vs 360 reframing time-per-shot |
+| 11 | **Destination Guide** | Cartagena in 7 Days: Why I Ditched the Gimbal for the Insta360 X5 | Hub 2 | "best camera for cartagena" | Tight-space reframing comparison + heat performance data |
+| 12 | **Tutorial** | My 3-2-1 Backup Workflow for 10 Countries in 2026 (Full Data) | Hub 3 | "travel camera backup workflow" | GB-per-day table + failure-recovery case study |
 
-### Asset 1 — Comparison
-**Title:** *GoPro Max 360 in 2028: Still Worth the Grams? (Pattaya Dust Season Re-Test)*
-- **Target Query:** "GoPro Max 360 still worth it 2028" / "GoPro Max 360 vs DJI Osmo 360 II"
-- **Primary Triple:** `(Max 360) — [failed again] — (Pattaya dust, day 4)`
-- **Publish Date:** **Week 2, January 2028**
-- **Schema:** `Review` + `Dataset` (legacy vs flagship comparison) + `FAQPage`
-- **Proof Artifacts:** Seal failure photos, dust ingress evidence, side-by-side with Osmo 360 II
-- **Hub:** Hub 1
-- **Sibling Links:** → 1.3 (original Pattaya failure), → 1.1 (Hanoi test)
+**Deliverables:**
+- Hub 3 pillar page live (`/multi-camera-loadout/`)
+- Lead magnet LM2 (3-Camera Loadout Quiz) launched
+- Full 3-hub entity graph closed (all cross-hub links live)
+- Year-end "State of Travel Cameras 2026" data report published
 
-### Asset 2 — Destination Guide
-**Title:** *Pattaya 360 Camera Guide: Dust Season, Salt Spray & Which Gear Survives*
-- **Target Query:** "best camera for Pattaya" / "action camera Thailand beach"
-- **Primary Triple:** `(Action 6) — [resisted corrosion] — (Pattaya coastal, 14 days)`
-- **Publish Date:** **Week 3, February 2028**
-- **Schema:** `HowTo` + `FAQPage` + `Dataset` (salt spray exposure log)
-- **Proof Artifacts:** Coastal GPS coordinates, AQI logs, corrosion progression photos
-- **Hub:** Hub 1
-- **Sibling Links:** → 1.4 (salt spray log), → 1.3 (Max 360 failure)
-
-### Asset 3 — Tutorial
-**Title:** *How to Audit a Legacy 360 Camera Before Your 2028 Asia Trip*
-- **Target Query:** "old 360 camera still good" / "when to replace action camera"
-- **Primary Triple:** `(Legacy audit protocol) — [identified] — (Max 360 seal degradation)`
-- **Publish Date:** **Week 4, March 2028**
-- **Schema:** `HowTo` + `FAQPage`
-- **Proof Artifacts:** Seal inspection photos, firmware version check, battery degradation data
-- **Hub:** Hub 3
-- **Sibling Links:** → 1.3 (Max 360 failure), → 3.3 (backpack tax)
-
-**Q1 2028 KPI Targets:** GoPro Max 360 entity gap closed, Hub 1 refreshed with 2028 data, 10% `/receipts` CTR, 7% affiliate CTR.
+**KPIs:** 12 posts live, 5,000 subscribers, 6 posts ranking top 10, 1 AI Overview citation confirmed.
 
 ---
 
-## Q2 2028: Deep Dive + Dataset Expansion
+## H2: 2027 — PHASE 2: Capture GEO/AI Overviews (Citation Lock)
 
-**Strategic Focus:** Expand the proprietary dataset with 2028 field data and publish deep-dive spokes that reinforce the triangulated graph.
+**Phase Goal:** Restructure all 2026 posts with Q&A schema + FAQ blocks. Publish 12 new posts targeting GEO citation. Reach 25,000 subscribers. Affiliate density rises to 2 links/1,000 words.
 
-**Field Test Window:** Jan–Mar 2028 (Tokyo + Hong Kong second cycle)
+---
 
-### Asset 1 — Comparison
-**Title:** *Insta360 X6 vs DJI Osmo
+### H3: Q1 2027 — GEO Restructure + New Destination Quarter
+
+**Trip:** Fukuoka, Japan (7 days, February 2027) + Hong Kong (5 days, March 2027)
+
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 13 | **Comparison** | Osmo Action 6 vs Insta360 X5: Rain Season + Night Market Low-Light (Fukuoka Data) | Hub 2 | "best camera for japan rain" | Rain-seal performance + ISO/noise comparison table |
+| 14 | **Destination Guide** | Fukuoka in 7 Days: Rain, Street Food, and the Camera That Handled Both | Hub 2 | "best camera for fukuoka" | Low-light ISO table + rain-seal degradation log |
+| 15 | **Tutorial** | How to Shoot 360° Reframing in Tight Colonial Streets (Cartagena + Hong Kong Workflow) | Hub 3 | "insta360 x5 reframing workflow" | Reframing time-per-clip table + render-time data |
+
+**Deliverables:**
+- All 12 2026 posts retrofitted with FAQ schema + JSON-LD `about`/`mentions`
+- "State of Travel Cameras 2027" annual report published (citation bait)
+- Author entity page expanded with passport stamp scan + GPS track archive
+
+**KPIs:** 15 posts live, 10,000 subscribers, 3 AI Overview citations confirmed.
+
+---
+
+### H3: Q2 2027 — Safari & Dust Quarter
+
+**Trip:** Nairobi, Kenya (10 days, May 2027)
+
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 16 | **Comparison** | GoPro Hero 13 vs DJI Osmo Action 6: Safari Vibration + Dust Ingress Test (Nairobi) | Hub 2 | "best camera for safari" | Stabilization hit-rate table + dust ingress photos |
+| 17 | **Destination Guide** | Nairobi in 10 Days: Safari Vibration, Dust, and Wildlife Stabilization Data | Hub 2 | "best camera for nairobi safari" | Vibration frequency log + wildlife tracking shot success rate |
+| 18 | **Tutorial** | How to Clean Dust Ingress From an Action Camera (Nairobi Field Method) | Hub 1 | "action camera dust cleaning" | PM2.5 exposure log + cleaning verification photos |
+
+**Deliverables:**
+- First African destination entity bound to camera graph
+- Dust ingress data table published (new proprietary metric)
+- Cross-hub link to Hub 1's humidity content (contrast: dry vs wet failure modes)
+
+**KPIs:** 18 posts live, 15,000 subscribers, 5 AI Overview citations.
+
+---
+
+### H3: Q3 2027 — SE Asia Multi-Destination Quarter
+
+**Trip:** Da Nang + Hanoi, Vietnam (14 days, August 2027)
+
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 19 | **Comparison** | Insta360 X5 vs GoPro Hero 13: Da Nang Beach vs Hanoi Old Quarter (14-Day Data) | Hub 2 | "best camera for vietnam" | Dual-environment failure mode comparison table |
+| 20 | **Destination Guide** | Da Nang + Hanoi in 14 Days: The 2-Camera Loadout That Worked | Hub 2 | "best camera for da nang" | Usage Share % across 2 cities + battery drain per activity |
+| 21 | **Tutorial** | Editing 400GB of Insta360 X5 Footage From Vietnam (Full Workflow) | Hub 3 | "insta360 x5 editing workflow" | Render-time table + reframing time-per-clip data |
+
+**Deliverables:**
+- Multi-city trip report format standardized
+- Editing workflow tutorial becomes Hub 3's highest-dwell-time asset
+- Cross-hub link to Hub 1's fogging content (Hanoi re-test)
+
+**KPIs:** 21 posts live, 20,000 subscribers, 8 AI Overview citations.
+
+---
+
+### H3: Q4 2027 — Warranty & Trust Quarter
+
+**Trip:** Bangkok, Thailand (7 days, November 2027) — warranty claim follow-up
+
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 22 | **Comparison** | DJI Osmo Action 6 vs GoPro Hero 13: Warranty Claim Timeline in Southeast Asia | Hub 3 | "dji warranty southeast asia" | Day-by-day claim timeline + redacted receipts |
+| 23 | **Destination Guide** | Bangkok in 7 Days: The Camera That Survived 2 Years of Tropical Testing | Hub 2 | "best camera for bangkok 2027" | 2-year durability data + corrosion progression photos |
+| 24 | **Tutorial** | The 2-Camera Rule: Why I Leave One at Home Every Trip (2027 Data) | Hub 3 | "how many cameras travel" | Weight/battery/charger matrix + regret log |
+
+**Deliverables:**
+- Warranty timeline becomes Hub 3's strongest trust signal
+- 2-year durability report published (unfakeable E-E-A-T)
+- "State of Travel Cameras 2027" mid-year update
+
+**KPIs:** 24 posts live, 25,000 subscribers, 12 AI Overview citations, 2 backlinks from tech publishers.
+
+---
+
+## H2: 2028 — PHASE 3: Defend & Expand (Field Test Lab)
+
+**Phase Goal:** Refresh all 2026–2027 posts with new gear (Hero 14/15, X6, Osmo Action 7). Launch public "Field Test Lab" database. Reach 75,000 subscribers. Affiliate density rises to 3 links/1,000 words.
+
+---
+
+### H3: Q1 2028 — Gear Refresh Quarter
+
+**Trip:** Miami, USA (7 days, February 2028) — new gear field test
+
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 25 | **Comparison** | GoPro Hero 14 vs Insta360 X6 vs DJI Osmo Action 7: First 7-Day Field Test (Miami) | Hub 1 | "gopro hero 14 vs insta360 x6" | New gear humidity + heat data table |
+| 26 | **Destination Guide** | Miami in 7 Days: New Gear, Same Tropical Failure Modes | Hub 2 | "best camera for miami" | Usage Share % for new gear + salt-air corrosion log |
+| 27 | **Tutorial** | How to Migrate Your 2026–2027 Field Data to New Gear (Firmware + Workflow) | Hub 3 | "action camera firmware migration" | Firmware compatibility table + workflow migration guide |
+
+**Deliverables:**
+- All 2026 posts refreshed with 2028 gear mentions + updated data tables
+- Field Test Lab public database launched (searchable by destination × camera × failure mode)
+- New gear entity declarations added to JSON-LD across all posts
+
+**KPIs:** 27 posts live, 40,000 subscribers, 20 AI Overview citations.
+
+---
+
+### H3: Q2 2028 — Field Test Lab Expansion Quarter
+
+**Trip:** Maldives (7 days, May 2028) — Field Test Lab data collection
+
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 28 | **Comparison** | Hero 14 vs X6 vs Osmo Action 7: 30-Day Salt-Air Corrosion Test (Maldives) | Hub 1 | "action camera saltwater corrosion 2028" | 30-day corrosion progression table (new gear) |
+| 29 | **Destination Guide** | Maldives in 7 Days: The 2028 Camera Loadout (Field Test Lab Data) | Hub 2 | "best camera for maldives 2028" | Field Test Lab cross-reference + Usage Share % |
+| 30 | **Tutorial** | How to Use the Field Test Lab Database (Public Tool Walkthrough) | Hub 3 | "action camera field test database" | Interactive database tutorial + CSV export guide |
+
+**Deliverables:**
+- Field Test Lab database reaches 500+ data points
+- Public API launched for researchers/journalists
+- First pitch to DPReview/PetaPixel as field-test counterpoint
+
+**KPIs:** 30 posts live, 55,000 subscribers, 30 AI Overview citations, 1 major publisher backlink.
+
+---
+
+### H3: Q3 2028 — Legacy Destination Refresh Quarter
+
+**Trip:** Siem Reap + Bangkok (14 days, August 2028) — 2-year comparison
+
+| # | Type | Title | Hub | Target Query | Proprietary Data Asset |
+|---|---|---|---|---|---|
+| 31 | **Comparison** | 2026 vs 2028: How the Same Destinations Broke Different Cameras (Siem Reap + Bangkok) | Hub 1 | "action camera durability 2028" | 2-year failure mode comparison table |
+| 32 | **Destination Guide** | Siem Reap in 10 Days: 2028 Update (New Gear, Same Temple Rules) | Hub 2 | "best camera for angkor wat 2028" | Updated temple-restriction log + new gear data |
+| 33 | **Tutorial** | The 3-2-1 Backup Workflow in 2028: What Changed (Cloud + Local + Field Test Lab) | Hub 3 | "travel camera backup 2028" | Updated GB-per-day table + cloud workflow comparison |
+
+**Deliverables:**
+- All 2026 destination posts refreshed with 2028 data
+- 2-year longitudinal study published (unfakeable E-E-A-T)
+- Field Test Lab reaches 1,000+ data points
+
+**KPIs:** 33 posts live, 65,000 subscribers, 40 AI Overview citations.
+
+---
+
+### H3: Q4 2028 — Defend & Monetize Quarter
+
+**Trip:** New York, USA (7 days, November 2028) — urban + cold-
