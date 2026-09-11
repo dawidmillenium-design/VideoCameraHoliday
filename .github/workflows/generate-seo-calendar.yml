@@ -23,7 +23,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}  # Use PAT instead of GITHUB_TOKEN
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -52,4 +52,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/seo_strategy_2026_2027.md docs/content_calendar_2026_2027.md
           git commit -m "docs: auto-generate SEO strategy and content calendar 2026-2027 [skip ci]" || echo "No changes to commit"
-          git push
+          git push origin HEAD:main  # Explicitly push to main branch
