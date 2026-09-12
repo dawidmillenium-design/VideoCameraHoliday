@@ -1,8 +1,5 @@
 name: Run Global SEO Pipeline (DeepSeek)
 
-# Trigger options:
-# 1. Manually from the GitHub Actions tab
-# 2. Automatically every Monday at 2:00 AM UTC (optional)
 on:
   workflow_dispatch:
     inputs:
@@ -11,7 +8,7 @@ on:
         required: false
         default: ''
   schedule:
-    - cron: '0 2 * * 1' # Runs every Monday at 2:00 AM UTC
+    - cron: '0 2 * * 1'
 
 jobs:
   generate-seo-content:
@@ -35,12 +32,9 @@ jobs:
           pip install requests pyyaml
 
       - name: Run Global SEO Pipeline
-        id: run_pipeline
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
-          # If languages input is provided, pass it as an argument (requires minor script tweak)
-          # Otherwise, it defaults to reading global_seo_crew.yaml
           python global_seo_pipeline.py
 
       - name: Create Pull Request with Generated Content
@@ -59,7 +53,7 @@ jobs:
             1. Review the generated content and DeepSeek SEO scores.
             2. Merge this PR to deploy the changes to the Jekyll site.
           branch: "auto-seo-content-${{ github.run_id }}"
-          base: "main" # Change to "master" if your default branch is master
+          base: "main"
           delete-branch: true
           add-paths: |
             output/
