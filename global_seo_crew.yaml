@@ -1,113 +1,147 @@
-# Global SEO Expansion Pipeline for Holiday Video Camera
-# Target: 11 Languages (Excluding PT-BR which is complete)
+# Global SEO Pipeline Configuration
+# All languages available on the blog
 
-project:
-  name: "Global SEO Content Pipeline"
-  base_url: "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
-  target_languages: ["es-ES", "it-IT", "fr-FR", "de-DE", "ja-JP", "ko-KR", "zh-CN", "ar-SA", "hi-IN", "tr-TR", "ru-RU"]
-  primary_keyword_base: "new cameras 2026"
+target_languages:
+  - "en-US"      # English
+  - "pl-PL"      # Polish
+  - "it-IT"      # Italian
+  - "de-DE"      # German
+  - "fr-FR"      # French
+  - "es-ES"      # Spanish
+  - "th-TH"      # Thai
+  - "ja-JP"      # Japanese
+  - "zh-CN"      # Chinese (Simplified)
+  - "pt-BR"      # Portuguese (Brazil)
+  - "nl-NL"      # Dutch
 
-agents:
-  - name: keyword_researcher
-    role: "Global Keyword Researcher"
-    goal: "Identify high-volume, low-competition long-tail keywords for 'new cameras' in the target language, including local retailer terms (e.g., 'Mercado Livre' for BR, 'Amazon.de' for DE)."
-    backstory: "You are an expert SEO analyst specializing in international search intent. You know how to find the exact phrases local photographers use when looking for new gear."
-    llm_config:
-      model: "qwen-max"
-      temperature: 0.3
-
-  - name: competitor_analyzer
-    role: "SERP Competitor Analyzer"
-    goal: "Analyze the top 5 local SERP results for the target keywords. Identify content gaps, word count averages, and missing schema markup."
-    backstory: "You are a competitive intelligence expert. You reverse-engineer why local niche publishers rank and find their weaknesses."
-    llm_config:
-      model: "qwen-max"
-      temperature: 0.2
-
-  - name: content_strategist
-    role: "Localization & Content Strategist"
-    goal: "Create a comprehensive content brief that adapts the English pillar page to the target culture, including local pricing, specific travel destinations, and cultural nuances."
-    backstory: "You are a global content director. You ensure content doesn't just translate, but truly localizes, avoiding machine-translation pitfalls."
-    llm_config:
-      model: "qwen-max"
-      temperature: 0.6
-
-  - name: tech_seo_auditor
-    role: "Technical SEO & Schema Architect"
-    goal: "Generate perfect JSON-LD schema (CollectionPage, FAQPage, BreadcrumbList) and define the exact URL structure and meta tags for the target language."
-    backstory: "You are a technical SEO wizard. You ensure every piece of content is perfectly structured for Google's crawlers and AI Overviews."
-    llm_config:
-      model: "qwen-coder"
-      temperature: 0.1
-
-  - name: eeat_validator
-    role: "EEAT & Trust Validator"
-    goal: "Ensure the content demonstrates Experience, Expertise, Authoritativeness, and Trust. Verify the inclusion of real-world testing scenarios, author credentials, and honest pros/cons."
-    backstory: "You are a strict editorial standards manager. You reject any content that sounds like generic AI fluff and demand real-world field-test evidence."
-    llm_config:
-      model: "qwen-max"
-      temperature: 0.4
-
-  - name: content_creator
-    role: "Native-Language Content Creator"
-    goal: "Write a 4,000+ word, highly engaging, SEO-optimized HTML pillar page in the target language, strictly following the brief and EEAT guidelines."
-    backstory: "You are a native-speaking travel videographer and copywriter. You write with passion, using local idioms and a conversational, expert tone."
-    llm_config:
-      model: "qwen-max"
-      temperature: 0.7
-
-  - name: linking_architect
-    role: "Internal Linking & Silo Architect"
-    goal: "Map and inject 15-25 contextual internal links, ensuring perfect Hub & Spoke architecture, regional cross-linking, and keyword-rich anchor text."
-    backstory: "You are an information architect. You build the connective tissue of the website to pass maximum link equity and keep users engaged."
-    llm_config:
-      model: "qwen-coder"
-      temperature: 0.2
-
-tasks:
-  - name: research_keywords
-    agent: keyword_researcher
-    description: "Research 1 primary and 5 long-tail keywords for {language}. Include local search volume estimates and intent classification."
-    expected_output: "JSON object with primary_kw, long_tail_kws, and search_intent."
-
-  - name: analyze_competitors
-    agent: competitor_analyzer
-    description: "Analyze top 5 SERP results for {primary_kw} in {language}. Identify word count, H2 structure, and missing topics."
-    expected_output: "JSON object with competitor_gaps, avg_word_count, and recommended_h2s."
-
-  - name: create_brief
-    agent: content_strategist
-    description: "Synthesize keyword and competitor data into a content brief. Define local pricing (e.g., € for DE, ¥ for JP), local retailers, and cultural filming tips."
-    expected_output: "Markdown content brief including target audience, tone, H2 outline, and local EEAT hooks."
-
-  - name: generate_schema
-    agent: tech_seo_auditor
-    description: "Generate JSON-LD for CollectionPage, FAQPage (3 questions), and BreadcrumbList. Define Title (<60 chars) and Meta Description (150-160 chars)."
-    expected_output: "Valid JSON-LD code blocks and meta tag strings."
-
-  - name: validate_eeat
-    agent: eeat_validator
-    description: "Review the generated content plan. Ensure it includes a 'How we tested' section, specific local locations (e.g., 'Shibuya Crossing' for JP), and an author box."
-    expected_output: "EEAT checklist with pass/fail status and required additions."
-
-  - name: write_content
-    agent: content_creator
-    description: "Write the full HTML pillar page in {language}. Integrate the schema, meta tags, and EEAT elements. Target 4000+ words."
-    expected_output: "Complete, valid HTML5 file ready for deployment."
-
-  - name: build_links
-    agent: linking_architect
-    description: "Inject 15+ internal links into the HTML. Link to the main English pillar, 3 local cluster pages, and 2 regional city guides."
-    expected_output: "Final HTML file with optimized anchor text and internal link map."
-
-pipeline:
-  execution_order:
-    - research_keywords
-    - analyze_competitors
-    - create_brief
-    - generate_schema
-    - validate_eeat
-    - write_content
-    - build_links
-  memory: true
-  cache: true
+# Language-specific settings for localization
+language_settings:
+  en-US:
+    currency: "USD"
+    retailers:
+      - "Amazon"
+      - "B&H Photo"
+      - "Best Buy"
+      - "Adorama"
+    test_locations:
+      - "New York"
+      - "Los Angeles"
+      - "Miami"
+    
+  pl-PL:
+    currency: "PLN"
+    retailers:
+      - "MediaMarkt"
+      - "Media Expert"
+      - "RTV Euro AGD"
+      - "Allegro"
+      - "Morele.net"
+    test_locations:
+      - "Warsaw"
+      - "Kraków"
+      - "Gdańsk"
+      - "Wrocław"
+      
+  it-IT:
+    currency: "EUR"
+    retailers:
+      - "Amazon.it"
+      - "Unieuro"
+      - "Trony"
+      - "Euronics"
+    test_locations:
+      - "Rome"
+      - "Milan"
+      - "Florence"
+      - "Venice"
+      
+  de-DE:
+    currency: "EUR"
+    retailers:
+      - "Amazon.de"
+      - "MediaMarkt"
+      - "Saturn"
+      - "Cyberport"
+    test_locations:
+      - "Berlin"
+      - "Munich"
+      - "Hamburg"
+      
+  fr-FR:
+    currency: "EUR"
+    retailers:
+      - "Amazon.fr"
+      - "Fnac"
+      - "Darty"
+      - "Boulanger"
+    test_locations:
+      - "Paris"
+      - "Lyon"
+      - "Marseille"
+      
+  es-ES:
+    currency: "EUR"
+    retailers:
+      - "Amazon.es"
+      - "MediaMarkt"
+      - "El Corte Inglés"
+      - "Fnac"
+    test_locations:
+      - "Madrid"
+      - "Barcelona"
+      - "Valencia"
+      
+  th-TH:
+    currency: "THB"
+    retailers:
+      - "Lazada Thailand"
+      - "Shopee Thailand"
+      - "Jaymart"
+    test_locations:
+      - "Bangkok"
+      - "Chiang Mai"
+      - "Phuket"
+      
+  ja-JP:
+    currency: "JPY"
+    retailers:
+      - "Amazon.co.jp"
+      - "Yodobashi Camera"
+      - "Bic Camera"
+    test_locations:
+      - "Tokyo"
+      - "Osaka"
+      - "Kyoto"
+      
+  zh-CN:
+    currency: "CNY"
+    retailers:
+      - "JD.com"
+      - "Tmall"
+      - "Suning"
+    test_locations:
+      - "Beijing"
+      - "Shanghai"
+      - "Guangzhou"
+      
+  pt-BR:
+    currency: "BRL"
+    retailers:
+      - "Amazon.com.br"
+      - "Magazine Luiza"
+      - "Casas Bahia"
+    test_locations:
+      - "São Paulo"
+      - "Rio de Janeiro"
+      - "Brasília"
+      
+  nl-NL:
+    currency: "EUR"
+    retailers:
+      - "Bol.com"
+      - "MediaMarkt"
+      - "Coolblue"
+    test_locations:
+      - "Amsterdam"
+      - "Rotterdam"
+      - "Utrecht"
