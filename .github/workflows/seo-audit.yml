@@ -29,21 +29,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 lxml pyyaml
 
-      - name: Create Fallback Script
-        run: |
-          cat > fallback_audit.py << 'ENDOFSCRIPT'
-import json
-report = {
-    'status': 'warning',
-    'message': 'Custom seo_audit.py not found.',
-    'broken_links': 0,
-    'canonical_mismatches': 0
-}
-with open('seo_report.json', 'w') as f:
-    json.dump(report, f, indent=2)
-print('Fallback report generated.')
-ENDOFSCRIPT
-
       - name: Run SEO Audit Script (Non-Failing)
         id: seo_audit
         continue-on-error: true
@@ -54,8 +39,19 @@ ENDOFSCRIPT
             echo "Running scripts/seo_audit.py..."
             python scripts/seo_audit.py || true
           else
-            echo "️ scripts/seo_audit.py not found. Running fallback..."
-            python fallback_audit.py
+            echo "⚠️ scripts/seo_audit.py not found. Running inline fallback..."
+            python3 -c "
+          import json
+          report = {
+              'status': 'warning',
+              'message': 'Custom seo_audit.py not found.',
+              'broken_links': 0,
+              'canonical_mismatches': 0
+          }
+          with open('seo_report.json', 'w') as f:
+              json.dump(report, f, indent=2)
+          print('Fallback report generated.')
+          "
           fi
           
           if [ ! -f "seo_report.md" ]; then
@@ -81,6 +77,6 @@ ENDOFSCRIPT
             
             The automated SEO audit has completed. 
             
-            - **Workflow Status:** ${{ steps.seo_audit.outcome == 'success' && '✅ Passed' || '⚠️ Completed with Warnings' }}
+            - **Workflow Status:** ${{ steps.seo_audit.outcome == 'success' && '✅ Passed' || '️ Completed with Warnings' }}
             - **Next Steps:** Download the **"seo-audit-results"** artifact to see details.
           message-id: seo-audit-comment
