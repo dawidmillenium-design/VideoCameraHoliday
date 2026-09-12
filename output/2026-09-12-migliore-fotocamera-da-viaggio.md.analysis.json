@@ -2,30 +2,34 @@
   "file": "2026-09-12-migliore-fotocamera-da-viaggio.md",
   "analysis": {
     "seo_score": 72,
-    "word_count": 1180,
-    "keyword_density_percent": 0.5,
-    "heading_analysis": "The heading structure is generally good with a clear H1 and multiple H2/H3 sections. However, some H2 headings are in English ('Introduction to Travel Photography', 'Key Features to Look For', 'Top 5 Travel Cameras in 2026') which is inconsistent with the Italian content and may confuse readers. The H1 includes the target keyword, but the H2s do not incorporate the target keyword or its variations. The H3s are descriptive but could be optimized with semantic keywords.",
+    "word_count": 1120,
+    "keyword_density_percent": 0.9,
+    "heading_analysis": "The heading structure is generally strong with a clear H1 and multiple H2/H3 sections. However, the H2 'Introduction to Travel Photography' is in English while the rest of the content is in Italian, creating inconsistency. The H2 'Key Features to Look For' is also in English. These should be translated to Italian for better relevance and user experience. The H3s under these sections are in Italian, which is good. The heading hierarchy is logical and covers key topics.",
     "missing_semantic_keywords": [
       "fotocamera mirrorless",
       "fotocamera compatta",
-      "fotocamera per vlog",
-      "fotocamera per viaggi",
-      "macchina fotografica da viaggio",
-      "fotocamera leggera",
-      "fotocamera resistente all'acqua",
-      "fotocamera con stabilizzazione",
-      "fotocamera con buona autonomia",
-      "fotocamera per fotografi di viaggio"
+      "travel vlogging",
+      "stabilizzazione",
+      "sensore APS-C",
+      "full-frame",
+      "obiettivo",
+      "treppiedi",
+      "gimbal",
+      "batteria",
+      "weather-sealed",
+      "4K",
+      "autofocus",
+      "qualit\u00e0 d'immagine",
+      "portabilit\u00e0"
     ],
     "actionable_fixes": [
-      "Increase keyword density to at least 0.8% by naturally incorporating the target keyword 'migliore fotocamera da viaggio' and its variations (e.g., 'fotocamera da viaggio', 'migliore fotocamera per viaggi') in the introduction, headings, and conclusion.",
-      "Translate English H2 headings to Italian to maintain consistency and improve user experience (e.g., 'Introduzione alla Fotografia di Viaggio', 'Caratteristiche Chiave da Cercare', 'Le 5 Migliori Fotocamere da Viaggio nel 2026').",
-      "Add semantic keywords such as 'fotocamera mirrorless', 'fotocamera compatta', 'fotocamera per vlog', 'fotocamera leggera', 'fotocamera resistente all'acqua', 'fotocamera con stabilizzazione', 'fotocamera con buona autonomia' throughout the content, especially in the features section and camera reviews.",
-      "Expand the content to at least 1500 words by adding more details on each camera model, including pros and cons, and a comparison table. Also, include a conclusion section that summarizes the best choices for different types of travelers.",
-      "Improve readability by using shorter paragraphs and bullet points where appropriate. The current content has some long paragraphs that could be broken down.",
-      "Include internal and external links to authoritative sources (e.g., DPReview, TechRadar) to enhance credibility and SEO.",
-      "Add alt text to images (if any) and ensure images are optimized for SEO with relevant filenames and captions.",
-      "Optimize meta title and description (not part of content but important for SEO) to include the target keyword and a compelling call-to-action."
+      "Translate the English H2 headings 'Introduction to Travel Photography' and 'Key Features to Look For' into Italian to maintain language consistency and improve SEO for Italian queries.",
+      "Increase the use of semantic keywords such as 'fotocamera mirrorless', 'fotocamera compatta', 'stabilizzazione', 'sensore APS-C', 'full-frame', 'obiettivo', 'treppiedi', 'gimbal', 'batteria', 'weather-sealed', '4K', 'autofocus', 'qualit\u00e0 d'immagine', and 'portabilit\u00e0' throughout the content to enhance topical relevance.",
+      "Add more internal and external links to authoritative sources to improve E-E-A-T and user engagement.",
+      "Include a meta description and optimize the title tag for better click-through rates from search results.",
+      "Consider adding a FAQ section to target long-tail keywords and featured snippets.",
+      "Ensure the target keyword 'migliore fotocamera da viaggio' appears in the first 100 words, in at least one H2, and in the conclusion for better on-page optimization.",
+      "Improve readability by breaking down long paragraphs and using more bullet points and numbered lists where appropriate."
     ]
   }
 }

@@ -1,0 +1,38 @@
+{
+  "file": "2026-09-12-thth.md",
+  "analysis": {
+    "seo_score": 68,
+    "word_count": 1180,
+    "keyword_density_percent": 0.9,
+    "heading_analysis": "The content has a clear H1 and multiple H2 and H3 headings. The H1 includes the target keyword. H2s cover key sections: Introduction, Key Features, Top 5 Cameras. H3s break down features and camera models. However, the heading structure is somewhat inconsistent: some H2s are in English while others are in Thai, and the H3s under 'Key Features' are numbered but not all are descriptive. The 'Top 5 Travel Cameras' section uses H3 for each camera, which is appropriate. Overall, the structure is logical but could be improved for better readability and keyword placement.",
+    "missing_semantic_keywords": [
+      "\u0e01\u0e25\u0e49\u0e2d\u0e07 mirrorless",
+      "\u0e01\u0e25\u0e49\u0e2d\u0e07\u0e04\u0e2d\u0e21\u0e41\u0e1e\u0e04",
+      "\u0e01\u0e25\u0e49\u0e2d\u0e07 vlog",
+      "\u0e01\u0e31\u0e19\u0e2a\u0e31\u0e48\u0e19",
+      "\u0e01\u0e31\u0e19\u0e19\u0e49\u0e33",
+      "\u0e41\u0e1a\u0e15\u0e40\u0e15\u0e2d\u0e23\u0e35\u0e48",
+      "\u0e40\u0e25\u0e19\u0e2a\u0e4c",
+      "\u0e40\u0e0b\u0e19\u0e40\u0e0b\u0e2d\u0e23\u0e4c",
+      "4K",
+      "\u0e44\u0e21\u0e42\u0e04\u0e23\u0e42\u0e1f\u0e19",
+      "\u0e19\u0e49\u0e33\u0e2b\u0e19\u0e31\u0e01\u0e40\u0e1a\u0e32",
+      "\u0e1e\u0e01\u0e1e\u0e32",
+      "\u0e17\u0e23\u0e34\u0e1b",
+      "\u0e16\u0e48\u0e32\u0e22\u0e20\u0e32\u0e1e",
+      "\u0e27\u0e34\u0e14\u0e35\u0e42\u0e2d"
+    ],
+    "actionable_fixes": [
+      "Increase word count to at least 1500 words by expanding camera reviews and adding a conclusion section.",
+      "Include more semantic keywords naturally in the content, especially in headings and image alt texts.",
+      "Improve heading structure by using consistent language (Thai) and ensuring each H2/H3 contains relevant keywords.",
+      "Add internal and external links to authoritative sources to enhance E-A-T.",
+      "Optimize meta title and description to include the target keyword and entice clicks.",
+      "Add a FAQ section to target long-tail keywords and improve featured snippet chances.",
+      "Ensure keyword density stays within 0.8-1.5% by monitoring and adjusting keyword usage.",
+      "Use more descriptive alt text for images (if any) and include keywords.",
+      "Break up long paragraphs for better readability on mobile devices.",
+      "Add a comparison table for the top 5 cameras to improve user experience and engagement."
+    ]
+  }
+}
