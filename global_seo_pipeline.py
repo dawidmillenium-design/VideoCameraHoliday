@@ -3,6 +3,7 @@ import json
 import re
 import requests
 import yaml
+import sys
 from typing import Dict, Any, List
 from datetime import datetime
 
@@ -16,6 +17,7 @@ class GlobalSEOPipeline:
             with open(config_path, 'r', encoding='utf-8') as f:
                 self.config = yaml.safe_load(f)
         except FileNotFoundError:
+            print(f"Warning: {config_path} not found. Using default settings.")
             self.config = {"target_languages": ["en-US"]}
 
     def _call_deepseek(self, system_prompt: str, user_prompt: str, temperature: float = 0.7) -> str:
@@ -114,6 +116,8 @@ class GlobalSEOPipeline:
         - Tone: {brief['tone']}
         - Target Audience: {brief['target_audience']}
         - Language: {language}
+        {f"- City Focus: {brief.get('city', 'N/A')}" if 'city' in brief else ""}
+        {f"- Local Landmarks to mention: {', '.join(brief.get('landmarks', []))}" if 'landmarks' in brief else ""}
         
         STRICT Requirements:
         1. Start with valid Jekyll YAML frontmatter:
@@ -173,7 +177,12 @@ class GlobalSEOPipeline:
         
         output_dir = "_posts"
         os.makedirs(output_dir, exist_ok=True)
+        
+        # Safe filename generation (handles non-Latin characters by falling back to language code)
         safe_keyword = re.sub(r'[^a-z0-9]+', '-', keywords['primary'].lower()).strip('-')
+        if not safe_keyword:
+            safe_keyword = language.lower().replace('-', '')
+            
         filename = f"{datetime.now().strftime('%Y-%m-%d')}-{safe_keyword}.md"
         filepath = os.path.join(output_dir, filename)
         
@@ -188,6 +197,69 @@ class GlobalSEOPipeline:
             
         return {"status": "success", "file": filepath, "score": deepseek_analysis.get('seo_score')}
 
+    # ==============================================================================
+    # NEW: SERIES GENERATION LOGIC
+    # ==============================================================================
+    def generate_series_articles(self, series_name: str):
+        """Generate a series of articles for different cities."""
+        series_config = self.config.get('series_config', {}).get(series_name)
+        
+        if not series_config:
+            print(f"❌ Series '{series_name}' not found in config!")
+            return
+        
+        print(f"🚀 Starting series generation: {series_name}")
+        print(f"Total cities to process: {len(series_config['cities'])}")
+        
+        for city_data in series_config['cities']:
+            city = city_data['name']
+            print(f"\n{'='*60}")
+            print(f"Generating article for: {city}, {city_data['country']}")
+            print(f"{'='*60}")
+            
+            keywords = {
+                "primary": city_data['local_keyword'],
+                "long_tail": [
+                    f"360 camera invisible stick {city}",
+                    f"best invisible stick for {city} photography",
+                    f"Insta360 invisible stick {city}"
+                ],
+                "search_intent": "commercial_investigation"
+            }
+            
+            brief = {
+                "h2_outline": [
+                    f"Shooting 360 Photos in {city}",
+                    f"Best Locations for Invisible Stick in {city}",
+                    f"Tips for {city_data['country']}",
+                    f"Gear Recommendations"
+                ],
+                "target_word_count": 1500,
+                "tone": "Adventurous & Practical",
+                "target_audience": "360 Camera Enthusiasts",
+                "city": city,
+                "landmarks": city_data['landmarks']
+            }
+            
+            content = self.generate_full_article(brief, keywords, city_data['language'])
+            score = self.score_content_with_deepseek(content, keywords['primary'])
+            
+            # Safe filename generation for cities with special characters
+            safe_city = city.lower().replace(' ', '-').replace('í', 'i').replace('ã', 'a').replace('ó', 'o').replace('ñ', 'n')
+            filename = f"{datetime.now().strftime('%Y-%m-%d')}-invisible-stick-{safe_city}.md"
+            
+            os.makedirs("_posts", exist_ok=True)
+            filepath = os.path.join("_posts", filename)
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(content)
+            
+            print(f"✅ Saved: {filepath}")
+            print(f"📊 SEO Score: {score.get('seo_score', 'N/A')}/100")
+
+    def run_series(self, series_name: str):
+        self.generate_series_articles(series_name)
+
     def run_full_pipeline(self, languages: List[str] = None):
         if languages is None:
             languages = self.config.get("target_languages", ["en-US"])
@@ -196,4 +268,10 @@ class GlobalSEOPipeline:
 
 if __name__ == "__main__":
     pipeline = GlobalSEOPipeline()
-    pipeline.run_full_pipeline()
+    
+    # Check if a series argument was provided via command line
+    if len(sys.argv) > 1 and sys.argv[1] == '--series':
+        series_name = sys.argv[2] if len(sys.argv) > 2 else 'invisible_stick_city'
+        pipeline.run_series(series_name)
+    else:
+        pipeline.run_full_pipeline()
