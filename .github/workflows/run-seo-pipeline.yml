@@ -3,12 +3,22 @@ name: Run Global SEO Pipeline (DeepSeek)
 on:
   workflow_dispatch:
     inputs:
+      mode:
+        description: 'Select mode: "languages" for multi-language OR "series" for city series'
+        required: false
+        default: 'languages'
+        type: choice
+        options:
+          - languages
+          - series
       languages:
-        description: 'Comma-separated language codes (e.g., en-US,pl-PL). Leave empty for ALL.'
+        description: 'Language codes (e.g., en-US,pl-PL). Only used if mode=languages'
         required: false
         default: ''
-  schedule:
-    - cron: '0 2 * * 1'
+      series_name:
+        description: 'Series name (e.g., invisible_stick_city). Only used if mode=series'
+        required: false
+        default: 'invisible_stick_city'
 
 jobs:
   generate-seo-content:
@@ -31,36 +41,49 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests pyyaml
 
-      - name: Run Global SEO Pipeline
+      - name: Run in Languages Mode
+        if: github.event.inputs.mode == 'languages' || github.event.inputs.mode == ''
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           LANGUAGES_INPUT: ${{ github.event.inputs.languages }}
         run: |
           if [ -n "$LANGUAGES_INPUT" ]; then
             echo "Running for specific languages: $LANGUAGES_INPUT"
-            python -c "
-                      import os, sys
-                      sys.path.insert(0, '.')
-                      from global_seo_pipeline import GlobalSEOPipeline
-                      languages = [l.strip() for l in os.environ['LANGUAGES_INPUT'].split(',')]
-                      pipeline = GlobalSEOPipeline()
-                      pipeline.run_full_pipeline(languages)
-                      "
+            python3 -c "
+import os, sys
+sys.path.insert(0, '.')
+from global_seo_pipeline import GlobalSEOPipeline
+languages = [l.strip() for l in os.environ['LANGUAGES_INPUT'].split(',')]
+pipeline = GlobalSEOPipeline()
+pipeline.run_full_pipeline(languages)
+"
           else
             echo "Running for ALL configured languages..."
             python global_seo_pipeline.py
           fi
 
-      - name: Create Pull Request with Generated Content
+      - name: Run in Series Mode
+        if: github.event.inputs.mode == 'series'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          echo "Running series: ${{ github.event.inputs.series_name }}"
+          python global_seo_pipeline.py --series ${{ github.event.inputs.series_name }}
+
+      - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: auto-generate SEO content for all languages"
-          title: " Multi-Language SEO Content (DeepSeek Pipeline)"
+          commit-message: "chore: auto-generate ${{ github.event.inputs.mode }} content"
+          title: "🤖 Auto-Generated Content: ${{ github.event.inputs.mode == 'series' && 'City Series' || 'Multi-Language' }}"
           body: |
-            This PR contains SEO-optimized content generated for ALL languages.
-            Check the `_posts/` directory for new content.
-          branch: "auto-seo-content-${{ github.run_id }}"
+            Auto-generated content via DeepSeek Pipeline.
+            
+            **Mode:** ${{ github.event.inputs.mode }}
+            ${{ github.event.inputs.mode == 'series' && '**Series:** ' || '' }}${{ github.event.inputs.mode == 'series' && github.event.inputs.series_name || '' }}
+            
+            **Files:** Check `_posts/` directory.
+          branch: "auto-content-${{ github.run_id }}"
           base: "main"
           delete-branch: true
           add-paths: |
