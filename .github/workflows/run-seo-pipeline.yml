@@ -1,7 +1,7 @@
 name: Run Global SEO Pipeline (DeepSeek)
 
 on:
-  workflow_dispatch:  # <--- THIS LINE MAKES THE BUTTON APPEAR
+  workflow_dispatch:
     inputs:
       languages:
         description: 'Comma-separated language codes (e.g., en-US,pl-PL). Leave empty for ALL.'
