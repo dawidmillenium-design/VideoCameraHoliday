@@ -1367,3 +1367,51 @@ main dd {
     margin-top: 20px;
 }
 .article-hero .meta span { display: inline-flex; align-items: center; gap: 6px; }
+/* ============================================================
+   Breadcrumbs + Article Hero (for injected article pages)
+   ============================================================ */
+
+.breadcrumbs {
+    max-width: var(--container);
+    margin: 24px auto 0;
+    padding: 0 24px;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+}
+.breadcrumbs ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+}
+.breadcrumbs li { display: inline-flex; align-items: center; }
+.breadcrumbs li + li::before {
+    content: "›";
+    margin: 0 8px;
+    color: var(--ink-muted);
+    opacity: 0.6;
+}
+.breadcrumbs a { color: var(--ink-muted); text-decoration: none; }
+.breadcrumbs a:hover { color: var(--accent); }
+.breadcrumbs [aria-current="page"] { color: var(--ink); font-weight: 500; }
+
+.article-hero {
+    padding: 64px 24px 48px;
+    text-align: center;
+    background: radial-gradient(circle at 50% 0%, rgba(240,165,0,0.10), transparent 55%), var(--bg);
+    border-bottom: 1px solid var(--line);
+}
+.article-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    max-width: 900px;
+    margin: 0 auto 16px;
+    background: linear-gradient(180deg, #ffffff 0%, #b8b8c0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
