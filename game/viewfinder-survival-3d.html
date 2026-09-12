@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Matcha Maya's Viewfinder Survival 3D | Holiday Video Camera</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Matcha Maya's Viewfinder Survival 3D | Holiday Video Camera</title>
+<style>
         :root {
             --matcha: #A8C686;
             --matcha-dark: #6B8E23;
@@ -256,84 +257,73 @@
             #stabilize-btn { padding: 10px 15px; font-size: 0.9rem; }
         }
     </style>
-</head>
+<link href="/css/modern-styles.css" rel="stylesheet"/></head>
 <body>
-
 <div id="game-wrapper">
-    <!-- Main Menu -->
-    <div id="menu-screen" class="screen">
-        <h1>🍵 Matcha Maya's Viewfinder Survival </h1>
-        <p style="text-align: center; max-width: 500px; margin-bottom: 30px; color: #ccc;">
+<!-- Main Menu -->
+<div class="screen" id="menu-screen">
+<h1>🍵 Matcha Maya's Viewfinder Survival </h1>
+<p style="text-align: center; max-width: 500px; margin-bottom: 30px; color: #ccc;">
             Experience the ultimate travel filming challenge. Manage battery, heat, and stability across 10 global destinations.
         </p>
-        <button class="btn" onclick="showScreen('setup-screen')">Start New Shoot</button>
-    </div>
-
-    <!-- Setup Screen -->
-    <div id="setup-screen" class="screen hidden">
-        <h2 style="color: var(--gold); margin-bottom: 20px;">📍 Choose Destination</h2>
-        <div class="setup-grid" id="destinations-grid"></div>
-        
-        <h2 style="color: var(--gold); margin: 20px 0;">📷 Choose Camera</h2>
-        <div class="setup-grid" id="cameras-grid"></div>
-
-        <button class="btn" id="start-btn" onclick="startGame()" disabled style="margin-top: 20px;">Start Recording</button>
-        <button class="btn" onclick="showScreen('menu-screen')" style="background: #444;">Back</button>
-    </div>
-
-    <!-- Game Screen -->
-    <div id="game-screen" class="screen hidden" style="padding: 0; justify-content: flex-start;">
-        <div id="hud" class="glass-panel" style="border-radius: 0 0 15px 15px; border-top: none;">
-            <div class="stat-bar">
-                <span class="stat-label">🔋 Battery</span>
-                <div class="bar-container"><div id="battery-fill" class="bar-fill" style="width: 100%"></div></div>
-            </div>
-            <div class="stat-bar">
-                <span class="stat-label">🔥 Heat</span>
-                <div class="bar-container"><div id="heat-fill" class="bar-fill" style="width: 0%"></div></div>
-            </div>
-            <div class="stat-bar">
-                <span class="stat-label">📉 Stability</span>
-                <div class="bar-container"><div id="stability-fill" class="bar-fill" style="width: 100%"></div></div>
-            </div>
-            <div class="stat-bar">
-                <span class="stat-label">🎯 Progress</span>
-                <div class="bar-container"><div id="progress-fill" class="bar-fill" style="width: 0%"></div></div>
-            </div>
-        </div>
-        
-        <div id="viewfinder-container">
-            <canvas id="game-canvas"></canvas>
-            
-            <!-- Advanced Effect Overlays -->
-            <div id="heat-overlay" class="effect-overlay"></div>
-            <div id="glitch-overlay" class="effect-overlay" style="background: linear-gradient(45deg, rgba(255,0,0,0.1), rgba(0,255,0,0.1), rgba(0,0,255,0.1));"></div>
-            
-            <div id="rec-indicator"><div id="rec-dot"></div> REC</div>
-            <div id="location-overlay" style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2);"></div>
-        </div>
-
-        <div id="controls">
-            <button id="stabilize-btn" onmousedown="startStabilize()" onmouseup="stopStabilize()" ontouchstart="startStabilize()" ontouchend="stopStabilize()">HOLD TO<br>STABILIZE</button>
-            <div id="record-btn" onmousedown="startRecord()" onmouseup="stopRecord()" ontouchstart="startRecord()" ontouchend="stopRecord()"></div>
-        </div>
-    </div>
-
-    <!-- Result Screen -->
-    <div id="result-screen" class="screen hidden">
-        <h2 id="result-title" style="font-size: 2rem; margin-bottom: 20px;">Shoot Complete!</h2>
-        <div class="glass-panel" style="padding: 25px; max-width: 500px; width: 100%; margin-bottom: 20px;">
-            <h3 style="color: var(--matcha); margin-bottom: 15px;">📊 Footage Stats</h3>
-            <div id="result-details" style="color: #ccc; line-height: 1.8;"></div>
-        </div>
-        <div class="glass-panel" style="padding: 25px; max-width: 500px; width: 100%; border-left: 4px solid var(--gold);">
-            <h3 style="color: var(--gold); margin-bottom: 10px;">🍵 Matcha Maya's Pro Tip</h3>
-            <p id="tip-text" style="color: #ccc; font-style: italic;"></p>
-        </div>
-        <button class="btn" onclick="showScreen('setup-screen')" style="margin-top: 20px;">Shoot Another Location</button>
-    </div>
+<button class="btn" onclick="showScreen('setup-screen')">Start New Shoot</button>
 </div>
-
+<!-- Setup Screen -->
+<div class="screen hidden" id="setup-screen">
+<h2 style="color: var(--gold); margin-bottom: 20px;">📍 Choose Destination</h2>
+<div class="setup-grid" id="destinations-grid"></div>
+<h2 style="color: var(--gold); margin: 20px 0;">📷 Choose Camera</h2>
+<div class="setup-grid" id="cameras-grid"></div>
+<button class="btn" disabled="" id="start-btn" onclick="startGame()" style="margin-top: 20px;">Start Recording</button>
+<button class="btn" onclick="showScreen('menu-screen')" style="background: #444;">Back</button>
+</div>
+<!-- Game Screen -->
+<div class="screen hidden" id="game-screen" style="padding: 0; justify-content: flex-start;">
+<div class="glass-panel" id="hud" style="border-radius: 0 0 15px 15px; border-top: none;">
+<div class="stat-bar">
+<span class="stat-label">🔋 Battery</span>
+<div class="bar-container"><div class="bar-fill" id="battery-fill" style="width: 100%"></div></div>
+</div>
+<div class="stat-bar">
+<span class="stat-label">🔥 Heat</span>
+<div class="bar-container"><div class="bar-fill" id="heat-fill" style="width: 0%"></div></div>
+</div>
+<div class="stat-bar">
+<span class="stat-label">📉 Stability</span>
+<div class="bar-container"><div class="bar-fill" id="stability-fill" style="width: 100%"></div></div>
+</div>
+<div class="stat-bar">
+<span class="stat-label">🎯 Progress</span>
+<div class="bar-container"><div class="bar-fill" id="progress-fill" style="width: 0%"></div></div>
+</div>
+</div>
+<div id="viewfinder-container">
+<canvas id="game-canvas"></canvas>
+<!-- Advanced Effect Overlays -->
+<div class="effect-overlay" id="heat-overlay"></div>
+<div class="effect-overlay" id="glitch-overlay" style="background: linear-gradient(45deg, rgba(255,0,0,0.1), rgba(0,255,0,0.1), rgba(0,0,255,0.1));"></div>
+<div id="rec-indicator"><div id="rec-dot"></div> REC</div>
+<div id="location-overlay" style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2);"></div>
+</div>
+<div id="controls">
+<button id="stabilize-btn" onmousedown="startStabilize()" onmouseup="stopStabilize()" ontouchend="stopStabilize()" ontouchstart="startStabilize()">HOLD TO<br/>STABILIZE</button>
+<div id="record-btn" onmousedown="startRecord()" onmouseup="stopRecord()" ontouchend="stopRecord()" ontouchstart="startRecord()"></div>
+</div>
+</div>
+<!-- Result Screen -->
+<div class="screen hidden" id="result-screen">
+<h2 id="result-title" style="font-size: 2rem; margin-bottom: 20px;">Shoot Complete!</h2>
+<div class="glass-panel" style="padding: 25px; max-width: 500px; width: 100%; margin-bottom: 20px;">
+<h3 style="color: var(--matcha); margin-bottom: 15px;">📊 Footage Stats</h3>
+<div id="result-details" style="color: #ccc; line-height: 1.8;"></div>
+</div>
+<div class="glass-panel" style="padding: 25px; max-width: 500px; width: 100%; border-left: 4px solid var(--gold);">
+<h3 style="color: var(--gold); margin-bottom: 10px;">🍵 Matcha Maya's Pro Tip</h3>
+<p id="tip-text" style="color: #ccc; font-style: italic;"></p>
+</div>
+<button class="btn" onclick="showScreen('setup-screen')" style="margin-top: 20px;">Shoot Another Location</button>
+</div>
+</div>
 <script>
 // --- GAME DATA ---
 const DESTINATIONS = [

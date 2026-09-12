@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matcha Maya's Global Lens Quest | Holiday Video Camera</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Matcha Maya's Global Lens Quest | Holiday Video Camera</title>
+<style>
         :root {
             --matcha-light: #A8C686;
             --matcha-dark: #6B8E23;
@@ -173,50 +174,44 @@
             #mobile-controls { display: grid; grid-template-columns: repeat(3, 1fr); }
         }
     </style>
-</head>
+<link href="/css/modern-styles.css" rel="stylesheet"/></head>
 <body>
-    <h1>🍵 Matcha Maya's Global Lens Quest 📸</h1>
-    
-    <div id="game-container">
-        <div class="map-bg"></div>
-        <div id="ui-layer">
-            <div class="score-box">🍵 Green Gold: <span id="score">0</span></div>
-            <div class="score-box">📍 <span id="location">Loading...</span></div>
-        </div>
-        
-        <div id="player">👩‍💻</div>
-        
-        <!-- Start Screen -->
-        <div id="start-screen" class="modal">
-            <h2 style="color: var(--gold);">Ready to Film?</h2>
-            <p>Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move Matcha Maya.</p>
-            <p>Collect 🍵 Matcha Green Gold, 📸 Lenses, and 💾 Memory Cards.</p>
-            <p>Avoid 🪫 Low Battery and 🌧️ Rain!</p>
-            <button class="btn" onclick="startGame()">Start Quest</button>
-        </div>
-
-        <!-- Game Over Screen -->
-        <div id="game-over-screen" class="modal hidden">
-            <h2 style="color: #ff6b6b;">Out of Battery!</h2>
-            <p>Final Green Gold Score: <strong id="final-score" style="color: var(--gold); font-size: 1.5rem;">0</strong></p>
-            <div class="ai-tip" id="ai-tip-box">
+<h1>🍵 Matcha Maya's Global Lens Quest 📸</h1>
+<div id="game-container">
+<div class="map-bg"></div>
+<div id="ui-layer">
+<div class="score-box">🍵 Green Gold: <span id="score">0</span></div>
+<div class="score-box">📍 <span id="location">Loading...</span></div>
+</div>
+<div id="player">👩‍💻</div>
+<!-- Start Screen -->
+<div class="modal" id="start-screen">
+<h2 style="color: var(--gold);">Ready to Film?</h2>
+<p>Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move Matcha Maya.</p>
+<p>Collect 🍵 Matcha Green Gold, 📸 Lenses, and 💾 Memory Cards.</p>
+<p>Avoid 🪫 Low Battery and 🌧️ Rain!</p>
+<button class="btn" onclick="startGame()">Start Quest</button>
+</div>
+<!-- Game Over Screen -->
+<div class="modal hidden" id="game-over-screen">
+<h2 style="color: #ff6b6b;">Out of Battery!</h2>
+<p>Final Green Gold Score: <strong id="final-score" style="color: var(--gold); font-size: 1.5rem;">0</strong></p>
+<div class="ai-tip" id="ai-tip-box">
                 Loading AI Travel Tip...
             </div>
-            <a id="blog-link" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/" target="_blank" class="btn">Read the Full Camera Review</a>
-            <button class="btn" onclick="resetGame()" style="background: #444; margin-top: 10px;">Play Again</button>
-        </div>
-    </div>
-
-    <div id="mobile-controls">
-        <div></div>
-        <div class="d-pad-btn" ontouchstart="setDir(0, -1)" ontouchend="stopDir()">⬆️</div>
-        <div></div>
-        <div class="d-pad-btn" ontouchstart="setDir(-1, 0)" ontouchend="stopDir()">⬅️</div>
-        <div class="d-pad-btn" ontouchstart="setDir(0, 1)" ontouchend="stopDir()">⬇️</div>
-        <div class="d-pad-btn" ontouchstart="setDir(1, 0)" ontouchend="stopDir()">➡️</div>
-    </div>
-
-    <script>
+<a class="btn" href="https://dawidmillenium-design.github.io/VideoCameraHoliday/" id="blog-link" target="_blank">Read the Full Camera Review</a>
+<button class="btn" onclick="resetGame()" style="background: #444; margin-top: 10px;">Play Again</button>
+</div>
+</div>
+<div id="mobile-controls">
+<div></div>
+<div class="d-pad-btn" ontouchend="stopDir()" ontouchstart="setDir(0, -1)">⬆️</div>
+<div></div>
+<div class="d-pad-btn" ontouchend="stopDir()" ontouchstart="setDir(-1, 0)">⬅️</div>
+<div class="d-pad-btn" ontouchend="stopDir()" ontouchstart="setDir(0, 1)">⬇️</div>
+<div class="d-pad-btn" ontouchend="stopDir()" ontouchstart="setDir(1, 0)">➡️</div>
+</div>
+<script>
 // Game State
 let score = 0;
 let isPlaying = false;
