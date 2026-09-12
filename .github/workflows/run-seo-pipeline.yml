@@ -39,13 +39,13 @@ jobs:
           if [ -n "$LANGUAGES_INPUT" ]; then
             echo "Running for specific languages: $LANGUAGES_INPUT"
             python -c "
-import os, sys
-sys.path.insert(0, '.')
-from global_seo_pipeline import GlobalSEOPipeline
-languages = [l.strip() for l in os.environ['LANGUAGES_INPUT'].split(',')]
-pipeline = GlobalSEOPipeline()
-pipeline.run_full_pipeline(languages)
-"
+                      import os, sys
+                      sys.path.insert(0, '.')
+                      from global_seo_pipeline import GlobalSEOPipeline
+                      languages = [l.strip() for l in os.environ['LANGUAGES_INPUT'].split(',')]
+                      pipeline = GlobalSEOPipeline()
+                      pipeline.run_full_pipeline(languages)
+                      "
           else
             echo "Running for ALL configured languages..."
             python global_seo_pipeline.py
