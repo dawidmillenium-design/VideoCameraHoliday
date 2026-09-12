@@ -35,7 +35,121 @@ class GlobalSEOPipeline:
 
     # --- Agent 1-6: Research & Briefing (Simulated for speed, replace with real APIs if desired) ---
     def generate_keyword_research(self, language: str) -> Dict[str, Any]:
-        return {"primary": "best travel camera", "long_tail": ["compact camera for travel", "lightweight vlogging camera"], "search_intent": "commercial_investigation"}
+        
+    """Generate localized keyword research for each language."""
+    
+    keywords_map = {
+        "en-US": {
+            "primary": "best travel camera",
+            "long_tail": [
+                "compact camera for travel",
+                "lightweight vlogging camera",
+                "mirrorless camera for travel",
+                "best camera for travel photography"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "pl-PL": {
+            "primary": "najlepszy aparat podróżniczy",
+            "long_tail": [
+                "kompaktowy aparat do podróży",
+                "lekki aparat do vlogowania",
+                "bezlustrowy aparat podróżny",
+                "jaki aparat na wakacje"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "it-IT": {
+            "primary": "migliore fotocamera da viaggio",
+            "long_tail": [
+                "fotocamera compatta per viaggi",
+                "macchina fotografica leggera",
+                "mirrorless per viaggi",
+                "migliore camera per vlog"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "de-DE": {
+            "primary": "beste reisekamera",
+            "long_tail": [
+                "kompakte kamera für reisen",
+                "spiegellose systemkamera reise",
+                "leichte kamera für urlaub",
+                "vlogging kamera"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "fr-FR": {
+            "primary": "meilleur appareil photo voyage",
+            "long_tail": [
+                "appareil photo compact voyage",
+                "caméra légère pour voyager",
+                "mirrorless voyage",
+                "appareil photo vlog"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "es-ES": {
+            "primary": "mejor cámara de viaje",
+            "long_tail": [
+                "cámara compacta para viajar",
+                "cámara ligera para viajes",
+                "mirrorless para viajes",
+                "cámara para vlogs de viaje"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "th-TH": {
+            "primary": "กล้องท่องเที่ยวที่ดีที่สุด",
+            "long_tail": [
+                "กล้องคอมแพคสำหรับเดินทาง",
+                "กล้องมิเรอร์เลสท่องเที่ยว",
+                "กล้อง vlog น้ำหนักเบา"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "ja-JP": {
+            "primary": "旅行用カメラ おすすめ",
+            "long_tail": [
+                "コンパクトカメラ 旅行",
+                "ミラーレスカメラ トラベル",
+                "軽量カメラ vlog"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "zh-CN": {
+            "primary": "最佳旅行相机",
+            "long_tail": [
+                "便携式旅行相机",
+                "轻便旅游相机",
+                "无反相机 旅行",
+                "vlog相机推荐"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "pt-BR": {
+            "primary": "melhor câmera de viagem",
+            "long_tail": [
+                "câmera compacta para viagem",
+                "câmera leve para viajar",
+                "mirrorless para viagem",
+                "câmera para vlog de viagem"
+            ],
+            "search_intent": "commercial_investigation"
+        },
+        "nl-NL": {
+            "primary": "beste reiscamera",
+            "long_tail": [
+                "compacte camera voor reizen",
+                "lichtgewicht camera reizen",
+                "mirrorless reiscamera",
+                "vlog camera"
+            ],
+            "search_intent": "commercial_investigation"
+        }
+    }    
+    return keywords_map.get(language, keywords_map["en-US"])
+
 
     def generate_content_brief(self, language: str, keywords: Dict) -> Dict[str, Any]:
         return {
