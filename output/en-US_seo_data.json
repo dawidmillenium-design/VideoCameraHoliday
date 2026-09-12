@@ -1,0 +1,92 @@
+{
+  "language": "en-US",
+  "meta_data": {
+    "title": "Best Travel Cameras for en-US in 2026",
+    "description": "Discover the best travel cameras in en-US.",
+    "canonical_url": "https://dawidmillenium-design.github.io/HolidayVideoCamera/en-US/guias/nuevas-camaras-2026/"
+  },
+  "schema_markup": {
+    "meta_title": "Best Travel Cameras for en-US in 2026",
+    "meta_description": "Discover the best travel cameras in en-US.",
+    "json_ld": {}
+  },
+  "content_brief": {
+    "h2_outline": [
+      "Introduction",
+      "Top Features",
+      "Best Models 2026",
+      "Buying Guide"
+    ],
+    "target_word_count": 3500,
+    "tone": "Authoritative & Engaging",
+    "target_audience": "Travel Vloggers"
+  },
+  "internal_link_map": {
+    "hub_links": [
+      "/reviews/"
+    ],
+    "cluster_links": [],
+    "regional_links": []
+  },
+  "keywords": {
+    "primary": "best travel camera",
+    "long_tail": [
+      "compact camera for travel"
+    ],
+    "search_intent": "commercial_investigation"
+  },
+  "competitor_data": {
+    "avg_word_count": 3500,
+    "top_headings": [
+      "Top Features",
+      "Best Models"
+    ]
+  },
+  "eeat_validation": {
+    "author_box": true,
+    "testing_methodology": true,
+    "local_locations": true,
+    "pros_and_cons": true,
+    "last_updated": true
+  },
+  "deepseek_seo_analysis": {
+    "seo_score": 12,
+    "word_count": 47,
+    "keyword_density_percent": 4.3,
+    "heading_analysis": "H1 contains the exact keyword 'Best Travel Cameras' (plural variation) but includes an awkward locale token 'en-US' that should be removed. H2 'Top Features of best travel camera' contains the exact keyword but is poorly capitalized and lacks specificity. H2 'Buying Guide' contains no keyword variation and misses an opportunity for a semantic heading like 'Best Travel Camera Buying Guide'. No H3 subheadings exist at all, so the required H1-H3 keyword variation coverage is incomplete.",
+    "missing_semantic_keywords": [
+      "mirrorless camera",
+      "compact camera",
+      "point and shoot",
+      "camera body",
+      "lens kit",
+      "image stabilization",
+      "4K video",
+      "weather sealing",
+      "APS-C sensor",
+      "full-frame sensor",
+      "autofocus",
+      "vlogging camera",
+      "travel photography",
+      "camera backpack",
+      "battery life",
+      "SD card",
+      "action camera",
+      "smartphone camera",
+      "zoom lens",
+      "low-light performance"
+    ],
+    "actionable_fixes": [
+      "Expand content from 47 words to at least 2500 words by adding detailed camera reviews, comparison tables, pros/cons sections, sample image discussions, and a FAQ block.",
+      "Remove the 'en-US' locale token from the H1 and rewrite it as 'Best Travel Cameras in 2026: Top Picks for Every Budget'.",
+      "Reduce keyword density from 4.3% to the 0.8%-1.5% range by using natural synonyms and pronouns instead of repeating 'best travel camera' in every heading and paragraph.",
+      "Add H3 subheadings under each H2 (e.g., 'Best Overall', 'Best Budget', 'Best for Vlogging') and include keyword variations such as 'best travel camera for beginners' and 'best compact travel camera'.",
+      "Rewrite the 'Buying Guide' H2 to 'Best Travel Camera Buying Guide: What to Look For' to include a keyword variation.",
+      "Break long paragraphs into 2-3 sentence chunks and add bulleted lists for features, pros/cons, and specifications to improve readability.",
+      "Bold key terms such as sensor size, megapixels, and image stabilization to improve scannability.",
+      "Incorporate missing semantic keywords like mirrorless camera, weather sealing, 4K video, and image stabilization naturally throughout the body content.",
+      "Add internal and external links to authoritative sources, plus a comparison table of top models to strengthen topical depth.",
+      "Include a meta title and meta description containing the target keyword and keep the meta description under 160 characters."
+    ]
+  }
+}
