@@ -1,28 +1,36 @@
 {
   "file": "2026-09-12-melhor-c-mera-de-viagem.md",
   "analysis": {
-    "seo_score": 72,
+    "seo_score": 78,
     "word_count": 1120,
     "keyword_density_percent": 0.45,
-    "heading_analysis": "A estrutura de cabe\u00e7alhos \u00e9 l\u00f3gica e bem organizada, com H1 \u00fanico, H2s para se\u00e7\u00f5es principais e H3s para subt\u00f3picos. No entanto, a palavra-chave principal aparece apenas no H1 e em alguns H2s, faltando em H3s importantes. A densidade da palavra-chave est\u00e1 abaixo do ideal (0.45% vs. 0.8-1.5%).",
+    "heading_analysis": "A estrutura de cabe\u00e7alhos \u00e9 l\u00f3gica e bem hierarquizada, com H1 \u00fanico, H2s para se\u00e7\u00f5es principais e H3s para subt\u00f3picos e modelos de c\u00e2mera. O H1 inclui a palavra-chave principal e varia\u00e7\u00f5es. No entanto, a palavra-chave exata 'melhor c\u00e2mera de viagem' aparece apenas no H1 e em um H2, enquanto os demais cabe\u00e7alhos usam varia\u00e7\u00f5es ou termos gen\u00e9ricos. Recomenda-se incluir a palavra-chave exata em pelo menos um H2 adicional e em alguns H3s para refor\u00e7ar a relev\u00e2ncia.",
     "missing_semantic_keywords": [
       "c\u00e2mera para viagem",
       "c\u00e2mera de viagem compacta",
-      "melhor c\u00e2mera para vlog de viagem",
       "c\u00e2mera mirrorless para viagem",
-      "c\u00e2mera resistente \u00e0 \u00e1gua",
-      "c\u00e2mera com boa autonomia",
+      "c\u00e2mera DSLR para viagem",
+      "c\u00e2mera \u00e0 prova d'\u00e1gua",
+      "c\u00e2mera com GPS",
+      "c\u00e2mera para vlog de viagem",
+      "c\u00e2mera para fotografia de viagem",
+      "c\u00e2mera de a\u00e7\u00e3o para viagem",
+      "c\u00e2mera com boa autonomia de bateria",
       "c\u00e2mera leve para viagem",
-      "c\u00e2mera para fotografia de viagem"
+      "c\u00e2mera com estabiliza\u00e7\u00e3o de imagem",
+      "c\u00e2mera 4K para viagem",
+      "c\u00e2mera com lente intercambi\u00e1vel",
+      "c\u00e2mera point and shoot para viagem"
     ],
     "actionable_fixes": [
-      "Aumentar a densidade da palavra-chave 'melhor c\u00e2mera de viagem' para pelo menos 0.8% (cerca de 9-10 ocorr\u00eancias no texto).",
-      "Incluir a palavra-chave principal em pelo menos um H2 e em alguns H3s, como 'Melhor C\u00e2mera de Viagem para Vloggers' ou 'Como Escolher a Melhor C\u00e2mera de Viagem'.",
-      "Adicionar palavras-chave sem\u00e2nticas como 'c\u00e2mera para viagem', 'c\u00e2mera de viagem compacta' e 'c\u00e2mera mirrorless para viagem' ao longo do texto.",
-      "Expandir o conte\u00fado para pelo menos 1500 palavras, aprofundando se\u00e7\u00f5es como 'Bateria e Autonomia' e 'Conectividade'.",
-      "Incluir uma se\u00e7\u00e3o de FAQ com perguntas como 'Qual a melhor c\u00e2mera de viagem custo-benef\u00edcio?' para capturar inten\u00e7\u00f5es de busca.",
-      "Otimizar a meta descri\u00e7\u00e3o e o t\u00edtulo para incluir a palavra-chave e aumentar o CTR.",
-      "Adicionar links internos para outros artigos relacionados, como 'melhores lentes para viagem' ou 'como proteger sua c\u00e2mera em viagens'."
+      "Aumentar a densidade da palavra-chave principal 'melhor c\u00e2mera de viagem' para pelo menos 0.8% (atualmente 0.45%). Isso pode ser feito inserindo a frase exata em mais par\u00e1grafos, especialmente na introdu\u00e7\u00e3o, conclus\u00e3o e em alguns H2s.",
+      "Incluir a palavra-chave exata em pelo menos um H2 adicional, como 'Como Escolher a Melhor C\u00e2mera de Viagem' ou 'Comparativo: Melhor C\u00e2mera de Viagem por Perfil'.",
+      "Adicionar uma se\u00e7\u00e3o de conclus\u00e3o ou veredito final que reforce a palavra-chave principal e resuma as recomenda\u00e7\u00f5es, aumentando a densidade e a relev\u00e2ncia sem\u00e2ntica.",
+      "Incorporar mais palavras-chave sem\u00e2nticas naturalmente no texto, como 'c\u00e2mera para viagem', 'c\u00e2mera mirrorless para viagem', 'c\u00e2mera compacta para viagem', 'c\u00e2mera \u00e0 prova d'\u00e1gua', 'c\u00e2mera com GPS', 'c\u00e2mera para vlog de viagem'.",
+      "Expandir o conte\u00fado para pelo menos 1500 palavras, aprofundando se\u00e7\u00f5es como 'Recursos Essenciais' e 'Guia de Compra', o que permite incluir mais varia\u00e7\u00f5es da palavra-chave e termos relacionados.",
+      "Otimizar a tabela comparativa para incluir a palavra-chave no t\u00edtulo ou em legendas, e garantir que a tabela esteja completa (o conte\u00fado atual est\u00e1 truncado).",
+      "Adicionar links internos para outros artigos relevantes sobre equipamentos fotogr\u00e1ficos, aumentando a autoridade t\u00f3pica e o tempo de perman\u00eancia.",
+      "Melhorar a legibilidade dividindo par\u00e1grafos longos e usando mais listas com marcadores, especialmente nas se\u00e7\u00f5es de pr\u00f3s e contras, para facilitar a leitura em dispositivos m\u00f3veis."
     ]
   }
 }

@@ -3,37 +3,27 @@
   "analysis": {
     "seo_score": 78,
     "word_count": 1120,
-    "keyword_density_percent": 0.9,
-    "heading_analysis": "The heading structure is strong and logical: one H1, multiple H2 sections, and H3 subsections for each camera model. The target keyword appears in the H1 and in several H2/H3 headings, which helps relevance. However, the content is truncated mid-sentence in the last section, so the heading structure is incomplete for the final camera model and any concluding sections.",
+    "keyword_density_percent": 0.45,
+    "heading_analysis": "The heading structure is well-organized with a clear H1 and multiple H2 and H3 subheadings. The target keyword appears in the H1 and in some H2s, but not all. Some H2s could be optimized to include the keyword or semantic variations.",
     "missing_semantic_keywords": [
+      "c\u00e1mara para viajar",
+      "c\u00e1mara de viaje compacta",
       "c\u00e1mara mirrorless para viajes",
-      "c\u00e1mara compacta para viajar",
-      "c\u00e1mara ligera para viajes",
-      "estabilizaci\u00f3n de imagen",
-      "battery life",
-      "weather-sealed",
-      "4K",
-      "vlog",
-      "fotograf\u00eda de viaje",
-      "sensor APS-C",
-      "full frame",
-      "IBIS",
-      "autofoco",
-      "calidad de imagen",
-      "portabilidad",
-      "autonom\u00eda"
+      "c\u00e1mara para vlogging de viaje",
+      "c\u00e1mara resistente al agua",
+      "c\u00e1mara con estabilizaci\u00f3n",
+      "c\u00e1mara ligera",
+      "c\u00e1mara para fotograf\u00eda de viaje"
     ],
     "actionable_fixes": [
-      "Complete the truncated content: finish the Fujifilm X-S20 section and add the remaining camera models (3, 4, 5) plus a conclusion and buying guide.",
-      "Increase word count to at least 1500-2000 words to improve depth and ranking potential for a competitive keyword.",
-      "Add more semantic keywords naturally, especially 'c\u00e1mara mirrorless para viajes', 'c\u00e1mara compacta para viajar', and 'c\u00e1mara ligera para viajes'.",
-      "Include a comparison table summarizing key specs (sensor, weight, video, battery) for the top 5 cameras.",
-      "Add internal links to related articles (e.g., 'mejores objetivos para viajar', 'c\u00f3mo elegir una c\u00e1mara') and external links to authoritative sources.",
-      "Optimize meta title and meta description with the target keyword and a compelling call-to-action.",
-      "Add alt text to images (if any) and ensure the target keyword appears in at least one image alt attribute.",
-      "Improve readability by breaking long paragraphs and using more bullet points and subheadings.",
-      "Include a FAQ section addressing common questions like '\u00bfCu\u00e1l es la mejor c\u00e1mara de viaje calidad-precio?' to capture featured snippets.",
-      "Ensure the target keyword appears in the first 100 words and in the conclusion."
+      "Increase the use of the target keyword 'mejor c\u00e1mara de viaje' and its variations to reach an ideal density of 0.8%-1.5%. Currently, it appears only about 5 times in 1120 words (0.45%).",
+      "Add more semantic keywords such as 'c\u00e1mara para viajar', 'c\u00e1mara de viaje compacta', 'c\u00e1mara mirrorless para viajes', etc., throughout the content to improve topical relevance.",
+      "Optimize some H2 headings to include the target keyword or close variations, e.g., 'Caracter\u00edsticas Clave a Buscar en una Mejor C\u00e1mara de Viaje'.",
+      "Expand the content to at least 1500 words to provide more depth and allow for natural keyword inclusion.",
+      "Include a conclusion or summary section that reiterates the target keyword and encourages action.",
+      "Add internal links to related articles (e.g., 'mejores objetivos para viajes') and external links to authoritative sources to enhance SEO.",
+      "Improve readability by breaking down long paragraphs and using more bullet points and numbered lists.",
+      "Ensure the meta description and title tag are optimized with the target keyword (though not part of the content, it's important for on-page SEO)."
     ]
   }
 }

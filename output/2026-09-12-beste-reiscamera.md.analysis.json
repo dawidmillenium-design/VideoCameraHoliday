@@ -1,31 +1,30 @@
 {
   "file": "2026-09-12-beste-reiscamera.md",
   "analysis": {
-    "seo_score": 78,
-    "word_count": 1180,
-    "keyword_density_percent": 0.5,
-    "heading_analysis": "The heading structure is strong and logical: one H1, multiple H2 sections, and H3 subsections. The target keyword appears in the H1 and in several H2/H3 headings, which helps relevance. However, the content is truncated, so the final sections may be incomplete.",
+    "seo_score": 72,
+    "word_count": 1120,
+    "keyword_density_percent": 0.45,
+    "heading_analysis": "The heading structure is strong and logical: one H1, multiple H2 sections, and H3 subsections for features and camera reviews. However, the content is truncated mid-sentence in the Canon EOS R8 section, leaving the article incomplete. The H1 includes the target keyword and year, which is good. H2s are descriptive and include semantic variations. H3s are used effectively for sub-topics. No missing heading levels.",
     "missing_semantic_keywords": [
       "reiscamera vergelijken",
-      "beste camera voor reizen",
+      "beste compacte camera",
       "reisvlog camera",
-      "compacte systeemcamera",
       "camera voor op reis",
-      "vlog camera",
       "reisfotografie camera",
       "lichtgewicht camera",
-      "4K reiscamera",
-      "actiecamera"
+      "mirrorless camera",
+      "4K camera",
+      "camera met beeldstabilisatie",
+      "weerbestendige camera"
     ],
     "actionable_fixes": [
-      "Increase the usage of the exact keyword 'beste reiscamera' to reach an ideal density of 0.8%-1.5% (currently ~0.5%).",
-      "Add missing semantic keywords naturally in the text, especially in headings and image alt texts.",
-      "Complete the truncated content to ensure all sections are fully developed and the word count reaches at least 1500 words for better topical authority.",
-      "Include internal links to related articles (e.g., 'beste camera voor reizen', 'reisvlog camera') to improve site structure.",
-      "Add a meta description and optimize the URL slug to include the target keyword.",
-      "Use more variations of the keyword in subheadings, such as 'beste reiscamera 2026' or 'beste reiscamera voor vloggers'.",
-      "Ensure the keyword appears in the first 100 words and in the conclusion.",
-      "Add a FAQ section with questions like 'Wat is de beste reiscamera?' to capture featured snippets."
+      "Increase the target keyword 'beste reiscamera' usage to reach an ideal density of 0.8%-1.5% (currently 0.45%). Incorporate it naturally in the introduction, conclusion, and a few subheadings.",
+      "Complete the truncated content, especially the Canon EOS R8 review and any remaining sections (e.g., comparison table, buying guide, conclusion).",
+      "Add a conclusion or summary section that reinforces the target keyword and provides a clear recommendation.",
+      "Include more semantic keywords such as 'reiscamera vergelijken', 'beste compacte camera', and 'reisvlog camera' in headings and body text to improve topical relevance.",
+      "Add internal and external links to authoritative sources (e.g., manufacturer specs, reviews) to enhance E-E-A-T.",
+      "Optimize meta title and description (not visible in content) to include the target keyword and a compelling call-to-action.",
+      "Consider adding a FAQ section to target long-tail queries and increase word count, which is currently on the lower side for a comprehensive guide."
     ]
   }
 }

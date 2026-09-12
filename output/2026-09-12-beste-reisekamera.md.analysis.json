@@ -1,28 +1,30 @@
 {
   "file": "2026-09-12-beste-reisekamera.md",
   "analysis": {
-    "seo_score": 78,
+    "seo_score": 72,
     "word_count": 1120,
-    "keyword_density_percent": 0.9,
-    "heading_analysis": "The heading structure is well-organized with a clear H1 and multiple H2 and H3 subheadings. The target keyword 'beste Reisekamera' appears in the H1 and in several H2s, which is good for SEO. However, the content ends abruptly with an H1 ('#') at the end, which is likely a formatting error and should be removed or corrected.",
+    "keyword_density_percent": 0.27,
+    "heading_analysis": "The heading structure is strong: one H1, multiple H2s, and H3s for features and camera models. However, the target keyword 'beste reisekamera' appears only in the H1 and not in any H2 or H3, missing opportunities to reinforce relevance. Some headings use English terms ('Key Features to Look For') which may not align with German search intent.",
     "missing_semantic_keywords": [
-      "Reisekamera Test",
-      "Reisekamera Vergleich",
-      "beste Kamera f\u00fcr Reisen",
-      "Reisekamera kaufen",
-      "Reisekamera Empfehlung",
-      "kompakte Reisekamera",
-      "Reisekamera f\u00fcr Vlogger",
-      "Reisekamera f\u00fcr Fotografen"
+      "reisekamera test",
+      "reisekamera vergleich",
+      "kompakte reisekamera",
+      "reisekamera kaufen",
+      "beste kamera f\u00fcr reisen",
+      "reisekamera 2026",
+      "reisezoom",
+      "vlog kamera",
+      "reisefotografie",
+      "kamera f\u00fcr backpacker"
     ],
     "actionable_fixes": [
-      "Remove the trailing H1 heading at the end of the content to avoid structural issues.",
-      "Increase the usage of semantic keywords such as 'Reisekamera Test', 'Reisekamera Vergleich', and 'beste Kamera f\u00fcr Reisen' naturally within the text.",
-      "Add a conclusion or summary section to provide a clear ending and reinforce the target keyword.",
-      "Consider adding internal links to related articles (e.g., 'Reisekamera Zubeh\u00f6r') to improve SEO.",
-      "Ensure the keyword 'beste Reisekamera' appears in the meta description and URL slug (if applicable).",
-      "Add alt text to images (if any) with relevant keywords.",
-      "Improve readability by breaking up long paragraphs and using more bullet points or numbered lists."
+      "Increase the target keyword 'beste reisekamera' usage to reach 0.8-1.5% density (currently 0.27%). Add it naturally in the introduction, at least one H2, and a few body paragraphs.",
+      "Include the target keyword in at least one H2 heading, e.g., 'Top 5 beste Reisekameras im Jahr 2026' or 'Worauf du bei der besten Reisekamera achten solltest'.",
+      "Add missing semantic keywords such as 'Reisekamera Test', 'Reisekamera Vergleich', 'kompakte Reisekamera', and 'Reisekamera kaufen' in relevant sections to improve topical relevance.",
+      "Replace English headings like 'Key Features to Look For' with German equivalents like 'Wichtige Funktionen, auf die du achten solltest' to better match German search queries.",
+      "Expand the content to at least 1500 words by adding a FAQ section, a buying guide, or more detailed comparisons to improve depth and ranking potential.",
+      "Ensure the target keyword appears in the first 100 words and in the meta description (if applicable) for better click-through and relevance.",
+      "Add internal links to related articles (e.g., 'Reisekamera Zubeh\u00f6r', 'Beste Reiseobjektive') and external links to authoritative sources to enhance E-A-T."
     ]
   }
 }
