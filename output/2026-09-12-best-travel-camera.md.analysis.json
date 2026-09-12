@@ -2,29 +2,32 @@
   "file": "2026-09-12-best-travel-camera.md",
   "analysis": {
     "seo_score": 78,
-    "word_count": 1050,
-    "keyword_density_percent": 0.57,
-    "heading_analysis": "The heading structure is well-organized with a clear H1 and multiple H2 and H3 subheadings. The H1 includes the target keyword, and H2s cover key aspects like features and top cameras. However, some H3s could be more descriptive and include semantic keywords to improve relevance.",
+    "word_count": 1120,
+    "keyword_density_percent": 0.45,
+    "heading_analysis": "The heading structure is logical and hierarchical, with a clear H1 and multiple H2 and H3 subheadings. However, the target keyword 'best travel camera' appears only in the H1 and not in any H2 or H3, missing opportunities to reinforce relevance. Some headings are generic (e.g., 'Introduction to Travel Photography') and could be optimized with semantic keywords.",
     "missing_semantic_keywords": [
       "travel camera",
+      "camera for travel",
+      "best camera for travel",
+      "travel photography camera",
       "compact travel camera",
       "mirrorless travel camera",
       "vlogging camera",
-      "travel photography",
-      "camera for travel",
-      "best camera for travel",
-      "travel vlog camera",
-      "lightweight travel camera",
-      "portable travel camera"
+      "point and shoot",
+      "travel zoom",
+      "camera backpack",
+      "travel tripod",
+      "camera strap"
     ],
     "actionable_fixes": [
-      "Increase the use of the target keyword 'best travel camera' to reach the ideal density of 0.8%-1.5%. Currently, it appears 6 times in 1050 words (0.57%).",
-      "Incorporate more semantic keywords such as 'travel camera', 'compact travel camera', and 'mirrorless travel camera' naturally throughout the content to improve topical relevance.",
-      "Expand the content to at least 1500 words to provide more depth and allow for better keyword integration.",
-      "Add a meta description and ensure the title tag includes the target keyword for better SERP visibility.",
-      "Include internal and external links to authoritative sources to enhance credibility and SEO.",
-      "Optimize images with alt text containing relevant keywords to improve accessibility and image search ranking.",
-      "Add a FAQ section to target long-tail keywords and featured snippets."
+      "Increase the usage of the exact keyword 'best travel camera' to reach a density of 0.8%-1.5% (currently 0.45%).",
+      "Incorporate the target keyword into at least one H2 heading, such as 'Top 5 Best Travel Cameras in 2026'.",
+      "Add more semantic keywords like 'travel camera', 'camera for travel', and 'compact travel camera' naturally throughout the content.",
+      "Expand the content to at least 1500 words to improve depth and keyword opportunities.",
+      "Improve readability by shortening some sentences and using more bullet points and subheadings.",
+      "Include a conclusion section that summarizes key points and reinforces the target keyword.",
+      "Add internal links to related articles (e.g., 'best travel tripods', 'camera bags for travel') to enhance topical authority.",
+      "Optimize meta title and description (not shown) to include the target keyword and a compelling call-to-action."
     ]
   }
 }

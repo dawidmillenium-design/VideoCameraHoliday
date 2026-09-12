@@ -2,30 +2,38 @@
   "file": "2026-09-12-mejor-c-mara-de-viaje.md",
   "analysis": {
     "seo_score": 78,
-    "word_count": 1050,
+    "word_count": 1120,
     "keyword_density_percent": 0.9,
-    "heading_analysis": "The heading structure is well-organized with a clear H1 and multiple H2 and H3 subheadings. The target keyword appears in the H1 and is naturally integrated into several H2s and H3s. However, some H2s could be more descriptive and keyword-rich to improve SEO.",
+    "heading_analysis": "The heading structure is strong and logical: one H1, multiple H2 sections, and H3 subsections for each camera model. The target keyword appears in the H1 and in several H2/H3 headings, which helps relevance. However, the content is truncated mid-sentence in the last section, so the heading structure is incomplete for the final camera model and any concluding sections.",
     "missing_semantic_keywords": [
-      "c\u00e1mara para viajar",
-      "c\u00e1mara de viaje compacta",
       "c\u00e1mara mirrorless para viajes",
-      "c\u00e1mara para vloggers",
-      "c\u00e1mara para fotograf\u00eda de viaje",
-      "c\u00e1mara resistente al agua",
-      "c\u00e1mara con estabilizaci\u00f3n",
-      "c\u00e1mara 4K para viajes",
-      "c\u00e1mara ligera para viajar",
-      "mejores c\u00e1maras de viaje 2026"
+      "c\u00e1mara compacta para viajar",
+      "c\u00e1mara ligera para viajes",
+      "estabilizaci\u00f3n de imagen",
+      "battery life",
+      "weather-sealed",
+      "4K",
+      "vlog",
+      "fotograf\u00eda de viaje",
+      "sensor APS-C",
+      "full frame",
+      "IBIS",
+      "autofoco",
+      "calidad de imagen",
+      "portabilidad",
+      "autonom\u00eda"
     ],
     "actionable_fixes": [
-      "Increase word count to at least 1500 words by expanding the analysis of each camera model and adding a buying guide section.",
-      "Include more semantic keywords such as 'c\u00e1mara para viajar', 'c\u00e1mara mirrorless para viajes', and 'c\u00e1mara 4K para viajes' naturally throughout the content.",
-      "Add internal and external links to authoritative sources to improve credibility and SEO.",
-      "Optimize meta title and meta description with the target keyword and compelling call-to-action.",
-      "Include more images with alt text containing the target keyword and related terms.",
-      "Add a FAQ section addressing common questions about travel cameras to capture featured snippets.",
-      "Improve readability by using shorter paragraphs and more bullet points in the analysis sections.",
-      "Ensure the target keyword appears in the first 100 words and in at least one H2 heading."
+      "Complete the truncated content: finish the Fujifilm X-S20 section and add the remaining camera models (3, 4, 5) plus a conclusion and buying guide.",
+      "Increase word count to at least 1500-2000 words to improve depth and ranking potential for a competitive keyword.",
+      "Add more semantic keywords naturally, especially 'c\u00e1mara mirrorless para viajes', 'c\u00e1mara compacta para viajar', and 'c\u00e1mara ligera para viajes'.",
+      "Include a comparison table summarizing key specs (sensor, weight, video, battery) for the top 5 cameras.",
+      "Add internal links to related articles (e.g., 'mejores objetivos para viajar', 'c\u00f3mo elegir una c\u00e1mara') and external links to authoritative sources.",
+      "Optimize meta title and meta description with the target keyword and a compelling call-to-action.",
+      "Add alt text to images (if any) and ensure the target keyword appears in at least one image alt attribute.",
+      "Improve readability by breaking long paragraphs and using more bullet points and subheadings.",
+      "Include a FAQ section addressing common questions like '\u00bfCu\u00e1l es la mejor c\u00e1mara de viaje calidad-precio?' to capture featured snippets.",
+      "Ensure the target keyword appears in the first 100 words and in the conclusion."
     ]
   }
 }

@@ -1,29 +1,36 @@
 {
   "file": "2026-09-12-najlepszy-aparat-podr-niczy.md",
   "analysis": {
-    "seo_score": 72,
+    "seo_score": 78,
     "word_count": 1120,
-    "keyword_density_percent": 0.8,
-    "heading_analysis": "Struktura nag\u0142\u00f3wk\u00f3w jest logiczna i hierarchiczna: H1 zawiera g\u0142\u00f3wn\u0105 fraz\u0119 kluczow\u0105, H2 obejmuj\u0105 kluczowe sekcje (wprowadzenie, cechy, top 5), a H3 szczeg\u00f3\u0142owo omawiaj\u0105 cechy i modele. Jednak nag\u0142\u00f3wek 'Introduction to Travel Photography' jest w j\u0119zyku angielskim, co jest niesp\u00f3jne z reszt\u0105 tre\u015bci i mo\u017ce negatywnie wp\u0142ywa\u0107 na SEO dla polskich fraz. Brakuje r\u00f3wnie\u017c H2 podsumowuj\u0105cego lub sekcji FAQ, kt\u00f3re cz\u0119sto poprawiaj\u0105 widoczno\u015b\u0107 w wyszukiwarkach.",
+    "keyword_density_percent": 0.9,
+    "heading_analysis": "Struktura nag\u0142\u00f3wk\u00f3w jest logiczna i hierarchiczna: H1 zawiera g\u0142\u00f3wn\u0105 fraz\u0119 kluczow\u0105, H2 obejmuj\u0105 wprowadzenie, cechy, list\u0119 top 5 i tabel\u0119 por\u00f3wnawcz\u0105, H3 rozwijaj\u0105 szczeg\u00f3\u0142y. Brakuje jednak H2 z synonimami lub pytaniami long-tail, kt\u00f3re mog\u0142yby poprawi\u0107 pokrycie tematyczne. Nag\u0142\u00f3wki s\u0105 zbyt og\u00f3lne w cz\u0119\u015bci 'Introduction to Travel Photography' \u2013 mieszanie j\u0119zyka angielskiego i polskiego mo\u017ce zaburza\u0107 sp\u00f3jno\u015b\u0107 j\u0119zykow\u0105.",
     "missing_semantic_keywords": [
       "aparat bezlusterkowy",
-      "matryca APS-C",
-      "pe\u0142na klatka",
+      "aparat kompaktowy",
+      "aparat dla podr\u00f3\u017cnika",
+      "fotografia podr\u00f3\u017cnicza",
+      "sprz\u0119t fotograficzny",
+      "aparat z stabilizacj\u0105",
+      "aparat wodoodporny",
+      "aparat do vlogowania",
+      "aparat pe\u0142noklatkowy",
+      "aparat APS-C",
+      "aparat Micro 4/3",
       "obiektyw uniwersalny",
-      "stabilizacja IBIS",
-      "filmy 4K",
-      "vlogowanie",
-      "akcesoria podr\u00f3\u017cne",
-      "torba na aparat",
-      "statyw podr\u00f3\u017cny"
+      "bateria do aparatu",
+      "aparat z 4K",
+      "aparat z IBIS"
     ],
     "actionable_fixes": [
-      "Zwi\u0119ksz g\u0119sto\u015b\u0107 s\u0142owa kluczowego 'najlepszy aparat podr\u00f3\u017cniczy' do oko\u0142o 1,2% poprzez naturalne wplecenie go w wi\u0119cej akapit\u00f3w, szczeg\u00f3lnie w sekcjach opisuj\u0105cych cechy i podsumowaniu.",
-      "Zmie\u0144 nag\u0142\u00f3wek 'Introduction to Travel Photography' na polski, np. 'Wprowadzenie do fotografii podr\u00f3\u017cniczej', aby zachowa\u0107 sp\u00f3jno\u015b\u0107 j\u0119zykow\u0105 i lepsze dopasowanie do fraz kluczowych.",
-      "Dodaj sekcj\u0119 H2 z podsumowaniem lub FAQ na ko\u0144cu artyku\u0142u, aby zwi\u0119kszy\u0107 szans\u0119 na featured snippets i poprawi\u0107 struktur\u0119.",
-      "Wprowad\u017a wi\u0119cej semantycznych s\u0142\u00f3w kluczowych, takich jak 'aparat bezlusterkowy', 'matryca APS-C', 'pe\u0142na klatka', 'obiektyw uniwersalny', 'stabilizacja IBIS', 'filmy 4K', 'vlogowanie', 'akcesoria podr\u00f3\u017cne', 'torba na aparat', 'statyw podr\u00f3\u017cny' w naturalny spos\u00f3b w tre\u015bci.",
-      "Popraw czytelno\u015b\u0107 poprzez skr\u00f3cenie niekt\u00f3rych zda\u0144 i dodanie wi\u0119kszej liczby list punktowanych, aby zwi\u0119kszy\u0107 zaanga\u017cowanie czytelnika.",
-      "Upewnij si\u0119, \u017ce docelowa fraza kluczowa pojawia si\u0119 w pierwszych 100 s\u0142owach, w co najmniej jednym H2 oraz w meta opisie (cho\u0107 ten nie jest cz\u0119\u015bci\u0105 tre\u015bci, warto o tym pami\u0119ta\u0107)."
+      "Zwi\u0119ksz g\u0119sto\u015b\u0107 s\u0142owa kluczowego 'najlepszy aparat podr\u00f3\u017cniczy' do oko\u0142o 1.2% poprzez naturalne wplecenie go w nag\u0142\u00f3wki H2/H3 oraz w pierwsze zdania akapit\u00f3w.",
+      "Dodaj H2 z pytaniami long-tail, np. 'Jaki aparat podr\u00f3\u017cniczy dla pocz\u0105tkuj\u0105cego?', 'Aparat podr\u00f3\u017cniczy do vlogowania \u2013 na co zwr\u00f3ci\u0107 uwag\u0119?', aby poprawi\u0107 pokrycie tematyczne.",
+      "Ujednoli\u0107 j\u0119zyk nag\u0142\u00f3wk\u00f3w \u2013 zast\u0105p angielskie 'Introduction to Travel Photography' polskim odpowiednikiem, np. 'Wprowadzenie do fotografii podr\u00f3\u017cniczej'.",
+      "Wprowad\u017a wi\u0119cej synonim\u00f3w i fraz semantycznych, takich jak 'aparat bezlusterkowy', 'aparat kompaktowy', 'sprz\u0119t fotograficzny', 'fotografia podr\u00f3\u017cnicza' w tre\u015bci, aby wzmocni\u0107 kontekst.",
+      "Rozszerz tre\u015b\u0107 do oko\u0142o 1500-1800 s\u0142\u00f3w, dodaj\u0105c sekcj\u0119 o akcesoriach podr\u00f3\u017cniczych (torby, statywy, filtry) oraz o tym, jak wybra\u0107 aparat w zale\u017cno\u015bci od typu podr\u00f3\u017cy.",
+      "Popraw czytelno\u015b\u0107 poprzez skr\u00f3cenie niekt\u00f3rych zda\u0144 i dodanie list punktowanych w sekcjach opisuj\u0105cych cechy \u2013 obecnie niekt\u00f3re akapity s\u0105 zbyt g\u0119ste.",
+      "Dodaj wewn\u0119trzne linkowanie do powi\u0105zanych artyku\u0142\u00f3w (np. o obiektywach, akcesoriach) oraz zewn\u0119trzne do autorytatywnych \u017ar\u00f3de\u0142, co mo\u017ce poprawi\u0107 SEO.",
+      "Uzupe\u0142nij tabel\u0119 por\u00f3wnawcz\u0105 \u2013 obecnie jest urwana, co mo\u017ce negatywnie wp\u0142ywa\u0107 na do\u015bwiadczenie u\u017cytkownika i postrzeganie kompletno\u015bci tre\u015bci."
     ]
   }
 }

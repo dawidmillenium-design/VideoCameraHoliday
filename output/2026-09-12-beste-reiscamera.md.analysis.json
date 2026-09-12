@@ -1,30 +1,31 @@
 {
   "file": "2026-09-12-beste-reiscamera.md",
   "analysis": {
-    "seo_score": 68,
+    "seo_score": 78,
     "word_count": 1180,
-    "keyword_density_percent": 0.9,
-    "heading_analysis": "Sterke H1 met exact keyword en jaar. Echter: H2 'Introduction to Travel Photography' is in het Engels terwijl de content Nederlands is; H2 'Key Features to Look For' en 'Top 5 Travel Cameras in 2026' zijn eveneens Engelstalig. Dit is inconsistent en kan de relevantie voor Nederlandstalige zoekopdrachten verminderen. Verder is de H2-structuur logisch, maar er ontbreken H2's met semantische varianten zoals 'Waar op letten bij een reiscamera' of 'Beste reiscamera per budget'. De H3's onder 'Key Features' zijn redelijk, maar missen exacte keyword-varianten. Algemene beoordeling: redelijk, maar taalconsistentie en keyword-optimalisatie in koppen moeten beter.",
+    "keyword_density_percent": 0.5,
+    "heading_analysis": "The heading structure is strong and logical: one H1, multiple H2 sections, and H3 subsections. The target keyword appears in the H1 and in several H2/H3 headings, which helps relevance. However, the content is truncated, so the final sections may be incomplete.",
     "missing_semantic_keywords": [
-      "reiscamera kopen",
-      "beste compactcamera reizen",
-      "camera voor reisvlog",
-      "lichtgewicht reiscamera",
-      "reiscamera met wifi",
-      "waterdichte reiscamera",
       "reiscamera vergelijken",
-      "budget reiscamera",
-      "reiscamera accessoires",
-      "reiscamera statief"
+      "beste camera voor reizen",
+      "reisvlog camera",
+      "compacte systeemcamera",
+      "camera voor op reis",
+      "vlog camera",
+      "reisfotografie camera",
+      "lichtgewicht camera",
+      "4K reiscamera",
+      "actiecamera"
     ],
     "actionable_fixes": [
-      "Vertaal alle Engelse H2-koppen naar het Nederlands, bijvoorbeeld 'Introduction to Travel Photography' \u2192 'Inleiding tot Reisfotografie', 'Key Features to Look For' \u2192 'Belangrijke Kenmerken van een Reiscamera', 'Top 5 Travel Cameras in 2026' \u2192 'Top 5 Beste Reiscamera's in 2026'.",
-      "Verhoog de exacte keyword-dichtheid licht naar ~1,2% door 'beste reiscamera' 2-3 keer extra natuurlijk te verwerken, bijvoorbeeld in de inleiding en in de conclusie.",
-      "Voeg een H2 toe zoals 'Waar moet je op letten bij het kopen van een reiscamera?' en verwerk daarin semantische varianten als 'reiscamera kopen' en 'reiscamera vergelijken'.",
-      "Gebruik in H3-koppen vaker exacte of semantische varianten, bijvoorbeeld 'Image stabilization (IBIS)' \u2192 'Beeldstabilisatie (IBIS) voor reiscamera's'.",
-      "Voeg een sectie toe over 'Beste reiscamera per budget' met H3's als 'Budget reiscamera's onder \u20ac800' en 'Premium reiscamera's boven \u20ac1500' om long-tail zoekwoorden te dekken.",
-      "Zorg voor een consistente taal: vermijd Engelse termen in koppen en gebruik Nederlandse equivalenten, tenzij de Engelse term gangbaar is (zoals 'mirrorless').",
-      "Breid de content uit naar minimaal 1500 woorden door dieper in te gaan op accessoires (statieven, filters, geheugenkaarten) en praktische reistips, wat de relevantie en gebruikerservaring verbetert."
+      "Increase the usage of the exact keyword 'beste reiscamera' to reach an ideal density of 0.8%-1.5% (currently ~0.5%).",
+      "Add missing semantic keywords naturally in the text, especially in headings and image alt texts.",
+      "Complete the truncated content to ensure all sections are fully developed and the word count reaches at least 1500 words for better topical authority.",
+      "Include internal links to related articles (e.g., 'beste camera voor reizen', 'reisvlog camera') to improve site structure.",
+      "Add a meta description and optimize the URL slug to include the target keyword.",
+      "Use more variations of the keyword in subheadings, such as 'beste reiscamera 2026' or 'beste reiscamera voor vloggers'.",
+      "Ensure the keyword appears in the first 100 words and in the conclusion.",
+      "Add a FAQ section with questions like 'Wat is de beste reiscamera?' to capture featured snippets."
     ]
   }
 }
