@@ -1,0 +1,31 @@
+{
+  "file": "2026-09-12-migliore-fotocamera-da-viaggio.md",
+  "analysis": {
+    "seo_score": 72,
+    "word_count": 1180,
+    "keyword_density_percent": 0.5,
+    "heading_analysis": "The heading structure is generally good with a clear H1 and multiple H2/H3 sections. However, some H2 headings are in English ('Introduction to Travel Photography', 'Key Features to Look For', 'Top 5 Travel Cameras in 2026') which is inconsistent with the Italian content and may confuse readers. The H1 includes the target keyword, but the H2s do not incorporate the target keyword or its variations. The H3s are descriptive but could be optimized with semantic keywords.",
+    "missing_semantic_keywords": [
+      "fotocamera mirrorless",
+      "fotocamera compatta",
+      "fotocamera per vlog",
+      "fotocamera per viaggi",
+      "macchina fotografica da viaggio",
+      "fotocamera leggera",
+      "fotocamera resistente all'acqua",
+      "fotocamera con stabilizzazione",
+      "fotocamera con buona autonomia",
+      "fotocamera per fotografi di viaggio"
+    ],
+    "actionable_fixes": [
+      "Increase keyword density to at least 0.8% by naturally incorporating the target keyword 'migliore fotocamera da viaggio' and its variations (e.g., 'fotocamera da viaggio', 'migliore fotocamera per viaggi') in the introduction, headings, and conclusion.",
+      "Translate English H2 headings to Italian to maintain consistency and improve user experience (e.g., 'Introduzione alla Fotografia di Viaggio', 'Caratteristiche Chiave da Cercare', 'Le 5 Migliori Fotocamere da Viaggio nel 2026').",
+      "Add semantic keywords such as 'fotocamera mirrorless', 'fotocamera compatta', 'fotocamera per vlog', 'fotocamera leggera', 'fotocamera resistente all'acqua', 'fotocamera con stabilizzazione', 'fotocamera con buona autonomia' throughout the content, especially in the features section and camera reviews.",
+      "Expand the content to at least 1500 words by adding more details on each camera model, including pros and cons, and a comparison table. Also, include a conclusion section that summarizes the best choices for different types of travelers.",
+      "Improve readability by using shorter paragraphs and bullet points where appropriate. The current content has some long paragraphs that could be broken down.",
+      "Include internal and external links to authoritative sources (e.g., DPReview, TechRadar) to enhance credibility and SEO.",
+      "Add alt text to images (if any) and ensure images are optimized for SEO with relevant filenames and captions.",
+      "Optimize meta title and description (not part of content but important for SEO) to include the target keyword and a compelling call-to-action."
+    ]
+  }
+}
