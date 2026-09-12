@@ -18,7 +18,6 @@ class GlobalSEOPipeline:
         except FileNotFoundError:
             self.config = {"target_languages": ["en-US"]}
 
-    # --- Helper: Call DeepSeek API ---
     def _call_deepseek(self, system_prompt: str, user_prompt: str, temperature: float = 0.7) -> str:
         headers = {"Content-Type": "application/json", "Authorization": f"Bearer {self.deepseek_api_key}"}
         payload = {
@@ -33,123 +32,65 @@ class GlobalSEOPipeline:
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"]
 
-    # --- Agent 1-6: Research & Briefing (Simulated for speed, replace with real APIs if desired) ---
     def generate_keyword_research(self, language: str) -> Dict[str, Any]:
-        
-    """Generate localized keyword research for each language."""
-    
-    keywords_map = {
-        "en-US": {
-            "primary": "best travel camera",
-            "long_tail": [
-                "compact camera for travel",
-                "lightweight vlogging camera",
-                "mirrorless camera for travel",
-                "best camera for travel photography"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "pl-PL": {
-            "primary": "najlepszy aparat podróżniczy",
-            "long_tail": [
-                "kompaktowy aparat do podróży",
-                "lekki aparat do vlogowania",
-                "bezlustrowy aparat podróżny",
-                "jaki aparat na wakacje"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "it-IT": {
-            "primary": "migliore fotocamera da viaggio",
-            "long_tail": [
-                "fotocamera compatta per viaggi",
-                "macchina fotografica leggera",
-                "mirrorless per viaggi",
-                "migliore camera per vlog"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "de-DE": {
-            "primary": "beste reisekamera",
-            "long_tail": [
-                "kompakte kamera für reisen",
-                "spiegellose systemkamera reise",
-                "leichte kamera für urlaub",
-                "vlogging kamera"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "fr-FR": {
-            "primary": "meilleur appareil photo voyage",
-            "long_tail": [
-                "appareil photo compact voyage",
-                "caméra légère pour voyager",
-                "mirrorless voyage",
-                "appareil photo vlog"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "es-ES": {
-            "primary": "mejor cámara de viaje",
-            "long_tail": [
-                "cámara compacta para viajar",
-                "cámara ligera para viajes",
-                "mirrorless para viajes",
-                "cámara para vlogs de viaje"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "th-TH": {
-            "primary": "กล้องท่องเที่ยวที่ดีที่สุด",
-            "long_tail": [
-                "กล้องคอมแพคสำหรับเดินทาง",
-                "กล้องมิเรอร์เลสท่องเที่ยว",
-                "กล้อง vlog น้ำหนักเบา"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "ja-JP": {
-            "primary": "旅行用カメラ おすすめ",
-            "long_tail": [
-                "コンパクトカメラ 旅行",
-                "ミラーレスカメラ トラベル",
-                "軽量カメラ vlog"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "zh-CN": {
-            "primary": "最佳旅行相机",
-            "long_tail": [
-                "便携式旅行相机",
-                "轻便旅游相机",
-                "无反相机 旅行",
-                "vlog相机推荐"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "pt-BR": {
-            "primary": "melhor câmera de viagem",
-            "long_tail": [
-                "câmera compacta para viagem",
-                "câmera leve para viajar",
-                "mirrorless para viagem",
-                "câmera para vlog de viagem"
-            ],
-            "search_intent": "commercial_investigation"
-        },
-        "nl-NL": {
-            "primary": "beste reiscamera",
-            "long_tail": [
-                "compacte camera voor reizen",
-                "lichtgewicht camera reizen",
-                "mirrorless reiscamera",
-                "vlog camera"
-            ],
-            "search_intent": "commercial_investigation"
+        keywords_map = {
+            "en-US": {
+                "primary": "best travel camera",
+                "long_tail": ["compact camera for travel", "lightweight vlogging camera", "mirrorless camera for travel"],
+                "search_intent": "commercial_investigation"
+            },
+            "pl-PL": {
+                "primary": "najlepszy aparat podróżniczy",
+                "long_tail": ["kompaktowy aparat do podróży", "lekki aparat do vlogowania", "bezlustrowy aparat podróżny"],
+                "search_intent": "commercial_investigation"
+            },
+            "it-IT": {
+                "primary": "migliore fotocamera da viaggio",
+                "long_tail": ["fotocamera compatta per viaggi", "macchina fotografica leggera", "mirrorless per viaggi"],
+                "search_intent": "commercial_investigation"
+            },
+            "de-DE": {
+                "primary": "beste reisekamera",
+                "long_tail": ["kompakte kamera für reisen", "spiegellose systemkamera reise", "leichte kamera für urlaub"],
+                "search_intent": "commercial_investigation"
+            },
+            "fr-FR": {
+                "primary": "meilleur appareil photo voyage",
+                "long_tail": ["appareil photo compact voyage", "caméra légère pour voyager", "mirrorless voyage"],
+                "search_intent": "commercial_investigation"
+            },
+            "es-ES": {
+                "primary": "mejor cámara de viaje",
+                "long_tail": ["cámara compacta para viajar", "cámara ligera para viajes", "mirrorless para viajes"],
+                "search_intent": "commercial_investigation"
+            },
+            "th-TH": {
+                "primary": "กล้องท่องเที่ยวที่ดีที่สุด",
+                "long_tail": ["กล้องคอมแพคสำหรับเดินทาง", "กล้องมิเรอร์เลสท่องเที่ยว", "กล้อง vlog น้ำหนักเบา"],
+                "search_intent": "commercial_investigation"
+            },
+            "ja-JP": {
+                "primary": "旅行用カメラ おすすめ",
+                "long_tail": ["コンパクトカメラ 旅行", "ミラーレスカメラ トラベル", "軽量カメラ vlog"],
+                "search_intent": "commercial_investigation"
+            },
+            "zh-CN": {
+                "primary": "最佳旅行相机",
+                "long_tail": ["便携式旅行相机", "轻便旅游相机", "无反相机 旅行"],
+                "search_intent": "commercial_investigation"
+            },
+            "pt-BR": {
+                "primary": "melhor câmera de viagem",
+                "long_tail": ["câmera compacta para viagem", "câmera leve para viajar", "mirrorless para viagem"],
+                "search_intent": "commercial_investigation"
+            },
+            "nl-NL": {
+                "primary": "beste reiscamera",
+                "long_tail": ["compacte camera voor reizen", "lichtgewicht camera reizen", "mirrorless reiscamera"],
+                "search_intent": "commercial_investigation"
+            }
         }
-    }    
-    return keywords_map.get(language, keywords_map["en-US"])
-
+        return keywords_map.get(language, keywords_map["en-US"])
 
     def generate_content_brief(self, language: str, keywords: Dict) -> Dict[str, Any]:
         return {
@@ -159,7 +100,6 @@ class GlobalSEOPipeline:
             "target_audience": "Travel Vloggers and Photographers"
         }
 
-    # --- Agent 7: Content Creator (REAL GENERATION) ---
     def generate_full_article(self, brief: Dict, keywords: Dict, language: str) -> str:
         print("  -> Instructing Content Creator Agent to write long-form Markdown...")
         system_prompt = "You are an expert SEO content writer and travel photography specialist. You write comprehensive, long-form, highly detailed Markdown articles optimized for search engines and human readers."
@@ -192,7 +132,6 @@ class GlobalSEOPipeline:
         """
         return self._call_deepseek(system_prompt, user_prompt, temperature=0.7)
 
-    # --- Agent 8: SEO Scorer ---
     def score_content_with_deepseek(self, content: str, target_keyword: str) -> Dict[str, Any]:
         print(f"  -> Sending generated content to DeepSeek API for scoring (Keyword: '{target_keyword}')...")
         truncated_content = content[:8000] 
@@ -216,29 +155,23 @@ class GlobalSEOPipeline:
                 prompt,
                 temperature=0.1
             )
-            # Clean markdown wrapping if present
             response_text = re.sub(r'^```json\s*', '', response_text, flags=re.MULTILINE)
             response_text = re.sub(r'\s*```$', '', response_text, flags=re.MULTILINE)
             return json.loads(response_text)
         except Exception as e:
             return {"seo_score": 0, "error": str(e)}
 
-    # --- Execution & Saving ---
     def execute_pipeline_for_language(self, language: str) -> Dict[str, Any]:
         print(f"\n{'='*60}\nProcessing language: {language}\n{'='*60}")
         
         keywords = self.generate_keyword_research(language)
         brief = self.generate_content_brief(language, keywords)
         
-        # Generate REAL content
         generated_content = self.generate_full_article(brief, keywords, language)
-        
-        # Score the REAL content
         deepseek_analysis = self.score_content_with_deepseek(generated_content, keywords['primary'])
         print(f"✅ DeepSeek SEO Score: {deepseek_analysis.get('seo_score', 'N/A')}/100")
         
-        # Save to output folder
-        output_dir = "output/generated_posts"
+        output_dir = "_posts"
         os.makedirs(output_dir, exist_ok=True)
         safe_keyword = re.sub(r'[^a-z0-9]+', '-', keywords['primary'].lower()).strip('-')
         filename = f"{datetime.now().strftime('%Y-%m-%d')}-{safe_keyword}.md"
@@ -248,8 +181,8 @@ class GlobalSEOPipeline:
             f.write(generated_content)
         print(f"💾 Saved generated post to: {filepath}")
         
-        # Also save the analysis JSON
-        analysis_path = os.path.join(output_dir, f"{filename}.analysis.json")
+        analysis_path = os.path.join("output", f"{filename}.analysis.json")
+        os.makedirs("output", exist_ok=True)
         with open(analysis_path, 'w', encoding='utf-8') as f:
             json.dump({"file": filename, "analysis": deepseek_analysis}, f, indent=2)
             
