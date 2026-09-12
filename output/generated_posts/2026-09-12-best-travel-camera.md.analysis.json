@@ -1,0 +1,29 @@
+{
+  "file": "2026-09-12-best-travel-camera.md",
+  "analysis": {
+    "seo_score": 78,
+    "word_count": 1180,
+    "keyword_density_percent": 0.9,
+    "heading_analysis": "The content has a clear H1 and multiple H2 and H3 headings that logically structure the guide. The target keyword appears in the H1 and is naturally integrated into several H2s and body text. However, the H2 'Introduction to Travel Photography' is somewhat generic and could be more keyword-focused. The heading hierarchy is well-maintained.",
+    "missing_semantic_keywords": [
+      "travel camera",
+      "compact camera",
+      "mirrorless camera",
+      "vlogging camera",
+      "point and shoot",
+      "camera for travel",
+      "best camera for travel",
+      "travel photography camera",
+      "lightweight camera",
+      "portable camera"
+    ],
+    "actionable_fixes": [
+      "Increase word count to at least 1500 words by expanding the camera reviews and adding a conclusion or comparison table.",
+      "Add more semantic keywords such as 'travel camera', 'compact camera', 'mirrorless camera', and 'vlogging camera' naturally throughout the content.",
+      "Optimize the H2 'Introduction to Travel Photography' to include the target keyword, e.g., 'Why Choosing the Best Travel Camera Matters'.",
+      "Include internal and external links to authoritative sources to improve SEO.",
+      "Add alt text to images (if any) and ensure the meta description is compelling.",
+      "Consider adding a FAQ section to target long-tail keywords and improve featured snippet chances."
+    ]
+  }
+}
