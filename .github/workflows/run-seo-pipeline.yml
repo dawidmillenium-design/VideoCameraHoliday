@@ -19,6 +19,8 @@ on:
         description: 'Series name (e.g., invisible_stick_city). Only used if mode=series'
         required: false
         default: 'invisible_stick_city'
+  schedule:
+    - cron: '0 2 * * 1'
 
 jobs:
   generate-seo-content:
@@ -67,10 +69,10 @@ pipeline.run_full_pipeline(languages)
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
-          echo "Running series: ${{ github.event.inputs.series_name }}"
+          echo "🚀 Running series: ${{ github.event.inputs.series_name }}"
           python global_seo_pipeline.py --series ${{ github.event.inputs.series_name }}
 
-      - name: Create Pull Request
+      - name: Create Pull Request with Generated Content
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -82,7 +84,11 @@ pipeline.run_full_pipeline(languages)
             **Mode:** ${{ github.event.inputs.mode }}
             ${{ github.event.inputs.mode == 'series' && '**Series:** ' || '' }}${{ github.event.inputs.mode == 'series' && github.event.inputs.series_name || '' }}
             
-            **Files:** Check `_posts/` directory.
+            **Files:** Check `_posts/` directory for new articles.
+            
+            **Next Steps:**
+            1. Review the generated content and DeepSeek SEO scores.
+            2. Merge this PR to deploy the changes.
           branch: "auto-content-${{ github.run_id }}"
           base: "main"
           delete-branch: true
