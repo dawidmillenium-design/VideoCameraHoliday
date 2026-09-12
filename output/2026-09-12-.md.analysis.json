@@ -1,0 +1,30 @@
+{
+  "file": "2026-09-12-.md",
+  "analysis": {
+    "seo_score": 82,
+    "word_count": 2850,
+    "keyword_density_percent": 0.9,
+    "heading_analysis": "Heading structure is strong: one H1, multiple H2 sections, and H3 subsections for key elements and camera models. The H1 includes the target keyword and year, H2s cover why, key factors, recommendations, buying guide, and conclusion. H3s are used for each factor and camera model, improving scannability. However, some H2s could be more keyword-focused, and the H1 is quite long.",
+    "missing_semantic_keywords": [
+      "\u65c5\u884c\u76f8\u673a\u63a8\u8350",
+      "\u5fae\u5355\u76f8\u673a",
+      "\u76f8\u673a\u8bc4\u6d4b",
+      "\u65c5\u884c\u6444\u5f71\u5668\u6750",
+      "\u8f7b\u4fbf\u76f8\u673a",
+      "vlog\u76f8\u673a",
+      "\u5168\u753b\u5e45\u76f8\u673a",
+      "APS-C\u76f8\u673a",
+      "\u76f8\u673a\u9632\u6296",
+      "4K\u89c6\u9891\u76f8\u673a"
+    ],
+    "actionable_fixes": [
+      "Increase keyword density slightly by naturally incorporating '\u6700\u4f73\u65c5\u884c\u76f8\u673a' in more subheadings and body text, aiming for 1.0-1.2%.",
+      "Add missing semantic keywords like '\u65c5\u884c\u76f8\u673a\u63a8\u8350', '\u5fae\u5355\u76f8\u673a', 'vlog\u76f8\u673a' in relevant sections to improve topical relevance.",
+      "Shorten the H1 to be more concise while keeping the target keyword, e.g., '2026\u5e74\u6700\u4f73\u65c5\u884c\u76f8\u673a\uff1a5\u6b3e\u7cbe\u9009\u673a\u578b\u63a8\u8350'.",
+      "Include more internal and external links to authoritative sources to enhance E-A-T.",
+      "Add alt text to images (if any) with target keyword and semantic variations.",
+      "Optimize meta description and title tag (not shown in content) to include target keyword and compelling call-to-action.",
+      "Consider adding a FAQ section to target long-tail keywords and improve featured snippet opportunities."
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "file": "2026-09-12-beste-reiscamera.md",
+  "analysis": {
+    "seo_score": 68,
+    "word_count": 1180,
+    "keyword_density_percent": 0.9,
+    "heading_analysis": "Sterke H1 met exact keyword en jaar. Echter: H2 'Introduction to Travel Photography' is in het Engels terwijl de content Nederlands is; H2 'Key Features to Look For' en 'Top 5 Travel Cameras in 2026' zijn eveneens Engelstalig. Dit is inconsistent en kan de relevantie voor Nederlandstalige zoekopdrachten verminderen. Verder is de H2-structuur logisch, maar er ontbreken H2's met semantische varianten zoals 'Waar op letten bij een reiscamera' of 'Beste reiscamera per budget'. De H3's onder 'Key Features' zijn redelijk, maar missen exacte keyword-varianten. Algemene beoordeling: redelijk, maar taalconsistentie en keyword-optimalisatie in koppen moeten beter.",
+    "missing_semantic_keywords": [
+      "reiscamera kopen",
+      "beste compactcamera reizen",
+      "camera voor reisvlog",
+      "lichtgewicht reiscamera",
+      "reiscamera met wifi",
+      "waterdichte reiscamera",
+      "reiscamera vergelijken",
+      "budget reiscamera",
+      "reiscamera accessoires",
+      "reiscamera statief"
+    ],
+    "actionable_fixes": [
+      "Vertaal alle Engelse H2-koppen naar het Nederlands, bijvoorbeeld 'Introduction to Travel Photography' \u2192 'Inleiding tot Reisfotografie', 'Key Features to Look For' \u2192 'Belangrijke Kenmerken van een Reiscamera', 'Top 5 Travel Cameras in 2026' \u2192 'Top 5 Beste Reiscamera's in 2026'.",
+      "Verhoog de exacte keyword-dichtheid licht naar ~1,2% door 'beste reiscamera' 2-3 keer extra natuurlijk te verwerken, bijvoorbeeld in de inleiding en in de conclusie.",
+      "Voeg een H2 toe zoals 'Waar moet je op letten bij het kopen van een reiscamera?' en verwerk daarin semantische varianten als 'reiscamera kopen' en 'reiscamera vergelijken'.",
+      "Gebruik in H3-koppen vaker exacte of semantische varianten, bijvoorbeeld 'Image stabilization (IBIS)' \u2192 'Beeldstabilisatie (IBIS) voor reiscamera's'.",
+      "Voeg een sectie toe over 'Beste reiscamera per budget' met H3's als 'Budget reiscamera's onder \u20ac800' en 'Premium reiscamera's boven \u20ac1500' om long-tail zoekwoorden te dekken.",
+      "Zorg voor een consistente taal: vermijd Engelse termen in koppen en gebruik Nederlandse equivalenten, tenzij de Engelse term gangbaar is (zoals 'mirrorless').",
+      "Breid de content uit naar minimaal 1500 woorden door dieper in te gaan op accessoires (statieven, filters, geheugenkaarten) en praktische reistips, wat de relevantie en gebruikerservaring verbetert."
+    ]
+  }
+}
