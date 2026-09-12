@@ -1,0 +1,52 @@
+name: Update Sitemap
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'scripts/generate_sitemap.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate sitemap
+        run: python scripts/generate_sitemap.py
+
+      - name: Check for changes
+        id: check
+        run: |
+          if git diff --quiet sitemap.xml; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes to sitemap."
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Sitemap updated:"
+            git diff --stat sitemap.xml
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "chore: auto-update sitemap.xml [skip ci]"
+          git push
