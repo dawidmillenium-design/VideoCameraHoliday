@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'Select mode: "languages" for multi-language OR "series" for city series'
+        description: 'Select mode: languages or series'
         required: false
         default: 'languages'
         type: choice
@@ -12,15 +12,13 @@ on:
           - languages
           - series
       languages:
-        description: 'Language codes (e.g., en-US,pl-PL). Only used if mode=languages'
+        description: 'Language codes (e.g., en-US,pl-PL). Only for languages mode.'
         required: false
         default: ''
       series_name:
-        description: 'Series name (e.g., invisible_stick_city). Only used if mode=series'
+        description: 'Series name (e.g., invisible_stick_city). Only for series mode.'
         required: false
         default: 'invisible_stick_city'
-  schedule:
-    - cron: '0 2 * * 1'
 
 jobs:
   generate-seo-content:
@@ -69,26 +67,18 @@ pipeline.run_full_pipeline(languages)
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
-          echo "🚀 Running series: ${{ github.event.inputs.series_name }}"
+          echo "Running series: ${{ github.event.inputs.series_name }}"
           python global_seo_pipeline.py --series ${{ github.event.inputs.series_name }}
 
       - name: Create Pull Request with Generated Content
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: auto-generate ${{ github.event.inputs.mode }} content"
-          title: "🤖 Auto-Generated Content: ${{ github.event.inputs.mode == 'series' && 'City Series' || 'Multi-Language' }}"
+          commit-message: "chore: auto-generate content"
+          title: "Auto-Generated Content"
           body: |
             Auto-generated content via DeepSeek Pipeline.
-            
-            **Mode:** ${{ github.event.inputs.mode }}
-            ${{ github.event.inputs.mode == 'series' && '**Series:** ' || '' }}${{ github.event.inputs.mode == 'series' && github.event.inputs.series_name || '' }}
-            
-            **Files:** Check `_posts/` directory for new articles.
-            
-            **Next Steps:**
-            1. Review the generated content and DeepSeek SEO scores.
-            2. Merge this PR to deploy the changes.
+            Check `_posts/` directory for new articles.
           branch: "auto-content-${{ github.run_id }}"
           base: "main"
           delete-branch: true
