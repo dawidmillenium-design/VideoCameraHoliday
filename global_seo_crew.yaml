@@ -1,147 +1,322 @@
-# Global SEO Pipeline Configuration
-# All languages available on the blog
+# ==============================================================================
+# GLOBAL SEO PIPELINE CONFIGURATION
+# ==============================================================================
 
 target_languages:
-  - "en-US"      # English
-  - "pl-PL"      # Polish
-  - "it-IT"      # Italian
-  - "de-DE"      # German
-  - "fr-FR"      # French
-  - "es-ES"      # Spanish
-  - "th-TH"      # Thai
-  - "ja-JP"      # Japanese
-  - "zh-CN"      # Chinese (Simplified)
-  - "pt-BR"      # Portuguese (Brazil)
-  - "nl-NL"      # Dutch
+  - "en-US"
+  - "pl-PL"
+  - "it-IT"
+  - "de-DE"
+  - "fr-FR"
+  - "es-ES"
+  - "th-TH"
+  - "ja-JP"
+  - "zh-CN"
+  - "pt-BR"
+  - "nl-NL"
 
-# Language-specific settings for localization
 language_settings:
   en-US:
     currency: "USD"
-    retailers:
-      - "Amazon"
-      - "B&H Photo"
-      - "Best Buy"
-      - "Adorama"
-    test_locations:
-      - "New York"
-      - "Los Angeles"
-      - "Miami"
-    
+    retailers: ["Amazon", "B&H Photo", "Best Buy", "Adorama"]
+    test_locations: ["New York", "Los Angeles", "Miami"]
   pl-PL:
     currency: "PLN"
-    retailers:
-      - "MediaMarkt"
-      - "Media Expert"
-      - "RTV Euro AGD"
-      - "Allegro"
-      - "Morele.net"
-    test_locations:
-      - "Warsaw"
-      - "Kraków"
-      - "Gdańsk"
-      - "Wrocław"
-      
+    retailers: ["MediaMarkt", "Media Expert", "RTV Euro AGD", "Allegro"]
+    test_locations: ["Warsaw", "Kraków", "Gdańsk"]
   it-IT:
     currency: "EUR"
-    retailers:
-      - "Amazon.it"
-      - "Unieuro"
-      - "Trony"
-      - "Euronics"
-    test_locations:
-      - "Rome"
-      - "Milan"
-      - "Florence"
-      - "Venice"
-      
+    retailers: ["Amazon.it", "Unieuro", "Trony", "Euronics"]
+    test_locations: ["Rome", "Milan", "Florence"]
   de-DE:
     currency: "EUR"
-    retailers:
-      - "Amazon.de"
-      - "MediaMarkt"
-      - "Saturn"
-      - "Cyberport"
-    test_locations:
-      - "Berlin"
-      - "Munich"
-      - "Hamburg"
-      
+    retailers: ["Amazon.de", "MediaMarkt", "Saturn", "Cyberport"]
+    test_locations: ["Berlin", "Munich", "Hamburg"]
   fr-FR:
     currency: "EUR"
-    retailers:
-      - "Amazon.fr"
-      - "Fnac"
-      - "Darty"
-      - "Boulanger"
-    test_locations:
-      - "Paris"
-      - "Lyon"
-      - "Marseille"
-      
+    retailers: ["Amazon.fr", "Fnac", "Darty", "Boulanger"]
+    test_locations: ["Paris", "Lyon", "Marseille"]
   es-ES:
     currency: "EUR"
-    retailers:
-      - "Amazon.es"
-      - "MediaMarkt"
-      - "El Corte Inglés"
-      - "Fnac"
-    test_locations:
-      - "Madrid"
-      - "Barcelona"
-      - "Valencia"
-      
+    retailers: ["Amazon.es", "MediaMarkt", "El Corte Inglés", "Fnac"]
+    test_locations: ["Madrid", "Barcelona", "Valencia"]
   th-TH:
     currency: "THB"
-    retailers:
-      - "Lazada Thailand"
-      - "Shopee Thailand"
-      - "Jaymart"
-    test_locations:
-      - "Bangkok"
-      - "Chiang Mai"
-      - "Phuket"
-      
+    retailers: ["Lazada Thailand", "Shopee Thailand", "Jaymart"]
+    test_locations: ["Bangkok", "Chiang Mai", "Phuket"]
   ja-JP:
     currency: "JPY"
-    retailers:
-      - "Amazon.co.jp"
-      - "Yodobashi Camera"
-      - "Bic Camera"
-    test_locations:
-      - "Tokyo"
-      - "Osaka"
-      - "Kyoto"
-      
+    retailers: ["Amazon.co.jp", "Yodobashi Camera", "Bic Camera"]
+    test_locations: ["Tokyo", "Osaka", "Kyoto"]
   zh-CN:
     currency: "CNY"
-    retailers:
-      - "JD.com"
-      - "Tmall"
-      - "Suning"
-    test_locations:
-      - "Beijing"
-      - "Shanghai"
-      - "Guangzhou"
-      
+    retailers: ["JD.com", "Tmall", "Suning"]
+    test_locations: ["Beijing", "Shanghai", "Guangzhou"]
   pt-BR:
     currency: "BRL"
-    retailers:
-      - "Amazon.com.br"
-      - "Magazine Luiza"
-      - "Casas Bahia"
-    test_locations:
-      - "São Paulo"
-      - "Rio de Janeiro"
-      - "Brasília"
-      
+    retailers: ["Amazon.com.br", "Magazine Luiza", "Casas Bahia"]
+    test_locations: ["São Paulo", "Rio de Janeiro", "Brasília"]
   nl-NL:
     currency: "EUR"
-    retailers:
-      - "Bol.com"
-      - "MediaMarkt"
-      - "Coolblue"
-    test_locations:
-      - "Amsterdam"
-      - "Rotterdam"
-      - "Utrecht"
+    retailers: ["Bol.com", "MediaMarkt", "Coolblue"]
+    test_locations: ["Amsterdam", "Rotterdam", "Utrecht"]
+
+# ==============================================================================
+# SERIES CONFIGURATION: "Invisible Stick in the City"
+# ==============================================================================
+
+series_config:
+  invisible_stick_city:
+    title_template: "Invisible Stick in {city}: The Ultimate 360 Camera Guide"
+    seed_keyword: "360 camera invisible stick"
+    cities:
+      - name: "Tokyo"
+        country: "Japan"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Tokyo"
+        landmarks: ["Shibuya Crossing", "Tokyo Tower", "Senso-ji Temple"]
+      - name: "Delhi"
+        country: "India"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Delhi"
+        landmarks: ["India Gate", "Red Fort", "Qutub Minar"]
+      - name: "Shanghai"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Shanghai"
+        landmarks: ["The Bund", "Oriental Pearl Tower", "Yu Garden"]
+      - name: "São Paulo"
+        country: "Brazil"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick São Paulo"
+        landmarks: ["Ibirapuera Park", "Paulista Avenue", "Municipal Market"]
+      - name: "Mexico City"
+        country: "Mexico"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Mexico City"
+        landmarks: ["Zócalo", "Chapultepec Castle", "Frida Kahlo Museum"]
+      - name: "Cairo"
+        country: "Egypt"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Cairo"
+        landmarks: ["Pyramids of Giza", "Khan el-Khalili", "Egyptian Museum"]
+      - name: "Mumbai"
+        country: "India"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Mumbai"
+        landmarks: ["Gateway of India", "Marine Drive", "Chhatrapati Shivaji Terminus"]
+      - name: "Beijing"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Beijing"
+        landmarks: ["Forbidden City", "Temple of Heaven", "Summer Palace"]
+      - name: "Dhaka"
+        country: "Bangladesh"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Dhaka"
+        landmarks: ["Lalbagh Fort", "Ahsan Manzil", "National Parliament House"]
+      - name: "Osaka"
+        country: "Japan"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Osaka"
+        landmarks: ["Dotonbori", "Osaka Castle", "Universal Studios Japan"]
+      - name: "New York"
+        country: "USA"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick New York"
+        landmarks: ["Times Square", "Central Park", "Brooklyn Bridge"]
+      - name: "Karachi"
+        country: "Pakistan"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Karachi"
+        landmarks: ["Mazar-e-Quaid", "Clifton Beach", "Mohatta Palace"]
+      - name: "Buenos Aires"
+        country: "Argentina"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Buenos Aires"
+        landmarks: ["Obelisco", "La Boca", "Recoleta Cemetery"]
+      - name: "Chongqing"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Chongqing"
+        landmarks: ["Hongya Cave", "Yangtze River Cableway", "Ciqikou"]
+      - name: "Istanbul"
+        country: "Turkey"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Istanbul"
+        landmarks: ["Hagia Sophia", "Grand Bazaar", "Bosphorus Bridge"]
+      - name: "Kolkata"
+        country: "India"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Kolkata"
+        landmarks: ["Victoria Memorial", "Howrah Bridge", "Dakshineswar Kali Temple"]
+      - name: "Manila"
+        country: "Philippines"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Manila"
+        landmarks: ["Intramuros", "Rizal Park", "Manila Ocean Park"]
+      - name: "Lagos"
+        country: "Nigeria"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Lagos"
+        landmarks: ["Nike Art Gallery", "Lekki Conservation Centre", "Freedom Park"]
+      - name: "Rio de Janeiro"
+        country: "Brazil"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Rio de Janeiro"
+        landmarks: ["Christ the Redeemer", "Copacabana Beach", "Sugarloaf Mountain"]
+      - name: "Tianjin"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Tianjin"
+        landmarks: ["Tianjin Eye", "Ancient Culture Street", "Italian Style Town"]
+      - name: "Kinshasa"
+        country: "DRC"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Kinshasa"
+        landmarks: ["Lola ya Bonobo", "National Museum", "Symphonie Art Gallery"]
+      - name: "Guangzhou"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Guangzhou"
+        landmarks: ["Canton Tower", "Chen Clan Ancestral Hall", "Shamian Island"]
+      - name: "Los Angeles"
+        country: "USA"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Los Angeles"
+        landmarks: ["Hollywood Sign", "Santa Monica Pier", "Griffith Observatory"]
+      - name: "Moscow"
+        country: "Russia"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Moscow"
+        landmarks: ["Red Square", "Saint Basil's Cathedral", "The Kremlin"]
+      - name: "Shenzhen"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Shenzhen"
+        landmarks: ["Window of the World", "Splendid China", "Shenzhen Bay Park"]
+      - name: "Lahore"
+        country: "Pakistan"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Lahore"
+        landmarks: ["Badshahi Mosque", "Lahore Fort", "Minar-e-Pakistan"]
+      - name: "Bangalore"
+        country: "India"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Bangalore"
+        landmarks: ["Cubbon Park", "Bangalore Palace", "Lalbagh Botanical Garden"]
+      - name: "Paris"
+        country: "France"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Paris"
+        landmarks: ["Eiffel Tower", "Louvre Museum", "Champs-Élysées"]
+      - name: "Bogotá"
+        country: "Colombia"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Bogotá"
+        landmarks: ["Monserrate", "La Candelaria", "Gold Museum"]
+      - name: "Jakarta"
+        country: "Indonesia"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Jakarta"
+        landmarks: ["National Monument", "Kota Tua", "Taman Mini Indonesia Indah"]
+      - name: "Chennai"
+        country: "India"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Chennai"
+        landmarks: ["Marina Beach", "Kapaleeshwarar Temple", "Fort St. George"]
+      - name: "Lima"
+        country: "Peru"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Lima"
+        landmarks: ["Plaza Mayor", "Miraflores", "Larco Museum"]
+      - name: "Bangkok"
+        country: "Thailand"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Bangkok"
+        landmarks: ["Grand Palace", "Wat Arun", "Khao San Road"]
+      - name: "Seoul"
+        country: "South Korea"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Seoul"
+        landmarks: ["Gyeongbokgung Palace", "N Seoul Tower", "Myeongdong"]
+      - name: "Nagoya"
+        country: "Japan"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Nagoya"
+        landmarks: ["Nagoya Castle", "Atsuta Shrine", "Toyota Commemorative Museum"]
+      - name: "Hyderabad"
+        country: "India"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Hyderabad"
+        landmarks: ["Charminar", "Golconda Fort", "Hussain Sagar"]
+      - name: "London"
+        country: "UK"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick London"
+        landmarks: ["Big Ben", "Tower Bridge", "Buckingham Palace"]
+      - name: "Tehran"
+        country: "Iran"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Tehran"
+        landmarks: ["Golestan Palace", "Azadi Tower", "Grand Bazaar"]
+      - name: "Chicago"
+        country: "USA"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Chicago"
+        landmarks: ["Millennium Park", "Navy Pier", "Willis Tower"]
+      - name: "Chengdu"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Chengdu"
+        landmarks: ["Chengdu Research Base of Giant Panda Breeding", "Jinli Street", "Wuhou Shrine"]
+      - name: "Nanjing"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Nanjing"
+        landmarks: ["Sun Yat-sen Mausoleum", "Confucius Temple", "Nanjing City Wall"]
+      - name: "Wuhan"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Wuhan"
+        landmarks: ["Yellow Crane Tower", "East Lake", "Hubei Provincial Museum"]
+      - name: "Ho Chi Minh City"
+        country: "Vietnam"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Ho Chi Minh City"
+        landmarks: ["War Remnants Museum", "Notre-Dame Cathedral", "Ben Thanh Market"]
+      - name: "Luanda"
+        country: "Angola"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Luanda"
+        landmarks: ["Fortaleza de São Miguel", "Ilha de Luanda", "National Museum of Slavery"]
+      - name: "Ahmedabad"
+        country: "India"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Ahmedabad"
+        landmarks: ["Sabarmati Ashram", "Adalaj Stepwell", "Kankaria Lake"]
+      - name: "Kuala Lumpur"
+        country: "Malaysia"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Kuala Lumpur"
+        landmarks: ["Petronas Twin Towers", "Batu Caves", "Merdeka Square"]
+      - name: "Xi'an"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Xi'an"
+        landmarks: ["Terracotta Army", "Ancient City Wall", "Muslim Quarter"]
+      - name: "Hong Kong"
+        country: "China"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Hong Kong"
+        landmarks: ["Victoria Peak", "Tsim Sha Tsui", "Lantau Island"]
+      - name: "Singapore"
+        country: "Singapore"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Singapore"
+        landmarks: ["Marina Bay Sands", "Gardens by the Bay", "Sentosa Island"]
+      - name: "Sydney"
+        country: "Australia"
+        language: "en-US"
+        local_keyword: "360 camera invisible stick Sydney"
+        landmarks: ["Sydney Opera House", "Sydney Harbour Bridge", "Bondi Beach"]
