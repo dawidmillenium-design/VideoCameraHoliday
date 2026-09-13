@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Hotfix Script: Injects missing BreadcrumbList JSON-LD and fixes missing H1 tags.
-Targets only files that failed the previous verification.
+Hotfix Script V2: Aggressively fixes missing H1 tags and injects BreadcrumbList JSON-LD.
 """
 import os
 import re
@@ -13,8 +12,8 @@ from bs4 import BeautifulSoup
 BASE_URL = "https://dawidmillenium-design.github.io/VideoCameraHoliday"
 REPO_ROOT = Path(__file__).parent.parent
 
-# Folders to ignore completely
-EXCLUDE_DIRS = {'.git', 'node_modules', 'templates', 'backups', 'workspace'}
+# Folders to ignore completely (workspace is excluded here)
+EXCLUDE_DIRS = {'.git', 'node_modules', 'templates', 'backups', 'workspace', 'city-generator'}
 
 def get_relative_path(file_path):
     """Get path relative to repo root for URL construction."""
@@ -45,25 +44,19 @@ def build_breadcrumb_schema(file_path, title):
     position = 2
     for i, part in enumerate(parts):
         if part in lang_folders:
-            # Language folder adds a level
             current_url += part + "/"
             breadcrumbs.append({
                 "@type": "ListItem",
                 "position": position,
-                "name": part.upper(), # e.g., DE-DE
+                "name": part.upper(),
                 "item": current_url
             })
             position += 1
         elif part == 'city-generator':
-            # Skip city-generator from URL path but keep processing
             continue
         else:
-            # Content folder (reviews, guides, etc.)
             current_url += part + "/"
-            # Clean up name for display
             clean_name = part.replace('-', ' ').title()
-            if clean_name == "City Through The Lens":
-                clean_name = "City Through The Lens"
             
             breadcrumbs.append({
                 "@type": "ListItem",
@@ -104,23 +97,32 @@ def process_file(file_path):
                 page_title = re.sub(r'\s*–\s*.*$', '', title_tag.string).strip()
                 if not page_title: page_title = title_tag.string.strip()
             
-            # Inject H1 into the first available body section or create hero
             new_h1 = soup.new_tag('h1')
             new_h1.string = page_title
             
-            # Look for article-hero or main
+            # Strategy A: Look for article-hero
             hero = soup.find('section', class_='article-hero')
             if hero:
-                # Check if h1 is missing inside hero
-                if not hero.find('h1'):
-                    hero.insert(0, new_h1)
-                    modified = True
+                hero.insert(0, new_h1)
+                modified = True
             else:
-                # Fallback: prepend to main content
-                main = soup.find('main')
-                if main:
-                    main.insert(0, new_h1)
+                # Strategy B: Look for ANY section with class containing 'hero'
+                any_hero = soup.find(['section', 'div', 'header'], class_=re.compile(r'hero'))
+                if any_hero:
+                    any_hero.insert(0, new_h1)
                     modified = True
+                else:
+                    # Strategy C: Prepend to <main>
+                    main = soup.find('main')
+                    if main:
+                        main.insert(0, new_h1)
+                        modified = True
+                    else:
+                        # Strategy D: Prepend to <body> directly (last resort)
+                        body = soup.find('body')
+                        if body:
+                            body.insert(0, new_h1)
+                            modified = True
         
         # --- FIX 2: Inject BreadcrumbList JSON-LD if missing ---
         existing_json = soup.find('script', type='application/ld+json')
@@ -130,14 +132,12 @@ def process_file(file_path):
                 has_breadcrumb = True
         
         if not has_breadcrumb:
-            # Generate Schema
             schema_obj = build_breadcrumb_schema(file_path, "Title")
             schema_json = json.dumps(schema_obj, indent=2)
             
             new_script = soup.new_tag('script', type='application/ld+json')
             new_script.string = schema_json
             
-            # Append to head
             if soup.head:
                 soup.head.append(new_script)
                 modified = True
@@ -154,11 +154,10 @@ def process_file(file_path):
         return False, f"Error: {str(e)}"
 
 def main():
-    print("🔍 Starting Hotfix Scan...")
+    print("🔍 Starting Hotfix Scan V2...")
     fixed_count = 0
     scanned_count = 0
     
-    # Find all HTML files
     html_files = list(REPO_ROOT.rglob("*.html"))
     
     for file_path in html_files:
