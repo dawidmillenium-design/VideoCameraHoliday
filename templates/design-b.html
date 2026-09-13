@@ -1,393 +1,175 @@
-<!-- === DESIGN-B-HEAD-START === -->
-<link rel="stylesheet" href="/assets/design-b.css">
+<!-- === DESIGN-B-HEAD-START === --><html><head>&lt;!-- expanded-by:deepseek v1 --&gt;
+<link href="/assets/design-b.css" rel="stylesheet"/>
 <!-- === DESIGN-B-HEAD-END === -->
-
 <!-- === DESIGN-B-HEADER-START === -->
 <header class="site-header">
-    <div class="site-header-inner">
-        <a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
-        <nav class="header-nav" aria-label="Primary quick links">
-            <a href="/reviews/">Reviews</a>
-            <a href="/guides/">Guides</a>
-            <a href="/destinations/">Destinations</a>
-            <a href="/how-to/">How-To</a>
-            <a href="/about/">About</a>
-        </nav>
-        <div class="header-actions">
-            <button type="button" class="icon-btn" aria-label="Search" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-            <button type="button" class="drawer-toggle" id="drawerToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                <span>Menu</span>
-            </button>
-        </div>
-    </div>
-</header>
-
-<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
-
-<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="drawer-head">
-        <span class="title">Menu</span>
-        <button type="button" class="drawer-close" id="drawerClose" aria-label="Close menu">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-    </div>
-    <div class="drawer-search">
-        <label for="drawerSearchInput" class="visually-hidden">Search the site</label>
-        <input type="search" id="drawerSearchInput" placeholder="Search cameras, cities, guides…" autocomplete="off">
-    </div>
-    <div class="drawer-tabs" id="drawerTabs" role="tablist" aria-label="Menu categories">
-        <button type="button" role="tab" data-tab="reviews" aria-selected="true" class="is-active">Reviews</button>
-        <button type="button" role="tab" data-tab="guides" aria-selected="false">Guides</button>
-        <button type="button" role="tab" data-tab="destinations" aria-selected="false">Destinations</button>
-        <button type="button" role="tab" data-tab="howto" aria-selected="false">How-To</button>
-        <button type="button" role="tab" data-tab="editing" aria-selected="false">Editing</button>
-        <button type="button" role="tab" data-tab="compare" aria-selected="false">Compare</button>
-        <button type="button" role="tab" data-tab="city" aria-selected="false">City Series</button>
-        <button type="button" role="tab" data-tab="about" aria-selected="false">About</button>
-    </div>
-    <div class="drawer-body">
-        <div class="drawer-panel is-active" data-panel="reviews" role="tabpanel">
-            <h5>Gimbal Cameras</h5>
-            <ul>
-                <li><a href="/reviews/dji-osmo-action-5-review.html">DJI Osmo Action 5</a></li>
-                <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
-                <li><a href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4 Pro</a></li>
-                <li><a href="/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Roundup</a></li>
-            </ul>
-            <h5>Action Cameras</h5>
-            <ul>
-                <li><a href="/reviews/dji-osmo-action-6-review.html">DJI Osmo Action 6</a></li>
-                <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                <li><a href="/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S</a></li>
-                <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
-            </ul>
-            <h5>Vlogging &amp; Mirrorless</h5>
-            <ul>
-                <li><a href="/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50 V</a></li>
-                <li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
-                <li><a href="/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
-                <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="guides" role="tabpanel">
-            <h5>Buying Guides</h5>
-            <ul>
-                <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
-                <li><a href="/guides/best-budget-holiday-camera-under-500.html">Best Under $500</a></li>
-                <li><a href="/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
-                <li><a href="/guides/best-compact-cameras-travel-2026.html">Best Compact Cameras</a></li>
-                <li><a href="/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
-            </ul>
-            <h5>Planning &amp; Tips</h5>
-            <ul>
-                <li><a href="/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
-                <li><a href="/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="destinations" role="tabpanel">
-            <h5>Beach &amp; Water</h5>
-            <ul>
-                <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                <li><a href="/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
-                <li><a href="/destinations/maldives-camera-guide.html">Maldives</a></li>
-                <li><a href="/destinations/thailand-island-camera-guide.html">Thailand Islands</a></li>
-            </ul>
-            <h5>Adventure</h5>
-            <ul>
-                <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                <li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
-                <li><a href="/destinations/vietnam-motorbike-camera-guide.html">Vietnam Motorbike</a></li>
-            </ul>
-            <h5>City Breaks</h5>
-            <ul>
-                <li><a href="/destinations/bangkok-camera-guide.html">Bangkok</a></li>
-                <li><a href="/destinations/kyoto-camera-guide.html">Kyoto</a></li>
-                <li><a href="/destinations/santorini-camera-guide.html">Santorini</a></li>
-                <li><a href="/destinations/sydney-camera-guide.html">Sydney</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="howto" role="tabpanel">
-            <h5>Filming Techniques</h5>
-            <ul>
-                <li><a href="/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
-                <li><a href="/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
-                <li><a href="/how-to/film-in-rain-protect-gear.html">Film In Rain</a></li>
-                <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-            </ul>
-            <h5>Technical Skills</h5>
-            <ul>
-                <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Cards</a></li>
-                <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
-                <li><a href="/how-to/vertical-video-settings-travel.html">Vertical Video Settings</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="editing" role="tabpanel">
-            <h5>Editing</h5>
-            <ul>
-                <li><a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
-                <li><a href="/editing/post-travel-videos-youtube.html">Post To YouTube</a></li>
-                <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="compare" role="tabpanel">
-            <h5>Head-to-Head</h5>
-            <ul>
-                <li><a href="/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
-                <li><a href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
-                <li><a href="/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">Hero 13 vs ZV-1 II</a></li>
-                <li><a href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
-                <li><a href="/comparisons/powershot-v1-vs-zv-1-ii.html">PowerShot V1 vs ZV-1 II</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="city" role="tabpanel">
-            <h5>City Through the Lens</h5>
-            <ul>
-                <li><a href="/city-through-the-lens/">Series Home</a></li>
-                <li><a href="/city-through-the-lens/#faq">Series FAQ</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="about" role="tabpanel">
-            <h5>About</h5>
-            <ul>
-                <li><a href="/about/">About Us</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Service</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-            </ul>
-        </div>
-    </div>
-    <nav class="drawer-langs" aria-label="Language versions">
-        <a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
-        <a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
-        <a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
-        <a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
-        <a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
-        <a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
-        <a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
-        <a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
-        <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
-        <a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
-        <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
-    </nav>
-</aside>
-<!-- === DESIGN-B-HEADER-END === -->
-
-<!-- === DESIGN-B-FOOTER-START === -->
-<footer class="site-footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <h3>📹 Holiday Video Camera</h3>
-                <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-                <form class="footer-newsletter" action="#" method="post" aria-label="Newsletter signup">
-                    <label for="footerEmail" class="visually-hidden">Email address</label>
-                    <input type="email" id="footerEmail" name="email" placeholder="your@email.com" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-cols" style="padding-top:44px;">
-            <div>
-                <h4>Top Guides</h4>
-                <ul>
-                    <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
-                    <li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
-                    <li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
-                    <li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
-                    <li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Popular Reviews</h4>
-                <ul>
-                    <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
-                    <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                    <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
-                    <li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
-                    <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Destinations</h4>
-                <ul>
-                    <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                    <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                    <li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
-                    <li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
-                    <li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>How-To</h4>
-                <ul>
-                    <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
-                    <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                    <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-                    <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
-                    <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>About</h4>
-                <ul>
-                    <li><a href="/about/">About Us</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-        </div>
-        <nav class="footer-langs" aria-label="Language versions">
-            <a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
-            <a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
-            <a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
-            <a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
-            <a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
-            <a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
-            <a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
-            <a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
-            <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
-            <a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
-            <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
-        </nav>
-        <div class="footer-bottom">
-            <p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
-        </div>
-    </div>
-</footer>
-
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
-    <div class="cookie-banner-inner">
-        <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/privacy.html">Privacy Policy</a>.</p>
-        <div class="cookie-banner-actions">
-            <button type="button" class="reject" id="cookieReject">Reject</button>
-            <button type="button" class="accept" id="cookieAccept">Accept All</button>
-        </div>
-    </div>
+<div class="site-header-inner">
+<a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
+<nav aria-label="Primary quick links" class="header-nav">
+<a href="/reviews/">Reviews</a>
+<a href="/guides/">Guides</a>
+<a href="/destinations/">Destinations</a>
+<a href="/how-to/">How-To</a>
+<a href="/about/">About</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Search" class="icon-btn" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}" type="button">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+<button aria-controls="siteDrawer" aria-expanded="false" aria-label="Open menu" class="drawer-toggle" id="drawerToggle" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<span>Menu</span>
+</button>
 </div>
-
-<script>
-(function(){
-    'use strict';
-    var drawer = document.getElementById('siteDrawer');
-    var backdrop = document.getElementById('drawerBackdrop');
-    var openBtn = document.getElementById('drawerToggle');
-    var closeBtn = document.getElementById('drawerClose');
-    var tabsBox = document.getElementById('drawerTabs');
-    var panels = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
-    var tabButtons = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
-    if (!drawer || !backdrop || !openBtn) return;
-
-    function openDrawer(){
-        drawer.classList.add('is-open');
-        backdrop.classList.add('is-open');
-        drawer.setAttribute('aria-hidden','false');
-        openBtn.setAttribute('aria-expanded','true');
-        document.body.style.overflow='hidden';
-    }
-    function closeDrawer(){
-        drawer.classList.remove('is-open');
-        backdrop.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden','true');
-        openBtn.setAttribute('aria-expanded','false');
-        document.body.style.overflow='';
-    }
-    window.closeDrawer = closeDrawer;
-    window.openDrawerToSearch = function(){
-        openDrawer();
-        var s = tabsBox.querySelector('button[data-tab="reviews"]');
-        if (s) s.click();
-        setTimeout(function(){
-            var i = document.getElementById('drawerSearchInput');
-            if (i) i.focus();
-        }, 280);
-    };
-
-    openBtn.addEventListener('click', openDrawer);
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-    document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeDrawer();
-    });
-
-    tabButtons.forEach(function(btn){
-        btn.addEventListener('click', function(){
-            var target = btn.getAttribute('data-tab');
-            tabButtons.forEach(function(b){
-                b.classList.toggle('is-active', b === btn);
-                b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
-            });
-            panels.forEach(function(p){
-                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
-            });
-        });
-    });
-
-    var searchInput = document.getElementById('drawerSearchInput');
-    if (searchInput) {
-        searchInput.addEventListener('input', function(){
-            var q = this.value.trim().toLowerCase();
-            if (q.length === 0) {
-                panels.forEach(function(p){
-                    p.querySelectorAll('li').forEach(function(li){ li.style.display=''; });
-                    p.querySelectorAll('h5').forEach(function(h){ h.style.display=''; });
-                });
-                return;
-            }
-            var bestPanel = null, bestCount = 0;
-            panels.forEach(function(p){
-                var count = 0;
-                p.querySelectorAll('li').forEach(function(li){
-                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
-                    li.style.display = match ? '' : 'none';
-                    if (match) count++;
-                });
-                p.querySelectorAll('h5').forEach(function(h){
-                    var sib = h.nextElementSibling, anyVisible = false;
-                    while (sib && sib.tagName === 'UL') {
-                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
-                        sib = sib.nextElementSibling;
-                    }
-                    h.style.display = anyVisible ? '' : 'none';
-                });
-                if (count > bestCount) { bestCount = count; bestPanel = p; }
-            });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
-        });
-    }
-})();
-
-(function(){
-    var STORAGE_KEY = 'hvc-cookie-consent';
-    var banner = document.getElementById('cookieBanner');
-    if (!banner) return;
-    var stored = null;
-    try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
-    if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
-    function setConsent(v){
-        try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
-        banner.classList.remove('is-visible');
-    }
-    var acceptBtn = document.getElementById('cookieAccept');
-    var rejectBtn = document.getElementById('cookieReject');
-    if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
-    if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
-})();
-</script>
-<!-- === DESIGN-B-FOOTER-END === -->
+</div>
+</header>
+</head><body data-deepseek-expanded="1"><html><body><h2>Design B — Template Overview</h2>
+<p>This page is the design-b.html template for Holiday Video Camera, a travel videography blog built on real-world field testing rather than lab charts. The template carries the full site navigation, the complete reviews and guides library, and the destination and how-to hubs that readers use to plan what they shoot and what they shoot it with.</p>
+<p>Below you will find the structure this template supports, the sections it links to, and answers to the questions readers ask most often about how the site is organised.</p>
+<h2>What This Template Covers</h2>
+<p>Design B is a hub-style layout. It surfaces the highest-traffic entry points first — reviews, guides, destinations, how-to, editing, and compare — then funnels readers into the specific camera pages and city series they came for. The navigation is deliberately flat so a reader planning a beach holiday can reach the waterproof camera guide in one tap.</p>
+<h3>Reviews</h3>
+<ul>
+<li>Gimbal Cameras</li>
+<li>DJI Osmo Action 5</li>
+<li>DJI Osmo Pocket 3</li>
+<li>DJI Osmo Pocket 4 Pro</li>
+<li>Pocket Cinema Roundup</li>
+<li>Action Cameras</li>
+<li>DJI Osmo Action 6</li>
+<li>GoPro Hero 13</li>
+<li>Insta360 Go 3S</li>
+<li>Insta360 X5</li>
+<li>Vlogging &amp; Mirrorless</li>
+<li>Canon EOS R50 V</li>
+<li>Fujifilm X100VI</li>
+<li>iPhone 16 Pro</li>
+<li>Sony ZV-1 II</li>
+</ul>
+<h3>Buying Guides</h3>
+<ul>
+<li>Best Holiday Cameras 2026</li>
+<li>Best Under $500</li>
+<li>Best Waterproof Cameras</li>
+<li>Best Compact Cameras</li>
+<li>Best Vlogging Cameras</li>
+</ul>
+<h3>Planning &amp; Tips</h3>
+<ul>
+<li>Camera Gifts For Travelers</li>
+<li>Travel Camera Checklist</li>
+</ul>
+<h3>Destinations</h3>
+<ul>
+<li>Beach &amp; Water — Beach Holidays, Underwater Guide, Maldives, Thailand Islands</li>
+<li>Adventure — Ski Holidays, Tanzania Safari, Vietnam Motorbike</li>
+<li>City Breaks — Bangkok, Kyoto, Santorini, Sydney</li>
+</ul>
+<h3>Filming Techniques</h3>
+<ul>
+<li>Film Better Holiday Videos</li>
+<li>Film In Harsh Sunlight</li>
+<li>Film In Rain</li>
+<li>Film Yourself Solo</li>
+</ul>
+<h3>Technical Skills</h3>
+<ul>
+<li>Backup Footage</li>
+<li>Choose Memory Cards</li>
+<li>Stabilize Without Gimbal</li>
+<li>Vertical Video Settings</li>
+</ul>
+<h3>Editing</h3>
+<ul>
+<li>Best Editing Apps</li>
+<li>Post To YouTube</li>
+<li>Color Grading</li>
+</ul>
+<h3>Head-to-Head Comparisons</h3>
+<ul>
+<li>Action vs Gimbal</li>
+<li>Pocket 3 vs Hero 13</li>
+<li>Hero 13 vs ZV-1 II</li>
+<li>iPhone vs Dedicated</li>
+<li>PowerShot V1 vs ZV-1 II</li>
+</ul>
+<h3>City Through the Lens Series</h3>
+<p>A recurring series that pairs a destination with the camera setup used to film it. The series sits alongside the City Breaks destination hub and links out to the individual city pages.</p>
+<h2>Site Sections at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Purpose</th>
+<th>Example Pages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reviews</td>
+<td>Field-tested camera write-ups</td>
+<td>DJI Pocket 3, GoPro Hero 13, Insta360 X5</td>
+</tr>
+<tr>
+<td>Guides</td>
+<td>Buying advice by budget and use case</td>
+<td>Best Cameras 2026, Under $500</td>
+</tr>
+<tr>
+<td>Destinations</td>
+<td>Trip-specific filming planning</td>
+<td>Maldives, Kyoto, Tanzania Safari</td>
+</tr>
+<tr>
+<td>How-To</td>
+<td>Technique and technical skills</td>
+<td>Stabilize Without Gimbal, Backup Footage</td>
+</tr>
+<tr>
+<td>Editing</td>
+<td>Post-production workflow</td>
+<td>Color Grading, Best Editing Apps</td>
+</tr>
+<tr>
+<td>Compare</td>
+<td>Head-to-head buying decisions</td>
+<td>Pocket 3 vs Hero 13, iPhone vs Dedicated</td>
+</tr>
+</tbody>
+</table>
+<h2>Popular Entry Points</h2>
+<p>Most readers arrive through one of five pages. The template promotes them in the sidebar and in the footer so they stay reachable from anywhere on the site.</p>
+<ul>
+<li>DJI Pocket 3</li>
+<li>GoPro Hero 13</li>
+<li>Insta360 X5</li>
+<li>Fujifilm X100VI</li>
+<li>Sony ZV-1 II</li>
+</ul>
+<h2>Languages</h2>
+<p>The site is published in multiple languages. Language links appear in the header and footer of every page rendered by this template.</p>
+<ul>
+<li>Deutsch (DE, allg.)</li>
+<li>Español</li>
+<li>Français</li>
+<li>Italiano</li>
+<li>日本語</li>
+<li>한국어</li>
+<li>Polski</li>
+<li>Português</li>
+<li>ไทย</li>
+<li>中文</li>
+</ul>
+<h2>Newsletter</h2>
+<p>The template includes a newsletter signup block with the promise that anchors the whole site: weekly reviews, deals, and field notes from the road. No lab charts.</p>
+<h2>About the Testing Approach</h2>
+<p>Every camera on this site is tested in real travel conditions. That means the reviews reflect how gear behaves on a beach holiday, on a ski slope, on a safari, or on a motorbike in Vietnam — not how it performs on a test bench. The About page, Privacy Policy, Terms of Service, Contact page, and Sitemap are all linked from the footer of this template.</p>
+<h2>FAQ</h2>
+<h3>What is design-b.html?</h3>
+<p>It is a page template for Holiday Video Camera. It renders the site's navigation, review library, guides, destination hubs, how-to sections, editing resources, and comparison pages in a hub-style layout.</p>
+<h3>How is the content organised?</h3>
+<p>Content is grouped into Reviews, Guides, Destinations, How-To, Editing, and Compare. Destinations break down further into Beach &amp; Water, Adventure, and City Breaks, with a City Through the Lens series running alongside the city pages.</p>
+<h3>Is the site available in other languages?</h3>
+<p>Yes. Language links for Deutsch, Español, Français, Italiano, 日本語, 한국어, Polski, Português, ไทย, and 中文 appear in the header and footer.</p>
+<h2>Footer</h2>
+<p>© 2026 Holiday Video Camera — Real travel camera testing. No lab charts. We use cookies and third-party embeds (YouTube) to improve your experience. Read our Privacy Policy. Reject / Accept All.</p></body></html></body></html>
