@@ -2,12 +2,13 @@
 """
 Expand thin-content HTML pages using the DeepSeek API.
 
-Safety Features:
-  - Accurately counts words inside the content container (matching auditor).
-  - Refuses to process files already >= threshold.
-  - Rejects AI output if it results in fewer words than the original.
-  - Preserves existing <img> tags by prepending them to the new content.
-  - Idempotent: skips files already marked with data-deepseek-expanded.
+SAFETY FEATURES:
+  1. Accurately counts words inside the content container (matching auditor).
+  2. Refuses to process files already >= threshold.
+  3. Rejects AI output if it results in fewer words than the original.
+  4. Preserves existing <img> tags by prepending them to the new content.
+  5. NEVER processes templates, partials, or system files (e.g., google verification).
+  6. Idempotent: skips files already marked with data-deepseek-expanded.
 """
 
 import argparse
@@ -21,21 +22,6 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from openai import OpenAI
 
-# Files/directories to NEVER process
-EXCLUDED_PATHS = {
-    'templates/',
-    'template/',
-    '_templates/',
-    'partials/',
-    'includes/',
-    'layouts/',
-}
-
-def should_exclude_file(file_path: Path) -> bool:
-    """Check if file should be excluded from processing."""
-    path_str = str(file_path).lower()
-    return any(excluded in path_str for excluded in EXCLUDED_PATHS)
-  
 
 # ---------- Config ----------
 
@@ -59,8 +45,46 @@ CONTENT_SELECTORS = [
 
 BANNED_OUTPUT_RE = re.compile(r"<\s*(script|style|iframe|object|embed)\b", re.IGNORECASE)
 
+# CRITICAL: Files and directories to NEVER process
+EXCLUDED_PATHS = {
+    'templates/',
+    'template/',
+    '_templates/',
+    'partials/',
+    'includes/',
+    'layouts/',
+    'components/',
+}
+
+EXCLUDED_FILES = {
+    'camera-tests.html',
+    'MEGA_MENU_INTEGRATION_EXAMPLE.html',
+    'googlef5307df871e4912d.html',  # Google verification file
+    'bingSiteAuth.xml',
+    'yandex_*.html',
+}
+
 
 # ---------- Helpers ----------
+
+def should_exclude_file(file_path: Path) -> bool:
+    """Check if file should be excluded from processing."""
+    path_str = str(file_path).lower().replace('\\', '/')
+    
+    # Check directory patterns
+    if any(excluded in path_str for excluded in EXCLUDED_PATHS):
+        return True
+    
+    # Check specific filenames (including wildcard-like checks)
+    if file_path.name in EXCLUDED_FILES:
+        return True
+    if file_path.name.startswith('google') and file_path.name.endswith('.html'):
+        return True
+    if file_path.name.startswith('yandex_') and file_path.name.endswith('.html'):
+        return True
+        
+    return False
+
 
 def find_content_container(soup: BeautifulSoup):
     for tag, attrs in CONTENT_SELECTORS:
@@ -144,6 +168,12 @@ def process_file(client: OpenAI, model: str, prompt_template: str,
                  file_path: Path, base_dir: Path, target_words: int,
                  threshold: int, dry_run: bool) -> bool:
     rel = file_path.relative_to(base_dir)
+    
+    # 0. HARD EXCLUSION CHECK
+    if should_exclude_file(file_path):
+        print(f"  [skip] {rel}: excluded system/template file")
+        return False
+
     try:
         html = file_path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
