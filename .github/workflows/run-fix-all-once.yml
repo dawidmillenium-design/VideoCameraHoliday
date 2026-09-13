@@ -1,0 +1,43 @@
+name: Fix all HTML issues (manual, one-off)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install beautifulsoup4 lxml
+
+      - name: Run fix_all.py
+        run: python scripts/fix_all.py
+
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: fix/cleanup-conflicts-base-links-result
+          base: main
+          title: "fix: remove conflict markers, <base> tag, and broken root-relative links"
+          commit-message: "fix: cleanup conflicts, base tag, root-relative links"
+          body: |
+            Auto-generated. Review before merging:
+
+            - [ ] No `=======` or `>>>>>>>` lines remain in any HTML file
+            - [ ] No `<base href=` tags remain
+            - [ ] Spot-check 3 pages: internal links work
+            - [ ] Stylesheet still loads (design-b.css returns 200)
+            - [ ] Diff is mostly deletions + small link rewrites (no mass rewrites)
+
+            **Do not merge blindly.**
