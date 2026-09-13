@@ -5,7 +5,18 @@
 <meta content="{{META_DESC}}" name="description"/>
 <title>{{CAMERA_A}} VS {{CAMERA_B}} - {{META_DESC}}</title>
 <link href="/assets/design-b.css" rel="stylesheet"/>
-</head><body>{{JSON_LD}}
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+    }
+  ]
+}</script></head><body>{{JSON_LD}}
 
 
 
@@ -179,7 +190,7 @@
 <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
 </aside>
-<main class="container" id="main-content">
+<main class="container" id="main-content"><h1>{{CAMERA_A}} VS {{CAMERA_B}} - {{META_DESC}}</h1>
 <div class="compare-grid">
 <article class="camera-card">
 <img alt="{{CAMERA_A}} – aparat lub kamera" cameras.jpg'"="" class="camera-img" height="220" loading="eager" media="" onerror="this.onerror=null;this.src=" src="{{IMG_A}}" width="300"/>
