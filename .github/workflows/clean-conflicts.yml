@@ -1,0 +1,45 @@
+name: Clean Git Conflict Artifacts
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry Run (Preview only - don't modify files)"
+        type: boolean
+        default: true
+      force:
+        description: "Force mode (skip backups)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Cleanup
+        run: |
+          if [ "${{ inputs.dry_run }}" == "true" ]; then
+            python scripts/clean_git_conflicts.py --dry-run --verbose --stats
+          else
+            python scripts/clean_git_conflicts.py --stats ${{ inputs.force && '--force' || '' }}
+          fi
+
+      - name: Commit Changes
+        if: inputs.dry_run == false
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "*.html"
+          git diff --staged --quiet || git commit -m "fix: remove git merge conflict artifacts [skip ci]"
+          git push origin main
