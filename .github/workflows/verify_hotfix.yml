@@ -1,0 +1,32 @@
+name: Verify Breadcrumb Hotfix
+
+on:
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install beautifulsoup4 lxml
+
+      - name: Run Verification Script
+        run: |
+          python scripts/verify_breadcrumbs_hero.py --fail-if-below 98 --verbose
+      
+      # Optional: Upload the detailed report as an artifact
+      - name: Upload Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hotfix-verification-report
+          path: verification-report.txt
