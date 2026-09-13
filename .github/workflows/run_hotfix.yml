@@ -1,0 +1,34 @@
+name: Run Breadcrumb Hotfix
+
+on:
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  hotfix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: pip install beautifulsoup4 lxml
+
+      - name: Run Hotfix Script
+        run: python scripts/hotfix_remaining_breadcrumbs.py --verbose
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if ! git diff --staged --quiet; then
+            git commit -m "fix: apply breadcrumb hotfix to remaining 139 files"
+            git push
+          else
+            echo "No changes to commit"
+          fi
