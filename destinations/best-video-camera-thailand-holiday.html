@@ -1,17 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><base href="/VideoCameraHoliday/"/><meta charset="utf-8"/>
+<head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Discover the best video cameras for Thailand holidays. Tested in Bangkok humidity &amp; Phuket salt spray. Includes ฿ pricing, Songkran tips, and local retailer guides." name="description"/>
 <title>Best Video Camera for Thailand Holidays 2026</title>
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/destinations/best-video-camera-thailand-holiday.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><style>
+(function(){
+    'use strict';
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/destinations/best-video-camera-thailand-holiday.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><!-- === DESIGN-B-HEAD-END === --></head>
+    /* ------------------------------------------------------------------
+       Guard: if the page already contains a Design B header, the injector
+       should never have run this. But if it did, bail out to avoid
+       duplicate-ID chaos.
+       ------------------------------------------------------------------ */
+    if (window.__hvcDesignBLoaded) return;
+    window.__hvcDesignBLoaded = true;
+
+    var drawer      = document.getElementById('siteDrawer');
+    var backdrop    = document.getElementById('drawerBackdrop');
+    var openBtn     = document.getElementById('drawerToggle');
+    var closeBtn    = document.getElementById('drawerClose');
+    var searchBtn   = document.getElementById('hvcSearchBtn');
+    var tabsBox     = document.getElementById('drawerTabs');
+    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
+    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
+    if (!drawer || !backdrop || !openBtn) return;
+
+    /* -------------------- Drawer open/close -------------------- */
+    function openDrawer(){
+        drawer.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        drawer.setAttribute('aria-hidden','false');
+        openBtn.setAttribute('aria-expanded','true');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer(){
+        drawer.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden','true');
+        openBtn.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
+    }
+    window.closeDrawer = closeDrawer;
+
+    openBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+
+    /* -------------------- Search button -------------------- */
+    /* Search button just opens the drawer and focuses the input.
+       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function(){
+            openDrawer();
+            setTimeout(function(){
+                var i = document.getElementById('drawerSearchInput');
+                if (i) i.focus();
+            }, 280);
+        });
+    }
+
+    /* -------------------- Escape + focus trap -------------------- */
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+            closeDrawer();
+            return;
+        }
+        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
+        var focusables = drawer.querySelectorAll(
+            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusables.length === 0) return;
+        var first = focusables[0];
+        var last  = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
+    /* -------------------- Tabs -------------------- */
+    tabButtons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var target = btn.getAttribute('data-tab');
+            tabButtons.forEach(function(b){
+                var on = b === btn;
+                b.classList.toggle('is-active', on);
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            panels.forEach(function(p){
+                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
+            });
+        });
+    });
+
+    /* -------------------- Drawer search filter -------------------- */
+    var searchInput = document.getElementById('drawerSearchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(){
+            var q = this.value.trim().toLowerCase();
+            if (q.length === 0) {
+                panels.forEach(function(p){
+                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
+                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
+                });
+                return;
+            }
+            var bestPanel = null, bestCount = 0;
+            panels.forEach(function(p){
+                var count = 0;
+                p.querySelectorAll('li').forEach(function(li){
+                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
+                    li.style.display = match ? '' : 'none';
+                    if (match) count++;
+                });
+                p.querySelectorAll('h5').forEach(function(h){
+                    var sib = h.nextElementSibling, anyVisible = false;
+                    while (sib && sib.tagName === 'UL') {
+                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
+                        sib = sib.nextElementSibling;
+                    }
+                    h.style.display = anyVisible ? '' : 'none';
+                });
+                if (count > bestCount) { bestCount = count; bestPanel = p; }
+            });
+            if (bestPanel) {
+                var tabName = bestPanel.getAttribute('data-panel');
+                tabButtons.forEach(function(b){
+                    var on = b.getAttribute('data-tab') === tabName;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+                panels.forEach(function(p){
+                    p.classList.toggle('is-active', p === bestPanel);
+                });
+            }
+        });
+    }
+
+    /* -------------------- Newsletter (no-backend interceptor) --------------------
+       NOTE: This gives a friendly message but does NOT send the email anywhere.
+       Wire it to a real ESP before relying on it. */
+    var nlForm = document.getElementById('hvcNewsletterForm');
+    if (nlForm) {
+        nlForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            var input = nlForm.querySelector('input[type="email"]');
+            if (!input || !input.value || input.value.indexOf('@') === -1) {
+                if (input) input.focus();
+                return;
+            }
+            var status = document.createElement('p');
+            status.setAttribute('role', 'status');
+            status.className = 'footer-newsletter-msg';
+            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            nlForm.replaceWith(status);
+        });
+    }
+
+    /* -------------------- Cookie consent -------------------- */
+    var STORAGE_KEY = 'hvc-cookie-consent';
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+        var stored = null;
+        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
+        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
+
+        function setConsent(v){
+            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
+            banner.classList.remove('is-visible');
+            /* Dispatch event so future embed-gating code can hook in */
+            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
+        }
+        var acceptBtn = document.getElementById('cookieAccept');
+        var rejectBtn = document.getElementById('cookieReject');
+        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
+        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
+    }
+})();
+</style></head>
 <body>
-
-
-
-
-
 <!-- === DESIGN-B-HEADER-START === --><header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
@@ -203,14 +375,14 @@
 <div class="takeaways">
 <h3>⚡ Quick Summary: Top 3 Cameras for Thailand</h3>
 <ul>
-<li><strong>Best for Island Hopping &amp; Songkran:</strong> <a class="content-link" href="/reviews/gopro-hero-13-black-review.html">GoPro Hero 13 Black</a> – Natively waterproof, indestructible, and handles salt spray perfectly.</li>
-<li><strong>Best for Bangkok Street Food &amp; Night Markets:</strong> <a class="content-link" href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4P</a> – Unbeatable low-light performance and mechanical stabilization for crowded, uneven streets.</li>
-<li><strong>Best for Temple Vlogging &amp; Low Light:</strong> <a class="content-link" href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a> – Superior 1-inch sensor for dimly lit temples and excellent directional audio to cut through tuk-tuk noise.</li>
+<li><strong>Best for Island Hopping &amp; Songkran:</strong> <a class="content-link" href="/VideoCameraHoliday/reviews/gopro-hero-13-black-review.html">GoPro Hero 13 Black</a> – Natively waterproof, indestructible, and handles salt spray perfectly.</li>
+<li><strong>Best for Bangkok Street Food &amp; Night Markets:</strong> <a class="content-link" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4P</a> – Unbeatable low-light performance and mechanical stabilization for crowded, uneven streets.</li>
+<li><strong>Best for Temple Vlogging &amp; Low Light:</strong> <a class="content-link" href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a> – Superior 1-inch sensor for dimly lit temples and excellent directional audio to cut through tuk-tuk noise.</li>
 </ul>
 </div>
 <h2> Top Camera Picks for Thailand Travel</h2>
 <div class="gear-grid">
-<a class="gear-card" href="/reviews/gopro-hero-13-black-review.html">
+<a class="gear-card" href="/VideoCameraHoliday/reviews/gopro-hero-13-black-review.html">
 <span class="badge th">Best for Islands &amp; Songkran</span>
 <span class="price-tag">~฿16,500</span>
 <h3>GoPro Hero 13 Black</h3>
@@ -220,7 +392,7 @@
 <li><strong>Cons:</strong> Low-light performance is weaker than larger sensors; requires a separate mic for vlogging.</li>
 </ul>
 </a>
-<a class="gear-card" href="/reviews/dji-osmo-pocket-4p-review.html">
+<a class="gear-card" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">
 <span class="badge">Best for Night Markets</span>
 <span class="price-tag">~฿19,900</span>
 <h3>DJI Osmo Pocket 4P</h3>
@@ -230,7 +402,7 @@
 <li><strong>Cons:</strong> Not waterproof. The gimbal mechanism is vulnerable to fine beach sand and heavy rain.</li>
 </ul>
 </a>
-<a class="gear-card" href="/reviews/sony-zv-1-ii-review.html">
+<a class="gear-card" href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">
 <span class="badge">Best for Vlogging</span>
 <span class="price-tag">~฿28,000</span>
 <h3>Sony ZV-1 II</h3>
@@ -253,19 +425,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="content-link" href="/reviews/gopro-hero-13-black-review.html">GoPro Hero 13 Black</a></td>
+<td><a class="content-link" href="/VideoCameraHoliday/reviews/gopro-hero-13-black-review.html">GoPro Hero 13 Black</a></td>
 <td>฿16,500</td>
 <td>Waterproof (10m), Dust/Salt Resistant</td>
 <td>Island hopping, snorkeling, Songkran festival</td>
 </tr>
 <tr>
-<td><a class="content-link" href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4P</a></td>
+<td><a class="content-link" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4P</a></td>
 <td>฿19,900</td>
 <td>None (Requires separate rain cover)</td>
 <td>Bangkok street food, night markets, city vlogs</td>
 </tr>
 <tr>
-<td><a class="content-link" href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></td>
+<td><a class="content-link" href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></td>
 <td>฿28,000</td>
 <td>None</td>
 <td>Temple tours, talking-head vlogs, low-light dining</td>
@@ -290,7 +462,7 @@
 <li><strong>Salt Spray is a Gimbal Killer:</strong> If you take a DJI Pocket or mirrorless camera on a long-tail boat in Phuket or Krabi, the fine salt mist will settle on the lens and seep into moving parts. <strong>Solution:</strong> Always use a clear plastic rain cover or dry bag on boats, and wipe the camera down with a fresh water-dampened microfiber cloth immediately after disembarking.</li>
 <li><strong>Songkran Survival:</strong> During the April water festival, cameras are subjected to high-pressure water guns and buckets of water. <strong>Solution:</strong> Leave your expensive mirrorless gear in the hotel safe. Only bring a fully waterproof action camera like the GoPro Hero 13, and ensure all port doors are tightly sealed.</li>
 </ol>
-<p>For more detailed protection strategies, read our guide on <a class="content-link" href="/how-to/film-in-rain-protect-gear.html">how to protect your camera gear in rain and humidity</a>.</p>
+<p>For more detailed protection strategies, read our guide on <a class="content-link" href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html">how to protect your camera gear in rain and humidity</a>.</p>
 <h2>❓ Frequently Asked Questions</h2>
 <details style="background: #111; border-radius: 8px; margin-bottom: 15px; padding: 15px 20px; border: 1px solid #333;">
 <summary style="cursor: pointer; color: #e94560; font-weight: 600; font-size: 1.05rem;">What is the best camera for island hopping in Thailand?</summary>
@@ -307,15 +479,15 @@
 <section class="related-section">
 <h3>📚 Continue Exploring</h3>
 <div class="gear-grid">
-<a class="gear-card" href="/guides/best-waterproof-cameras-beach.html" style="text-decoration: none; color: inherit;">
+<a class="gear-card" href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html" style="text-decoration: none; color: inherit;">
 <h3 style="color: #e94560; margin-top: 0;">Best Waterproof Cameras for Beach</h3>
 <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">Detailed reviews of cameras that can survive sand, salt, and snorkeling.</p>
 </a>
-<a class="gear-card" href="/how-to/film-in-rain-protect-gear.html" style="text-decoration: none; color: inherit;">
+<a class="gear-card" href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html" style="text-decoration: none; color: inherit;">
 <h3 style="color: #e94560; margin-top: 0;">How to Protect Gear in Rain &amp; Humidity</h3>
 <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">Essential tips for preventing condensation and water damage in tropical climates.</p>
 </a>
-<a class="gear-card" href="/guides/best-vlogging-cameras-travel-2026.html" style="text-decoration: none; color: inherit;">
+<a class="gear-card" href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html" style="text-decoration: none; color: inherit;">
 <h3 style="color: #e94560; margin-top: 0;">Best Vlogging Cameras for Travel 2026</h3>
 <p style="font-size: 0.9rem; color: #888; margin-bottom: 0;">Our global top picks for creators who need great audio and stabilization on the go.</p>
 </a>
@@ -323,11 +495,6 @@
 </section>
 <p class="affiliate-note">This guide contains affiliate links. If you purchase through them, we may receive a small commission at no extra cost to you. This helps us maintain our site and continue creating independent, field-tested content. Opinions are always 100% ours.</p>
 </article>
-
-
-
-
-
 <!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
@@ -427,183 +594,5 @@
 </div>
 </div>
 </div>
-<script>
-(function(){
-    'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
-    if (window.__hvcDesignBLoaded) return;
-    window.__hvcDesignBLoaded = true;
-
-    var drawer      = document.getElementById('siteDrawer');
-    var backdrop    = document.getElementById('drawerBackdrop');
-    var openBtn     = document.getElementById('drawerToggle');
-    var closeBtn    = document.getElementById('drawerClose');
-    var searchBtn   = document.getElementById('hvcSearchBtn');
-    var tabsBox     = document.getElementById('drawerTabs');
-    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
-    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
-    if (!drawer || !backdrop || !openBtn) return;
-
-    /* -------------------- Drawer open/close -------------------- */
-    function openDrawer(){
-        drawer.classList.add('is-open');
-        backdrop.classList.add('is-open');
-        drawer.setAttribute('aria-hidden','false');
-        openBtn.setAttribute('aria-expanded','true');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer(){
-        drawer.classList.remove('is-open');
-        backdrop.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden','true');
-        openBtn.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
-        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
-    }
-    window.closeDrawer = closeDrawer;
-
-    openBtn.addEventListener('click', openDrawer);
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
-    if (searchBtn) {
-        searchBtn.addEventListener('click', function(){
-            openDrawer();
-            setTimeout(function(){
-                var i = document.getElementById('drawerSearchInput');
-                if (i) i.focus();
-            }, 280);
-        });
-    }
-
-    /* -------------------- Escape + focus trap -------------------- */
-    document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
-            closeDrawer();
-            return;
-        }
-        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
-        var focusables = drawer.querySelectorAll(
-            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
-        );
-        if (focusables.length === 0) return;
-        var first = focusables[0];
-        var last  = focusables[focusables.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-            e.preventDefault();
-            last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-            e.preventDefault();
-            first.focus();
-        }
-    });
-
-    /* -------------------- Tabs -------------------- */
-    tabButtons.forEach(function(btn){
-        btn.addEventListener('click', function(){
-            var target = btn.getAttribute('data-tab');
-            tabButtons.forEach(function(b){
-                var on = b === btn;
-                b.classList.toggle('is-active', on);
-                b.setAttribute('aria-selected', on ? 'true' : 'false');
-            });
-            panels.forEach(function(p){
-                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
-            });
-        });
-    });
-
-    /* -------------------- Drawer search filter -------------------- */
-    var searchInput = document.getElementById('drawerSearchInput');
-    if (searchInput) {
-        searchInput.addEventListener('input', function(){
-            var q = this.value.trim().toLowerCase();
-            if (q.length === 0) {
-                panels.forEach(function(p){
-                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
-                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
-                });
-                return;
-            }
-            var bestPanel = null, bestCount = 0;
-            panels.forEach(function(p){
-                var count = 0;
-                p.querySelectorAll('li').forEach(function(li){
-                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
-                    li.style.display = match ? '' : 'none';
-                    if (match) count++;
-                });
-                p.querySelectorAll('h5').forEach(function(h){
-                    var sib = h.nextElementSibling, anyVisible = false;
-                    while (sib && sib.tagName === 'UL') {
-                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
-                        sib = sib.nextElementSibling;
-                    }
-                    h.style.display = anyVisible ? '' : 'none';
-                });
-                if (count > bestCount) { bestCount = count; bestPanel = p; }
-            });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
-        });
-    }
-
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
-    var nlForm = document.getElementById('hvcNewsletterForm');
-    if (nlForm) {
-        nlForm.addEventListener('submit', function(e){
-            e.preventDefault();
-            var input = nlForm.querySelector('input[type="email"]');
-            if (!input || !input.value || input.value.indexOf('@') === -1) {
-                if (input) input.focus();
-                return;
-            }
-            var status = document.createElement('p');
-            status.setAttribute('role', 'status');
-            status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
-            nlForm.replaceWith(status);
-        });
-    }
-
-    /* -------------------- Cookie consent -------------------- */
-    var STORAGE_KEY = 'hvc-cookie-consent';
-    var banner = document.getElementById('cookieBanner');
-    if (banner) {
-        var stored = null;
-        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
-        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
-
-        function setConsent(v){
-            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
-            banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
-            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
-        }
-        var acceptBtn = document.getElementById('cookieAccept');
-        var rejectBtn = document.getElementById('cookieReject');
-        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
-        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
-    }
-})();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+<script></script><!-- === DESIGN-B-FOOTER-END === --></body>
 </html>

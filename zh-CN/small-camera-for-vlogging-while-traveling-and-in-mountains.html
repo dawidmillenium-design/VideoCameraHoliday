@@ -1,17 +1,189 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><base href="/VideoCameraHoliday/"/><meta charset="utf-8"/>
+<head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="当你在海拔4500米的稻城亚丁徒步，或在杭州龙井村的茶园漫步时，一台能塞进冲锋衣口袋的相机，往往比旗舰手机更能捕捉风的声音和雪山的纹理。为满足中国旅行者从318国道到城市漫步的多元需求，我们选取了四款当前在中国市场（京东、天猫均有官方旗舰店）热销的小型Vlog相机——索尼ZV-E10 II、大疆Osmo Po..." name="description"/>
 <title>山野与城市之间：2024年旅行Vlog相机横评（中国实地测试）</title>
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/small-camera-for-vlogging-while-traveling-and-in-mountains.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><style>
+(function(){
+    'use strict';
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/zh-CN/small-camera-for-vlogging-while-traveling-and-in-mountains.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><!-- === DESIGN-B-HEAD-END === --></head>
+    /* ------------------------------------------------------------------
+       Guard: if the page already contains a Design B header, the injector
+       should never have run this. But if it did, bail out to avoid
+       duplicate-ID chaos.
+       ------------------------------------------------------------------ */
+    if (window.__hvcDesignBLoaded) return;
+    window.__hvcDesignBLoaded = true;
+
+    var drawer      = document.getElementById('siteDrawer');
+    var backdrop    = document.getElementById('drawerBackdrop');
+    var openBtn     = document.getElementById('drawerToggle');
+    var closeBtn    = document.getElementById('drawerClose');
+    var searchBtn   = document.getElementById('hvcSearchBtn');
+    var tabsBox     = document.getElementById('drawerTabs');
+    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
+    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
+    if (!drawer || !backdrop || !openBtn) return;
+
+    /* -------------------- Drawer open/close -------------------- */
+    function openDrawer(){
+        drawer.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        drawer.setAttribute('aria-hidden','false');
+        openBtn.setAttribute('aria-expanded','true');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer(){
+        drawer.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden','true');
+        openBtn.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
+    }
+    window.closeDrawer = closeDrawer;
+
+    openBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+
+    /* -------------------- Search button -------------------- */
+    /* Search button just opens the drawer and focuses the input.
+       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function(){
+            openDrawer();
+            setTimeout(function(){
+                var i = document.getElementById('drawerSearchInput');
+                if (i) i.focus();
+            }, 280);
+        });
+    }
+
+    /* -------------------- Escape + focus trap -------------------- */
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+            closeDrawer();
+            return;
+        }
+        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
+        var focusables = drawer.querySelectorAll(
+            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusables.length === 0) return;
+        var first = focusables[0];
+        var last  = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
+    /* -------------------- Tabs -------------------- */
+    tabButtons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var target = btn.getAttribute('data-tab');
+            tabButtons.forEach(function(b){
+                var on = b === btn;
+                b.classList.toggle('is-active', on);
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            panels.forEach(function(p){
+                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
+            });
+        });
+    });
+
+    /* -------------------- Drawer search filter -------------------- */
+    var searchInput = document.getElementById('drawerSearchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(){
+            var q = this.value.trim().toLowerCase();
+            if (q.length === 0) {
+                panels.forEach(function(p){
+                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
+                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
+                });
+                return;
+            }
+            var bestPanel = null, bestCount = 0;
+            panels.forEach(function(p){
+                var count = 0;
+                p.querySelectorAll('li').forEach(function(li){
+                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
+                    li.style.display = match ? '' : 'none';
+                    if (match) count++;
+                });
+                p.querySelectorAll('h5').forEach(function(h){
+                    var sib = h.nextElementSibling, anyVisible = false;
+                    while (sib && sib.tagName === 'UL') {
+                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
+                        sib = sib.nextElementSibling;
+                    }
+                    h.style.display = anyVisible ? '' : 'none';
+                });
+                if (count > bestCount) { bestCount = count; bestPanel = p; }
+            });
+            if (bestPanel) {
+                var tabName = bestPanel.getAttribute('data-panel');
+                tabButtons.forEach(function(b){
+                    var on = b.getAttribute('data-tab') === tabName;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+                panels.forEach(function(p){
+                    p.classList.toggle('is-active', p === bestPanel);
+                });
+            }
+        });
+    }
+
+    /* -------------------- Newsletter (no-backend interceptor) --------------------
+       NOTE: This gives a friendly message but does NOT send the email anywhere.
+       Wire it to a real ESP before relying on it. */
+    var nlForm = document.getElementById('hvcNewsletterForm');
+    if (nlForm) {
+        nlForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            var input = nlForm.querySelector('input[type="email"]');
+            if (!input || !input.value || input.value.indexOf('@') === -1) {
+                if (input) input.focus();
+                return;
+            }
+            var status = document.createElement('p');
+            status.setAttribute('role', 'status');
+            status.className = 'footer-newsletter-msg';
+            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            nlForm.replaceWith(status);
+        });
+    }
+
+    /* -------------------- Cookie consent -------------------- */
+    var STORAGE_KEY = 'hvc-cookie-consent';
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+        var stored = null;
+        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
+        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
+
+        function setConsent(v){
+            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
+            banner.classList.remove('is-visible');
+            /* Dispatch event so future embed-gating code can hook in */
+            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
+        }
+        var acceptBtn = document.getElementById('cookieAccept');
+        var rejectBtn = document.getElementById('cookieReject');
+        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
+        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
+    }
+})();
+</style></head>
 <body>
-
-
-
-
-
 <!-- === DESIGN-B-HEADER-START === --><header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
@@ -243,11 +415,6 @@
 <p><strong>💡 性价比之选：佳能PowerShot V10</strong>。仅适合预算有限且主要拍摄日间口播Vlog的用户。它的画质和防抖均不突出，但¥2,999的价格和126g的重量是入门者的低门槛选择。</p>
 <p>最后建议：在京东购买时，关注“以旧换新”补贴（最高可抵¥800）和“30天无忧试用”服务。大疆和索尼的官方延保计划（约¥200/年）在高原低温等严苛环境下值得购买。无论选择哪台，请记住——最好的相机是能让你在318国道上愿意停车拍摄的那台。</p>
 </main>
-
-
-
-
-
 <!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
@@ -347,183 +514,5 @@
 </div>
 </div>
 </div>
-<script>
-(function(){
-    'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
-    if (window.__hvcDesignBLoaded) return;
-    window.__hvcDesignBLoaded = true;
-
-    var drawer      = document.getElementById('siteDrawer');
-    var backdrop    = document.getElementById('drawerBackdrop');
-    var openBtn     = document.getElementById('drawerToggle');
-    var closeBtn    = document.getElementById('drawerClose');
-    var searchBtn   = document.getElementById('hvcSearchBtn');
-    var tabsBox     = document.getElementById('drawerTabs');
-    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
-    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
-    if (!drawer || !backdrop || !openBtn) return;
-
-    /* -------------------- Drawer open/close -------------------- */
-    function openDrawer(){
-        drawer.classList.add('is-open');
-        backdrop.classList.add('is-open');
-        drawer.setAttribute('aria-hidden','false');
-        openBtn.setAttribute('aria-expanded','true');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer(){
-        drawer.classList.remove('is-open');
-        backdrop.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden','true');
-        openBtn.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
-        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
-    }
-    window.closeDrawer = closeDrawer;
-
-    openBtn.addEventListener('click', openDrawer);
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
-    if (searchBtn) {
-        searchBtn.addEventListener('click', function(){
-            openDrawer();
-            setTimeout(function(){
-                var i = document.getElementById('drawerSearchInput');
-                if (i) i.focus();
-            }, 280);
-        });
-    }
-
-    /* -------------------- Escape + focus trap -------------------- */
-    document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
-            closeDrawer();
-            return;
-        }
-        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
-        var focusables = drawer.querySelectorAll(
-            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
-        );
-        if (focusables.length === 0) return;
-        var first = focusables[0];
-        var last  = focusables[focusables.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-            e.preventDefault();
-            last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-            e.preventDefault();
-            first.focus();
-        }
-    });
-
-    /* -------------------- Tabs -------------------- */
-    tabButtons.forEach(function(btn){
-        btn.addEventListener('click', function(){
-            var target = btn.getAttribute('data-tab');
-            tabButtons.forEach(function(b){
-                var on = b === btn;
-                b.classList.toggle('is-active', on);
-                b.setAttribute('aria-selected', on ? 'true' : 'false');
-            });
-            panels.forEach(function(p){
-                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
-            });
-        });
-    });
-
-    /* -------------------- Drawer search filter -------------------- */
-    var searchInput = document.getElementById('drawerSearchInput');
-    if (searchInput) {
-        searchInput.addEventListener('input', function(){
-            var q = this.value.trim().toLowerCase();
-            if (q.length === 0) {
-                panels.forEach(function(p){
-                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
-                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
-                });
-                return;
-            }
-            var bestPanel = null, bestCount = 0;
-            panels.forEach(function(p){
-                var count = 0;
-                p.querySelectorAll('li').forEach(function(li){
-                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
-                    li.style.display = match ? '' : 'none';
-                    if (match) count++;
-                });
-                p.querySelectorAll('h5').forEach(function(h){
-                    var sib = h.nextElementSibling, anyVisible = false;
-                    while (sib && sib.tagName === 'UL') {
-                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
-                        sib = sib.nextElementSibling;
-                    }
-                    h.style.display = anyVisible ? '' : 'none';
-                });
-                if (count > bestCount) { bestCount = count; bestPanel = p; }
-            });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
-        });
-    }
-
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
-    var nlForm = document.getElementById('hvcNewsletterForm');
-    if (nlForm) {
-        nlForm.addEventListener('submit', function(e){
-            e.preventDefault();
-            var input = nlForm.querySelector('input[type="email"]');
-            if (!input || !input.value || input.value.indexOf('@') === -1) {
-                if (input) input.focus();
-                return;
-            }
-            var status = document.createElement('p');
-            status.setAttribute('role', 'status');
-            status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
-            nlForm.replaceWith(status);
-        });
-    }
-
-    /* -------------------- Cookie consent -------------------- */
-    var STORAGE_KEY = 'hvc-cookie-consent';
-    var banner = document.getElementById('cookieBanner');
-    if (banner) {
-        var stored = null;
-        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
-        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
-
-        function setConsent(v){
-            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
-            banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
-            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
-        }
-        var acceptBtn = document.getElementById('cookieAccept');
-        var rejectBtn = document.getElementById('cookieReject');
-        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
-        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
-    }
-})();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+<script></script><!-- === DESIGN-B-FOOTER-END === --></body>
 </html>

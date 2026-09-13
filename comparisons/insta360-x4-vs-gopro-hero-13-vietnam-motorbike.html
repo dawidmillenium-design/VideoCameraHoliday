@@ -1,17 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><base href="/VideoCameraHoliday/"/><meta charset="utf-8"/>
+<head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Can't decide between Insta360 X4 and GoPro Hero 13 for your Vietnam motorbike trip? We compare stabilization, wind noise, and mounting for the Ha Giang Loop." name="description"/>
 <title>Can't decide between Insta360 X4 and GoPro Hero 13 for</title>
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/comparisons/insta360-x4-vs-gopro-hero-13-vietnam-motorbike.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><style>
+(function(){
+    'use strict';
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/comparisons/insta360-x4-vs-gopro-hero-13-vietnam-motorbike.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><!-- === DESIGN-B-HEAD-END === --></head>
+    /* ------------------------------------------------------------------
+       Guard: if the page already contains a Design B header, the injector
+       should never have run this. But if it did, bail out to avoid
+       duplicate-ID chaos.
+       ------------------------------------------------------------------ */
+    if (window.__hvcDesignBLoaded) return;
+    window.__hvcDesignBLoaded = true;
+
+    var drawer      = document.getElementById('siteDrawer');
+    var backdrop    = document.getElementById('drawerBackdrop');
+    var openBtn     = document.getElementById('drawerToggle');
+    var closeBtn    = document.getElementById('drawerClose');
+    var searchBtn   = document.getElementById('hvcSearchBtn');
+    var tabsBox     = document.getElementById('drawerTabs');
+    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
+    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
+    if (!drawer || !backdrop || !openBtn) return;
+
+    /* -------------------- Drawer open/close -------------------- */
+    function openDrawer(){
+        drawer.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        drawer.setAttribute('aria-hidden','false');
+        openBtn.setAttribute('aria-expanded','true');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer(){
+        drawer.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden','true');
+        openBtn.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
+    }
+    window.closeDrawer = closeDrawer;
+
+    openBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+
+    /* -------------------- Search button -------------------- */
+    /* Search button just opens the drawer and focuses the input.
+       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function(){
+            openDrawer();
+            setTimeout(function(){
+                var i = document.getElementById('drawerSearchInput');
+                if (i) i.focus();
+            }, 280);
+        });
+    }
+
+    /* -------------------- Escape + focus trap -------------------- */
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+            closeDrawer();
+            return;
+        }
+        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
+        var focusables = drawer.querySelectorAll(
+            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusables.length === 0) return;
+        var first = focusables[0];
+        var last  = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
+    /* -------------------- Tabs -------------------- */
+    tabButtons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var target = btn.getAttribute('data-tab');
+            tabButtons.forEach(function(b){
+                var on = b === btn;
+                b.classList.toggle('is-active', on);
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            panels.forEach(function(p){
+                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
+            });
+        });
+    });
+
+    /* -------------------- Drawer search filter -------------------- */
+    var searchInput = document.getElementById('drawerSearchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(){
+            var q = this.value.trim().toLowerCase();
+            if (q.length === 0) {
+                panels.forEach(function(p){
+                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
+                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
+                });
+                return;
+            }
+            var bestPanel = null, bestCount = 0;
+            panels.forEach(function(p){
+                var count = 0;
+                p.querySelectorAll('li').forEach(function(li){
+                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
+                    li.style.display = match ? '' : 'none';
+                    if (match) count++;
+                });
+                p.querySelectorAll('h5').forEach(function(h){
+                    var sib = h.nextElementSibling, anyVisible = false;
+                    while (sib && sib.tagName === 'UL') {
+                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
+                        sib = sib.nextElementSibling;
+                    }
+                    h.style.display = anyVisible ? '' : 'none';
+                });
+                if (count > bestCount) { bestCount = count; bestPanel = p; }
+            });
+            if (bestPanel) {
+                var tabName = bestPanel.getAttribute('data-panel');
+                tabButtons.forEach(function(b){
+                    var on = b.getAttribute('data-tab') === tabName;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+                panels.forEach(function(p){
+                    p.classList.toggle('is-active', p === bestPanel);
+                });
+            }
+        });
+    }
+
+    /* -------------------- Newsletter (no-backend interceptor) --------------------
+       NOTE: This gives a friendly message but does NOT send the email anywhere.
+       Wire it to a real ESP before relying on it. */
+    var nlForm = document.getElementById('hvcNewsletterForm');
+    if (nlForm) {
+        nlForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            var input = nlForm.querySelector('input[type="email"]');
+            if (!input || !input.value || input.value.indexOf('@') === -1) {
+                if (input) input.focus();
+                return;
+            }
+            var status = document.createElement('p');
+            status.setAttribute('role', 'status');
+            status.className = 'footer-newsletter-msg';
+            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            nlForm.replaceWith(status);
+        });
+    }
+
+    /* -------------------- Cookie consent -------------------- */
+    var STORAGE_KEY = 'hvc-cookie-consent';
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+        var stored = null;
+        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
+        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
+
+        function setConsent(v){
+            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
+            banner.classList.remove('is-visible');
+            /* Dispatch event so future embed-gating code can hook in */
+            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
+        }
+        var acceptBtn = document.getElementById('cookieAccept');
+        var rejectBtn = document.getElementById('cookieReject');
+        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
+        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
+    }
+})();
+</style></head>
 <body>
-
-
-
-
-
 <!-- === DESIGN-B-HEADER-START === --><header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
@@ -192,8 +364,8 @@
 <div class="takeaways">
 <h3>⚡ Quick Takeaways for Vietnam Riders</h3>
 <ul>
-<li><strong>For Cinematic "Invisible" POV:</strong> The <a class="content-link" href="/reviews/insta360-x4-review.html">Insta360 X4</a> wins. The invisible selfie stick effect lets you capture both yourself and the stunning Ma Pi Leng pass scenery simultaneously, with the ability to reframe in post.</li>
-<li><strong>For Audio &amp; Rugged Simplicity:</strong> The <a class="content-link" href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a> wins. When paired with the Media Mod or a wind muff, it handles 40km/h+ wind noise far better than the X4's built-in mics, and its protective lens covers survive accidental drops on dirt roads.</li>
+<li><strong>For Cinematic "Invisible" POV:</strong> The <a class="content-link" href="/VideoCameraHoliday/reviews/insta360-x4-review.html">Insta360 X4</a> wins. The invisible selfie stick effect lets you capture both yourself and the stunning Ma Pi Leng pass scenery simultaneously, with the ability to reframe in post.</li>
+<li><strong>For Audio &amp; Rugged Simplicity:</strong> The <a class="content-link" href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">GoPro Hero 13</a> wins. When paired with the Media Mod or a wind muff, it handles 40km/h+ wind noise far better than the X4's built-in mics, and its protective lens covers survive accidental drops on dirt roads.</li>
 <li><strong>The Verdict:</strong> If you are comfortable editing 360° footage and want maximum creative freedom, choose the X4. If you want to shoot, mount, and forget with usable audio straight out of camera, choose the Hero 13.</li>
 </ul>
 </div>
@@ -263,14 +435,9 @@
 </div>
 <h2>Final Verdict &amp; Next Steps</h2>
 <p>Both cameras are more than capable of documenting your Southeast Asian adventure. The <strong>Insta360 X4</strong> is the ultimate creative tool for riders who don't mind spending 10 minutes reframing clips in an app. The <strong>GoPro Hero 13</strong> is the reliable workhorse for riders who want to mount it, hit record, and trust that the footage and audio will be usable straight out of the camera.</p>
-<p>For more destination-specific advice, read our complete <a class="content-link" href="/destinations/vietnam-filming-itinerary-camera-guide.html">Vietnam Filming &amp; Camera Guide</a>. And don't forget to pack high-endurance storage: check our <a class="content-link" href="/how-to/choose-memory-card-4k-video.html">Best SD Cards for 4K Travel Video</a> guide to ensure you never miss a shot.</p>
+<p>For more destination-specific advice, read our complete <a class="content-link" href="/VideoCameraHoliday/destinations/vietnam-filming-itinerary-camera-guide.html">Vietnam Filming &amp; Camera Guide</a>. And don't forget to pack high-endurance storage: check our <a class="content-link" href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Best SD Cards for 4K Travel Video</a> guide to ensure you never miss a shot.</p>
 <p class="affiliate-note">This comparison contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. Our rankings are based on real travel testing, not spec sheets.</p>
 </article>
-
-
-
-
-
 <!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
@@ -370,183 +537,5 @@
 </div>
 </div>
 </div>
-<script>
-(function(){
-    'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
-    if (window.__hvcDesignBLoaded) return;
-    window.__hvcDesignBLoaded = true;
-
-    var drawer      = document.getElementById('siteDrawer');
-    var backdrop    = document.getElementById('drawerBackdrop');
-    var openBtn     = document.getElementById('drawerToggle');
-    var closeBtn    = document.getElementById('drawerClose');
-    var searchBtn   = document.getElementById('hvcSearchBtn');
-    var tabsBox     = document.getElementById('drawerTabs');
-    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
-    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
-    if (!drawer || !backdrop || !openBtn) return;
-
-    /* -------------------- Drawer open/close -------------------- */
-    function openDrawer(){
-        drawer.classList.add('is-open');
-        backdrop.classList.add('is-open');
-        drawer.setAttribute('aria-hidden','false');
-        openBtn.setAttribute('aria-expanded','true');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer(){
-        drawer.classList.remove('is-open');
-        backdrop.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden','true');
-        openBtn.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
-        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
-    }
-    window.closeDrawer = closeDrawer;
-
-    openBtn.addEventListener('click', openDrawer);
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
-    if (searchBtn) {
-        searchBtn.addEventListener('click', function(){
-            openDrawer();
-            setTimeout(function(){
-                var i = document.getElementById('drawerSearchInput');
-                if (i) i.focus();
-            }, 280);
-        });
-    }
-
-    /* -------------------- Escape + focus trap -------------------- */
-    document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
-            closeDrawer();
-            return;
-        }
-        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
-        var focusables = drawer.querySelectorAll(
-            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
-        );
-        if (focusables.length === 0) return;
-        var first = focusables[0];
-        var last  = focusables[focusables.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-            e.preventDefault();
-            last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-            e.preventDefault();
-            first.focus();
-        }
-    });
-
-    /* -------------------- Tabs -------------------- */
-    tabButtons.forEach(function(btn){
-        btn.addEventListener('click', function(){
-            var target = btn.getAttribute('data-tab');
-            tabButtons.forEach(function(b){
-                var on = b === btn;
-                b.classList.toggle('is-active', on);
-                b.setAttribute('aria-selected', on ? 'true' : 'false');
-            });
-            panels.forEach(function(p){
-                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
-            });
-        });
-    });
-
-    /* -------------------- Drawer search filter -------------------- */
-    var searchInput = document.getElementById('drawerSearchInput');
-    if (searchInput) {
-        searchInput.addEventListener('input', function(){
-            var q = this.value.trim().toLowerCase();
-            if (q.length === 0) {
-                panels.forEach(function(p){
-                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
-                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
-                });
-                return;
-            }
-            var bestPanel = null, bestCount = 0;
-            panels.forEach(function(p){
-                var count = 0;
-                p.querySelectorAll('li').forEach(function(li){
-                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
-                    li.style.display = match ? '' : 'none';
-                    if (match) count++;
-                });
-                p.querySelectorAll('h5').forEach(function(h){
-                    var sib = h.nextElementSibling, anyVisible = false;
-                    while (sib && sib.tagName === 'UL') {
-                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
-                        sib = sib.nextElementSibling;
-                    }
-                    h.style.display = anyVisible ? '' : 'none';
-                });
-                if (count > bestCount) { bestCount = count; bestPanel = p; }
-            });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
-        });
-    }
-
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
-    var nlForm = document.getElementById('hvcNewsletterForm');
-    if (nlForm) {
-        nlForm.addEventListener('submit', function(e){
-            e.preventDefault();
-            var input = nlForm.querySelector('input[type="email"]');
-            if (!input || !input.value || input.value.indexOf('@') === -1) {
-                if (input) input.focus();
-                return;
-            }
-            var status = document.createElement('p');
-            status.setAttribute('role', 'status');
-            status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
-            nlForm.replaceWith(status);
-        });
-    }
-
-    /* -------------------- Cookie consent -------------------- */
-    var STORAGE_KEY = 'hvc-cookie-consent';
-    var banner = document.getElementById('cookieBanner');
-    if (banner) {
-        var stored = null;
-        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
-        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
-
-        function setConsent(v){
-            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
-            banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
-            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
-        }
-        var acceptBtn = document.getElementById('cookieAccept');
-        var rejectBtn = document.getElementById('cookieReject');
-        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
-        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
-    }
-})();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+<script></script><!-- === DESIGN-B-FOOTER-END === --></body>
 </html>

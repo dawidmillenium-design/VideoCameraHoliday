@@ -1,16 +1,188 @@
 <html lang="en">
-<head><base href="/VideoCameraHoliday/"/><meta charset="utf-8"/>
+<head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Expert camera comparisons for travel videography. Compare GoPro vs DJI, Sony vs Canon, action cams vs vlogging cameras. Real-world testing by Dawid Millennium with honest verdicts for 2026." name="description"/>
 <title>Camera Comparisons 2026 – Head-to-Head Travel Camera Guides</title>
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/comparisons/" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><style>
+(function(){
+    'use strict';
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/comparisons/" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><!-- === DESIGN-B-HEAD-END === --></head>
+    /* ------------------------------------------------------------------
+       Guard: if the page already contains a Design B header, the injector
+       should never have run this. But if it did, bail out to avoid
+       duplicate-ID chaos.
+       ------------------------------------------------------------------ */
+    if (window.__hvcDesignBLoaded) return;
+    window.__hvcDesignBLoaded = true;
+
+    var drawer      = document.getElementById('siteDrawer');
+    var backdrop    = document.getElementById('drawerBackdrop');
+    var openBtn     = document.getElementById('drawerToggle');
+    var closeBtn    = document.getElementById('drawerClose');
+    var searchBtn   = document.getElementById('hvcSearchBtn');
+    var tabsBox     = document.getElementById('drawerTabs');
+    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
+    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
+    if (!drawer || !backdrop || !openBtn) return;
+
+    /* -------------------- Drawer open/close -------------------- */
+    function openDrawer(){
+        drawer.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        drawer.setAttribute('aria-hidden','false');
+        openBtn.setAttribute('aria-expanded','true');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer(){
+        drawer.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden','true');
+        openBtn.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
+    }
+    window.closeDrawer = closeDrawer;
+
+    openBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+
+    /* -------------------- Search button -------------------- */
+    /* Search button just opens the drawer and focuses the input.
+       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function(){
+            openDrawer();
+            setTimeout(function(){
+                var i = document.getElementById('drawerSearchInput');
+                if (i) i.focus();
+            }, 280);
+        });
+    }
+
+    /* -------------------- Escape + focus trap -------------------- */
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+            closeDrawer();
+            return;
+        }
+        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
+        var focusables = drawer.querySelectorAll(
+            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusables.length === 0) return;
+        var first = focusables[0];
+        var last  = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
+    /* -------------------- Tabs -------------------- */
+    tabButtons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var target = btn.getAttribute('data-tab');
+            tabButtons.forEach(function(b){
+                var on = b === btn;
+                b.classList.toggle('is-active', on);
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            panels.forEach(function(p){
+                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
+            });
+        });
+    });
+
+    /* -------------------- Drawer search filter -------------------- */
+    var searchInput = document.getElementById('drawerSearchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(){
+            var q = this.value.trim().toLowerCase();
+            if (q.length === 0) {
+                panels.forEach(function(p){
+                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
+                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
+                });
+                return;
+            }
+            var bestPanel = null, bestCount = 0;
+            panels.forEach(function(p){
+                var count = 0;
+                p.querySelectorAll('li').forEach(function(li){
+                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
+                    li.style.display = match ? '' : 'none';
+                    if (match) count++;
+                });
+                p.querySelectorAll('h5').forEach(function(h){
+                    var sib = h.nextElementSibling, anyVisible = false;
+                    while (sib && sib.tagName === 'UL') {
+                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
+                        sib = sib.nextElementSibling;
+                    }
+                    h.style.display = anyVisible ? '' : 'none';
+                });
+                if (count > bestCount) { bestCount = count; bestPanel = p; }
+            });
+            if (bestPanel) {
+                var tabName = bestPanel.getAttribute('data-panel');
+                tabButtons.forEach(function(b){
+                    var on = b.getAttribute('data-tab') === tabName;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+                panels.forEach(function(p){
+                    p.classList.toggle('is-active', p === bestPanel);
+                });
+            }
+        });
+    }
+
+    /* -------------------- Newsletter (no-backend interceptor) --------------------
+       NOTE: This gives a friendly message but does NOT send the email anywhere.
+       Wire it to a real ESP before relying on it. */
+    var nlForm = document.getElementById('hvcNewsletterForm');
+    if (nlForm) {
+        nlForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            var input = nlForm.querySelector('input[type="email"]');
+            if (!input || !input.value || input.value.indexOf('@') === -1) {
+                if (input) input.focus();
+                return;
+            }
+            var status = document.createElement('p');
+            status.setAttribute('role', 'status');
+            status.className = 'footer-newsletter-msg';
+            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            nlForm.replaceWith(status);
+        });
+    }
+
+    /* -------------------- Cookie consent -------------------- */
+    var STORAGE_KEY = 'hvc-cookie-consent';
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+        var stored = null;
+        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
+        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
+
+        function setConsent(v){
+            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
+            banner.classList.remove('is-visible');
+            /* Dispatch event so future embed-gating code can hook in */
+            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
+        }
+        var acceptBtn = document.getElementById('cookieAccept');
+        var rejectBtn = document.getElementById('cookieReject');
+        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
+        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
+    }
+})();
+</style></head>
 <body>
-
-
-
-
-
 <!-- === DESIGN-B-HEADER-START === --><header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
@@ -203,14 +375,14 @@
 <p style="color: #888; font-size: 0.9rem; margin: 5px 0 0 0;">Featured in travel &amp; tech publications</p>
 </div>
 </div>
-<p style="margin-top: 20px; color: #aaa;"><a href="/about/" style="color: #e94560; text-decoration: none;">Learn more about our testing methodology →</a></p>
+<p style="margin-top: 20px; color: #aaa;"><a href="/VideoCameraHoliday/about/" style="color: #e94560; text-decoration: none;">Learn more about our testing methodology →</a></p>
 </section>
 <!-- All Comparisons Grid -->
 <h2 class="section-title">All Camera Comparisons</h2>
 <p class="section-desc">Browse our complete library of head-to-head camera comparisons. Each guide combines detailed specification analysis with field testing results from real travel scenarios.</p>
 <div class="comp-grid">
 <!-- Canon PowerShot V1 vs Sony ZV-1 II -->
-<a class="comp-card" href="/comparisons/powershot-v1-vs-zv-1-ii.html">
+<a class="comp-card" href="/VideoCameraHoliday/comparisons/powershot-v1-vs-zv-1-ii.html">
 <div class="vs-icon">
                     📷⚔️🎥
                     <span>NEW</span>
@@ -224,7 +396,7 @@
 </div>
 </a>
 <!-- DJI Pocket 3 vs GoPro Hero 13 -->
-<a class="comp-card" href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">
+<a class="comp-card" href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">
 <div class="vs-icon">
                     🎥⚔️🏄
                 </div>
@@ -236,7 +408,7 @@
 </div>
 </a>
 <!-- GoPro Hero 13 vs Sony ZV-1 II -->
-<a class="comp-card" href="/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">
+<a class="comp-card" href="/VideoCameraHoliday/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">
 <div class="vs-icon">
                     🏄⚔️🎥
                 </div>
@@ -248,7 +420,7 @@
 </div>
 </a>
 <!-- Action Camera vs Gimbal Camera -->
-<a class="comp-card" href="/comparisons/action-camera-vs-gimbal-camera.html">
+<a class="comp-card" href="/VideoCameraHoliday/comparisons/action-camera-vs-gimbal-camera.html">
 <div class="vs-icon">
                     🏔️⚔️🎥
                 </div>
@@ -260,7 +432,7 @@
 </div>
 </a>
 <!-- Budget vs Premium Travel Cameras -->
-<a class="comp-card" href="/comparisons/budget-vs-premium-travel-cameras.html">
+<a class="comp-card" href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">
 <div class="vs-icon">
                     💰⚔️💎
                 </div>
@@ -272,7 +444,7 @@
 </div>
 </a>
 <!-- iPhone 16 Pro vs Dedicated Camera -->
-<a class="comp-card" href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">
+<a class="comp-card" href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">
 <div class="vs-icon">
                     📱⚔️📷
                 </div>
@@ -284,7 +456,7 @@
 </div>
 </a>
 <!-- Sony a7CR vs Fujifilm X-T50 -->
-<a class="comp-card" href="/comparisons/sony-a7cr-vs-fujifilm-x-t50.html">
+<a class="comp-card" href="/VideoCameraHoliday/comparisons/sony-a7cr-vs-fujifilm-x-t50.html">
 <div class="vs-icon">
                     📸⚔️📸
                 </div>
@@ -297,91 +469,91 @@
 </div>
 </a>
 <!-- BEGIN GENERATED CAMERA COMPARISONS -->
-<a class="comp-card" href="/guides/sony-zv-e10-vs-canon-r50.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Sony ZV-E10 vs Canon EOS R50</h3>
 <p>Compare price, video specs, weight, and best use cases for vlogging and travel.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-blue">Vlogging</span></div>
 </a>
-<a class="comp-card" href="/guides/sony-zv-e10-vs-gopro-12.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Sony ZV-E10 vs GoPro Hero 12</h3>
 <p>Compare price, video specs, weight, and best use cases for content creation.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-orange">Action</span></div>
 </a>
-<a class="comp-card" href="/guides/sony-zv-e10-vs-dji-action4.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Sony ZV-E10 vs DJI Osmo Action 4</h3>
 <p>Compare price, video specs, weight, and best use cases for adventure filming.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-orange">Action</span></div>
 </a>
-<a class="comp-card" href="/guides/sony-zv-e10-vs-insta360-x4.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Sony ZV-E10 vs Insta360 X4</h3>
 <p>Compare price, video specs, weight, and best use cases for 360° content.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-purple">360° Camera</span></div>
 </a>
-<a class="comp-card" href="/guides/sony-zv-e10-vs-canon-g7x3.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Sony ZV-E10 vs Canon G7X Mark III</h3>
 <p>Compare price, video specs, weight, and best use cases for compact vlogging.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-blue">Compact</span></div>
 </a>
-<a class="comp-card" href="/guides/canon-r50-vs-gopro-12.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Canon EOS R50 vs GoPro Hero 12</h3>
 <p>Compare price, video specs, weight, and best use cases for family travel.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-orange">Action</span></div>
 </a>
-<a class="comp-card" href="/guides/canon-r50-vs-dji-action4.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Canon EOS R50 vs DJI Osmo Action 4</h3>
 <p>Compare price, video specs, weight, and best use cases for outdoor adventures.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-orange">Action</span></div>
 </a>
-<a class="comp-card" href="/guides/canon-r50-vs-insta360-x4.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Canon EOS R50 vs Insta360 X4</h3>
 <p>Compare price, video specs, weight, and best use cases for immersive content.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-purple">360° Camera</span></div>
 </a>
-<a class="comp-card" href="/guides/canon-r50-vs-canon-g7x3.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Canon EOS R50 vs Canon G7X Mark III</h3>
 <p>Compare price, video specs, weight, and best use cases for everyday shooting.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-blue">Compact</span></div>
 </a>
-<a class="comp-card" href="/guides/gopro-12-vs-dji-action4.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>GoPro Hero 12 vs DJI Osmo Action 4</h3>
 <p>Compare price, video specs, weight, and best use cases for extreme sports.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-orange">Action Cam Battle</span></div>
 </a>
-<a class="comp-card" href="/guides/gopro-12-vs-insta360-x4.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>GoPro Hero 12 vs Insta360 X4</h3>
 <p>Compare price, video specs, weight, and best use cases for action storytelling.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-purple">360° vs Traditional</span></div>
 </a>
-<a class="comp-card" href="/guides/gopro-12-vs-canon-g7x3.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>GoPro Hero 12 vs Canon G7X Mark III</h3>
 <p>Compare price, video specs, weight, and best use cases for travel vlogging.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-green">Travel Pick</span></div>
 </a>
-<a class="comp-card" href="/guides/dji-action4-vs-insta360-x4.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>DJI Osmo Action 4 vs Insta360 X4</h3>
 <p>Compare price, video specs, weight, and best use cases for creative angles.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-purple">360° vs Traditional</span></div>
 </a>
-<a class="comp-card" href="/guides/dji-action4-vs-canon-g7x3.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>DJI Osmo Action 4 vs Canon G7X Mark III</h3>
 <p>Compare price, video specs, weight, and best use cases for versatile shooting.</p>
 <div class="badge-group"><span class="badge badge-new">2026</span><span class="badge badge-green">Versatile Choice</span></div>
 </a>
-<a class="comp-card" href="/guides/insta360-x4-vs-canon-g7x3.html">
+<a class="comp-card" href="/VideoCameraHoliday/guides/insta360-x4-vs-canon-g7x3.html">
 <div class="vs-icon">📷⚔️🎥 <span>EN</span></div>
 <h3>Insta360 X4 vs Canon G7X Mark III</h3>
 <p>Compare price, video specs, weight, and best use cases for unique perspectives.</p>
@@ -396,22 +568,22 @@
 <div style="background:#111; border:1px solid #333; border-radius:12px; padding:18px;">
 <h4 style="color:#e94560; margin:0 0 8px 0;">🎥 Video-First Creators</h4>
 <p style="color:#888; font-size:0.85rem; margin:0;">Best for vloggers: PowerShot V1 vs ZV-1 II, Pocket 3 vs Hero 13</p>
-<a href="/guides/best-vlogging-cameras-travel-2026.html" style="color: #e94560; font-size: 0.8rem; display: inline-block; margin-top: 8px; text-decoration: none;">View vlogging guide →</a>
+<a href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html" style="color: #e94560; font-size: 0.8rem; display: inline-block; margin-top: 8px; text-decoration: none;">View vlogging guide →</a>
 </div>
 <div style="background:#111; border:1px solid #333; border-radius:12px; padding:18px;">
 <h4 style="color:#1e88e5; margin:0 0 8px 0;">🏄 Action &amp; Adventure</h4>
 <p style="color:#888; font-size:0.85rem; margin:0;">Extreme sports: Hero 13 vs ZV-1 II, Action Cam comparisons</p>
-<a href="/destinations/best-cameras-beach-holidays.html" style="color: #1e88e5; font-size: 0.8rem; display: inline-block; margin-top: 8px; text-decoration: none;">Beach &amp; adventure tips →</a>
+<a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html" style="color: #1e88e5; font-size: 0.8rem; display: inline-block; margin-top: 8px; text-decoration: none;">Beach &amp; adventure tips →</a>
 </div>
 <div style="background:#111; border:1px solid #333; border-radius:12px; padding:18px;">
 <h4 style="color:#43a047; margin:0 0 8px 0;">💰 Budget-Friendly Picks</h4>
 <p style="color:#888; font-size:0.85rem; margin:0;">Best value: Budget vs Premium, iPhone vs Dedicated Camera</p>
-<a href="/guides/best-budget-holiday-camera-under-500.html" style="color: #43a047; font-size: 0.8rem; display: inline-block; margin-top: 8px; text-decoration: none;">Under $500 guide →</a>
+<a href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html" style="color: #43a047; font-size: 0.8rem; display: inline-block; margin-top: 8px; text-decoration: none;">Under $500 guide →</a>
 </div>
 <div style="background:#111; border:1px solid #333; border-radius:12px; padding:18px;">
 <h4 style="color:#8e24aa; margin:0 0 8px 0;">📸 Premium Travel Photography</h4>
 <p style="color:#888; font-size:0.85rem; margin:0;">Enthusiast picks: a7CR vs X-T50, mirrorless comparisons</p>
-<a href="/guides/best-compact-cameras-travel-2026.html" style="color: #8e24aa; font-size: 0.8rem; display: inline-block; margin-top: 8px; text-decoration: none;">Compact travel cameras →</a>
+<a href="/VideoCameraHoliday/guides/best-compact-cameras-travel-2026.html" style="color: #8e24aa; font-size: 0.8rem; display: inline-block; margin-top: 8px; text-decoration: none;">Compact travel cameras →</a>
 </div>
 </div>
 <!-- Internal Links Section for SEO -->
@@ -421,32 +593,32 @@
 <div>
 <h4 style="color: #e94560; margin-bottom: 10px;">📚 Buying Guides</h4>
 <ul style="list-style: none; padding: 0; margin: 0;">
-<li style="margin-bottom: 8px;"><a href="/guides/best-holiday-video-cameras-2026.html" style="color: #ccc; text-decoration: none;">Best Holiday Cameras 2026</a></li>
-<li style="margin-bottom: 8px;"><a href="/guides/best-waterproof-cameras-beach.html" style="color: #ccc; text-decoration: none;">Waterproof Cameras for Beach</a></li>
-<li style="margin-bottom: 8px;"><a href="/guides/best-compact-cameras-city-breaks.html" style="color: #ccc; text-decoration: none;">Compact Cameras for City Breaks</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html" style="color: #ccc; text-decoration: none;">Best Holiday Cameras 2026</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html" style="color: #ccc; text-decoration: none;">Waterproof Cameras for Beach</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html" style="color: #ccc; text-decoration: none;">Compact Cameras for City Breaks</a></li>
 </ul>
 </div>
 <div>
 <h4 style="color: #1e88e5; margin-bottom: 10px;">🎬 How-To Tutorials</h4>
 <ul style="list-style: none; padding: 0; margin: 0;">
-<li style="margin-bottom: 8px;"><a href="/how-to/stabilize-videos-without-gimbal.html" style="color: #ccc; text-decoration: none;">Stabilize Videos Without Gimbal</a></li>
-<li style="margin-bottom: 8px;"><a href="/how-to/film-yourself-solo.html" style="color: #ccc; text-decoration: none;">Film Yourself Solo While Traveling</a></li>
-<li style="margin-bottom: 8px;"><a href="/how-to/choose-memory-card-4k-video.html" style="color: #ccc; text-decoration: none;">Choose Memory Card for 4K Video</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html" style="color: #ccc; text-decoration: none;">Stabilize Videos Without Gimbal</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html" style="color: #ccc; text-decoration: none;">Film Yourself Solo While Traveling</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html" style="color: #ccc; text-decoration: none;">Choose Memory Card for 4K Video</a></li>
 </ul>
 </div>
 <div>
 <h4 style="color: #43a047; margin-bottom: 10px;">🏖️ Destination Guides</h4>
 <ul style="list-style: none; padding: 0; margin: 0;">
-<li style="margin-bottom: 8px;"><a href="/destinations/best-cameras-beach-holidays.html" style="color: #ccc; text-decoration: none;">Best Cameras for Beach Holidays</a></li>
-<li style="margin-bottom: 8px;"><a href="/destinations/best-cameras-city-breaks.html" style="color: #ccc; text-decoration: none;">Best Cameras for City Breaks</a></li>
-<li style="margin-bottom: 8px;"><a href="/destinations/best-cameras-ski-holidays.html" style="color: #ccc; text-decoration: none;">Best Cameras for Ski Holidays</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html" style="color: #ccc; text-decoration: none;">Best Cameras for Beach Holidays</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html" style="color: #ccc; text-decoration: none;">Best Cameras for City Breaks</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html" style="color: #ccc; text-decoration: none;">Best Cameras for Ski Holidays</a></li>
 </ul>
 </div>
 <div>
 <h4 style="color: #8e24aa; margin-bottom: 10px;">✂️ Editing Tips</h4>
 <ul style="list-style: none; padding: 0; margin: 0;">
-<li style="margin-bottom: 8px;"><a href="/editing/color-grading-travel-videos.html" style="color: #ccc; text-decoration: none;">Color Grading Travel Videos</a></li>
-<li style="margin-bottom: 8px;"><a href="/editing/best-editing-apps-holiday-footage.html" style="color: #ccc; text-decoration: none;">Best Editing Apps for Holiday Footage</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html" style="color: #ccc; text-decoration: none;">Color Grading Travel Videos</a></li>
+<li style="margin-bottom: 8px;"><a href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html" style="color: #ccc; text-decoration: none;">Best Editing Apps for Holiday Footage</a></li>
 </ul>
 </div>
 </div>
@@ -455,15 +627,10 @@
 <div style="background: rgba(233,69,96,0.08); border: 1px solid rgba(233,69,96,0.3); border-radius: 16px; padding: 35px 30px; text-align: center; margin: 50px 0;">
 <h2 style="color: #e94560; margin-top:0;">Can't Find the Comparison You Need?</h2>
 <p style="color: #aaa; max-width: 600px; margin: 10px auto 20px;">We're constantly adding new head-to-head guides based on reader requests. Have a specific camera comparison in mind? Let us know and we'll prioritize it for our next testing trip.</p>
-<a class="btn" href="/about/">Suggest a Comparison</a>
-<p style="color: #666; font-size: 0.85rem; margin-top: 15px;">Or check our <a href="/guides/" style="color: #e94560; text-decoration: none;">complete buying guides</a> for more recommendations.</p>
+<a class="btn" href="/VideoCameraHoliday/about/">Suggest a Comparison</a>
+<p style="color: #666; font-size: 0.85rem; margin-top: 15px;">Or check our <a href="/VideoCameraHoliday/guides/" style="color: #e94560; text-decoration: none;">complete buying guides</a> for more recommendations.</p>
 </div>
 </article>
-
-
-
-
-
 <!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
@@ -563,183 +730,5 @@
 </div>
 </div>
 </div>
-<script>
-(function(){
-    'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
-    if (window.__hvcDesignBLoaded) return;
-    window.__hvcDesignBLoaded = true;
-
-    var drawer      = document.getElementById('siteDrawer');
-    var backdrop    = document.getElementById('drawerBackdrop');
-    var openBtn     = document.getElementById('drawerToggle');
-    var closeBtn    = document.getElementById('drawerClose');
-    var searchBtn   = document.getElementById('hvcSearchBtn');
-    var tabsBox     = document.getElementById('drawerTabs');
-    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
-    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
-    if (!drawer || !backdrop || !openBtn) return;
-
-    /* -------------------- Drawer open/close -------------------- */
-    function openDrawer(){
-        drawer.classList.add('is-open');
-        backdrop.classList.add('is-open');
-        drawer.setAttribute('aria-hidden','false');
-        openBtn.setAttribute('aria-expanded','true');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer(){
-        drawer.classList.remove('is-open');
-        backdrop.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden','true');
-        openBtn.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
-        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
-    }
-    window.closeDrawer = closeDrawer;
-
-    openBtn.addEventListener('click', openDrawer);
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
-    if (searchBtn) {
-        searchBtn.addEventListener('click', function(){
-            openDrawer();
-            setTimeout(function(){
-                var i = document.getElementById('drawerSearchInput');
-                if (i) i.focus();
-            }, 280);
-        });
-    }
-
-    /* -------------------- Escape + focus trap -------------------- */
-    document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
-            closeDrawer();
-            return;
-        }
-        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
-        var focusables = drawer.querySelectorAll(
-            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
-        );
-        if (focusables.length === 0) return;
-        var first = focusables[0];
-        var last  = focusables[focusables.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-            e.preventDefault();
-            last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-            e.preventDefault();
-            first.focus();
-        }
-    });
-
-    /* -------------------- Tabs -------------------- */
-    tabButtons.forEach(function(btn){
-        btn.addEventListener('click', function(){
-            var target = btn.getAttribute('data-tab');
-            tabButtons.forEach(function(b){
-                var on = b === btn;
-                b.classList.toggle('is-active', on);
-                b.setAttribute('aria-selected', on ? 'true' : 'false');
-            });
-            panels.forEach(function(p){
-                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
-            });
-        });
-    });
-
-    /* -------------------- Drawer search filter -------------------- */
-    var searchInput = document.getElementById('drawerSearchInput');
-    if (searchInput) {
-        searchInput.addEventListener('input', function(){
-            var q = this.value.trim().toLowerCase();
-            if (q.length === 0) {
-                panels.forEach(function(p){
-                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
-                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
-                });
-                return;
-            }
-            var bestPanel = null, bestCount = 0;
-            panels.forEach(function(p){
-                var count = 0;
-                p.querySelectorAll('li').forEach(function(li){
-                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
-                    li.style.display = match ? '' : 'none';
-                    if (match) count++;
-                });
-                p.querySelectorAll('h5').forEach(function(h){
-                    var sib = h.nextElementSibling, anyVisible = false;
-                    while (sib && sib.tagName === 'UL') {
-                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
-                        sib = sib.nextElementSibling;
-                    }
-                    h.style.display = anyVisible ? '' : 'none';
-                });
-                if (count > bestCount) { bestCount = count; bestPanel = p; }
-            });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
-        });
-    }
-
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
-    var nlForm = document.getElementById('hvcNewsletterForm');
-    if (nlForm) {
-        nlForm.addEventListener('submit', function(e){
-            e.preventDefault();
-            var input = nlForm.querySelector('input[type="email"]');
-            if (!input || !input.value || input.value.indexOf('@') === -1) {
-                if (input) input.focus();
-                return;
-            }
-            var status = document.createElement('p');
-            status.setAttribute('role', 'status');
-            status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
-            nlForm.replaceWith(status);
-        });
-    }
-
-    /* -------------------- Cookie consent -------------------- */
-    var STORAGE_KEY = 'hvc-cookie-consent';
-    var banner = document.getElementById('cookieBanner');
-    if (banner) {
-        var stored = null;
-        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
-        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
-
-        function setConsent(v){
-            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
-            banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
-            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
-        }
-        var acceptBtn = document.getElementById('cookieAccept');
-        var rejectBtn = document.getElementById('cookieReject');
-        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
-        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
-    }
-})();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+<script></script><!-- === DESIGN-B-FOOTER-END === --></body>
 </html>

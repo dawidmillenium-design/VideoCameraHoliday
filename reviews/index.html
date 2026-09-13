@@ -1,17 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><base href="/VideoCameraHoliday/"/><meta charset="utf-8"/>
+<head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="In-depth travel camera reviews tested on real holidays — DJI Osmo Pocket 3, GoPro Hero 13, Insta360 X5, Sony ZV-1 II and more. Real footage, real verdicts." name="description"/>
 <title>Camera Reviews: Tested on Real Holidays</title>
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><style>
+(function(){
+    'use strict';
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/reviews/" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><!-- === DESIGN-B-HEAD-END === --></head>
+    /* ------------------------------------------------------------------
+       Guard: if the page already contains a Design B header, the injector
+       should never have run this. But if it did, bail out to avoid
+       duplicate-ID chaos.
+       ------------------------------------------------------------------ */
+    if (window.__hvcDesignBLoaded) return;
+    window.__hvcDesignBLoaded = true;
+
+    var drawer      = document.getElementById('siteDrawer');
+    var backdrop    = document.getElementById('drawerBackdrop');
+    var openBtn     = document.getElementById('drawerToggle');
+    var closeBtn    = document.getElementById('drawerClose');
+    var searchBtn   = document.getElementById('hvcSearchBtn');
+    var tabsBox     = document.getElementById('drawerTabs');
+    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
+    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
+    if (!drawer || !backdrop || !openBtn) return;
+
+    /* -------------------- Drawer open/close -------------------- */
+    function openDrawer(){
+        drawer.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        drawer.setAttribute('aria-hidden','false');
+        openBtn.setAttribute('aria-expanded','true');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer(){
+        drawer.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden','true');
+        openBtn.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
+    }
+    window.closeDrawer = closeDrawer;
+
+    openBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+
+    /* -------------------- Search button -------------------- */
+    /* Search button just opens the drawer and focuses the input.
+       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
+    if (searchBtn) {
+        searchBtn.addEventListener('click', function(){
+            openDrawer();
+            setTimeout(function(){
+                var i = document.getElementById('drawerSearchInput');
+                if (i) i.focus();
+            }, 280);
+        });
+    }
+
+    /* -------------------- Escape + focus trap -------------------- */
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+            closeDrawer();
+            return;
+        }
+        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
+        var focusables = drawer.querySelectorAll(
+            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusables.length === 0) return;
+        var first = focusables[0];
+        var last  = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
+    /* -------------------- Tabs -------------------- */
+    tabButtons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var target = btn.getAttribute('data-tab');
+            tabButtons.forEach(function(b){
+                var on = b === btn;
+                b.classList.toggle('is-active', on);
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            panels.forEach(function(p){
+                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
+            });
+        });
+    });
+
+    /* -------------------- Drawer search filter -------------------- */
+    var searchInput = document.getElementById('drawerSearchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(){
+            var q = this.value.trim().toLowerCase();
+            if (q.length === 0) {
+                panels.forEach(function(p){
+                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
+                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
+                });
+                return;
+            }
+            var bestPanel = null, bestCount = 0;
+            panels.forEach(function(p){
+                var count = 0;
+                p.querySelectorAll('li').forEach(function(li){
+                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
+                    li.style.display = match ? '' : 'none';
+                    if (match) count++;
+                });
+                p.querySelectorAll('h5').forEach(function(h){
+                    var sib = h.nextElementSibling, anyVisible = false;
+                    while (sib && sib.tagName === 'UL') {
+                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
+                        sib = sib.nextElementSibling;
+                    }
+                    h.style.display = anyVisible ? '' : 'none';
+                });
+                if (count > bestCount) { bestCount = count; bestPanel = p; }
+            });
+            if (bestPanel) {
+                var tabName = bestPanel.getAttribute('data-panel');
+                tabButtons.forEach(function(b){
+                    var on = b.getAttribute('data-tab') === tabName;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+                panels.forEach(function(p){
+                    p.classList.toggle('is-active', p === bestPanel);
+                });
+            }
+        });
+    }
+
+    /* -------------------- Newsletter (no-backend interceptor) --------------------
+       NOTE: This gives a friendly message but does NOT send the email anywhere.
+       Wire it to a real ESP before relying on it. */
+    var nlForm = document.getElementById('hvcNewsletterForm');
+    if (nlForm) {
+        nlForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            var input = nlForm.querySelector('input[type="email"]');
+            if (!input || !input.value || input.value.indexOf('@') === -1) {
+                if (input) input.focus();
+                return;
+            }
+            var status = document.createElement('p');
+            status.setAttribute('role', 'status');
+            status.className = 'footer-newsletter-msg';
+            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            nlForm.replaceWith(status);
+        });
+    }
+
+    /* -------------------- Cookie consent -------------------- */
+    var STORAGE_KEY = 'hvc-cookie-consent';
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+        var stored = null;
+        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
+        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
+
+        function setConsent(v){
+            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
+            banner.classList.remove('is-visible');
+            /* Dispatch event so future embed-gating code can hook in */
+            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
+        }
+        var acceptBtn = document.getElementById('cookieAccept');
+        var rejectBtn = document.getElementById('cookieReject');
+        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
+        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
+    }
+})();
+</style></head>
 <body>
-
-
-
-
-
 <!-- === DESIGN-B-HEADER-START === --><header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
@@ -207,15 +379,15 @@
 <!-- Featured / Best of -->
 <h2 class="section-title">🏆 Editor's Picks — Best of 2026</h2>
 <div class="featured-grid">
-<a class="featured-card" href="/reviews/dji-osmo-pocket-3-review.html">
+<a class="featured-card" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">
 <h4>🥇 Best Overall: DJI Osmo Pocket 3</h4>
 <p>One year of travel testing the 1-inch gimbal camera. Still the best all-rounder for most travellers.</p>
 </a>
-<a class="featured-card" href="/reviews/gopro-hero-13-review.html">
+<a class="featured-card" href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">
 <h4>🏄 Best for Adventure: GoPro Hero 13</h4>
 <p>Lens mods, magnetic mounts, 5.3K footage. Indestructible in saltwater, sand, and snow.</p>
 </a>
-<a class="featured-card" href="/reviews/insta360-x5-review.html">
+<a class="featured-card" href="/VideoCameraHoliday/reviews/insta360-x5-review.html">
 <h4>🌐 Best 360°: Insta360 X5</h4>
 <p>Bigger sensors, better low light, replaceable lenses. The 2026 360° flagship.</p>
 </a>
@@ -223,15 +395,15 @@
 <!-- Gimbal / Pocket -->
 <h2 class="section-title">🎥 Gimbal &amp; Pocket Cameras</h2>
 <div class="card-grid">
-<a class="card" href="/reviews/dji-osmo-pocket-3-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-3-review.html">
 <h3>DJI Osmo Pocket 3</h3>
 <p>The travel video camera most people should buy. 1-inch sensor, mechanical gimbal, excellent in low light.</p>
 </a>
-<a class="card" href="/reviews/dji-osmo-action-5-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/dji-osmo-action-5-review.html">
 <h3>DJI Osmo Action 5 Pro</h3>
 <p>The battery-life monster — full-day filming on a single charge.</p>
 </a>
-<a class="card" href="/reviews/pocket-cinema-cameras-2026-roundup.html">
+<a class="card" href="/VideoCameraHoliday/reviews/pocket-cinema-cameras-2026-roundup.html">
 <h3>Pocket Cinema Roundup 2026</h3>
 <p>Every pocketable cinema camera compared — Pocket 4P, Insta360 Luna, Sony ZV-E10 II.</p>
 </a>
@@ -239,27 +411,27 @@
 <!-- Action & 360 -->
 <h2 class="section-title">🎬 Action &amp; 360° Cameras</h2>
 <div class="card-grid">
-<a class="card" href="/reviews/gopro-hero-13-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">
 <h3>GoPro Hero 13 Black</h3>
 <p>Lens mods, magnetic mounts, 5.3K footage. Still the action-camera benchmark for holidays.</p>
 </a>
-<a class="card" href="/reviews/dji-osmo-action-6-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/dji-osmo-action-6-review.html">
 <h3>DJI Osmo Action 6</h3>
 <p>Rugged action camera with improved low light. Heat and cold tested at Male Airport and Zermatt.</p>
 </a>
-<a class="card" href="/reviews/insta360-x5-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/insta360-x5-review.html">
 <h3>Insta360 X5</h3>
 <p>The 2026 360° flagship — bigger sensors, better low light, replaceable lenses.</p>
 </a>
-<a class="card" href="/reviews/insta360-x4-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/insta360-x4-review.html">
 <h3>Insta360 X4</h3>
 <p>8K 360° holiday camera — invisible selfie stick, bullet time, beach-tested.</p>
 </a>
-<a class="card" href="/reviews/gopro-max-2-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/gopro-max-2-review.html">
 <h3>GoPro Max 2</h3>
 <p>360° action evolution — HyperSmooth 360 and modular design.</p>
 </a>
-<a class="card" href="/reviews/insta360-go-3s-hands-free-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/insta360-go-3s-hands-free-review.html">
 <h3>Insta360 GO 3S</h3>
 <p>Hands-free POV for family holidays — the moments other cameras miss.</p>
 </a>
@@ -267,27 +439,27 @@
 <!-- Vlogging & Compact -->
 <h2 class="section-title">📸 Vlogging &amp; Compact Cameras</h2>
 <div class="card-grid">
-<a class="card" href="/reviews/sony-zv-1-ii-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">
 <h3>Sony ZV-1 II</h3>
 <p>The pocket vlogging camera for city breaks — 1-inch sensor, wider zoom.</p>
 </a>
-<a class="card" href="/reviews/sony-zv-e10-ii-night-market-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">
 <h3>Sony ZV-E10 II</h3>
 <p>Field-tested in Asian night markets — the low-light value king.</p>
 </a>
-<a class="card" href="/reviews/canon-powershot-v10-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/canon-powershot-v10-review.html">
 <h3>Canon PowerShot V10</h3>
 <p>The tiny vlog camera for casual travellers — pocketable with a built-in stand.</p>
 </a>
-<a class="card" href="/reviews/canon-eos-r50-v-creator-kit-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/canon-eos-r50-v-creator-kit-review.html">
 <h3>Canon EOS R50 V</h3>
 <p>The vertical-video creator kit for aspiring travel creators.</p>
 </a>
-<a class="card" href="/reviews/fujifilm-x-m5-travel-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/fujifilm-x-m5-travel-review.html">
 <h3>Fujifilm X-M5</h3>
 <p>The carry-everywhere travel camera with editing-free film colour.</p>
 </a>
-<a class="card" href="/reviews/fujifilm-x100vi-travel-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/fujifilm-x100vi-travel-review.html">
 <h3>Fujifilm X100VI</h3>
 <p>Stills-first travel camera with a fixed 23mm lens. Perfect for street and documentary travel.</p>
 </a>
@@ -295,22 +467,22 @@
 <!-- Full-Frame / Cinema -->
 <h2 class="section-title">🎞️ Full-Frame &amp; Cinema Cameras</h2>
 <div class="card-grid">
-<a class="card" href="/reviews/panasonic-lumix-s5ii-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/panasonic-lumix-s5ii-review.html">
 <h3>Panasonic Lumix S5II</h3>
 <p>Full-frame travel powerhouse — phase-detect AF, 6K video, professional holiday filmmaking.</p>
 </a>
-<a class="card" href="/reviews/om-system-om-3-travel-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/om-system-om-3-travel-review.html">
 <h3>OM System OM-3</h3>
 <p>Weather-sealed Micro Four Thirds — two weeks of Highland hiking, IP53 protection.</p>
 </a>
-<a class="card" href="/reviews/iphone-16-pro-video-review.html">
+<a class="card" href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">
 <h3>iPhone 16 Pro</h3>
 <p>4K120, Apple Log, Action mode — do you even need a dedicated camera?</p>
 </a>
 </div>
 <div class="takeaways">
 <h3>📖 Also read</h3>
-<p>Our interview series <a href="/city-through-the-lens/">City Through the Lens</a> — 50 local videographers in the world's biggest cities share how they really film their hometown.</p>
+<p>Our interview series <a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a> — 50 local videographers in the world's biggest cities share how they really film their hometown.</p>
 </div>
 <div class="takeaways" style="text-align:center;">
 <h3>📬 Get Weekly Camera Deals &amp; Field Notes</h3>
@@ -321,11 +493,6 @@
 </form>
 </div>
 </article>
-
-
-
-
-
 <!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
@@ -425,183 +592,5 @@
 </div>
 </div>
 </div>
-<script>
-(function(){
-    'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
-    if (window.__hvcDesignBLoaded) return;
-    window.__hvcDesignBLoaded = true;
-
-    var drawer      = document.getElementById('siteDrawer');
-    var backdrop    = document.getElementById('drawerBackdrop');
-    var openBtn     = document.getElementById('drawerToggle');
-    var closeBtn    = document.getElementById('drawerClose');
-    var searchBtn   = document.getElementById('hvcSearchBtn');
-    var tabsBox     = document.getElementById('drawerTabs');
-    var panels      = drawer ? drawer.querySelectorAll('.drawer-panel') : [];
-    var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
-    if (!drawer || !backdrop || !openBtn) return;
-
-    /* -------------------- Drawer open/close -------------------- */
-    function openDrawer(){
-        drawer.classList.add('is-open');
-        backdrop.classList.add('is-open');
-        drawer.setAttribute('aria-hidden','false');
-        openBtn.setAttribute('aria-expanded','true');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer(){
-        drawer.classList.remove('is-open');
-        backdrop.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden','true');
-        openBtn.setAttribute('aria-expanded','false');
-        document.body.style.overflow = '';
-        if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
-    }
-    window.closeDrawer = closeDrawer;
-
-    openBtn.addEventListener('click', openDrawer);
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
-    if (searchBtn) {
-        searchBtn.addEventListener('click', function(){
-            openDrawer();
-            setTimeout(function(){
-                var i = document.getElementById('drawerSearchInput');
-                if (i) i.focus();
-            }, 280);
-        });
-    }
-
-    /* -------------------- Escape + focus trap -------------------- */
-    document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
-            closeDrawer();
-            return;
-        }
-        if (e.key !== 'Tab' || !drawer.classList.contains('is-open')) return;
-        var focusables = drawer.querySelectorAll(
-            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
-        );
-        if (focusables.length === 0) return;
-        var first = focusables[0];
-        var last  = focusables[focusables.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-            e.preventDefault();
-            last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-            e.preventDefault();
-            first.focus();
-        }
-    });
-
-    /* -------------------- Tabs -------------------- */
-    tabButtons.forEach(function(btn){
-        btn.addEventListener('click', function(){
-            var target = btn.getAttribute('data-tab');
-            tabButtons.forEach(function(b){
-                var on = b === btn;
-                b.classList.toggle('is-active', on);
-                b.setAttribute('aria-selected', on ? 'true' : 'false');
-            });
-            panels.forEach(function(p){
-                p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
-            });
-        });
-    });
-
-    /* -------------------- Drawer search filter -------------------- */
-    var searchInput = document.getElementById('drawerSearchInput');
-    if (searchInput) {
-        searchInput.addEventListener('input', function(){
-            var q = this.value.trim().toLowerCase();
-            if (q.length === 0) {
-                panels.forEach(function(p){
-                    p.querySelectorAll('li').forEach(function(li){ li.style.display = ''; });
-                    p.querySelectorAll('h5').forEach(function(h){ h.style.display = ''; });
-                });
-                return;
-            }
-            var bestPanel = null, bestCount = 0;
-            panels.forEach(function(p){
-                var count = 0;
-                p.querySelectorAll('li').forEach(function(li){
-                    var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
-                    li.style.display = match ? '' : 'none';
-                    if (match) count++;
-                });
-                p.querySelectorAll('h5').forEach(function(h){
-                    var sib = h.nextElementSibling, anyVisible = false;
-                    while (sib && sib.tagName === 'UL') {
-                        if (sib.querySelectorAll('li:not([style*="display: none"])').length > 0) anyVisible = true;
-                        sib = sib.nextElementSibling;
-                    }
-                    h.style.display = anyVisible ? '' : 'none';
-                });
-                if (count > bestCount) { bestCount = count; bestPanel = p; }
-            });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
-        });
-    }
-
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
-    var nlForm = document.getElementById('hvcNewsletterForm');
-    if (nlForm) {
-        nlForm.addEventListener('submit', function(e){
-            e.preventDefault();
-            var input = nlForm.querySelector('input[type="email"]');
-            if (!input || !input.value || input.value.indexOf('@') === -1) {
-                if (input) input.focus();
-                return;
-            }
-            var status = document.createElement('p');
-            status.setAttribute('role', 'status');
-            status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
-            nlForm.replaceWith(status);
-        });
-    }
-
-    /* -------------------- Cookie consent -------------------- */
-    var STORAGE_KEY = 'hvc-cookie-consent';
-    var banner = document.getElementById('cookieBanner');
-    if (banner) {
-        var stored = null;
-        try { stored = localStorage.getItem(STORAGE_KEY); } catch(e){}
-        if (!stored) setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
-
-        function setConsent(v){
-            try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
-            banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
-            try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
-        }
-        var acceptBtn = document.getElementById('cookieAccept');
-        var rejectBtn = document.getElementById('cookieReject');
-        if (acceptBtn) acceptBtn.addEventListener('click', function(){ setConsent('accepted'); });
-        if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
-    }
-})();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+<script></script><!-- === DESIGN-B-FOOTER-END === --></body>
 </html>
