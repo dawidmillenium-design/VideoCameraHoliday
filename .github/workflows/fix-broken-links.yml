@@ -1,0 +1,86 @@
+name: Auto-Fix Broken Links & Generate Stubs
+
+on:
+  workflow_dispatch: # Allows manual trigger
+  schedule:
+    - cron: '0 2 * * 1' # Runs every Monday at 2 AM UTC (Optional)
+  push:
+    branches:
+      - 'staging' # Optional: Run when pushing to staging
+
+jobs:
+  fix-links:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for proper diffing
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Link Fixer Script
+        run: python scripts/fix_links.py
+
+      - name: Configure Git User
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Check for Changes
+        id: git_status
+        run: |
+          git status --porcelain
+          if [[ $(git status --porcelain) ]]; then
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Branch, Commit, and Open PR
+        if: steps.git_status.outputs.changes_detected == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Generate a unique branch name with timestamp
+          BRANCH_NAME="chore/fix-broken-links-$(date +%Y%m%d-%H%M%S)"
+          
+          # Create and switch to new branch
+          git checkout -b $BRANCH_NAME
+          
+          # Add all changes
+          git add .
+          
+          # Commit changes
+          git commit -m "chore: auto-fix broken links and generate content stubs
+      
+          - Normalized relative paths to root-relative
+          - Removed /VideoCameraHoliday prefix
+          - Generated SEO stubs for missing reviews/guides
+          
+          Automated by GitHub Actions"
+          
+          # Push branch
+          git push origin $BRANCH_NAME
+          
+          # Create Pull Request using GitHub CLI
+          gh pr create \
+            --base main \
+            --head $BRANCH_NAME \
+            --title "🤖 Auto-Fix: Repair Broken Links & Add Missing Stubs" \
+            --body "This PR was automatically generated to fix critical SEO issues.
+            
+            **Changes Included:**
+            - Converted hardcoded relative paths (../) to root-relative (/).
+            - Removed incorrect '/VideoCameraHoliday' prefixes.
+            - Generated stub pages for missing high-priority reviews and guides.
+            
+            **Action Required:**
+            Please review the file changes and merge if everything looks correct."
