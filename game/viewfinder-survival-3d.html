@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><base href="/VideoCameraHoliday/"/><meta charset="utf-8"/>
+<head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
 <title>Matcha Maya's Viewfinder Survival 3D | Holiday Video Camera</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/game/viewfinder-survival-3d.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><!-- === DESIGN-B-HEAD-END === --></head>
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/game/viewfinder-survival-3d.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --></head>
 <body>
-
 
 <!-- === DESIGN-B-HEADER-START === --><header class="site-header">
 <div class="site-header-inner">
@@ -315,9 +314,6 @@ function renderSetup() {
     document.getElementById('start-btn').disabled = !(state.dest && state.cam);
 }
 
-function selectDest(id) { state.dest = DESTINATIONS.find(d => d.id === id); renderSetup(); }
-function selectCam(id) { state.cam = CAMERAS.find(c => c.id === id); renderSetup(); }
-
 // --- GAME LOGIC ---
 function startGame() {
     state.battery = state.cam.battery;
@@ -340,9 +336,6 @@ function startGame() {
 }
 
 function startRecord() { if (!state.gameOver && !state.won) { state.isRecording = true; document.getElementById('rec-indicator').style.opacity = 1; document.getElementById('record-btn').classList.add('recording'); } }
-function stopRecord() { state.isRecording = false; document.getElementById('rec-indicator').style.opacity = 0; document.getElementById('record-btn').classList.remove('recording'); }
-function startStabilize() { state.isStabilizing = true; }
-function stopStabilize() { state.isStabilizing = false; }
 
 function gameLoop(timestamp) {
     if (state.screen !== 'game') return;
@@ -519,7 +512,6 @@ function endGame() {
     showScreen('result-screen');
 }
 </script>
-
 
 <!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
 <div class="footer-inner">
@@ -742,7 +734,7 @@ function endGame() {
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-                if (count > bestCount) { bestCount = count; bestPanel = p; }
+
             });
             if (bestPanel) {
                 var tabName = bestPanel.getAttribute('data-panel');
