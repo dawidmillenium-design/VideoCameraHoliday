@@ -1,9 +1,9 @@
 name: Auto-Fix Broken Links & Generate Stubs
 
 on:
-  workflow_dispatch: # Allows manual triggering from GitHub Actions tab
+  workflow_dispatch:
   schedule:
-    - cron: '0 2 * * 1' # Runs automatically at 2 AM every Monday (optional)
+    - cron: '0 2 * * 1'
 
 jobs:
   fix-links:
@@ -17,6 +17,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Debug - List Directory Structure
+        run: |
+          echo "📂 Current directory: $(pwd)"
+          echo " Root contents:"
+          ls -la
+          echo "📂 Looking for HTML files:"
+          find . -name "*.html" -type f | head -20
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -37,6 +45,8 @@ jobs:
             echo "No changes to commit."
           else
             echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected!"
+            git status
           fi
 
       - name: Create Pull Request
