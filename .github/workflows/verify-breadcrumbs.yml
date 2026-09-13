@@ -1,0 +1,50 @@
+name: Verify Breadcrumb Hotfix
+
+on:
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install beautifulsoup4 lxml
+
+      - name: Run Hotfix Script (Fix Missing JSON-LD & H1)
+        run: |
+          python scripts/hotfix_breadcrumbs.py
+
+      - name: Commit and Push Fixes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if ! git diff --staged --quiet; then
+            git commit -m "fix: hotfix missing BreadcrumbList JSON-LD and H1 tags [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Run Verification Scan
+        run: |
+          python scripts/verify_breadcrumbs_hero.py --fail-if-below 98 --verbose
+
+      - name: Upload Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-report
+          path: verification-report.txt
