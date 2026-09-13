@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Clean git merge conflict artifacts from HTML files.
-SAFER VERSION: Only targets strict line-based git markers.
+SAFE VERSION: Strictly targets line-based git markers. 
+Ignores HTML comments containing equals signs.
 """
 
 import argparse
@@ -12,10 +13,9 @@ from datetime import datetime
 from pathlib import Path
 
 # STRICT Patterns: Only match if the line is EXACTLY a git marker
-# This prevents it from touching HTML comments like <!-- ======= -->
-MARKER_START = re.compile(r'^\s*<{7}\s*.*$')  # <<<<<<<
-MARKER_MIDDLE = re.compile(r'^\s*={7}\s*$')   # ======= (must be alone on the line)
-MARKER_END = re.compile(r'^\s*>{7}\s*.*$')    # >>>>>>>
+MARKER_START = re.compile(r'^\s*<{7}.*$')  # <<<<<<< (with or without text after)
+MARKER_MIDDLE = re.compile(r'^\s*={7}\s*$') # ======= (MUST be alone on the line, no HTML tags)
+MARKER_END = re.compile(r'^\s*>{7}.*$')     # >>>>>>> (with or without commit hash after)
 
 EXCLUDED_DIRS = {'templates', 'node_modules', '.git', 'venv', '__pycache__', 'backups'}
 
@@ -30,7 +30,8 @@ def is_conflict_line(line: str) -> bool:
     return False
 
 def process_file(file_path: Path, dry_run: bool, force: bool, verbose: bool, log_file) -> dict:
-    stats = {'scanned': 1, 'modified': 0, 'markers_removed': 0, 'errors': 0}
+    # FIX: Added 'validation_failed' key to prevent KeyError in main loop
+    stats = {'scanned': 1, 'modified': 0, 'markers_removed': 0, 'errors': 0, 'validation_failed': 0}
     
     try:
         try:
@@ -105,7 +106,7 @@ def main():
     parser.add_argument("--stats", action="store_true", help="Show statistics after completion.")
     args = parser.parse_args()
 
-    print(" Starting Git Conflict Cleanup (Safe Mode)...")
+    print("🚀 Starting Git Conflict Cleanup (Safe Mode)...")
     
     root_dir = Path(".")
     html_files = [f for f in root_dir.rglob("*.html") if f.is_file() and not should_exclude(f)]
@@ -141,7 +142,7 @@ def main():
             print(f"  Validation failures : {total_stats['validation_failed']}")
 
     if total_stats['validation_failed'] > 0 and not args.dry_run:
-        print("\n CRITICAL: Some files still contain conflict markers.")
+        print("\n🔴 CRITICAL: Some files still contain conflict markers.")
         sys.exit(1)
         
     print("\n✨ Cleanup complete!")
