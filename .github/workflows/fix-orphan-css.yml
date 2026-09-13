@@ -1,0 +1,59 @@
+name: Fix orphan CSS (dry-run or apply)
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Actually write changes (leave unchecked for dry-run)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run fix_orphan_css
+        run: |
+          if [ "${{ inputs.apply }}" = "true" ]; then
+            python scripts/fix_orphan_css.py --apply --verbose
+          else
+            python scripts/fix_orphan_css.py --verbose
+          fi
+
+      - name: Confirmation (dry-run only)
+        if: inputs.apply == false
+        run: |
+          echo "Dry-run completed. Nothing was written."
+          git status --porcelain
+          # exit cleanly regardless
+
+      - name: Open PR (apply only)
+        if: inputs.apply == true
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: fix/orphan-css
+          base: main
+          title: "fix: wrap multi-line orphan CSS in <style> tags"
+          commit-message: "fix: wrap orphan CSS"
+          body: |
+            Auto-generated. **Review before merging.**
+
+            Wraps the multi-line CSS rules that live outside `<style>` tags
+            in the 15 remaining files. Nothing is deleted — only wrapped.
+
+            Review checklist:
+            - [ ] Diff shows only `<style>...</style>` added around CSS
+            - [ ] No JavaScript was wrapped (check for `(function(` or `var `)
+            - [ ] Spot-check 3 files in different languages (it-IT, th-TH, zh-CN)
+            - [ ] After merge, re-run the diagnostic and confirm `Clean = 902`
