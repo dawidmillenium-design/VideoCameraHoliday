@@ -1,0 +1,49 @@
+name: Restore HTML (subtractive-only, opens PR)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run restorer
+        run: python scripts/restore_html.py
+
+      - name: Re-run diagnostic on the result
+        run: python scripts/diagnose_html.py || true
+
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: fix/restore-html-cleanup
+          base: main
+          title: "fix: subtractive HTML cleanup (remove base, dup CSS, conflicts, orphan CSS)"
+          commit-message: "fix: subtractive HTML cleanup"
+          body: |
+            Auto-generated. **Review before merging.**
+
+            Fixes applied (removals only — nothing added or wrapped):
+            - Git conflict markers (raw + escaped)
+            - Stray `<base href>` tags
+            - Duplicate `<link … design-b.css>`
+            - Orphan CSS text outside `<style>`
+            - Duplicate `<head>`/`<body>`/`</html>` open/close tags
+
+            Review checklist:
+            - [ ] No `<style>(function(` anywhere (JS was NOT wrapped)
+            - [ ] No `<style><style>` or `</style><style>` adjacent blocks
+            - [ ] Sample file `reviews/dji-osmo-pocket-3-review.html` renders styled
+            - [ ] Sample file `de-DE/index.html` renders with German text intact
+            - [ ] Sample file `index.html` has canonical link present
