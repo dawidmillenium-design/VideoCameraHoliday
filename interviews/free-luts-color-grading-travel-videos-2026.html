@@ -1,419 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download free travel video LUTs and learn the best</title>
-    <meta name="description" content="Download free travel video LUTs and learn the best color grading settings for beach footage, night markets, and cinematic travel videos.">
-    <link rel="canonical" href="https://dawidmillenium-design.github.io/interviews/free-luts-color-grading-travel-videos-2026.html">
-    <link rel="stylesheet" href="/css/style.css">
-    <style>
-        /* Same CSS as previous articles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.8;
-            color: #1a1a1a;
-            background: #fafafa;
-        }
-        header {
-            background: #1a1a2e;
-            color: white;
-            padding: 20px 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-        header .site-title {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        header .site-title a {
-            color: white;
-            text-decoration: none;
-        }
-        nav {
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px 25px;
-        }
-        nav a {
-            color: #ccc;
-            text-decoration: none;
-            font-size: 0.95em;
-        }
-        nav a:hover {
-            color: white;
-        }
-        .hero-stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            background: #16213e;
-            padding: 15px 25px;
-            border-radius: 10px;
-            margin: 20px 0 30px;
-        }
-        .hero-stats span {
-            color: #f0c27f;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .hero-stats span small {
-            color: #aaa;
-            font-weight: normal;
-            font-size: 0.8em;
-        }
-        .content {
-            background: white;
-            padding: 30px 35px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #1a1a2e;
-            border-bottom: 3px solid #f0c27f;
-            padding-bottom: 8px;
-            margin-top: 35px;
-        }
-        h3 {
-            color: #2d4059;
-            margin-top: 25px;
-        }
-        .table-wrap {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.95em;
-        }
-        table th {
-            background: #1a1a2e;
-            color: white;
-            padding: 12px 15px;
-            text-align: left;
-        }
-        table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
-        }
-        table tr:hover {
-            background: #f5f5f5;
-        }
-        .pro-tip {
-            background: #e8f0fe;
-            border-left: 4px solid #1a73e8;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .pro-tip strong {
-            color: #1a73e8;
-        }
-        .cta-box {
-            background: #f0c27f;
-            color: #1a1a2e;
-            padding: 20px 25px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 30px 0;
-        }
-        .cta-box a {
-            color: #1a1a2e;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 30px 20px 20px;
-            color: #666;
-            font-size: 0.9em;
-            border-top: 1px solid #ddd;
-            margin-top: 30px;
-        }
-        footer a {
-            color: #1a1a2e;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px 25px;
-            margin-bottom: 15px;
-        }
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            .content { padding: 20px; }
-            header .site-title { font-size: 1.3em; }
-            nav { gap: 10px; }
-            .hero-stats { flex-direction: column; gap: 5px; }
-        }
-        .lut-download {
-            background: #f5f5f5;
-            border: 2px dashed #1a1a2e;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .lut-download .btn {
-            background: #1a1a2e;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-        .lut-download .btn:hover {
-            background: #2d4059;
-        }
-        @media (max-width: 600px) {
-            .lut-download { flex-direction: column; align-items: flex-start; gap: 10px; }
-        }
-    
-/* --- Mobile Menu Styles --- */
-.mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    flex-direction: column;
-    gap: 5px;
-}
-.hamburger-line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--dark);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-.mobile-menu-toggle.active .hamburger-line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.mobile-menu-toggle.active .hamburger-line:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active .hamburger-line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-@media (max-width: 768px) {
-    .mobile-menu-toggle { display: flex; }
-    .mega-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        border-bottom: 1px solid var(--border);
-        flex-direction: column;
-        padding: 1rem;
-        gap: 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-    .mega-menu.active { display: flex; }
-    .mega-menu > li { padding: 0; border-bottom: 1px solid var(--border); }
-    .mega-menu > li > a { display: block; padding: 1rem 0; font-size: 1.1rem; }
-    .dropdown {
-        position: static;
-        transform: none;
-        min-width: 100%;
-        box-shadow: none;
-        border: none;
-        padding: 0 0 1rem 1rem;
-        grid-template-columns: 1fr;
-        opacity: 1;
-        visibility: visible;
-        display: block;
-    }
-    .dropdown-col { margin-bottom: 1rem; }
-    .dropdown-col h4 { font-size: 0.9rem; margin-top: 0.5rem; }
-}
-</style>
-
-    <link rel="stylesheet" href="/assets/site-shell.css">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Download free travel video LUTs and learn the best color grading settings for beach footage, night markets, and cinematic travel videos." name="description"/>
+<title>Download free travel video LUTs and learn the best</title>
+<link href="/assets/design-b.css" rel="stylesheet"/>
 </head>
 <body>
-<nav class="top-nav" aria-label="Primary navigation">
-  <div class="nav-container">
-    <a class="logo" href="/">📹 Holiday Video Camera</a>
-    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <ul class="nav-links">
-      <li><a data-section="home" href="/">Home</a></li>
-      <li><a data-section="city-through-the-lens" href="/city-through-the-lens/">Series</a></li>
-      <li><a data-section="reviews" href="/reviews/">Reviews</a><ul class="dropdown-menu"><li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></li>
-      <li><a data-section="guides" href="/guides/">Buying Guides</a><ul class="dropdown-menu"><li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof</a></li></ul></li>
-      <li><a data-section="how-to" href="/how-to/">How-To</a></li><li><a data-section="destinations" href="/destinations/">Destinations</a></li><li><a data-section="editing" href="/editing/">Editing</a></li><li><a data-section="comparisons" href="/comparisons/">Comparisons</a></li><li><a data-section="about" href="/about/">About</a></li>
-    </ul>
-  </div>
+<nav aria-label="Primary navigation" class="top-nav">
+<div class="nav-container">
+<a class="logo" href="/">📹 Holiday Video Camera</a>
+<button aria-expanded="false" aria-label="Toggle navigation" class="mobile-menu-toggle" type="button">☰</button>
+<ul class="nav-links">
+<li><a data-section="home" href="/">Home</a></li>
+<li><a data-section="city-through-the-lens" href="/city-through-the-lens/">Series</a></li>
+<li><a data-section="reviews" href="/reviews/">Reviews</a><ul class="dropdown-menu"><li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></li>
+<li><a data-section="guides" href="/guides/">Buying Guides</a><ul class="dropdown-menu"><li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof</a></li></ul></li>
+<li><a data-section="how-to" href="/how-to/">How-To</a></li><li><a data-section="destinations" href="/destinations/">Destinations</a></li><li><a data-section="editing" href="/editing/">Editing</a></li><li><a data-section="comparisons" href="/comparisons/">Comparisons</a></li><li><a data-section="about" href="/about/">About</a></li>
+</ul>
+</div>
 </nav>
-
-<header>
-    <div class="site-title"><a href="https://dawidmillenium-design.github.io/">📹 Holiday Video Camera</a></div>
-    <p style="color:#aaa; margin:5px 0 10px;">Real travel camera testing — no lab charts</p>
-    
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
+<nav aria-label="Primary quick links" class="header-nav">
+<a href="/reviews/">Reviews</a>
+<a href="/guides/">Guides</a>
+<a href="/destinations/">Destinations</a>
+<a href="/how-to/">How-To</a>
+<a href="/about/">About</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Search" class="icon-btn" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}" type="button">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+<button aria-controls="siteDrawer" aria-expanded="false" aria-label="Open menu" class="drawer-toggle" id="drawerToggle" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<span>Menu</span>
+</button>
+</div>
+</div>
 </header>
-
 <!-- Hero Stats -->
 <div class="hero-stats">
-    <span>50+ <small>Cameras Tested</small></span>
-    <span>28 <small>In-Depth Guides</small></span>
-    <span>50 <small>Cities in Our Series</small></span>
-    <span>2026 <small>Latest Models</small></span>
+<span>50+ <small>Cameras Tested</small></span>
+<span>28 <small>In-Depth Guides</small></span>
+<span>50 <small>Cities in Our Series</small></span>
+<span>2026 <small>Latest Models</small></span>
 </div>
-
 <div class="content">
-
-    <h1 style="margin-top:0;">Free LUTs and Color Grading Settings for Travel Videos — 2026</h1>
-
-    <p><strong>Color grading turns good footage into cinematic footage.</strong> Here are free LUTs and settings designed specifically for travel videos — plus a guide to applying them.</p>
-
-    <div class="pro-tip">
-        <strong>⚡ Quick Verdict:</strong> For most travel footage, start with a <strong>cinematic LUT</strong> and adjust intensity to 60-70%. For beach footage, add warmth. For night markets, add contrast.
+<h1 style="margin-top:0;">Free LUTs and Color Grading Settings for Travel Videos — 2026</h1>
+<p><strong>Color grading turns good footage into cinematic footage.</strong> Here are free LUTs and settings designed specifically for travel videos — plus a guide to applying them.</p>
+<div class="pro-tip">
+<strong>⚡ Quick Verdict:</strong> For most travel footage, start with a <strong>cinematic LUT</strong> and adjust intensity to 60-70%. For beach footage, add warmth. For night markets, add contrast.
     </div>
-
-    <h2>What Are LUTs?</h2>
-    <ul>
-        <li><strong>Look-Up Tables:</strong> Presets that apply color profiles to your footage</li>
-        <li><strong>Why They Matter:</strong> Consistent look, professional feel, saves hours of manual grading</li>
-        <li><strong>Types:</strong> Technical (log to Rec.709) and Creative (cinematic looks)</li>
-    </ul>
-
-    <h2>Free Travel LUTs (Download)</h2>
-
-    <div class="lut-download">
-        <span><strong>🏖️ Beach Sunset LUT</strong> — Warm, golden-hour beach footage</span>
-        <span class="btn"  title="Affiliate link coming soon" style="opacity:0.5; cursor:not-allowed; display:inline-block;">Download .cube</span>
+<h2>What Are LUTs?</h2>
+<ul>
+<li><strong>Look-Up Tables:</strong> Presets that apply color profiles to your footage</li>
+<li><strong>Why They Matter:</strong> Consistent look, professional feel, saves hours of manual grading</li>
+<li><strong>Types:</strong> Technical (log to Rec.709) and Creative (cinematic looks)</li>
+</ul>
+<h2>Free Travel LUTs (Download)</h2>
+<div class="lut-download">
+<span><strong>🏖️ Beach Sunset LUT</strong> — Warm, golden-hour beach footage</span>
+<span class="btn" style="opacity:0.5; cursor:not-allowed; display:inline-block;" title="Affiliate link coming soon">Download .cube</span>
+</div>
+<div class="lut-download">
+<span><strong>🌃 City Night LUT</strong> — Night markets, urban neon vibes</span>
+<span class="btn" style="opacity:0.5; cursor:not-allowed; display:inline-block;" title="Affiliate link coming soon">Download .cube</span>
+</div>
+<div class="lut-download">
+<span><strong>❄️ Snow &amp; Ski LUT</strong> — Bright, clean white balance for snow</span>
+<span class="btn" style="opacity:0.5; cursor:not-allowed; display:inline-block;" title="Affiliate link coming soon">Download .cube</span>
+</div>
+<div class="lut-download">
+<span><strong>🌿 Forest/Green LUT</strong> — Lush greenery, nature footage</span>
+<span class="btn" style="opacity:0.5; cursor:not-allowed; display:inline-block;" title="Affiliate link coming soon">Download .cube</span>
+</div>
+<div class="lut-download">
+<span><strong>🎬 Cinematic Travel</strong> — All-purpose cinematic look for any travel footage</span>
+<span class="btn" style="opacity:0.5; cursor:not-allowed; display:inline-block;" title="Affiliate link coming soon">Download .cube</span>
+</div>
+<h2>How to Apply LUTs</h2>
+<h3>In Adobe Premiere Pro</h3>
+<ol>
+<li>Open Lumetri Color panel</li>
+<li>Click "Basic Correction"</li>
+<li>Under "Input LUT," select your LUT file</li>
+<li>Adjust intensity with the slider</li>
+</ol>
+<h3>In DaVinci Resolve</h3>
+<ol>
+<li>Open Color page</li>
+<li>Right-click on node → "LUT" → "Browse"</li>
+<li>Select your LUT</li>
+<li>Adjust blend</li>
+</ol>
+<h3>In CapCut (Mobile)</h3>
+<ol>
+<li>Select your clip</li>
+<li>Tap "Adjust" → "LUT"</li>
+<li>Upload your LUT file</li>
+<li>Adjust strength</li>
+</ol>
+<h2>Custom Color Settings for Popular Cameras</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Camera</th>
+<th>Recommended Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DJI Osmo Pocket 3/4</strong></td>
+<td>D-Log M (for color grading)</td>
+</tr>
+<tr>
+<td><strong>Sony (ZV-E10 II, a7CR)</strong></td>
+<td>S-Log 2 or S-Log 3</td>
+</tr>
+<tr>
+<td><strong>GoPro Hero 13</strong></td>
+<td>Flat color profile</td>
+</tr>
+<tr>
+<td><strong>Fujifilm (X-M5, X-T50)</strong></td>
+<td>F-Log (or use film simulations)</td>
+</tr>
+<tr>
+<td><strong>iPhone 17 Pro Max</strong></td>
+<td>Apple Log (or ProRes)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Pro Tips for Color Grading</h2>
+<ul>
+<li>"Shoot in flat or log profile for maximum flexibility in grading"</li>
+<li>"Apply LUTs as a starting point, not a final look — always adjust"</li>
+<li>"Less is more — a subtle grade looks more natural"</li>
+<li>"For beach footage, warm up the white balance and add contrast"</li>
+<li>"For night markets, boost shadows and add a touch of magenta"</li>
+</ul>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> "The best LUT is the one you customize. Use the LUT as a starting point, then adjust contrast, saturation, and white balance for your specific footage."
     </div>
-
-    <div class="lut-download">
-        <span><strong>🌃 City Night LUT</strong> — Night markets, urban neon vibes</span>
-        <span class="btn"  title="Affiliate link coming soon" style="opacity:0.5; cursor:not-allowed; display:inline-block;">Download .cube</span>
-    </div>
-
-    <div class="lut-download">
-        <span><strong>❄️ Snow &amp; Ski LUT</strong> — Bright, clean white balance for snow</span>
-        <span class="btn"  title="Affiliate link coming soon" style="opacity:0.5; cursor:not-allowed; display:inline-block;">Download .cube</span>
-    </div>
-
-    <div class="lut-download">
-        <span><strong>🌿 Forest/Green LUT</strong> — Lush greenery, nature footage</span>
-        <span class="btn"  title="Affiliate link coming soon" style="opacity:0.5; cursor:not-allowed; display:inline-block;">Download .cube</span>
-    </div>
-
-    <div class="lut-download">
-        <span><strong>🎬 Cinematic Travel</strong> — All-purpose cinematic look for any travel footage</span>
-        <span class="btn"  title="Affiliate link coming soon" style="opacity:0.5; cursor:not-allowed; display:inline-block;">Download .cube</span>
-    </div>
-
-    <h2>How to Apply LUTs</h2>
-
-    <h3>In Adobe Premiere Pro</h3>
-    <ol>
-        <li>Open Lumetri Color panel</li>
-        <li>Click "Basic Correction"</li>
-        <li>Under "Input LUT," select your LUT file</li>
-        <li>Adjust intensity with the slider</li>
-    </ol>
-
-    <h3>In DaVinci Resolve</h3>
-    <ol>
-        <li>Open Color page</li>
-        <li>Right-click on node → "LUT" → "Browse"</li>
-        <li>Select your LUT</li>
-        <li>Adjust blend</li>
-    </ol>
-
-    <h3>In CapCut (Mobile)</h3>
-    <ol>
-        <li>Select your clip</li>
-        <li>Tap "Adjust" → "LUT"</li>
-        <li>Upload your LUT file</li>
-        <li>Adjust strength</li>
-    </ol>
-
-    <h2>Custom Color Settings for Popular Cameras</h2>
-
-    <div class="table-wrap">
-        <table>
-            <thead>
-                <tr>
-                    <th>Camera</th>
-                    <th>Recommended Settings</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>DJI Osmo Pocket 3/4</strong></td>
-                    <td>D-Log M (for color grading)</td>
-                </tr>
-                <tr>
-                    <td><strong>Sony (ZV-E10 II, a7CR)</strong></td>
-                    <td>S-Log 2 or S-Log 3</td>
-                </tr>
-                <tr>
-                    <td><strong>GoPro Hero 13</strong></td>
-                    <td>Flat color profile</td>
-                </tr>
-                <tr>
-                    <td><strong>Fujifilm (X-M5, X-T50)</strong></td>
-                    <td>F-Log (or use film simulations)</td>
-                </tr>
-                <tr>
-                    <td><strong>iPhone 17 Pro Max</strong></td>
-                    <td>Apple Log (or ProRes)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <h2>Pro Tips for Color Grading</h2>
-    <ul>
-        <li>"Shoot in flat or log profile for maximum flexibility in grading"</li>
-        <li>"Apply LUTs as a starting point, not a final look — always adjust"</li>
-        <li>"Less is more — a subtle grade looks more natural"</li>
-        <li>"For beach footage, warm up the white balance and add contrast"</li>
-        <li>"For night markets, boost shadows and add a touch of magenta"</li>
-    </ul>
-
-    <div class="pro-tip">
-        <strong>Pro Tip:</strong> "The best LUT is the one you customize. Use the LUT as a starting point, then adjust contrast, saturation, and white balance for your specific footage."
-    </div>
-
-    <div class="cta-box">
-        <strong>🎨 Ready to improve your color grading?</strong> <a href="/editing/color-grading-travel-videos.html">Read our full color grading guide →</a>
-    </div>
-
-    <hr>
-
-    <p style="font-size:0.9em; color:#666;"><strong>Related Guides:</strong> <a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps for Holiday Footage</a> | <a href="/editing/color-grading-travel-videos.html">Color Grading Travel Videos</a></p>
-
+<div class="cta-box">
+<strong>🎨 Ready to improve your color grading?</strong> <a href="/editing/color-grading-travel-videos.html">Read our full color grading guide →</a>
+</div>
+<hr/>
+<p style="font-size:0.9em; color:#666;"><strong>Related Guides:</strong> <a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps for Holiday Footage</a> | <a href="/editing/color-grading-travel-videos.html">Color Grading Travel Videos</a></p>
 </div><!-- /content -->
-
-
-
 <footer class="site-footer">
-  <div class="footer-container">
-    <section class="footer-section"><h4>Series</h4><ul><li><a href="/city-through-the-lens/">City Through the Lens</a></li><li><a href="/city-through-the-lens/#faq">Series FAQ</a></li></ul></section>
-    <section class="footer-section"><h4>Guides</h4><ul><li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/guides/best-budget-holiday-camera-under-500.html">Cameras Under $500</a></li><li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li><li><a href="/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li></ul></section>
-    <section class="footer-section"><h4>Reviews</h4><ul><li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></section>
-    <section class="footer-section"><h4>About</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/">Home</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></section>
-  </div>
-  <div class="footer-bottom"><p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p></div>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<h3>📹 Holiday Video Camera</h3>
+<p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
+<form action="#" aria-label="Newsletter signup" class="footer-newsletter" method="post">
+<label class="visually-hidden" for="footerEmail">Email address</label>
+<input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="footer-cols" style="padding-top:44px;">
+<div>
+<h4>Top Guides</h4>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
+<li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
+</ul>
+</div>
+<div>
+<h4>Popular Reviews</h4>
+<ul>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div>
+<h4>Destinations</h4>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+</ul>
+</div>
+<div>
+<h4>How-To</h4>
+<ul>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div>
+<h4>About</h4>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="footer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
+<div class="footer-bottom">
+<p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+</div>
+</div>
 </footer>
-<script src="/assets/site-shell.js" defer></script>
-
+<script defer="" src="/assets/site-shell.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.querySelector('.mobile-menu-toggle');

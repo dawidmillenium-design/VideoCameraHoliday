@@ -1,199 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="/assets/design-b.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="V30 vs V60 vs V90 explained simply: real bitrate math for GoPro, Pocket 3 and mirrorless cameras, capacity planning per trip day, and spotting fake cards." name="description"/>
 <title>4K Memory Cards: V30 vs V60 vs V90 | Holiday Video Camera</title>
-<meta name="description" content="V30 vs V60 vs V90 explained simply: real bitrate math for GoPro, Pocket 3 and mirrorless cameras, capacity planning per trip day, and spotting fake cards.">
-<meta name="author" content="Dawid Millennium">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<link rel="canonical" href="https://dawidmillenium-design.github.io/how-to/choose-memory-card-4k-video.html">
-<meta property="og:title" content="4K Memory Cards: V30 vs V60 vs V90 | Holiday Video Camera">
-<meta property="og:description" content="V30 vs V60 vs V90 explained simply: real bitrate math for GoPro, Pocket 3 and mirrorless cameras, capacity planning per trip day, and spotting fake cards.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://dawidmillenium-design.github.io/how-to/choose-memory-card-4k-video.html">
-<meta property="og:site_name" content="Holiday Video Camera">
-<meta name="twitter:card" content="summary_large_image">
-
-
-    <link rel="stylesheet" href="/assets/site-shell.css">
+<link href="/assets/design-b.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header class="site-header">
-    <div class="site-header-inner">
-        <a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
-        <nav class="header-nav" aria-label="Primary quick links">
-            <a href="/reviews/">Reviews</a>
-            <a href="/guides/">Guides</a>
-            <a href="/destinations/">Destinations</a>
-            <a href="/how-to/">How-To</a>
-            <a href="/about/">About</a>
-        </nav>
-        <div class="header-actions">
-            <button type="button" class="icon-btn" aria-label="Search" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-            <button type="button" class="drawer-toggle" id="drawerToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                <span>Menu</span>
-            </button>
-        </div>
-    </div>
+<div class="site-header-inner">
+<a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
+<nav aria-label="Primary quick links" class="header-nav">
+<a href="/reviews/">Reviews</a>
+<a href="/guides/">Guides</a>
+<a href="/destinations/">Destinations</a>
+<a href="/how-to/">How-To</a>
+<a href="/about/">About</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Search" class="icon-btn" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}" type="button">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+<button aria-controls="siteDrawer" aria-expanded="false" aria-label="Open menu" class="drawer-toggle" id="drawerToggle" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<span>Menu</span>
+</button>
+</div>
+</div>
 </header>
-
-<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
-
-<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="drawer-head">
-        <span class="title">Menu</span>
-        <button type="button" class="drawer-close" id="drawerClose" aria-label="Close menu">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-    </div>
-    <div class="drawer-search">
-        <label for="drawerSearchInput" class="visually-hidden">Search the site</label>
-        <input type="search" id="drawerSearchInput" placeholder="Search cameras, cities, guides…" autocomplete="off">
-    </div>
-    <div class="drawer-tabs" id="drawerTabs" role="tablist" aria-label="Menu categories">
-        <button type="button" role="tab" data-tab="reviews" aria-selected="true" class="is-active">Reviews</button>
-        <button type="button" role="tab" data-tab="guides" aria-selected="false">Guides</button>
-        <button type="button" role="tab" data-tab="destinations" aria-selected="false">Destinations</button>
-        <button type="button" role="tab" data-tab="howto" aria-selected="false">How-To</button>
-        <button type="button" role="tab" data-tab="editing" aria-selected="false">Editing</button>
-        <button type="button" role="tab" data-tab="compare" aria-selected="false">Compare</button>
-        <button type="button" role="tab" data-tab="city" aria-selected="false">City Series</button>
-        <button type="button" role="tab" data-tab="about" aria-selected="false">About</button>
-    </div>
-    <div class="drawer-body">
-        <div class="drawer-panel is-active" data-panel="reviews" role="tabpanel">
-            <h5>Gimbal Cameras</h5>
-            <ul>
-                <li><a href="/reviews/dji-osmo-action-5-review.html">DJI Osmo Action 5</a></li>
-                <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
-                <li><a href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4 Pro</a></li>
-                <li><a href="/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Roundup</a></li>
-            </ul>
-            <h5>Action Cameras</h5>
-            <ul>
-                <li><a href="/reviews/dji-osmo-action-6-review.html">DJI Osmo Action 6</a></li>
-                <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                <li><a href="/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S</a></li>
-                <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
-            </ul>
-            <h5>Vlogging &amp; Mirrorless</h5>
-            <ul>
-                <li><a href="/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50 V</a></li>
-                <li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
-                <li><a href="/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
-                <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="guides" role="tabpanel">
-            <h5>Buying Guides</h5>
-            <ul>
-                <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
-                <li><a href="/guides/best-budget-holiday-camera-under-500.html">Best Under $500</a></li>
-                <li><a href="/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
-                <li><a href="/guides/best-compact-cameras-travel-2026.html">Best Compact Cameras</a></li>
-                <li><a href="/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
-            </ul>
-            <h5>Planning &amp; Tips</h5>
-            <ul>
-                <li><a href="/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
-                <li><a href="/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="destinations" role="tabpanel">
-            <h5>Beach &amp; Water</h5>
-            <ul>
-                <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                <li><a href="/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
-                <li><a href="/destinations/maldives-camera-guide.html">Maldives</a></li>
-                <li><a href="/destinations/thailand-island-camera-guide.html">Thailand Islands</a></li>
-            </ul>
-            <h5>Adventure</h5>
-            <ul>
-                <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                <li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
-                <li><a href="/destinations/vietnam-motorbike-camera-guide.html">Vietnam Motorbike</a></li>
-            </ul>
-            <h5>City Breaks</h5>
-            <ul>
-                <li><a href="/destinations/bangkok-camera-guide.html">Bangkok</a></li>
-                <li><a href="/destinations/kyoto-camera-guide.html">Kyoto</a></li>
-                <li><a href="/destinations/santorini-camera-guide.html">Santorini</a></li>
-                <li><a href="/destinations/sydney-camera-guide.html">Sydney</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="howto" role="tabpanel">
-            <h5>Filming Techniques</h5>
-            <ul>
-                <li><a href="/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
-                <li><a href="/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
-                <li><a href="/how-to/film-in-rain-protect-gear.html">Film In Rain</a></li>
-                <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-            </ul>
-            <h5>Technical Skills</h5>
-            <ul>
-                <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Cards</a></li>
-                <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
-                <li><a href="/how-to/vertical-video-settings-travel.html">Vertical Video Settings</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="editing" role="tabpanel">
-            <h5>Editing</h5>
-            <ul>
-                <li><a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
-                <li><a href="/editing/post-travel-videos-youtube.html">Post To YouTube</a></li>
-                <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="compare" role="tabpanel">
-            <h5>Head-to-Head</h5>
-            <ul>
-                <li><a href="/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
-                <li><a href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
-                <li><a href="/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">Hero 13 vs ZV-1 II</a></li>
-                <li><a href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
-                <li><a href="/comparisons/powershot-v1-vs-zv-1-ii.html">PowerShot V1 vs ZV-1 II</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="city" role="tabpanel">
-            <h5>City Through the Lens</h5>
-            <ul>
-                <li><a href="/city-through-the-lens/">Series Home</a></li>
-                <li><a href="/city-through-the-lens/#faq">Series FAQ</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="about" role="tabpanel">
-            <h5>About</h5>
-            <ul>
-                <li><a href="/about/">About Us</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Service</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-            </ul>
-        </div>
-    </div>
-    <nav class="drawer-langs" aria-label="Language versions">
-        <a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
-        <a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
-        <a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
-        <a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
-        <a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
-        <a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
-        <a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
-        <a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
-        <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
-        <a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
-        <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
-    </nav>
+<div aria-hidden="true" class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside aria-hidden="true" aria-label="Main menu" aria-modal="true" class="drawer" id="siteDrawer" role="dialog">
+<div class="drawer-head">
+<span class="title">Menu</span>
+<button aria-label="Close menu" class="drawer-close" id="drawerClose" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+</div>
+<div class="drawer-search">
+<label class="visually-hidden" for="drawerSearchInput">Search the site</label>
+<input autocomplete="off" id="drawerSearchInput" placeholder="Search cameras, cities, guides…" type="search"/>
+</div>
+<div aria-label="Menu categories" class="drawer-tabs" id="drawerTabs" role="tablist">
+<button aria-selected="true" class="is-active" data-tab="reviews" role="tab" type="button">Reviews</button>
+<button aria-selected="false" data-tab="guides" role="tab" type="button">Guides</button>
+<button aria-selected="false" data-tab="destinations" role="tab" type="button">Destinations</button>
+<button aria-selected="false" data-tab="howto" role="tab" type="button">How-To</button>
+<button aria-selected="false" data-tab="editing" role="tab" type="button">Editing</button>
+<button aria-selected="false" data-tab="compare" role="tab" type="button">Compare</button>
+<button aria-selected="false" data-tab="city" role="tab" type="button">City Series</button>
+<button aria-selected="false" data-tab="about" role="tab" type="button">About</button>
+</div>
+<div class="drawer-body">
+<div class="drawer-panel is-active" data-panel="reviews" role="tabpanel">
+<h5>Gimbal Cameras</h5>
+<ul>
+<li><a href="/reviews/dji-osmo-action-5-review.html">DJI Osmo Action 5</a></li>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
+<li><a href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4 Pro</a></li>
+<li><a href="/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Roundup</a></li>
+</ul>
+<h5>Action Cameras</h5>
+<ul>
+<li><a href="/reviews/dji-osmo-action-6-review.html">DJI Osmo Action 6</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+</ul>
+<h5>Vlogging &amp; Mirrorless</h5>
+<ul>
+<li><a href="/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50 V</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="guides" role="tabpanel">
+<h5>Buying Guides</h5>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Best Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Best Compact Cameras</a></li>
+<li><a href="/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
+</ul>
+<h5>Planning &amp; Tips</h5>
+<ul>
+<li><a href="/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
+<li><a href="/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="destinations" role="tabpanel">
+<h5>Beach &amp; Water</h5>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+<li><a href="/destinations/maldives-camera-guide.html">Maldives</a></li>
+<li><a href="/destinations/thailand-island-camera-guide.html">Thailand Islands</a></li>
+</ul>
+<h5>Adventure</h5>
+<ul>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+<li><a href="/destinations/vietnam-motorbike-camera-guide.html">Vietnam Motorbike</a></li>
+</ul>
+<h5>City Breaks</h5>
+<ul>
+<li><a href="/destinations/bangkok-camera-guide.html">Bangkok</a></li>
+<li><a href="/destinations/kyoto-camera-guide.html">Kyoto</a></li>
+<li><a href="/destinations/santorini-camera-guide.html">Santorini</a></li>
+<li><a href="/destinations/sydney-camera-guide.html">Sydney</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="howto" role="tabpanel">
+<h5>Filming Techniques</h5>
+<ul>
+<li><a href="/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
+<li><a href="/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
+<li><a href="/how-to/film-in-rain-protect-gear.html">Film In Rain</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+</ul>
+<h5>Technical Skills</h5>
+<ul>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Cards</a></li>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/vertical-video-settings-travel.html">Vertical Video Settings</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="editing" role="tabpanel">
+<h5>Editing</h5>
+<ul>
+<li><a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
+<li><a href="/editing/post-travel-videos-youtube.html">Post To YouTube</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="compare" role="tabpanel">
+<h5>Head-to-Head</h5>
+<ul>
+<li><a href="/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
+<li><a href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
+<li><a href="/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">Hero 13 vs ZV-1 II</a></li>
+<li><a href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
+<li><a href="/comparisons/powershot-v1-vs-zv-1-ii.html">PowerShot V1 vs ZV-1 II</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="city" role="tabpanel">
+<h5>City Through the Lens</h5>
+<ul>
+<li><a href="/city-through-the-lens/">Series Home</a></li>
+<li><a href="/city-through-the-lens/#faq">Series FAQ</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="about" role="tabpanel">
+<h5>About</h5>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="drawer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
 </aside>
-
 <article class="container">
 <div class="author-box">
 <div class="author-avatar">📹</div>
@@ -215,11 +198,8 @@
 <li><a href="#related">Related Articles</a></li>
 </ul>
 </div>
-
 <p><strong>For 4K holiday video, buy a V30-rated microSD from a reputable brand (SanDisk, Samsung, or Lexar) purchased from an official store — that covers GoPro, DJI, and most cameras up to about 100–200 Mbps. You only need V60 or V90 if your mirrorless camera shoots high-bitrate All-I codecs above 200 Mbps.</strong> Capacity-wise, plan for roughly 100–200 GB per heavy shooting day at 4K. That's the whole answer; the details below will save you from both overpaying and from the fake-card trap that burns thousands of travelers every year.</p>
-
 <p>I learned this in a Marrakech market, where a "512GB SanDisk Extreme" for a suspiciously good price turned out to be a 16GB card in disguise. It reported 512GB to the camera, recorded happily over itself, and silently destroyed three days of footage. More on spotting those fakes below — it nearly ended this blog before it started.</p>
-
 <div class="takeaways">
 <h3>Key Takeaways</h3>
 <ul>
@@ -230,7 +210,6 @@
 <li>Buy only from official stores, and test every new card with a full-capacity checker tool before your trip.</li>
 </ul>
 </div>
-
 <h2 id="speed-classes">Speed Classes Explained in Plain English</h2>
 <p>Memory card labels are an alphabet soup (C10, U3, V30, A2...), but for video only one matters: the <strong>V rating</strong>, or Video Speed Class. It guarantees a minimum sustained write speed — the number that determines whether your camera can keep writing a 4K stream without dropping frames or stopping mid-clip.</p>
 <table>
@@ -243,7 +222,6 @@
 <div class="tip-box">
 <strong>Tip:</strong> On cameras with CFexpress slots (many full-frame mirrorless), the SD slot is usually the bottleneck for high-bitrate modes. Check your manual: some cameras silently disable their best codecs when only an SD card is present.
 </div>
-
 <h2 id="bitrate-math">The Real Bitrate Math for Popular Travel Cameras</h2>
 <p>Here's the math that ends all forum arguments: your camera's bitrate (in Mbps) ÷ 8 = the MB/s it needs to write continuously. Keep 2x headroom and you're safe.</p>
 <table>
@@ -255,7 +233,6 @@
 <tr><td>Mirrorless, 4K All-I</td><td>400–600 Mbps</td><td>50–75 MB/s</td><td>V60 or V90</td></tr>
 </table>
 <p>Notice something? Every mainstream travel camera — the ones in our <a class="content-link" href="../guides/best-holiday-video-cameras-2026.html">best holiday video cameras of 2026</a> guide — sits comfortably under V30's guarantee. V60/V90 is money spent on capability your camera can't use. The exception: if you shoot All-I on a full-frame mirrorless, check your manual's exact requirements and don't cheap out.</p>
-
 <h2 id="capacity">Capacity Planning: How Much Per Trip Day?</h2>
 <p>Using the same math, a 100 Mbps stream records about 750 MB per minute — call it 45 GB per hour of footage. Real-world daily totals from my own trips:</p>
 <ul>
@@ -264,14 +241,12 @@
 <li><strong>Heavy shooter</strong> (4K/60, lots of slow motion, 2+ hours/day): 100–150 GB/day. Carry multiple 256GB cards.</li>
 </ul>
 <p>My standard travel loadout: two 256GB V30 cards in rotation plus nightly offload to a phone or SSD (the full system is in <a class="content-link" href="../how-to/backup-travel-photos-videos.html">backing up without a laptop</a>). Two mid-size cards beat one huge one: cards fail, get lost, and get stolen — splitting your footage splits the risk. And make sure the cards you already own aren't slowing down your edit: slow cards also bottleneck transfers when you <a class="content-link" href="../how-to/edit-travel-videos-phone-tablet.html">edit travel videos on your phone</a>.</p>
-
 <h2 id="fake-cards">Fake Memory Cards: The Warning Nobody Heeds</h2>
 <p>Counterfeit cards are epidemic on big marketplaces and in tourist-area electronics shops. The scam: a cheap 16–32GB card is reprogrammed to report 256GB or 512GB. It works fine until the real capacity fills — then it silently overwrites your oldest footage. You won't know until you try to watch it.</p>
 <div class="warning-box">
 <strong>Warning:</strong> Red flags of a fake card: a price far below other sellers, blurry or misaligned printing on the label, missing holographic packaging, and a marketplace seller with no brand authorization. If a 512GB card costs $25, it is not a 512GB card.
 </div>
 <p>Protect yourself three ways. First, buy only from the brand's official store or authorized retailers — boring advice that would have saved my Marrakech footage. Second, test every new card before your trip with a free full-capacity tool (h2testw on Windows, F3 on Mac/Linux): it writes and verifies the entire card and takes a couple of hours, run it overnight. Third, watch for cards that run hot or randomly stop recording mid-clip — classic counterfeit symptoms.</p>
-
 <h2 id="mistakes">Common Memory Card Mistakes</h2>
 <ul>
 <li><strong>Buying V90 for a camera that maxes at 120 Mbps.</strong> That's $150 for nothing. Read your camera's bitrate spec first.</li>
@@ -302,107 +277,104 @@
 </div>
 <h2 id="related">Related Articles</h2>
 <div class="related-articles">
-<a href="../how-to/backup-travel-photos-videos.html" class="related-card"><h4>Back Up Footage Without a Laptop</h4><p>Cards fill up fast at 4K — here's the phone-and-SSD system for offloading nightly.</p></a>
-<a href="../reviews/gopro-hero-13-review.html" class="related-card"><h4>GoPro Hero 13 Black Review</h4><p>Real-world recording bitrates and which cards kept up in heat and water.</p></a>
-<a href="../guides/best-holiday-video-cameras-2026.html" class="related-card"><h4>Best Holiday Video Cameras 2026</h4><p>The cameras these cards will live in, ranked after real trip testing.</p></a>
+<a class="related-card" href="../how-to/backup-travel-photos-videos.html"><h4>Back Up Footage Without a Laptop</h4><p>Cards fill up fast at 4K — here's the phone-and-SSD system for offloading nightly.</p></a>
+<a class="related-card" href="../reviews/gopro-hero-13-review.html"><h4>GoPro Hero 13 Black Review</h4><p>Real-world recording bitrates and which cards kept up in heat and water.</p></a>
+<a class="related-card" href="../guides/best-holiday-video-cameras-2026.html"><h4>Best Holiday Video Cameras 2026</h4><p>The cameras these cards will live in, ranked after real trip testing.</p></a>
 </div>
 <p class="affiliate-note">This how-to guide contains no affiliate links — just field-tested advice from real trips. When we do link to our camera reviews, rankings there are based on real travel testing.</p>
 </article>
-
 <footer class="site-footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <h3>📹 Holiday Video Camera</h3>
-                <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-                <form class="footer-newsletter" action="#" method="post" aria-label="Newsletter signup">
-                    <label for="footerEmail" class="visually-hidden">Email address</label>
-                    <input type="email" id="footerEmail" name="email" placeholder="your@email.com" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-cols" style="padding-top:44px;">
-            <div>
-                <h4>Top Guides</h4>
-                <ul>
-                    <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
-                    <li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
-                    <li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
-                    <li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
-                    <li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Popular Reviews</h4>
-                <ul>
-                    <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
-                    <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                    <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
-                    <li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
-                    <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Destinations</h4>
-                <ul>
-                    <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                    <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                    <li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
-                    <li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
-                    <li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>How-To</h4>
-                <ul>
-                    <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
-                    <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                    <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-                    <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
-                    <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>About</h4>
-                <ul>
-                    <li><a href="/about/">About Us</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-        </div>
-        <nav class="footer-langs" aria-label="Language versions">
-            <a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
-            <a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
-            <a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
-            <a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
-            <a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
-            <a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
-            <a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
-            <a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
-            <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
-            <a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
-            <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
-        </nav>
-        <div class="footer-bottom">
-            <p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
-        </div>
-    </div>
-</footer>
-
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
-    <div class="cookie-banner-inner">
-        <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/privacy.html">Privacy Policy</a>.</p>
-        <div class="cookie-banner-actions">
-            <button type="button" class="reject" id="cookieReject">Reject</button>
-            <button type="button" class="accept" id="cookieAccept">Accept All</button>
-        </div>
-    </div>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<h3>📹 Holiday Video Camera</h3>
+<p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
+<form action="#" aria-label="Newsletter signup" class="footer-newsletter" method="post">
+<label class="visually-hidden" for="footerEmail">Email address</label>
+<input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
 </div>
-
+</div>
+<div class="footer-cols" style="padding-top:44px;">
+<div>
+<h4>Top Guides</h4>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
+<li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
+</ul>
+</div>
+<div>
+<h4>Popular Reviews</h4>
+<ul>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div>
+<h4>Destinations</h4>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+</ul>
+</div>
+<div>
+<h4>How-To</h4>
+<ul>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div>
+<h4>About</h4>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="footer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
+<div class="footer-bottom">
+<p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+</div>
+</div>
+</footer>
+<div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
+<div class="cookie-banner-inner">
+<p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/privacy.html">Privacy Policy</a>.</p>
+<div class="cookie-banner-actions">
+<button class="reject" id="cookieReject" type="button">Reject</button>
+<button class="accept" id="cookieAccept" type="button">Accept All</button>
+</div>
+</div>
+</div>
 <script>
 (function(){
     'use strict';
@@ -521,6 +493,5 @@
     if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
 })();
 </script>
-
 </body>
 </html>

@@ -1,339 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Matcha Maya's Viewfinder Survival 3D | Holiday Video Camera</title>
-    <style>
-        :root {
-            --matcha: #A8C686;
-            --matcha-dark: #6B8E23;
-            --gold: #FFD700;
-            --danger: #ff4757;
-            --bg: #0f0f1a;
-            --panel: rgba(26, 26, 46, 0.85);
-            --text: #f0f0f0;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-tap-highlight-color: transparent; }
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-            perspective: 1000px; /* Enable 3D space */
-        }
-        
-        #game-wrapper {
-            width: 100%;
-            max-width: 800px;
-            height: 100vh;
-            max-height: 900px;
-            display: flex;
-            flex-direction: column;
-            background: var(--panel);
-            border: 2px solid var(--matcha-dark);
-            border-radius: 20px;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.1s ease-out;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-        
-        /* Glassmorphism UI */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-        }
-
-        /* Screens */
-        .screen {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background: rgba(15, 15, 26, 0.95);
-            z-index: 10;
-            overflow-y: auto;
-            border-radius: 20px;
-        }
-        .hidden { display: none !important; }
-        
-        h1 { 
-            color: var(--matcha); 
-            font-size: 2rem; 
-            text-align: center; 
-            margin-bottom: 10px; 
-            text-shadow: 0 0 20px rgba(168,198,134,0.8);
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse { 50% { text-shadow: 0 0 30px rgba(168,198,134,1); } }
-        
-        .btn {
-            background: linear-gradient(135deg, var(--matcha-dark), var(--matcha));
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            border-radius: 30px;
-            cursor: pointer;
-            margin: 10px;
-            transition: all 0.3s;
-            font-weight: bold;
-            box-shadow: 0 5px 15px rgba(107, 142, 35, 0.4);
-        }
-        .btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 25px rgba(107, 142, 35, 0.6); }
-        .btn:active { transform: translateY(0) scale(0.95); }
-
-        /* Setup Grid */
-        .setup-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 20px;
-        }
-        .setup-item {
-            background: rgba(255,255,255,0.03);
-            border: 2px solid transparent;
-            padding: 15px;
-            border-radius: 12px;
-            cursor: pointer;
-            text-align: center;
-            transition: all 0.3s;
-        }
-        .setup-item:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
-        .setup-item.selected { 
-            border-color: var(--matcha); 
-            background: rgba(168,198,134,0.15);
-            box-shadow: 0 0 20px rgba(168,198,134,0.3);
-        }
-
-        /* HUD */
-        #hud {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            z-index: 5;
-            gap: 10px;
-        }
-        .stat-bar {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex: 1;
-        }
-        .stat-label { font-size: 0.7rem; color: #aaa; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        .bar-container {
-            width: 100%;
-            height: 10px;
-            background: rgba(0,0,0,0.5);
-            border-radius: 5px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .bar-fill { height: 100%; transition: width 0.2s, background 0.5s; box-shadow: 0 0 10px currentColor; }
-        #battery-fill { background: #4caf50; color: #4caf50; }
-        #heat-fill { background: #ff9800; color: #ff9800; }
-        #stability-fill { background: #2196f3; color: #2196f3; }
-        #progress-fill { background: var(--gold); color: var(--gold); }
-
-        /* Viewfinder */
-        #viewfinder-container {
-            flex: 1;
-            position: relative;
-            background: #000;
-            overflow: hidden;
-            border-radius: 10px;
-            margin: 0 15px;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
-        }
-        canvas { display: block; width: 100%; height: 100%; }
-        
-        /* Advanced Effects Overlays */
-        .effect-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 2;
-        }
-        #heat-overlay {
-            background: radial-gradient(circle, transparent 40%, rgba(255, 0, 0, 0) 100%);
-            transition: background 0.3s;
-        }
-        #glitch-overlay {
-            opacity: 0;
-            mix-blend-mode: screen;
-        }
-        .glitch-active #glitch-overlay {
-            opacity: 1;
-            animation: glitch-anim 0.2s infinite;
-        }
-        @keyframes glitch-anim {
-            0% { transform: translate(0); filter: hue-rotate(0deg); }
-            20% { transform: translate(-2px, 2px); filter: hue-rotate(90deg); }
-            40% { transform: translate(-2px, -2px); filter: hue-rotate(180deg); }
-            60% { transform: translate(2px, 2px); filter: hue-rotate(270deg); }
-            80% { transform: translate(2px, -2px); filter: hue-rotate(360deg); }
-            100% { transform: translate(0); filter: hue-rotate(0deg); }
-        }
-
-        #rec-indicator {
-            position: absolute;
-            top: 20px; left: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            color: var(--danger);
-            font-size: 1rem;
-            opacity: 0;
-            transition: opacity 0.2s;
-            text-shadow: 0 0 10px var(--danger);
-        }
-        #rec-dot {
-            width: 15px; height: 15px;
-            background: var(--danger);
-            border-radius: 50%;
-            animation: blink 1s infinite;
-            box-shadow: 0 0 10px var(--danger);
-        }
-        @keyframes blink { 50% { opacity: 0.3; } }
-
-        /* Controls */
-        #controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            padding: 20px;
-            z-index: 5;
-        }
-        #record-btn {
-            width: 80px; height: 80px;
-            border-radius: 50%;
-            background: var(--danger);
-            border: 5px solid white;
-            cursor: pointer;
-            transition: all 0.1s;
-            box-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
-        }
-        #record-btn:active, #record-btn.recording {
-            transform: scale(0.9);
-            background: #cc0000;
-            border-color: var(--gold);
-            box-shadow: 0 0 30px var(--gold);
-        }
-        #stabilize-btn {
-            padding: 15px 25px;
-            border-radius: 40px;
-            background: linear-gradient(135deg, #2196f3, #1565c0);
-            border: none;
-            color: white;
-            font-weight: bold;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
-            transition: all 0.1s;
-        }
-        #stabilize-btn:active { transform: scale(0.95); box-shadow: 0 2px 5px rgba(33, 150, 243, 0.4); }
-
-        @media (max-width: 600px) {
-            .setup-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 1.5rem; }
-            #controls { gap: 15px; }
-            #stabilize-btn { padding: 10px 15px; font-size: 0.9rem; }
-        }
-    </style>
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Matcha Maya's Viewfinder Survival 3D | Holiday Video Camera</title>
+<link href="/assets/design-b.css" rel="stylesheet"/>
 </head>
-<body>
-
+<body><header class="site-header">
+<div class="site-header-inner">
+<a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
+<nav aria-label="Primary quick links" class="header-nav">
+<a href="/reviews/">Reviews</a>
+<a href="/guides/">Guides</a>
+<a href="/destinations/">Destinations</a>
+<a href="/how-to/">How-To</a>
+<a href="/about/">About</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Search" class="icon-btn" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}" type="button">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+<button aria-controls="siteDrawer" aria-expanded="false" aria-label="Open menu" class="drawer-toggle" id="drawerToggle" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<span>Menu</span>
+</button>
+</div>
+</div>
+</header>
 <div id="game-wrapper">
-    <!-- Main Menu -->
-    <div id="menu-screen" class="screen">
-        <h1>🍵 Matcha Maya's Viewfinder Survival </h1>
-        <p style="text-align: center; max-width: 500px; margin-bottom: 30px; color: #ccc;">
+<!-- Main Menu -->
+<div class="screen" id="menu-screen">
+<h1>🍵 Matcha Maya's Viewfinder Survival </h1>
+<p style="text-align: center; max-width: 500px; margin-bottom: 30px; color: #ccc;">
             Experience the ultimate travel filming challenge. Manage battery, heat, and stability across 10 global destinations.
         </p>
-        <button class="btn" onclick="showScreen('setup-screen')">Start New Shoot</button>
-    </div>
-
-    <!-- Setup Screen -->
-    <div id="setup-screen" class="screen hidden">
-        <h2 style="color: var(--gold); margin-bottom: 20px;">📍 Choose Destination</h2>
-        <div class="setup-grid" id="destinations-grid"></div>
-        
-        <h2 style="color: var(--gold); margin: 20px 0;">📷 Choose Camera</h2>
-        <div class="setup-grid" id="cameras-grid"></div>
-
-        <button class="btn" id="start-btn" onclick="startGame()" disabled style="margin-top: 20px;">Start Recording</button>
-        <button class="btn" onclick="showScreen('menu-screen')" style="background: #444;">Back</button>
-    </div>
-
-    <!-- Game Screen -->
-    <div id="game-screen" class="screen hidden" style="padding: 0; justify-content: flex-start;">
-        <div id="hud" class="glass-panel" style="border-radius: 0 0 15px 15px; border-top: none;">
-            <div class="stat-bar">
-                <span class="stat-label">🔋 Battery</span>
-                <div class="bar-container"><div id="battery-fill" class="bar-fill" style="width: 100%"></div></div>
-            </div>
-            <div class="stat-bar">
-                <span class="stat-label">🔥 Heat</span>
-                <div class="bar-container"><div id="heat-fill" class="bar-fill" style="width: 0%"></div></div>
-            </div>
-            <div class="stat-bar">
-                <span class="stat-label">📉 Stability</span>
-                <div class="bar-container"><div id="stability-fill" class="bar-fill" style="width: 100%"></div></div>
-            </div>
-            <div class="stat-bar">
-                <span class="stat-label">🎯 Progress</span>
-                <div class="bar-container"><div id="progress-fill" class="bar-fill" style="width: 0%"></div></div>
-            </div>
-        </div>
-        
-        <div id="viewfinder-container">
-            <canvas id="game-canvas"></canvas>
-            
-            <!-- Advanced Effect Overlays -->
-            <div id="heat-overlay" class="effect-overlay"></div>
-            <div id="glitch-overlay" class="effect-overlay" style="background: linear-gradient(45deg, rgba(255,0,0,0.1), rgba(0,255,0,0.1), rgba(0,0,255,0.1));"></div>
-            
-            <div id="rec-indicator"><div id="rec-dot"></div> REC</div>
-            <div id="location-overlay" style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2);"></div>
-        </div>
-
-        <div id="controls">
-            <button id="stabilize-btn" onmousedown="startStabilize()" onmouseup="stopStabilize()" ontouchstart="startStabilize()" ontouchend="stopStabilize()">HOLD TO<br>STABILIZE</button>
-            <div id="record-btn" onmousedown="startRecord()" onmouseup="stopRecord()" ontouchstart="startRecord()" ontouchend="stopRecord()"></div>
-        </div>
-    </div>
-
-    <!-- Result Screen -->
-    <div id="result-screen" class="screen hidden">
-        <h2 id="result-title" style="font-size: 2rem; margin-bottom: 20px;">Shoot Complete!</h2>
-        <div class="glass-panel" style="padding: 25px; max-width: 500px; width: 100%; margin-bottom: 20px;">
-            <h3 style="color: var(--matcha); margin-bottom: 15px;">📊 Footage Stats</h3>
-            <div id="result-details" style="color: #ccc; line-height: 1.8;"></div>
-        </div>
-        <div class="glass-panel" style="padding: 25px; max-width: 500px; width: 100%; border-left: 4px solid var(--gold);">
-            <h3 style="color: var(--gold); margin-bottom: 10px;">🍵 Matcha Maya's Pro Tip</h3>
-            <p id="tip-text" style="color: #ccc; font-style: italic;"></p>
-        </div>
-        <button class="btn" onclick="showScreen('setup-screen')" style="margin-top: 20px;">Shoot Another Location</button>
-    </div>
+<button class="btn" onclick="showScreen('setup-screen')">Start New Shoot</button>
 </div>
-
+<!-- Setup Screen -->
+<div class="screen hidden" id="setup-screen">
+<h2 style="color: var(--gold); margin-bottom: 20px;">📍 Choose Destination</h2>
+<div class="setup-grid" id="destinations-grid"></div>
+<h2 style="color: var(--gold); margin: 20px 0;">📷 Choose Camera</h2>
+<div class="setup-grid" id="cameras-grid"></div>
+<button class="btn" disabled="" id="start-btn" onclick="startGame()" style="margin-top: 20px;">Start Recording</button>
+<button class="btn" onclick="showScreen('menu-screen')" style="background: #444;">Back</button>
+</div>
+<!-- Game Screen -->
+<div class="screen hidden" id="game-screen" style="padding: 0; justify-content: flex-start;">
+<div class="glass-panel" id="hud" style="border-radius: 0 0 15px 15px; border-top: none;">
+<div class="stat-bar">
+<span class="stat-label">🔋 Battery</span>
+<div class="bar-container"><div class="bar-fill" id="battery-fill" style="width: 100%"></div></div>
+</div>
+<div class="stat-bar">
+<span class="stat-label">🔥 Heat</span>
+<div class="bar-container"><div class="bar-fill" id="heat-fill" style="width: 0%"></div></div>
+</div>
+<div class="stat-bar">
+<span class="stat-label">📉 Stability</span>
+<div class="bar-container"><div class="bar-fill" id="stability-fill" style="width: 100%"></div></div>
+</div>
+<div class="stat-bar">
+<span class="stat-label">🎯 Progress</span>
+<div class="bar-container"><div class="bar-fill" id="progress-fill" style="width: 0%"></div></div>
+</div>
+</div>
+<div id="viewfinder-container">
+<canvas id="game-canvas"></canvas>
+<!-- Advanced Effect Overlays -->
+<div class="effect-overlay" id="heat-overlay"></div>
+<div class="effect-overlay" id="glitch-overlay" style="background: linear-gradient(45deg, rgba(255,0,0,0.1), rgba(0,255,0,0.1), rgba(0,0,255,0.1));"></div>
+<div id="rec-indicator"><div id="rec-dot"></div> REC</div>
+<div id="location-overlay" style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2);"></div>
+</div>
+<div id="controls">
+<button id="stabilize-btn" onmousedown="startStabilize()" onmouseup="stopStabilize()" ontouchend="stopStabilize()" ontouchstart="startStabilize()">HOLD TO<br/>STABILIZE</button>
+<div id="record-btn" onmousedown="startRecord()" onmouseup="stopRecord()" ontouchend="stopRecord()" ontouchstart="startRecord()"></div>
+</div>
+</div>
+<!-- Result Screen -->
+<div class="screen hidden" id="result-screen">
+<h2 id="result-title" style="font-size: 2rem; margin-bottom: 20px;">Shoot Complete!</h2>
+<div class="glass-panel" style="padding: 25px; max-width: 500px; width: 100%; margin-bottom: 20px;">
+<h3 style="color: var(--matcha); margin-bottom: 15px;">📊 Footage Stats</h3>
+<div id="result-details" style="color: #ccc; line-height: 1.8;"></div>
+</div>
+<div class="glass-panel" style="padding: 25px; max-width: 500px; width: 100%; border-left: 4px solid var(--gold);">
+<h3 style="color: var(--gold); margin-bottom: 10px;">🍵 Matcha Maya's Pro Tip</h3>
+<p id="tip-text" style="color: #ccc; font-style: italic;"></p>
+</div>
+<button class="btn" onclick="showScreen('setup-screen')" style="margin-top: 20px;">Shoot Another Location</button>
+</div>
+</div>
 <script>
 // --- GAME DATA ---
 const DESTINATIONS = [
@@ -611,5 +368,87 @@ function endGame() {
     showScreen('result-screen');
 }
 </script>
-</body>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<h3>📹 Holiday Video Camera</h3>
+<p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
+<form action="#" aria-label="Newsletter signup" class="footer-newsletter" method="post">
+<label class="visually-hidden" for="footerEmail">Email address</label>
+<input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="footer-cols" style="padding-top:44px;">
+<div>
+<h4>Top Guides</h4>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
+<li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
+</ul>
+</div>
+<div>
+<h4>Popular Reviews</h4>
+<ul>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div>
+<h4>Destinations</h4>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+</ul>
+</div>
+<div>
+<h4>How-To</h4>
+<ul>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div>
+<h4>About</h4>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="footer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
+<div class="footer-bottom">
+<p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+</div>
+</div>
+</footer></body>
 </html>

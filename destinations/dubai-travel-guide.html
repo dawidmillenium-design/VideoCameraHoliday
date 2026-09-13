@@ -1,406 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="/assets/design-b.css">
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your ultimate Dubai travel guide. Explore Burj Khalifa,</title>
-    <meta name="description" content="Your ultimate Dubai travel guide. Explore Burj Khalifa, Gold Souk, desert safaris, and local dining tips. Real advice for travelers and vloggers.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Discover the Wonders of Dubai: Ultimate Guide">
-    <meta property="og:description" content="From futuristic skyscrapers to ancient souks. The complete guide to filming and exploring Dubai.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://dawidmillenium-design.github.io/guides/dubai-travel-guide.html">
-    <meta property="og:image" content="https://dawidmillenium-design.github.io/assets/images/dubai-burj-khalifa-hero.jpg">
-
-    
-    <link rel="canonical" href="https://dawidmillenium-design.github.io/destinations/dubai-travel-guide.html">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Your ultimate Dubai travel guide. Explore Burj Khalifa, Gold Souk, desert safaris, and local dining tips. Real advice for travelers and vloggers." name="description"/>
+<title>Your ultimate Dubai travel guide. Explore Burj Khalifa,</title>
+<link href="/assets/design-b.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header class="site-header">
-    <div class="site-header-inner">
-        <a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
-        <nav class="header-nav" aria-label="Primary quick links">
-            <a href="/reviews/">Reviews</a>
-            <a href="/guides/">Guides</a>
-            <a href="/destinations/">Destinations</a>
-            <a href="/how-to/">How-To</a>
-            <a href="/about/">About</a>
-        </nav>
-        <div class="header-actions">
-            <button type="button" class="icon-btn" aria-label="Search" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-            <button type="button" class="drawer-toggle" id="drawerToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                <span>Menu</span>
-            </button>
-        </div>
-    </div>
-</header>
-
-<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
-
-<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="drawer-head">
-        <span class="title">Menu</span>
-        <button type="button" class="drawer-close" id="drawerClose" aria-label="Close menu">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-    </div>
-    <div class="drawer-search">
-        <label for="drawerSearchInput" class="visually-hidden">Search the site</label>
-        <input type="search" id="drawerSearchInput" placeholder="Search cameras, cities, guides…" autocomplete="off">
-    </div>
-    <div class="drawer-tabs" id="drawerTabs" role="tablist" aria-label="Menu categories">
-        <button type="button" role="tab" data-tab="reviews" aria-selected="true" class="is-active">Reviews</button>
-        <button type="button" role="tab" data-tab="guides" aria-selected="false">Guides</button>
-        <button type="button" role="tab" data-tab="destinations" aria-selected="false">Destinations</button>
-        <button type="button" role="tab" data-tab="howto" aria-selected="false">How-To</button>
-        <button type="button" role="tab" data-tab="editing" aria-selected="false">Editing</button>
-        <button type="button" role="tab" data-tab="compare" aria-selected="false">Compare</button>
-        <button type="button" role="tab" data-tab="city" aria-selected="false">City Series</button>
-        <button type="button" role="tab" data-tab="about" aria-selected="false">About</button>
-    </div>
-    <div class="drawer-body">
-        <div class="drawer-panel is-active" data-panel="reviews" role="tabpanel">
-            <h5>Gimbal Cameras</h5>
-            <ul>
-                <li><a href="/reviews/dji-osmo-action-5-review.html">DJI Osmo Action 5</a></li>
-                <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
-                <li><a href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4 Pro</a></li>
-                <li><a href="/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Roundup</a></li>
-            </ul>
-            <h5>Action Cameras</h5>
-            <ul>
-                <li><a href="/reviews/dji-osmo-action-6-review.html">DJI Osmo Action 6</a></li>
-                <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                <li><a href="/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S</a></li>
-                <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
-            </ul>
-            <h5>Vlogging &amp; Mirrorless</h5>
-            <ul>
-                <li><a href="/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50 V</a></li>
-                <li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
-                <li><a href="/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
-                <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="guides" role="tabpanel">
-            <h5>Buying Guides</h5>
-            <ul>
-                <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
-                <li><a href="/guides/best-budget-holiday-camera-under-500.html">Best Under $500</a></li>
-                <li><a href="/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
-                <li><a href="/guides/best-compact-cameras-travel-2026.html">Best Compact Cameras</a></li>
-                <li><a href="/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
-            </ul>
-            <h5>Planning &amp; Tips</h5>
-            <ul>
-                <li><a href="/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
-                <li><a href="/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="destinations" role="tabpanel">
-            <h5>Beach &amp; Water</h5>
-            <ul>
-                <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                <li><a href="/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
-                <li><a href="/destinations/maldives-camera-guide.html">Maldives</a></li>
-                <li><a href="/destinations/thailand-island-camera-guide.html">Thailand Islands</a></li>
-            </ul>
-            <h5>Adventure</h5>
-            <ul>
-                <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                <li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
-                <li><a href="/destinations/vietnam-motorbike-camera-guide.html">Vietnam Motorbike</a></li>
-            </ul>
-            <h5>City Breaks</h5>
-            <ul>
-                <li><a href="/destinations/bangkok-camera-guide.html">Bangkok</a></li>
-                <li><a href="/destinations/kyoto-camera-guide.html">Kyoto</a></li>
-                <li><a href="/destinations/santorini-camera-guide.html">Santorini</a></li>
-                <li><a href="/destinations/sydney-camera-guide.html">Sydney</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="howto" role="tabpanel">
-            <h5>Filming Techniques</h5>
-            <ul>
-                <li><a href="/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
-                <li><a href="/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
-                <li><a href="/how-to/film-in-rain-protect-gear.html">Film In Rain</a></li>
-                <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-            </ul>
-            <h5>Technical Skills</h5>
-            <ul>
-                <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Cards</a></li>
-                <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
-                <li><a href="/how-to/vertical-video-settings-travel.html">Vertical Video Settings</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="editing" role="tabpanel">
-            <h5>Editing</h5>
-            <ul>
-                <li><a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
-                <li><a href="/editing/post-travel-videos-youtube.html">Post To YouTube</a></li>
-                <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="compare" role="tabpanel">
-            <h5>Head-to-Head</h5>
-            <ul>
-                <li><a href="/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
-                <li><a href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
-                <li><a href="/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">Hero 13 vs ZV-1 II</a></li>
-                <li><a href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
-                <li><a href="/comparisons/powershot-v1-vs-zv-1-ii.html">PowerShot V1 vs ZV-1 II</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="city" role="tabpanel">
-            <h5>City Through the Lens</h5>
-            <ul>
-                <li><a href="/city-through-the-lens/">Series Home</a></li>
-                <li><a href="/city-through-the-lens/#faq">Series FAQ</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="about" role="tabpanel">
-            <h5>About</h5>
-            <ul>
-                <li><a href="/about/">About Us</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Service</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-            </ul>
-        </div>
-    </div>
-    <nav class="drawer-langs" aria-label="Language versions">
-        <a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
-        <a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
-        <a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
-        <a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
-        <a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
-        <a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
-        <a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
-        <a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
-        <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
-        <a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
-        <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
-    </nav>
-</aside>
-
-<main>
-        <article>
-            
-            
-            <p>Stepping into Dubai feels like entering an enchanting dreamscape, where futuristic skyscrapers stretch toward the heavens while ancient traditions hold steadfast in spirited harmony below. It’s a city that thrives on juxtaposition: glittering malls sit alongside historic souks, and Arabian culture melds seamlessly with global influences. Welcome to your Dubai travel guide, where every corner offers a new adventure, and every meal tells a story.</p>
-
-            <div class="highlight-box">
-                <strong>🎥 Vlogger's Tip:</strong> Dubai is incredibly photogenic but has strict privacy laws. Always ask permission before filming locals, especially in traditional areas like Deira. For the best skyline shots, visit the <em>Burj Khalifa</em> at sunset.
-            </div>
-
-            <h2>Culture & Etiquette</h2>
-            <p>Delving into the rich culture and vibrant life of Dubai is an essential part of any visit. This city, which has swiftly transitioned from a humble fishing village to a modern metropolis, is a melting pot of traditions. Emirati hospitality is unmatched; greeting a local with a warm smile will invariably earn you a hefty dose of kindness in return.</p>
-            <p>However, it’s crucial to familiarize yourself with local customs to navigate the social landscape respectfully. Dress modestly, particularly in public areas—cover your shoulders and knees, and save beach attire for the shore. When it comes to public behavior, keep affectionate gestures to a minimum; public displays of affection can be frowned upon. Additionally, be cautious with your photography; always ask permission before capturing any individuals, especially women and children.</p>
-            <p>During Ramadan, a significant period for the Muslim community, respect is key. Non-Muslims won’t be asked to fast, but be mindful to refrain from eating or drinking in public during daylight hours. If you’re invited to someone’s home, it’s customary to bring a small gift, often sweets or flowers, and accepting Arabic coffee and dates is a gracious gesture.</p>
-
-            <h2>Top Attractions</h2>
-            <p>Feel the pulse of Dubai as you explore its myriad attractions, each a testament to the city’s dazzling transformation.</p>
-
-            <h3>Burj Khalifa</h3>
-            <p>Standing at an astounding 828 meters, the Burj Khalifa reigns as the tallest building in the world. Ascend to the observation decks on the 124th and 148th floors for jaw-dropping panoramic views that stretch to the horizon. Marvel at the contrast of golden sand dunes and the opulent skyline, a perfect snapshot of the city’s duality.</p>
-
-            <h3>Dubai Mall</h3>
-            <p>Attached to the Burj Khalifa, this colossal shopping paradise isn’t just for retail therapy. It houses over 1,200 outlets, a mesmerizing aquarium, and an indoor ice rink—an ideal escape from the desert heat. As you stroll through the mall, don’t miss the enchanting Dubai Fountain display, where water dances to music, lighting up the night in a captivating spectacle.</p>
-
-            <h3>Palm Jumeirah</h3>
-            <p>This iconic artificial archipelago, shaped like a palm tree, boasts luxurious resorts, including the famed Atlantis. A walk along the crescent offers stunning views of the skyline and the Arabian Gulf, while the beaches entice with soft sand and azure waters.</p>
-
-            <h3>Gold Souk</h3>
-            <p>Venture into Deira’s bustling Gold Souk, a dazzling market filled with shining displays of gold and jewelry. It’s a sensory delight; the hustle and bustle mixed with tantalizing scents of spices nearby make this an experience not to be missed.</p>
-
-            <h3>Al Fahidi Historic District</h3>
-            <p>Experience the essence of old Dubai in Al Fahidi, where traditional wind-tower architecture transports you back in time. Wander through art galleries, museums, and quaint cafes housed in restored buildings along narrow alleyways that tell tales of yesteryears.</p>
-
-            <h3>Dubai Frame</h3>
-            <p>Standing tall between the old and new sections of the city, the Dubai Frame offers a unique visual of transformation. As you gaze through the transparent bridge at the top, the contrast between historic sites like Dubai Creek and the modern marvels of Downtown Dubai unfolds before you.</p>
-
-            <h3>Desert Safari</h3>
-            <p>No trip to Dubai is complete without a desert safari. Feel the thrill of dune bashing in a 4x4 vehicle, then take a moment to soak in the spellbinding sunset over the dunes. Finish the evening with a traditional dinner under the stars, featuring belly dancing and cultural performances that provide a taste of Arabia.</p>
-
-            <h2>Best Neighborhoods to Explore</h2>
-            <p>Selecting the perfect base for exploration is crucial, and each neighborhood in Dubai has its distinct charm.</p>
-            <ul>
-                <li><strong>Downtown Dubai:</strong> Bustling and vibrant, this hub boasts the breathtaking Burj Khalifa and Dubai Mall. With a plethora of dining experiences and entertainment options, Downtown Dubai is the heart of the modern city.</li>
-                <li><strong>Deira:</strong> For a taste of traditional Emirati life, Deira is perfect. Renowned for its authentic souks, you’ll find everything from spices to textiles. The cultural richness and lively atmosphere make it a great place to connect with the essence of the city.</li>
-                <li><strong>Jumeirah Beach Residence (JBR):</strong> If beach life calls to you, JBR is the answer. With its glamorous beachfront, it’s the ideal place for relaxation, watersports, and a wide array of dining options.</li>
-                <li><strong>Dubai Marina:</strong> This waterfront community shines with modern skyscrapers and a lively nightlife. Take a stroll along the marina promenade or hop on a yacht for a romantic evening on the water, surrounded by twinkling lights.</li>
-            </ul>
-
-            <h2>Food & Dining</h2>
-            <p>Dubai’s food scene is a delightful fusion that promises to tantalize your taste buds. From street vendors to luxury dining, there’s something for every culinary adventurer.</p>
-            <p>Indulge in <strong>Shawarma</strong>, a fragrant street food staple—tender marinated meat wrapped in flatbread, often paired with fresh vegetables and tantalizing sauces. For something heartier, try <strong>Machbous</strong>, a fragrant rice dish akin to biryani, often served during family gatherings, exuding flavors layered with spices and saffron.</p>
-            <p>Vegetarian travelers should certainly dive into <strong>Falafel</strong>, crispy, deep-fried balls made of ground chickpeas. This wholesome delight can be found at almost every corner of the city, particularly from food stalls.</p>
-            <p>For a memorable dining experience, consider <strong>Al Mahara</strong>, located in the world-famous Burj Al Arab, where you can savor seafood while seated beside an aquarium teeming with marine life. On a more casual note, <strong>Zaroob</strong> is beloved for its Levantine street food. If you’re watching your budget, <strong>Al Mallah</strong> offers fantastic shawarma and refreshing fresh juices at wallet-friendly prices.</p>
-
-            <h2>Practical Travel Tips</h2>
-            <ul>
-                <li><strong>Best Time to Visit:</strong> The ideal time for a visit is between November and April, as the weather is pleasantly mild for sightseeing. If you’re a shopper, aim for the <strong>Dubai Shopping Festival</strong> in January for incredible discounts!</li>
-                <li><strong>Visa Requirements:</strong> Most tourists from Western countries receive a visa on arrival, typically valid for 30 days, making the entry process quite hassle-free.</li>
-                <li><strong>Getting Around:</strong> The Dubai Metro is an efficient way to navigate the city, connecting major attractions. Taxis are widely available, and ride-hailing apps like Uber and Careem provide convenient options.</li>
-                <li><strong>Currency:</strong> The local currency is the UAE Dirham (AED). Budgeting around AED 100-200 per day for food and transport is a good rule of thumb.</li>
-            </ul>
-
-            <h2>Unique Experiences</h2>
-            <p>In a city bursting with attractions, the unique experiences are what truly set Dubai apart.</p>
-            <ul>
-                <li><strong>Ski Dubai:</strong> Quite a marvel, Ski Dubai is an indoor ski resort that allows you to indulge in skiing or snowboarding amidst the desert landscape.</li>
-                <li><strong>Dhow Cruise:</strong> Glide over the waters of Dubai Creek or the Marina on a traditional wooden dhow. These delightful cruises often include dinner, offering a brilliant view of the city’s illuminated skyline.</li>
-                <li><strong>Global Village:</strong> A multicultural paradise showcasing dining, shopping, and performances from around the globe.</li>
-            </ul>
-
-            <h2>Conclusion</h2>
-            <p>As you navigate the vibrant streets of Dubai, the enchanting tales are yours to uncover. Whether it’s the alluring aroma of spices wafting through the souks, the breathtaking views from the Burj Khalifa, or the serene desert sunsets, this city deeply captivates its visitors. Ready to embrace the allure and adventure of Dubai? Book your trip, and allow this wondrous city to share its secrets with you. Adventure awaits!</p>
-            
-            <hr>
-            <p><em>Planning to film in Dubai? Check out our guide on <a href="/destinations/protect-camera-bangkok-humidity.html">protecting camera gear in extreme heat</a>.</em></p>
-        
-                <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
-        <section class="related-section">
-
-            <h3>🏖️ More Destination Guides</h3>
-            <div class="related-articles">
-                <a class="related-card" href="/destinations/best-cameras-city-breaks.html">
-                    <h4>Best Cameras for City Breaks</h4>
-                    <p>Urban travel photography guide.</p>
-                </a>
-                <a class="related-card" href="/destinations/bangkok-camera-guide.html">
-                    <h4>Bangkok Travel Camera Guide</h4>
-                    <p>Complete Bangkok filming guide.</p>
-                </a>
-                <a class="related-card" href="/destinations/best-cameras-beach-holidays.html">
-                    <h4>Best Cameras for Beach Holidays</h4>
-                    <p>Tested in sand, salt, and sun.</p>
-                </a>
-            </div>
-
-            <h3>🌍 Related City Interviews</h3>
-            <div class="related-articles">
-                <a class="related-card" href="/city-through-the-lens/dubai-interview-preview.html">
-                    <h4>🇦🇪 Dubai Through the Lens</h4>
-                    <p>Local videographer guide to filming in Dubai.</p>
-                </a>
-                <a class="related-card" href="/city-through-the-lens/cairo-interview-preview.html">
-                    <h4>🇪🇬 Cairo Through the Lens</h4>
-                    <p>Local videographer guide to filming in Cairo.</p>
-                </a>
-                <a class="related-card" href="/city-through-the-lens/marrakech-interview-preview.html">
-                    <h4>🇲🇦 Marrakech Through the Lens</h4>
-                    <p>Local videographer guide to filming in Marrakech.</p>
-                </a>
-            </div>
-
-        </section>
-
-    </article>
-
-<footer class="site-footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <h3>📹 Holiday Video Camera</h3>
-                <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-                <form class="footer-newsletter" action="#" method="post" aria-label="Newsletter signup">
-                    <label for="footerEmail" class="visually-hidden">Email address</label>
-                    <input type="email" id="footerEmail" name="email" placeholder="your@email.com" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-cols" style="padding-top:44px;">
-            <div>
-                <h4>Top Guides</h4>
-                <ul>
-                    <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
-                    <li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
-                    <li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
-                    <li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
-                    <li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Popular Reviews</h4>
-                <ul>
-                    <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
-                    <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                    <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
-                    <li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
-                    <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Destinations</h4>
-                <ul>
-                    <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                    <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                    <li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
-                    <li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
-                    <li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>How-To</h4>
-                <ul>
-                    <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
-                    <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                    <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-                    <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
-                    <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>About</h4>
-                <ul>
-                    <li><a href="/about/">About Us</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-        </div>
-        <nav class="footer-langs" aria-label="Language versions">
-            <a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
-            <a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
-            <a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
-            <a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
-            <a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
-            <a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
-            <a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
-            <a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
-            <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
-            <a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
-            <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
-        </nav>
-        <div class="footer-bottom">
-            <p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
-        </div>
-    </div>
-</footer>
-
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
-    <div class="cookie-banner-inner">
-        <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/privacy.html">Privacy Policy</a>.</p>
-        <div class="cookie-banner-actions">
-            <button type="button" class="reject" id="cookieReject">Reject</button>
-            <button type="button" class="accept" id="cookieAccept">Accept All</button>
-        </div>
-    </div>
+<div class="site-header-inner">
+<a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
+<nav aria-label="Primary quick links" class="header-nav">
+<a href="/reviews/">Reviews</a>
+<a href="/guides/">Guides</a>
+<a href="/destinations/">Destinations</a>
+<a href="/how-to/">How-To</a>
+<a href="/about/">About</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Search" class="icon-btn" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}" type="button">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+<button aria-controls="siteDrawer" aria-expanded="false" aria-label="Open menu" class="drawer-toggle" id="drawerToggle" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<span>Menu</span>
+</button>
 </div>
-
+</div>
+</header>
+<div aria-hidden="true" class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside aria-hidden="true" aria-label="Main menu" aria-modal="true" class="drawer" id="siteDrawer" role="dialog">
+<div class="drawer-head">
+<span class="title">Menu</span>
+<button aria-label="Close menu" class="drawer-close" id="drawerClose" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+</div>
+<div class="drawer-search">
+<label class="visually-hidden" for="drawerSearchInput">Search the site</label>
+<input autocomplete="off" id="drawerSearchInput" placeholder="Search cameras, cities, guides…" type="search"/>
+</div>
+<div aria-label="Menu categories" class="drawer-tabs" id="drawerTabs" role="tablist">
+<button aria-selected="true" class="is-active" data-tab="reviews" role="tab" type="button">Reviews</button>
+<button aria-selected="false" data-tab="guides" role="tab" type="button">Guides</button>
+<button aria-selected="false" data-tab="destinations" role="tab" type="button">Destinations</button>
+<button aria-selected="false" data-tab="howto" role="tab" type="button">How-To</button>
+<button aria-selected="false" data-tab="editing" role="tab" type="button">Editing</button>
+<button aria-selected="false" data-tab="compare" role="tab" type="button">Compare</button>
+<button aria-selected="false" data-tab="city" role="tab" type="button">City Series</button>
+<button aria-selected="false" data-tab="about" role="tab" type="button">About</button>
+</div>
+<div class="drawer-body">
+<div class="drawer-panel is-active" data-panel="reviews" role="tabpanel">
+<h5>Gimbal Cameras</h5>
+<ul>
+<li><a href="/reviews/dji-osmo-action-5-review.html">DJI Osmo Action 5</a></li>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
+<li><a href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4 Pro</a></li>
+<li><a href="/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Roundup</a></li>
+</ul>
+<h5>Action Cameras</h5>
+<ul>
+<li><a href="/reviews/dji-osmo-action-6-review.html">DJI Osmo Action 6</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+</ul>
+<h5>Vlogging &amp; Mirrorless</h5>
+<ul>
+<li><a href="/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50 V</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="guides" role="tabpanel">
+<h5>Buying Guides</h5>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Best Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Best Compact Cameras</a></li>
+<li><a href="/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
+</ul>
+<h5>Planning &amp; Tips</h5>
+<ul>
+<li><a href="/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
+<li><a href="/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="destinations" role="tabpanel">
+<h5>Beach &amp; Water</h5>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+<li><a href="/destinations/maldives-camera-guide.html">Maldives</a></li>
+<li><a href="/destinations/thailand-island-camera-guide.html">Thailand Islands</a></li>
+</ul>
+<h5>Adventure</h5>
+<ul>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+<li><a href="/destinations/vietnam-motorbike-camera-guide.html">Vietnam Motorbike</a></li>
+</ul>
+<h5>City Breaks</h5>
+<ul>
+<li><a href="/destinations/bangkok-camera-guide.html">Bangkok</a></li>
+<li><a href="/destinations/kyoto-camera-guide.html">Kyoto</a></li>
+<li><a href="/destinations/santorini-camera-guide.html">Santorini</a></li>
+<li><a href="/destinations/sydney-camera-guide.html">Sydney</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="howto" role="tabpanel">
+<h5>Filming Techniques</h5>
+<ul>
+<li><a href="/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
+<li><a href="/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
+<li><a href="/how-to/film-in-rain-protect-gear.html">Film In Rain</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+</ul>
+<h5>Technical Skills</h5>
+<ul>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Cards</a></li>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/vertical-video-settings-travel.html">Vertical Video Settings</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="editing" role="tabpanel">
+<h5>Editing</h5>
+<ul>
+<li><a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
+<li><a href="/editing/post-travel-videos-youtube.html">Post To YouTube</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="compare" role="tabpanel">
+<h5>Head-to-Head</h5>
+<ul>
+<li><a href="/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
+<li><a href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
+<li><a href="/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">Hero 13 vs ZV-1 II</a></li>
+<li><a href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
+<li><a href="/comparisons/powershot-v1-vs-zv-1-ii.html">PowerShot V1 vs ZV-1 II</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="city" role="tabpanel">
+<h5>City Through the Lens</h5>
+<ul>
+<li><a href="/city-through-the-lens/">Series Home</a></li>
+<li><a href="/city-through-the-lens/#faq">Series FAQ</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="about" role="tabpanel">
+<h5>About</h5>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="drawer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
+</aside>
+<main>
+<article>
+<p>Stepping into Dubai feels like entering an enchanting dreamscape, where futuristic skyscrapers stretch toward the heavens while ancient traditions hold steadfast in spirited harmony below. It’s a city that thrives on juxtaposition: glittering malls sit alongside historic souks, and Arabian culture melds seamlessly with global influences. Welcome to your Dubai travel guide, where every corner offers a new adventure, and every meal tells a story.</p>
+<div class="highlight-box">
+<strong>🎥 Vlogger's Tip:</strong> Dubai is incredibly photogenic but has strict privacy laws. Always ask permission before filming locals, especially in traditional areas like Deira. For the best skyline shots, visit the <em>Burj Khalifa</em> at sunset.
+            </div>
+<h2>Culture &amp; Etiquette</h2>
+<p>Delving into the rich culture and vibrant life of Dubai is an essential part of any visit. This city, which has swiftly transitioned from a humble fishing village to a modern metropolis, is a melting pot of traditions. Emirati hospitality is unmatched; greeting a local with a warm smile will invariably earn you a hefty dose of kindness in return.</p>
+<p>However, it’s crucial to familiarize yourself with local customs to navigate the social landscape respectfully. Dress modestly, particularly in public areas—cover your shoulders and knees, and save beach attire for the shore. When it comes to public behavior, keep affectionate gestures to a minimum; public displays of affection can be frowned upon. Additionally, be cautious with your photography; always ask permission before capturing any individuals, especially women and children.</p>
+<p>During Ramadan, a significant period for the Muslim community, respect is key. Non-Muslims won’t be asked to fast, but be mindful to refrain from eating or drinking in public during daylight hours. If you’re invited to someone’s home, it’s customary to bring a small gift, often sweets or flowers, and accepting Arabic coffee and dates is a gracious gesture.</p>
+<h2>Top Attractions</h2>
+<p>Feel the pulse of Dubai as you explore its myriad attractions, each a testament to the city’s dazzling transformation.</p>
+<h3>Burj Khalifa</h3>
+<p>Standing at an astounding 828 meters, the Burj Khalifa reigns as the tallest building in the world. Ascend to the observation decks on the 124th and 148th floors for jaw-dropping panoramic views that stretch to the horizon. Marvel at the contrast of golden sand dunes and the opulent skyline, a perfect snapshot of the city’s duality.</p>
+<h3>Dubai Mall</h3>
+<p>Attached to the Burj Khalifa, this colossal shopping paradise isn’t just for retail therapy. It houses over 1,200 outlets, a mesmerizing aquarium, and an indoor ice rink—an ideal escape from the desert heat. As you stroll through the mall, don’t miss the enchanting Dubai Fountain display, where water dances to music, lighting up the night in a captivating spectacle.</p>
+<h3>Palm Jumeirah</h3>
+<p>This iconic artificial archipelago, shaped like a palm tree, boasts luxurious resorts, including the famed Atlantis. A walk along the crescent offers stunning views of the skyline and the Arabian Gulf, while the beaches entice with soft sand and azure waters.</p>
+<h3>Gold Souk</h3>
+<p>Venture into Deira’s bustling Gold Souk, a dazzling market filled with shining displays of gold and jewelry. It’s a sensory delight; the hustle and bustle mixed with tantalizing scents of spices nearby make this an experience not to be missed.</p>
+<h3>Al Fahidi Historic District</h3>
+<p>Experience the essence of old Dubai in Al Fahidi, where traditional wind-tower architecture transports you back in time. Wander through art galleries, museums, and quaint cafes housed in restored buildings along narrow alleyways that tell tales of yesteryears.</p>
+<h3>Dubai Frame</h3>
+<p>Standing tall between the old and new sections of the city, the Dubai Frame offers a unique visual of transformation. As you gaze through the transparent bridge at the top, the contrast between historic sites like Dubai Creek and the modern marvels of Downtown Dubai unfolds before you.</p>
+<h3>Desert Safari</h3>
+<p>No trip to Dubai is complete without a desert safari. Feel the thrill of dune bashing in a 4x4 vehicle, then take a moment to soak in the spellbinding sunset over the dunes. Finish the evening with a traditional dinner under the stars, featuring belly dancing and cultural performances that provide a taste of Arabia.</p>
+<h2>Best Neighborhoods to Explore</h2>
+<p>Selecting the perfect base for exploration is crucial, and each neighborhood in Dubai has its distinct charm.</p>
+<ul>
+<li><strong>Downtown Dubai:</strong> Bustling and vibrant, this hub boasts the breathtaking Burj Khalifa and Dubai Mall. With a plethora of dining experiences and entertainment options, Downtown Dubai is the heart of the modern city.</li>
+<li><strong>Deira:</strong> For a taste of traditional Emirati life, Deira is perfect. Renowned for its authentic souks, you’ll find everything from spices to textiles. The cultural richness and lively atmosphere make it a great place to connect with the essence of the city.</li>
+<li><strong>Jumeirah Beach Residence (JBR):</strong> If beach life calls to you, JBR is the answer. With its glamorous beachfront, it’s the ideal place for relaxation, watersports, and a wide array of dining options.</li>
+<li><strong>Dubai Marina:</strong> This waterfront community shines with modern skyscrapers and a lively nightlife. Take a stroll along the marina promenade or hop on a yacht for a romantic evening on the water, surrounded by twinkling lights.</li>
+</ul>
+<h2>Food &amp; Dining</h2>
+<p>Dubai’s food scene is a delightful fusion that promises to tantalize your taste buds. From street vendors to luxury dining, there’s something for every culinary adventurer.</p>
+<p>Indulge in <strong>Shawarma</strong>, a fragrant street food staple—tender marinated meat wrapped in flatbread, often paired with fresh vegetables and tantalizing sauces. For something heartier, try <strong>Machbous</strong>, a fragrant rice dish akin to biryani, often served during family gatherings, exuding flavors layered with spices and saffron.</p>
+<p>Vegetarian travelers should certainly dive into <strong>Falafel</strong>, crispy, deep-fried balls made of ground chickpeas. This wholesome delight can be found at almost every corner of the city, particularly from food stalls.</p>
+<p>For a memorable dining experience, consider <strong>Al Mahara</strong>, located in the world-famous Burj Al Arab, where you can savor seafood while seated beside an aquarium teeming with marine life. On a more casual note, <strong>Zaroob</strong> is beloved for its Levantine street food. If you’re watching your budget, <strong>Al Mallah</strong> offers fantastic shawarma and refreshing fresh juices at wallet-friendly prices.</p>
+<h2>Practical Travel Tips</h2>
+<ul>
+<li><strong>Best Time to Visit:</strong> The ideal time for a visit is between November and April, as the weather is pleasantly mild for sightseeing. If you’re a shopper, aim for the <strong>Dubai Shopping Festival</strong> in January for incredible discounts!</li>
+<li><strong>Visa Requirements:</strong> Most tourists from Western countries receive a visa on arrival, typically valid for 30 days, making the entry process quite hassle-free.</li>
+<li><strong>Getting Around:</strong> The Dubai Metro is an efficient way to navigate the city, connecting major attractions. Taxis are widely available, and ride-hailing apps like Uber and Careem provide convenient options.</li>
+<li><strong>Currency:</strong> The local currency is the UAE Dirham (AED). Budgeting around AED 100-200 per day for food and transport is a good rule of thumb.</li>
+</ul>
+<h2>Unique Experiences</h2>
+<p>In a city bursting with attractions, the unique experiences are what truly set Dubai apart.</p>
+<ul>
+<li><strong>Ski Dubai:</strong> Quite a marvel, Ski Dubai is an indoor ski resort that allows you to indulge in skiing or snowboarding amidst the desert landscape.</li>
+<li><strong>Dhow Cruise:</strong> Glide over the waters of Dubai Creek or the Marina on a traditional wooden dhow. These delightful cruises often include dinner, offering a brilliant view of the city’s illuminated skyline.</li>
+<li><strong>Global Village:</strong> A multicultural paradise showcasing dining, shopping, and performances from around the globe.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>As you navigate the vibrant streets of Dubai, the enchanting tales are yours to uncover. Whether it’s the alluring aroma of spices wafting through the souks, the breathtaking views from the Burj Khalifa, or the serene desert sunsets, this city deeply captivates its visitors. Ready to embrace the allure and adventure of Dubai? Book your trip, and allow this wondrous city to share its secrets with you. Adventure awaits!</p>
+<hr/>
+<p><em>Planning to film in Dubai? Check out our guide on <a href="/destinations/protect-camera-bangkok-humidity.html">protecting camera gear in extreme heat</a>.</em></p>
+<!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
+<section class="related-section">
+<h3>🏖️ More Destination Guides</h3>
+<div class="related-articles">
+<a class="related-card" href="/destinations/best-cameras-city-breaks.html">
+<h4>Best Cameras for City Breaks</h4>
+<p>Urban travel photography guide.</p>
+</a>
+<a class="related-card" href="/destinations/bangkok-camera-guide.html">
+<h4>Bangkok Travel Camera Guide</h4>
+<p>Complete Bangkok filming guide.</p>
+</a>
+<a class="related-card" href="/destinations/best-cameras-beach-holidays.html">
+<h4>Best Cameras for Beach Holidays</h4>
+<p>Tested in sand, salt, and sun.</p>
+</a>
+</div>
+<h3>🌍 Related City Interviews</h3>
+<div class="related-articles">
+<a class="related-card" href="/city-through-the-lens/dubai-interview-preview.html">
+<h4>🇦🇪 Dubai Through the Lens</h4>
+<p>Local videographer guide to filming in Dubai.</p>
+</a>
+<a class="related-card" href="/city-through-the-lens/cairo-interview-preview.html">
+<h4>🇪🇬 Cairo Through the Lens</h4>
+<p>Local videographer guide to filming in Cairo.</p>
+</a>
+<a class="related-card" href="/city-through-the-lens/marrakech-interview-preview.html">
+<h4>🇲🇦 Marrakech Through the Lens</h4>
+<p>Local videographer guide to filming in Marrakech.</p>
+</a>
+</div>
+</section>
+</article>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<h3>📹 Holiday Video Camera</h3>
+<p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
+<form action="#" aria-label="Newsletter signup" class="footer-newsletter" method="post">
+<label class="visually-hidden" for="footerEmail">Email address</label>
+<input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="footer-cols" style="padding-top:44px;">
+<div>
+<h4>Top Guides</h4>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
+<li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
+</ul>
+</div>
+<div>
+<h4>Popular Reviews</h4>
+<ul>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div>
+<h4>Destinations</h4>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+</ul>
+</div>
+<div>
+<h4>How-To</h4>
+<ul>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div>
+<h4>About</h4>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="footer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
+<div class="footer-bottom">
+<p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+</div>
+</div>
+</footer>
+<div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
+<div class="cookie-banner-inner">
+<p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/privacy.html">Privacy Policy</a>.</p>
+<div class="cookie-banner-actions">
+<button class="reject" id="cookieReject" type="button">Reject</button>
+<button class="accept" id="cookieAccept" type="button">Accept All</button>
+</div>
+</div>
+</div>
 <script>
 (function(){
     'use strict';
@@ -519,6 +478,5 @@
     if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
 })();
 </script>
-
-</body>
+</main></body>
 </html>

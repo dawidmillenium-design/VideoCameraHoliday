@@ -1,427 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Country-by-country drone laws for travelers. Know where</title>
-    <meta name="description" content="Country-by-country drone laws for travelers. Know where you can fly drones in Europe, USA, Asia, and more. Essential guide for travel drone pilots.">
-    <link rel="canonical" href="https://dawidmillenium-design.github.io/interviews/drone-laws-for-travelers-2026.html">
-    <link rel="stylesheet" href="/css/style.css">
-    <style>
-        /* Same CSS as previous articles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.8;
-            color: #1a1a1a;
-            background: #fafafa;
-        }
-        header {
-            background: #1a1a2e;
-            color: white;
-            padding: 20px 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-        header .site-title {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        header .site-title a {
-            color: white;
-            text-decoration: none;
-        }
-        nav {
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px 25px;
-        }
-        nav a {
-            color: #ccc;
-            text-decoration: none;
-            font-size: 0.95em;
-        }
-        nav a:hover {
-            color: white;
-        }
-        .hero-stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            background: #16213e;
-            padding: 15px 25px;
-            border-radius: 10px;
-            margin: 20px 0 30px;
-        }
-        .hero-stats span {
-            color: #f0c27f;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .hero-stats span small {
-            color: #aaa;
-            font-weight: normal;
-            font-size: 0.8em;
-        }
-        .content {
-            background: white;
-            padding: 30px 35px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #1a1a2e;
-            border-bottom: 3px solid #f0c27f;
-            padding-bottom: 8px;
-            margin-top: 35px;
-        }
-        h3 {
-            color: #2d4059;
-            margin-top: 25px;
-        }
-        .table-wrap {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.95em;
-        }
-        table th {
-            background: #1a1a2e;
-            color: white;
-            padding: 12px 15px;
-            text-align: left;
-        }
-        table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
-        }
-        table tr:hover {
-            background: #f5f5f5;
-        }
-        .pro-tip {
-            background: #e8f0fe;
-            border-left: 4px solid #1a73e8;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .pro-tip strong {
-            color: #1a73e8;
-        }
-        .cta-box {
-            background: #f0c27f;
-            color: #1a1a2e;
-            padding: 20px 25px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 30px 0;
-        }
-        .cta-box a {
-            color: #1a1a2e;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 30px 20px 20px;
-            color: #666;
-            font-size: 0.9em;
-            border-top: 1px solid #ddd;
-            margin-top: 30px;
-        }
-        footer a {
-            color: #1a1a2e;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px 25px;
-            margin-bottom: 15px;
-        }
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            .content { padding: 20px; }
-            header .site-title { font-size: 1.3em; }
-            nav { gap: 10px; }
-            .hero-stats { flex-direction: column; gap: 5px; }
-        }
-        .region-box {
-            background: #f5f5f5;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 4px solid #1a1a2e;
-        }
-        .region-box h3 { margin-top: 0; }
-    
-/* --- Mobile Menu Styles --- */
-.mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    flex-direction: column;
-    gap: 5px;
-}
-.hamburger-line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--dark);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-.mobile-menu-toggle.active .hamburger-line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.mobile-menu-toggle.active .hamburger-line:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active .hamburger-line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-@media (max-width: 768px) {
-    .mobile-menu-toggle { display: flex; }
-    .mega-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        border-bottom: 1px solid var(--border);
-        flex-direction: column;
-        padding: 1rem;
-        gap: 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-    .mega-menu.active { display: flex; }
-    .mega-menu > li { padding: 0; border-bottom: 1px solid var(--border); }
-    .mega-menu > li > a { display: block; padding: 1rem 0; font-size: 1.1rem; }
-    .dropdown {
-        position: static;
-        transform: none;
-        min-width: 100%;
-        box-shadow: none;
-        border: none;
-        padding: 0 0 1rem 1rem;
-        grid-template-columns: 1fr;
-        opacity: 1;
-        visibility: visible;
-        display: block;
-    }
-    .dropdown-col { margin-bottom: 1rem; }
-    .dropdown-col h4 { font-size: 0.9rem; margin-top: 0.5rem; }
-}
-</style>
-
-    <link rel="stylesheet" href="/assets/site-shell.css">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Country-by-country drone laws for travelers. Know where you can fly drones in Europe, USA, Asia, and more. Essential guide for travel drone pilots." name="description"/>
+<title>Country-by-country drone laws for travelers. Know where</title>
+<link href="/assets/design-b.css" rel="stylesheet"/>
 </head>
 <body>
-<nav class="top-nav" aria-label="Primary navigation">
-  <div class="nav-container">
-    <a class="logo" href="/">📹 Holiday Video Camera</a>
-    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <ul class="nav-links">
-      <li><a data-section="home" href="/">Home</a></li>
-      <li><a data-section="city-through-the-lens" href="/city-through-the-lens/">Series</a></li>
-      <li><a data-section="reviews" href="/reviews/">Reviews</a><ul class="dropdown-menu"><li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></li>
-      <li><a data-section="guides" href="/guides/">Buying Guides</a><ul class="dropdown-menu"><li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof</a></li></ul></li>
-      <li><a data-section="how-to" href="/how-to/">How-To</a></li><li><a data-section="destinations" href="/destinations/">Destinations</a></li><li><a data-section="editing" href="/editing/">Editing</a></li><li><a data-section="comparisons" href="/comparisons/">Comparisons</a></li><li><a data-section="about" href="/about/">About</a></li>
-    </ul>
-  </div>
+<nav aria-label="Primary navigation" class="top-nav">
+<div class="nav-container">
+<a class="logo" href="/">📹 Holiday Video Camera</a>
+<button aria-expanded="false" aria-label="Toggle navigation" class="mobile-menu-toggle" type="button">☰</button>
+<ul class="nav-links">
+<li><a data-section="home" href="/">Home</a></li>
+<li><a data-section="city-through-the-lens" href="/city-through-the-lens/">Series</a></li>
+<li><a data-section="reviews" href="/reviews/">Reviews</a><ul class="dropdown-menu"><li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></li>
+<li><a data-section="guides" href="/guides/">Buying Guides</a><ul class="dropdown-menu"><li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li><li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof</a></li></ul></li>
+<li><a data-section="how-to" href="/how-to/">How-To</a></li><li><a data-section="destinations" href="/destinations/">Destinations</a></li><li><a data-section="editing" href="/editing/">Editing</a></li><li><a data-section="comparisons" href="/comparisons/">Comparisons</a></li><li><a data-section="about" href="/about/">About</a></li>
+</ul>
+</div>
 </nav>
-
-<header>
-    <div class="site-title"><a href="https://dawidmillenium-design.github.io/">📹 Holiday Video Camera</a></div>
-    <p style="color:#aaa; margin:5px 0 10px;">Real travel camera testing — no lab charts</p>
-    
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
+<nav aria-label="Primary quick links" class="header-nav">
+<a href="/reviews/">Reviews</a>
+<a href="/guides/">Guides</a>
+<a href="/destinations/">Destinations</a>
+<a href="/how-to/">How-To</a>
+<a href="/about/">About</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Search" class="icon-btn" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}" type="button">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+<button aria-controls="siteDrawer" aria-expanded="false" aria-label="Open menu" class="drawer-toggle" id="drawerToggle" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<span>Menu</span>
+</button>
+</div>
+</div>
 </header>
-
 <!-- Hero Stats -->
 <div class="hero-stats">
-    <span>50+ <small>Cameras Tested</small></span>
-    <span>28 <small>In-Depth Guides</small></span>
-    <span>50 <small>Cities in Our Series</small></span>
-    <span>2026 <small>Latest Models</small></span>
+<span>50+ <small>Cameras Tested</small></span>
+<span>28 <small>In-Depth Guides</small></span>
+<span>50 <small>Cities in Our Series</small></span>
+<span>2026 <small>Latest Models</small></span>
 </div>
-
 <div class="content">
-
-    <h1 style="margin-top:0;">Drone Laws for Travelers — Where You Can and Can't Fly (2026)</h1>
-
-    <p><strong>Drone footage is stunning. But breaking the law is expensive.</strong> Here's a country-by-country guide to drone regulations for travelers — from Europe to Asia to the Americas.</p>
-
-    <div class="pro-tip">
-        <strong>⚡ Golden Rule:</strong> <strong>Always check local laws before flying.</strong> Fines can be thousands of dollars. Some countries ban drones entirely.
+<h1 style="margin-top:0;">Drone Laws for Travelers — Where You Can and Can't Fly (2026)</h1>
+<p><strong>Drone footage is stunning. But breaking the law is expensive.</strong> Here's a country-by-country guide to drone regulations for travelers — from Europe to Asia to the Americas.</p>
+<div class="pro-tip">
+<strong>⚡ Golden Rule:</strong> <strong>Always check local laws before flying.</strong> Fines can be thousands of dollars. Some countries ban drones entirely.
     </div>
-
-    <h2>Drone Regulations by Region</h2>
-
-    <div class="region-box">
-        <h3>🌍 Europe (EU)</h3>
-        <ul>
-            <li>Registration required for all drones</li>
-            <li><strong>"Open" category rules:</strong>
-                <ul>
-                    <li>Sub-250g: Minimal restrictions</li>
-                    <li>250g-2kg: Must stay below 120m, keep line of sight</li>
-                    <li>Flight over people: Requires specific license</li>
-                </ul>
-            </li>
-            <li>Popular countries: Italy, France, Spain, Germany — all follow EU rules</li>
-        </ul>
+<h2>Drone Regulations by Region</h2>
+<div class="region-box">
+<h3>🌍 Europe (EU)</h3>
+<ul>
+<li>Registration required for all drones</li>
+<li><strong>"Open" category rules:</strong>
+<ul>
+<li>Sub-250g: Minimal restrictions</li>
+<li>250g-2kg: Must stay below 120m, keep line of sight</li>
+<li>Flight over people: Requires specific license</li>
+</ul>
+</li>
+<li>Popular countries: Italy, France, Spain, Germany — all follow EU rules</li>
+</ul>
+</div>
+<div class="region-box">
+<h3>🇺🇸 North America (USA, Canada)</h3>
+<p><strong>USA:</strong> FAA registration for all drones &gt;250g</p>
+<ul>
+<li>Recreational flyer: FAA test (TRUST) required</li>
+<li>Commercial flyer: Part 107 license</li>
+<li>National parks: Most prohibit drones</li>
+<li>City rules: Many cities ban drones in public spaces</li>
+</ul>
+<p><strong>Canada:</strong> Transport Canada rules</p>
+<ul>
+<li>Basic vs. Advanced license</li>
+<li>120m altitude limit</li>
+<li>Avoid air traffic zones</li>
+</ul>
+</div>
+<div class="region-box">
+<h3>🌏 Asia (Japan, Singapore, China)</h3>
+<p><strong>Japan:</strong> Drones under 200g require no registration; heavier require permit</p>
+<ul>
+<li>No flights over populated areas</li>
+<li>No night flights</li>
+</ul>
+<p><strong>Singapore:</strong> Registration required for all drones &gt;250g</p>
+<ul>
+<li>No flights over "protected" areas</li>
+<li>Heavy fines for violations</li>
+</ul>
+<p><strong>China:</strong> Strict registration rules, real-name requirement</p>
+<ul>
+<li>Many cities have drone bans</li>
+</ul>
+</div>
+<div class="region-box">
+<h3>🇦🇺 Australia / New Zealand</h3>
+<p><strong>Australia:</strong> CASA rules — register if &gt;250g</p>
+<ul>
+<li>Stay below 120m</li>
+<li>Keep line of sight</li>
+<li>Avoid national parks without permit</li>
+</ul>
+<p><strong>New Zealand:</strong> Similar to Australia</p>
+<ul>
+<li>No flights over people</li>
+<li>Keep below 120m</li>
+<li>Respect Māori cultural sites</li>
+</ul>
+</div>
+<div class="region-box">
+<h3>🇦🇪 Middle East (UAE, Saudi Arabia)</h3>
+<p><strong>UAE:</strong> Registration required, permit needed</p>
+<ul>
+<li>No flights over "sensitive" areas</li>
+<li>Heavy fines for violations</li>
+<li>Ramadan restrictions</li>
+</ul>
+</div>
+<h2>Recommended Drones for Travelers</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Drone</th>
+<th>Weight</th>
+<th>Registration Required?</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DJI Mini 4 Pro</strong></td>
+<td>249g</td>
+<td>Not required (in most countries)</td>
+<td>Most travelers — sub-250g</td>
+</tr>
+<tr>
+<td><strong>DJI Air 3</strong></td>
+<td>720g</td>
+<td>Required</td>
+<td>Prosumers, high quality</td>
+</tr>
+<tr>
+<td><strong>Insta360 X5</strong></td>
+<td>~200g</td>
+<td>Often not required</td>
+<td>360 capture, reframing</td>
+</tr>
+<tr>
+<td><strong>Skydio 2+</strong></td>
+<td>775g</td>
+<td>Required</td>
+<td>Autonomous tracking, adventure</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Pro Tips for Drone Travel</h2>
+<ul>
+<li>Always carry <strong>proof of registration</strong> (printed and digital)</li>
+<li>Download <strong>offline maps</strong> of drone-restricted zones</li>
+<li>Check <strong>weather conditions</strong> before flying</li>
+<li><strong>Insurance:</strong> Consider liability insurance (some countries require it)</li>
+<li><strong>Safety:</strong> Never fly over crowds, airports, or sensitive sites</li>
+<li><strong>Weight:</strong> Sub-250g drones are the safest for hassle-free travel</li>
+</ul>
+<div class="pro-tip">
+<strong>Pro Tip:</strong> "The DJI Mini 4 Pro is the ultimate travel drone — it's under 250g, so it's exempt from many country's registration requirements."
     </div>
-
-    <div class="region-box">
-        <h3>🇺🇸 North America (USA, Canada)</h3>
-        <p><strong>USA:</strong> FAA registration for all drones &gt;250g</p>
-        <ul>
-            <li>Recreational flyer: FAA test (TRUST) required</li>
-            <li>Commercial flyer: Part 107 license</li>
-            <li>National parks: Most prohibit drones</li>
-            <li>City rules: Many cities ban drones in public spaces</li>
-        </ul>
-        <p><strong>Canada:</strong> Transport Canada rules</p>
-        <ul>
-            <li>Basic vs. Advanced license</li>
-            <li>120m altitude limit</li>
-            <li>Avoid air traffic zones</li>
-        </ul>
-    </div>
-
-    <div class="region-box">
-        <h3>🌏 Asia (Japan, Singapore, China)</h3>
-        <p><strong>Japan:</strong> Drones under 200g require no registration; heavier require permit</p>
-        <ul>
-            <li>No flights over populated areas</li>
-            <li>No night flights</li>
-        </ul>
-        <p><strong>Singapore:</strong> Registration required for all drones &gt;250g</p>
-        <ul>
-            <li>No flights over "protected" areas</li>
-            <li>Heavy fines for violations</li>
-        </ul>
-        <p><strong>China:</strong> Strict registration rules, real-name requirement</p>
-        <ul>
-            <li>Many cities have drone bans</li>
-        </ul>
-    </div>
-
-    <div class="region-box">
-        <h3>🇦🇺 Australia / New Zealand</h3>
-        <p><strong>Australia:</strong> CASA rules — register if &gt;250g</p>
-        <ul>
-            <li>Stay below 120m</li>
-            <li>Keep line of sight</li>
-            <li>Avoid national parks without permit</li>
-        </ul>
-        <p><strong>New Zealand:</strong> Similar to Australia</p>
-        <ul>
-            <li>No flights over people</li>
-            <li>Keep below 120m</li>
-            <li>Respect Māori cultural sites</li>
-        </ul>
-    </div>
-
-    <div class="region-box">
-        <h3>🇦🇪 Middle East (UAE, Saudi Arabia)</h3>
-        <p><strong>UAE:</strong> Registration required, permit needed</p>
-        <ul>
-            <li>No flights over "sensitive" areas</li>
-            <li>Heavy fines for violations</li>
-            <li>Ramadan restrictions</li>
-        </ul>
-    </div>
-
-    <h2>Recommended Drones for Travelers</h2>
-
-    <div class="table-wrap">
-        <table>
-            <thead>
-                <tr>
-                    <th>Drone</th>
-                    <th>Weight</th>
-                    <th>Registration Required?</th>
-                    <th>Best For</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>DJI Mini 4 Pro</strong></td>
-                    <td>249g</td>
-                    <td>Not required (in most countries)</td>
-                    <td>Most travelers — sub-250g</td>
-                </tr>
-                <tr>
-                    <td><strong>DJI Air 3</strong></td>
-                    <td>720g</td>
-                    <td>Required</td>
-                    <td>Prosumers, high quality</td>
-                </tr>
-                <tr>
-                    <td><strong>Insta360 X5</strong></td>
-                    <td>~200g</td>
-                    <td>Often not required</td>
-                    <td>360 capture, reframing</td>
-                </tr>
-                <tr>
-                    <td><strong>Skydio 2+</strong></td>
-                    <td>775g</td>
-                    <td>Required</td>
-                    <td>Autonomous tracking, adventure</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <h2>Pro Tips for Drone Travel</h2>
-    <ul>
-        <li>Always carry <strong>proof of registration</strong> (printed and digital)</li>
-        <li>Download <strong>offline maps</strong> of drone-restricted zones</li>
-        <li>Check <strong>weather conditions</strong> before flying</li>
-        <li><strong>Insurance:</strong> Consider liability insurance (some countries require it)</li>
-        <li><strong>Safety:</strong> Never fly over crowds, airports, or sensitive sites</li>
-        <li><strong>Weight:</strong> Sub-250g drones are the safest for hassle-free travel</li>
-    </ul>
-
-    <div class="pro-tip">
-        <strong>Pro Tip:</strong> "The DJI Mini 4 Pro is the ultimate travel drone — it's under 250g, so it's exempt from many country's registration requirements."
-    </div>
-
-    <div class="cta-box">
-        <strong>✈️ Planning to fly a drone abroad?</strong> <a href="https://www.amazon.com/s?k=dji+mini+4+pro&tag=holidaycamera-20" target="_blank" rel="nofollow sponsored">Shop the DJI Mini 4 Pro on Amazon →</a> | <a href="/destinations/best-cameras-city-breaks.html">See our city break camera guide →</a>
-    </div>
-
-    <hr>
-
-    <p style="font-size:0.9em; color:#666;"><strong>Related Guides:</strong> <a href="/destinations/best-cameras-city-breaks.html">Best Cameras for City Breaks</a> | <a href="/guides/travel-camera-checklist-2026.html">Ultimate Travel Camera Checklist</a></p>
-
+<div class="cta-box">
+<strong>✈️ Planning to fly a drone abroad?</strong> <a href="https://www.amazon.com/s?k=dji+mini+4+pro&amp;tag=holidaycamera-20" rel="nofollow sponsored" target="_blank">Shop the DJI Mini 4 Pro on Amazon →</a> | <a href="/destinations/best-cameras-city-breaks.html">See our city break camera guide →</a>
+</div>
+<hr/>
+<p style="font-size:0.9em; color:#666;"><strong>Related Guides:</strong> <a href="/destinations/best-cameras-city-breaks.html">Best Cameras for City Breaks</a> | <a href="/guides/travel-camera-checklist-2026.html">Ultimate Travel Camera Checklist</a></p>
 </div><!-- /content -->
-
-
-
 <footer class="site-footer">
-  <div class="footer-container">
-    <section class="footer-section"><h4>Series</h4><ul><li><a href="/city-through-the-lens/">City Through the Lens</a></li><li><a href="/city-through-the-lens/#faq">Series FAQ</a></li></ul></section>
-    <section class="footer-section"><h4>Guides</h4><ul><li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li><li><a href="/guides/best-budget-holiday-camera-under-500.html">Cameras Under $500</a></li><li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li><li><a href="/guides/best-camera-hiking-holidays.html">Hiking Cameras</a></li></ul></section>
-    <section class="footer-section"><h4>Reviews</h4><ul><li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li><li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li><li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li></ul></section>
-    <section class="footer-section"><h4>About</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/">Home</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></section>
-  </div>
-  <div class="footer-bottom"><p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p></div>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<h3>📹 Holiday Video Camera</h3>
+<p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
+<form action="#" aria-label="Newsletter signup" class="footer-newsletter" method="post">
+<label class="visually-hidden" for="footerEmail">Email address</label>
+<input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="footer-cols" style="padding-top:44px;">
+<div>
+<h4>Top Guides</h4>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
+<li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
+</ul>
+</div>
+<div>
+<h4>Popular Reviews</h4>
+<ul>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div>
+<h4>Destinations</h4>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+</ul>
+</div>
+<div>
+<h4>How-To</h4>
+<ul>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div>
+<h4>About</h4>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="footer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
+<div class="footer-bottom">
+<p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+</div>
+</div>
 </footer>
-<script src="/assets/site-shell.js" defer></script>
-
+<script defer="" src="/assets/site-shell.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.querySelector('.mobile-menu-toggle');

@@ -1,483 +1,390 @@
 <!DOCTYPE html>
 <html lang="ja-JP">
-<head>
-    <link rel="stylesheet" href="/assets/design-b.css">
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>旅行動画のマルチカメラ編集＆同期 完全ガイド【日本版】</title>
-    <meta name="description" content="「京都の紅葉を、GoProとミラーレスとスマホで撮ったけど、どうやって1本の動画にすればいいの？」——そんな悩みを持つ方は多いはずです。私自身、北海道の雪まつりから沖縄の離島まで、毎回2〜4台のカメラを持ち歩いて旅動画を制作してきました。この記事では、日本国内で手に入る機材を使い、旅行先で撮影した複数カメラの...">
-    <meta name="author" content="Dawid Millenium">
-    <link rel="canonical" href="https://dawidmillenium-design.github.io/ja-JP/hikaku/multi-camera-editing-&-sync-for-travel.html">
-    
-    <!-- Hreflang Tags for Multi-Language SEO -->
-<link rel="alternate" hreflang="en-us" href="https://dawidmillenium-design.github.io/comparisons/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="es-es" href="https://dawidmillenium-design.github.io/es-ES/comparaciones/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="fr-fr" href="https://dawidmillenium-design.github.io/fr-FR/comparaisons/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="de-de" href="https://dawidmillenium-design.github.io/de-DE/vergleiche/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="ja-jp" href="https://dawidmillenium-design.github.io/ja-JP/hikaku/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="ko-kr" href="https://dawidmillenium-design.github.io/ko-KR/bigyo/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="zh-cn" href="https://dawidmillenium-design.github.io/zh-CN/bijiao/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="pl-pl" href="https://dawidmillenium-design.github.io/pl-PL/porownania/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="th-th" href="https://dawidmillenium-design.github.io/th-TH/khiebthieb/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="it-it" href="https://dawidmillenium-design.github.io/it-IT/confronti/multi-camera-editing-&-sync-for-travel.html">
-    <link rel="alternate" hreflang="x-default" href="https://dawidmillenium-design.github.io/comparisons/multi-camera-editing-&-sync-for-travel.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="旅行動画のマルチカメラ編集＆同期 完全ガイド【日本版】">
-    <meta property="og:description" content="「京都の紅葉を、GoProとミラーレスとスマホで撮ったけど、どうやって1本の動画にすればいいの？」——そんな悩みを持つ方は多いはずです。私自身、北海道の雪まつりから沖縄の離島まで、毎回2〜4台のカメラを持ち歩いて旅動画を制作してきました。この記事では、日本国内で手に入る機材を使い、旅行先で撮影した複数カメラの...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://dawidmillenium-design.github.io/ja-JP/hikaku/multi-camera-editing-&-sync-for-travel.html">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="article:published_time" content="2026-09-10">
-    <meta property="article:author" content="Dawid Millenium">
-    
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "旅行動画のマルチカメラ編集＆同期 完全ガイド【日本版】",
-    "description": "「京都の紅葉を、GoProとミラーレスとスマホで撮ったけど、どうやって1本の動画にすればいいの？」——そんな悩みを持つ方は多いはずです。私自身、北海道の雪まつりから沖縄の離島まで、毎回2〜4台のカメラを持ち歩いて旅動画を制作してきました。この記事では、日本国内で手に入る機材を使い、旅行先で撮影した複数カメラの...",
-    "inLanguage": "ja-JP",
-    "author": {
-        "@type": "Person",
-        "name": "Dawid Millenium",
-        "url": "https://dawidmillenium-design.github.io/about.html"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "VideoCameraHoliday",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://dawidmillenium-design.github.io/logo.png"
-        }
-    },
-    "datePublished": "2026-09-10",
-    "dateModified": "2026-09-10",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://dawidmillenium-design.github.io/ja-JP/hikaku/multi-camera-editing-&-sync-for-travel.html"
-    }
-}
-    </script>
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="「京都の紅葉を、GoProとミラーレスとスマホで撮ったけど、どうやって1本の動画にすればいいの？」——そんな悩みを持つ方は多いはずです。私自身、北海道の雪まつりから沖縄の離島まで、毎回2〜4台のカメラを持ち歩いて旅動画を制作してきました。この記事では、日本国内で手に入る機材を使い、旅行先で撮影した複数カメラの..." name="description"/>
+<title>旅行動画のマルチカメラ編集＆同期 完全ガイド【日本版】</title>
+<link href="/assets/design-b.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header class="site-header">
-    <div class="site-header-inner">
-        <a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
-        <nav class="header-nav" aria-label="Primary quick links">
-            <a href="/reviews/">Reviews</a>
-            <a href="/guides/">Guides</a>
-            <a href="/destinations/">Destinations</a>
-            <a href="/how-to/">How-To</a>
-            <a href="/about/">About</a>
-        </nav>
-        <div class="header-actions">
-            <button type="button" class="icon-btn" aria-label="Search" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-            <button type="button" class="drawer-toggle" id="drawerToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                <span>Menu</span>
-            </button>
-        </div>
-    </div>
+<div class="site-header-inner">
+<a class="site-brand" href="/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
+<nav aria-label="Primary quick links" class="header-nav">
+<a href="/reviews/">Reviews</a>
+<a href="/guides/">Guides</a>
+<a href="/destinations/">Destinations</a>
+<a href="/how-to/">How-To</a>
+<a href="/about/">About</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Search" class="icon-btn" onclick="if(typeof openDrawerToSearch==='function'){openDrawerToSearch();}" type="button">
+<svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+<button aria-controls="siteDrawer" aria-expanded="false" aria-label="Open menu" class="drawer-toggle" id="drawerToggle" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+<span>Menu</span>
+</button>
+</div>
+</div>
 </header>
-
-<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
-
-<aside class="drawer" id="siteDrawer" aria-label="Main menu" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="drawer-head">
-        <span class="title">Menu</span>
-        <button type="button" class="drawer-close" id="drawerClose" aria-label="Close menu">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-    </div>
-    <div class="drawer-search">
-        <label for="drawerSearchInput" class="visually-hidden">Search the site</label>
-        <input type="search" id="drawerSearchInput" placeholder="Search cameras, cities, guides…" autocomplete="off">
-    </div>
-    <div class="drawer-tabs" id="drawerTabs" role="tablist" aria-label="Menu categories">
-        <button type="button" role="tab" data-tab="reviews" aria-selected="true" class="is-active">Reviews</button>
-        <button type="button" role="tab" data-tab="guides" aria-selected="false">Guides</button>
-        <button type="button" role="tab" data-tab="destinations" aria-selected="false">Destinations</button>
-        <button type="button" role="tab" data-tab="howto" aria-selected="false">How-To</button>
-        <button type="button" role="tab" data-tab="editing" aria-selected="false">Editing</button>
-        <button type="button" role="tab" data-tab="compare" aria-selected="false">Compare</button>
-        <button type="button" role="tab" data-tab="city" aria-selected="false">City Series</button>
-        <button type="button" role="tab" data-tab="about" aria-selected="false">About</button>
-    </div>
-    <div class="drawer-body">
-        <div class="drawer-panel is-active" data-panel="reviews" role="tabpanel">
-            <h5>Gimbal Cameras</h5>
-            <ul>
-                <li><a href="/reviews/dji-osmo-action-5-review.html">DJI Osmo Action 5</a></li>
-                <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
-                <li><a href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4 Pro</a></li>
-                <li><a href="/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Roundup</a></li>
-            </ul>
-            <h5>Action Cameras</h5>
-            <ul>
-                <li><a href="/reviews/dji-osmo-action-6-review.html">DJI Osmo Action 6</a></li>
-                <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                <li><a href="/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S</a></li>
-                <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
-            </ul>
-            <h5>Vlogging &amp; Mirrorless</h5>
-            <ul>
-                <li><a href="/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50 V</a></li>
-                <li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
-                <li><a href="/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
-                <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="guides" role="tabpanel">
-            <h5>Buying Guides</h5>
-            <ul>
-                <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
-                <li><a href="/guides/best-budget-holiday-camera-under-500.html">Best Under $500</a></li>
-                <li><a href="/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
-                <li><a href="/guides/best-compact-cameras-travel-2026.html">Best Compact Cameras</a></li>
-                <li><a href="/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
-            </ul>
-            <h5>Planning &amp; Tips</h5>
-            <ul>
-                <li><a href="/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
-                <li><a href="/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="destinations" role="tabpanel">
-            <h5>Beach &amp; Water</h5>
-            <ul>
-                <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                <li><a href="/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
-                <li><a href="/destinations/maldives-camera-guide.html">Maldives</a></li>
-                <li><a href="/destinations/thailand-island-camera-guide.html">Thailand Islands</a></li>
-            </ul>
-            <h5>Adventure</h5>
-            <ul>
-                <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                <li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
-                <li><a href="/destinations/vietnam-motorbike-camera-guide.html">Vietnam Motorbike</a></li>
-            </ul>
-            <h5>City Breaks</h5>
-            <ul>
-                <li><a href="/destinations/bangkok-camera-guide.html">Bangkok</a></li>
-                <li><a href="/destinations/kyoto-camera-guide.html">Kyoto</a></li>
-                <li><a href="/destinations/santorini-camera-guide.html">Santorini</a></li>
-                <li><a href="/destinations/sydney-camera-guide.html">Sydney</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="howto" role="tabpanel">
-            <h5>Filming Techniques</h5>
-            <ul>
-                <li><a href="/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
-                <li><a href="/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
-                <li><a href="/how-to/film-in-rain-protect-gear.html">Film In Rain</a></li>
-                <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-            </ul>
-            <h5>Technical Skills</h5>
-            <ul>
-                <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Cards</a></li>
-                <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
-                <li><a href="/how-to/vertical-video-settings-travel.html">Vertical Video Settings</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="editing" role="tabpanel">
-            <h5>Editing</h5>
-            <ul>
-                <li><a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
-                <li><a href="/editing/post-travel-videos-youtube.html">Post To YouTube</a></li>
-                <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="compare" role="tabpanel">
-            <h5>Head-to-Head</h5>
-            <ul>
-                <li><a href="/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
-                <li><a href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
-                <li><a href="/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">Hero 13 vs ZV-1 II</a></li>
-                <li><a href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
-                <li><a href="/comparisons/powershot-v1-vs-zv-1-ii.html">PowerShot V1 vs ZV-1 II</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="city" role="tabpanel">
-            <h5>City Through the Lens</h5>
-            <ul>
-                <li><a href="/city-through-the-lens/">Series Home</a></li>
-                <li><a href="/city-through-the-lens/#faq">Series FAQ</a></li>
-            </ul>
-        </div>
-        <div class="drawer-panel" data-panel="about" role="tabpanel">
-            <h5>About</h5>
-            <ul>
-                <li><a href="/about/">About Us</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Service</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/sitemap.xml">Sitemap</a></li>
-            </ul>
-        </div>
-    </div>
-    <nav class="drawer-langs" aria-label="Language versions">
-        <a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
-        <a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
-        <a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
-        <a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
-        <a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
-        <a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
-        <a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
-        <a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
-        <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
-        <a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
-        <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
-    </nav>
+<div aria-hidden="true" class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside aria-hidden="true" aria-label="Main menu" aria-modal="true" class="drawer" id="siteDrawer" role="dialog">
+<div class="drawer-head">
+<span class="title">Menu</span>
+<button aria-label="Close menu" class="drawer-close" id="drawerClose" type="button">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24" width="16"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+</div>
+<div class="drawer-search">
+<label class="visually-hidden" for="drawerSearchInput">Search the site</label>
+<input autocomplete="off" id="drawerSearchInput" placeholder="Search cameras, cities, guides…" type="search"/>
+</div>
+<div aria-label="Menu categories" class="drawer-tabs" id="drawerTabs" role="tablist">
+<button aria-selected="true" class="is-active" data-tab="reviews" role="tab" type="button">Reviews</button>
+<button aria-selected="false" data-tab="guides" role="tab" type="button">Guides</button>
+<button aria-selected="false" data-tab="destinations" role="tab" type="button">Destinations</button>
+<button aria-selected="false" data-tab="howto" role="tab" type="button">How-To</button>
+<button aria-selected="false" data-tab="editing" role="tab" type="button">Editing</button>
+<button aria-selected="false" data-tab="compare" role="tab" type="button">Compare</button>
+<button aria-selected="false" data-tab="city" role="tab" type="button">City Series</button>
+<button aria-selected="false" data-tab="about" role="tab" type="button">About</button>
+</div>
+<div class="drawer-body">
+<div class="drawer-panel is-active" data-panel="reviews" role="tabpanel">
+<h5>Gimbal Cameras</h5>
+<ul>
+<li><a href="/reviews/dji-osmo-action-5-review.html">DJI Osmo Action 5</a></li>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a></li>
+<li><a href="/reviews/dji-osmo-pocket-4p-review.html">DJI Osmo Pocket 4 Pro</a></li>
+<li><a href="/reviews/pocket-cinema-cameras-2026-roundup.html">Pocket Cinema Roundup</a></li>
+</ul>
+<h5>Action Cameras</h5>
+<ul>
+<li><a href="/reviews/dji-osmo-action-6-review.html">DJI Osmo Action 6</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-go-3s-hands-free-review.html">Insta360 Go 3S</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+</ul>
+<h5>Vlogging &amp; Mirrorless</h5>
+<ul>
+<li><a href="/reviews/canon-eos-r50-v-creator-kit-review.html">Canon EOS R50 V</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="guides" role="tabpanel">
+<h5>Buying Guides</h5>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Best Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Best Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Best Compact Cameras</a></li>
+<li><a href="/guides/best-vlogging-cameras-travel-2026.html">Best Vlogging Cameras</a></li>
+</ul>
+<h5>Planning &amp; Tips</h5>
+<ul>
+<li><a href="/guides/camera-gifts-for-travelers.html">Camera Gifts For Travelers</a></li>
+<li><a href="/guides/travel-camera-checklist-2026.html">Travel Camera Checklist</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="destinations" role="tabpanel">
+<h5>Beach &amp; Water</h5>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater Guide</a></li>
+<li><a href="/destinations/maldives-camera-guide.html">Maldives</a></li>
+<li><a href="/destinations/thailand-island-camera-guide.html">Thailand Islands</a></li>
+</ul>
+<h5>Adventure</h5>
+<ul>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+<li><a href="/destinations/vietnam-motorbike-camera-guide.html">Vietnam Motorbike</a></li>
+</ul>
+<h5>City Breaks</h5>
+<ul>
+<li><a href="/destinations/bangkok-camera-guide.html">Bangkok</a></li>
+<li><a href="/destinations/kyoto-camera-guide.html">Kyoto</a></li>
+<li><a href="/destinations/santorini-camera-guide.html">Santorini</a></li>
+<li><a href="/destinations/sydney-camera-guide.html">Sydney</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="howto" role="tabpanel">
+<h5>Filming Techniques</h5>
+<ul>
+<li><a href="/how-to/film-better-holiday-videos.html">Film Better Holiday Videos</a></li>
+<li><a href="/how-to/film-in-harsh-sunlight.html">Film In Harsh Sunlight</a></li>
+<li><a href="/how-to/film-in-rain-protect-gear.html">Film In Rain</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+</ul>
+<h5>Technical Skills</h5>
+<ul>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Cards</a></li>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/vertical-video-settings-travel.html">Vertical Video Settings</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="editing" role="tabpanel">
+<h5>Editing</h5>
+<ul>
+<li><a href="/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
+<li><a href="/editing/post-travel-videos-youtube.html">Post To YouTube</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="compare" role="tabpanel">
+<h5>Head-to-Head</h5>
+<ul>
+<li><a href="/comparisons/action-camera-vs-gimbal-camera.html">Action vs Gimbal</a></li>
+<li><a href="/comparisons/dji-pocket-3-vs-gopro-hero-13.html">Pocket 3 vs Hero 13</a></li>
+<li><a href="/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">Hero 13 vs ZV-1 II</a></li>
+<li><a href="/comparisons/iphone-16-pro-vs-dedicated-camera.html">iPhone vs Dedicated</a></li>
+<li><a href="/comparisons/powershot-v1-vs-zv-1-ii.html">PowerShot V1 vs ZV-1 II</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="city" role="tabpanel">
+<h5>City Through the Lens</h5>
+<ul>
+<li><a href="/city-through-the-lens/">Series Home</a></li>
+<li><a href="/city-through-the-lens/#faq">Series FAQ</a></li>
+</ul>
+</div>
+<div class="drawer-panel" data-panel="about" role="tabpanel">
+<h5>About</h5>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="drawer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
 </aside>
-
 <main>
-        
-
 <p>「京都の紅葉を、GoProとミラーレスとスマホで撮ったけど、どうやって1本の動画にすればいいの？」——そんな悩みを持つ方は多いはずです。私自身、北海道の雪まつりから沖縄の離島まで、毎回2〜4台のカメラを持ち歩いて旅動画を制作してきました。この記事では、日本国内で手に入る機材を使い、旅行先で撮影した複数カメラの映像を正しく同期させ、テンポよく編集する手順を、実体験ベースで徹底解説します。</p>
-
 <h2>この記事で分かること</h2>
 <ul>
-  <li>マルチカメラ編集の基本概念と、旅行動画に向いている理由</li>
-  <li>撮影前の準備（同期のための下ごしらえ）</li>
-  <li>編集ソフト別の同期手順（Premiere Pro / Final Cut Pro / DaVinci Resolve / CapCut）</li>
-  <li>日本で買えるおすすめ機材</li>
-  <li>よくある失敗とトラブルシューティング</li>
+<li>マルチカメラ編集の基本概念と、旅行動画に向いている理由</li>
+<li>撮影前の準備（同期のための下ごしらえ）</li>
+<li>編集ソフト別の同期手順（Premiere Pro / Final Cut Pro / DaVinci Resolve / CapCut）</li>
+<li>日本で買えるおすすめ機材</li>
+<li>よくある失敗とトラブルシューティング</li>
 </ul>
-
 <h2>前提条件（Prerequisites）</h2>
-
 <p>作業を始める前に、以下を確認してください。すべて揃っていなくても進められますが、あると格段に楽になります。</p>
-
 <ul>
-  <li><strong>PC環境</strong>：メモリ16GB以上、SSD空き容量100GB以上を推奨。4Kマルチカメラは特に負荷が高いです。</li>
-  <li><strong>編集ソフト</strong>：Adobe Premiere Pro、Final Cut Pro、DaVinci Resolve（無料版あり）、CapCut（無料）のいずれか。</li>
-  <li><strong>素材</strong>：複数カメラで撮影した動画ファイル。可能なら同じフレームレートで撮影したもの。</li>
-  <li><strong>外部ストレージ</strong>：撮影素材のバックアップ用。旅行中はSDカードの二重化が安心です。</li>
-  <li><strong>同期用の手がかり</strong>：手拍子、カチンコ、または「せーの」の声など。</li>
+<li><strong>PC環境</strong>：メモリ16GB以上、SSD空き容量100GB以上を推奨。4Kマルチカメラは特に負荷が高いです。</li>
+<li><strong>編集ソフト</strong>：Adobe Premiere Pro、Final Cut Pro、DaVinci Resolve（無料版あり）、CapCut（無料）のいずれか。</li>
+<li><strong>素材</strong>：複数カメラで撮影した動画ファイル。可能なら同じフレームレートで撮影したもの。</li>
+<li><strong>外部ストレージ</strong>：撮影素材のバックアップ用。旅行中はSDカードの二重化が安心です。</li>
+<li><strong>同期用の手がかり</strong>：手拍子、カチンコ、または「せーの」の声など。</li>
 </ul>
-
 <h2>マルチカメラ編集とは？旅行動画に向く理由</h2>
-
 <p>マルチカメラ編集とは、同じ瞬間を複数アングルで撮影した映像を、時間軸を揃えて切り替えながら編集する手法です。旅行動画では特に威力を発揮します。たとえば東京・浅草の仲見世通りを歩くシーンなら、正面のミラーレス、胸元のアクションカム、手元のスマホの3台を切り替えるだけで、単調な散歩映像が一気にドキュメンタリータッチになります。</p>
-
 <p>私が金沢の兼六園で撮影した際は、三脚固定の広角カメラ＋手持ちの望遠＋GoProの3台体制にしました。同期さえ取れていれば、紅葉のアップから全景へ自然に切り替えられ、視聴者の没入感が大きく変わります。</p>
-
 <h2>マルチカメラ編集＆同期の手順</h2>
-
 <ol>
-  <li>
-    <h3>ステップ1：撮影前に「同期の合図」を必ず入れる</h3>
-    <p>これが最も重要です。各カメラの撮影開始時、全カメラの前で<strong>大きく手を1回叩く</strong>か、<strong>「せーの」と声を出す</strong>習慣をつけてください。私は京都の伏見稲荷大社で、千本鳥居に入る直前に必ず手拍子を1回入れています。この瞬間が、編集時の波形同期の基準点になります。</p>
-    <p>ポイント：手拍子はカメラのマイクに均等に届くよう、全カメラの中央で行いましょう。風が強い日は声よりも手拍子が有効です。</p>
-  </li>
-
-  <li>
-    <h3>ステップ2：フレームレートと解像度を可能な限り統一する</h3>
-    <p>旅行中は完璧に揃えるのが難しいですが、せめて<strong>フレームレート（24p / 30p / 60p）</strong>は揃えると編集が楽です。ミラーレスは4K 30p、GoProは4K 30p、スマホも4K 30pに設定しておくと、タイムライン上でのズレが減ります。</p>
-    <p>60pで撮った映像を30pのタイムラインに載せる場合は、スローモーションとして活用する手もあります。沖縄の波打ち際を60pで撮っておくと、後から美しいスロー表現が作れます。</p>
-  </li>
-
-  <li>
-    <h3>ステップ3：素材をPCに取り込み、整理する</h3>
-    <p>撮影後は、カメラごとにフォルダを分けて取り込みます。例：</p>
-    <ul>
-      <li>CAM_A_ミラーレス</li>
-      <li>CAM_B_GoPro</li>
-      <li>CAM_C_スマホ</li>
-    </ul>
-    <p>ファイル名は撮影日時順に並ぶよう、そのまま維持するのがおすすめです。日本のカメラはファイル名が連番になっていることが多く、時系列整理に便利です。</p>
-  </li>
-
-  <li>
-    <h3>ステップ4：編集ソフトでマルチカメラシーケンスを作成する</h3>
-    <p>ここからはソフト別に解説します。</p>
-
-    <h4>Premiere Proの場合</h4>
-    <ol>
-      <li>プロジェクトに全素材を読み込みます。</li>
-      <li>同期させたいクリップをすべて選択します。</li>
-      <li>右クリック →「マルチカメラソースシーケンスを作成」を選択。</li>
-      <li>同期方法で「オーディオ」を選ぶと、先ほどの手拍子の波形で自動同期されます。</li>
-      <li>作成されたシーケンスをタイムラインにドラッグし、再生しながらカメラを切り替えます。</li>
-    </ol>
-
-    <h4>Final Cut Proの場合</h4>
-    <ol>
-      <li>ブラウザで全クリップを選択します。</li>
-      <li>右クリック →「新しいマルチカムクリップ」を選択。</li>
-      <li>「角度を自動的に作成」にチェック。同期は「オーディオを使用」を選びます。</li>
-      <li>タイムラインに配置し、カットポイントで角度を切り替えます。</li>
-    </ol>
-
-    <h4>DaVinci Resolveの場合（無料版でOK）</h4>
-    <ol>
-      <li>メディアプールで全クリップを選択します。</li>
-      <li>右クリック →「新しいマルチカムクリップを作成」→「タイムコードを使用」または「サウンドを使用」。</li>
-      <li>タイムラインにドラッグし、カットページで切り替えます。</li>
-    </ol>
-
-    <h4>CapCutの場合（スマホ・PC両対応）</h4>
-    <ol>
-      <li>新規プロジェクトを作成し、全動画を読み込みます。</li>
-      <li>すべてのクリップを選択し、「同期」機能があれば利用します（バージョンにより異なります）。</li>
-      <li>手動の場合は、手拍子の波形を目印にクリップの開始位置を揃えます。</li>
-    </ol>
-  </li>
-
-  <li>
-    <h3>ステップ5：波形を見ながら微調整する</h3>
-    <p>自動同期は完璧ではありません。特に風切り音や周囲の雑音が多い日本の観光地では、ズレが生じることがあります。タイムラインを拡大し、手拍子の波形のピークが全トラックで縦に揃っているか確認しましょう。ズレていたら、数フレーム単位でクリップを前後に動かして調整します。</p>
-  </li>
-
-  <li>
-    <h3>ステップ6：カメラを切り替えてテンポよく編集する</h3>
-    <p>同期が取れたら、あとは切り替えです。コツは以下の通りです。</p>
-    <ul>
-      <li>1カットは2〜5秒を目安に。長すぎると退屈になります。</li>
-      <li>動作の途中で切ると自然につながります（例：鳥居をくぐる瞬間）。</li>
-      <li>会話や環境音の区切りで切り替えると滑らかです。</li>
-    </ul>
-    <p>私は大阪・道頓堀のグリコ看板前で、広角→望遠→手持ちの順に切り替え、3秒以内でテンポよく見せるようにしています。</p>
-  </li>
-
-  <li>
-    <h3>ステップ7：音声を整えて書き出す</h3>
-    <p>最後に、複数カメラの音声が混ざって不自然にならないよう、メイン音声を1つ選び、他はミュートまたは小さくします。BGMは旅行の雰囲気に合わせて選びましょう。書き出し設定は、YouTubeなら4K 30p、ビットレートは40〜60Mbpsが目安です。</p>
-  </li>
-</ol>
-
-<h2>日本で買えるおすすめ機材</h2>
-
+<li>
+<h3>ステップ1：撮影前に「同期の合図」を必ず入れる</h3>
+<p>これが最も重要です。各カメラの撮影開始時、全カメラの前で<strong>大きく手を1回叩く</strong>か、<strong>「せーの」と声を出す</strong>習慣をつけてください。私は京都の伏見稲荷大社で、千本鳥居に入る直前に必ず手拍子を1回入れています。この瞬間が、編集時の波形同期の基準点になります。</p>
+<p>ポイント：手拍子はカメラのマイクに均等に届くよう、全カメラの中央で行いましょう。風が強い日は声よりも手拍子が有効です。</p>
+</li>
+<li>
+<h3>ステップ2：フレームレートと解像度を可能な限り統一する</h3>
+<p>旅行中は完璧に揃えるのが難しいですが、せめて<strong>フレームレート（24p / 30p / 60p）</strong>は揃えると編集が楽です。ミラーレスは4K 30p、GoProは4K 30p、スマホも4K 30pに設定しておくと、タイムライン上でのズレが減ります。</p>
+<p>60pで撮った映像を30pのタイムラインに載せる場合は、スローモーションとして活用する手もあります。沖縄の波打ち際を60pで撮っておくと、後から美しいスロー表現が作れます。</p>
+</li>
+<li>
+<h3>ステップ3：素材をPCに取り込み、整理する</h3>
+<p>撮影後は、カメラごとにフォルダを分けて取り込みます。例：</p>
 <ul>
-  <li><strong>GoPro HERO12 Black</strong>：手ぶれ補正が強力で、自転車旅や海辺の撮影に最適。全国の家電量販店で購入可能。</li>
-  <li><strong>Sony α7C II</strong>：軽量フルサイズで旅行向き。京都や奈良の街歩きに。</li>
-  <li><strong>DJI Osmo Pocket 3</strong>：ジンバル内蔵で歩き撮りが安定。狭い路地でも扱いやすい。</li>
-  <li><strong>SanDisk Extreme PRO SDカード</strong>：4K撮影に必須。ヨドバシカメラやビックカメラで購入できます。</li>
-  <li><strong>Anker PowerCore</strong>：長時間撮影のモバイルバッテリー。新幹線移動中の充電に便利。</li>
+<li>CAM_A_ミラーレス</li>
+<li>CAM_B_GoPro</li>
+<li>CAM_C_スマホ</li>
 </ul>
-
+<p>ファイル名は撮影日時順に並ぶよう、そのまま維持するのがおすすめです。日本のカメラはファイル名が連番になっていることが多く、時系列整理に便利です。</p>
+</li>
+<li>
+<h3>ステップ4：編集ソフトでマルチカメラシーケンスを作成する</h3>
+<p>ここからはソフト別に解説します。</p>
+<h4>Premiere Proの場合</h4>
+<ol>
+<li>プロジェクトに全素材を読み込みます。</li>
+<li>同期させたいクリップをすべて選択します。</li>
+<li>右クリック →「マルチカメラソースシーケンスを作成」を選択。</li>
+<li>同期方法で「オーディオ」を選ぶと、先ほどの手拍子の波形で自動同期されます。</li>
+<li>作成されたシーケンスをタイムラインにドラッグし、再生しながらカメラを切り替えます。</li>
+</ol>
+<h4>Final Cut Proの場合</h4>
+<ol>
+<li>ブラウザで全クリップを選択します。</li>
+<li>右クリック →「新しいマルチカムクリップ」を選択。</li>
+<li>「角度を自動的に作成」にチェック。同期は「オーディオを使用」を選びます。</li>
+<li>タイムラインに配置し、カットポイントで角度を切り替えます。</li>
+</ol>
+<h4>DaVinci Resolveの場合（無料版でOK）</h4>
+<ol>
+<li>メディアプールで全クリップを選択します。</li>
+<li>右クリック →「新しいマルチカムクリップを作成」→「タイムコードを使用」または「サウンドを使用」。</li>
+<li>タイムラインにドラッグし、カットページで切り替えます。</li>
+</ol>
+<h4>CapCutの場合（スマホ・PC両対応）</h4>
+<ol>
+<li>新規プロジェクトを作成し、全動画を読み込みます。</li>
+<li>すべてのクリップを選択し、「同期」機能があれば利用します（バージョンにより異なります）。</li>
+<li>手動の場合は、手拍子の波形を目印にクリップの開始位置を揃えます。</li>
+</ol>
+</li>
+<li>
+<h3>ステップ5：波形を見ながら微調整する</h3>
+<p>自動同期は完璧ではありません。特に風切り音や周囲の雑音が多い日本の観光地では、ズレが生じることがあります。タイムラインを拡大し、手拍子の波形のピークが全トラックで縦に揃っているか確認しましょう。ズレていたら、数フレーム単位でクリップを前後に動かして調整します。</p>
+</li>
+<li>
+<h3>ステップ6：カメラを切り替えてテンポよく編集する</h3>
+<p>同期が取れたら、あとは切り替えです。コツは以下の通りです。</p>
+<ul>
+<li>1カットは2〜5秒を目安に。長すぎると退屈になります。</li>
+<li>動作の途中で切ると自然につながります（例：鳥居をくぐる瞬間）。</li>
+<li>会話や環境音の区切りで切り替えると滑らかです。</li>
+</ul>
+<p>私は大阪・道頓堀のグリコ看板前で、広角→望遠→手持ちの順に切り替え、3秒以内でテンポよく見せるようにしています。</p>
+</li>
+<li>
+<h3>ステップ7：音声を整えて書き出す</h3>
+<p>最後に、複数カメラの音声が混ざって不自然にならないよう、メイン音声を1つ選び、他はミュートまたは小さくします。BGMは旅行の雰囲気に合わせて選びましょう。書き出し設定は、YouTubeなら4K 30p、ビットレートは40〜60Mbpsが目安です。</p>
+</li>
+</ol>
+<h2>日本で買えるおすすめ機材</h2>
+<ul>
+<li><strong>GoPro HERO12 Black</strong>：手ぶれ補正が強力で、自転車旅や海辺の撮影に最適。全国の家電量販店で購入可能。</li>
+<li><strong>Sony α7C II</strong>：軽量フルサイズで旅行向き。京都や奈良の街歩きに。</li>
+<li><strong>DJI Osmo Pocket 3</strong>：ジンバル内蔵で歩き撮りが安定。狭い路地でも扱いやすい。</li>
+<li><strong>SanDisk Extreme PRO SDカード</strong>：4K撮影に必須。ヨドバシカメラやビックカメラで購入できます。</li>
+<li><strong>Anker PowerCore</strong>：長時間撮影のモバイルバッテリー。新幹線移動中の充電に便利。</li>
+</ul>
 <h2>よくある失敗とトラブルシューティング</h2>
-
 <h3>失敗1：同期の合図を忘れた</h3>
 <p>対策：映像内の共通の動き（ドアが閉まる、手を振るなど）を目印に手動同期します。最悪の場合、音声を聞きながら耳で合わせることも可能です。</p>
-
 <h3>失敗2：フレームレートがバラバラ</h3>
 <p>対策：編集ソフトで自動的に変換されますが、カクつきが出ることがあります。可能なら撮影時に統一を。事後対応として、24p素材は24pタイムラインに合わせるのが無難です。</p>
-
 <h3>失敗3：カメラの時刻設定がズレている</h3>
 <p>対策：撮影前に全カメラの日時をスマホと合わせておきましょう。タイムコード同期が使えるソフトでは特に重要です。</p>
-
 <h3>失敗4：手ぶれで見づらい</h3>
 <p>対策：GoProやOsmo Pocket 3の手ぶれ補正を活用。編集時にソフトの手ぶれ補正を軽くかけるのも有効です。</p>
-
 <h3>失敗5：音声が片方しか録れていない</h3>
 <p>対策：外部マイクを使う場合、全カメラに同じ音を録るか、メイン音声を別録りしましょう。私はICレコーダーをポケットに入れ、後から同期することがあります。</p>
-
 <h2>まとめ：まずは2台から始めよう</h2>
-
 <p>マルチカメラ編集は難しそうに見えますが、<strong>手拍子1回</strong>と<strong>フレームレート統一</strong>さえ押さえれば、驚くほど簡単に始められます。最初はスマホ＋アクションカムの2台から挑戦してみてください。京都の竹林や沖縄のビーチなど、日本の美しい風景を多角的に切り取ることで、あなたの旅行動画は一段と魅力的になります。さあ、次の旅で早速試してみましょう。</p>
-    </main>
-
+</main>
 <footer class="site-footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <h3>📹 Holiday Video Camera</h3>
-                <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-                <form class="footer-newsletter" action="#" method="post" aria-label="Newsletter signup">
-                    <label for="footerEmail" class="visually-hidden">Email address</label>
-                    <input type="email" id="footerEmail" name="email" placeholder="your@email.com" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-cols" style="padding-top:44px;">
-            <div>
-                <h4>Top Guides</h4>
-                <ul>
-                    <li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
-                    <li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
-                    <li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
-                    <li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
-                    <li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Popular Reviews</h4>
-                <ul>
-                    <li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
-                    <li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
-                    <li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
-                    <li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
-                    <li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Destinations</h4>
-                <ul>
-                    <li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
-                    <li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
-                    <li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
-                    <li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
-                    <li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>How-To</h4>
-                <ul>
-                    <li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
-                    <li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
-                    <li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
-                    <li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
-                    <li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>About</h4>
-                <ul>
-                    <li><a href="/about/">About Us</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-        </div>
-        <nav class="footer-langs" aria-label="Language versions">
-            <a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
-            <a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
-            <a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
-            <a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
-            <a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
-            <a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
-            <a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
-            <a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
-            <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
-            <a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
-            <a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
-        </nav>
-        <div class="footer-bottom">
-            <p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
-        </div>
-    </div>
-</footer>
-
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
-    <div class="cookie-banner-inner">
-        <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/privacy.html">Privacy Policy</a>.</p>
-        <div class="cookie-banner-actions">
-            <button type="button" class="reject" id="cookieReject">Reject</button>
-            <button type="button" class="accept" id="cookieAccept">Accept All</button>
-        </div>
-    </div>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<h3>📹 Holiday Video Camera</h3>
+<p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
+<form action="#" aria-label="Newsletter signup" class="footer-newsletter" method="post">
+<label class="visually-hidden" for="footerEmail">Email address</label>
+<input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
 </div>
-
+</div>
+<div class="footer-cols" style="padding-top:44px;">
+<div>
+<h4>Top Guides</h4>
+<ul>
+<li><a href="/guides/best-holiday-video-cameras-2026.html">Best Cameras 2026</a></li>
+<li><a href="/guides/best-budget-holiday-camera-under-500.html">Under $500</a></li>
+<li><a href="/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+<li><a href="/guides/best-compact-cameras-travel-2026.html">Compact Travel</a></li>
+<li><a href="/guides/best-budget-travel-cameras-2026.html">Budget Hub</a></li>
+</ul>
+</div>
+<div>
+<h4>Popular Reviews</h4>
+<ul>
+<li><a href="/reviews/dji-osmo-pocket-3-review.html">DJI Pocket 3</a></li>
+<li><a href="/reviews/gopro-hero-13-review.html">GoPro Hero 13</a></li>
+<li><a href="/reviews/insta360-x5-review.html">Insta360 X5</a></li>
+<li><a href="/reviews/fujifilm-x100vi-travel-review.html">Fujifilm X100VI</a></li>
+<li><a href="/reviews/sony-zv-1-ii-review.html">Sony ZV-1 II</a></li>
+</ul>
+</div>
+<div>
+<h4>Destinations</h4>
+<ul>
+<li><a href="/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+<li><a href="/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+<li><a href="/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+<li><a href="/destinations/underwater-camera-guide.html">Underwater</a></li>
+<li><a href="/destinations/tanzania-safari-camera-guide.html">Tanzania Safari</a></li>
+</ul>
+</div>
+<div>
+<h4>How-To</h4>
+<ul>
+<li><a href="/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+<li><a href="/how-to/backup-travel-photos-videos.html">Backup Footage</a></li>
+<li><a href="/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+<li><a href="/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+<li><a href="/editing/color-grading-travel-videos.html">Color Grading</a></li>
+</ul>
+</div>
+<div>
+<h4>About</h4>
+<ul>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/terms.html">Terms of Service</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<nav aria-label="Language versions" class="footer-langs">
+<a href="/de-DE/" hreflang="de-DE" lang="de">Deutsch</a>
+<a href="/de/" hreflang="de" lang="de">DE (allg.)</a>
+<a href="/es-ES/" hreflang="es-ES" lang="es">Español</a>
+<a href="/fr-FR/" hreflang="fr-FR" lang="fr">Français</a>
+<a href="/it-IT/" hreflang="it-IT" lang="it">Italiano</a>
+<a href="/ja-JP/" hreflang="ja-JP" lang="ja">日本語</a>
+<a href="/ko-KR/" hreflang="ko-KR" lang="ko">한국어</a>
+<a href="/pl-PL/" hreflang="pl-PL" lang="pl">Polski</a>
+<a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a href="/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
+<a href="/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
+</nav>
+<div class="footer-bottom">
+<p>© 2026 <a href="/">Holiday Video Camera</a> — Real travel camera testing. No lab charts.</p>
+</div>
+</div>
+</footer>
+<div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
+<div class="cookie-banner-inner">
+<p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/privacy.html">Privacy Policy</a>.</p>
+<div class="cookie-banner-actions">
+<button class="reject" id="cookieReject" type="button">Reject</button>
+<button class="accept" id="cookieAccept" type="button">Accept All</button>
+</div>
+</div>
+</div>
 <script>
 (function(){
     'use strict';
@@ -596,6 +503,5 @@
     if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
 })();
 </script>
-
 </body>
 </html>
