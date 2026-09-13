@@ -1,176 +1,134 @@
 #!/usr/bin/env python3
 """
-Inject Design B header/footer/drawer into all HTML files in the repository.
-Uses marker-based replacement so it can be run multiple times safely.
-Fails if the template sections are empty to prevent silent corruption.
+Idempotent Design B injector.
+
+Reads templates/design-b-fragment.html, extracts the three marker-delimited
+sections, and splices them into every HTML file that does not already
+contain the DESIGN-B-HEADER-START marker.
+
+Key safety rules:
+  - Never calls soup.head.clear() or replace_with().
+  - Appends to <head>; inserts header at top of <body>; appends footer at end.
+  - Skips any file that already contains the marker.
+  - Excludes templates/ and build dirs.
 """
 
-import os
 import re
+import sys
 from pathlib import Path
+from bs4 import BeautifulSoup
 
-REPO_ROOT = Path(__file__).parent.parent
-TEMPLATE_FILE = REPO_ROOT / "templates" / "design-b.html"
-EXCLUDE_DIRS = {
-    ".git", "node_modules", "__pycache__", "workspace",
-    "generated-content", "data", "media", "assets", "scripts"
-}
-TARGET_DIRS = {
-    ".", "about", "accessories", "comparisons", "destinations",
-    "editing", "guides", "how-to", "reviews", "city-through-the-lens",
-    "de-DE", "de", "es-ES", "es", "fr-FR", "it-IT", "ja-JP", "jp",
-    "ko-KR", "pl-PL", "pt-br", "th-TH", "zh-CN"
-}
+ROOT = Path(__file__).resolve().parent.parent
+FRAGMENT = ROOT / "templates" / "design-b-fragment.html"
 
-def load_template():
-    if not TEMPLATE_FILE.exists():
-        raise FileNotFoundError(f"Template not found: {TEMPLATE_FILE}")
+EXCLUDE_DIRS = {"templates", "node_modules", ".git", "__pycache__",
+                "scripts", "workspace", "data", "docs", "output"}
 
-    content = TEMPLATE_FILE.read_text(encoding="utf-8")
-    sections = {}
-
-    for name in ["HEAD", "HEADER", "FOOTER"]:
-        start_marker = f"<!-- === DESIGN-B-{name}-START === -->"
-        end_marker = f"<!-- === DESIGN-B-{name}-END === -->"
-        pattern = re.escape(start_marker) + r"(.*?)" + re.escape(end_marker)
-        match = re.search(pattern, content, re.DOTALL)
-
-        if not match:
-            raise ValueError(f"❌ Missing section: {name} (markers not found in template)")
-
-        body = match.group(1).strip()
-
-        if len(body) < 20:
-            raise ValueError(
-                f"❌ Section '{name}' is suspiciously small ({len(body)} chars). "
-                f"Did you forget to paste the content between the markers?"
-            )
-
-        sections[name.lower()] = body
-
-    total = sum(len(v) for v in sections.values())
-    print(f"✅ Loaded sections: {', '.join(sections.keys())} ({total} total chars)")
-    return sections
+MARKER_HEADER = "=== DESIGN-B-HEADER-START ==="
 
 
-def process_file(file_path, sections):
-    try:
-        html = file_path.read_text(encoding="utf-8")
-    except UnicodeDecodeError:
-        print(f"  ⚠️  Skipping (encoding error): {file_path}")
-        return False
+def read_sections() -> dict:
+    text = FRAGMENT.read_text(encoding="utf-8")
 
-    original = html
+    def between(start_marker: str, end_marker: str) -> str:
+        a = text.find(start_marker)
+        b = text.find(end_marker)
+        if a == -1 or b == -1 or b < a:
+            raise SystemExit(f"Marker pair missing: {start_marker} / {end_marker}")
+        return text[a + len(start_marker):b].strip()
 
-    # --- 1. Clean <head>: remove ALL previous design-b.css links and inline <style> blocks ---
-    head_match = re.search(
-        r'(<head[^>]*>)(.*?)(</head>)',
-        html, re.DOTALL | re.IGNORECASE
-    )
-    if head_match:
-        head_open, head_content, head_close = head_match.groups()
+    return {
+        "head":   between("<!-- === DESIGN-B-HEAD-START === -->",
+                          "<!-- === DESIGN-B-HEAD-END === -->"),
+        "header": between("<!-- === DESIGN-B-HEADER-START === -->",
+                          "<!-- === DESIGN-B-HEADER-END === -->"),
+        "footer": between("<!-- === DESIGN-B-FOOTER-START === -->",
+                          "<!-- === DESIGN-B-FOOTER-END === -->"),
+    }
 
-        # Remove ALL <style>...</style> blocks
-        head_content = re.sub(
-            r'<style[^>]*>.*?</style>', '',
-            head_content, flags=re.DOTALL | re.IGNORECASE
-        )
 
-        # Remove ALL previous design-b.css <link> tags (dedupe bug fix)
-        head_content = re.sub(
-            r'<link[^>]*href=["\'][^"\']*design-b\.css["\'][^>]*>\s*',
-            '', head_content, flags=re.IGNORECASE
-        )
+def _append_html(target, fragment_html: str):
+    frag = BeautifulSoup(fragment_html, "html.parser")
+    for node in list(frag.children):
+        if hasattr(node, "extract"):
+            target.append(node.extract())
+        else:
+            target.append(str(node))
 
-        # Remove duplicate "Design B" HTML comments left over from prior runs
-        head_content = re.sub(
-            r'<!--\s*Design B:[^>]*-->\s*',
-            '', head_content, flags=re.IGNORECASE
-        )
 
-        # Remove leftover <noscript> design-b.css wrappers if any
-        head_content = re.sub(
-            r'<noscript>\s*<link[^>]*design-b\.css[^>]*>\s*</noscript>\s*',
-            '', head_content, flags=re.DOTALL | re.IGNORECASE
-        )
+def _prepend_html(target, fragment_html: str):
+    frag = BeautifulSoup(fragment_html, "html.parser")
+    for node in reversed(list(frag.children)):
+        if hasattr(node, "extract"):
+            target.insert(0, node.extract())
+        else:
+            target.insert(0, str(node))
 
-        new_head = (
-            head_open.rstrip() + "\n    " +
-            sections["head"].strip() + "\n" +
-            head_content.strip() + "\n" +
-            head_close
-        )
-        html = html[:head_match.start()] + new_head + html[head_match.end():]
 
-    # --- 2. Replace everything between <body> and <main>/<article>/hero with new header ---
-    body_match = re.search(r'(<body[^>]*>)', html, re.DOTALL | re.IGNORECASE)
-    if body_match:
-        body_start = body_match.end()
-        main_match = re.search(
-            r'(<main[^>]*>|<article[^>]*>|<section[^>]*class="hero")',
-            html[body_start:], re.DOTALL | re.IGNORECASE
-        )
-        if main_match:
-            header_end = body_start + main_match.start()
-            html = (
-                html[:body_start] + "\n\n" +
-                sections["header"].strip() + "\n\n" +
-                html[header_end:]
-            )
+def inject(file_path: Path, sections: dict) -> str:
+    html = file_path.read_text(encoding="utf-8")
+    if MARKER_HEADER in html:
+        return "skip: already injected"
 
-    # --- 3. Replace everything between </main>/</article> and </body> with new footer ---
-    footer_match = re.search(
-        r'(</main>|</article>)(.*?)(</body>)',
-        html, re.DOTALL | re.IGNORECASE
-    )
-    if footer_match:
-        main_close, between, body_close = footer_match.groups()
-        html = (
-            html[:footer_match.start()] +
-            main_close + "\n\n" +
-            sections["footer"].strip() + "\n\n" +
-            body_close + html[footer_match.end():]
-        )
+    soup = BeautifulSoup(html, "lxml")
 
-    if html != original:
-        file_path.write_text(html, encoding="utf-8")
-        return True
-    return False
+    if not soup.head or not soup.body:
+        return "skip: no <head> or <body>"
+
+    # HEAD — append only. Never clear. Never replace.
+    _append_html(soup.head, sections["head"])
+
+    # HEADER — insert before the first real body element
+    # (leave any leading <noscript> skip-links / SVG sprite at the very top)
+    header_frag = BeautifulSoup(sections["header"], "html.parser")
+    insert_at = 0
+    for i, node in enumerate(soup.body.contents):
+        if getattr(node, "name", None) not in (None, "noscript"):
+            insert_at = i
+            break
+    for offset, node in enumerate(list(header_frag.children)):
+        if hasattr(node, "extract"):
+            soup.body.insert(insert_at + offset, node.extract())
+        else:
+            soup.body.insert(insert_at + offset, str(node))
+
+    # FOOTER — append at end of body
+    _append_html(soup.body, sections["footer"])
+
+    file_path.write_text(str(soup), encoding="utf-8")
+    return "injected"
 
 
 def main():
-    print("🚀 Design B Injection — Starting")
-    print(f"📄 Template: {TEMPLATE_FILE}")
+    if not FRAGMENT.exists():
+        sys.exit(f"Fragment not found: {FRAGMENT}")
 
-    sections = load_template()
+    sections = read_sections()
+    print(f"Loaded sections: {', '.join(sections)} "
+          f"({sum(len(v) for v in sections.values())} chars)")
 
-    processed = updated = skipped = 0
+    all_html = list(ROOT.rglob("*.html"))
+    candidates = [
+        f for f in all_html
+        if not any(part in EXCLUDE_DIRS for part in f.relative_to(ROOT).parts[:-1])
+        and not f.name.endswith("_template.html")
+    ]
 
-    for dirpath, dirnames, filenames in os.walk(REPO_ROOT):
-        dirnames[:] = [d for d in dirnames if d not in EXCLUDE_DIRS]
+    print(f"Found {len(candidates)} candidate files")
 
-        rel_path = Path(dirpath).relative_to(REPO_ROOT)
-        if str(rel_path) not in TARGET_DIRS and str(rel_path) != ".":
-            if not any(str(rel_path).startswith(t) for t in TARGET_DIRS if t != "."):
-                continue
+    stats = {"injected": 0, "skip: already injected": 0, "skip: no <head> or <body>": 0}
 
-        for filename in filenames:
-            if not filename.endswith(".html"):
-                continue
+    for i, path in enumerate(candidates, 1):
+        result = inject(path, sections)
+        stats[result] = stats.get(result, 0) + 1
+        if result == "injected":
+            print(f"  ✓ {path.relative_to(ROOT)}")
+        if i % 100 == 0:
+            print(f"  ...{i}/{len(candidates)}")
 
-            file_path = Path(dirpath) / filename
-            processed += 1
-
-            try:
-                if process_file(file_path, sections):
-                    updated += 1
-                    print(f"  ✅ Updated: {file_path.relative_to(REPO_ROOT)}")
-            except Exception as e:
-                skipped += 1
-                print(f"  ❌ Error: {file_path.relative_to(REPO_ROOT)} — {e}")
-
-    print(f"\n📊 Summary: {processed} files scanned, {updated} updated, {skipped} errors")
-    print("✨ Done.")
+    print("\nSummary:")
+    for k, v in stats.items():
+        print(f"  {k}: {v}")
 
 
 if __name__ == "__main__":
