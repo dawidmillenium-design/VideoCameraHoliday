@@ -1,10 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/>
+<head>
+<meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Explore 50+ city videography guides from local shooters worldwide. Real-world filming tips, gear recommendations, and B-roll ideas for every destination." name="description"/>
 <title>🌍 City Through the Lens - Explore 50+ city videography </title>
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">{
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/" rel="canonical"/>
+
+<!-- ===== NEW CARD DESIGN & ANIMATIONS CSS START ===== -->
+<style>
+    /* Base Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Region Titles */
+    .region-section {
+        margin-bottom: 60px;
+    }
+    .region-title {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #222;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Grid Layout */
+    .city-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 24px;
+    }
+
+    /* Card Design */
+    .city-card {
+        display: flex;
+        flex-direction: column;
+        background: #161616;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        padding: 24px;
+        text-decoration: none;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Card Hover Effects */
+    .city-card:hover {
+        transform: translateY(-6px);
+        border-color: #e94560;
+        background: #1c1c1c;
+        box-shadow: 0 12px 30px rgba(233, 69, 96, 0.15);
+    }
+
+    /* Flag Emoji */
+    .city-card .flag {
+        font-size: 2rem;
+        line-height: 1;
+        margin-bottom: 16px;
+        display: inline-block;
+        transition: transform 0.35s ease;
+    }
+    .city-card:hover .flag {
+        transform: scale(1.15) rotate(-5deg);
+    }
+
+    /* === ANIMATED CITY NAME === */
+    .city-card h3 {
+        margin: 0 0 8px 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        
+        /* Gradient Text Setup */
+        background: linear-gradient(90deg, #ffffff, #e94560, #ffffff);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        
+        transition: all 0.3s ease;
+    }
+
+    /* Animated Underline Pseudo-element */
+    .city-card h3::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        background: #e94560;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transform: translateX(-50%);
+        box-shadow: 0 0 8px #e94560;
+        border-radius: 2px;
+    }
+
+    /* Hover States for City Name */
+    .city-card:hover h3 {
+        animation: shine 1.5s linear infinite;
+        -webkit-text-fill-color: transparent; /* Keep gradient visible */
+    }
+
+    .city-card:hover h3::after {
+        width: 100%;
+    }
+
+    /* Keyframes for the Shimmer Effect */
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
+    /* =========================== */
+
+    /* Description Text */
+    .city-card p {
+        color: #a0a0a0;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0 0 24px 0;
+        flex-grow: 1;
+    }
+
+    /* Arrow Indicator */
+    .city-card .arrow {
+        align-self: flex-start;
+        color: #e94560;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: auto; /* Pushes arrow to the bottom */
+        transition: transform 0.35s ease;
+    }
+    .city-card:hover .arrow {
+        transform: translateX(8px);
+    }
+
+    /* Hero Section Polish */
+    .hero {
+        text-align: center;
+        padding: 60px 20px 40px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+    }
+    .hero .subtitle {
+        color: #a0a0a0;
+        max-width: 600px;
+        margin: 0 auto 32px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    .stats {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .stat .num {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #e94560;
+    }
+    .stat .label {
+        font-size: 0.85rem;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 4px;
+    }
+</style>
+<!-- ===== NEW CARD DESIGN & ANIMATIONS CSS END ===== -->
+
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -192,7 +373,9 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === --><section class="hero">
+</aside><!-- === DESIGN-B-HEADER-END === -->
+
+<section class="hero">
 <h1>🌍 City Through the Lens</h1>
 <p class="subtitle">Local videographers in 50+ cities share real-world filming tips, gear recommendations, and B-roll ideas – no lab charts, just real streets.</p>
 <div class="stats">
@@ -202,8 +385,10 @@
 <div class="stat"><div class="num">2026</div><div class="label">Latest Guides</div></div>
 </div>
 </section>
+
 <!-- ===== MAIN CONTENT ===== -->
 <main class="container" id="main-content">
+
 <!-- EUROPE -->
 <section class="region-section">
 <h2 class="region-title">🌍 Europe</h2>
@@ -224,7 +409,7 @@
 </a>
 <!-- Barcelona -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/barcelona-interview-preview.html">
-<span class="flag">🇸</span>
+<span class="flag">🇪🇸</span>
 <h3>Barcelona</h3>
 <p>Gaudí, beach, and Gothic Quarter through a local's lens.</p>
 <span class="arrow">→</span>
@@ -238,7 +423,7 @@
 </a>
 <!-- Budapest -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/budapest-interview-preview.html">
-<span class="flag">🇺</span>
+<span class="flag">🇭🇺</span>
 <h3>Budapest</h3>
 <p>Buda Castle, thermal baths, and the Danube at blue hour.</p>
 <span class="arrow">→</span>
@@ -273,7 +458,7 @@
 </a>
 <!-- Moscow -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/moscow-interview-preview.html">
-<span class="flag">🇷</span>
+<span class="flag">🇷🇺</span>
 <h3>Moscow</h3>
 <p>Red Square, St Basil's, and Moscow's grand metro stations.</p>
 <span class="arrow">→</span>
@@ -308,6 +493,7 @@
 </a>
 </div>
 </section>
+
 <!-- ASIA -->
 <section class="region-section">
 <h2 class="region-title">🌏 Asia</h2>
@@ -349,7 +535,7 @@
 </a>
 <!-- Chiang Mai -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/chiang-mai-interview-preview.html">
-<span class="flag">🇭</span>
+<span class="flag">🇭🇰</span>
 <h3>Chiang Mai</h3>
 <p>Doi Suthep, Old City temples, and the Night Bazaar.</p>
 <span class="arrow">→</span>
@@ -370,21 +556,21 @@
 </a>
 <!-- Dubai -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/dubai-interview-preview.html">
-<span class="flag">🇪</span>
+<span class="flag">🇦🇪</span>
 <h3>Dubai</h3>
 <p>Burj Khalifa, desert dunes, and gold souk nightlife.</p>
 <span class="arrow">→</span>
 </a>
 <!-- Guangzhou -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/guangzhou-interview-preview.html">
-<span class="flag">🇳</span>
+<span class="flag">🇨🇳</span>
 <h3>Guangzhou</h3>
 <p>Canton Tower, Shamian Island, and Pearl River nights.</p>
 <span class="arrow">→</span>
 </a>
 <!-- Hangzhou -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/hangzhou-interview-preview.html">
-<span class="flag">🇨</span>
+<span class="flag">🇨🇳</span>
 <h3>Hangzhou</h3>
 <p>West Lake, tea plantations, and Song Dynasty pagodas.</p>
 <span class="arrow">→</span>
@@ -405,7 +591,7 @@
 </a>
 <!-- Hong Kong -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/hong-kong-interview-preview.html">
-<span class="flag">🇰</span>
+<span class="flag">🇭🇰</span>
 <h3>Hong Kong</h3>
 <p>Symphony of Lights, Victoria Peak, and dense street markets.</p>
 <span class="arrow">→</span>
@@ -440,7 +626,7 @@
 </a>
 <!-- Riyadh -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/riyadh-interview-preview.html">
-<span class="flag">🇦</span>
+<span class="flag">🇸🇦</span>
 <h3>Riyadh</h3>
 <p>Diriyah ruins, Kingdom Centre, and desert cityscapes.</p>
 <span class="arrow">→</span>
@@ -454,7 +640,7 @@
 </a>
 <!-- Shanghai -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/shanghai-interview-preview.html">
-<span class="flag">🇳</span>
+<span class="flag">🇨🇳</span>
 <h3>Shanghai</h3>
 <p>The Bund, neon skylines, and old shikumen alleyways.</p>
 <span class="arrow">→</span>
@@ -503,6 +689,7 @@
 </a>
 </div>
 </section>
+
 <!-- AMERICAS -->
 <section class="region-section">
 <h2 class="region-title">🌎 Americas</h2>
@@ -537,14 +724,14 @@
 </a>
 <!-- Guadalajara -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/guadalajara-interview-preview.html">
-<span class="flag">🇽</span>
+<span class="flag">🇲🇽</span>
 <h3>Guadalajara</h3>
 <p>Hospicio Cabañas, Tlaquepaque crafts, and mariachi culture.</p>
 <span class="arrow">→</span>
 </a>
 <!-- Lima -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/lima-interview-preview.html">
-<span class="flag">🇪</span>
+<span class="flag">🇵🇪</span>
 <h3>Lima</h3>
 <p>Miraflores cliffs, colonial centre, and Pacific coast food scene.</p>
 <span class="arrow">→</span>
@@ -586,6 +773,7 @@
 </a>
 </div>
 </section>
+
 <!-- AFRICA -->
 <section class="region-section">
 <h2 class="region-title">🌍 Africa</h2>
@@ -620,14 +808,14 @@
 </a>
 <!-- Luanda -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/luanda-interview-preview.html">
-<span class="flag">🇴</span>
+<span class="flag">🇦🇴</span>
 <h3>Luanda</h3>
 <p>Marginal waterfront, Fortaleza de São Miguel, and Atlantic sunsets.</p>
 <span class="arrow">→</span>
 </a>
 <!-- Marrakech -->
 <a class="city-card" href="/VideoCameraHoliday/city-through-the-lens/marrakech-interview-preview.html">
-<span class="flag">🇦</span>
+<span class="flag">🇲🇦</span>
 <h3>Marrakech</h3>
 <p>Jemaa el-Fnaa, souks, and Majorelle Garden blue.</p>
 <span class="arrow">→</span>
@@ -641,6 +829,7 @@
 </a>
 </div>
 </section>
+
 <section id="faq" style="margin:60px 0; padding:36px; background:#111; border:1px solid #333; border-radius:12px;">
 <h2 style="color:#e94560; font-size:1.8rem; margin-bottom:24px;">City Through the Lens FAQ</h2>
 <h3>What does each city guide cover?</h3>
@@ -650,6 +839,7 @@
 <h3>How often are city guides updated?</h3>
 <p>Guides are reviewed as filming rules, locations, and recommended equipment change. Check each article for its published or updated date.</p>
 </section>
+
 <!-- Call to Action -->
 <section style="text-align:center; margin:60px 0; padding:40px; background:#111; border:1px solid #333; border-radius:12px;">
 <h2 style="color:#e94560; font-size:1.8rem; margin-bottom:15px;"> Are You a Local Videographer?</h2>
@@ -657,6 +847,7 @@
 <a class="btn" href="/VideoCameraHoliday/about/" style="display:inline-block; padding:12px 30px; background:#e94560; color:#fff; text-decoration:none; border-radius:30px; font-weight:600;">Contact Us</a>
 </section>
 </main>
+
 <!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
