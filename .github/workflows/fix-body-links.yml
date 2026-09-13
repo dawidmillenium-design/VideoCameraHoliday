@@ -1,0 +1,63 @@
+name: Fix body links (dry-run or apply)
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Actually write changes (leave unchecked for dry-run)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run fix_body_links
+        run: |
+          if [ "${{ inputs.apply }}" = "true" ]; then
+            python scripts/fix_body_links.py --apply
+          else
+            python scripts/fix_body_links.py --verbose
+          fi
+
+      - name: Confirm dry-run wrote nothing
+        if: inputs.apply == false
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Dry-run modified the working tree!"
+            git status --porcelain
+            exit 1
+          fi
+          echo "✓ Nothing written. Dry-run was clean."
+
+      - name: Open PR (apply only)
+        if: inputs.apply == true
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: fix/body-links
+          base: main
+          title: "fix: prefix body links with /VideoCameraHoliday/"
+          commit-message: "fix: prefix body links with site base"
+          body: |
+            Auto-generated. **Review before merging.**
+
+            Adds `/VideoCameraHoliday/` prefix to root-relative `href` and
+            `src` values in article bodies. Header/footer/drawer links are
+            already correct and untouched.
+
+            Review checklist:
+            - [ ] Diff shows only `href="..."` / `src="..."` changes
+            - [ ] No `<base>`, `<style>`, or structural changes
+            - [ ] Spot-check `destinations/index.html` — 30 links should change
+            - [ ] After merge, click a card on the destinations page
