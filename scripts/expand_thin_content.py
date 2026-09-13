@@ -21,6 +21,21 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from openai import OpenAI
 
+# Files/directories to NEVER process
+EXCLUDED_PATHS = {
+    'templates/',
+    'template/',
+    '_templates/',
+    'partials/',
+    'includes/',
+    'layouts/',
+}
+
+def should_exclude_file(file_path: Path) -> bool:
+    """Check if file should be excluded from processing."""
+    path_str = str(file_path).lower()
+    return any(excluded in path_str for excluded in EXCLUDED_PATHS)
+  
 
 # ---------- Config ----------
 
