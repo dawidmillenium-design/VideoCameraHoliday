@@ -45,13 +45,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Verify CSV exists
+      # -------- NEW STEP: generate the CSV fresh --------
+      - name: Generate thin content report
         run: |
-          if [ ! -f scripts/thin_content_report.csv ]; then
-            echo "::error::scripts/thin_content_report.csv missing."
-            echo "Run the audit workflow first (scripts/audit_thin_content.py)."
-            exit 1
-          fi
+          echo "Running auditor to generate fresh CSV..."
+          python scripts/audit_thin_content.py
+          echo "--- CSV preview (first 15 lines) ---"
+          head -n 15 scripts/thin_content_report.csv
+          echo "--- Total rows ---"
+          wc -l scripts/thin_content_report.csv
 
       - name: Expand thin content
         env:
@@ -68,6 +70,10 @@ jobs:
       - name: Detect changes
         id: diff
         run: |
+          # The auditor just wrote a CSV — do not let it into the PR
+          git checkout -- scripts/thin_content_report.csv 2>/dev/null || true
+          rm -f scripts/thin_content_report.csv
+
           if git diff --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -96,7 +102,7 @@ jobs:
             - [ ] Read at least 3 expanded pages end-to-end
             - [ ] Confirm no `<script>` / `<iframe>` tags snuck in
             - [ ] Spot-check that images/CTAs from the original page are still present
-            - [ ] Run your thin-content auditor against this branch to confirm ≥ 500 words
+            - [ ] Re-run the auditor against this branch and confirm ≥ 500 words
 
             **Batch parameters**
             - Pages processed: `${{ inputs.batch_size }}`
