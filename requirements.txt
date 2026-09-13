@@ -1,26 +1,28 @@
-# requirements.txt - Python dependencies for SEO workflows
-# Core HTML parsing and processing
+# requirements.txt — Python dependencies for SEO workflows
+#
+# Install locally:  pip install -r requirements.txt
+# Used by:          scripts/audit_thin_content.py
+#                   scripts/expand_thin_content.py
+#                   (plus other SEO pipeline scripts in this repo)
+#
+# Keep this file deduplicated. Run `pip check` after editing.
+
+# --- Core HTML parsing (audit + expand scripts) ---
 beautifulsoup4>=4.12.3
 lxml>=5.1.0
 
-# HTTP requests
-requests>=2.28.0
+# --- DeepSeek content expansion (scripts/expand_thin_content.py) ---
+# Floor of 1.40.0 because the SDK's retry / error handling signatures
+# changed in that line; the script is only tested against >=1.40.
+openai>=1.40.0
 
-# JSON schema validation
+# --- HTTP requests (used by other SEO pipeline scripts) ---
+requests>=2.31.0
+
+# --- JSON schema validation (consumed by output_schema.json tooling) ---
 jsonschema>=4.17.0
 
-# Additional utilities
-urllib3>=1.26.0
+# --- Misc utilities ---
 chardet>=5.0.0
-
-# NEW ARTICLE WORKFLOW THAT USE DEEPSEEK AI
-openai>=1.12.0
-beautifulsoup4>=4.12.3
-lxml>=5.1.0
 python-dotenv>=1.0.0
 tenacity>=8.2.3
-
-### deep content expand 
-openai>=1.40
-beautifulsoup4>=4.12
-lxml>=5.0
