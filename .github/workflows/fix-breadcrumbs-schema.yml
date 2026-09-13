@@ -1,0 +1,63 @@
+name: Fix breadcrumbs + add BreadcrumbList schema
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Actually write changes (leave unchecked for dry-run)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run fix
+        run: |
+          if [ "${{ inputs.apply }}" = "true" ]; then
+            python scripts/fix_breadcrumbs_and_add_schema.py --apply --verbose
+          else
+            python scripts/fix_breadcrumbs_and_add_schema.py --verbose
+          fi
+
+      - name: Confirm dry-run wrote nothing
+        if: inputs.apply == false
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Dry-run modified the working tree!"
+            git status --porcelain
+            exit 1
+          fi
+          echo "✓ Nothing written."
+
+      - name: Open PR (apply only)
+        if: inputs.apply == true
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: fix/breadcrumbs-schema
+          base: main
+          title: "fix: correct H1 text + add BreadcrumbList JSON-LD"
+          commit-message: "fix: correct H1 text + add BreadcrumbList JSON-LD"
+          body: |
+            Auto-generated. **Review before merging.**
+
+            - Fixes broken H1/breadcrumb text (e.g. "Best s 2026" → "Best Holiday Video Cameras 2026")
+            - Adds missing BreadcrumbList JSON-LD to `<head>`
+            - Only touches files that already have `class="breadcrumbs"`
+
+            Checklist:
+            - [ ] Open `reviews/dji-osmo-pocket-3-review.html` — H1 reads correctly
+            - [ ] View source on any page — `<script type="application/ld+json">` contains `"@type": "BreadcrumbList"`
+            - [ ] JSON-LD `item` URLs are absolute (`https://...`), not relative
+            - [ ] Design B header still intact
