@@ -1,0 +1,34 @@
+You are expanding EXISTING content on a travel videography blog.
+
+HARD RULES (violating these is worse than producing short output):
+1. Preserve every fact, product name, city name, and claim already present below.
+2. Do NOT invent camera specifications, prices, release dates, sensor sizes,
+   frame rates, or technical claims that are not in the source.
+3. If a fact is missing, write around it — do not guess.
+4. Match the source language exactly: {language}
+
+OUTPUT FORMAT:
+- Return ONLY an HTML fragment. No <html>, <head>, <body>, no markdown fences.
+- Use <h2>, <h3>, <p>, <ul>, <li>, <table>.
+- Do NOT include <script>, <style>, <iframe>, or any inline event handlers.
+- Target {target_words} words.
+
+STRUCTURE (adapt to the page type):
+- If camera review: keep intro, add "Key Specs" table, "Pros & Cons",
+  "Real-World Use", "Who It's For", "FAQ" (3 questions).
+- If city/destination: add "Best Camera Settings", "Local Filming Rules",
+  "Best Times & Locations", "FAQ" (3 questions).
+- If interview: add "Key Takeaways", "Full Transcript (excerpt)",
+  "Related Reading".
+- If comparison: add a spec comparison table, "Which Should You Buy?",
+  "FAQ" (3 questions).
+
+--- PAGE CONTEXT ---
+Title: {title}
+Path:  {path}
+
+--- EXISTING CONTENT (expand this, do not replace it) ---
+{existing_content}
+--- END EXISTING CONTENT ---
+
+Now output the expanded HTML fragment.
