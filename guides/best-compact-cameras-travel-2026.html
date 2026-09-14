@@ -204,6 +204,1009 @@
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
 </aside><!-- === DESIGN-B-HEADER-END === -->
+
+<!-- ============================================================
+     COMPACT CAMERAS 2026 — DARKROOM / ANALOG PHOTO STUDIO THEME
+     Content-scoped CSS only (.article-hero + article.container).
+     Header, drawer and footer remain untouched.
+     ============================================================ -->
+<style id="cp-darkroom-effects">
+/* ---------- analog tokens (content scope only) ---------- */
+.article-hero,
+article.container{
+  --cp-amber:#f0b429;
+  --cp-amber-lt:#ffd66b;
+  --cp-amber-dp:#a67c0a;
+  --cp-copper:#c9822b;
+  --cp-sepia:#7c2d12;
+  --cp-crimson:#dc2626;
+  --cp-chrome:#cbd5e1;
+  --cp-silver:#94a3b8;
+  --cp-cream:#f5e6c8;
+  --cp-ink:#0b0d11;
+  --cp-ink-2:#12151b;
+  --cp-ink-3:#1a1e26;
+  --cp-r:18px;
+  --cp-ease:cubic-bezier(.22,1,.36,1);
+}
+
+@property --cp-a{syntax:'<angle>';inherits:false;initial-value:0deg;}
+
+/* ---------- keyframes ---------- */
+@keyframes cp-in{from{opacity:0;transform:translateY(26px) scale(.97);filter:blur(9px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes cp-shine{0%{background-position:130% 50%}100%{background-position:-130% 50%}}
+@keyframes cp-slide{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes cp-spin{to{--cp-a:360deg}}
+@keyframes cp-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes cp-reveal{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes cp-flash{0%{opacity:0}8%{opacity:1}18%{opacity:0}100%{opacity:0}}
+@keyframes cp-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(2deg)}}
+@keyframes cp-twinkle{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes cp-btn-sheen{0%{left:-120%}55%,100%{left:145%}}
+@keyframes cp-iris{to{transform:rotate(360deg)}}
+@keyframes cp-iris-rev{to{transform:rotate(-360deg)}}
+@keyframes cp-frame-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(240,180,41,.35),0 22px 44px -34px rgba(240,180,41,.5)}
+  50%{box-shadow:0 0 0 6px rgba(240,180,41,.08),0 26px 52px -28px rgba(240,180,41,.85)}
+}
+
+/* ============================================================
+   HERO — camera lens / aperture stage
+   ============================================================ */
+.article-hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  margin:0;
+  padding:clamp(64px,9vw,124px) 22px clamp(72px,10vw,130px);
+  text-align:center;
+  color:#fff;
+  background:
+    radial-gradient(ellipse 62% 40% at 50% 8%, rgba(240,180,41,.28), transparent 62%),
+    radial-gradient(ellipse 50% 40% at 12% 92%, rgba(124,45,18,.42), transparent 62%),
+    radial-gradient(ellipse 50% 40% at 90% 88%, rgba(201,130,43,.24), transparent 62%),
+    linear-gradient(180deg, #08090c 0%, #0b0d11 38%, #12151b 68%, #08090c 100%);
+}
+
+/* subtle warm film-grain + light speckle */
+.article-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(1.4px 1.4px at 6% 22%, rgba(255,214,107,.9), transparent 60%),
+    radial-gradient(1.2px 1.2px at 22% 42%, rgba(255,255,255,.55), transparent 60%),
+    radial-gradient(1.4px 1.4px at 38% 18%, rgba(255,214,107,.8), transparent 60%),
+    radial-gradient(1.2px 1.2px at 55% 68%, rgba(255,255,255,.5), transparent 60%),
+    radial-gradient(1.4px 1.4px at 72% 28%, rgba(255,214,107,.85), transparent 60%),
+    radial-gradient(1.2px 1.2px at 88% 52%, rgba(255,255,255,.55), transparent 60%),
+    radial-gradient(1.4px 1.4px at 14% 78%, rgba(255,214,107,.6), transparent 60%),
+    radial-gradient(1.2px 1.2px at 62% 88%, rgba(255,255,255,.5), transparent 60%);
+  animation:cp-twinkle 6s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+}
+/* warm base glow */
+.article-hero::after{
+  content:"";
+  position:absolute;
+  left:50%; bottom:-40%;
+  width:min(780px,130%);
+  aspect-ratio:1;
+  transform:translateX(-50%);
+  background:radial-gradient(circle, rgba(240,180,41,.22) 0%, rgba(201,130,43,.08) 35%, transparent 65%);
+  filter:blur(14px);
+  pointer-events:none;
+  z-index:1;
+}
+.article-hero > *{position:relative; z-index:3;}
+
+/* camera aperture iris — sits behind the h1 */
+.article-hero .cp-aperture{
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+  width: clamp(280px, 56vw, 460px);
+  aspect-ratio: 1;
+  pointer-events:none;
+  z-index:2;
+  opacity:.7;
+}
+.article-hero .cp-aperture span{
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg 55deg,
+      rgba(240,180,41,.55) 55deg 58deg,
+      transparent 58deg 115deg,
+      rgba(240,180,41,.45) 115deg 118deg,
+      transparent 118deg 175deg,
+      rgba(240,180,41,.55) 175deg 178deg,
+      transparent 178deg 235deg,
+      rgba(240,180,41,.45) 235deg 238deg,
+      transparent 238deg 295deg,
+      rgba(240,180,41,.55) 295deg 298deg,
+      transparent 298deg 360deg
+    );
+  -webkit-mask: radial-gradient(circle, transparent 42%, #000 44% 46%, transparent 47%, transparent 62%, #000 63% 65%, transparent 66%, transparent 82%, #000 83% 84%, transparent 85%);
+  mask: radial-gradient(circle, transparent 42%, #000 44% 46%, transparent 47%, transparent 62%, #000 63% 65%, transparent 66%, transparent 82%, #000 83% 84%, transparent 85%);
+  animation: cp-iris 40s linear infinite;
+  filter: drop-shadow(0 0 18px rgba(240,180,41,.4));
+}
+.article-hero .cp-aperture span:nth-child(2){
+  animation: cp-iris-rev 55s linear infinite;
+  opacity:.55;
+  transform: scale(.82);
+}
+.article-hero .cp-aperture span:nth-child(3){
+  animation: cp-iris 70s linear infinite;
+  opacity:.35;
+  transform: scale(.64);
+}
+
+/* H1 amber foil */
+.article-hero h1{
+  margin:0 auto;
+  max-width:24ch;
+  font-size:clamp(1.85rem,5.2vw,3.75rem);
+  line-height:1.06;
+  letter-spacing:-.024em;
+  background:linear-gradient(100deg,
+    #ffffff 0%, #ffd66b 18%, #f0b429 34%,
+    #ffffff 50%, #ffd66b 66%, #f0b429 82%, #ffffff 100%);
+  background-size:230% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 18px 34px rgba(0,0,0,.65));
+  animation:cp-in 1s var(--cp-ease) both, cp-shine 8s linear infinite 1.1s;
+}
+
+/* ============================================================
+   ARTICLE BODY
+   ============================================================ */
+article.container{position:relative; padding-bottom:70px;}
+
+/* scroll reveal for direct children */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    article.container > *{
+      animation:cp-reveal .9s var(--cp-ease) both;
+      animation-timeline:view();
+      animation-range:entry 6% cover 24%;
+    }
+    article.container > .author-box{
+      animation-range:entry 0% cover 16%;
+    }
+  }
+}
+
+/* ---------- headings — film chapter markers ---------- */
+article.container h2{
+  position:relative;
+  margin-top:clamp(46px,6vw,76px);
+  padding:0 0 16px 50px;
+  letter-spacing:-.014em;
+  scroll-margin-top:96px;
+}
+article.container h2::before{
+  content:"";
+  position:absolute;
+  left:4px; top:50%;
+  transform:translateY(-55%);
+  width:30px; height:30px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 34% 30%, #fff6cf 0%, var(--cp-amber-lt) 38%, var(--cp-amber) 66%, var(--cp-amber-dp) 100%);
+  box-shadow:
+    inset 0 0 0 2px rgba(0,0,0,.35),
+    0 0 0 4px rgba(240,180,41,.14),
+    0 10px 20px -10px rgba(240,180,41,.9);
+}
+article.container h2::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:0;
+  height:4px;
+  width:min(100%,340px);
+  border-radius:99px;
+  background:linear-gradient(90deg, var(--cp-amber), var(--cp-amber-lt) 32%, rgba(201,130,43,.4) 68%, transparent);
+  box-shadow:0 8px 22px -10px rgba(240,180,41,.8);
+  transform-origin:left center;
+  animation:cp-line 1.1s var(--cp-ease) both;
+  animation-timeline:view();
+  animation-range:entry 12% cover 26%;
+}
+article.container h3{letter-spacing:-.006em; scroll-margin-top:96px;}
+article.container > ul > li::marker{color:var(--cp-amber); font-weight:900;}
+
+/* ---------- in-text links ---------- */
+article.container .content-link{
+  color:inherit;
+  text-decoration:none;
+  padding:0 2px;
+  border-radius:3px;
+  background-image:linear-gradient(90deg,var(--cp-amber),var(--cp-amber-lt));
+  background-repeat:no-repeat;
+  background-position:0 100%;
+  background-size:100% 2px;
+  transition:background-size .38s var(--cp-ease), color .38s var(--cp-ease);
+}
+article.container .content-link:hover,
+article.container .content-link:focus-visible{
+  background-size:100% 100%;
+  color:#1a1204;
+}
+
+/* ============================================================
+   TAKEAWAYS — film strip verdict panel
+   ============================================================ */
+.takeaways{
+  position:relative;
+  margin:34px 0;
+  padding:30px 28px 26px;
+  border-radius:var(--cp-r);
+  border:1px solid rgba(240,180,41,.3);
+  background:
+    linear-gradient(135deg, rgba(240,180,41,.12), rgba(124,45,18,.08) 50%, rgba(201,130,43,.06));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06), 0 30px 60px -42px rgba(0,0,0,.9);
+  overflow:hidden;
+}
+/* perforated film-strip edges */
+.takeaways::before,
+.takeaways::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  width:14px;
+  background-image:
+    repeating-linear-gradient(180deg,
+      transparent 0 6px,
+      rgba(240,180,41,.5) 6px 12px,
+      transparent 12px 18px);
+  opacity:.55;
+  pointer-events:none;
+}
+.takeaways::before{left:0; border-right:1px dashed rgba(240,180,41,.2);}
+.takeaways::after{right:0; border-left:1px dashed rgba(240,180,41,.2);}
+/* rotating gold ring */
+.takeaways{
+  --ring: conic-gradient(from var(--cp-a),
+      transparent 0turn .5turn,
+      var(--cp-amber) .68turn,
+      var(--cp-amber-lt) .78turn,
+      var(--cp-copper) .86turn,
+      transparent .96turn);
+}
+.takeaways > .cp-ring{
+  position:absolute;
+  inset:0;
+  padding:1.5px;
+  border-radius:inherit;
+  background:var(--ring);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  animation:cp-spin 9s linear infinite;
+  pointer-events:none;
+}
+.takeaways h3{margin:0 0 14px; letter-spacing:-.006em; color:var(--cp-amber-lt);}
+.takeaways ul{margin:0; padding:0 12px; list-style:none;}
+.takeaways li{
+  position:relative;
+  padding:9px 0 9px 32px;
+}
+.takeaways li::before{
+  content:"";
+  position:absolute;
+  left:4px; top:17px;
+  width:11px; height:11px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #fff6cf, var(--cp-amber) 70%);
+  box-shadow:0 0 0 3px rgba(240,180,41,.14);
+}
+
+/* ============================================================
+   CAMERA CARDS — photo frame with corner brackets
+   ============================================================ */
+.cam-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+  margin:26px 0 10px;
+}
+.cam-card{
+  position:relative;
+  padding:32px 26px 28px;
+  border-radius:var(--cp-r);
+  border:1px solid rgba(240,180,41,.22);
+  background:
+    linear-gradient(180deg, rgba(240,180,41,.06), rgba(255,255,255,.012) 55%, rgba(124,45,18,.05));
+  box-shadow:0 28px 58px -42px rgba(0,0,0,.95);
+  overflow:hidden;
+  transition:transform .55s var(--cp-ease), border-color .55s var(--cp-ease), box-shadow .55s var(--cp-ease);
+}
+/* photo frame corner brackets */
+.cam-card::before,
+.cam-card::after{
+  content:"";
+  position:absolute;
+  width:24px; height:24px;
+  border:2px solid var(--cp-amber);
+  opacity:.7;
+  transition:opacity .5s var(--cp-ease), transform .5s var(--cp-ease);
+  pointer-events:none;
+  z-index:2;
+}
+.cam-card::before{
+  top:12px; left:12px;
+  border-right:0;
+  border-bottom:0;
+  border-radius:6px 0 0 0;
+}
+.cam-card::after{
+  bottom:12px; right:12px;
+  border-left:0;
+  border-top:0;
+  border-radius:0 0 6px 0;
+}
+.cam-card:hover,
+.cam-card:focus-within{
+  transform:translateY(-8px);
+  border-color:rgba(240,180,41,.62);
+  box-shadow:
+    0 36px 68px -32px rgba(0,0,0,.95),
+    0 0 32px -6px rgba(240,180,41,.5);
+  animation:cp-frame-pulse 4s ease-in-out infinite;
+}
+.cam-card:hover::before,
+.cam-card:hover::after{opacity:1; transform:scale(1.06);}
+
+.cam-card h3{
+  margin:16px 0 6px;
+  letter-spacing:-.008em;
+  color:#fff;
+  transition:color .4s var(--cp-ease);
+}
+.cam-card:hover h3{color:var(--cp-amber-lt);}
+
+.cam-card .price{
+  display:inline-block;
+  margin:6px 0 16px;
+  padding:6px 16px;
+  font-weight:900;
+  font-size:1.06rem;
+  letter-spacing:.03em;
+  border-radius:999px;
+  color:var(--cp-amber-lt);
+  background:linear-gradient(135deg, rgba(240,180,41,.16), rgba(124,45,18,.28));
+  border:1px solid rgba(240,180,41,.48);
+  box-shadow:0 12px 24px -16px rgba(240,180,41,.9);
+}
+
+.cam-card ul{
+  margin:6px 0 18px;
+  padding-left:22px;
+  font-size:.94rem;
+  line-height:1.6;
+  color:#cbd5e1;
+}
+.cam-card ul li{margin-bottom:6px;}
+.cam-card ul li::marker{color:var(--cp-amber); font-weight:900;}
+
+/* note paragraphs (previously inline styled) */
+.cam-card p[style*="font-size:0.85rem"]{
+  color:#94a3b8 !important;
+  font-style:italic;
+  font-size:.85rem !important;
+  margin:0 0 14px !important;
+  line-height:1.55;
+  padding-left:14px;
+  border-left:2px solid rgba(240,180,41,.4);
+}
+
+/* badges — lens cap style */
+.cam-card .badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 14px 6px 8px;
+  border-radius:999px;
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#2a1e02;
+  background:linear-gradient(135deg, var(--cp-amber-lt), var(--cp-amber) 60%, var(--cp-copper));
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:0 10px 22px -12px rgba(240,180,41,.95);
+  transition:transform .45s var(--cp-ease), box-shadow .45s var(--cp-ease);
+}
+.cam-card .badge::before{
+  content:"";
+  width:18px; height:18px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 34% 30%, #fff8d6 0%, var(--cp-amber-lt) 40%, var(--cp-amber) 68%, var(--cp-amber-dp) 100%);
+  box-shadow:inset 0 -2px 4px rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.4);
+}
+.cam-card:hover .badge{
+  transform:translateY(-2px);
+  box-shadow:0 14px 26px -12px rgba(240,180,41,1);
+}
+/* badge colour variants */
+.cam-card .badge-blue{
+  color:#04222e;
+  background:linear-gradient(135deg, #bae6fd, #38bdf8 60%, #0369a1);
+  border-color:rgba(255,255,255,.4);
+  box-shadow:0 10px 22px -12px rgba(56,189,248,.95);
+}
+.cam-card .badge-blue::before{
+  background:radial-gradient(circle at 34% 30%, #e0f2fe, #7dd3fc 45%, #0369a1 100%);
+}
+.cam-card .badge-green{
+  color:#052e1a;
+  background:linear-gradient(135deg, #bbf7d0, #4ade80 60%, #15803d);
+  border-color:rgba(255,255,255,.4);
+  box-shadow:0 10px 22px -12px rgba(74,222,128,.95);
+}
+.cam-card .badge-green::before{
+  background:radial-gradient(circle at 34% 30%, #dcfce7, #86efac 45%, #15803d 100%);
+}
+.cam-card .badge-orange{
+  color:#2a0d02;
+  background:linear-gradient(135deg, #ffd8a8, #fb923c 60%, #c2410c);
+  border-color:rgba(255,255,255,.4);
+  box-shadow:0 10px 22px -12px rgba(251,146,60,.95);
+}
+.cam-card .badge-orange::before{
+  background:radial-gradient(circle at 34% 30%, #ffedd5, #fdba74 45%, #c2410c 100%);
+}
+.cam-card .badge-hero{
+  color:#2a1e02;
+  background:linear-gradient(135deg, #fff6cf, var(--cp-amber-lt) 40%, var(--cp-amber) 72%, var(--cp-copper));
+  box-shadow:0 12px 26px -12px rgba(255,214,107,1);
+}
+
+/* ============================================================
+   BUTTONS — vintage amber
+   ============================================================ */
+article.container .btn,
+.takeaways .btn{
+  position:relative;
+  display:inline-block;
+  margin-top:auto;
+  padding:12px 24px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:.92rem;
+  letter-spacing:.01em;
+  text-decoration:none;
+  color:#1a1204;
+  background:linear-gradient(135deg, var(--cp-amber-lt), var(--cp-amber) 55%, var(--cp-copper));
+  box-shadow:0 16px 32px -16px rgba(240,180,41,.95);
+  overflow:hidden;
+  cursor:pointer;
+  border:0;
+  transition:transform .35s var(--cp-ease), box-shadow .35s var(--cp-ease), color .35s var(--cp-ease);
+}
+article.container .btn::after,
+.takeaways .btn::after{
+  content:"";
+  position:absolute;
+  top:0; left:-120%;
+  width:55%; height:100%;
+  background:linear-gradient(100deg, transparent, rgba(255,255,255,.6), transparent);
+  transform:skewX(-18deg);
+  animation:cp-btn-sheen 3.8s ease-in-out infinite;
+  pointer-events:none;
+}
+article.container .btn:hover,
+article.container .btn:focus-visible{
+  transform:translateY(-2px);
+  color:#fff;
+  box-shadow:
+    0 20px 40px -16px rgba(240,180,41,1),
+    0 0 26px -6px rgba(255,214,107,.6);
+}
+article.container .btn-outline{
+  background:transparent;
+  color:var(--cp-amber-lt);
+  border:2px solid var(--cp-amber);
+  box-shadow:none;
+}
+article.container .btn-outline::after{display:none;}
+article.container .btn-outline:hover,
+article.container .btn-outline:focus-visible{
+  background:linear-gradient(135deg, rgba(240,180,41,.18), rgba(124,45,18,.14));
+  color:#fff;
+  border-color:var(--cp-amber-lt);
+}
+
+/* ============================================================
+   FEATURE PANEL — Canon PowerShot V1 spotlight
+   ============================================================ */
+.feature-panel{
+  position:relative;
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  gap:22px;
+  margin:26px 0;
+  padding:26px;
+  border-radius:var(--cp-r);
+  border:1px solid rgba(240,180,41,.32);
+  background:
+    radial-gradient(ellipse 60% 70% at 0% 0%, rgba(240,180,41,.14), transparent 60%),
+    radial-gradient(ellipse 60% 70% at 100% 100%, rgba(201,130,43,.14), transparent 60%),
+    linear-gradient(135deg, #0f1218, #161a22 55%, #12161d);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 30px 60px -42px rgba(0,0,0,.95);
+  overflow:hidden;
+}
+.feature-panel::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--cp-amber-dp), var(--cp-amber) 35%, var(--cp-amber-lt) 55%, var(--cp-amber) 75%, var(--cp-amber-dp));
+  background-size:200% 100%;
+  animation:cp-slide 7s linear infinite;
+}
+.feature-panel .fp-main{position:relative; z-index:1;}
+.feature-panel .fp-main h3{
+  margin:0 0 8px;
+  color:#fff;
+  letter-spacing:-.008em;
+}
+.feature-panel .fp-main .price{
+  margin:0 0 14px;
+  font-size:1.24rem;
+  font-weight:900;
+  letter-spacing:.02em;
+  color:var(--cp-amber-lt);
+  text-shadow:0 2px 12px rgba(240,180,41,.35);
+}
+.feature-panel .fp-main ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.feature-panel .fp-main li{
+  position:relative;
+  margin-bottom:6px;
+  padding-left:26px;
+  font-size:.9rem;
+  color:#cbd5e1;
+  line-height:1.55;
+}
+.feature-panel .fp-main li::before{
+  content:"";
+  position:absolute;
+  left:0; top:7px;
+  width:12px; height:12px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 34% 30%, #fff6cf, var(--cp-amber-lt) 45%, var(--cp-amber) 100%);
+  box-shadow:0 0 0 2px rgba(240,180,41,.2);
+}
+.feature-panel .fp-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+.feature-panel .fp-tags span{
+  padding:4px 14px;
+  font-size:.75rem;
+  font-weight:800;
+  letter-spacing:.04em;
+  border-radius:999px;
+  color:var(--cp-amber-lt);
+  background:rgba(240,180,41,.12);
+  border:1px solid rgba(240,180,41,.34);
+}
+.feature-panel .fp-side{
+  position:relative;
+  z-index:1;
+  padding:18px 20px;
+  border-radius:12px;
+  background:
+    linear-gradient(135deg, rgba(240,180,41,.08), rgba(201,130,43,.04));
+  border:1px solid rgba(240,180,41,.2);
+}
+.feature-panel .fp-side p{
+  margin:0;
+  font-size:.9rem;
+  line-height:1.65;
+  color:#cbd5e1;
+}
+.feature-panel .fp-side strong{color:#fff;}
+.feature-panel .fp-side a{
+  color:var(--cp-amber-lt);
+  text-decoration:none;
+  border-bottom:1px dashed rgba(240,180,41,.6);
+}
+
+@media (max-width:700px){
+  .feature-panel{grid-template-columns:1fr;}
+}
+
+/* ============================================================
+   NOTE PANEL — Panasonic Lumix L10
+   ============================================================ */
+.note-panel{
+  position:relative;
+  margin:22px 0;
+  padding:22px 24px 22px 28px;
+  border-radius:var(--cp-r);
+  border:1px solid rgba(240,180,41,.24);
+  background:
+    linear-gradient(135deg, rgba(240,180,41,.08), rgba(124,45,18,.06));
+  box-shadow:0 26px 52px -40px rgba(0,0,0,.9);
+  overflow:hidden;
+}
+.note-panel::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:5px;
+  border-radius:0 4px 4px 0;
+  background:linear-gradient(180deg, var(--cp-amber), var(--cp-amber-lt) 50%, var(--cp-copper));
+  box-shadow:0 0 22px -4px rgba(240,180,41,.85);
+}
+.note-panel p{
+  margin:0 0 12px;
+  line-height:1.7;
+  color:#cbd5e1;
+}
+.note-panel p strong{color:#fff;}
+.note-panel .fp-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+.note-panel .fp-tags span{
+  padding:4px 14px;
+  font-size:.75rem;
+  font-weight:800;
+  letter-spacing:.04em;
+  border-radius:999px;
+  color:var(--cp-amber-lt);
+  background:rgba(240,180,41,.12);
+  border:1px solid rgba(240,180,41,.34);
+}
+
+/* ============================================================
+   COMPARISON TABLE — editorial ledger
+   ============================================================ */
+article.container table.comparison-table{
+  width:100%;
+  margin:28px 0;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:.92rem;
+  border:1px solid rgba(240,180,41,.24);
+  border-radius:16px;
+  overflow:hidden;
+  background:linear-gradient(180deg, rgba(240,180,41,.04), rgba(124,45,18,.03));
+  box-shadow:0 30px 58px -44px rgba(0,0,0,.95);
+}
+article.container table.comparison-table thead th{
+  padding:15px 16px;
+  text-align:left;
+  font-weight:800;
+  letter-spacing:.05em;
+  font-size:.8rem;
+  text-transform:uppercase;
+  color:var(--cp-amber-lt);
+  background:
+    linear-gradient(135deg, rgba(240,180,41,.14), rgba(124,45,18,.12));
+  border-bottom:1px solid rgba(240,180,41,.3);
+}
+article.container table.comparison-table tbody td{
+  padding:13px 16px;
+  border-bottom:1px solid rgba(240,180,41,.1);
+  color:#cbd5e1;
+  transition:background .35s var(--cp-ease), color .35s var(--cp-ease);
+}
+article.container table.comparison-table tbody tr:last-child td{border-bottom:0;}
+article.container table.comparison-table tbody tr:nth-child(even) td{
+  background:rgba(240,180,41,.025);
+}
+article.container table.comparison-table tbody tr:hover td{
+  background:rgba(240,180,41,.08);
+  color:#fff;
+}
+article.container table.comparison-table strong{color:#fff;}
+
+/* also plain tables (fallback) */
+article.container table:not(.comparison-table){
+  width:100%;
+  margin:26px 0;
+  border-collapse:collapse;
+  font-size:.92rem;
+}
+article.container table:not(.comparison-table) th,
+article.container table:not(.comparison-table) td{
+  padding:12px 14px;
+  border-bottom:1px solid rgba(240,180,41,.14);
+}
+
+/* ============================================================
+   FAQ (dl / dt / dd) — magazine Q & A
+   ============================================================ */
+article.container dl{
+  display:block;
+  margin:24px 0 12px;
+  padding:0;
+}
+article.container dt{
+  position:relative;
+  margin:0;
+  padding:20px 22px 12px 64px;
+  font-weight:900;
+  font-size:1.02rem;
+  letter-spacing:-.006em;
+  border-radius:14px 14px 0 0;
+  background:linear-gradient(180deg, rgba(240,180,41,.13), rgba(240,180,41,.03));
+  border:1px solid rgba(240,180,41,.24);
+  border-bottom:0;
+  color:#fff;
+}
+article.container dt strong{color:#fff;font-weight:900;}
+article.container dt::before{
+  content:"Q";
+  position:absolute;
+  left:22px; top:22px;
+  width:28px; height:28px;
+  display:grid;
+  place-items:center;
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:900;
+  font-size:.92rem;
+  color:#2a1e02;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 34% 30%, #fff6cf, var(--cp-amber-lt) 42%, var(--cp-amber) 70%, var(--cp-amber-dp) 100%);
+  box-shadow:
+    inset 0 -2px 4px rgba(0,0,0,.35),
+    0 8px 18px -10px rgba(240,180,41,.95);
+}
+article.container dd{
+  position:relative;
+  margin:0 0 16px;
+  padding:4px 22px 20px 64px;
+  border-radius:0 0 14px 14px;
+  border:1px solid rgba(240,180,41,.24);
+  border-top:1px dashed rgba(240,180,41,.24);
+  background:linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+  font-size:.96rem;
+  line-height:1.65;
+  color:#cbd5e1;
+  transition:border-color .4s var(--cp-ease), background .4s var(--cp-ease);
+}
+article.container dd::before{
+  content:"A";
+  position:absolute;
+  left:22px; top:10px;
+  width:28px; height:28px;
+  display:grid;
+  place-items:center;
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:900;
+  font-size:.92rem;
+  color:#e0e7ef;
+  border-radius:50%;
+  background:linear-gradient(135deg, #1f2937, #374151);
+  box-shadow:
+    0 8px 18px -10px rgba(0,0,0,.9),
+    inset 0 0 0 1px rgba(255,255,255,.08);
+}
+article.container dd:hover{
+  border-color:rgba(240,180,41,.5);
+  background:linear-gradient(180deg, rgba(240,180,41,.05), transparent);
+}
+article.container dd a{
+  color:var(--cp-amber-lt);
+  text-decoration:none;
+  border-bottom:1px dashed rgba(240,180,41,.6);
+  transition:border-color .3s var(--cp-ease), color .3s var(--cp-ease);
+}
+article.container dd a:hover{
+  border-bottom-style:solid;
+  color:#fff;
+}
+
+/* ============================================================
+   AUTHOR BOX — editorial byline
+   ============================================================ */
+.author-box{
+  position:relative;
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+  margin:44px 0 12px;
+  padding:26px;
+  border-radius:var(--cp-r);
+  border:1px solid rgba(240,180,41,.28);
+  background:
+    linear-gradient(135deg, rgba(240,180,41,.1), rgba(255,255,255,.02) 55%, rgba(124,45,18,.08));
+  box-shadow:0 30px 58px -42px rgba(0,0,0,.9);
+  overflow:hidden;
+}
+.author-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1.5px;
+  border-radius:inherit;
+  background:conic-gradient(from var(--cp-a),
+      transparent 0turn .5turn,
+      var(--cp-amber) .66turn,
+      var(--cp-amber-lt) .76turn,
+      var(--cp-copper) .86turn,
+      transparent .95turn);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  animation:cp-spin 10s linear infinite;
+  pointer-events:none;
+}
+.author-avatar{
+  flex:0 0 auto;
+  width:66px; height:66px;
+  display:grid;
+  place-items:center;
+  font-size:1.6rem;
+  border-radius:50%;
+  background:
+    conic-gradient(from 210deg, var(--cp-amber-lt), var(--cp-amber), var(--cp-copper), var(--cp-sepia), var(--cp-amber-lt));
+  box-shadow:
+    0 0 0 4px rgba(240,180,41,.16),
+    0 16px 30px -14px rgba(240,180,41,.95);
+  animation:cp-float 6.5s ease-in-out infinite;
+}
+.author-info h4{margin:0 0 10px; letter-spacing:-.006em; color:var(--cp-amber-lt);}
+.author-info p{margin:0 0 10px; font-size:.95rem; color:#cbd5e1;}
+.author-info a{
+  display:inline-block;
+  font-weight:800;
+  font-size:.9rem;
+  color:var(--cp-amber-lt);
+  text-decoration:none;
+  border-bottom:2px solid rgba(240,180,41,.5);
+  padding-bottom:2px;
+  transition:border-color .35s var(--cp-ease), color .35s var(--cp-ease);
+}
+.author-info a:hover,
+.author-info a:focus-visible{color:#fff; border-color:var(--cp-amber-lt);}
+
+/* ============================================================
+   RELATED CARDS — editorial tiles
+   ============================================================ */
+.related-articles{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+  margin:22px 0 10px;
+}
+.related-card{
+  position:relative;
+  display:block;
+  padding:24px 22px;
+  border-radius:16px;
+  border:1px solid rgba(240,180,41,.22);
+  background:
+    linear-gradient(180deg, rgba(240,180,41,.07), rgba(255,255,255,.012) 60%, rgba(124,45,18,.05));
+  color:inherit;
+  text-decoration:none;
+  overflow:hidden;
+  transition:transform .5s var(--cp-ease), box-shadow .5s var(--cp-ease), border-color .5s var(--cp-ease);
+}
+.related-card::before{
+  content:"";
+  position:absolute;
+  top:14px; right:14px;
+  width:10px; height:10px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #fff6cf, var(--cp-amber) 70%);
+  box-shadow:0 0 0 4px rgba(240,180,41,.14);
+  transition:transform .5s var(--cp-ease), box-shadow .5s var(--cp-ease);
+}
+.related-card::after{
+  content:"";
+  position:absolute;
+  top:0; left:-130%;
+  width:60%; height:100%;
+  background:linear-gradient(100deg, transparent, rgba(255,234,167,.24), transparent);
+  transform:skewX(-18deg);
+  transition:left .95s var(--cp-ease);
+  pointer-events:none;
+}
+.related-card:hover,
+.related-card:focus-visible{
+  transform:translateY(-8px);
+  border-color:rgba(240,180,41,.6);
+  box-shadow:
+    0 34px 60px -32px rgba(0,0,0,.95),
+    0 0 26px -6px rgba(240,180,41,.45);
+}
+.related-card:hover::before{
+  transform:scale(1.5);
+  box-shadow:0 0 0 6px rgba(240,180,41,.22);
+}
+.related-card:hover::after{left:150%;}
+.related-card h4{margin:0 0 8px; transition:color .4s var(--cp-ease); color:var(--cp-amber-lt);}
+.related-card:hover h4{color:#fff;}
+.related-card p{margin:0; font-size:.93rem; opacity:.88; color:#cbd5e1;}
+
+/* ============================================================
+   FINAL CTA BUTTON ROW
+   ============================================================ */
+.cp-cta-row{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:34px 0 6px;
+}
+.cp-cta-row .btn{
+  margin-top:0 !important;
+}
+
+/* ---------- affiliate note ---------- */
+.affiliate-note{
+  margin-top:26px;
+  font-size:.85rem;
+  opacity:.72;
+  font-style:italic;
+  color:#94a3b8;
+}
+
+/* ---------- paragraph rhythm polish ---------- */
+article.container > p{line-height:1.72;}
+article.container > p strong{color:#f1f5f9;}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:640px){
+  .article-hero .cp-aperture{width:min(320px,88vw); opacity:.5;}
+  article.container h2{padding-left:40px;}
+  article.container h2::before{width:22px; height:22px; left:2px;}
+  .author-box{flex-direction:column; align-items:flex-start;}
+  .cam-grid{grid-template-columns:1fr;}
+  article.container dt,
+  article.container dd{padding-left:54px;}
+  article.container dt::before,
+  article.container dd::before{left:16px; width:24px; height:24px;}
+  article.container table.comparison-table{font-size:.78rem;}
+  article.container table.comparison-table thead th,
+  article.container table.comparison-table tbody td{padding:10px 12px;}
+}
+
+/* ============================================================
+   A11Y — reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  .article-hero *,
+  .article-hero::before,
+  .article-hero::after,
+  article.container *,
+  article.container *::before,
+  article.container *::after{
+    animation:none !important;
+    transition-duration:.01ms !important;
+  }
+}
+</style>
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -213,6 +1216,7 @@
 </nav>
 
 <section class="article-hero">
+    <span class="cp-aperture" aria-hidden="true"><span></span><span></span><span></span></span>
     <h1>Best Compact Cameras for Travel 2026</h1>
 </section>
 
@@ -230,6 +1234,7 @@
 <p><strong>What we looked for:</strong> Image quality (JPEG and RAW), lens sharpness, autofocus reliability, battery life, handling, and overall portability.</p>
 <!-- 3. QUICK TAKEAWAYS -->
 <div class="takeaways">
+<span class="cp-ring" aria-hidden="true"></span>
 <h3>⚡ Quick Takeaways – Best Compact Cameras for Travel 2026</h3>
 <ul>
 <li><strong>Best Overall / Phone Upgrade:</strong> Fujifilm X100VI – 40MP APS‑C, film simulations, hybrid viewfinder.</li>
@@ -307,27 +1312,25 @@
 <!-- 5. VIDEO HYBRID: PowerShot V1 -->
 <h2>🎥 Best Compact Video Hybrid – Canon PowerShot V1</h2>
 <p>If you want a compact that shines for both stills and video, the <strong>Canon PowerShot V1</strong> is a strong contender. It's AP's "best compact for video" and directly rivals the Sony ZV‑1 II.</p>
-<div style="background:#111; border:1px solid #333; border-radius:12px; padding:22px; margin:20px 0;">
-<div style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start;">
-<div style="flex:1; min-width:200px;">
-<h3 style="color:#fff; margin:0 0 8px 0;">Canon PowerShot V1</h3>
-<p style="color:#e94560; font-size:1.2rem; font-weight:700; margin:0 0 10px 0;">~$849 – $1,029</p>
-<ul style="list-style:none; padding:0; margin:0;">
-<li style="margin-bottom:4px; padding-left:20px; position:relative; font-size:0.9rem;">✓ 22.3×14.9mm CMOS (APS‑C‑ish)</li>
-<li style="margin-bottom:4px; padding-left:20px; position:relative; font-size:0.9rem;">✓ 16‑50mm‑e zoom lens</li>
-<li style="margin-bottom:4px; padding-left:20px; position:relative; font-size:0.9rem;">✓ 4K/60, IBIS, C‑Log 3</li>
-<li style="margin-bottom:4px; padding-left:20px; position:relative; font-size:0.9rem;">✓ Built‑in ND filter &amp; cooling fan</li>
-<li style="margin-bottom:4px; padding-left:20px; position:relative; font-size:0.9rem;">✓ 3‑capsule mic array</li>
+<div class="feature-panel">
+<div class="fp-main">
+<h3>Canon PowerShot V1</h3>
+<p class="price">~$849 – $1,029</p>
+<ul>
+<li>22.3×14.9mm CMOS (APS‑C‑ish)</li>
+<li>16‑50mm‑e zoom lens</li>
+<li>4K/60, IBIS, C‑Log 3</li>
+<li>Built‑in ND filter &amp; cooling fan</li>
+<li>3‑capsule mic array</li>
 </ul>
-<div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
-<span style="background:rgba(233,69,96,0.15); color:#e94560; padding:2px 14px; border-radius:20px; font-size:0.75rem;">Video Hybrid</span>
-<span style="background:rgba(233,69,96,0.15); color:#e94560; padding:2px 14px; border-radius:20px; font-size:0.75rem;">Built‑in ND</span>
-<span style="background:rgba(233,69,96,0.15); color:#e94560; padding:2px 14px; border-radius:20px; font-size:0.75rem;">4K/60</span>
+<div class="fp-tags">
+<span>Video Hybrid</span>
+<span>Built‑in ND</span>
+<span>4K/60</span>
 </div>
 </div>
-<div style="flex:1; min-width:200px; background:rgba(233,69,96,0.05); border-radius:8px; padding:16px;">
-<p style="margin:0; font-size:0.9rem; color:#888;"><strong style="color:#fff;">Who it's for:</strong> Creators who want a single camera for both stills and video, with pro features like Log and a built‑in ND filter. Direct rival to the Sony ZV‑1 II – <a class="content-link" href="/VideoCameraHoliday/comparisons/powershot-v1-vs-zv-1-ii.html">see the comparison →</a></p>
-</div>
+<div class="fp-side">
+<p><strong>Who it's for:</strong> Creators who want a single camera for both stills and video, with pro features like Log and a built‑in ND filter. Direct rival to the Sony ZV‑1 II – <a class="content-link" href="/VideoCameraHoliday/comparisons/powershot-v1-vs-zv-1-ii.html">see the comparison →</a></p>
 </div>
 </div>
 <!-- 6. BUDGET / VALUE SECTION -->
@@ -361,14 +1364,14 @@
 </div>
 <!-- 7. ALSO CONSIDER: Panasonic Lumix L10 -->
 <h2 id="also-consider">🆕 Also Consider – Panasonic Lumix L10</h2>
-<div style="background:#111; border:1px solid #333; border-radius:12px; padding:20px; margin:20px 0;">
-<p style="margin:0;"><strong>Panasonic Lumix L10</strong> – Amateur Photographer's "best enthusiast zoom compact" and DPReview's "fun‑to‑use compact with a zoom". It's a 2026 launch that fills the gap between the ZS99 (budget zoom) and the RX100 VII (premium zoom).</p>
-<div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
-<span style="background:rgba(233,69,96,0.15); color:#e94560; padding:2px 14px; border-radius:20px; font-size:0.75rem;">Enthusiast Zoom</span>
-<span style="background:rgba(233,69,96,0.15); color:#e94560; padding:2px 14px; border-radius:20px; font-size:0.75rem;">2026 Launch</span>
-<span style="background:rgba(233,69,96,0.15); color:#e94560; padding:2px 14px; border-radius:20px; font-size:0.75rem;">DPReview</span>
+<div class="note-panel">
+<p><strong>Panasonic Lumix L10</strong> – Amateur Photographer's "best enthusiast zoom compact" and DPReview's "fun‑to‑use compact with a zoom". It's a 2026 launch that fills the gap between the ZS99 (budget zoom) and the RX100 VII (premium zoom).</p>
+<div class="fp-tags">
+<span>Enthusiast Zoom</span>
+<span>2026 Launch</span>
+<span>DPReview</span>
 </div>
-<a class="btn" href="#" style="display:inline-block; margin-top:12px; pointer-events:none; opacity:0.6; padding:8px 20px; font-size:0.8rem;">Review Coming Soon</a>
+<a class="btn" href="#" style="display:inline-block; margin-top:14px; pointer-events:none; opacity:0.6; padding:8px 20px; font-size:0.8rem;">Review Coming Soon</a>
 </div>
 <!-- 8. COMPARISON TABLE -->
 <h2>📊 Comparison Table – Compact Travel Cameras</h2>
@@ -461,7 +1464,7 @@
 <div class="author-info">
 <h4>Dawid Millennium — Travel Videographer &amp; Founder</h4>
 <p>Travel vlogger since 2018. 50+ cameras tested on real holidays across 15+ countries. Every guide on this site is written from footage shot in the field — not from a spec sheet.</p>
-<a href="/VideoCameraHoliday/about/" style="color:#e94560; text-decoration:underline;">Learn more →</a>
+<a href="/VideoCameraHoliday/about/">Learn more →</a>
 </div>
 </div>
 <!-- 12. RELATED GUIDES -->
@@ -480,9 +1483,9 @@
 <p>Urban travel – street‑focused picks.</p>
 </a>
 </div>
-<div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center; margin:30px 0;">
+<div class="cp-cta-row">
 <a class="btn" href="/VideoCameraHoliday/destinations/">🌍 Explore Destinations</a>
-<a class="btn" href="/VideoCameraHoliday/reviews/" style="background:#333;">📸 Read Full Reviews</a>
+<a class="btn btn-outline" href="/VideoCameraHoliday/reviews/">📸 Read Full Reviews</a>
 </div>
 <p class="affiliate-note">Some links are affiliate links. We earn a small commission at no extra cost to you. All picks are based on real testing.</p>
 </article>
@@ -493,13 +1496,6 @@
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -631,8 +1627,6 @@
     backdrop.addEventListener('click', closeDrawer);
 
     /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -692,13 +1686,10 @@
                 });
                 return;
             }
-            var bestPanel = null, bestCount = 0;
             panels.forEach(function(p){
-                var count = 0;
                 p.querySelectorAll('li').forEach(function(li){
                     var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
                     li.style.display = match ? '' : 'none';
-                    if (match) count++;
                 });
                 p.querySelectorAll('h5').forEach(function(h){
                     var sib = h.nextElementSibling, anyVisible = false;
@@ -708,25 +1699,11 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
+    /* -------------------- Newsletter -------------------- */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -755,7 +1732,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
