@@ -4,7 +4,251 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Terms of use for Holiday Video Camera. Information about our content, affiliate links, intellectual property, and user responsibilities." name="description"/>
 <title>Terms of Use | Holiday Video Camera</title>
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/terms.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">{
+
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/terms.html" rel="canonical"/>
+
+<!-- ===== TERMS PAGE ENHANCEMENTS ===== -->
+<style>
+    /* ---- Terms Container ---- */
+    .terms-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* ---- Hero Section ---- */
+    .terms-hero {
+        text-align: center;
+        padding: 60px 20px 30px;
+    }
+    .terms-hero h1 {
+        font-size: 2.4rem;
+        background: linear-gradient(135deg, #ffffff, #e94560);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 16px;
+    }
+    .terms-hero .subtitle {
+        color: #aaa;
+        max-width: 620px;
+        margin: 0 auto;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    .terms-hero .last-updated {
+        color: #666;
+        font-size: 0.85rem;
+        margin-top: 16px;
+    }
+
+    /* ---- Summary Box ---- */
+    .summary-box {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        border: 1px solid #2a2a4a;
+        border-radius: 16px;
+        padding: 26px 30px;
+        margin: 0 0 40px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .summary-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: #e94560;
+    }
+    .summary-box h2 {
+        color: #e94560;
+        font-size: 1.15rem;
+        margin: 0 0 14px 0;
+    }
+    .summary-box ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #ccc;
+        line-height: 1.8;
+    }
+    .summary-box li {
+        margin-bottom: 6px;
+    }
+    .summary-box strong {
+        color: #fff;
+    }
+
+    /* ---- TOC ---- */
+    .toc {
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin: 30px 0;
+    }
+    .toc h3 {
+        color: #e94560;
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 1.1rem;
+    }
+    .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 20px;
+    }
+    .toc ul li a {
+        color: #999;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        display: block;
+        padding: 4px 0;
+    }
+    .toc ul li a:hover {
+        color: #e94560;
+        padding-left: 4px;
+    }
+
+    /* ---- Policy Sections ---- */
+    .policy-section {
+        margin: 40px 0;
+        padding: 28px 30px;
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        transition: border-color 0.3s ease;
+    }
+    .policy-section:hover {
+        border-color: #333;
+    }
+    .policy-section h2 {
+        color: #fff;
+        font-size: 1.35rem;
+        margin: 0 0 18px 0;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #2a2a2a;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .policy-section h2 .num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #e94560;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+    .policy-section p {
+        color: #ccc;
+        line-height: 1.85;
+        margin-bottom: 16px;
+        font-size: 1rem;
+    }
+    .policy-section p:last-child {
+        margin-bottom: 0;
+    }
+    .policy-section ul {
+        color: #ccc;
+        line-height: 1.85;
+        padding-left: 20px;
+        margin-bottom: 16px;
+    }
+    .policy-section ul li {
+        margin-bottom: 8px;
+    }
+    .policy-section ul li strong {
+        color: #fff;
+    }
+    .policy-section a {
+        color: #e94560;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+        transition: border-color 0.3s ease;
+    }
+    .policy-section a:hover {
+        border-bottom-color: #e94560;
+    }
+
+    /* ---- Contact Card ---- */
+    .contact-card {
+        background: rgba(233, 69, 96, 0.06);
+        border: 1px solid rgba(233, 69, 96, 0.25);
+        border-radius: 16px;
+        padding: 30px;
+        text-align: center;
+        margin: 40px 0;
+    }
+    .contact-card h2 {
+        color: #e94560;
+        margin: 0 0 12px 0;
+        font-size: 1.3rem;
+    }
+    .contact-card p {
+        color: #aaa;
+        max-width: 480px;
+        margin: 0 auto 20px;
+        line-height: 1.7;
+    }
+    .contact-card .btn {
+        display: inline-block;
+        padding: 12px 32px;
+        background: #e94560;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    .contact-card .btn:hover {
+        background: #c7354e;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(233, 69, 96, 0.25);
+    }
+
+    /* ---- Back to Top ---- */
+    .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #888;
+        text-decoration: none;
+        font-size: 0.85rem;
+        margin-top: 20px;
+        transition: color 0.3s ease;
+    }
+    .back-to-top:hover {
+        color: #e94560;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 768px) {
+        .terms-hero h1 {
+            font-size: 1.7rem;
+        }
+        .toc ul {
+            grid-template-columns: 1fr;
+        }
+        .policy-section {
+            padding: 22px 20px;
+        }
+    }
+</style>
+<!-- ===== TERMS PAGE ENHANCEMENTS END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -13,11 +257,20 @@
       "position": 1,
       "name": "Home",
       "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Terms of Use",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/terms.html"
     }
   ]
-}</script></head>
-<body><h1>Terms of Use | Holiday Video Camera</h1>
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+}</script>
+</head>
+<body>
+
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -186,51 +439,129 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === --><article class="container">
-<p>Welcome to Holiday Video Camera. By accessing and using this website, you accept and agree to be bound by the following terms and conditions. If you do not agree with any part of these terms, please do not use this site.</p>
-<h2>1. Content and Intellectual Property</h2>
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+        <li><a href="/VideoCameraHoliday/">Home</a></li>
+        <li aria-current="page">Terms of Use</li>
+    </ol>
+</nav>
+
+<div class="terms-container">
+
+<!-- Hero -->
+<section class="terms-hero">
+<h1>Terms of Use</h1>
+<p class="subtitle">Welcome to Holiday Video Camera. By accessing and using this website, you accept and agree to be bound by the following terms and conditions. If you do not agree with any part of these terms, please do not use this site.</p>
+<p class="last-updated">🕐 Last updated: September 14, 2026</p>
+</section>
+
+<!-- Summary Box -->
+<div class="summary-box">
+<h2>📌 The Short Version</h2>
+<ul>
+<li>All content on this site is <strong>owned by Holiday Video Camera</strong> — please don't republish it without permission.</li>
+<li>Some links are <strong>affiliate links</strong>. If you buy through them, we may earn a small commission at no extra cost to you.</li>
+<li>We test cameras honestly — <strong>affiliate relationships never influence our editorial opinions</strong>.</li>
+<li>Prices and specs change constantly, so <strong>always verify details</strong> with the manufacturer or retailer before buying.</li>
+<li>Travel and purchasing decisions are <strong>your responsibility</strong>.</li>
+</ul>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+<h3>On This Page</h3>
+<ul>
+<li><a href="#content">1. Content &amp; Intellectual Property</a></li>
+<li><a href="#affiliate">2. Affiliate Links &amp; Advertising</a></li>
+<li><a href="#accuracy">3. Accuracy of Information</a></li>
+<li><a href="#conduct">4. User Conduct</a></li>
+<li><a href="#liability">5. Limitation of Liability</a></li>
+<li><a href="#changes">6. Changes to These Terms</a></li>
+<li><a href="#contact">7. Contact Us</a></li>
+</ul>
+</div>
+
+<!-- Section 1 -->
+<div class="policy-section" id="content">
+<h2><span class="num">1</span> Content and Intellectual Property</h2>
 <p>All content on this website — including text, reviews, comparisons, guides, images, and logos — is the property of Holiday Video Camera unless otherwise noted. You may not reproduce, distribute, or republish any material without prior written permission.</p>
 <ul>
-<li>You may share links to our articles on social media or personal websites.</li>
-<li>You may not copy entire articles and repost them elsewhere.</li>
-<li>You may not use our content for commercial purposes without consent.</li>
+<li>You may <strong>share links</strong> to our articles on social media or personal websites.</li>
+<li>You may <strong>not copy entire articles</strong> and repost them elsewhere.</li>
+<li>You may <strong>not use our content for commercial purposes</strong> without consent.</li>
 </ul>
-<h2>2. Affiliate Links and Advertising</h2>
+</div>
+
+<!-- Section 2 -->
+<div class="policy-section" id="affiliate">
+<h2><span class="num">2</span> Affiliate Links and Advertising</h2>
 <p>Some links on this website are affiliate links. If you click an affiliate link and make a purchase, we may receive a commission at no additional cost to you. This helps support our testing and content creation.</p>
 <ul>
-<li>We only recommend products we have tested or believe are genuinely valuable.</li>
-<li>Affiliate relationships do not influence our editorial opinions.</li>
-<li>We are not responsible for the content or practices of third-party websites.</li>
+<li>We <strong>only recommend products we have tested</strong> or believe are genuinely valuable.</li>
+<li>Affiliate relationships <strong>do not influence our editorial opinions</strong>.</li>
+<li>We are <strong>not responsible for the content or practices</strong> of third-party websites.</li>
 </ul>
-<h2>3. Accuracy of Information</h2>
+</div>
+
+<!-- Section 3 -->
+<div class="policy-section" id="accuracy">
+<h2><span class="num">3</span> Accuracy of Information</h2>
 <p>We strive to provide accurate, up-to-date information, but camera specifications, prices, and availability can change. We make no warranties about the completeness or accuracy of the content. Always verify details with the manufacturer or retailer before making a purchase.</p>
-<h2>4. User Conduct</h2>
+</div>
+
+<!-- Section 4 -->
+<div class="policy-section" id="conduct">
+<h2><span class="num">4</span> User Conduct</h2>
 <p>If you interact with our site — for example, by subscribing to a newsletter or leaving comments — you agree not to:</p>
 <ul>
-<li>Post spam, offensive, or unlawful content</li>
-<li>Attempt to compromise the security of the website</li>
-<li>Use automated tools to scrape or harvest data</li>
+<li>Post spam, offensive, or unlawful content.</li>
+<li>Attempt to compromise the security of the website.</li>
+<li>Use automated tools to scrape or harvest data.</li>
 </ul>
-<h2>5. Limitation of Liability</h2>
+</div>
+
+<!-- Section 5 -->
+<div class="policy-section" id="liability">
+<h2><span class="num">5</span> Limitation of Liability</h2>
 <p>Holiday Video Camera will not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on its content. All travel and purchasing decisions are your responsibility.</p>
-<h2>6. Changes to These Terms</h2>
+</div>
+
+<!-- Section 6 -->
+<div class="policy-section" id="changes">
+<h2><span class="num">6</span> Changes to These Terms</h2>
 <p>We may update these Terms of Use from time to time. Any changes will be posted on this page with an updated "last modified" date. Continued use of the site after changes constitutes acceptance.</p>
-<h2>7. Contact</h2>
-<p>If you have any questions about these terms, please visit our <a class="content-link" href="/VideoCameraHoliday/contact.html">Contact</a> page.</p>
-</article>
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+</div>
+
+<!-- Section 7 -->
+<div class="policy-section" id="contact">
+<h2><span class="num">7</span> Contact Us</h2>
+<p>If you have any questions about these terms, please visit our <a href="/VideoCameraHoliday/contact.html">Contact page</a>. We aim to respond to all enquiries within 48 hours.</p>
+</div>
+
+<!-- Contact Card -->
+<div class="contact-card">
+<h2>Questions About These Terms?</h2>
+<p>If anything here is unclear, or you'd like to request permission to use our content, we'd love to hear from you.</p>
+<a class="btn" href="/VideoCameraHoliday/contact.html">Contact Us</a>
+</div>
+
+<!-- Back to Top -->
+<div style="text-align:center; padding-bottom:40px;">
+<a class="back-to-top" href="#">↑ Back to top</a>
+</div>
+
+</div><!-- /.terms-container -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -308,6 +639,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -317,15 +649,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -339,7 +666,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -356,14 +682,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -374,7 +696,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -396,7 +717,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -411,7 +731,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -439,25 +758,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -475,7 +779,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -486,7 +789,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -495,5 +797,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
