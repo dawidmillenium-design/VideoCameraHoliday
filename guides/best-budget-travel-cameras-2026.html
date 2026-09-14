@@ -8,453 +8,951 @@
 <link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
 <link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-budget-travel-cameras-2026.html" rel="canonical"/>
 
-<!-- ===== BUDGET GUIDE ENHANCEMENTS ===== -->
+<!-- ===== BUDGET GUIDE ENHANCEMENTS — VAULT EDITION ===== -->
 <style>
-    /* ---- Guide Container ---- */
-    .guide-container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+/* ============================================================
+   VAULT 2026 — premium value / budget guide content CSS
+   Scope: .guide-container only (header, drawer, footer untouched)
+   ============================================================ */
 
-    /* ---- Hero Section ---- */
-    .guide-hero {
-        text-align: center;
-        padding: 60px 20px 30px;
-    }
-    .guide-hero h1 {
-        font-size: 2.4rem;
-        background: linear-gradient(135deg, #ffffff, #e94560);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 16px;
-    }
-    .guide-hero .subtitle {
-        color: #aaa;
-        max-width: 650px;
-        margin: 0 auto;
-        font-size: 1.1rem;
-        line-height: 1.7;
-    }
+/* ---------- tokens + container ---------- */
+.guide-container{
+  --v-gold:        #ffd66b;
+  --v-gold-light:  #ffeaa7;
+  --v-gold-deep:   #d4a017;
+  --v-emerald:     #10b981;
+  --v-emerald-lt:  #34d399;
+  --v-emerald-dp:  #047857;
+  --v-emerald-dk:  #052e24;
+  --v-mint:        #6ee7b7;
+  --v-ink:         #06170f;
+  --v-ink-2:       #0b2419;
+  --v-cream:       #f8fafc;
+  --v-muted:       #94a3b8;
+  --v-r:           18px;
+  --v-ease:        cubic-bezier(.22,1,.36,1);
 
-    /* ---- Quick Picks Bar ---- */
-    .quick-picks {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 16px;
-        margin: 30px 0 40px;
-    }
-    .quick-pick {
-        background: #111;
-        border: 1px solid #2a2a2a;
-        border-radius: 12px;
-        padding: 18px;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
-    .quick-pick:hover {
-        border-color: #e94560;
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(233, 69, 96, 0.12);
-    }
-    .quick-pick .icon {
-        font-size: 1.6rem;
-        display: block;
-        margin-bottom: 8px;
-    }
-    .quick-pick .label {
-        font-size: 0.75rem;
-        color: #e94560;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 600;
-    }
-    .quick-pick .name {
-        font-size: 0.95rem;
-        color: #fff;
-        font-weight: 600;
-        margin: 6px 0 4px;
-    }
-    .quick-pick .price {
-        font-size: 0.85rem;
-        color: #4caf50;
-        font-weight: 600;
-    }
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 24px;
+  color: #d7e2ea;
+  font-size: 1rem;
+  line-height: 1.65;
+  position: relative;
+}
 
-    /* ---- Section Titles ---- */
-    .section-title {
-        font-size: 1.6rem;
-        color: #fff;
-        margin: 50px 0 24px 0;
-        padding-bottom: 12px;
-        border-bottom: 2px solid #2a2a2a;
-    }
+/* ============================================================
+   HERO — Vault door with floating coin sparkles
+   ============================================================ */
+.guide-hero{
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin: 8px 0 24px;
+  padding: clamp(56px, 8vw, 96px) clamp(20px, 4vw, 44px) clamp(48px, 6vw, 68px);
+  text-align: center;
+  color: #fff;
+  border-radius: 26px;
+  background:
+    radial-gradient(ellipse 72% 46% at 50% 0%,   rgba(255,214,107,.24), transparent 62%),
+    radial-gradient(ellipse 60% 42% at 10% 100%, rgba(110,231,183,.16), transparent 62%),
+    radial-gradient(ellipse 60% 42% at 92% 100%, rgba(16,185,129,.18), transparent 62%),
+    linear-gradient(160deg, #041811 0%, #082e22 42%, #0b4532 78%, #051d15 100%);
+  box-shadow:
+    0 36px 68px -46px rgba(0,0,0,.95),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+/* animated floating coin sparkles */
+.guide-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(2px 2px at 8% 30%, rgba(255,214,107,.95), transparent 60%),
+    radial-gradient(2.4px 2.4px at 20% 62%, rgba(255,234,167,.85), transparent 60%),
+    radial-gradient(1.6px 1.6px at 34% 22%, rgba(255,255,255,.75), transparent 60%),
+    radial-gradient(2px 2px at 48% 70%, rgba(255,214,107,.9), transparent 60%),
+    radial-gradient(1.6px 1.6px at 62% 30%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(2.4px 2.4px at 76% 60%, rgba(255,234,167,.85), transparent 60%),
+    radial-gradient(1.6px 1.6px at 88% 26%, rgba(255,214,107,.9), transparent 60%),
+    radial-gradient(2px 2px at 94% 72%, rgba(110,231,183,.7), transparent 60%),
+    radial-gradient(1.6px 1.6px at 14% 84%, rgba(110,231,183,.6), transparent 60%),
+    radial-gradient(1.6px 1.6px at 68% 88%, rgba(255,214,107,.6), transparent 60%);
+  animation: v-twinkle 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+/* concentric vault rings */
+.guide-hero::after{
+  content:"";
+  position:absolute;
+  left:50%; top:50%;
+  width: 340px; height: 340px;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 62%, rgba(255,214,107,.12) 63%, transparent 66%),
+    radial-gradient(circle, transparent 78%, rgba(255,214,107,.08) 79%, transparent 82%),
+    radial-gradient(circle, transparent 92%, rgba(255,214,107,.05) 93%, transparent 96%);
+  pointer-events: none;
+  z-index: 0;
+  animation: v-vault-spin 40s linear infinite;
+}
+.guide-hero > *{ position: relative; z-index: 2; }
 
-    /* ---- Budget Cards Grid ---- */
-    .budget-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 24px;
-        margin: 30px 0;
-    }
-    .budget-card {
-        display: flex;
-        flex-direction: column;
-        background: #111;
-        border: 1px solid #2a2a2a;
-        border-radius: 16px;
-        padding: 24px;
-        text-decoration: none;
-        color: #fff;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-    .budget-card:hover {
-        transform: translateY(-6px);
-        border-color: #e94560;
-        background: #1a1a1a;
-        box-shadow: 0 12px 30px rgba(233, 69, 96, 0.15);
-    }
-    .budget-card .price-tag {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        font-size: 0.7rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        padding: 4px 10px;
-        border-radius: 20px;
-    }
-    .price-tag-blue {
-        background: rgba(30, 136, 229, 0.15);
-        color: #42a5f5;
-    }
-    .price-tag-orange {
-        background: rgba(251, 140, 0, 0.15);
-        color: #ffa726;
-    }
-    .price-tag-green {
-        background: rgba(67, 160, 71, 0.15);
-        color: #66bb6a;
-    }
-    .budget-card .emoji {
-        font-size: 2.2rem;
-        margin-bottom: 12px;
-    }
-    .budget-card h3 {
-        font-size: 1.15rem;
-        margin: 0 0 8px 0;
-        color: #fff;
-    }
-    .budget-card .price {
-        font-size: 1.3rem;
-        font-weight: bold;
-        color: #4caf50;
-        margin-bottom: 10px;
-    }
-    .budget-card p {
-        color: #aaa;
-        font-size: 0.88rem;
-        line-height: 1.6;
-        margin: 0 0 16px 0;
-        flex-grow: 1;
-    }
-    .badge-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-    .badge {
-        font-size: 0.7rem;
-        padding: 3px 10px;
-        border-radius: 12px;
-        background: #1e1e1e;
-        color: #aaa;
-        border: 1px solid #333;
-    }
-    .badge-blue {
-        background: rgba(30, 136, 229, 0.1);
-        color: #42a5f5;
-        border-color: rgba(30, 136, 229, 0.3);
-    }
-    .badge-orange {
-        background: rgba(251, 140, 0, 0.1);
-        color: #ffa726;
-        border-color: rgba(251, 140, 0, 0.3);
-    }
-    .badge-green {
-        background: rgba(67, 160, 71, 0.1);
-        color: #66bb6a;
-        border-color: rgba(67, 160, 71, 0.3);
-    }
+.guide-hero h1{
+  margin: 0 auto 18px;
+  max-width: 22ch;
+  font-size: clamp(1.85rem, 4.8vw, 3.1rem);
+  line-height: 1.06;
+  letter-spacing: -.024em;
+  background: linear-gradient(100deg,
+    #ffffff 0%, #ffeaa7 20%, #ffd66b 36%,
+    #ffffff 52%, #ffeaa7 68%, #ffd66b 84%, #ffffff 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 18px 34px rgba(0,0,0,.6));
+  animation: v-shine 8s linear infinite;
+}
+.guide-hero .subtitle{
+  color: rgba(226,232,240,.82);
+  max-width: 62ch;
+  margin: 0 auto;
+  font-size: clamp(.98rem, 1.3vw, 1.08rem);
+  line-height: 1.7;
+}
+.guide-hero .subtitle strong{ color: var(--v-gold-light); }
 
-    /* ---- Comparison Table ---- */
-    .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 30px 0;
-        background: #111;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid #2a2a2a;
-        font-size: 0.9rem;
-    }
-    .comparison-table th {
-        background: #1a1a2e;
-        color: #e94560;
-        padding: 14px 14px;
-        text-align: left;
-        font-weight: 600;
-    }
-    .comparison-table td {
-        padding: 12px 14px;
-        border-bottom: 1px solid #222;
-        color: #ccc;
-    }
-    .comparison-table tr:last-child td {
-        border-bottom: none;
-    }
-    .comparison-table tr:hover td {
-        background: rgba(233, 69, 96, 0.04);
-    }
+/* ============================================================
+   QUICK PICKS — coin tokens
+   ============================================================ */
+.quick-picks{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  margin: 28px 0 36px;
+}
+.quick-pick{
+  position: relative;
+  display: block;
+  padding: 20px 16px 18px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255,214,107,.24);
+  background:
+    linear-gradient(180deg, rgba(255,214,107,.07), rgba(16,185,129,.05) 60%, rgba(255,214,107,.03));
+  color: #fff;
+  overflow: hidden;
+  transition: transform .5s var(--v-ease), border-color .5s var(--v-ease), box-shadow .5s var(--v-ease);
+}
+.quick-pick::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background: linear-gradient(90deg, var(--v-gold-deep), var(--v-gold) 35%, var(--v-gold-light) 55%, var(--v-gold) 75%, var(--v-gold-deep));
+  background-size: 200% 100%;
+  animation: v-slide 6s linear infinite;
+}
+.quick-pick::after{
+  content:"";
+  position:absolute;
+  top:0; left:-130%;
+  width: 60%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,234,167,.24), transparent);
+  transform: skewX(-18deg);
+  transition: left .95s var(--v-ease);
+  pointer-events: none;
+}
+.quick-pick:hover,
+.quick-pick:focus-visible{
+  transform: translateY(-6px);
+  border-color: rgba(255,214,107,.6);
+  box-shadow:
+    0 26px 48px -28px rgba(255,214,107,.55),
+    0 0 24px -6px rgba(16,185,129,.45);
+}
+.quick-pick:hover::after{ left: 150%; }
+.quick-pick .icon{
+  display: block;
+  font-size: 1.85rem;
+  line-height: 1;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 6px 14px rgba(255,214,107,.35));
+}
+.quick-pick .label{
+  display: block;
+  font-size: .7rem;
+  color: var(--v-gold);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.quick-pick .name{
+  display: block;
+  font-size: .96rem;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -.005em;
+  margin: 2px 0 6px;
+}
+.quick-pick .price{
+  display: inline-block;
+  font-size: .84rem;
+  font-weight: 900;
+  color: var(--v-mint);
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: rgba(16,185,129,.12);
+  border: 1px solid rgba(110,231,183,.28);
+}
 
-    /* ---- Choose Section ---- */
-    .choose-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 18px;
-        margin: 24px 0;
-    }
-    .choose-card {
-        background: #111;
-        border: 1px solid #2a2a2a;
-        border-radius: 14px;
-        padding: 22px;
-        transition: all 0.3s ease;
-    }
-    .choose-card:hover {
-        border-color: #e94560;
-        transform: translateY(-3px);
-    }
-    .choose-card h4 {
-        margin: 0 0 8px 0;
-        font-size: 1rem;
-    }
-    .choose-card p {
-        color: #999;
-        font-size: 0.88rem;
-        line-height: 1.6;
-        margin: 0;
-    }
-    .choose-card .recommendation {
-        display: inline-block;
-        margin-top: 10px;
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: #e94560;
-    }
+/* ============================================================
+   TAKEAWAY / TAKEAWAY-BOX
+   ============================================================ */
+.takeaway-box{
+  position: relative;
+  margin: 30px 0;
+  padding: 26px 28px 22px 30px;
+  border-radius: var(--v-r);
+  border: 1px solid rgba(255,214,107,.28);
+  background:
+    linear-gradient(135deg, rgba(255,214,107,.1), rgba(16,185,129,.07) 55%, rgba(255,214,107,.04));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 26px 52px -42px rgba(0,0,0,.85);
+  overflow: hidden;
+}
+.takeaway-box::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--v-gold), var(--v-gold-light) 40%, var(--v-emerald) 100%);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 24px -4px rgba(255,214,107,.85);
+}
+.takeaway-box h3{
+  margin: 0 0 14px;
+  font-size: 1.08rem;
+  letter-spacing: -.006em;
+  color: var(--v-gold-light);
+}
+.takeaway-box ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.takeaway-box li{
+  position: relative;
+  padding: 8px 0 8px 28px;
+  color: #cfdae5;
+  line-height: 1.65;
+}
+.takeaway-box li::before{
+  content:"";
+  position: absolute;
+  left: 4px; top: 17px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff6cf, var(--v-gold) 70%);
+  box-shadow: 0 0 0 4px rgba(255,214,107,.14);
+}
+.takeaway-box li strong{ color: var(--v-gold-light); }
 
-    /* ---- Value Pick Box ---- */
-    .value-box {
-        background: linear-gradient(135deg, #1a1a2e, #16213e);
-        border: 1px solid #2a2a4a;
-        border-radius: 16px;
-        padding: 28px;
-        margin: 30px 0;
-        position: relative;
-        overflow: hidden;
-    }
-    .value-box::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: #e94560;
-    }
-    .value-box h3 {
-        color: #e94560;
-        margin: 0 0 12px 0;
-    }
-    .value-box p {
-        color: #ccc;
-        line-height: 1.7;
-        margin: 0;
-    }
-    .value-box .tag-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 16px;
-    }
-    .value-box .tag-row span {
-        background: rgba(233, 69, 96, 0.12);
-        color: #e94560;
-        padding: 3px 14px;
-        border-radius: 20px;
-        font-size: 0.78rem;
-        font-weight: 500;
-    }
+/* ============================================================
+   SECTION TITLES — engraved vault plaque
+   ============================================================ */
+.section-title{
+  position: relative;
+  margin: clamp(44px, 6vw, 72px) 0 22px;
+  padding: 0 0 16px 46px;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  letter-spacing: -.014em;
+  color: #ffffff;
+  border-bottom: 0;
+  scroll-margin-top: 96px;
+}
+.section-title::before{
+  content:"";
+  position: absolute;
+  left: 6px; top: 50%;
+  transform: translateY(-70%);
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 30%, #fff8d6 0%, var(--v-gold-light) 40%, var(--v-gold) 68%, var(--v-gold-deep) 100%);
+  box-shadow:
+    0 0 0 4px rgba(255,214,107,.14),
+    0 10px 20px -10px rgba(255,214,107,.9);
+}
+.section-title::after{
+  content:"";
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 4px;
+  width: min(100%, 320px);
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--v-gold), var(--v-gold-light) 30%, rgba(110,231,183,.55) 68%, transparent);
+  box-shadow: 0 8px 22px -10px rgba(255,214,107,.85);
+  transform-origin: left center;
+  animation: v-line 1.1s var(--v-ease) both;
+}
 
-    /* ---- Author Box ---- */
-    .author-box {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        padding: 24px;
-        margin: 40px 0;
-        background: #111;
-        border: 1px solid #2a2a2a;
-        border-radius: 16px;
-    }
-    .author-avatar {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #e94560, #b8304a);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.6rem;
-        flex-shrink: 0;
-    }
-    .author-info h4 {
-        margin: 0 0 4px 0;
-        color: #e94560;
-        font-size: 1rem;
-    }
-    .author-info p {
-        margin: 0;
-        color: #888;
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
+/* ============================================================
+   BUDGET CARDS — emerald vault with gold rim
+   ============================================================ */
+.budget-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 28px 0 12px;
+}
+.budget-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 22px 24px;
+  border-radius: var(--v-r);
+  border: 1px solid rgba(255,214,107,.24);
+  background:
+    linear-gradient(180deg, rgba(255,214,107,.06), rgba(16,185,129,.04) 55%, rgba(255,214,107,.03));
+  color: #e6edf3;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 26px 54px -42px rgba(0,0,0,.9);
+  transition: transform .55s var(--v-ease), border-color .55s var(--v-ease), box-shadow .55s var(--v-ease);
+}
+/* metallic gold rim */
+.budget-card::before{
+  content:"";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--v-gold-deep), var(--v-gold) 30%, var(--v-gold-light) 55%, var(--v-gold) 78%, var(--v-gold-deep));
+  background-size: 200% 100%;
+  animation: v-slide 6s linear infinite;
+}
+/* gold sweep */
+.budget-card::after{
+  content:"";
+  position: absolute;
+  top: 0; left: -130%;
+  width: 60%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,234,167,.22), transparent);
+  transform: skewX(-18deg);
+  transition: left .95s var(--v-ease);
+  pointer-events: none;
+}
+.budget-card:hover,
+.budget-card:focus-visible{
+  transform: translateY(-8px);
+  border-color: rgba(255,214,107,.6);
+  box-shadow:
+    0 34px 64px -32px rgba(0,0,0,.95),
+    0 0 30px -6px rgba(255,214,107,.45),
+    0 0 40px -10px rgba(16,185,129,.35);
+}
+.budget-card:hover::after{ left: 150%; }
 
-    /* ---- CTA Box ---- */
-    .cta-box {
-        background: rgba(233, 69, 96, 0.06);
-        border: 1px solid rgba(233, 69, 96, 0.25);
-        border-radius: 16px;
-        padding: 36px 30px;
-        text-align: center;
-        margin: 40px 0;
-    }
-    .cta-box h2 {
-        color: #e94560;
-        margin-top: 0;
-        font-size: 1.5rem;
-    }
-    .cta-box p {
-        color: #aaa;
-        max-width: 520px;
-        margin: 10px auto 22px;
-        line-height: 1.6;
-    }
-    .cta-box .btn {
-        display: inline-block;
-        padding: 13px 34px;
-        background: #e94560;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 30px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-    }
-    .cta-box .btn:hover {
-        background: #c7354e;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(233, 69, 96, 0.25);
-    }
+/* corner price tag */
+.budget-card .price-tag{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: .68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #2a1e02;
+  background: linear-gradient(135deg, var(--v-gold-light), var(--v-gold) 55%, var(--v-gold-deep));
+  border: 1px solid rgba(255,255,255,.35);
+  box-shadow: 0 10px 22px -12px rgba(255,214,107,.95);
+  z-index: 2;
+  transition: transform .45s var(--v-ease), box-shadow .45s var(--v-ease);
+}
+.budget-card:hover .price-tag{
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 14px 26px -12px rgba(255,214,107,1);
+}
+/* tag variants keep the same gold treatment but tint the ring */
+.price-tag-blue{
+  background: linear-gradient(135deg, #bfefff, #7dd3fc 55%, #0284c7) !important;
+  color: #04222e !important;
+  box-shadow: 0 10px 22px -12px rgba(56,189,248,.95) !important;
+}
+.price-tag-orange{
+  background: linear-gradient(135deg, #ffd8a8, #ffa94d 55%, #d97706) !important;
+  color: #2a0d02 !important;
+  box-shadow: 0 10px 22px -12px rgba(255,169,77,.95) !important;
+}
+.price-tag-green{
+  background: linear-gradient(135deg, #bbf7d0, #4ade80 55%, #15803d) !important;
+  color: #052e1a !important;
+  box-shadow: 0 10px 22px -12px rgba(74,222,128,.95) !important;
+}
 
-    /* ---- Takeaway Box ---- */
-    .takeaway-box {
-        background: #111;
-        border: 1px solid #2a2a2a;
-        border-left: 4px solid #e94560;
-        border-radius: 0 12px 12px 0;
-        padding: 22px 26px;
-        margin: 30px 0;
-    }
-    .takeaway-box h3 {
-        color: #e94560;
-        margin: 0 0 14px 0;
-        font-size: 1.1rem;
-    }
-    .takeaway-box ul {
-        margin: 0;
-        padding-left: 20px;
-        color: #bbb;
-        line-height: 1.8;
-    }
-    .takeaway-box li {
-        margin-bottom: 6px;
-    }
+.budget-card .emoji{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px; height: 54px;
+  margin-bottom: 14px;
+  font-size: 1.8rem;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,.18), transparent 60%),
+    linear-gradient(135deg, rgba(255,214,107,.22), rgba(16,185,129,.16));
+  border: 1px solid rgba(255,214,107,.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.2),
+    0 12px 24px -14px rgba(255,214,107,.85);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.35));
+  transition: transform .5s var(--v-ease);
+}
+.budget-card:hover .emoji{ transform: translateY(-3px) rotate(-4deg); }
 
-    /* ---- Related Cards ---- */
-    .related-articles {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 20px;
-        margin: 20px 0 40px;
-    }
-    .related-card {
-        padding: 20px;
-        text-decoration: none;
-        display: block;
-        background: #111;
-        border: 1px solid #2a2a2a;
-        border-radius: 16px;
-        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-    .related-card:hover {
-        transform: translateY(-4px);
-        border-color: #e94560;
-        box-shadow: 0 8px 24px rgba(233, 69, 96, 0.15);
-    }
-    .related-card h4 {
-        color: #e94560;
-        margin: 0 0 8px 0;
-        font-size: 1rem;
-    }
-    .related-card p {
-        color: #888;
-        font-size: 0.85rem;
-        margin: 0;
-        line-height: 1.5;
-    }
+.budget-card h3{
+  margin: 0 0 8px;
+  font-size: 1.12rem;
+  letter-spacing: -.006em;
+  color: #ffffff;
+  padding-right: 66px; /* room for corner tag */
+  transition: color .4s var(--v-ease);
+}
+.budget-card:hover h3{ color: var(--v-gold-light); }
 
-    /* ---- Responsive ---- */
-    @media (max-width: 768px) {
-        .guide-hero h1 {
-            font-size: 1.7rem;
-        }
-        .quick-picks {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .budget-grid {
-            grid-template-columns: 1fr;
-        }
-        .choose-grid {
-            grid-template-columns: 1fr;
-        }
-        .author-box {
-            flex-direction: column;
-            text-align: center;
-        }
-        .comparison-table {
-            font-size: 0.78rem;
-        }
-        .comparison-table th, .comparison-table td {
-            padding: 8px 10px;
-        }
-        .related-articles {
-            grid-template-columns: 1fr;
-        }
-    }
+.budget-card .price{
+  display: inline-block;
+  margin: 4px 0 14px;
+  padding: 5px 16px;
+  font-size: 1.24rem;
+  font-weight: 900;
+  letter-spacing: .02em;
+  border-radius: 999px;
+  color: var(--v-gold-light);
+  background: linear-gradient(135deg, rgba(255,214,107,.16), rgba(4,120,87,.28));
+  border: 1px solid rgba(255,214,107,.48);
+  box-shadow: 0 12px 24px -16px rgba(255,214,107,.95);
+}
+
+.budget-card p{
+  margin: 0 0 18px;
+  color: #b8c4d0;
+  font-size: .92rem;
+  line-height: 1.62;
+  flex-grow: 1;
+}
+
+/* badges — small vault chips */
+.badge-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  color: #cbd5e1;
+  border: 1px solid rgba(255,255,255,.1);
+  transition: transform .4s var(--v-ease), border-color .4s var(--v-ease);
+}
+.badge::before{
+  content:"";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--v-gold), var(--v-emerald));
+  box-shadow: 0 0 8px rgba(255,214,107,.6);
+}
+.badge-blue{
+  background: rgba(56,189,248,.1);
+  color: #7dd3fc;
+  border-color: rgba(56,189,248,.3);
+}
+.badge-blue::before{ background: linear-gradient(135deg, #7dd3fc, #0284c7); }
+.badge-orange{
+  background: rgba(255,169,77,.1);
+  color: #ffa94d;
+  border-color: rgba(255,169,77,.3);
+}
+.badge-orange::before{ background: linear-gradient(135deg, #ffd8a8, #d97706); }
+.badge-green{
+  background: rgba(74,222,128,.1);
+  color: #4ade80;
+  border-color: rgba(74,222,128,.3);
+}
+.badge-green::before{ background: linear-gradient(135deg, #bbf7d0, #15803d); }
+.badge:hover{ transform: translateY(-1px); }
+
+/* ============================================================
+   COMPARISON TABLE — ledger style
+   ============================================================ */
+.comparison-table{
+  width: 100%;
+  margin: 28px 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .92rem;
+  border: 1px solid rgba(255,214,107,.22);
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,214,107,.04), rgba(16,185,129,.03));
+  box-shadow: 0 30px 58px -44px rgba(0,0,0,.9);
+}
+.comparison-table thead th{
+  padding: 15px 16px;
+  text-align: left;
+  font-weight: 800;
+  letter-spacing: .04em;
+  font-size: .82rem;
+  text-transform: uppercase;
+  color: var(--v-gold-light);
+  background:
+    linear-gradient(135deg, rgba(255,214,107,.16), rgba(16,185,129,.14));
+  border-bottom: 1px solid rgba(255,214,107,.32);
+}
+.comparison-table tbody td{
+  padding: 13px 16px;
+  border-bottom: 1px solid rgba(255,214,107,.1);
+  color: #cbd5e1;
+  transition: background .35s var(--v-ease), color .35s var(--v-ease);
+}
+.comparison-table tbody tr:last-child td{ border-bottom: 0; }
+.comparison-table tbody tr:nth-child(even) td{
+  background: rgba(255,214,107,.025);
+}
+.comparison-table tbody tr:hover td{
+  background: rgba(255,214,107,.09);
+  color: #ffffff;
+}
+.comparison-table strong{ color: #ffffff; }
+
+/* ============================================================
+   CHOOSE GRID — pick-your-path cards
+   ============================================================ */
+.choose-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.choose-card{
+  position: relative;
+  padding: 22px 22px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,214,107,.22);
+  background:
+    linear-gradient(180deg, rgba(255,214,107,.06), rgba(16,185,129,.04) 60%, rgba(255,214,107,.02));
+  transition: transform .5s var(--v-ease), border-color .5s var(--v-ease), box-shadow .5s var(--v-ease);
+  overflow: hidden;
+}
+.choose-card::before{
+  content:"";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--v-gold), var(--v-emerald));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .5s var(--v-ease);
+}
+.choose-card:hover,
+.choose-card:focus-within{
+  transform: translateY(-6px);
+  border-color: rgba(255,214,107,.55);
+  box-shadow:
+    0 30px 56px -32px rgba(0,0,0,.9),
+    0 0 26px -6px rgba(255,214,107,.4);
+}
+.choose-card:hover::before{ transform: scaleX(1); }
+.choose-card h4{
+  margin: 0 0 10px;
+  font-size: 1rem;
+  letter-spacing: -.004em;
+  font-weight: 800;
+}
+.choose-card p{
+  margin: 0 0 14px;
+  color: #aebac8;
+  font-size: .9rem;
+  line-height: 1.62;
+}
+.choose-card .recommendation{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: -.002em;
+  color: var(--v-gold-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255,214,107,.1);
+  border: 1px solid rgba(255,214,107,.32);
+}
+
+/* ============================================================
+   VALUE BOX — premium emerald vault
+   ============================================================ */
+.value-box{
+  position: relative;
+  margin: 32px 0;
+  padding: 30px 30px 28px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,214,107,.32);
+  background:
+    radial-gradient(ellipse 70% 60% at 12% 0%, rgba(255,214,107,.16), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 92% 100%, rgba(16,185,129,.2), transparent 60%),
+    linear-gradient(140deg, #082e22 0%, #0b4532 55%, #052e24 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 36px 66px -46px rgba(0,0,0,.95);
+  overflow: hidden;
+}
+.value-box::before{
+  content:"";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--v-gold-deep), var(--v-gold) 40%, var(--v-gold-light) 55%, var(--v-gold) 70%, var(--v-gold-deep));
+  background-size: 200% 100%;
+  animation: v-slide 7s linear infinite;
+}
+.value-box::after{
+  content:"";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--v-a, 0deg),
+      transparent 0turn .5turn,
+      var(--v-gold) .66turn,
+      var(--v-gold-light) .78turn,
+      var(--v-gold-deep) .86turn,
+      transparent .96turn);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: v-spin 9s linear infinite;
+  pointer-events: none;
+}
+.value-box h3{
+  margin: 0 0 14px;
+  font-size: 1.28rem;
+  color: var(--v-gold-light);
+  letter-spacing: -.008em;
+}
+.value-box p{
+  margin: 0 0 12px;
+  color: #d7e2ea;
+  line-height: 1.72;
+  font-size: .96rem;
+}
+.value-box p strong{ color: var(--v-gold-light); }
+.value-box .tag-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.value-box .tag-row span{
+  padding: 5px 14px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  border-radius: 999px;
+  color: var(--v-gold-light);
+  background: rgba(255,214,107,.1);
+  border: 1px solid rgba(255,214,107,.32);
+  box-shadow: 0 8px 18px -12px rgba(255,214,107,.7);
+}
+
+/* ============================================================
+   AUTHOR BOX — premium byline
+   ============================================================ */
+.author-box{
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 40px 0;
+  padding: 26px 26px 24px;
+  border-radius: var(--v-r);
+  border: 1px solid rgba(255,214,107,.24);
+  background:
+    linear-gradient(135deg, rgba(255,214,107,.08), rgba(16,185,129,.06) 55%, rgba(255,214,107,.04));
+  box-shadow: 0 30px 58px -44px rgba(0,0,0,.9);
+  overflow: hidden;
+}
+.author-box::before{
+  content:"";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--v-a, 0deg),
+      transparent 0turn .5turn,
+      var(--v-gold) .68turn,
+      var(--v-gold-light) .78turn,
+      var(--v-emerald) .88turn,
+      transparent .96turn);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: v-spin 10s linear infinite;
+  pointer-events: none;
+}
+.author-avatar{
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  background:
+    conic-gradient(from 210deg, var(--v-gold-light), var(--v-gold), var(--v-emerald), var(--v-gold-deep), var(--v-gold-light));
+  box-shadow:
+    0 0 0 4px rgba(255,214,107,.16),
+    0 16px 30px -14px rgba(255,214,107,.9);
+  animation: v-float 6.5s ease-in-out infinite;
+}
+.author-info h4{
+  margin: 0 0 8px;
+  color: var(--v-gold-light);
+  font-size: 1rem;
+  letter-spacing: -.004em;
+}
+.author-info p{
+  margin: 0;
+  color: #b8c4d0;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   RELATED CARDS — quick-links
+   ============================================================ */
+.related-articles{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 24px 0 40px;
+}
+.related-card{
+  position: relative;
+  display: block;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,214,107,.22);
+  background:
+    linear-gradient(180deg, rgba(255,214,107,.06), rgba(16,185,129,.04) 60%, rgba(255,214,107,.02));
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform .5s var(--v-ease), border-color .5s var(--v-ease), box-shadow .5s var(--v-ease);
+}
+.related-card::before{
+  content:"";
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff8d6, var(--v-gold) 70%);
+  box-shadow: 0 0 0 4px rgba(255,214,107,.14);
+  transition: transform .5s var(--v-ease), box-shadow .5s var(--v-ease);
+}
+.related-card::after{
+  content:"";
+  position: absolute;
+  top: 0; left: -130%;
+  width: 60%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,234,167,.22), transparent);
+  transform: skewX(-18deg);
+  transition: left .95s var(--v-ease);
+  pointer-events: none;
+}
+.related-card:hover,
+.related-card:focus-visible{
+  transform: translateY(-8px);
+  border-color: rgba(255,214,107,.55);
+  box-shadow:
+    0 34px 60px -32px rgba(0,0,0,.95),
+    0 0 26px -6px rgba(255,214,107,.4);
+}
+.related-card:hover::before{
+  transform: scale(1.5);
+  box-shadow: 0 0 0 6px rgba(255,214,107,.22);
+}
+.related-card:hover::after{ left: 150%; }
+.related-card h4{
+  margin: 0 0 8px;
+  color: var(--v-gold-light);
+  font-size: 1rem;
+  letter-spacing: -.004em;
+  padding-right: 22px;
+}
+.related-card p{
+  margin: 0;
+  color: #a9b6c4;
+  font-size: .88rem;
+  line-height: 1.55;
+}
+
+/* ============================================================
+   CTA BOX — final call
+   ============================================================ */
+.cta-box{
+  position: relative;
+  margin: 40px 0;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 22px;
+  border: 1px solid rgba(255,214,107,.32);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(255,214,107,.16), transparent 62%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(16,185,129,.16), transparent 62%),
+    linear-gradient(160deg, #082e22, #0b4532);
+  box-shadow: 0 36px 66px -46px rgba(0,0,0,.95);
+  overflow: hidden;
+}
+.cta-box h2{
+  margin: 0 0 12px;
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  background: linear-gradient(100deg, #ffffff, var(--v-gold-light) 30%, var(--v-gold) 60%, #ffffff 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: v-shine 6s linear infinite;
+}
+.cta-box p{
+  color: #b8c4d0;
+  max-width: 520px;
+  margin: 0 auto 22px;
+  line-height: 1.65;
+}
+.cta-box .btn{
+  position: relative;
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: .96rem;
+  letter-spacing: .01em;
+  text-decoration: none;
+  color: #1a1204;
+  background: linear-gradient(135deg, var(--v-gold-light), var(--v-gold) 55%, var(--v-gold-deep));
+  box-shadow:
+    0 18px 36px -16px rgba(255,214,107,.9),
+    inset 0 1px 0 rgba(255,255,255,.5);
+  overflow: hidden;
+  transition: transform .35s var(--v-ease), box-shadow .35s var(--v-ease), color .35s var(--v-ease);
+}
+.cta-box .btn::after{
+  content:"";
+  position: absolute;
+  top: 0; left: -120%;
+  width: 55%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.6), transparent);
+  transform: skewX(-18deg);
+  animation: v-btn-sheen 3.8s ease-in-out infinite;
+  pointer-events: none;
+}
+.cta-box .btn:hover,
+.cta-box .btn:focus-visible{
+  transform: translateY(-3px);
+  color: #fff;
+  box-shadow:
+    0 24px 46px -18px rgba(255,214,107,1),
+    0 0 30px -6px rgba(255,234,167,.6);
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes v-shine{
+  0%   { background-position: 130% 50%; }
+  100% { background-position: -130% 50%; }
+}
+@keyframes v-slide{
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes v-line{
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes v-spin{
+  to { --v-a: 360deg; }
+}
+@keyframes v-twinkle{
+  0%,100% { opacity: .7; }
+  50%     { opacity: 1; }
+}
+@keyframes v-vault-spin{
+  to { transform: translate(-50%,-50%) rotate(360deg); }
+}
+@keyframes v-float{
+  0%,100% { transform: translateY(0) rotate(0); }
+  50%     { transform: translateY(-6px) rotate(2deg); }
+}
+@keyframes v-btn-sheen{
+  0%        { left: -120%; }
+  55%,100%  { left: 145%; }
+}
+
+@property --v-a{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px){
+  .guide-container{ padding: 0 16px 24px; }
+  .guide-hero{ padding: 48px 20px 44px; border-radius: 20px; }
+  .guide-hero::after{ width: 260px; height: 260px; }
+  .quick-picks{ grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .budget-grid{ grid-template-columns: 1fr; }
+  .choose-grid{ grid-template-columns: 1fr; }
+  .author-box{ flex-direction: column; text-align: center; }
+  .comparison-table{ font-size: .78rem; }
+  .comparison-table thead th,
+  .comparison-table tbody td{ padding: 10px 12px; }
+  .related-articles{ grid-template-columns: 1fr; }
+  .section-title{ padding-left: 38px; }
+  .section-title::before{ width: 20px; height: 20px; left: 4px; }
+  .cta-box{ padding: 30px 22px; }
+}
+
+/* ============================================================
+   A11Y — reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  .guide-container *,
+  .guide-container *::before,
+  .guide-container *::after{
+    animation: none !important;
+    transition-duration: .01ms !important;
+  }
+}
 </style>
 <!-- ===== BUDGET GUIDE ENHANCEMENTS END ===== -->
 
@@ -932,28 +1430,28 @@
 </tr>
 </tbody>
 </table>
-<p style="color:#666; font-size:0.82rem; margin-top:-10px;">*Standard price. Watch for sales — it regularly drops under $500 during holiday events.</p>
+<p style="color:#94a3b8; font-size:0.82rem; margin-top:-10px;">*Standard price. Watch for sales — it regularly drops under $500 during holiday events.</p>
 
 <!-- ===== HOW TO CHOOSE ===== -->
 <h2 class="section-title">🤔 How to Choose a Budget Travel Camera</h2>
 <div class="choose-grid">
 <div class="choose-card">
-<h4 style="color:#42a5f5;">🏖️ Beach &amp; Water</h4>
+<h4 style="color:#7dd3fc;">🏖️ Beach &amp; Water</h4>
 <p>You need a waterproof camera that can survive sand, salt, and splashes. Both the Fujifilm XP130 and Panasonic TS30 are built for this — rugged, cheap, and reliable.</p>
 <span class="recommendation">→ Fujifilm XP130 or Panasonic TS30</span>
 </div>
 <div class="choose-card">
-<h4 style="color:#ffa726;">🔭 Wildlife &amp; Landmarks</h4>
+<h4 style="color:#ffa94d;">🔭 Wildlife &amp; Landmarks</h4>
 <p>If you're shooting distant subjects — animals, concerts, architecture — you need reach. The Panasonic ZS99's 30x zoom is the only sub-$500 camera that delivers this range.</p>
 <span class="recommendation">→ Panasonic Lumix ZS99</span>
 </div>
 <div class="choose-card">
-<h4 style="color:#ff7043;">🏄 Adventure &amp; Sports</h4>
+<h4 style="color:#ff8c66;">🏄 Adventure &amp; Sports</h4>
 <p>For action footage — skiing, surfing, biking — you need ruggedness and stabilization. The GoPro Hero 13 is the gold standard, and it's now more affordable than ever.</p>
 <span class="recommendation">→ GoPro Hero 13 Black</span>
 </div>
 <div class="choose-card">
-<h4 style="color:#66bb6a;">📸 Everyday Family</h4>
+<h4 style="color:#4ade80;">📸 Everyday Family</h4>
 <p>For casual snapshots and family memories where quality isn't critical, the Kodak FZ55 is simple, light, and cheap. Good enough for the fridge door.</p>
 <span class="recommendation">→ Kodak PixPro FZ55</span>
 </div>
@@ -1011,7 +1509,7 @@
 <a class="btn" href="/VideoCameraHoliday/guides/">Browse All Guides</a>
 </div>
 
-<p style="text-align:center; color:#666; font-size:0.85rem; padding-bottom:20px;">Some links are affiliate links. We earn a small commission at no extra cost to you. All picks are based on real testing.</p>
+<p style="text-align:center; color:#7c8b99; font-size:0.85rem; padding-bottom:20px;">Some links are affiliate links. We earn a small commission at no extra cost to you. All picks are based on real testing.</p>
 
 </div><!-- /.guide-container -->
 
