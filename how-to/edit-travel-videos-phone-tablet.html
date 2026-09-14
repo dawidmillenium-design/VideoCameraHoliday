@@ -5,7 +5,670 @@
 <meta content="Edit travel videos on your phone or tablet with this 2026 workflow: CapCut, VN and LumaFusion compared, proxy editing, clip organization, export settings." name="description"/>
 <title>Edit Travel Videos on Phone or Tablet | Holiday Video Camera</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/edit-travel-videos-phone-tablet.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/edit-travel-videos-phone-tablet.html" rel="canonical"/>
+
+<!-- ===== FUNKY NEO-BRUTALIST DESIGN SYSTEM ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+        --fun-bg: #FFF8E7;
+        --fun-ink: #0A0A0A;
+        --fun-lime: #CCFF00;
+        --fun-hotpink: #FF00AA;
+        --fun-cyan: #00FFFF;
+        --fun-yellow: #FFE500;
+        --fun-orange: #FF6B00;
+        --fun-purple: #A855F7;
+        --fun-white: #FFFFFF;
+
+        --fun-border: 3px solid var(--fun-ink);
+        --fun-shadow: 6px 6px 0 var(--fun-ink);
+        --fun-shadow-lg: 10px 10px 0 var(--fun-ink);
+        --fun-shadow-sm: 3px 3px 0 var(--fun-ink);
+
+        --font-display: 'Archivo Black', sans-serif;
+        --font-body: 'Space Grotesk', sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+        background: var(--fun-bg) !important;
+        color: var(--fun-ink) !important;
+        font-family: var(--font-body) !important;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    /* Dot pattern */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background-image: radial-gradient(circle, rgba(10, 10, 10, 0.06) 2px, transparent 2px);
+        background-size: 32px 32px;
+    }
+
+    /* Colour blobs */
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background:
+            radial-gradient(circle at 8% 12%, rgba(204, 255, 0, 0.28), transparent 32%),
+            radial-gradient(circle at 92% 20%, rgba(255, 0, 170, 0.16), transparent 32%),
+            radial-gradient(circle at 20% 82%, rgba(0, 255, 255, 0.16), transparent 34%),
+            radial-gradient(circle at 82% 88%, rgba(255, 229, 0, 0.22), transparent 32%);
+    }
+
+    .funky-wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .funky-hero {
+        text-align: center;
+        padding: 80px 20px 40px;
+        position: relative;
+    }
+    .funky-hero .hero-sticker {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: var(--fun-purple);
+        color: var(--fun-white);
+        padding: 8px 20px;
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        transform: rotate(-2deg);
+        margin-bottom: 24px;
+    }
+    .funky-hero h1 {
+        font-family: var(--font-display);
+        font-size: 2.6rem;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 22px;
+        color: var(--fun-ink);
+        text-transform: uppercase;
+    }
+    .funky-hero h1 .highlight {
+        background: var(--fun-cyan);
+        padding: 0 14px;
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        display: inline-block;
+        transform: rotate(-1deg);
+    }
+    .funky-hero .hero-desc {
+        font-family: var(--font-body);
+        font-size: 1.15rem;
+        color: var(--fun-ink);
+        max-width: 660px;
+        margin: 0 auto;
+        line-height: 1.7;
+        opacity: 0.82;
+        font-weight: 500;
+    }
+    .funky-bar {
+        display: flex;
+        height: 10px;
+        max-width: 300px;
+        margin: 32px auto 0;
+        border: var(--fun-border);
+        overflow: hidden;
+    }
+    .funky-bar span { flex: 1; }
+    .funky-bar span:nth-child(1) { background: var(--fun-purple); }
+    .funky-bar span:nth-child(2) { background: var(--fun-cyan); }
+    .funky-bar span:nth-child(3) { background: var(--fun-lime); }
+    .funky-bar span:nth-child(4) { background: var(--fun-yellow); }
+    .funky-bar span:nth-child(5) { background: var(--fun-orange); }
+    .funky-bar span:nth-child(6) { background: var(--fun-hotpink); }
+
+    /* ============================================
+       HEADINGS
+       ============================================ */
+    h2 {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: var(--fun-ink);
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        margin: 60px 0 30px 0;
+        padding: 12px 22px;
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        display: inline-block;
+        transform: rotate(-0.6deg);
+    }
+
+    h3 {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 900;
+        color: var(--fun-ink);
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        margin: 32px 0 14px 0;
+        padding: 8px 16px;
+        background: var(--fun-cyan);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        display: inline-block;
+        transform: rotate(0.5deg);
+    }
+
+    /* ============================================
+       TAKEAWAYS
+       ============================================ */
+    .takeaways {
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-lg);
+        padding: 34px 38px;
+        margin: 34px 0;
+        position: relative;
+        transform: rotate(0.3deg);
+    }
+    .takeaways::before {
+        content: '⚡';
+        position: absolute;
+        top: -22px;
+        right: 30px;
+        font-size: 1.5rem;
+        background: var(--fun-yellow);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-8deg);
+    }
+    .takeaways h3 {
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        font-size: 1.15rem;
+        transform: none;
+        color: var(--fun-ink);
+    }
+    .takeaways ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    .takeaways li {
+        margin-bottom: 14px;
+        padding-left: 34px;
+        position: relative;
+        line-height: 1.7;
+        color: var(--fun-ink);
+        font-weight: 500;
+    }
+    .takeaways li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        font-family: var(--font-display);
+        font-weight: 900;
+        color: var(--fun-hotpink);
+        font-size: 1.15rem;
+    }
+    .takeaways strong {
+        background: var(--fun-lime);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+    }
+
+    /* ============================================
+       PARAGRAPHS & LISTS
+       ============================================ */
+    p {
+        color: var(--fun-ink);
+        line-height: 1.85;
+        margin-bottom: 18px;
+        font-size: 1.02rem;
+    }
+    p strong {
+        background: var(--fun-yellow);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+        font-weight: 700;
+    }
+    article ul, article ol {
+        color: var(--fun-ink);
+        line-height: 1.85;
+        padding-left: 24px;
+        margin-bottom: 20px;
+    }
+    article ul li, article ol li {
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    article ul li strong, article ol li strong {
+        background: var(--fun-cyan);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+    }
+
+    /* ============================================
+       TIP / WARNING BOXES
+       ============================================ */
+    .tip-box {
+        background: var(--fun-lime);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 26px 30px;
+        margin: 34px 0;
+        position: relative;
+        transform: rotate(-0.5deg);
+    }
+    .tip-box::before {
+        content: '★';
+        position: absolute;
+        top: -22px;
+        left: 30px;
+        font-size: 1.4rem;
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        width: 46px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(8deg);
+    }
+    .tip-box strong {
+        background: var(--fun-white);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+    }
+    .tip-box p { margin: 0; font-weight: 500; }
+
+    .warning-box {
+        background: var(--fun-orange);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 26px 30px;
+        margin: 34px 0;
+        position: relative;
+        transform: rotate(0.4deg);
+        color: var(--fun-white);
+    }
+    .warning-box::before {
+        content: '⚠';
+        position: absolute;
+        top: -22px;
+        left: 30px;
+        font-size: 1.3rem;
+        background: var(--fun-yellow);
+        color: var(--fun-ink);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        width: 46px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-6deg);
+    }
+    .warning-box strong {
+        background: var(--fun-white);
+        color: var(--fun-ink);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+    }
+    .warning-box p { margin: 0; color: var(--fun-white); font-weight: 500; }
+
+    /* ============================================
+       EXPORT TABLE
+       ============================================ */
+    .table-scroll {
+        overflow-x: auto;
+        margin: 34px 0;
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        background: var(--fun-white);
+        -webkit-overflow-scrolling: touch;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        min-width: 720px;
+    }
+    table thead th {
+        background: var(--fun-purple);
+        color: var(--fun-white);
+        font-family: var(--font-display);
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 16px 16px;
+        text-align: left;
+        font-weight: 900;
+        border-bottom: var(--fun-border);
+    }
+    table tbody td {
+        padding: 16px 16px;
+        border-bottom: 2px solid var(--fun-ink);
+        color: var(--fun-ink);
+        font-weight: 500;
+    }
+    table tbody tr:last-child td { border-bottom: none; }
+    table tbody tr:hover td { background: var(--fun-lime); }
+    table tbody td:first-child { font-weight: 700; }
+
+    /* ============================================
+       FAQ
+       ============================================ */
+    .faq-section { margin: 40px 0; }
+    .faq-item {
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 26px 30px;
+        margin-bottom: 22px;
+        transition: all 0.2s ease;
+    }
+    .faq-item:nth-child(odd) { transform: rotate(-0.3deg); }
+    .faq-item:nth-child(even) { transform: rotate(0.4deg); }
+    .faq-item:hover {
+        transform: translate(-4px, -4px) rotate(0deg);
+        box-shadow: var(--fun-shadow-lg);
+    }
+    .faq-question {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 900;
+        color: var(--fun-ink);
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        margin: 0 0 14px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    .faq-question::before {
+        content: 'Q';
+        font-family: var(--font-display);
+        font-size: 0.85rem;
+        background: var(--fun-cyan);
+        border: 2px solid var(--fun-ink);
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 2px 2px 0 var(--fun-ink);
+    }
+    .faq-answer {
+        color: var(--fun-ink);
+        line-height: 1.75;
+        margin: 0;
+        padding-left: 46px;
+        opacity: 0.85;
+        font-weight: 500;
+    }
+    .faq-answer p { margin: 0; }
+
+    /* ============================================
+       AUTHOR BOX
+       ============================================ */
+    .author-box {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        background: var(--fun-yellow);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 26px 30px;
+        margin: 40px 0;
+        transform: rotate(-0.3deg);
+    }
+    .author-avatar {
+        width: 68px;
+        height: 68px;
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.9rem;
+        flex-shrink: 0;
+        transform: rotate(5deg);
+    }
+    .author-info h4 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 0 0 6px 0;
+        color: var(--fun-ink);
+    }
+    .author-info p {
+        margin: 0 0 6px 0;
+        color: var(--fun-ink);
+        font-size: 0.92rem;
+        line-height: 1.6;
+        opacity: 0.85;
+        font-weight: 500;
+    }
+    .last-updated {
+        font-family: var(--font-mono);
+        font-size: 0.75rem !important;
+        font-weight: 700 !important;
+        color: var(--fun-ink) !important;
+        opacity: 0.7;
+    }
+
+    /* ============================================
+       TOC
+       ============================================ */
+    .toc {
+        background: var(--fun-cyan);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 28px 32px;
+        margin: 34px 0;
+        transform: rotate(0.4deg);
+    }
+    .toc h3 {
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0 0 18px 0;
+        font-size: 1rem;
+        transform: none;
+        color: var(--fun-ink);
+    }
+    .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 20px;
+    }
+    .toc ul li a {
+        color: var(--fun-ink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.92rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        background: var(--fun-white);
+        border: 2px solid var(--fun-ink);
+        transition: all 0.2s ease;
+    }
+    .toc ul li a::before { content: '▸'; font-weight: 900; }
+    .toc ul li a:hover {
+        background: var(--fun-hotpink);
+        color: var(--fun-white);
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px 0 var(--fun-ink);
+    }
+
+    /* ============================================
+       RELATED CARDS
+       ============================================ */
+    .related-articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 24px;
+        margin: 30px 0 40px;
+    }
+    .related-card {
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 24px 26px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.22s ease;
+    }
+    .related-card:nth-child(odd) { transform: rotate(-0.4deg); }
+    .related-card:nth-child(even) { transform: rotate(0.4deg); }
+    .related-card:hover {
+        transform: translate(-5px, -5px) rotate(0deg);
+        box-shadow: var(--fun-shadow-lg);
+        background: var(--fun-lime);
+    }
+    .related-card h4 {
+        font-family: var(--font-display);
+        font-size: 0.95rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--fun-ink);
+        margin: 0 0 10px 0;
+        line-height: 1.25;
+    }
+    .related-card p {
+        color: var(--fun-ink);
+        font-size: 0.85rem;
+        margin: 0;
+        line-height: 1.55;
+        opacity: 0.82;
+        font-weight: 500;
+    }
+
+    /* ============================================
+       INLINE LINKS
+       ============================================ */
+    article a:not(.related-card) {
+        color: var(--fun-ink);
+        text-decoration: none;
+        font-weight: 700;
+        background: var(--fun-lime);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+        transition: all 0.2s ease;
+    }
+    article a:not(.related-card):hover {
+        background: var(--fun-hotpink);
+        color: var(--fun-white);
+        transform: translate(-1px, -1px);
+        box-shadow: 2px 2px 0 var(--fun-ink);
+    }
+
+    /* ============================================
+       BREADCRUMBS
+       ============================================ */
+    .breadcrumbs ol li a {
+        color: var(--fun-ink) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        opacity: 0.7;
+    }
+    .breadcrumbs ol li a:hover {
+        color: var(--fun-hotpink) !important;
+        opacity: 1;
+    }
+    .breadcrumbs ol li[aria-current="page"] {
+        color: var(--fun-ink) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        opacity: 0.4;
+    }
+
+    /* ============================================
+       AFFILIATE NOTE
+       ============================================ */
+    .affiliate-note {
+        text-align: center !important;
+        font-family: var(--font-mono) !important;
+        font-size: 0.75rem !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--fun-ink) !important;
+        opacity: 0.55;
+        padding: 40px 0 !important;
+        border-top: var(--fun-border) !important;
+        margin-top: 40px !important;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+        .funky-hero h1 { font-size: 1.85rem; }
+        .funky-hero .hero-desc { font-size: 1rem; }
+        .toc ul { grid-template-columns: 1fr; }
+        .takeaways, .tip-box, .warning-box, .author-box { padding: 22px 24px; }
+        .author-box { flex-direction: column; text-align: center; }
+        .related-articles { grid-template-columns: 1fr; }
+        table { font-size: 0.82rem; }
+        table thead th, table tbody td { padding: 10px 12px; }
+        h2 { font-size: 1.3rem; padding: 10px 16px; }
+        h3 { font-size: 1rem; }
+        .faq-answer { padding-left: 0; }
+    }
+</style>
+<!-- ===== FUNKY DESIGN SYSTEM END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -31,10 +694,53 @@
   ]
 }
 </script>
+
+<!-- ===== FAQ SCHEMA ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best free app to edit travel videos on a phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CapCut is the best free all-rounder for most travelers, with auto-captions, stabilization, and easy music syncing. VN is a cleaner, less cluttered alternative with no watermark on free exports. On iPad, LumaFusion is the most capable paid option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a phone really handle 4K video editing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, modern phones edit 4K well, especially with proxy or performance modes enabled in the editing app. For older phones, shoot at 4K/30 instead of 4K/60, or transcode clips to 1080p first. Keeping the phone cool and plugged in during long edits prevents thermal throttling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What export settings should I use for Instagram Reels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export 1080x1920 (9:16 vertical) at 30fps, keeping the video under 90 seconds with a strong first two seconds. Reframe your horizontal footage deliberately so faces and action stay centered rather than relying on an automatic center crop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I organize travel clips while on the road?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spend 10 minutes each evening offloading camera footage to your phone or SSD, sorting clips into albums by day or location, and marking your best takes as favorites. This habit turns the final edit from a multi-day chore into a 40-minute job."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -203,7 +909,9 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -212,11 +920,19 @@
     </ol>
 </nav>
 
-<section class="article-hero">
-    <h1>Edit Travel Videos on Phone or Tablet</h1>
+<div class="funky-wrap">
+
+<!-- ===== HERO ===== -->
+<section class="funky-hero">
+<div class="hero-sticker">How-To · Mobile Workflow</div>
+<h1>Edit Travel Videos on <span class="highlight">Phone or Tablet</span></h1>
+<p class="hero-desc">The 2026 mobile editing workflow — CapCut, VN and LumaFusion compared, proxy editing for smooth 4K, clip organization, and export settings for every platform.</p>
+<div class="funky-bar">
+<span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 </section>
 
-<article class="container">
+<!-- ===== AUTHOR ===== -->
 <div class="author-box">
 <div class="author-avatar">📹</div>
 <div class="author-info">
@@ -225,8 +941,10 @@
 <p class="last-updated">🕐 Last updated: August 25, 2026</p>
 </div>
 </div>
+
+<!-- ===== TOC ===== -->
 <div class="toc">
-<h3>In This Guide</h3>
+<h3>📑 In This Guide</h3>
 <ul>
 <li><a href="#apps">The Apps That Work in 2026</a></li>
 <li><a href="#workflow">The On-the-Road Workflow</a></li>
@@ -236,46 +954,103 @@
 <li><a href="#related">Related Articles</a></li>
 </ul>
 </div>
+
 <p><strong>Yes — in 2026 you can edit an entire travel video on your phone or tablet, and the workflow is simple: import clips into CapCut (free and easiest), VN (clean timeline), or LumaFusion (pro-level, iPad), trim ruthlessly to 2–4 seconds per clip, cut to music, apply a light color grade, and export at 4K/30fps for YouTube or 1080p/30fps vertical for Instagram Reels.</strong> I've edited full trip films on a phone in airport lounges, on night trains in Vietnam, and poolside in Greece. Here's the exact workflow.</p>
+
 <p>The only real constraints on mobile editing are storage, battery, and heat — all manageable with a bit of organization. What you gain is enormous: your video is done before you get home, while the trip still feels alive, instead of joining the pile of footage you'll "edit someday."</p>
+
+<!-- ===== KEY TAKEAWAYS ===== -->
 <div class="takeaways">
 <h3>Key Takeaways</h3>
 <ul>
-<li>CapCut is the best free starting point; LumaFusion is the pro choice on iPad; VN sits comfortably in between.</li>
-<li>Organize clips into a trip album each evening — 10 minutes of filing saves hours at edit time.</li>
-<li>Proxy editing (or transcoding to 1080p) keeps 4K footage editing smoothly on older phones.</li>
-<li>Export 4K/30fps horizontal for YouTube; 1080p/30fps, 9:16 vertical for Reels and TikTok.</li>
-<li>Trim every clip to its best 2–4 seconds; a 90-second film beats a 7-minute one every time.</li>
+<li><strong>CapCut</strong> is the best free starting point; <strong>LumaFusion</strong> is the pro choice on iPad; <strong>VN</strong> sits comfortably in between.</li>
+<li>Organize clips into a trip album each evening — <strong>10 minutes of filing saves hours</strong> at edit time.</li>
+<li><strong>Proxy editing</strong> (or transcoding to 1080p) keeps 4K footage editing smoothly on older phones.</li>
+<li>Export <strong>4K/30fps horizontal</strong> for YouTube; <strong>1080p/30fps, 9:16 vertical</strong> for Reels and TikTok.</li>
+<li>Trim every clip to its best <strong>2–4 seconds</strong>; a 90-second film beats a 7-minute one every time.</li>
 </ul>
 </div>
+
+<!-- ===== APPS ===== -->
 <h2 id="apps">The Apps That Actually Work in 2026</h2>
+
 <h3>CapCut — Best Free All-Rounder</h3>
 <p>CapCut (free, iOS/Android/desktop) is where I send every beginner. Auto-captions, one-tap stabilization, speed ramping, decent color tools, and a huge music library. The timeline is genuinely capable — keyframes, masking, even basic curves. Watch out for two things: some features and exports now push you toward the paid tier, and cloud-heavy features want an account. For a 90-second holiday film, free CapCut is more than enough.</p>
+
 <h3>VN — Clean and Uncluttered</h3>
 <p>VN Video Editor is the quiet favorite among travel vloggers: a proper multi-track timeline, curve-based speed control, and no watermark on free exports. It feels closer to desktop editing than CapCut without the feature bloat. If CapCut's interface feels like a slot machine to you, VN will feel like home.</p>
+
 <h3>LumaFusion — The iPad Powerhouse</h3>
-<p>On iPad, LumaFusion (paid, around $30 one-time) is the closest thing to Final Cut or Premiere on mobile: six video tracks, magnetic timeline, proper color wheels, external drive support, and multicam. If you travel with an iPad and edit seriously, it pays for itself in one trip. On a long-haul flight out of Bangkok I cut an entire 12-minute Japan film in LumaFusion with footage pulled straight off a USB-C SSD — no laptop ever left the hotel safe. Speaking of which, keeping that footage safe is its own discipline: see <a class="content-link" href="../how-to/backup-travel-photos-videos.html">how to back up travel footage without a laptop</a>.</p>
+<p>On iPad, LumaFusion (paid, around $30 one-time) is the closest thing to Final Cut or Premiere on mobile: six video tracks, magnetic timeline, proper color wheels, external drive support, and multicam. If you travel with an iPad and edit seriously, it pays for itself in one trip. On a long-haul flight out of Bangkok I cut an entire 12-minute Japan film in LumaFusion with footage pulled straight off a USB-C SSD — no laptop ever left the hotel safe. Speaking of which, keeping that footage safe is its own discipline: see <a href="../how-to/backup-travel-photos-videos.html">how to back up travel footage without a laptop</a>.</p>
+
+<!-- ===== WORKFLOW ===== -->
 <h2 id="workflow">The On-the-Road Workflow</h2>
+
 <h3>Step 1: Organize Clips Every Evening</h3>
-<p>Each night, offload camera footage to your phone or SSD (action cams and the <a class="content-link" href="../reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a> transfer via their apps or USB-C), then sort into albums by day or location. Star or favorite your best 10–20 clips immediately, while you remember which take was the good one. This nightly 10 minutes is the difference between a fun edit and a chore.</p>
+<p>Each night, offload camera footage to your phone or SSD (action cams and the <a href="../reviews/dji-osmo-pocket-3-review.html">DJI Osmo Pocket 3</a> transfer via their apps or USB-C), then sort into albums by day or location. Star or favorite your best 10–20 clips immediately, while you remember which take was the good one. This nightly 10 minutes is the difference between a fun edit and a chore.</p>
+
 <h3>Step 2: Proxy Editing for Smooth 4K</h3>
 <p>4K/60 footage from a GoPro or mirrorless can stutter on older phones. Three fixes: edit in CapCut/LumaFusion with "performance mode" or proxy rendering enabled (the app silently works on low-res copies and exports from the originals); shoot at 4K/30 instead of 60 when you don't need slow motion; or transcode heavy clips to 1080p before editing if quality loss is acceptable for social-only output. On my two-generations-old phone, proxies made GoPro Hero 13 footage edit like butter.</p>
+
 <h3>Step 3: The Rough Cut on Transit</h3>
-<p>Flights, trains, and ferries are editing gold. Workflow: dump your favorited clips onto the timeline in story order → trim every clip to its best 2–4 seconds (be brutal) → lay a music track underneath → cut clip changes onto the beat. Don't touch color or effects yet. A rough cut of a whole week takes me about 40 minutes this way. This pairs perfectly with disciplined shooting — if you followed the <a class="content-link" href="../how-to/film-better-holiday-videos.html">10-second rule while filming</a>, every clip is already nearly the right length.</p>
+<p>Flights, trains, and ferries are editing gold. Workflow: dump your favorited clips onto the timeline in story order → trim every clip to its best 2–4 seconds (be brutal) → lay a music track underneath → cut clip changes onto the beat. Don't touch color or effects yet. A rough cut of a whole week takes me about 40 minutes this way. This pairs perfectly with disciplined shooting — if you followed the <a href="../how-to/film-better-holiday-videos.html">10-second rule while filming</a>, every clip is already nearly the right length.</p>
+
 <h3>Step 4: Color, Titles, and Polish</h3>
 <p>Keep it light: bump contrast slightly, warm up skin tones, maybe a subtle LUT (CapCut and LumaFusion both support them). Add a simple title card with the destination and dates — your future self will thank you. Resist the template effects and transitions; a hard cut on the beat always looks more professional than a spin-wipe.</p>
+
 <div class="tip-box">
-<strong>Tip:</strong> Edit in short bursts with a full battery and your phone cool. 4K timeline scrubbing is the fastest way to drain a battery and trigger thermal throttling — I keep a small power bank in my day bag and edit in airplane mode to keep temperatures down.
+<p><strong>Tip:</strong> Edit in short bursts with a full battery and your phone cool. 4K timeline scrubbing is the fastest way to drain a battery and trigger thermal throttling — I keep a small power bank in my day bag and edit in airplane mode to keep temperatures down.</p>
 </div>
+
+<!-- ===== EXPORT TABLE ===== -->
 <h2 id="export">Export Settings for Instagram and YouTube</h2>
+<div class="table-scroll">
 <table>
-<tr><th>Platform</th><th>Resolution</th><th>Aspect</th><th>Frame Rate</th><th>Notes</th></tr>
-<tr><td>YouTube</td><td>4K (3840×2160)</td><td>16:9</td><td>Match footage (24/30fps)</td><td>Higher bitrate upload survives compression better</td></tr>
-<tr><td>Instagram Reels</td><td>1080×1920</td><td>9:16</td><td>30fps</td><td>Keep under 90 seconds; hook in first 2 seconds</td></tr>
-<tr><td>TikTok</td><td>1080×1920</td><td>9:16</td><td>30fps</td><td>Same export as Reels works fine</td></tr>
-<tr><td>Family/archive</td><td>4K (3840×2160)</td><td>16:9</td><td>Match footage</td><td>Save the master file to cloud or SSD</td></tr>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Resolution</th>
+<th>Aspect</th>
+<th>Frame Rate</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YouTube</td>
+<td>4K (3840×2160)</td>
+<td>16:9</td>
+<td>Match footage (24/30fps)</td>
+<td>Higher bitrate upload survives compression better</td>
+</tr>
+<tr>
+<td>Instagram Reels</td>
+<td>1080×1920</td>
+<td>9:16</td>
+<td>30fps</td>
+<td>Keep under 90 seconds; hook in first 2 seconds</td>
+</tr>
+<tr>
+<td>TikTok</td>
+<td>1080×1920</td>
+<td>9:16</td>
+<td>30fps</td>
+<td>Same export as Reels works fine</td>
+</tr>
+<tr>
+<td>Family/archive</td>
+<td>4K (3840×2160)</td>
+<td>16:9</td>
+<td>Match footage</td>
+<td>Save the master file to cloud or SSD</td>
+</tr>
+</tbody>
 </table>
-<p>Always export a high-quality master for your archive first, then re-export platform versions. For vertical edits, reframe rather than cropping blindly — move the frame to keep faces and action centered. For the YouTube side, <a class="content-link" href="../editing/post-travel-videos-youtube.html">our guide to posting travel videos on YouTube</a> covers titles, thumbnails, and upload settings.</p>
+</div>
+
+<p>Always export a high-quality master for your archive first, then re-export platform versions. For vertical edits, reframe rather than cropping blindly — move the frame to keep faces and action centered. For the YouTube side, <a href="../editing/post-travel-videos-youtube.html">our guide to posting travel videos on YouTube</a> covers titles, thumbnails, and upload settings.</p>
+
+<!-- ===== MISTAKES ===== -->
 <h2 id="mistakes">Common Mobile Editing Mistakes</h2>
 <ul>
 <li><strong>Editing with unorganized footage.</strong> Two hundred unsorted clips is where travel videos go to die. Albums and favorites first.</li>
@@ -284,51 +1059,62 @@
 <li><strong>Using copyrighted music for YouTube.</strong> Use the app's licensed library or royalty-free tracks, or your video gets muted or claimed.</li>
 <li><strong>Exporting once, to one place.</strong> Always keep a 4K master; platforms compress everything.</li>
 </ul>
+
 <div class="warning-box">
-<strong>Warning:</strong> CapCut and other free apps can quietly default to lower export quality or add watermarks on certain features. Before you call a video finished, check the export settings screen — resolution, frame rate, and bitrate — every single time.
+<p><strong>Warning:</strong> CapCut and other free apps can quietly default to lower export quality or add watermarks on certain features. Before you call a video finished, check the export settings screen — resolution, frame rate, and bitrate — every single time.</p>
 </div>
-<p>Mobile editing is also how I produce quick city cuts for the <a class="content-link" href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a> series while still on the road. If you're choosing a camera with phone-friendly workflow in mind, the app ecosystems compared in our <a class="content-link" href="../reviews/gopro-hero-13-review.html">GoPro Hero 13 review</a> and the <a class="content-link" href="../guides/best-holiday-video-cameras-2026.html">best cameras of 2026 guide</a> are worth a read.</p>
+
+<p>Mobile editing is also how I produce quick city cuts for the <a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a> series while still on the road. If you're choosing a camera with phone-friendly workflow in mind, the app ecosystems compared in our <a href="../reviews/gopro-hero-13-review.html">GoPro Hero 13 review</a> and the <a href="../guides/best-holiday-video-cameras-2026.html">best cameras of 2026 guide</a> are worth a read.</p>
+
+<!-- ===== FAQ ===== -->
 <h2 id="faq">Frequently Asked Questions</h2>
 <div class="faq-section">
 <div class="faq-item">
 <h3 class="faq-question">What is the best free app to edit travel videos on a phone?</h3>
-<div class="faq-answer"><p>CapCut is the best free all-rounder for most travelers, with auto-captions, stabilization, and easy music syncing. VN is a cleaner, less cluttered alternative with no watermark on free exports. On iPad, LumaFusion is the most capable paid option.</p></div>
+<p class="faq-answer">CapCut is the best free all-rounder for most travelers, with auto-captions, stabilization, and easy music syncing. VN is a cleaner, less cluttered alternative with no watermark on free exports. On iPad, LumaFusion is the most capable paid option.</p>
 </div>
 <div class="faq-item">
 <h3 class="faq-question">Can a phone really handle 4K video editing?</h3>
-<div class="faq-answer"><p>Yes, modern phones edit 4K well, especially with proxy or performance modes enabled in the editing app. For older phones, shoot at 4K/30 instead of 4K/60, or transcode clips to 1080p first. Keeping the phone cool and plugged in during long edits prevents thermal throttling.</p></div>
+<p class="faq-answer">Yes, modern phones edit 4K well, especially with proxy or performance modes enabled in the editing app. For older phones, shoot at 4K/30 instead of 4K/60, or transcode clips to 1080p first. Keeping the phone cool and plugged in during long edits prevents thermal throttling.</p>
 </div>
 <div class="faq-item">
 <h3 class="faq-question">What export settings should I use for Instagram Reels?</h3>
-<div class="faq-answer"><p>Export 1080x1920 (9:16 vertical) at 30fps, keeping the video under 90 seconds with a strong first two seconds. Reframe your horizontal footage deliberately so faces and action stay centered rather than relying on an automatic center crop.</p></div>
+<p class="faq-answer">Export 1080x1920 (9:16 vertical) at 30fps, keeping the video under 90 seconds with a strong first two seconds. Reframe your horizontal footage deliberately so faces and action stay centered rather than relying on an automatic center crop.</p>
 </div>
 <div class="faq-item">
 <h3 class="faq-question">How do I organize travel clips while on the road?</h3>
-<div class="faq-answer"><p>Spend 10 minutes each evening offloading camera footage to your phone or SSD, sorting clips into albums by day or location, and marking your best takes as favorites. This habit turns the final edit from a multi-day chore into a 40-minute job.</p></div>
+<p class="faq-answer">Spend 10 minutes each evening offloading camera footage to your phone or SSD, sorting clips into albums by day or location, and marking your best takes as favorites. This habit turns the final edit from a multi-day chore into a 40-minute job.</p>
 </div>
 </div>
+
+<!-- ===== RELATED ===== -->
 <h2 id="related">Related Articles</h2>
 <div class="related-articles">
-<a class="related-card" href="../how-to/film-better-holiday-videos.html"><h4>Film Better Holiday Videos</h4><p>Shot discipline that makes your clips arrive pre-edited — every clip nearly the right length.</p></a>
-<a class="related-card" href="../how-to/backup-travel-photos-videos.html"><h4>Back Up Footage Without a Laptop</h4><p>Protect the clips you are editing with a phone-and-SSD backup system.</p></a>
-<a class="related-card" href="../editing/post-travel-videos-youtube.html"><h4>Post Travel Videos on YouTube</h4><p>Titles, thumbnails, and upload settings to give your edit the audience it deserves.</p></a>
+<a class="related-card" href="../how-to/film-better-holiday-videos.html">
+<h4>Film Better Holiday Videos</h4>
+<p>Shot discipline that makes your clips arrive pre-edited — every clip nearly the right length.</p>
+</a>
+<a class="related-card" href="../how-to/backup-travel-photos-videos.html">
+<h4>Back Up Footage Without a Laptop</h4>
+<p>Protect the clips you are editing with a phone-and-SSD backup system.</p>
+</a>
+<a class="related-card" href="../editing/post-travel-videos-youtube.html">
+<h4>Post Travel Videos on YouTube</h4>
+<p>Titles, thumbnails, and upload settings to give your edit the audience it deserves.</p>
+</a>
 </div>
-<p class="affiliate-note">This how-to guide contains no affiliate links — just field-tested advice from real trips. When we do link to our camera reviews, rankings there are based on real travel testing.</p>
-</article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<p class="affiliate-note">This how-to guide contains no affiliate links — just field-tested advice from real trips. When we do link to our camera reviews, rankings there are based on real travel testing.</p>
+
+</div><!-- /.funky-wrap -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -406,6 +1192,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -415,15 +1202,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -437,7 +1219,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -454,14 +1235,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -472,7 +1249,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -494,7 +1270,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -509,7 +1284,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -537,25 +1311,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -573,7 +1332,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -584,7 +1342,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -593,5 +1350,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
