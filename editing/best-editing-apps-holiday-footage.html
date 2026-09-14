@@ -5,7 +5,761 @@
 <meta content="Best editing apps for holiday footage in 2026: CapCut, VN, LumaFusion, DaVinci Resolve and Premiere Rush compared for reels, vlogs and offline editing." name="description"/>
 <title>Best Editing Apps for Holiday Footage | Holiday Video Camera</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html" rel="canonical"/>
+
+<!-- ===== VIDEO EDITING UI DESIGN SYSTEM ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+    /* ============================================
+       DESIGN TOKENS — DARK EDITOR CANVAS
+       ============================================ */
+    :root {
+        --ed-bg: #0b0c10;
+        --ed-bg-2: #101218;
+        --ed-panel: #16181f;
+        --ed-panel-2: #1c1f28;
+        --ed-panel-3: #232733;
+        --ed-border: rgba(255, 255, 255, 0.06);
+        --ed-border-2: rgba(255, 255, 255, 0.1);
+
+        /* Timeline track colours */
+        --ed-cyan: #2dd4bf;
+        --ed-amber: #f59e0b;
+        --ed-violet: #8b5cf6;
+        --ed-rose: #fb7185;
+        --ed-blue: #60a5fa;
+        --ed-lime: #a3e635;
+
+        --ed-text: #f1f5f9;
+        --ed-text-muted: #94a3b8;
+        --ed-text-dim: #64748b;
+
+        --font-display: 'Outfit', system-ui, sans-serif;
+        --font-body: 'Outfit', system-ui, sans-serif;
+        --font-mono: 'IBM Plex Mono', monospace;
+    }
+
+    body {
+        background: var(--ed-bg) !important;
+        color: var(--ed-text) !important;
+        font-family: var(--font-body) !important;
+        font-size: 1.02rem;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    /* Subtle timeline grid background */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background-image:
+            linear-gradient(rgba(45, 212, 191, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(45, 212, 191, 0.02) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: radial-gradient(ellipse at center, black 35%, transparent 80%);
+        -webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 80%);
+    }
+
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background:
+            radial-gradient(circle at 10% 15%, rgba(45, 212, 191, 0.08), transparent 40%),
+            radial-gradient(circle at 90% 20%, rgba(245, 158, 11, 0.06), transparent 40%),
+            radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.06), transparent 45%);
+    }
+
+    .editor-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 24px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ============================================
+       HERO — EDITOR STARTUP SCREEN
+       ============================================ */
+    .article-hero {
+        text-align: center;
+        padding: 90px 20px 40px;
+        position: relative;
+    }
+    .article-hero .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--ed-cyan);
+        border: 1px solid rgba(45, 212, 191, 0.3);
+        background: rgba(45, 212, 191, 0.06);
+        padding: 7px 18px;
+        border-radius: 6px;
+        margin-bottom: 26px;
+    }
+    .article-hero .hero-badge::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--ed-cyan);
+        box-shadow: 0 0 12px var(--ed-cyan);
+        animation: recPulse 2s ease-in-out infinite;
+    }
+    @keyframes recPulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(0.8); }
+    }
+    .article-hero h1 {
+        font-family: var(--font-display);
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #2dd4bf 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .article-hero .hero-subtitle {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        color: var(--ed-text-muted);
+        max-width: 640px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+
+    /* Timeline ruler accent bar */
+    .ruler-bar {
+        display: flex;
+        height: 4px;
+        max-width: 280px;
+        margin: 32px auto 0;
+        border-radius: 4px;
+        overflow: hidden;
+        gap: 2px;
+    }
+    .ruler-bar span {
+        flex: 1;
+        border-radius: 2px;
+    }
+    .ruler-bar span:nth-child(1) { background: var(--ed-cyan); }
+    .ruler-bar span:nth-child(2) { background: var(--ed-amber); }
+    .ruler-bar span:nth-child(3) { background: var(--ed-violet); }
+    .ruler-bar span:nth-child(4) { background: var(--ed-rose); }
+    .ruler-bar span:nth-child(5) { background: var(--ed-blue); }
+    .ruler-bar span:nth-child(6) { background: var(--ed-lime); }
+
+    /* ============================================
+       SECTION HEADINGS
+       ============================================ */
+    h2 {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.015em;
+        margin: 60px 0 24px 0;
+        padding-left: 22px;
+        position: relative;
+    }
+    h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        bottom: 6px;
+        width: 4px;
+        background: linear-gradient(180deg, var(--ed-cyan), var(--ed-amber));
+        border-radius: 2px;
+        box-shadow: 0 0 12px rgba(45, 212, 191, 0.4);
+    }
+
+    h3 {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--ed-cyan);
+        margin: 32px 0 12px 0;
+        letter-spacing: -0.01em;
+    }
+
+    /* ============================================
+       TAKEAWAYS — EDITOR SIDE PANEL
+       ============================================ */
+    .takeaways {
+        background: linear-gradient(135deg, var(--ed-panel) 0%, var(--ed-panel-2) 100%);
+        border: 1px solid var(--ed-border-2);
+        border-radius: 16px;
+        padding: 28px 32px;
+        margin: 30px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .takeaways::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--ed-cyan), var(--ed-amber), var(--ed-violet));
+    }
+    .takeaways h3 {
+        color: #fff;
+        margin: 0 0 18px 0;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .takeaways ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--ed-text-muted);
+        line-height: 1.85;
+    }
+    .takeaways li { margin-bottom: 8px; }
+    .takeaways strong { color: #fff; }
+
+    /* ============================================
+       PARAGRAPHS & LISTS
+       ============================================ */
+    p {
+        color: #cbd5e1;
+        line-height: 1.85;
+        margin-bottom: 18px;
+    }
+    p strong { color: #fff; font-weight: 600; }
+    article ul, article ol {
+        color: var(--ed-text-muted);
+        line-height: 1.85;
+        padding-left: 22px;
+        margin-bottom: 20px;
+    }
+    article ul li, article ol li { margin-bottom: 10px; }
+    article ul li strong, article ol li strong { color: #fff; }
+
+    /* ============================================
+       APP CARDS — TRACK-STYLE
+       ============================================ */
+    .app-card {
+        background: var(--ed-panel);
+        border: 1px solid var(--ed-border);
+        border-radius: 14px;
+        padding: 24px 28px;
+        margin: 20px 0;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .app-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--app-color, var(--ed-cyan));
+        transform: scaleY(0.4);
+        transform-origin: top;
+        transition: transform 0.4s ease;
+    }
+    .app-card:hover {
+        border-color: var(--ed-border-2);
+        background: var(--ed-panel-2);
+        transform: translateY(-3px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(45, 212, 191, 0.06);
+    }
+    .app-card:hover::before {
+        transform: scaleY(1);
+    }
+    .app-card .app-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+    .app-card .app-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--app-color, var(--ed-cyan));
+        flex-shrink: 0;
+    }
+    .app-card .app-name {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #fff;
+    }
+    .app-card .app-tagline {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        color: var(--app-color, var(--ed-cyan));
+        text-transform: uppercase;
+    }
+    .app-card p {
+        color: var(--ed-text-muted);
+        line-height: 1.75;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+    .app-card p strong { color: #fff; }
+
+    /* App colour variants */
+    .app-card[data-app="capcut"]   { --app-color: var(--ed-cyan); }
+    .app-card[data-app="vn"]       { --app-color: var(--ed-amber); }
+    .app-card[data-app="lumafusion"]{ --app-color: var(--ed-violet); }
+    .app-card[data-app="resolve"]  { --app-color: var(--ed-rose); }
+    .app-card[data-app="rush"]     { --app-color: var(--ed-blue); }
+
+    /* ============================================
+       COMPARISON TABLE — STICKY HEADER
+       ============================================ */
+    .table-scroll {
+        overflow-x: auto;
+        margin: 30px 0;
+        border-radius: 14px;
+        border: 1px solid var(--ed-border);
+        background: var(--ed-panel);
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-scroll::-webkit-scrollbar {
+        height: 6px;
+    }
+    .table-scroll::-webkit-scrollbar-track {
+        background: var(--ed-panel-2);
+        border-radius: 3px;
+    }
+    .table-scroll::-webkit-scrollbar-thumb {
+        background: var(--ed-panel-3);
+        border-radius: 3px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+        min-width: 640px;
+    }
+    table thead th {
+        background: var(--ed-panel-2);
+        color: var(--ed-cyan);
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 16px 18px;
+        text-align: left;
+        font-weight: 500;
+        border-bottom: 1px solid var(--ed-border-2);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        backdrop-filter: blur(8px);
+    }
+    table tbody td {
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--ed-border);
+        color: var(--ed-text-muted);
+    }
+    table tbody tr:last-child td {
+        border-bottom: none;
+    }
+    table tbody tr:hover td {
+        background: rgba(45, 212, 191, 0.04);
+        color: #cbd5e1;
+    }
+    table tbody td:first-child {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    /* ============================================
+       TIP / WARNING BOXES
+       ============================================ */
+    .tip-box {
+        background: linear-gradient(135deg, rgba(45, 212, 191, 0.08), rgba(45, 212, 191, 0.02));
+        border: 1px solid rgba(45, 212, 191, 0.25);
+        border-left: 4px solid var(--ed-cyan);
+        border-radius: 0 14px 14px 0;
+        padding: 22px 26px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .tip-box::before {
+        content: '◈';
+        position: absolute;
+        top: 22px;
+        right: 24px;
+        font-size: 1.1rem;
+        opacity: 0.5;
+        color: var(--ed-cyan);
+    }
+    .tip-box strong {
+        color: var(--ed-cyan);
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+    .tip-box p {
+        color: #b8e8e0;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .warning-box {
+        background: linear-gradient(135deg, rgba(251, 113, 133, 0.08), rgba(251, 113, 133, 0.02));
+        border: 1px solid rgba(251, 113, 133, 0.25);
+        border-left: 4px solid var(--ed-rose);
+        border-radius: 0 14px 14px 0;
+        padding: 22px 26px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .warning-box::before {
+        content: '⚠';
+        position: absolute;
+        top: 22px;
+        right: 24px;
+        font-size: 1.2rem;
+        opacity: 0.5;
+        color: var(--ed-rose);
+    }
+    .warning-box strong {
+        color: var(--ed-rose);
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+    .warning-box p {
+        color: #e0c8ce;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    /* ============================================
+       FAQ — COLLAPSIBLE PANELS
+       ============================================ */
+    .faq-section {
+        margin: 40px 0;
+    }
+    .faq-item {
+        background: var(--ed-panel);
+        border: 1px solid var(--ed-border);
+        border-radius: 12px;
+        padding: 22px 26px;
+        margin-bottom: 12px;
+        transition: border-color 0.3s ease;
+    }
+    .faq-item:hover {
+        border-color: var(--ed-border-2);
+    }
+    .faq-question {
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 1.02rem;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .faq-question::before {
+        content: 'Q';
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--ed-cyan);
+        border: 1px solid rgba(45, 212, 191, 0.3);
+        background: rgba(45, 212, 191, 0.08);
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+    .faq-answer {
+        color: var(--ed-text-muted);
+        line-height: 1.8;
+        padding-left: 36px;
+        border-left: 2px solid var(--ed-border-2);
+        margin-left: 12px;
+    }
+    .faq-answer p {
+        margin: 0;
+    }
+
+    /* ============================================
+       AUTHOR BOX
+       ============================================ */
+    .author-box {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 26px 30px;
+        margin: 40px 0;
+        background: var(--ed-panel);
+        border: 1px solid var(--ed-border);
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+    }
+    .author-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--ed-cyan), var(--ed-amber));
+    }
+    .author-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--ed-cyan), var(--ed-amber));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        flex-shrink: 0;
+    }
+    .author-info h4 {
+        margin: 0 0 6px 0;
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 1.02rem;
+    }
+    .author-info p {
+        margin: 0 0 6px 0;
+        color: var(--ed-text-muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .last-updated {
+        font-size: 0.78rem !important;
+        color: var(--ed-text-dim) !important;
+        font-family: var(--font-mono);
+    }
+
+    /* ============================================
+       TOC — WORKSPACE PANEL
+       ============================================ */
+    .toc {
+        background: var(--ed-panel);
+        border: 1px solid var(--ed-border);
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .toc h3 {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: var(--font-mono);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .toc h3::before {
+        content: '◉';
+        color: var(--ed-amber);
+        font-size: 0.65rem;
+    }
+    .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 20px;
+    }
+    .toc ul li a {
+        color: var(--ed-text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        border-left: 2px solid transparent;
+    }
+    .toc ul li a::before {
+        content: '▸';
+        color: var(--ed-cyan);
+        font-size: 0.7rem;
+        font-family: var(--font-mono);
+    }
+    .toc ul li a:hover {
+        color: #fff;
+        background: rgba(45, 212, 191, 0.06);
+        border-left-color: var(--ed-cyan);
+    }
+
+    /* ============================================
+       RELATED CARDS
+       ============================================ */
+    .related-articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 18px;
+        margin: 20px 0 40px;
+    }
+    .related-card {
+        padding: 22px;
+        text-decoration: none;
+        display: block;
+        background: var(--ed-panel);
+        border: 1px solid var(--ed-border);
+        border-radius: 14px;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .related-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--ed-cyan), transparent);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+    .related-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(45, 212, 191, 0.3);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(45, 212, 191, 0.08);
+    }
+    .related-card:hover::before {
+        opacity: 1;
+    }
+    .related-card h4 {
+        color: var(--ed-cyan);
+        margin: 0 0 8px 0;
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .related-card p {
+        color: var(--ed-text-muted);
+        font-size: 0.85rem;
+        margin: 0;
+        line-height: 1.55;
+    }
+
+    /* ============================================
+       INLINE LINKS
+       ============================================ */
+    article a:not(.related-card) {
+        color: var(--ed-cyan);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(45, 212, 191, 0.3);
+        transition: all 0.25s ease;
+        font-weight: 500;
+    }
+    article a:not(.related-card):hover {
+        color: #5eead4;
+        border-bottom-color: var(--ed-cyan);
+    }
+
+    /* ============================================
+       BREADCRUMBS
+       ============================================ */
+    .breadcrumbs ol li a {
+        color: var(--ed-text-dim) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+    .breadcrumbs ol li a:hover {
+        color: var(--ed-cyan) !important;
+    }
+    .breadcrumbs ol li[aria-current="page"] {
+        color: var(--ed-cyan) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+        .article-hero h1 {
+            font-size: 1.85rem;
+        }
+        .article-hero .hero-subtitle {
+            font-size: 1rem;
+        }
+        .toc ul {
+            grid-template-columns: 1fr;
+        }
+        .takeaways,
+        .tip-box,
+        .warning-box {
+            padding: 22px 24px;
+        }
+        .author-box {
+            flex-direction: column;
+            text-align: center;
+        }
+        .related-articles {
+            grid-template-columns: 1fr;
+        }
+        table {
+            font-size: 0.82rem;
+        }
+        table thead th,
+        table tbody td {
+            padding: 10px 12px;
+        }
+        h2 {
+            font-size: 1.3rem;
+        }
+        .app-card {
+            padding: 20px 22px;
+        }
+    }
+</style>
+<!-- ===== VIDEO EDITING UI DESIGN SYSTEM END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -34,7 +788,8 @@
 </head>
 <body>
 
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -203,7 +958,9 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -212,11 +969,19 @@
     </ol>
 </nav>
 
+<div class="editor-container">
+
+<!-- ===== HERO ===== -->
 <section class="article-hero">
-    <h1>Best Editing Apps for Holiday Footage</h1>
+<div class="hero-badge">Editing Toolkit · 2026</div>
+<h1>Best Editing Apps for Holiday Footage</h1>
+<p class="hero-subtitle">Five apps tested on real trips — from a 40-second reel on a phone in Lisbon to a 12-minute vlog on a laptop after three weeks in the Alps.</p>
+<div class="ruler-bar">
+<span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 </section>
 
-<article class="container">
+<!-- ===== AUTHOR ===== -->
 <div class="author-box">
 <div class="author-avatar">📹</div>
 <div class="author-info">
@@ -225,52 +990,158 @@
 <p class="last-updated">🕐 Last updated: August 25, 2026</p>
 </div>
 </div>
+
+<!-- ===== TOC ===== -->
 <div class="toc">
 <h3>In This Guide</h3>
 <ul>
-<li><a href="#quick-picks">The Quick Answer &amp; Comparison Table</a></li>
+<li><a href="#quick-picks">Quick Answer &amp; Comparison Table</a></li>
 <li><a href="#app-reviews">Each App, Tested on Real Trips</a></li>
-<li><a href="#reels-vs-vlogs">Reels vs Full YouTube Vlogs: Which App?</a></li>
-<li><a href="#offline">Offline Editing on Planes and Trains</a></li>
+<li><a href="#reels-vs-vlogs">Reels vs Full YouTube Vlogs</a></li>
+<li><a href="#offline">Offline Editing on Planes</a></li>
 <li><a href="#mistakes">Common Mistakes</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#related">Related Articles</a></li>
 </ul>
 </div>
+
 <p><strong>The best editing app for most holiday footage in 2026 is CapCut — free, fast, and available on phone, tablet, and desktop. If you want a cleaner timeline without the upsell nags, use VN. For iPad users doing serious multi-track edits, LumaFusion is the pro choice at around $30 one-off, and DaVinci Resolve is the best free desktop editor, full stop.</strong> I've cut real trip films in all five apps on this list, from a 40-second reel on a phone in a Lisbon café to a 12-minute vlog on a laptop after three weeks in the Alps.</p>
+
 <p>The right choice depends less on features — they're all surprisingly capable now — and more on three practical questions: what device you carry, whether you edit during the trip or after, and whether your output is a quick vertical reel or a full YouTube vlog. Answer those and the table below picks your app.</p>
+
+<!-- ===== KEY TAKEAWAYS ===== -->
 <div class="takeaways">
-<h3>Key Takeaways</h3>
+<h3>⚡ Key Takeaways</h3>
 <ul>
-<li>CapCut: best free all-rounder for reels and quick edits, on every platform.</li>
-<li>VN: best free timeline editor without watermarks or aggressive upsells.</li>
-<li>LumaFusion: the iPad powerhouse, around $30 once — no subscription.</li>
-<li>DaVinci Resolve: free desktop pro suite; overkill for reels, perfect for vlogs.</li>
-<li>Premiere Rush: simplest cross-device sync, but subscription-only and light on features.</li>
+<li><strong>CapCut:</strong> best free all-rounder for reels and quick edits, on every platform.</li>
+<li><strong>VN:</strong> best free timeline editor without watermarks or aggressive upsells.</li>
+<li><strong>LumaFusion:</strong> the iPad powerhouse, around $30 once — no subscription.</li>
+<li><strong>DaVinci Resolve:</strong> free desktop pro suite; overkill for reels, perfect for vlogs.</li>
+<li><strong>Premiere Rush:</strong> simplest cross-device sync, but subscription-only and light on features.</li>
 </ul>
 </div>
+
+<!-- ===== QUICK PICKS TABLE ===== -->
 <h2 id="quick-picks">The Quick Answer &amp; Comparison Table</h2>
 <p>Here's the whole article in one table. Prices are approximate ranges — apps change tiers often, so check before a trip.</p>
+
+<div class="table-scroll">
 <table>
-<tr><th>App</th><th>Platforms</th><th>Price</th><th>Offline editing</th><th>Best for</th></tr>
-<tr><td>CapCut</td><td>iOS, Android, desktop, web</td><td>Free; Pro ~$8–10/mo</td><td>Yes, fully</td><td>Reels, TikTok, quick trip films</td></tr>
-<tr><td>VN</td><td>iOS, Android, Mac</td><td>Free; optional Pro</td><td>Yes, fully</td><td>Clean timeline edits, vlogs</td></tr>
-<tr><td>LumaFusion</td><td>iPad, iPhone, Android/ChromeOS</td><td>~$30 one-off</td><td>Yes, fully</td><td>Multi-track edits on tablet</td></tr>
-<tr><td>DaVinci Resolve</td><td>Windows, Mac, Linux; iPad version</td><td>Free; Studio ~$295 once</td><td>Yes, fully</td><td>Full YouTube vlogs, color grading</td></tr>
-<tr><td>Premiere Rush</td><td>iOS, Android, desktop</td><td>~$10/mo subscription</td><td>Partial (cloud-first)</td><td>Simple synced edits across devices</td></tr>
+<thead>
+<tr>
+<th>App</th>
+<th>Platforms</th>
+<th>Price</th>
+<th>Offline editing</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapCut</td>
+<td>iOS, Android, desktop, web</td>
+<td>Free; Pro ~$8–10/mo</td>
+<td>Yes, fully</td>
+<td>Reels, TikTok, quick trip films</td>
+</tr>
+<tr>
+<td>VN</td>
+<td>iOS, Android, Mac</td>
+<td>Free; optional Pro</td>
+<td>Yes, fully</td>
+<td>Clean timeline edits, vlogs</td>
+</tr>
+<tr>
+<td>LumaFusion</td>
+<td>iPad, iPhone, Android/ChromeOS</td>
+<td>~$30 one-off</td>
+<td>Yes, fully</td>
+<td>Multi-track edits on tablet</td>
+</tr>
+<tr>
+<td>DaVinci Resolve</td>
+<td>Windows, Mac, Linux; iPad version</td>
+<td>Free; Studio ~$295 once</td>
+<td>Yes, fully</td>
+<td>Full YouTube vlogs, color grading</td>
+</tr>
+<tr>
+<td>Premiere Rush</td>
+<td>iOS, Android, desktop</td>
+<td>~$10/mo subscription</td>
+<td>Partial (cloud-first)</td>
+<td>Simple synced edits across devices</td>
+</tr>
+</tbody>
 </table>
+</div>
+
 <p>One thing this table can't show: all five handle 4K footage from cameras like the DJI Osmo Pocket 3, GoPro Hero 13, and iPhone 16 Pro without complaint, as long as your device is reasonably recent. The days of needing a workstation for holiday footage are over.</p>
+
+<!-- ===== APP REVIEWS ===== -->
 <h2 id="app-reviews">Each App, Tested on Real Trips</h2>
-<h3>CapCut — Best for Quick Reels and Beginners</h3>
+
+<!-- CapCut -->
+<div class="app-card" data-app="capcut">
+<div class="app-header">
+<span class="app-icon">⚡</span>
+<div>
+<div class="app-name">CapCut</div>
+<div class="app-tagline">Best for Quick Reels and Beginners</div>
+</div>
+</div>
 <p>CapCut is where I send everyone who asks. Auto-captions that actually work, beat-sync templates, solid color tools with LUT import, keyframes, masking — an absurd amount of editor for free. On a beach in Bali I made a 35-second reel from Pocket 3 footage in twenty minutes, captions included. The downsides: an increasing number of effects sit behind CapCut Pro, some cloud features want an account, and the template-driven style can make your video look like everyone else's if you're not careful. For a deeper color pass once your edit is assembled, my <a class="content-link" href="../editing/color-grading-travel-videos.html">beginner color grading workflow</a> applies inside CapCut step for step.</p>
-<h3>VN — Best Free Timeline Editor</h3>
+</div>
+
+<!-- VN -->
+<div class="app-card" data-app="vn">
+<div class="app-header">
+<span class="app-icon">🎬</span>
+<div>
+<div class="app-name">VN</div>
+<div class="app-tagline">Best Free Timeline Editor</div>
+</div>
+</div>
 <p>VN feels like a desktop editor that happens to live on your phone: a proper multi-track timeline, curve-based speed ramping, LUT support, and no watermark even on the free tier. It's my pick for travellers cutting a 3–8 minute trip film on a phone, because the timeline stays readable as the edit grows. The music library is thinner than CapCut's, so I usually export the cut silent and sync music afterward — the workflow in my <a class="content-link" href="/VideoCameraHoliday/how-to/24fps-vs-120fps-holiday-edit-ai-music-sync.html">frame-rate and AI music-sync guide</a> pairs perfectly with VN.</p>
-<h3>LumaFusion — Best on iPad</h3>
+</div>
+
+<!-- LumaFusion -->
+<div class="app-card" data-app="lumafusion">
+<div class="app-header">
+<span class="app-icon">🎥</span>
+<div>
+<div class="app-name">LumaFusion</div>
+<div class="app-tagline">Best on iPad</div>
+</div>
+</div>
 <p>LumaFusion is the app that made me stop carrying a laptop on shorter trips. Six video tracks, real color wheels, external drive support, and buttery playback of 4K footage on a recent iPad. It costs around $30 once — no subscription — which in 2026 feels almost radical. I edited an entire Alps ski film on an iPad Mini on the train back to Zurich. If you're serious about editing on a tablet, my <a class="content-link" href="../how-to/edit-travel-videos-phone-tablet.html">phone and tablet editing workflow</a> shows the full setup, from clip organization to export.</p>
-<h3>DaVinci Resolve — Best Free Desktop Editor</h3>
+</div>
+
+<!-- DaVinci Resolve -->
+<div class="app-card" data-app="resolve">
+<div class="app-header">
+<span class="app-icon">🎨</span>
+<div>
+<div class="app-name">DaVinci Resolve</div>
+<div class="app-tagline">Best Free Desktop Editor</div>
+</div>
+</div>
 <p>Resolve's free version is genuinely professional: the best color grading tools in the business, proper audio mixing, and exports up to 4K without paying a cent. It's what I use at home for YouTube vlogs, especially anything shot in log. The catch is weight — it wants a decent computer, the learning curve is real, and it's hopeless for a quick reel on a phone. Use it for the big post-trip film, not the daily story.</p>
-<h3>Premiere Rush — Simplest, But Subscription</h3>
+</div>
+
+<!-- Premiere Rush -->
+<div class="app-card" data-app="rush">
+<div class="app-header">
+<span class="app-icon">☁️</span>
+<div>
+<div class="app-name">Premiere Rush</div>
+<div class="app-tagline">Simplest, But Subscription</div>
+</div>
+</div>
 <p>Rush's trick is seamless project sync: start an edit on your phone at the gate, finish it on your laptop at the hotel. The tools are deliberately simple — trim, color presets, audio ducking, titles — which is either refreshing or limiting depending on your ambitions. At roughly $10 a month it's hard to recommend over free CapCut unless you already pay for Adobe's ecosystem.</p>
+</div>
+
+<!-- ===== REELS VS VLOGS ===== -->
 <h2 id="reels-vs-vlogs">Reels vs Full YouTube Vlogs: Which App?</h2>
 <p>This is the decision that actually matters, so let me be blunt:</p>
 <ul>
@@ -278,9 +1149,12 @@
 <li><strong>Mid-length trip films (2–8 minutes):</strong> VN on phone, LumaFusion on iPad. Both keep a long timeline manageable and export clean 4K.</li>
 <li><strong>Full YouTube vlogs (8+ minutes, chapters, graded):</strong> DaVinci Resolve at home, or LumaFusion if the iPad is your only machine. Then follow my <a class="content-link" href="../editing/post-travel-videos-youtube.html">YouTube export and upload workflow</a> to publish it properly.</li>
 </ul>
+
 <div class="tip-box">
 <strong>Pro tip:</strong> Don't force one app to do everything. My real workflow is CapCut for same-day reels during the trip, then Resolve at home for the long film. Two apps, zero frustration, and nothing rots unedited on a memory card.
 </div>
+
+<!-- ===== OFFLINE EDITING ===== -->
 <h2 id="offline">Offline Editing on Planes and Trains</h2>
 <p>Flights are editing gold — hours of uninterrupted time. But only if you prepare, because plane wifi won't save you.</p>
 <ul>
@@ -288,10 +1162,14 @@
 <li><strong>Desktop offline:</strong> DaVinci Resolve works fully offline; just don't rely on cloud-synced media.</li>
 <li><strong>Partial:</strong> Premiere Rush wants to sync projects to the cloud. Edits work offline, but cross-device handoff waits for a connection.</li>
 </ul>
+
 <div class="warning-box">
 <strong>Watch out:</strong> 4K footage eats storage fast — roughly 350–400 MB per minute from cameras like the Action 5 Pro. Before a flight, offload clips to your editing device or a fast card, and check you have at least 20–30 GB free for the project plus export. My <a class="content-link" href="../how-to/choose-memory-card-4k-video.html">memory card guide for 4K video</a> covers the card side of this.
 </div>
+
 <p>Battery is the other constraint: editing 4K on a phone drains it in two to three hours. A window seat and a 20,000 mAh power bank turned a Lisbon–Toronto flight into my most productive edit session of the year.</p>
+
+<!-- ===== MISTAKES ===== -->
 <h2 id="mistakes">Common Mistakes</h2>
 <ul>
 <li><strong>Downloading five apps and learning none.</strong> Pick one from the table, learn it properly for one trip, then judge.</li>
@@ -300,7 +1178,10 @@
 <li><strong>Paying for Pro before hitting the free tier's limits.</strong> Most travellers never need CapCut Pro or Resolve Studio. Upgrade only when a specific missing feature blocks you.</li>
 <li><strong>Letting templates choose your style.</strong> If your reel uses the same trending template as everyone else, your trip looks like everyone else's trip.</li>
 </ul>
+
 <p>One more thing worth saying: the app matters far less than the footage. A well-shot clip from the <a class="content-link" href="../reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a> or Pocket 3 cuts beautifully anywhere; shaky, badly exposed footage fights you in every app. Several films in our <a class="content-link" href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a> series were edited entirely in the free apps above, which tells you where the bottleneck really is.</p>
+
+<!-- ===== FAQ ===== -->
 <h2 id="faq">Frequently Asked Questions</h2>
 <div class="faq-section">
 <div class="faq-item">
@@ -320,6 +1201,8 @@
 <div class="faq-answer"><p>For reels and 2–4 minute trip films, a phone is genuinely enough — CapCut or VN plus decent footage gets you there. A laptop (or iPad with LumaFusion) earns its place for 8+ minute vlogs, multi-camera projects, and serious color grading after the trip.</p></div>
 </div>
 </div>
+
+<!-- ===== RELATED ===== -->
 <h2 id="related">Related Articles</h2>
 <div class="related-articles">
 <a class="related-card" href="../how-to/edit-travel-videos-phone-tablet.html">
@@ -335,22 +1218,18 @@
 <p>Frame rates, slow motion, and cutting your edit to the beat.</p>
 </a>
 </div>
-<p class="affiliate-note">This guide contains no affiliate links. Our recommendations are based on real travel testing.</p>
-</article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<p class="affiliate-note">This guide contains no affiliate links. Our recommendations are based on real travel testing.</p>
+
+</div><!-- /.editor-container -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -428,6 +1307,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -437,15 +1317,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -459,7 +1334,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -476,14 +1350,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -494,7 +1364,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -516,7 +1385,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -531,7 +1399,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -559,25 +1426,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -595,7 +1447,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -606,7 +1457,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -615,5 +1465,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
