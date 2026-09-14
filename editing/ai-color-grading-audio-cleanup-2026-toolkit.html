@@ -5,7 +5,661 @@
 <meta content="Master AI color grading &amp; audio cleanup for travel video. DaVinci Resolve, CapCut, Premiere compared. Fix wind noise, match 3 cameras, grade D-Log footage. Field-tested." name="description"/>
 <title>Master AI color grading &amp; audio cleanup for travel</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/ai-color-grading-audio-cleanup-2026-toolkit.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/ai-color-grading-audio-cleanup-2026-toolkit.html" rel="canonical"/>
+
+<!-- ===== AI DESIGN SYSTEM CSS START ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+    /* ============================================
+       AI DESIGN SYSTEM
+       ============================================ */
+    :root {
+        --ai-bg: #08080f;
+        --ai-bg-2: #0d0d18;
+        --ai-panel: #12121f;
+        --ai-panel-2: #1a1a2e;
+        --ai-border: rgba(139, 92, 246, 0.12);
+        --ai-border-2: rgba(139, 92, 246, 0.25);
+
+        --ai-purple: #8b5cf6;
+        --ai-purple-light: #a78bfa;
+        --ai-cyan: #22d3ee;
+        --ai-magenta: #ec4899;
+        --ai-blue: #3b82f6;
+        --ai-lime: #84cc16;
+        --ai-amber: #f59e0b;
+        --ai-rose: #f43f5e;
+
+        --ai-text: #e8e8f5;
+        --ai-text-muted: #9ca3af;
+        --ai-text-dim: #6b7280;
+
+        --font-display: 'Space Grotesk', system-ui, sans-serif;
+        --font-body: 'Inter', system-ui, sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+        background: var(--ai-bg) !important;
+        color: var(--ai-text) !important;
+        font-family: var(--font-body) !important;
+        font-size: 1.02rem;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    /* Neural network grid background */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background-image:
+            linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background:
+            radial-gradient(circle at 12% 15%, rgba(139, 92, 246, 0.12), transparent 40%),
+            radial-gradient(circle at 88% 25%, rgba(34, 211, 238, 0.1), transparent 40%),
+            radial-gradient(circle at 50% 85%, rgba(236, 72, 153, 0.08), transparent 45%);
+    }
+
+    .ai-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 24px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .article-hero {
+        text-align: center;
+        padding: 90px 20px 40px;
+        position: relative;
+    }
+    .article-hero .ai-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--ai-cyan);
+        border: 1px solid rgba(34, 211, 238, 0.3);
+        background: rgba(34, 211, 238, 0.06);
+        padding: 7px 18px;
+        border-radius: 24px;
+        margin-bottom: 26px;
+    }
+    .article-hero .ai-tag::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--ai-cyan);
+        box-shadow: 0 0 12px var(--ai-cyan);
+        animation: pulseAI 2s ease-in-out infinite;
+    }
+    @keyframes pulseAI {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    .article-hero h1 {
+        font-family: var(--font-display);
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 50%, #67e8f9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .article-hero .hero-subtitle {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        color: var(--ai-text-muted);
+        max-width: 640px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+    .neural-bar {
+        display: flex;
+        height: 3px;
+        max-width: 260px;
+        margin: 32px auto 0;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .neural-bar span { flex: 1; }
+    .neural-bar span:nth-child(1) { background: var(--ai-purple); }
+    .neural-bar span:nth-child(2) { background: var(--ai-blue); }
+    .neural-bar span:nth-child(3) { background: var(--ai-cyan); }
+    .neural-bar span:nth-child(4) { background: var(--ai-magenta); }
+    .neural-bar span:nth-child(5) { background: var(--ai-amber); }
+
+    /* ============================================
+       ARTICLE META
+       ============================================ */
+    .article-meta {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--ai-text-dim);
+        padding: 14px 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--ai-border);
+    }
+    .article-meta strong {
+        color: var(--ai-purple-light);
+        font-weight: 500;
+    }
+
+    /* ============================================
+       HEADINGS
+       ============================================ */
+    h2 {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.015em;
+        margin: 60px 0 24px 0;
+        padding-left: 22px;
+        position: relative;
+    }
+    h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        bottom: 6px;
+        width: 4px;
+        background: linear-gradient(180deg, var(--ai-purple), var(--ai-cyan));
+        border-radius: 2px;
+        box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
+    }
+    h3 {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--ai-cyan);
+        margin: 32px 0 12px 0;
+        letter-spacing: -0.01em;
+    }
+
+    /* ============================================
+       TAKEAWAYS
+       ============================================ */
+    .takeaways {
+        background: linear-gradient(135deg, var(--ai-panel) 0%, var(--ai-panel-2) 100%);
+        border: 1px solid var(--ai-border-2);
+        border-radius: 18px;
+        padding: 28px 32px;
+        margin: 30px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .takeaways::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--ai-purple), var(--ai-cyan), var(--ai-magenta));
+    }
+    .takeaways h3 {
+        color: #fff;
+        margin: 0 0 18px 0;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .takeaways ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--ai-text-muted);
+        line-height: 1.85;
+    }
+    .takeaways li { margin-bottom: 8px; }
+    .takeaways strong { color: #fff; }
+
+    /* ============================================
+       PARAGRAPHS & LISTS
+       ============================================ */
+    p {
+        color: #c8c8d8;
+        line-height: 1.85;
+        margin-bottom: 18px;
+    }
+    p strong { color: #fff; font-weight: 600; }
+    article ul, article ol {
+        color: var(--ai-text-muted);
+        line-height: 1.85;
+        padding-left: 22px;
+        margin-bottom: 20px;
+    }
+    article ul li, article ol li { margin-bottom: 10px; }
+    article ul li strong, article ol li strong { color: #fff; }
+
+    /* ============================================
+       AI CAN / CAN'T BOXES
+       ============================================ */
+    .ai-can-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 26px 0;
+    }
+    .ai-can-box {
+        border-radius: 14px;
+        padding: 22px 24px;
+        line-height: 1.75;
+        font-size: 0.95rem;
+    }
+    .ai-can-box.can {
+        background: rgba(132, 204, 22, 0.06);
+        border: 1px solid rgba(132, 204, 22, 0.25);
+        border-left: 3px solid var(--ai-lime);
+        color: #d4e8b8;
+    }
+    .ai-can-box.cant {
+        background: rgba(244, 63, 94, 0.06);
+        border: 1px solid rgba(244, 63, 94, 0.25);
+        border-left: 3px solid var(--ai-rose);
+        color: #e8c4cc;
+    }
+    .ai-can-box strong {
+        display: block;
+        margin-bottom: 10px;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+    .ai-can-box.can strong { color: var(--ai-lime); }
+    .ai-can-box.cant strong { color: var(--ai-rose); }
+
+    /* ============================================
+       TOOL CARDS
+       ============================================ */
+    .tool-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+        margin: 26px 0;
+    }
+    .tool-card {
+        background: var(--ai-panel);
+        border: 1px solid var(--ai-border);
+        border-radius: 14px;
+        padding: 22px;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .tool-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--tool-color, var(--ai-purple));
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(139, 92, 246, 0.1);
+    }
+    .tool-card .tool-name {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 8px;
+    }
+    .tool-card .tool-price {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--tool-color, var(--ai-cyan));
+        margin-bottom: 12px;
+    }
+    .tool-card .tool-desc {
+        font-size: 0.88rem;
+        color: var(--ai-text-muted);
+        line-height: 1.65;
+        margin: 0;
+    }
+    .tool-card[data-tool="davinci"] { --tool-color: var(--ai-purple); }
+    .tool-card[data-tool="capcut"]  { --tool-color: var(--ai-cyan); }
+    .tool-card[data-tool="premiere"]{ --tool-color: var(--ai-magenta); }
+    .tool-card[data-tool="adobe"]   { --tool-color: var(--ai-amber); }
+    .tool-card[data-tool="topaz"]   { --tool-color: var(--ai-blue); }
+    .tool-card[data-tool="izotope"] { --tool-color: var(--ai-lime); }
+
+    /* ============================================
+       FLOW LIST (AI-assisted workflow)
+       ============================================ */
+    .flow-list {
+        list-style: none;
+        padding: 0;
+        margin: 26px 0;
+        background: var(--ai-panel);
+        border: 1px solid var(--ai-border);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    .flow-list li {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--ai-border);
+        font-size: 0.95rem;
+        color: #c8c8d8;
+        transition: background 0.25s ease;
+    }
+    .flow-list li:last-child { border-bottom: none; }
+    .flow-list li:hover { background: var(--ai-panel-2); }
+    .flow-list li .flow-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+    .flow-list li .flow-icon.ai-icon {
+        background: rgba(139, 92, 246, 0.14);
+        box-shadow: 0 0 14px rgba(139, 92, 246, 0.15);
+    }
+    .flow-list li .flow-icon.human-icon {
+        background: rgba(245, 158, 11, 0.12);
+        box-shadow: 0 0 14px rgba(245, 158, 11, 0.12);
+    }
+    .flow-list li .flow-text { flex: 1; }
+    .flow-list li .flow-text strong { color: #fff; }
+    .flow-list li .flow-time {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--ai-cyan);
+        letter-spacing: 0.5px;
+        flex-shrink: 0;
+    }
+
+    /* ============================================
+       TOTAL SAVINGS BANNER
+       ============================================ */
+    .total-savings {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(34, 211, 238, 0.08));
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 16px;
+        padding: 26px 32px;
+        margin: 30px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .total-savings::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, rgba(139, 92, 246, 0.08), transparent 50%);
+        animation: rotateGlow 15s linear infinite;
+        pointer-events: none;
+    }
+    @keyframes rotateGlow {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .total-savings .savings-label {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--ai-cyan);
+        margin-bottom: 8px;
+        position: relative;
+    }
+    .total-savings .savings-value {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+    }
+    .total-savings .savings-value strong {
+        color: var(--ai-purple-light);
+        font-size: 1.6rem;
+    }
+
+    /* ============================================
+       WARNING BOX
+       ============================================ */
+    .warning-box {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(245, 158, 11, 0.02));
+        border: 1px solid rgba(245, 158, 11, 0.25);
+        border-left: 4px solid var(--ai-amber);
+        border-radius: 0 14px 14px 0;
+        padding: 22px 26px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .warning-box::before {
+        content: '⚠';
+        position: absolute;
+        top: 22px;
+        right: 24px;
+        font-size: 1.2rem;
+        opacity: 0.5;
+        color: var(--ai-amber);
+    }
+    .warning-box h3 {
+        color: var(--ai-amber);
+        margin: 0 0 10px 0;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .warning-box p {
+        color: #e0c8a8;
+        line-height: 1.75;
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    /* ============================================
+       NUMBERED ORDERED LIST (D-Log steps, etc.)
+       ============================================ */
+    article ol {
+        counter-reset: dlog-step;
+        list-style: none;
+        padding: 0;
+        margin: 26px 0;
+    }
+    article ol > li {
+        counter-increment: dlog-step;
+        background: var(--ai-panel);
+        border: 1px solid var(--ai-border);
+        border-radius: 12px;
+        padding: 16px 22px 16px 66px;
+        margin-bottom: 12px;
+        position: relative;
+        transition: all 0.3s ease;
+        color: #c8c8d8;
+        line-height: 1.7;
+    }
+    article ol > li::before {
+        content: counter(dlog-step, decimal-leading-zero);
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--ai-purple-light);
+        background: rgba(139, 92, 246, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    article ol > li:hover {
+        border-color: var(--ai-border-2);
+        background: var(--ai-panel-2);
+    }
+
+    /* ============================================
+       RELATED CARDS
+       ============================================ */
+    .related-articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+        margin: 30px 0 40px;
+        padding: 0;
+        list-style: none;
+    }
+    .related-articles h3 {
+        grid-column: 1 / -1;
+        margin: 0 0 6px 0;
+        color: var(--ai-purple-light);
+        font-size: 0.95rem;
+        font-family: var(--font-mono);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    .related-card {
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+        background: var(--ai-panel);
+        border: 1px solid var(--ai-border);
+        border-radius: 14px;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .related-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--ai-purple), var(--ai-cyan));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .related-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--ai-border-2);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(139, 92, 246, 0.12);
+    }
+    .related-card:hover::before { opacity: 1; }
+    .related-card h4 {
+        color: var(--ai-cyan);
+        margin: 0 0 8px 0;
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .related-card p {
+        color: var(--ai-text-muted);
+        font-size: 0.85rem;
+        margin: 0;
+        line-height: 1.55;
+    }
+
+    /* ============================================
+       INLINE LINKS
+       ============================================ */
+    article a:not(.related-card) {
+        color: var(--ai-cyan);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(34, 211, 238, 0.3);
+        transition: all 0.25s ease;
+        font-weight: 500;
+    }
+    article a:not(.related-card):hover {
+        color: #67e8f9;
+        border-bottom-color: var(--ai-cyan);
+    }
+
+    /* ============================================
+       BREADCRUMBS
+       ============================================ */
+    .breadcrumbs ol li a {
+        color: var(--ai-text-dim) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+    .breadcrumbs ol li a:hover { color: var(--ai-cyan) !important; }
+    .breadcrumbs ol li[aria-current="page"] {
+        color: var(--ai-purple-light) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+        .article-hero h1 { font-size: 1.85rem; }
+        .article-hero .hero-subtitle { font-size: 1rem; }
+        .ai-can-grid { grid-template-columns: 1fr; }
+        .tool-grid { grid-template-columns: 1fr; }
+        .related-articles { grid-template-columns: 1fr; }
+        .takeaways, .warning-box, .total-savings { padding: 22px 24px; }
+        h2 { font-size: 1.3rem; }
+        article ol > li { padding: 14px 18px 14px 56px; }
+        article ol > li::before {
+            left: 14px;
+            width: 30px;
+            height: 30px;
+            font-size: 0.78rem;
+        }
+        .flow-list li { flex-wrap: wrap; gap: 10px; }
+        .flow-list li .flow-time { margin-left: 52px; }
+    }
+</style>
+<!-- ===== AI DESIGN SYSTEM CSS END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -25,7 +679,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Master AI color grading &amp; audio cleanup for travel",
+      "name": "Master AI color grading & audio cleanup for travel",
       "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/ai-color-grading-audio-cleanup-2026-toolkit.html"
     }
   ]
@@ -34,7 +688,8 @@
 </head>
 <body>
 
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -203,40 +858,78 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
         <li><a href="/VideoCameraHoliday/editing/">Editing</a></li>
-        <li aria-current="page">Master AI color grading &amp;amp; audio cleanup for travel</li>
+        <li aria-current="page">Master AI color grading &amp; audio cleanup for travel</li>
     </ol>
 </nav>
 
+<div class="ai-container">
+
+<!-- ===== HERO ===== -->
 <section class="article-hero">
-    <h1>Master AI color grading &amp; audio cleanup for travel</h1>
+<div class="ai-tag">AI Toolkit · 2026</div>
+<h1>Master AI color grading &amp; audio cleanup for travel</h1>
+<p class="hero-subtitle">AI won't make bad footage look like Hollywood. But if you shot decent footage, AI can save you 10–15 hours per project.</p>
+<div class="neural-bar">
+<span></span><span></span><span></span><span></span><span></span>
+</div>
 </section>
 
-<article class="container">
 <p class="article-meta"><strong>By Dawid Millennium</strong> | Published August 31, 2026 | 16 min read | ✂️ Editing</p>
-<p>AI in video editing won't make bad footage look like Hollywood. But if you shot decent footage, AI can save you 10-15 hours per project by automating the tedious parts.</p>
+
+<p>AI in video editing won't make bad footage look like Hollywood. But if you shot decent footage, AI can save you 10–15 hours per project by automating the tedious parts.</p>
+
+<!-- ===== KEY TAKEAWAYS ===== -->
 <div class="takeaways">
 <h3>⚡ Key Takeaways</h3>
 <ul>
 <li><strong>DaVinci Resolve (free)</strong> wins for color matching with Shot Match</li>
 <li><strong>Adobe Podcast Enhance</strong> (free) removes 95% of echo and noise</li>
 <li><strong>AI handles 80%</strong> of technical work — you handle the 20% creative</li>
-<li><strong>Time saved per project:</strong> 10-14 hours</li>
+<li><strong>Time saved per project:</strong> 10–14 hours</li>
 </ul>
 </div>
+
+<!-- ===== WHAT AI CAN / CAN'T DO ===== -->
 <h2>What AI Can (and Can't) Do</h2>
-<p><strong>✅ AI CAN:</strong> Match colors across cameras, remove wind noise, basic grading, upscale 1080p, stabilize, auto-transcribe, detect silence.</p>
-<p><strong>❌ AI CAN'T:</strong> Fix blown highlights, recover out-of-focus, make 1080p look like 4K, replace bad storytelling.</p>
+<div class="ai-can-grid">
+<div class="ai-can-box can">
+<strong>✅ AI CAN</strong>
+Match colors across cameras, remove wind noise, basic grading, upscale 1080p, stabilize, auto-transcribe, detect silence.
+</div>
+<div class="ai-can-box cant">
+<strong>❌ AI CAN'T</strong>
+Fix blown highlights, recover out-of-focus, make 1080p look like 4K, replace bad storytelling.
+</div>
+</div>
+
+<!-- ===== TOOL COMPARISON ===== -->
 <h2>DaVinci Resolve vs. CapCut vs. Premiere</h2>
-<ul>
-<li><strong>DaVinci Resolve (Free):</strong> Best overall. Shot Match saves 2-3 hours.</li>
-<li><strong>CapCut (Free):</strong> Best for quick social edits. 30-45 minutes saved.</li>
-<li><strong>Premiere Pro ($23/mo):</strong> Best for full production pipeline.</li>
-</ul>
+<div class="tool-grid">
+<div class="tool-card" data-tool="davinci">
+<div class="tool-name">DaVinci Resolve</div>
+<div class="tool-price">Free · Best Overall</div>
+<p class="tool-desc">Shot Match saves 2–3 hours per project. Free version handles everything most travel editors need.</p>
+</div>
+<div class="tool-card" data-tool="capcut">
+<div class="tool-name">CapCut</div>
+<div class="tool-price">Free · Best for Social</div>
+<p class="tool-desc">Best for quick social edits. Saves 30–45 minutes per project on vertical content.</p>
+</div>
+<div class="tool-card" data-tool="premiere">
+<div class="tool-name">Premiere Pro</div>
+<div class="tool-price">$23/mo · Full Pipeline</div>
+<p class="tool-desc">Best for full production pipelines. Only worth it if you're already in the Adobe ecosystem.</p>
+</div>
+</div>
+
+<!-- ===== 3-CAMERA MATCHING ===== -->
 <h2>Matching Shots from 3 Different Cameras</h2>
 <ol>
 <li>Shoot a color reference at start of each day</li>
@@ -246,38 +939,98 @@
 <li>Match exposure separately</li>
 <li>Apply creative grade LAST</li>
 </ol>
+
+<!-- ===== AUDIO CLEANUP ===== -->
 <h2>AI Audio Cleanup</h2>
 <h3>The 3 Problems</h3>
-<ul>
-<li><strong>Wind Noise:</strong> Adobe Podcast, CapCut, DaVinci Voice Isolation</li>
-<li><strong>Crowd Roar:</strong> Adobe Podcast, Auphonic, iZotope RX</li>
-<li><strong>Room Echo:</strong> Adobe Podcast (95% removal)</li>
-</ul>
+<div class="tool-grid">
+<div class="tool-card" data-tool="adobe">
+<div class="tool-name">Wind Noise</div>
+<div class="tool-price">Adobe Podcast · CapCut · Resolve</div>
+<p class="tool-desc">Adobe Podcast Enhance removes most wind rumble in one click. DaVinci Voice Isolation works for ambient.</p>
+</div>
+<div class="tool-card" data-tool="izotope">
+<div class="tool-name">Crowd Roar</div>
+<div class="tool-price">Adobe Podcast · Auphonic · iZotope RX</div>
+<p class="tool-desc">Layer in clean ambience at −20 dB after cleaning. Preserves crowd energy without the harshness.</p>
+</div>
+<div class="tool-card" data-tool="premiere">
+<div class="tool-name">Room Echo</div>
+<div class="tool-price">Adobe Podcast (95% removal)</div>
+<p class="tool-desc">Adobe Podcast Enhance is the standout tool here — it flattens echo better than paid plugins.</p>
+</div>
+</div>
+
 <h3>My Workflow</h3>
 <ol>
 <li>Upload to Adobe Podcast Enhance (free, browser)</li>
 <li>For ambient audio: DaVinci Voice Isolation</li>
 <li>Extreme cases: iZotope RX ($129)</li>
-<li>Layer clean ambient at -20dB</li>
-<li>Normalize to -14 LUFS for YouTube</li>
+<li>Layer clean ambient at −20dB</li>
+<li>Normalize to −14 LUFS for YouTube</li>
 </ol>
-<div class="takeaways">
+
+<div class="warning-box">
 <h3>⚠️ The Over-Processing Trap</h3>
 <p>If your narrator sounds like a 2005 phone call, reduce noise reduction by 20% and add room tone back.</p>
 </div>
+
+<!-- ===== AI-ASSISTED WORKFLOW ===== -->
 <h2>The AI-Assisted Workflow</h2>
-<ul>
-<li>🤖 Color matching: DaVinci Shot Match (saves 2-3 hours)</li>
-<li>🤖 Basic exposure: Auto Color (saves 1 hour)</li>
-<li>🤖 Video noise reduction: DaVinci NR (saves 30 min)</li>
-<li>🤖 Audio cleanup: Adobe Podcast (saves 1-2 hours)</li>
-<li>🤖 Subtitles: CapCut auto-caption (saves 2 hours)</li>
-<li>🤖 Silence removal: Descript (saves 1 hour)</li>
-<li>👤 Story structure: My brain</li>
-<li>👤 Creative grade: My eye</li>
-<li>👤 Music selection: My ears</li>
+<ul class="flow-list">
+<li>
+<span class="flow-icon ai-icon">🤖</span>
+<span class="flow-text"><strong>Color matching:</strong> DaVinci Shot Match</span>
+<span class="flow-time">−2–3 hrs</span>
+</li>
+<li>
+<span class="flow-icon ai-icon">🤖</span>
+<span class="flow-text"><strong>Basic exposure:</strong> Auto Color</span>
+<span class="flow-time">−1 hr</span>
+</li>
+<li>
+<span class="flow-icon ai-icon">🤖</span>
+<span class="flow-text"><strong>Video noise reduction:</strong> DaVinci NR</span>
+<span class="flow-time">−30 min</span>
+</li>
+<li>
+<span class="flow-icon ai-icon">🤖</span>
+<span class="flow-text"><strong>Audio cleanup:</strong> Adobe Podcast</span>
+<span class="flow-time">−1–2 hrs</span>
+</li>
+<li>
+<span class="flow-icon ai-icon">🤖</span>
+<span class="flow-text"><strong>Subtitles:</strong> CapCut auto-caption</span>
+<span class="flow-time">−2 hrs</span>
+</li>
+<li>
+<span class="flow-icon ai-icon">🤖</span>
+<span class="flow-text"><strong>Silence removal:</strong> Descript</span>
+<span class="flow-time">−1 hr</span>
+</li>
+<li>
+<span class="flow-icon human-icon">👤</span>
+<span class="flow-text"><strong>Story structure:</strong> My brain</span>
+<span class="flow-time">Human</span>
+</li>
+<li>
+<span class="flow-icon human-icon">👤</span>
+<span class="flow-text"><strong>Creative grade:</strong> My eye</span>
+<span class="flow-time">Human</span>
+</li>
+<li>
+<span class="flow-icon human-icon">👤</span>
+<span class="flow-text"><strong>Music selection:</strong> My ears</span>
+<span class="flow-time">Human</span>
+</li>
 </ul>
-<p><strong>Total AI time saved per project:</strong> 10-14 hours.</p>
+
+<div class="total-savings">
+<div class="savings-label">Total AI Time Saved</div>
+<div class="savings-value"><strong>10–14 hours</strong> per project</div>
+</div>
+
+<!-- ===== D-LOG WORKFLOW ===== -->
 <h2>Before/After: DJI Pocket 3 D-Log Footage</h2>
 <ol>
 <li>Color Space Transform: D-Log → Rec.709</li>
@@ -286,45 +1039,96 @@
 <li>Creative LUT + manual adjustments</li>
 <li>Add 35mm grain at 10% opacity</li>
 </ol>
-<p>Total time: 4 minutes per clip.</p>
-<h2>Worth Paying For</h2>
-<ul>
-<li><strong>DaVinci Resolve Studio ($295):</strong> AI noise reduction, magic mask</li>
-<li><strong>Adobe Podcast Enhance:</strong> Free tier is incredible</li>
-<li><strong>Topaz Video AI ($199):</strong> Upscaling, frame interpolation</li>
-<li><strong>Skip:</strong> Most $30-50/mo "AI Video Editor" apps</li>
-</ul>
-<h2>The Budget AI Stack</h2>
-<ul>
-<li>Editing &amp; Color: DaVinci Resolve (Free)</li>
-<li>Audio: Adobe Podcast Enhance (Free)</li>
-<li>Social: CapCut (Free)</li>
-<li>Subtitles: CapCut Auto-Captions (Free)</li>
-<li>Music: Epidemic Sound (Paid)</li>
-<li>Stock: Pexels / Pixabay (Free)</li>
-</ul>
-<p><strong>Total cost:</strong> $0-299 one-time.</p>
-<div class="related-articles">
-<h3>📚 Related</h3>
-<a class="related-card" href="/VideoCameraHoliday/editing/color-grading-travel-videos.html"><h4>Color Grading</h4><p>Travel video basics</p></a>
-<a class="related-card" href="/24fps-vs-120fps-holiday-edit-ai-music-sync.html"><h4>24 vs 120fps</h4><p>Beat-syncing guide</p></a>
-<a class="related-card" href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html"><h4>Editing Apps</h4><p>Best tools compared</p></a>
-</div>
-</article>
+<p>Total time: <strong>4 minutes per clip.</strong></p>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<!-- ===== WORTH PAYING FOR ===== -->
+<h2>Worth Paying For</h2>
+<div class="tool-grid">
+<div class="tool-card" data-tool="davinci">
+<div class="tool-name">DaVinci Resolve Studio</div>
+<div class="tool-price">$295 one-time</div>
+<p class="tool-desc">AI noise reduction, magic mask, and GPU acceleration. The single best paid upgrade for travel editors.</p>
+</div>
+<div class="tool-card" data-tool="adobe">
+<div class="tool-name">Adobe Podcast Enhance</div>
+<div class="tool-price">Free tier incredible</div>
+<p class="tool-desc">The free browser tool removes echo and noise like nothing else at this price point (which is zero).</p>
+</div>
+<div class="tool-card" data-tool="topaz">
+<div class="tool-name">Topaz Video AI</div>
+<div class="tool-price">$199 one-time</div>
+<p class="tool-desc">Upscaling and frame interpolation. Worth it only if you regularly rescue older 1080p travel footage.</p>
+</div>
+<div class="tool-card" data-tool="izotope">
+<div class="tool-name">Skip</div>
+<div class="tool-price">Most $30–50/mo "AI editors"</div>
+<p class="tool-desc">Subscription AI tools rarely justify their monthly cost for travel editors who work on a few projects a year.</p>
+</div>
+</div>
+
+<!-- ===== BUDGET STACK ===== -->
+<h2>The Budget AI Stack</h2>
+<div class="tool-grid">
+<div class="tool-card" data-tool="davinci">
+<div class="tool-name">Editing &amp; Color</div>
+<div class="tool-price">Free</div>
+<p class="tool-desc">DaVinci Resolve</p>
+</div>
+<div class="tool-card" data-tool="adobe">
+<div class="tool-name">Audio</div>
+<div class="tool-price">Free</div>
+<p class="tool-desc">Adobe Podcast Enhance</p>
+</div>
+<div class="tool-card" data-tool="capcut">
+<div class="tool-name">Social</div>
+<div class="tool-price">Free</div>
+<p class="tool-desc">CapCut</p>
+</div>
+<div class="tool-card" data-tool="capcut">
+<div class="tool-name">Subtitles</div>
+<div class="tool-price">Free</div>
+<p class="tool-desc">CapCut Auto-Captions</p>
+</div>
+<div class="tool-card" data-tool="topaz">
+<div class="tool-name">Music</div>
+<div class="tool-price">Paid</div>
+<p class="tool-desc">Epidemic Sound</p>
+</div>
+<div class="tool-card" data-tool="premiere">
+<div class="tool-name">Stock</div>
+<div class="tool-price">Free</div>
+<p class="tool-desc">Pexels / Pixabay</p>
+</div>
+</div>
+
+<p><strong>Total cost:</strong> $0–299 one-time.</p>
+
+<!-- ===== RELATED ===== -->
+<div class="related-articles">
+<h3>📚 Related Guides</h3>
+<a class="related-card" href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">
+<h4>Color Grading</h4>
+<p>Travel video basics</p>
+</a>
+<a class="related-card" href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html">
+<h4>Editing Apps</h4>
+<p>Best tools compared</p>
+</a>
+<a class="related-card" href="/VideoCameraHoliday/editing/post-travel-videos-youtube.html">
+<h4>Post to YouTube</h4>
+<p>Export and publish guide</p>
+</a>
+</div>
+
+</div><!-- /.ai-container -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -402,6 +1206,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -411,15 +1216,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -433,7 +1233,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -450,14 +1249,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -468,7 +1263,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -490,7 +1284,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -505,7 +1298,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -533,25 +1325,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -569,7 +1346,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -580,7 +1356,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -589,5 +1364,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
