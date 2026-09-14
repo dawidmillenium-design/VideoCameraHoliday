@@ -4,7 +4,296 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Contact Holiday Video Camera. Reach out with questions, suggestions, or partnership inquiries." name="description"/>
 <title>Contact | Holiday Video Camera</title>
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/contact.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">{
+
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/contact.html" rel="canonical"/>
+
+<!-- ===== CONTACT PAGE ENHANCEMENTS ===== -->
+<style>
+    /* ---- Contact Container ---- */
+    .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* ---- Hero Section ---- */
+    .contact-hero {
+        text-align: center;
+        padding: 60px 20px 30px;
+    }
+    .contact-hero h1 {
+        font-size: 2.4rem;
+        background: linear-gradient(135deg, #ffffff, #e94560);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 16px;
+    }
+    .contact-hero .subtitle {
+        color: #aaa;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    .contact-hero .response-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(76, 175, 80, 0.1);
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        color: #66bb6a;
+        font-size: 0.85rem;
+        padding: 6px 16px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+    .contact-hero .response-note .dot {
+        width: 8px;
+        height: 8px;
+        background: #66bb6a;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+    }
+
+    /* ---- Contact Methods Grid ---- */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+        margin: 40px 0;
+    }
+    .contact-card {
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        padding: 26px 24px;
+        text-align: center;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        text-decoration: none;
+        color: #fff;
+        display: block;
+    }
+    .contact-card:hover {
+        transform: translateY(-5px);
+        border-color: #e94560;
+        box-shadow: 0 10px 28px rgba(233, 69, 96, 0.15);
+        background: #161616;
+    }
+    .contact-card .icon {
+        font-size: 2.2rem;
+        display: block;
+        margin-bottom: 14px;
+    }
+    .contact-card h3 {
+        color: #e94560;
+        font-size: 1.05rem;
+        margin: 0 0 8px 0;
+    }
+    .contact-card .detail {
+        color: #aaa;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0 0 12px 0;
+    }
+    .contact-card .link-text {
+        color: #e94560;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+    .contact-card:hover .link-text {
+        color: #fff;
+    }
+
+    /* ---- Summary Box ---- */
+    .summary-box {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        border: 1px solid #2a2a4a;
+        border-radius: 16px;
+        padding: 26px 30px;
+        margin: 0 0 30px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .summary-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: #e94560;
+    }
+    .summary-box h2 {
+        color: #e94560;
+        font-size: 1.15rem;
+        margin: 0 0 14px 0;
+    }
+    .summary-box ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #ccc;
+        line-height: 1.8;
+    }
+    .summary-box li {
+        margin-bottom: 6px;
+    }
+    .summary-box strong {
+        color: #fff;
+    }
+
+    /* ---- Section Titles ---- */
+    .section-title {
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 50px 0 24px 0;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #2a2a2a;
+    }
+
+    /* ---- Inquiry Types ---- */
+    .inquiry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 18px;
+        margin: 24px 0;
+    }
+    .inquiry-card {
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 14px;
+        padding: 22px;
+        transition: all 0.3s ease;
+    }
+    .inquiry-card:hover {
+        border-color: #333;
+    }
+    .inquiry-card h4 {
+        color: #fff;
+        font-size: 1rem;
+        margin: 0 0 8px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .inquiry-card p {
+        color: #999;
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+    .inquiry-card .response-time {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 12px;
+        background: rgba(76, 175, 80, 0.1);
+        color: #66bb6a;
+        margin-top: 10px;
+    }
+
+    /* ---- FAQ Quick Links ---- */
+    .faq-quick {
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        padding: 26px 28px;
+        margin: 30px 0;
+    }
+    .faq-quick h3 {
+        color: #e94560;
+        margin: 0 0 16px 0;
+        font-size: 1.1rem;
+    }
+    .faq-quick ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 20px;
+    }
+    .faq-quick ul li a {
+        color: #999;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .faq-quick ul li a:hover {
+        color: #e94560;
+    }
+    .faq-quick ul li a::before {
+        content: '→';
+        color: #e94560;
+        font-size: 0.8rem;
+    }
+
+    /* ---- CTA Box ---- */
+    .cta-box {
+        background: rgba(233, 69, 96, 0.06);
+        border: 1px solid rgba(233, 69, 96, 0.25);
+        border-radius: 16px;
+        padding: 36px 30px;
+        text-align: center;
+        margin: 40px 0;
+    }
+    .cta-box h2 {
+        color: #e94560;
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+    .cta-box p {
+        color: #aaa;
+        max-width: 520px;
+        margin: 10px auto 22px;
+        line-height: 1.6;
+    }
+    .cta-box .btn {
+        display: inline-block;
+        padding: 13px 34px;
+        background: #e94560;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    .cta-box .btn:hover {
+        background: #c7354e;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(233, 69, 96, 0.25);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 768px) {
+        .contact-hero h1 {
+            font-size: 1.7rem;
+        }
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+        .inquiry-grid {
+            grid-template-columns: 1fr;
+        }
+        .faq-quick ul {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<!-- ===== CONTACT PAGE ENHANCEMENTS END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -13,11 +302,20 @@
       "position": 1,
       "name": "Home",
       "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/contact.html"
     }
   ]
-}</script></head>
-<body><h1>Contact | Holiday Video Camera</h1>
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+}</script>
+</head>
+<body>
+
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -186,45 +484,119 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === --><article class="container">
-<p>Whether you have a question about a camera, want to suggest a review, or are interested in working together, this is the place. We try to respond to every message within a few days.</p>
-<div class="contact-methods">
-<h3>How to Reach Us</h3>
-<div class="contact-method">
-<strong>📧 Email</strong>
-<a href="mailto:hello@holidayvideocamera.com">hello@holidayvideocamera.com</a>
-<p style="margin-bottom:0; color:#888; font-size:0.9rem;">For general questions, feedback, and partnership inquiries.</p>
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+        <li><a href="/VideoCameraHoliday/">Home</a></li>
+        <li aria-current="page">Contact</li>
+    </ol>
+</nav>
+
+<div class="contact-container">
+
+<!-- Hero -->
+<section class="contact-hero">
+<h1>Get in Touch</h1>
+<p class="subtitle">Whether you have a question about a camera, want to suggest a review, or are interested in working together, this is the place. We read every message.</p>
+<span class="response-note"><span class="dot"></span> Typical response time: 1–2 business days</span>
+</section>
+
+<!-- Summary Box -->
+<div class="summary-box">
+<h2>📬 How We Can Help</h2>
+<ul>
+<li><strong>Camera questions:</strong> Ask us anything about gear — we've tested it all on real trips.</li>
+<li><strong>Review suggestions:</strong> Tell us which camera or destination we should cover next.</li>
+<li><strong>Partnerships &amp; press:</strong> We're open to collaborations with travel brands and tourism boards.</li>
+<li><strong>Corrections:</strong> Spotted an error? Let us know and we'll fix it fast.</li>
+</ul>
 </div>
-<div class="contact-method">
-<strong>📬 Newsletter</strong>
-<a href="/index.html#newsletter">Subscribe to our newsletter</a>
-<p style="margin-bottom:0; color:#888; font-size:0.9rem;">Get weekly camera deals and field notes straight to your inbox.</p>
+
+<!-- Contact Methods Grid -->
+<h2 class="section-title">📮 How to Reach Us</h2>
+<div class="contact-grid">
+
+<a class="contact-card" href="mailto:hello@holidayvideocamera.com">
+<span class="icon">📧</span>
+<h3>Email</h3>
+<p class="detail">For general questions, feedback, and partnership inquiries.</p>
+<span class="link-text">hello@holidayvideocamera.com →</span>
+</a>
+
+<a class="contact-card" href="/VideoCameraHoliday/#newsletter">
+<span class="icon">📬</span>
+<h3>Newsletter</h3>
+<p class="detail">Get weekly camera deals and field notes straight to your inbox.</p>
+<span class="link-text">Subscribe now →</span>
+</a>
+
+<a class="contact-card" href="#" target="_blank" rel="noopener">
+<span class="icon">💬</span>
+<h3>Social Media</h3>
+<p class="detail">Follow us for daily travel footage, behind-the-scenes, and quick tips.</p>
+<span class="link-text">YouTube · Instagram · Twitter →</span>
+</a>
+
 </div>
-<div class="contact-method">
-<strong>💬 Social Media</strong>
-<p style="margin-bottom:0;">
-                Follow us on
-                <a aria-label="YouTube" href="#">YouTube</a>,
-                <a aria-label="Instagram" href="#">Instagram</a>, and
-                <a aria-label="Twitter" href="#">Twitter</a>.
-            </p>
+
+<!-- Inquiry Types -->
+<h2 class="section-title">📋 What Are You Writing About?</h2>
+<div class="inquiry-grid">
+<div class="inquiry-card">
+<h4>📷 Camera Advice</h4>
+<p>Not sure which camera fits your trip? Tell us your destination, budget, and what you want to film — we'll point you in the right direction.</p>
+<span class="response-time">1–2 days</span>
+</div>
+<div class="inquiry-card">
+<h4>✍️ Review Requests</h4>
+<p>Want us to test a specific camera or cover a destination? We're always looking for new ideas from readers.</p>
+<span class="response-time">3–5 days</span>
+</div>
+<div class="inquiry-card">
+<h4>🤝 Partnerships</h4>
+<p>Brands, tourism boards, and PR agencies — we're open to collaborating on travel photography and video projects.</p>
+<span class="response-time">2–3 days</span>
+</div>
+<div class="inquiry-card">
+<h4>🔧 Corrections</h4>
+<p>Spotted a mistake in one of our guides? Let us know and we'll verify and update as quickly as possible.</p>
+<span class="response-time">Within 24h</span>
 </div>
 </div>
-<p>If you have a specific camera question, you might find a faster answer in our <a class="content-link" href="/VideoCameraHoliday/guides/">Buying Guides</a> or <a class="content-link" href="/VideoCameraHoliday/comparisons/">Comparisons</a>. For business or press inquiries, please use the email above.</p>
-</article>
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+
+<!-- Quick Links -->
+<div class="faq-quick">
+<h3>⚡ You Might Find a Faster Answer Here</h3>
+<ul>
+<li><a href="/VideoCameraHoliday/guides/">Buying Guides</a></li>
+<li><a href="/VideoCameraHoliday/comparisons/">Camera Comparisons</a></li>
+<li><a href="/VideoCameraHoliday/destinations/underwater-camera-guide.html">Underwater Camera Guide</a></li>
+<li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilization Tips</a></li>
+<li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens Series</a></li>
+<li><a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+
+<!-- CTA Box -->
+<div class="cta-box">
+<h2>💌 Business or Press Inquiry?</h2>
+<p>For commercial partnerships, media requests, or review samples, please email us directly with "Partnership" or "Press" in the subject line so we can route your message correctly.</p>
+<a class="btn" href="mailto:hello@holidayvideocamera.com?subject=Partnership%20Inquiry">Email Us Directly</a>
+</div>
+
+<p style="text-align:center; color:#666; font-size:0.85rem; padding-bottom:40px;">We aim to respond to all messages within a few days. Thanks for reaching out!</p>
+
+</div><!-- /.contact-container -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -302,6 +674,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -311,15 +684,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -333,7 +701,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -350,14 +717,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -368,7 +731,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -390,7 +752,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -405,7 +766,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -433,25 +793,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -469,7 +814,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -480,7 +824,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -489,5 +832,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
