@@ -204,6 +204,879 @@
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
 </aside><!-- === DESIGN-B-HEADER-END === -->
+
+<!-- ============================================================
+     WATERPROOF CAMERAS 2026 — OCEAN DEPTHS THEME (CSS ONLY)
+     Scoped strictly to .article-hero + article.container.
+     Header, drawer and footer remain untouched.
+     ============================================================ -->
+<style id="wp-ocean-effects">
+/* ---------- ocean tokens ---------- */
+.article-hero,
+article.container{
+  --wp-lagoon:#06b6d4;
+  --wp-aqua:#22d3ee;
+  --wp-aqua-lt:#67e8f9;
+  --wp-teal:#14b8a6;
+  --wp-teal-dp:#0f766e;
+  --wp-coral:#fb7185;
+  --wp-coral-dp:#e11d48;
+  --wp-sand:#fef3c7;
+  --wp-shell:#fbcfe8;
+  --wp-pearl:#f8fafc;
+  --wp-deep:#041e2a;
+  --wp-deep-2:#062a3a;
+  --wp-navy:#0b1e2e;
+  --wp-r:18px;
+  --wp-ease:cubic-bezier(.22,1,.36,1);
+}
+
+@property --wp-a{syntax:'<angle>';inherits:false;initial-value:0deg;}
+
+/* ---------- keyframes ---------- */
+@keyframes wp-in{from{opacity:0;transform:translateY(26px) scale(.97);filter:blur(9px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes wp-shine{0%{background-position:130% 50%}100%{background-position:-130% 50%}}
+@keyframes wp-slide{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes wp-spin{to{--wp-a:360deg}}
+@keyframes wp-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes wp-reveal{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes wp-bubble{
+  0%   {transform:translateY(0) scale(.55); opacity:0;}
+  12%  {opacity:.75;}
+  80%  {opacity:.85;}
+  100% {transform:translateY(-360px) scale(1.05); opacity:0;}
+}
+@keyframes wp-sway{0%,100%{transform:translateX(-1.5%)}50%{transform:translateX(1.5%)}}
+@keyframes wp-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(2deg)}}
+@keyframes wp-btn-sheen{0%{left:-120%}55%,100%{left:145%}}
+@keyframes wp-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(var(--wp-pulse,6,182,212),0),0 22px 44px -34px rgba(var(--wp-pulse,6,182,212),.55)}
+  50%{box-shadow:0 0 0 7px rgba(var(--wp-pulse,6,182,212),.08),0 26px 52px -28px rgba(var(--wp-pulse,6,182,212),.85)}
+}
+@keyframes wp-ripple{
+  0%{transform:scale(1);opacity:.7}
+  100%{transform:scale(1.9);opacity:0}
+}
+
+/* ============================================================
+   HERO — underwater surface with sun rays + bubbles
+   ============================================================ */
+.article-hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  margin:0;
+  padding:clamp(64px,9vw,124px) 22px clamp(84px,10vw,144px);
+  text-align:center;
+  color:#fff;
+  background:
+    radial-gradient(ellipse 78% 50% at 50% -8%, rgba(103,232,249,.4) 0%, rgba(6,182,212,.12) 42%, transparent 70%),
+    radial-gradient(ellipse 70% 60% at 12% 108%, rgba(20,184,166,.55) 0%, transparent 62%),
+    radial-gradient(ellipse 70% 60% at 90% 108%, rgba(11,30,46,.8) 0%, transparent 62%),
+    linear-gradient(180deg, #041e2a 0%, #062a3a 32%, #073b4f 62%, #041e2a 100%);
+}
+/* sun rays from above */
+.article-hero::before{
+  content:"";
+  position:absolute;
+  top:-20%; left:-10%; right:-10%;
+  height:80%;
+  background:
+    conic-gradient(from 200deg at 50% 0%,
+      transparent 0deg 8deg, rgba(103,232,249,.14) 12deg 14deg, transparent 18deg 28deg,
+      rgba(103,232,249,.1) 32deg 34deg, transparent 38deg 50deg,
+      rgba(103,232,249,.14) 54deg 56deg, transparent 60deg 72deg,
+      rgba(103,232,249,.1) 76deg 78deg, transparent 82deg 96deg,
+      rgba(103,232,249,.14) 100deg 102deg, transparent 106deg 118deg,
+      rgba(103,232,249,.1) 122deg 124deg, transparent 128deg 142deg,
+      rgba(103,232,249,.14) 146deg 148deg, transparent 152deg 164deg,
+      rgba(103,232,249,.1) 168deg 170deg, transparent 174deg 188deg);
+  filter:blur(1px);
+  opacity:.85;
+  pointer-events:none;
+  z-index:0;
+}
+/* beach waves at the bottom */
+.article-hero::after{
+  content:"";
+  position:absolute;
+  left:-5%; right:-5%; bottom:-2px;
+  height:44%;
+  background:
+    radial-gradient(120% 100% at 10% 118%, #0e7490 0 60%, transparent 62%),
+    radial-gradient(115% 100% at 48% 120%, #0891b2 0 58%, transparent 60%),
+    radial-gradient(125% 100% at 92% 118%, #155e75 0 62%, transparent 64%),
+    radial-gradient(140% 100% at 60% 128%, #0f766e 0 58%, transparent 60%);
+  filter:drop-shadow(0 -10px 22px rgba(0,0,0,.45));
+  pointer-events:none;
+  z-index:1;
+}
+.article-hero > *{position:relative; z-index:3;}
+
+/* bubble field */
+.article-hero .wp-bubbles{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:2;
+  overflow:hidden;
+}
+.article-hero .wp-bubbles span{
+  position:absolute;
+  bottom:-20px;
+  width:14px; height:14px;
+  border-radius:50%;
+  background:radial-gradient(circle at 32% 28%, rgba(255,255,255,.95), rgba(103,232,249,.45) 40%, rgba(6,182,212,.15) 70%, transparent 72%);
+  box-shadow:inset 0 0 6px rgba(255,255,255,.55), 0 0 14px rgba(103,232,249,.5);
+  animation:wp-bubble 9s linear infinite;
+}
+.article-hero .wp-bubbles span:nth-child(1){left:10%; width:10px; height:10px; animation-duration:8s;  animation-delay:0s;}
+.article-hero .wp-bubbles span:nth-child(2){left:22%; width:16px; height:16px; animation-duration:11s; animation-delay:1.4s;}
+.article-hero .wp-bubbles span:nth-child(3){left:34%; width:8px;  height:8px;  animation-duration:9s;  animation-delay:2.6s;}
+.article-hero .wp-bubbles span:nth-child(4){left:46%; width:12px; height:12px; animation-duration:10s; animation-delay:.8s;}
+.article-hero .wp-bubbles span:nth-child(5){left:58%; width:20px; height:20px; animation-duration:13s; animation-delay:3.2s;}
+.article-hero .wp-bubbles span:nth-child(6){left:70%; width:11px; height:11px; animation-duration:9s;  animation-delay:1.9s;}
+.article-hero .wp-bubbles span:nth-child(7){left:82%; width:14px; height:14px; animation-duration:11s; animation-delay:4.1s;}
+.article-hero .wp-bubbles span:nth-child(8){left:92%; width:9px;  height:9px;  animation-duration:8s;  animation-delay:2.2s;}
+
+/* H1 ocean gradient */
+.article-hero h1{
+  margin:0 auto;
+  max-width:26ch;
+  font-size:clamp(1.85rem,5.2vw,3.75rem);
+  line-height:1.06;
+  letter-spacing:-.024em;
+  background:linear-gradient(100deg,
+    #ffffff 0%, #a5f3fc 20%, #22d3ee 38%,
+    #ffffff 52%, #67e8f9 68%, #fbcfe8 88%, #ffffff 100%);
+  background-size:230% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 18px 34px rgba(0,0,0,.6));
+  animation:wp-in 1s var(--wp-ease) both, wp-shine 8s linear infinite 1.1s;
+}
+
+/* ============================================================
+   ARTICLE BODY
+   ============================================================ */
+article.container{position:relative; padding-bottom:70px;}
+
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    article.container > *{
+      animation:wp-reveal .9s var(--wp-ease) both;
+      animation-timeline:view();
+      animation-range:entry 6% cover 24%;
+    }
+    article.container > .author-box{
+      animation-range:entry 0% cover 16%;
+    }
+  }
+}
+
+/* ---------- headings — seashell marker ---------- */
+article.container h2{
+  position:relative;
+  margin-top:clamp(46px,6vw,76px);
+  padding:0 0 16px 50px;
+  letter-spacing:-.014em;
+  scroll-margin-top:96px;
+}
+article.container h2::before{
+  content:"";
+  position:absolute;
+  left:6px; top:50%;
+  transform:translateY(-60%);
+  width:26px; height:26px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 34% 30%, #ffffff 0%, #a5f3fc 34%, var(--wp-aqua) 62%, var(--wp-teal-dp) 100%);
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,.15),
+    0 0 0 4px rgba(34,211,238,.14),
+    0 10px 22px -10px rgba(34,211,238,.9);
+}
+article.container h2::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:0;
+  height:4px;
+  width:min(100%,340px);
+  border-radius:99px;
+  background:linear-gradient(90deg, var(--wp-aqua), var(--wp-teal) 32%, rgba(251,113,133,.55) 68%, transparent);
+  box-shadow:0 8px 22px -10px rgba(34,211,238,.85);
+  transform-origin:left center;
+  animation:wp-line 1.1s var(--wp-ease) both;
+  animation-timeline:view();
+  animation-range:entry 12% cover 26%;
+}
+article.container h3{letter-spacing:-.006em; scroll-margin-top:96px;}
+article.container > ul > li::marker{color:var(--wp-aqua); font-weight:900;}
+article.container > ol > li::marker{color:var(--wp-coral); font-weight:900;}
+
+/* ---------- in-text links ---------- */
+article.container .content-link{
+  color:inherit;
+  text-decoration:none;
+  padding:0 2px;
+  border-radius:3px;
+  background-image:linear-gradient(90deg,var(--wp-aqua),var(--wp-coral));
+  background-repeat:no-repeat;
+  background-position:0 100%;
+  background-size:100% 2px;
+  transition:background-size .38s var(--wp-ease), color .38s var(--wp-ease);
+}
+article.container .content-link:hover,
+article.container .content-link:focus-visible{
+  background-size:100% 100%;
+  color:#041e2a;
+}
+
+/* ============================================================
+   TAKEAWAYS — glassy tide panel
+   ============================================================ */
+.takeaways{
+  position:relative;
+  margin:34px 0;
+  padding:30px 28px 26px;
+  border-radius:var(--wp-r);
+  border:1px solid rgba(34,211,238,.32);
+  background:
+    linear-gradient(135deg, rgba(34,211,238,.14), rgba(20,184,166,.08) 55%, rgba(251,113,133,.07));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 30px 60px -42px rgba(0,0,0,.85);
+  overflow:hidden;
+}
+.takeaways::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1.5px;
+  border-radius:inherit;
+  background:conic-gradient(from var(--wp-a),
+      transparent 0turn .5turn,
+      var(--wp-aqua) .66turn,
+      var(--wp-teal) .76turn,
+      var(--wp-coral) .86turn,
+      transparent .95turn);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  animation:wp-spin 9s linear infinite;
+  pointer-events:none;
+}
+.takeaways h3{margin:0 0 14px; letter-spacing:-.006em; color:var(--wp-aqua-lt);}
+.takeaways ul{margin:0; padding:0; list-style:none;}
+.takeaways li{
+  position:relative;
+  padding:9px 0 9px 32px;
+}
+.takeaways li::before{
+  content:"";
+  position:absolute;
+  left:4px; top:17px;
+  width:11px; height:11px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #ffffff, var(--wp-aqua) 70%);
+  box-shadow:0 0 0 3px rgba(34,211,238,.16);
+}
+.takeaways .btn{
+  margin-left:6px;
+}
+
+/* ============================================================
+   CAMERA CARDS — glassy aquarium panels
+   ============================================================ */
+.cam-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+  margin:26px 0 10px;
+}
+.cam-card{
+  position:relative;
+  padding:32px 26px 28px;
+  border-radius:var(--wp-r);
+  border:1px solid rgba(34,211,238,.28);
+  background:
+    linear-gradient(180deg, rgba(34,211,238,.1), rgba(255,255,255,.012) 55%, rgba(20,184,166,.06));
+  box-shadow:0 28px 58px -42px rgba(0,0,0,.9);
+  overflow:hidden;
+  transition:transform .55s var(--wp-ease), border-color .55s var(--wp-ease), box-shadow .55s var(--wp-ease);
+}
+.cam-card::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--wp-teal-dp), var(--wp-aqua) 32%, var(--wp-aqua-lt) 55%, var(--wp-coral) 82%, var(--wp-coral-dp));
+  background-size:200% 100%;
+  animation:wp-slide 7s linear infinite;
+}
+.cam-card::after{
+  content:"";
+  position:absolute;
+  top:0; left:-130%;
+  width:60%; height:100%;
+  background:linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent);
+  transform:skewX(-18deg);
+  transition:left .95s var(--wp-ease);
+  pointer-events:none;
+}
+.cam-card:hover,
+.cam-card:focus-within{
+  transform:translateY(-8px);
+  border-color:rgba(34,211,238,.65);
+  box-shadow:
+    0 34px 64px -32px rgba(0,0,0,.95),
+    0 0 32px -6px rgba(34,211,238,.55),
+    0 0 44px -12px rgba(20,184,166,.4);
+  animation:wp-pulse 4.5s ease-in-out infinite;
+}
+.cam-card:hover::after{left:150%;}
+
+.cam-card h3{
+  margin:16px 0 6px;
+  letter-spacing:-.008em;
+  color:#fff;
+  transition:color .4s var(--wp-ease);
+}
+.cam-card:hover h3{color:var(--wp-aqua-lt);}
+.cam-card h4{
+  margin:20px 0 10px;
+  padding-top:16px;
+  border-top:1px dashed rgba(34,211,238,.28);
+  font-size:.98rem;
+  letter-spacing:.02em;
+  color:var(--wp-aqua-lt);
+}
+.cam-card .price{
+  display:inline-block;
+  margin:6px 0 16px;
+  padding:6px 16px;
+  font-weight:900;
+  font-size:1.06rem;
+  letter-spacing:.03em;
+  border-radius:999px;
+  color:var(--wp-aqua-lt);
+  background:linear-gradient(135deg, rgba(34,211,238,.16), rgba(20,184,166,.28));
+  border:1px solid rgba(34,211,238,.5);
+  box-shadow:0 12px 24px -16px rgba(34,211,238,.9);
+}
+.cam-card ul{
+  margin:6px 0 18px;
+  padding-left:22px;
+  font-size:.94rem;
+  line-height:1.6;
+  color:#cbd5e1;
+}
+.cam-card ul li{margin-bottom:6px;}
+.cam-card ul li::marker{color:var(--wp-aqua); font-weight:900;}
+.cam-card p{
+  margin:0 0 16px;
+  font-size:.94rem;
+  line-height:1.65;
+  color:#cbd5e1;
+}
+.cam-card p[style*="font-size:0.9rem"]{
+  color:#9db4c4 !important;
+  font-size:.9rem !important;
+  line-height:1.65;
+  padding-left:14px;
+  border-left:2px solid rgba(34,211,238,.4);
+}
+
+/* badges */
+.cam-card .badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 14px 6px 8px;
+  border-radius:999px;
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#041e2a;
+  background:linear-gradient(135deg, var(--wp-aqua-lt), var(--wp-aqua) 60%, var(--wp-teal));
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:0 10px 22px -12px rgba(34,211,238,.95);
+  transition:transform .45s var(--wp-ease), box-shadow .45s var(--wp-ease);
+}
+.cam-card .badge::before{
+  content:"";
+  width:16px; height:16px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #ffffff, var(--wp-aqua) 70%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.5);
+}
+.cam-card:hover .badge{
+  transform:translateY(-2px);
+  box-shadow:0 14px 26px -12px rgba(34,211,238,1);
+}
+.cam-card .badge-green{
+  color:#052e24;
+  background:linear-gradient(135deg, #99f6e4, var(--wp-teal) 60%, var(--wp-teal-dp));
+  box-shadow:0 10px 22px -12px rgba(20,184,166,.95);
+}
+.cam-card .badge-blue{
+  color:#04222e;
+  background:linear-gradient(135deg, #bae6fd, #38bdf8 60%, #0369a1);
+  box-shadow:0 10px 22px -12px rgba(56,189,248,.95);
+}
+.cam-card .badge-orange{
+  color:#2a0d02;
+  background:linear-gradient(135deg, #fed7aa, #fb923c 60%, #c2410c);
+  box-shadow:0 10px 22px -12px rgba(251,146,60,.95);
+}
+
+/* ============================================================
+   BUTTONS — aqua pill
+   ============================================================ */
+article.container .btn,
+.takeaways .btn{
+  position:relative;
+  display:inline-block;
+  margin-top:auto;
+  padding:12px 24px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:.92rem;
+  letter-spacing:.01em;
+  text-decoration:none;
+  color:#041e2a;
+  background:linear-gradient(135deg, var(--wp-aqua-lt), var(--wp-aqua) 55%, var(--wp-teal));
+  box-shadow:0 16px 32px -16px rgba(34,211,238,.95);
+  overflow:hidden;
+  cursor:pointer;
+  border:0;
+  transition:transform .35s var(--wp-ease), box-shadow .35s var(--wp-ease), color .35s var(--wp-ease);
+}
+article.container .btn::after,
+.takeaways .btn::after{
+  content:"";
+  position:absolute;
+  top:0; left:-120%;
+  width:55%; height:100%;
+  background:linear-gradient(100deg, transparent, rgba(255,255,255,.65), transparent);
+  transform:skewX(-18deg);
+  animation:wp-btn-sheen 3.8s ease-in-out infinite;
+  pointer-events:none;
+}
+article.container .btn:hover,
+article.container .btn:focus-visible{
+  transform:translateY(-2px);
+  color:#fff;
+  box-shadow:
+    0 20px 40px -16px rgba(34,211,238,1),
+    0 0 26px -6px rgba(103,232,249,.6);
+}
+
+/* small inline "Review Coming Soon" buttons already have inline styles;
+   make them feel tactile without breaking layout */
+article.container .btn[style*="opacity:0.6"]{
+  cursor:not-allowed;
+  filter:saturate(.5);
+}
+
+/* ============================================================
+   SPOTLIGHT PANEL — budget module (.wp-panel)
+   ============================================================ */
+.wp-panel{
+  position:relative;
+  margin:22px 0;
+  padding:26px 26px 22px;
+  border-radius:var(--wp-r);
+  border:1px solid rgba(34,211,238,.3);
+  background:
+    radial-gradient(ellipse 60% 60% at 0% 0%, rgba(34,211,238,.14), transparent 62%),
+    radial-gradient(ellipse 60% 60% at 100% 100%, rgba(251,113,133,.12), transparent 62%),
+    linear-gradient(135deg, #062a3a, #0b3f52 55%, #062a3a);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 30px 60px -42px rgba(0,0,0,.95);
+  overflow:hidden;
+}
+.wp-panel::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--wp-teal-dp), var(--wp-aqua) 35%, var(--wp-aqua-lt) 55%, var(--wp-coral) 82%, var(--wp-coral-dp));
+  background-size:200% 100%;
+  animation:wp-slide 7s linear infinite;
+}
+.wp-panel h4{
+  margin:0 0 10px;
+  color:var(--wp-aqua-lt);
+  letter-spacing:-.005em;
+  font-size:1.02rem;
+}
+.wp-panel h4 + ul{margin-bottom:18px;}
+.wp-panel ul{
+  margin:0 0 8px;
+  padding-left:22px;
+  color:#cbd5e1;
+  font-size:.94rem;
+  line-height:1.65;
+}
+.wp-panel ul li::marker{color:var(--wp-aqua); font-weight:900;}
+
+/* coral accent callout */
+.wp-coral-note{
+  position:relative;
+  margin:22px 0;
+  padding:18px 22px 18px 60px;
+  border-radius:14px;
+  border:1px solid rgba(251,113,133,.4);
+  background:linear-gradient(135deg, rgba(251,113,133,.12), rgba(225,29,72,.05));
+  box-shadow:0 22px 46px -34px rgba(225,29,72,.9);
+  overflow:hidden;
+}
+.wp-coral-note::before{
+  content:"🎯";
+  position:absolute;
+  left:20px; top:50%;
+  transform:translateY(-50%);
+  font-size:1.4rem;
+  line-height:1;
+  filter:drop-shadow(0 4px 10px rgba(225,29,72,.5));
+}
+.wp-coral-note p{
+  margin:0;
+  color:#fecdd3;
+  line-height:1.65;
+}
+.wp-coral-note p strong{color:#fff;}
+
+/* ============================================================
+   COMPARISON TABLE — tidal ledger
+   ============================================================ */
+article.container table.comparison-table{
+  width:100%;
+  margin:28px 0;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:.92rem;
+  border:1px solid rgba(34,211,238,.24);
+  border-radius:16px;
+  overflow:hidden;
+  background:linear-gradient(180deg, rgba(34,211,238,.04), rgba(20,184,166,.03));
+  box-shadow:0 30px 58px -44px rgba(0,0,0,.9);
+}
+article.container table.comparison-table thead th{
+  padding:15px 16px;
+  text-align:left;
+  font-weight:800;
+  letter-spacing:.05em;
+  font-size:.8rem;
+  text-transform:uppercase;
+  color:var(--wp-aqua-lt);
+  background:
+    linear-gradient(135deg, rgba(34,211,238,.16), rgba(20,184,166,.14));
+  border-bottom:1px solid rgba(34,211,238,.32);
+}
+article.container table.comparison-table tbody td{
+  padding:13px 16px;
+  border-bottom:1px solid rgba(34,211,238,.1);
+  color:#cbd5e1;
+  transition:background .35s var(--wp-ease), color .35s var(--wp-ease);
+}
+article.container table.comparison-table tbody tr:last-child td{border-bottom:0;}
+article.container table.comparison-table tbody tr:nth-child(even) td{
+  background:rgba(34,211,238,.025);
+}
+article.container table.comparison-table tbody tr:hover td{
+  background:rgba(34,211,238,.09);
+  color:#fff;
+}
+article.container table.comparison-table strong{color:#fff;}
+
+/* fallback plain tables */
+article.container table:not(.comparison-table){
+  width:100%;
+  margin:26px 0;
+  border-collapse:collapse;
+  font-size:.92rem;
+}
+article.container table:not(.comparison-table) th,
+article.container table:not(.comparison-table) td{
+  padding:12px 14px;
+  border-bottom:1px solid rgba(34,211,238,.14);
+}
+
+/* ============================================================
+   FAQ — magazine Q & A
+   ============================================================ */
+article.container dl{
+  display:block;
+  margin:24px 0 12px;
+  padding:0;
+}
+article.container dt{
+  position:relative;
+  margin:0;
+  padding:20px 22px 12px 64px;
+  font-weight:900;
+  font-size:1.02rem;
+  letter-spacing:-.006em;
+  border-radius:14px 14px 0 0;
+  background:linear-gradient(180deg, rgba(34,211,238,.14), rgba(34,211,238,.03));
+  border:1px solid rgba(34,211,238,.24);
+  border-bottom:0;
+  color:#fff;
+}
+article.container dt strong{color:#fff; font-weight:900;}
+article.container dt::before{
+  content:"Q";
+  position:absolute;
+  left:22px; top:22px;
+  width:28px; height:28px;
+  display:grid;
+  place-items:center;
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:900;
+  font-size:.92rem;
+  color:#041e2a;
+  border-radius:50%;
+  background:radial-gradient(circle at 34% 30%, #ffffff, var(--wp-aqua-lt) 42%, var(--wp-aqua) 72%, var(--wp-teal-dp) 100%);
+  box-shadow:
+    inset 0 -2px 4px rgba(0,0,0,.3),
+    0 8px 18px -10px rgba(34,211,238,.95);
+}
+article.container dd{
+  position:relative;
+  margin:0 0 16px;
+  padding:4px 22px 20px 64px;
+  border-radius:0 0 14px 14px;
+  border:1px solid rgba(34,211,238,.24);
+  border-top:1px dashed rgba(34,211,238,.24);
+  background:linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+  font-size:.96rem;
+  line-height:1.65;
+  color:#cbd5e1;
+  transition:border-color .4s var(--wp-ease), background .4s var(--wp-ease);
+}
+article.container dd::before{
+  content:"A";
+  position:absolute;
+  left:22px; top:10px;
+  width:28px; height:28px;
+  display:grid;
+  place-items:center;
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:900;
+  font-size:.92rem;
+  color:#e0e7ef;
+  border-radius:50%;
+  background:linear-gradient(135deg, #1f2937, #374151);
+  box-shadow:
+    0 8px 18px -10px rgba(0,0,0,.9),
+    inset 0 0 0 1px rgba(255,255,255,.08);
+}
+article.container dd:hover{
+  border-color:rgba(34,211,238,.5);
+  background:linear-gradient(180deg, rgba(34,211,238,.05), transparent);
+}
+article.container dd a{
+  color:var(--wp-aqua-lt);
+  text-decoration:none;
+  border-bottom:1px dashed rgba(34,211,238,.55);
+  transition:border-color .3s var(--wp-ease), color .3s var(--wp-ease);
+}
+article.container dd a:hover{
+  border-bottom-style:solid;
+  color:#fff;
+}
+
+/* ============================================================
+   AUTHOR BOX — pearl byline
+   ============================================================ */
+.author-box{
+  position:relative;
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+  margin:44px 0 12px;
+  padding:26px;
+  border-radius:var(--wp-r);
+  border:1px solid rgba(34,211,238,.28);
+  background:
+    linear-gradient(135deg, rgba(34,211,238,.1), rgba(255,255,255,.02) 55%, rgba(20,184,166,.08));
+  box-shadow:0 30px 58px -42px rgba(0,0,0,.9);
+  overflow:hidden;
+}
+.author-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1.5px;
+  border-radius:inherit;
+  background:conic-gradient(from var(--wp-a),
+      transparent 0turn .5turn,
+      var(--wp-aqua) .66turn,
+      var(--wp-aqua-lt) .76turn,
+      var(--wp-teal) .86turn,
+      transparent .95turn);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  animation:wp-spin 10s linear infinite;
+  pointer-events:none;
+}
+.author-avatar{
+  flex:0 0 auto;
+  width:66px; height:66px;
+  display:grid;
+  place-items:center;
+  font-size:1.6rem;
+  border-radius:50%;
+  background:
+    conic-gradient(from 210deg, var(--wp-aqua-lt), var(--wp-aqua), var(--wp-teal), var(--wp-teal-dp), var(--wp-aqua-lt));
+  box-shadow:
+    0 0 0 4px rgba(34,211,238,.16),
+    0 16px 30px -14px rgba(34,211,238,.95);
+  animation:wp-float 6.5s ease-in-out infinite;
+}
+.author-info h4{margin:0 0 10px; letter-spacing:-.006em; color:var(--wp-aqua-lt);}
+.author-info p{margin:0 0 10px; font-size:.95rem; color:#cbd5e1;}
+.author-info a{
+  display:inline-block;
+  font-weight:800;
+  font-size:.9rem;
+  color:var(--wp-aqua-lt);
+  text-decoration:none;
+  border-bottom:2px solid rgba(34,211,238,.5);
+  padding-bottom:2px;
+  transition:border-color .35s var(--wp-ease), color .35s var(--wp-ease);
+}
+.author-info a:hover,
+.author-info a:focus-visible{color:#fff; border-color:var(--wp-aqua-lt);}
+
+/* ============================================================
+   RELATED CARDS — aquarium tiles
+   ============================================================ */
+.related-articles{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+  margin:22px 0 10px;
+}
+.related-card{
+  position:relative;
+  display:block;
+  padding:24px 22px;
+  border-radius:16px;
+  border:1px solid rgba(34,211,238,.24);
+  background:
+    linear-gradient(180deg, rgba(34,211,238,.07), rgba(255,255,255,.012) 60%, rgba(20,184,166,.05));
+  color:inherit;
+  text-decoration:none;
+  overflow:hidden;
+  transition:transform .5s var(--wp-ease), box-shadow .5s var(--wp-ease), border-color .5s var(--wp-ease);
+}
+.related-card::before{
+  content:"";
+  position:absolute;
+  top:14px; right:14px;
+  width:10px; height:10px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #ffffff, var(--wp-aqua) 70%);
+  box-shadow:0 0 0 4px rgba(34,211,238,.14);
+  transition:transform .5s var(--wp-ease), box-shadow .5s var(--wp-ease);
+}
+.related-card::after{
+  content:"";
+  position:absolute;
+  top:0; left:-130%;
+  width:60%; height:100%;
+  background:linear-gradient(100deg, transparent, rgba(255,255,255,.28), transparent);
+  transform:skewX(-18deg);
+  transition:left .95s var(--wp-ease);
+  pointer-events:none;
+}
+.related-card:hover,
+.related-card:focus-visible{
+  transform:translateY(-8px);
+  border-color:rgba(34,211,238,.6);
+  box-shadow:
+    0 34px 60px -32px rgba(0,0,0,.95),
+    0 0 26px -6px rgba(34,211,238,.5);
+}
+.related-card:hover::before{
+  transform:scale(1.5);
+  box-shadow:0 0 0 6px rgba(34,211,238,.22);
+}
+.related-card:hover::after{left:150%;}
+.related-card h4{margin:0 0 8px; transition:color .4s var(--wp-ease); color:var(--wp-aqua-lt);}
+.related-card:hover h4{color:#fff;}
+.related-card p{margin:0; font-size:.93rem; opacity:.88; color:#cbd5e1;}
+
+/* ============================================================
+   FINAL CTA ROW
+   ============================================================ */
+.wp-cta-row{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:34px 0 6px;
+}
+.wp-cta-row .btn{margin-top:0 !important;}
+
+/* ---------- affiliate note ---------- */
+.affiliate-note{
+  margin-top:26px;
+  font-size:.85rem;
+  opacity:.72;
+  font-style:italic;
+  color:#94a3b8;
+}
+
+/* ---------- paragraph rhythm polish ---------- */
+article.container > p{line-height:1.72;}
+article.container > p strong{color:#f1f5f9;}
+article.container > ol{
+  padding-left:22px;
+  margin:16px 0 22px;
+  line-height:1.72;
+}
+article.container > ol li{margin-bottom:8px;}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:640px){
+  .article-hero .wp-bubbles span:nth-child(n+6){display:none;}
+  article.container h2{padding-left:40px;}
+  article.container h2::before{width:22px; height:22px; left:2px;}
+  .author-box{flex-direction:column; align-items:flex-start;}
+  .cam-grid{grid-template-columns:1fr;}
+  article.container dt,
+  article.container dd{padding-left:54px;}
+  article.container dt::before,
+  article.container dd::before{left:16px; width:24px; height:24px;}
+  article.container table.comparison-table{font-size:.78rem;}
+  article.container table.comparison-table thead th,
+  article.container table.comparison-table tbody td{padding:10px 12px;}
+}
+
+/* ============================================================
+   A11Y — reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  .article-hero *,
+  .article-hero::before,
+  .article-hero::after,
+  article.container *,
+  article.container *::before,
+  article.container *::after{
+    animation:none !important;
+    transition-duration:.01ms !important;
+  }
+}
+</style>
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -213,16 +1086,17 @@
 </nav>
 
 <section class="article-hero">
+    <span class="wp-bubbles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
     <h1>Best Waterproof Cameras for Beach 2026</h1>
 </section>
 
 <article class="container" id="main-content">
-<!-- 1. INTRODUCTION (350 words) -->
+<!-- 1. INTRODUCTION -->
 <p><strong>I learned the hard way that salt water and cameras don't mix. On my first beach trip with a brand-new camera, a rogue wave splashed my gear, and the camera never worked the same again. That mistake cost me hundreds of dollars — and a lot of frustration.</strong></p>
 <p>Since then, I've made it my mission to find cameras that can actually survive the beach. I've tested rugged cameras on <strong>two beach trips — Goa (India) and the Maldives</strong> — shooting in salt spray, direct sunlight, and underwater. I've dropped them in sand, submerged them in the ocean, and filmed in the most challenging conditions a traveller could face.</p>
 <p>After all that testing, I've learned one thing: <strong>there is no single "best" waterproof camera</strong>. It depends on what you want to shoot. If you want the best stills and macro shots, choose the <strong>OM System TG-7</strong>. If you want smooth, stabilised video, choose the <strong>GoPro Hero 13</strong>. And if you're on a tight budget, the <strong>Fujifilm XP130</strong> or <strong>Panasonic TS30</strong> are excellent value under $200.</p>
 <p>In this guide, I'll break down <strong>everything you need to know</strong> — from the best cameras to cleaning tips, underwater techniques, and how to choose the right camera for your beach holiday.</p>
-<!-- 2. HOW WE TESTED (250 words) -->
+<!-- 2. HOW WE TESTED -->
 <h2>🧪 How We Tested These Cameras</h2>
 <p><strong>Locations:</strong> Palolem Beach (Goa) and Maafushi Island (Maldives) — two very different beach environments with saltwater, sand, and strong sunlight.</p>
 <p><strong>Conditions:</strong> 35°C heat, high humidity, salt spray, and sudden rain. We tested each camera in the worst possible conditions to see what would survive.</p>
@@ -232,9 +1106,9 @@
 <div class="takeaways">
 <h3>⚡ Quick Takeaways – Best Waterproof Cameras for Beach</h3>
 <ul>
-<li><strong>Best for Stills &amp; Snorkeling:</strong> OM System Tough TG-7 – macro, f/2 lens, 15m waterproof. <a class="btn" href="#" style="display:inline-block; padding:4px 16px; font-size:0.75rem; background:#333;">Review Coming Soon</a></li>
-<li><strong>Best for Video &amp; Action:</strong> GoPro Hero 13 – HyperSmooth, 8K, rugged. <a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html" style="color:#e94560;">Read Review →</a></li>
-<li><strong>Best Budget Under $200:</strong> Fujifilm XP130 / Panasonic TS30 – attack the #1 ranking URL. <a href="#budget" style="color:#e94560;">See budget section →</a></li>
+<li><strong>Best for Stills &amp; Snorkeling:</strong> OM System Tough TG-7 – macro, f/2 lens, 15m waterproof. <a class="btn" href="#" style="display:inline-block; padding:4px 16px; font-size:0.75rem;">Review Coming Soon</a></li>
+<li><strong>Best for Video &amp; Action:</strong> GoPro Hero 13 – HyperSmooth, 8K, rugged. <a href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">Read Review →</a></li>
+<li><strong>Best Budget Under $200:</strong> Fujifilm XP130 / Panasonic TS30 – attack the #1 ranking URL. <a href="#budget">See budget section →</a></li>
 </ul>
 </div>
 <!-- 4. HERO CAMERA GRID -->
@@ -289,8 +1163,8 @@
 <!-- 5. UNDER-$200 SECTION -->
 <h2 id="budget">💰 Why We Added an Under-$200 Pick</h2>
 <p>In our latest SERP analysis (September 2026), the <strong>#1 ranking page for "best waterproof camera for beach"</strong> is a guide focused entirely on cameras <strong>under $200</strong>. To compete, we've added a dedicated budget module featuring the <strong>Fujifilm FinePix XP130</strong> and <strong>Panasonic Lumix DMC-TS30</strong>.</p>
-<div style="background:#111; border:1px solid #333; border-radius:12px; padding:20px; margin:20px 0;">
-<h4 style="color:#fff; margin:0 0 10px 0;">Fujifilm FinePix XP130</h4>
+<div class="wp-panel">
+<h4>Fujifilm FinePix XP130</h4>
 <ul>
 <li>16MP sensor</li>
 <li>5x optical zoom</li>
@@ -299,7 +1173,7 @@
 <li>Freezeproof to -10°C</li>
 <li>~$150 – $180</li>
 </ul>
-<h4 style="color:#fff; margin:15px 0 10px 0;">Panasonic Lumix DMC-TS30</h4>
+<h4>Panasonic Lumix DMC-TS30</h4>
 <ul>
 <li>16MP sensor</li>
 <li>4x optical zoom</li>
@@ -308,13 +1182,13 @@
 <li>Usually cheaper (~$100 – $130)</li>
 </ul>
 </div>
-<div style="background:rgba(251,140,0,0.1); border-left:4px solid #fb8c00; padding:15px 20px; margin:20px 0; border-radius:4px;">
-<p style="margin:0; color:#ccc;"><strong>🎯 SERP Strategy:</strong> By offering this budget section, we directly target the query that currently outranks us. Combined with our premium picks (TG-7 and Hero 13), we now cover the entire buyer journey – from budget-conscious travelers to serious content creators.</p>
+<div class="wp-coral-note">
+<p><strong>SERP Strategy:</strong> By offering this budget section, we directly target the query that currently outranks us. Combined with our premium picks (TG-7 and Hero 13), we now cover the entire buyer journey – from budget-conscious travelers to serious content creators.</p>
 </div>
 <!-- 6. HOW TO CLEAN A WATERPROOF CAMERA -->
 <h2>🧼 How to Clean Your Waterproof Camera After the Beach</h2>
 <p>Salt water and sand are the enemies of any camera. Here's my step-by-step routine after every beach shoot:</p>
-<ol style="margin-left:20px; margin-bottom:20px;">
+<ol>
 <li><strong>Rinse with fresh water:</strong> Immediately after leaving the beach, rinse your camera with fresh water (not salt water). Use a gentle stream — never high pressure.</li>
 <li><strong>Dry with a soft cloth:</strong> Use a microfibre cloth to dry the body and lens. Pay special attention to the lens and any seals.</li>
 <li><strong>Open all doors:</strong> Open the battery door and port covers to let moisture escape. Leave them open for at least an hour in a dry place.</li>
@@ -381,7 +1255,7 @@
 <ul>
 <li><strong>I want high-quality stills, macro, and snorkeling shots:</strong> OM System TG-7 → <a class="content-link" href="#">Review Coming Soon</a></li>
 <li><strong>I want smooth action videos and surfing footage:</strong> GoPro Hero 13 → <a class="content-link" href="/VideoCameraHoliday/reviews/gopro-hero-13-review.html">Read Review</a></li>
-<li><strong>I'm on a tight budget or buying for kids:</strong> Fujifilm XP130 / Panasonic TS30 → <a href="#budget">See budget section</a></li>
+<li><strong>I'm on a tight budget or buying for kids:</strong> Fujifilm XP130 / Panasonic TS30 → <a class="content-link" href="#budget">See budget section</a></li>
 </ul>
 <!-- 11. FAQ SECTION -->
 <h2>❓ Frequently Asked Questions</h2>
@@ -403,7 +1277,7 @@
 <div class="author-info">
 <h4>Dawid Millennium — Travel Videographer &amp; Founder</h4>
 <p>Travel vlogger since 2018. 50+ cameras tested on real holidays across 15+ countries. Every guide on this site is written from footage shot in the field — not from a spec sheet.</p>
-<a href="/VideoCameraHoliday/about/" style="color:#e94560; text-decoration:underline;">Learn more →</a>
+<a href="/VideoCameraHoliday/about/">Learn more →</a>
 </div>
 </div>
 <!-- 13. RELATED GUIDES -->
@@ -413,9 +1287,9 @@
 <a class="related-card" href="/VideoCameraHoliday/guides/best-compact-cameras-travel-2026.html"><h4>Best Compact Cameras for Travel 2026</h4><p>Stills-first compact cameras for travel.</p></a>
 <a class="related-card" href="/VideoCameraHoliday/guides/best-budget-travel-cameras-2026.html"><h4>Budget Camera Hub</h4><p>All our under-$500 picks in one place.</p></a>
 </div>
-<div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center; margin:30px 0;">
+<div class="wp-cta-row">
 <a class="btn" href="/VideoCameraHoliday/destinations/">🌍 Explore Destinations</a>
-<a class="btn" href="/VideoCameraHoliday/reviews/" style="background:#333;">📸 Read Full Reviews</a>
+<a class="btn" href="/VideoCameraHoliday/reviews/">📸 Read Full Reviews</a>
 </div>
 <p class="affiliate-note">Some links are affiliate links. We earn a small commission at no extra cost to you. All picks are based on real testing.</p>
 </article>
@@ -426,13 +1300,6 @@
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -523,11 +1390,6 @@
 (function(){
     'use strict';
 
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -541,7 +1403,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -558,14 +1419,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -576,7 +1433,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -598,7 +1454,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -613,7 +1468,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -625,13 +1479,10 @@
                 });
                 return;
             }
-            var bestPanel = null, bestCount = 0;
             panels.forEach(function(p){
-                var count = 0;
                 p.querySelectorAll('li').forEach(function(li){
                     var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
                     li.style.display = match ? '' : 'none';
-                    if (match) count++;
                 });
                 p.querySelectorAll('h5').forEach(function(h){
                     var sib = h.nextElementSibling, anyVisible = false;
@@ -641,25 +1492,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -677,7 +1513,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -688,7 +1523,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
