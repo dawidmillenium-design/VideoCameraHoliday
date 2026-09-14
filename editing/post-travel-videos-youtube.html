@@ -5,7 +5,652 @@
 <meta content="How to post travel videos on YouTube in 2026: 4K export settings per camera, bitrate guide, titles, thumbnails, chapters, and a Shorts strategy that works." name="description"/>
 <title>How to Post Travel Videos on YouTube | Holiday Video Camera</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/post-travel-videos-youtube.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/post-travel-videos-youtube.html" rel="canonical"/>
+
+<!-- ===== TECH BENCHMARK DESIGN SYSTEM ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+    /* ============================================
+       DESIGN TOKENS — TECH / BENCHMARK
+       ============================================ */
+    :root {
+        --yt-bg: #0a0b10;
+        --yt-bg-2: #0f1116;
+        --yt-panel: #151820;
+        --yt-panel-2: #1c2029;
+        --yt-panel-3: #232833;
+        --yt-border: rgba(255, 255, 255, 0.06);
+        --yt-border-2: rgba(255, 255, 255, 0.1);
+
+        /* Accent colours — YouTube-inspired but distinct */
+        --yt-red: #ef4444;
+        --yt-cyan: #06b6d4;
+        --yt-blue: #3b82f6;
+        --yt-emerald: #10b981;
+        --yt-amber: #f59e0b;
+        --yt-violet: #8b5cf6;
+
+        --yt-text: #f1f5f9;
+        --yt-text-muted: #94a3b8;
+        --yt-text-dim: #64748b;
+
+        --font-display: 'Outfit', system-ui, sans-serif;
+        --font-body: 'Outfit', system-ui, sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+        background: var(--yt-bg) !important;
+        color: var(--yt-text) !important;
+        font-family: var(--font-body) !important;
+        font-size: 1.02rem;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    /* Ambient tech grid + glows */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background-image:
+            linear-gradient(rgba(6, 182, 212, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.02) 1px, transparent 1px);
+        background-size: 56px 56px;
+        mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background:
+            radial-gradient(circle at 10% 12%, rgba(239, 68, 68, 0.08), transparent 42%),
+            radial-gradient(circle at 90% 22%, rgba(6, 182, 212, 0.08), transparent 42%),
+            radial-gradient(circle at 50% 88%, rgba(139, 92, 246, 0.06), transparent 45%);
+    }
+
+    .yt-container {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 0 24px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .article-hero {
+        text-align: center;
+        padding: 90px 20px 40px;
+        position: relative;
+    }
+    .article-hero .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--yt-red);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        background: rgba(239, 68, 68, 0.06);
+        padding: 7px 18px;
+        border-radius: 6px;
+        margin-bottom: 26px;
+    }
+    .article-hero .hero-badge::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--yt-red);
+        box-shadow: 0 0 12px var(--yt-red);
+        animation: ytPulse 2s ease-in-out infinite;
+    }
+    @keyframes ytPulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(0.85); }
+    }
+    .article-hero h1 {
+        font-family: var(--font-display);
+        font-size: 2.6rem;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 55%, #ef4444 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .article-hero .hero-subtitle {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        color: var(--yt-text-muted);
+        max-width: 640px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+
+    .export-bar {
+        display: flex;
+        height: 4px;
+        max-width: 280px;
+        margin: 32px auto 0;
+        border-radius: 4px;
+        overflow: hidden;
+        gap: 2px;
+    }
+    .export-bar span {
+        flex: 1;
+        border-radius: 2px;
+    }
+    .export-bar span:nth-child(1) { background: var(--yt-red); }
+    .export-bar span:nth-child(2) { background: var(--yt-amber); }
+    .export-bar span:nth-child(3) { background: var(--yt-cyan); }
+    .export-bar span:nth-child(4) { background: var(--yt-blue); }
+    .export-bar span:nth-child(5) { background: var(--yt-violet); }
+    .export-bar span:nth-child(6) { background: var(--yt-emerald); }
+
+    /* ============================================
+       HEADINGS
+       ============================================ */
+    h2 {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.015em;
+        margin: 60px 0 24px 0;
+        padding-left: 22px;
+        position: relative;
+    }
+    h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        bottom: 6px;
+        width: 4px;
+        background: linear-gradient(180deg, var(--yt-red), var(--yt-cyan));
+        border-radius: 2px;
+        box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+    }
+
+    h3 {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--yt-cyan);
+        margin: 32px 0 12px 0;
+        letter-spacing: -0.01em;
+    }
+
+    /* ============================================
+       TAKEAWAYS
+       ============================================ */
+    .takeaways {
+        background: linear-gradient(135deg, var(--yt-panel) 0%, var(--yt-panel-2) 100%);
+        border: 1px solid var(--yt-border-2);
+        border-radius: 16px;
+        padding: 28px 32px;
+        margin: 30px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .takeaways::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--yt-red), var(--yt-amber), var(--yt-cyan));
+    }
+    .takeaways h3 {
+        color: #fff;
+        margin: 0 0 18px 0;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .takeaways ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--yt-text-muted);
+        line-height: 1.85;
+    }
+    .takeaways li { margin-bottom: 8px; }
+    .takeaways strong { color: #fff; }
+
+    /* ============================================
+       PARAGRAPHS & LISTS
+       ============================================ */
+    p {
+        color: #cbd5e1;
+        line-height: 1.85;
+        margin-bottom: 18px;
+    }
+    p strong { color: #fff; font-weight: 600; }
+    article ul, article ol {
+        color: var(--yt-text-muted);
+        line-height: 1.85;
+        padding-left: 22px;
+        margin-bottom: 20px;
+    }
+    article ul li, article ol li { margin-bottom: 10px; }
+    article ul li strong, article ol li strong { color: #fff; }
+
+    /* ============================================
+       EXPORT TABLE (bitrate reference)
+       ============================================ */
+    .table-scroll {
+        overflow-x: auto;
+        margin: 30px 0;
+        border-radius: 14px;
+        border: 1px solid var(--yt-border);
+        background: var(--yt-panel);
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-scroll::-webkit-scrollbar { height: 6px; }
+    .table-scroll::-webkit-scrollbar-track { background: var(--yt-panel-2); }
+    .table-scroll::-webkit-scrollbar-thumb {
+        background: var(--yt-panel-3);
+        border-radius: 3px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        min-width: 720px;
+    }
+    table thead th {
+        background: var(--yt-panel-2);
+        color: var(--yt-cyan);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 16px 16px;
+        text-align: left;
+        font-weight: 500;
+        border-bottom: 1px solid var(--yt-border-2);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+    table tbody td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--yt-border);
+        color: var(--yt-text-muted);
+    }
+    table tbody tr:last-child td { border-bottom: none; }
+    table tbody tr:hover td {
+        background: rgba(6, 182, 212, 0.04);
+        color: #cbd5e1;
+    }
+    table tbody td:first-child { color: #fff; font-weight: 600; }
+
+    /* Bitrate pill highlights inside table */
+    .bitrate-pill {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 6px;
+        background: rgba(6, 182, 212, 0.1);
+        color: var(--yt-cyan);
+        border: 1px solid rgba(6, 182, 212, 0.25);
+    }
+    .bitrate-pill.alt {
+        background: rgba(139, 92, 246, 0.1);
+        color: #a78bfa;
+        border-color: rgba(139, 92, 246, 0.25);
+    }
+
+    /* ============================================
+       TIP / WARNING BOXES
+       ============================================ */
+    .tip-box {
+        background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(6, 182, 212, 0.02));
+        border: 1px solid rgba(6, 182, 212, 0.25);
+        border-left: 4px solid var(--yt-cyan);
+        border-radius: 0 14px 14px 0;
+        padding: 22px 26px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .tip-box::before {
+        content: '◈';
+        position: absolute;
+        top: 22px;
+        right: 24px;
+        font-size: 1.1rem;
+        opacity: 0.5;
+        color: var(--yt-cyan);
+    }
+    .tip-box strong {
+        color: var(--yt-cyan);
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+    .tip-box p {
+        color: #b8e0e8;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .warning-box {
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.02));
+        border: 1px solid rgba(239, 68, 68, 0.25);
+        border-left: 4px solid var(--yt-red);
+        border-radius: 0 14px 14px 0;
+        padding: 22px 26px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .warning-box::before {
+        content: '⚠';
+        position: absolute;
+        top: 22px;
+        right: 24px;
+        font-size: 1.2rem;
+        opacity: 0.5;
+        color: var(--yt-red);
+    }
+    .warning-box strong {
+        color: var(--yt-red);
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+    .warning-box p {
+        color: #e8c8ce;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    /* ============================================
+       FAQ
+       ============================================ */
+    .faq-section { margin: 40px 0; }
+    .faq-item {
+        background: var(--yt-panel);
+        border: 1px solid var(--yt-border);
+        border-radius: 12px;
+        padding: 22px 26px;
+        margin-bottom: 12px;
+        transition: border-color 0.3s ease;
+    }
+    .faq-item:hover { border-color: var(--yt-border-2); }
+    .faq-question {
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 1.02rem;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .faq-question::before {
+        content: 'Q';
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--yt-cyan);
+        border: 1px solid rgba(6, 182, 212, 0.3);
+        background: rgba(6, 182, 212, 0.08);
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+    .faq-answer {
+        color: var(--yt-text-muted);
+        line-height: 1.8;
+        padding-left: 36px;
+        border-left: 2px solid var(--yt-border-2);
+        margin-left: 12px;
+    }
+    .faq-answer p { margin: 0; }
+
+    /* ============================================
+       AUTHOR BOX
+       ============================================ */
+    .author-box {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 26px 30px;
+        margin: 40px 0;
+        background: var(--yt-panel);
+        border: 1px solid var(--yt-border);
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+    }
+    .author-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--yt-red), var(--yt-cyan));
+    }
+    .author-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--yt-red), var(--yt-cyan));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        flex-shrink: 0;
+    }
+    .author-info h4 {
+        margin: 0 0 6px 0;
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 1.02rem;
+    }
+    .author-info p {
+        margin: 0 0 6px 0;
+        color: var(--yt-text-muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .last-updated {
+        font-size: 0.78rem !important;
+        color: var(--yt-text-dim) !important;
+        font-family: var(--font-mono);
+    }
+
+    /* ============================================
+       TOC
+       ============================================ */
+    .toc {
+        background: var(--yt-panel);
+        border: 1px solid var(--yt-border);
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin: 30px 0;
+    }
+    .toc h3 {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: var(--font-mono);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .toc h3::before {
+        content: '◉';
+        color: var(--yt-red);
+        font-size: 0.65rem;
+    }
+    .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 20px;
+    }
+    .toc ul li a {
+        color: var(--yt-text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        border-left: 2px solid transparent;
+    }
+    .toc ul li a::before {
+        content: '▸';
+        color: var(--yt-cyan);
+        font-size: 0.7rem;
+        font-family: var(--font-mono);
+    }
+    .toc ul li a:hover {
+        color: #fff;
+        background: rgba(6, 182, 212, 0.06);
+        border-left-color: var(--yt-cyan);
+    }
+
+    /* ============================================
+       RELATED CARDS
+       ============================================ */
+    .related-articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 18px;
+        margin: 20px 0 40px;
+    }
+    .related-card {
+        padding: 22px;
+        text-decoration: none;
+        display: block;
+        background: var(--yt-panel);
+        border: 1px solid var(--yt-border);
+        border-radius: 14px;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .related-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--yt-cyan), transparent);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+    .related-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(6, 182, 212, 0.3);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(6, 182, 212, 0.08);
+    }
+    .related-card:hover::before { opacity: 1; }
+    .related-card h4 {
+        color: var(--yt-cyan);
+        margin: 0 0 8px 0;
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .related-card p {
+        color: var(--yt-text-muted);
+        font-size: 0.85rem;
+        margin: 0;
+        line-height: 1.55;
+    }
+
+    /* ============================================
+       INLINE LINKS
+       ============================================ */
+    article a:not(.related-card) {
+        color: var(--yt-cyan);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+        transition: all 0.25s ease;
+        font-weight: 500;
+    }
+    article a:not(.related-card):hover {
+        color: #22d3ee;
+        border-bottom-color: var(--yt-cyan);
+    }
+
+    /* ============================================
+       BREADCRUMBS
+       ============================================ */
+    .breadcrumbs ol li a {
+        color: var(--yt-text-dim) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+    .breadcrumbs ol li a:hover { color: var(--yt-cyan) !important; }
+    .breadcrumbs ol li[aria-current="page"] {
+        color: var(--yt-cyan) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+        .article-hero h1 { font-size: 1.75rem; }
+        .article-hero .hero-subtitle { font-size: 1rem; }
+        .toc ul { grid-template-columns: 1fr; }
+        .takeaways, .tip-box, .warning-box { padding: 22px 24px; }
+        .author-box { flex-direction: column; text-align: center; }
+        .related-articles { grid-template-columns: 1fr; }
+        table { font-size: 0.8rem; }
+        table thead th,
+        table tbody td { padding: 10px 12px; }
+        h2 { font-size: 1.3rem; }
+    }
+</style>
+<!-- ===== TECH BENCHMARK DESIGN SYSTEM END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -31,10 +676,53 @@
   ]
 }
 </script>
+
+<!-- ===== FAQ SCHEMA ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What bitrate should I use for 4K travel videos on YouTube?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Around 35–45 Mbps for H.264 or 20–30 Mbps for H.265 at 4K/30fps. High-motion footage like skiing or surf benefits from the top of that range. Going higher wastes upload time because YouTube re-compresses everything anyway."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I upload travel videos during my holiday or wait until I'm home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both, split by format. Post quick vertical Shorts during the trip — they're small, fast to make, and benefit from being timely. Save the main 4K film for home, where you have a proper screen for a final check and faster upload speeds. If you must upload on the road, do it overnight as unlisted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do YouTube Shorts actually help a travel channel grow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — Shorts are the main discovery surface for small channels in 2026. Cut two to three self-contained 20–40 second moments from each trip, reframe them to 9:16 properly, hook viewers in the first second, and link each Short to your main video with YouTube's related-video feature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does YouTube ruin video quality when it compresses uploads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It compresses everything, but you can control the damage: upload in 4K even if you shot 1080p (4K gets a better codec on YouTube's side), use the recommended bitrates, and never publish before HD processing finishes. A well-exported 4K upload looks sharp on every device."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -203,7 +891,9 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -212,11 +902,19 @@
     </ol>
 </nav>
 
+<div class="yt-container">
+
+<!-- ===== HERO ===== -->
 <section class="article-hero">
-    <h1>How to Post Travel Videos on YouTube</h1>
+<div class="hero-badge">Publishing Playbook · 2026</div>
+<h1>How to Post Travel Videos on YouTube</h1>
+<p class="hero-subtitle">The complete workflow — export settings per camera, bitrate numbers that work, packaging rules, and the Shorts strategy that feeds the algorithm.</p>
+<div class="export-bar">
+<span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 </section>
 
-<article class="container">
+<!-- ===== AUTHOR ===== -->
 <div class="author-box">
 <div class="author-avatar">📹</div>
 <div class="author-info">
@@ -225,6 +923,8 @@
 <p class="last-updated">🕐 Last updated: August 25, 2026</p>
 </div>
 </div>
+
+<!-- ===== TOC ===== -->
 <div class="toc">
 <h3>In This Guide</h3>
 <ul>
@@ -237,10 +937,14 @@
 <li><a href="#related">Related Articles</a></li>
 </ul>
 </div>
+
 <p><strong>To post travel videos on YouTube in 2026: export as MP4 (H.264 or H.265) at 4K/30fps with a bitrate around 35–45 Mbps, give it a searchable title with the destination up front, upload a custom 1280×720 thumbnail with one clear subject, add chapters, and publish — then cut two or three vertical Shorts from the same footage to feed the algorithm.</strong> That's the whole system. Here's every step with real numbers.</p>
+
 <p>Most travel videos die not from bad footage but from bad packaging: a muddy export, a title like "Trip vlog #7," and YouTube's auto-thumbnail of someone's elbow. Thirty minutes of packaging work is worth more than another hour of editing — I've watched it double the views on identical footage.</p>
+
+<!-- ===== KEY TAKEAWAYS ===== -->
 <div class="takeaways">
-<h3>Key Takeaways</h3>
+<h3>⚡ Key Takeaways</h3>
 <ul>
 <li>Export 4K/30fps MP4 at roughly 35–45 Mbps (H.264) or 20–30 Mbps (H.265) for sharp results after YouTube compression.</li>
 <li>Put the destination and the hook in the title's first 40 characters.</li>
@@ -249,28 +953,82 @@
 <li>Every long video should spawn 2–3 Shorts; they funnel new viewers to the main film.</li>
 </ul>
 </div>
+
+<!-- ===== EXPORT SETTINGS ===== -->
 <h2 id="export-settings">Export Settings by Camera</h2>
 <p>YouTube re-compresses everything you upload, and it compresses 1080p much harder than 4K. That's why I export at 4K even when I shot mixed resolutions — the 4K stream gets a better codec and more bitrate on YouTube's side, so the video simply looks sharper. Export at the frame rate you edited in: usually 24fps for cinematic films or 30fps for vlogs. My <a class="content-link" href="/VideoCameraHoliday/how-to/24fps-vs-120fps-holiday-edit-ai-music-sync.html">24fps vs 120fps guide</a> explains when each makes sense and how slow-motion clips fit the timeline.</p>
+
 <h3>The Numbers That Work</h3>
+<div class="table-scroll">
 <table>
-<tr><th>Footage source</th><th>Export resolution</th><th>Bitrate (H.264)</th><th>Bitrate (H.265)</th><th>Notes</th></tr>
-<tr><td>iPhone 16 Pro, DJI Pocket 3</td><td>4K / 2160p</td><td>35–45 Mbps</td><td>20–30 Mbps</td><td>Match source frame rate (24 or 30fps)</td></tr>
-<tr><td>GoPro Hero 13, DJI Action 5 Pro</td><td>4K / 2160p</td><td>45 Mbps</td><td>30 Mbps</td><td>High motion (surf, ski) needs the top end</td></tr>
-<tr><td>Insta360 X4 / X5 (reframed)</td><td>4K / 2160p</td><td>35–45 Mbps</td><td>20–30 Mbps</td><td>Reframe to 16:9 in the app first</td></tr>
-<tr><td>Mixed or older 1080p footage</td><td>Upscale timeline to 4K</td><td>35 Mbps</td><td>20 Mbps</td><td>Still gets YouTube's better 4K codec</td></tr>
-<tr><td>Vertical Shorts</td><td>1080×1920</td><td>10–16 Mbps</td><td>8–12 Mbps</td><td>Under 3 minutes, 9:16</td></tr>
+<thead>
+<tr>
+<th>Footage source</th>
+<th>Export resolution</th>
+<th>Bitrate (H.264)</th>
+<th>Bitrate (H.265)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iPhone 16 Pro, DJI Pocket 3</td>
+<td>4K / 2160p</td>
+<td><span class="bitrate-pill">35–45 Mbps</span></td>
+<td><span class="bitrate-pill alt">20–30 Mbps</span></td>
+<td>Match source frame rate (24 or 30fps)</td>
+</tr>
+<tr>
+<td>GoPro Hero 13, DJI Action 5 Pro</td>
+<td>4K / 2160p</td>
+<td><span class="bitrate-pill">45 Mbps</span></td>
+<td><span class="bitrate-pill alt">30 Mbps</span></td>
+<td>High motion (surf, ski) needs the top end</td>
+</tr>
+<tr>
+<td>Insta360 X4 / X5 (reframed)</td>
+<td>4K / 2160p</td>
+<td><span class="bitrate-pill">35–45 Mbps</span></td>
+<td><span class="bitrate-pill alt">20–30 Mbps</span></td>
+<td>Reframe to 16:9 in the app first</td>
+</tr>
+<tr>
+<td>Mixed or older 1080p footage</td>
+<td>Upscale timeline to 4K</td>
+<td><span class="bitrate-pill">35 Mbps</span></td>
+<td><span class="bitrate-pill alt">20 Mbps</span></td>
+<td>Still gets YouTube's better 4K codec</td>
+</tr>
+<tr>
+<td>Vertical Shorts</td>
+<td>1080×1920</td>
+<td><span class="bitrate-pill">10–16 Mbps</span></td>
+<td><span class="bitrate-pill alt">8–12 Mbps</span></td>
+<td>Under 3 minutes, 9:16</td>
+</tr>
+</tbody>
 </table>
+</div>
+
 <p>Audio: AAC at 192–320 kbps, 48 kHz. Format: MP4 container. Every app in my <a class="content-link" href="../editing/best-editing-apps-holiday-footage.html">editing apps roundup</a> — CapCut, VN, LumaFusion, Resolve — can hit these numbers with a custom export preset; set it once and save it.</p>
+
 <div class="tip-box">
 <strong>Pro tip:</strong> Don't upload H.265 on slow hotel wifi unless you have to. H.264 uploads are bigger but encode faster on export and process more predictably on YouTube's side. On good wifi, H.265 halves your upload time for the same quality.
 </div>
+
+<!-- ===== TITLES THUMBNAILS ===== -->
 <h2 id="titles-thumbnails">Titles, Thumbnails &amp; Chapters</h2>
+
 <h3>Titles That Get Found</h3>
 <p>Travel search on YouTube is destination-driven. Lead with the place, then the hook: "Lisbon in 4 Days: What the Guidebooks Don't Show" beats "My Portugal Vlog" every time, because nobody searches for your vlog and thousands search for Lisbon. Keep the critical words in the first 40 characters — mobile truncates after that. Numbers and specifics ("4 Days," "$60 a Day," "Mistakes to Avoid") consistently outperform vague adjectives.</p>
+
 <h3>Thumbnails: One Subject, Three Words</h3>
 <p>Export a frame or shoot a dedicated photo: 1280×720, one clear subject — your face mid-reaction or one landmark — a maximum of three words of text, and enough contrast to read at phone-feed size. Before uploading, shrink it to postage-stamp size on your screen. If you can't tell what it is, neither can anyone scrolling. Avoid YouTube's auto-generated thumbnails entirely; they reliably pick the blurriest frame of the whole video.</p>
+
 <h3>Chapters and Description</h3>
 <p>Add chapters in the description as simple timestamps (0:00 Intro, 1:24 Arriving in Porto, 4:10 The Viewpoint…). Travel viewers are skippers — they jump to the beach, the food, the hike — and chapters turn that behaviour into watch time instead of abandonment. Put your two most important links and a one-line summary in the first two lines of the description; everything below the fold is for search keywords. Mention the gear naturally there too — footage from the <a class="content-link" href="../reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a> or a Pocket 3 draws "what camera is this?" comments, so answer it preemptively.</p>
+
+<!-- ===== WORKFLOW ===== -->
 <h2 id="workflow">Posting From Your Holiday (Hotel Wifi Workflow)</h2>
 <p>Should you upload mid-trip or wait? I do both, deliberately: Shorts and quick cuts go up during the trip while the destination is fresh and I'm still in the timezone, and the main long film goes up from home where I have a proper screen and decent upload speed. When I do upload from the road, this is the routine that's survived hotel wifi on three continents:</p>
 <ul>
@@ -280,9 +1038,12 @@
 <li><strong>Schedule the publish.</strong> Set it to go live at your audience's evening, not yours. Holiday timezone brain is real.</li>
 <li><strong>Back up first.</strong> Uploading is not backing up. Follow the <a class="content-link" href="../how-to/backup-travel-photos-videos.html">backup workflow for travel footage</a> before you delete a single clip from a card.</li>
 </ul>
+
 <div class="warning-box">
 <strong>Watch out:</strong> hotel and café wifi often caps uploads at a crawl — a 10-minute 4K vlog at 40 Mbps is roughly 3 GB, which can take hours. If the connection is bad, upload the Shorts (they're small) from the road and save the main video for home. And never let an upload run on public wifi without a VPN if your channel account matters to you.
 </div>
+
+<!-- ===== SHORTS STRATEGY ===== -->
 <h2 id="shorts-strategy">The Shorts Strategy</h2>
 <p>Shorts are the discovery engine for small travel channels in 2026, and holiday footage is basically pre-made Shorts material. My rule: every long video spawns two to three Shorts, cut from the same trip.</p>
 <ul>
@@ -293,6 +1054,8 @@
 <li><strong>Post them during the trip.</strong> Shorts are fast to make in the apps above, small to upload, and the "posted from the destination" timing seems to help travel content get picked up.</li>
 </ul>
 <p>Several episodes of our <a class="content-link" href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a> series gained more subscribers from their companion Shorts than from the episodes themselves — treat Shorts as trailers, not leftovers.</p>
+
+<!-- ===== MISTAKES ===== -->
 <h2 id="mistakes">Common Mistakes</h2>
 <ul>
 <li><strong>Publishing before 4K processing finishes.</strong> Early viewers see a compressed mess and leave, which tells the algorithm the video is weak. Wait for the HD/4K badge.</li>
@@ -302,6 +1065,8 @@
 <li><strong>Skipping chapters on long videos.</strong> Ten minutes of unlabeled footage gets abandoned; ten minutes with chapters gets navigated.</li>
 <li><strong>Posting everything at once.</strong> Spread the trip: Shorts during, main film within a week of getting home, while search interest in the destination still connects to your memory of it.</li>
 </ul>
+
+<!-- ===== FAQ ===== -->
 <h2 id="faq">Frequently Asked Questions</h2>
 <div class="faq-section">
 <div class="faq-item">
@@ -321,6 +1086,8 @@
 <div class="faq-answer"><p>It compresses everything, but you can control the damage: upload in 4K even if you shot 1080p (4K gets a better codec on YouTube's side), use the recommended bitrates, and never publish before HD processing finishes. A well-exported 4K upload looks sharp on every device.</p></div>
 </div>
 </div>
+
+<!-- ===== RELATED ===== -->
 <h2 id="related">Related Articles</h2>
 <div class="related-articles">
 <a class="related-card" href="../editing/best-editing-apps-holiday-footage.html">
@@ -336,22 +1103,18 @@
 <p>Choose the right frame rate before you lock your export settings.</p>
 </a>
 </div>
-<p class="affiliate-note">This guide contains no affiliate links. Our recommendations are based on real travel testing.</p>
-</article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<p class="affiliate-note" style="text-align:center; color:#64748b; font-size:0.85rem; padding:30px 0; border-top:1px solid rgba(255,255,255,0.06); margin-top:40px;">This guide contains no affiliate links. Our recommendations are based on real travel testing.</p>
+
+</div><!-- /.yt-container -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -429,6 +1192,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -438,15 +1202,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -460,7 +1219,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -477,14 +1235,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -495,7 +1249,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -517,7 +1270,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -532,7 +1284,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -560,25 +1311,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -596,7 +1332,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -607,7 +1342,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -616,5 +1350,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
