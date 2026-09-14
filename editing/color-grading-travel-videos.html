@@ -5,7 +5,773 @@
 <meta content="A beginner color grading workflow for travel videos that works in any app: exposure-first fixes, white balance for mixed light, one LUT, natural skin tones." name="description"/>
 <title>Color Grading Travel Videos: Basics | Holiday Video Camera</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/color-grading-travel-videos.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/editing/color-grading-travel-videos.html" rel="canonical"/>
+
+<!-- ===== MODERN VIDEO-EDITING CSS START ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+    /* ============================================
+       MODERN VIDEO EDITING DESIGN SYSTEM
+       ============================================ */
+    :root {
+        --vid-bg: #0b0d12;
+        --vid-bg-2: #10131b;
+        --vid-panel: #151925;
+        --vid-panel-2: #1c2130;
+        --vid-border: rgba(255, 255, 255, 0.06);
+        --vid-border-2: rgba(255, 255, 255, 0.1);
+
+        /* Colour grading wheel accents */
+        --vid-teal: #2dd4bf;
+        --vid-magenta: #e879f9;
+        --vid-amber: #fbbf24;
+        --vid-blue: #60a5fa;
+        --vid-lime: #a3e635;
+        --vid-rose: #fb7185;
+
+        --vid-text: #f1f5f9;
+        --vid-text-muted: #94a3b8;
+        --vid-text-dim: #64748b;
+
+        --font-display: 'Space Grotesk', system-ui, sans-serif;
+        --font-body: 'Inter', system-ui, sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+        background: var(--vid-bg) !important;
+        color: var(--vid-text) !important;
+        font-family: var(--font-body) !important;
+        font-size: 1.02rem;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    /* Subtle animated colour wheel glow */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background:
+            radial-gradient(circle at 15% 20%, rgba(45, 212, 191, 0.06), transparent 45%),
+            radial-gradient(circle at 85% 30%, rgba(232, 121, 249, 0.06), transparent 45%),
+            radial-gradient(circle at 50% 90%, rgba(251, 191, 36, 0.05), transparent 50%);
+    }
+
+    .vid-container {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 24px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ============================================
+       HERO — GRADING CONSOLE
+       ============================================ */
+    .article-hero {
+        text-align: center;
+        padding: 90px 20px 40px;
+        position: relative;
+    }
+    .article-hero .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--vid-teal);
+        border: 1px solid rgba(45, 212, 191, 0.3);
+        background: rgba(45, 212, 191, 0.06);
+        padding: 6px 16px;
+        border-radius: 20px;
+        margin-bottom: 24px;
+    }
+    .article-hero .hero-tag::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--vid-teal);
+        box-shadow: 0 0 10px var(--vid-teal);
+        animation: pulseDot 2s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+    }
+    .article-hero h1 {
+        font-family: var(--font-display);
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .article-hero .hero-subtitle {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        color: var(--vid-text-muted);
+        max-width: 620px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+
+    /* Colour wheel accent bar under hero */
+    .color-wheel-bar {
+        display: flex;
+        height: 4px;
+        max-width: 240px;
+        margin: 32px auto 0;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .color-wheel-bar span {
+        flex: 1;
+    }
+    .color-wheel-bar span:nth-child(1) { background: var(--vid-teal); }
+    .color-wheel-bar span:nth-child(2) { background: var(--vid-blue); }
+    .color-wheel-bar span:nth-child(3) { background: var(--vid-magenta); }
+    .color-wheel-bar span:nth-child(4) { background: var(--vid-amber); }
+    .color-wheel-bar span:nth-child(5) { background: var(--vid-rose); }
+
+    /* ============================================
+       SECTION HEADINGS
+       ============================================ */
+    h2 {
+        font-family: var(--font-display);
+        font-size: 1.55rem;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.01em;
+        margin: 60px 0 24px 0;
+        padding-left: 20px;
+        position: relative;
+    }
+    h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        bottom: 4px;
+        width: 4px;
+        background: linear-gradient(180deg, var(--vid-teal), var(--vid-magenta));
+        border-radius: 2px;
+    }
+
+    h3 {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--vid-teal);
+        margin: 32px 0 12px 0;
+        letter-spacing: -0.01em;
+    }
+
+    /* ============================================
+       INTRO / VERDICT BOX
+       ============================================ */
+    .vid-verdict {
+        background: linear-gradient(135deg, var(--vid-panel) 0%, var(--vid-panel-2) 100%);
+        border: 1px solid var(--vid-border-2);
+        border-radius: 20px;
+        padding: 32px 36px;
+        margin: 30px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .vid-verdict::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--vid-teal), var(--vid-magenta), var(--vid-amber));
+    }
+    .vid-verdict p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin: 0;
+        font-size: 1.02rem;
+    }
+    .vid-verdict strong {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    /* ============================================
+       WORKFLOW STEP CARDS (4-step process)
+       ============================================ */
+    .workflow-grid {
+        display: grid;
+        gap: 18px;
+        margin: 30px 0;
+    }
+    .workflow-step {
+        background: var(--vid-panel);
+        border: 1px solid var(--vid-border);
+        border-radius: 18px;
+        padding: 26px 30px;
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap: 22px;
+        align-items: start;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .workflow-step::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--step-color, var(--vid-teal));
+        transform: scaleY(0.5);
+        transform-origin: top;
+        transition: transform 0.4s ease;
+    }
+    .workflow-step:hover {
+        border-color: var(--vid-border-2);
+        background: var(--vid-panel-2);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+    .workflow-step:hover::before {
+        transform: scaleY(1);
+    }
+    .workflow-step .step-num {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--vid-bg);
+        background: var(--step-color, var(--vid-teal));
+        flex-shrink: 0;
+    }
+    .workflow-step .step-body h3 {
+        margin: 0 0 8px 0;
+        color: #fff;
+    }
+    .workflow-step .step-body p {
+        color: var(--vid-text-muted);
+        line-height: 1.75;
+        margin: 0;
+        font-size: 0.95rem;
+    }
+    .workflow-step .step-body strong {
+        color: #fff;
+    }
+
+    /* Colour-code each step */
+    .workflow-step[data-step="1"] { --step-color: var(--vid-teal); }
+    .workflow-step[data-step="2"] { --step-color: var(--vid-blue); }
+    .workflow-step[data-step="3"] { --step-color: var(--vid-magenta); }
+    .workflow-step[data-step="4"] { --step-color: var(--vid-amber); }
+
+    /* ============================================
+       TAKEAWAYS BOX
+       ============================================ */
+    .takeaways {
+        background: var(--vid-panel);
+        border: 1px solid var(--vid-border);
+        border-radius: 18px;
+        padding: 28px 32px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .takeaways h3 {
+        color: #fff;
+        margin: 0 0 18px 0;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .takeaways h3::before {
+        content: '◆';
+        color: var(--vid-amber);
+        font-size: 0.7rem;
+    }
+    .takeaways ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--vid-text-muted);
+        line-height: 1.85;
+    }
+    .takeaways li {
+        margin-bottom: 8px;
+    }
+    .takeaways strong {
+        color: #fff;
+    }
+
+    /* ============================================
+       TOC — WORKSPACE PANEL
+       ============================================ */
+    .toc {
+        background: var(--vid-panel);
+        border: 1px solid var(--vid-border);
+        border-radius: 18px;
+        padding: 26px 30px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .toc h3 {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 18px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-family: var(--font-mono);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .toc h3::before {
+        content: '◉';
+        color: var(--vid-magenta);
+        font-size: 0.7rem;
+    }
+    .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 20px;
+    }
+    .toc ul li a {
+        color: var(--vid-text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        border-left: 2px solid transparent;
+    }
+    .toc ul li a::before {
+        content: '▸';
+        color: var(--vid-teal);
+        font-size: 0.75rem;
+        font-family: var(--font-mono);
+    }
+    .toc ul li a:hover {
+        color: #fff;
+        background: rgba(45, 212, 191, 0.06);
+        border-left-color: var(--vid-teal);
+    }
+
+    /* ============================================
+       CALLOUT BOXES
+       ============================================ */
+    .warning-box {
+        background: linear-gradient(135deg, rgba(251, 113, 133, 0.08), rgba(251, 113, 133, 0.02));
+        border: 1px solid rgba(251, 113, 133, 0.25);
+        border-left: 4px solid var(--vid-rose);
+        border-radius: 0 16px 16px 0;
+        padding: 24px 28px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .warning-box::before {
+        content: '⚠';
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        font-size: 1.2rem;
+        opacity: 0.4;
+    }
+    .warning-box strong {
+        color: var(--vid-rose);
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+    .warning-box p {
+        color: #e0c8ce;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .tip-box {
+        background: linear-gradient(135deg, rgba(45, 212, 191, 0.08), rgba(45, 212, 191, 0.02));
+        border: 1px solid rgba(45, 212, 191, 0.25);
+        border-left: 4px solid var(--vid-teal);
+        border-radius: 0 16px 16px 0;
+        padding: 24px 28px;
+        margin: 30px 0;
+        position: relative;
+    }
+    .tip-box::before {
+        content: '◈';
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        font-size: 1.2rem;
+        opacity: 0.4;
+        color: var(--vid-teal);
+    }
+    .tip-box strong {
+        color: var(--vid-teal);
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+    .tip-box p {
+        color: #b8e8e0;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    /* ============================================
+       COMPARISON TABLE
+       ============================================ */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        background: var(--vid-panel);
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--vid-border);
+        font-size: 0.92rem;
+    }
+    table th {
+        background: var(--vid-panel-2);
+        color: var(--vid-teal);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 16px 18px;
+        text-align: left;
+        font-weight: 500;
+        border-bottom: 1px solid var(--vid-border-2);
+    }
+    table td {
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--vid-border);
+        color: var(--vid-text-muted);
+    }
+    table tr:last-child td {
+        border-bottom: none;
+    }
+    table tr:hover td {
+        background: rgba(45, 212, 191, 0.04);
+        color: #cbd5e1;
+    }
+    table td:first-child {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    /* ============================================
+       FAQ
+       ============================================ */
+    .faq-section {
+        margin: 40px 0;
+    }
+    .faq-item {
+        background: var(--vid-panel);
+        border: 1px solid var(--vid-border);
+        border-radius: 14px;
+        padding: 22px 26px;
+        margin-bottom: 12px;
+        transition: all 0.3s ease;
+    }
+    .faq-item:hover {
+        border-color: var(--vid-border-2);
+    }
+    .faq-question {
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 1.02rem;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .faq-question::before {
+        content: 'Q';
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--vid-magenta);
+        border: 1px solid rgba(232, 121, 249, 0.3);
+        background: rgba(232, 121, 249, 0.08);
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+    .faq-answer {
+        color: var(--vid-text-muted);
+        line-height: 1.8;
+        padding-left: 36px;
+        border-left: 2px solid var(--vid-border-2);
+        margin-left: 12px;
+    }
+    .faq-answer p {
+        margin: 0;
+    }
+
+    /* ============================================
+       AUTHOR BOX
+       ============================================ */
+    .author-box {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 26px 30px;
+        margin: 40px 0;
+        background: var(--vid-panel);
+        border: 1px solid var(--vid-border);
+        border-radius: 18px;
+        position: relative;
+        overflow: hidden;
+    }
+    .author-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--vid-teal), var(--vid-magenta));
+    }
+    .author-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--vid-teal), var(--vid-blue));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        flex-shrink: 0;
+    }
+    .author-info h4 {
+        margin: 0 0 6px 0;
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 1.02rem;
+    }
+    .author-info p {
+        margin: 0 0 6px 0;
+        color: var(--vid-text-muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .last-updated {
+        font-size: 0.78rem !important;
+        color: var(--vid-text-dim) !important;
+        font-family: var(--font-mono);
+    }
+
+    /* ============================================
+       RELATED CARDS
+       ============================================ */
+    .related-articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 18px;
+        margin: 20px 0 40px;
+    }
+    .related-card {
+        padding: 24px;
+        text-decoration: none;
+        display: block;
+        background: var(--vid-panel);
+        border: 1px solid var(--vid-border);
+        border-radius: 16px;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .related-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--vid-teal), transparent);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+    .related-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(45, 212, 191, 0.3);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+    .related-card:hover::before {
+        opacity: 1;
+    }
+    .related-card h4 {
+        color: var(--vid-teal);
+        margin: 0 0 8px 0;
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .related-card p {
+        color: var(--vid-text-muted);
+        font-size: 0.85rem;
+        margin: 0;
+        line-height: 1.55;
+    }
+
+    /* ============================================
+       CONTENT LINKS
+       ============================================ */
+    .content-link {
+        color: var(--vid-teal) !important;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(45, 212, 191, 0.3);
+        transition: all 0.25s ease;
+        font-weight: 500;
+    }
+    .content-link:hover {
+        border-bottom-color: var(--vid-teal);
+        color: #5eead4 !important;
+    }
+
+    /* ============================================
+       PARAGRAPHS & LISTS
+       ============================================ */
+    p {
+        color: #cbd5e1;
+        line-height: 1.85;
+        margin-bottom: 18px;
+    }
+    p strong {
+        color: #fff;
+        font-weight: 600;
+    }
+    article ul:not(.takeaways ul) {
+        color: var(--vid-text-muted);
+        line-height: 1.85;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    article ul:not(.takeaways ul) li {
+        margin-bottom: 10px;
+    }
+    article ul:not(.takeaways ul) li strong {
+        color: #fff;
+    }
+
+    /* ============================================
+       AFFILIATE NOTE
+       ============================================ */
+    .affiliate-note {
+        text-align: center;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        color: var(--vid-text-dim);
+        padding: 30px 0;
+        border-top: 1px solid var(--vid-border);
+        margin-top: 40px;
+    }
+
+    /* ============================================
+       BREADCRUMBS
+       ============================================ */
+    .breadcrumbs ol li a {
+        color: var(--vid-text-dim) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+    .breadcrumbs ol li a:hover {
+        color: var(--vid-teal) !important;
+    }
+    .breadcrumbs ol li[aria-current="page"] {
+        color: var(--vid-teal) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+        .article-hero h1 {
+            font-size: 1.9rem;
+        }
+        .article-hero .hero-subtitle {
+            font-size: 1rem;
+        }
+        .workflow-step {
+            grid-template-columns: 44px 1fr;
+            gap: 16px;
+            padding: 22px 22px;
+        }
+        .workflow-step .step-num {
+            width: 44px;
+            height: 44px;
+            font-size: 1rem;
+        }
+        .toc ul {
+            grid-template-columns: 1fr;
+        }
+        .vid-verdict,
+        .takeaways {
+            padding: 22px 24px;
+        }
+        .author-box {
+            flex-direction: column;
+            text-align: center;
+        }
+        .related-articles {
+            grid-template-columns: 1fr;
+        }
+        table {
+            font-size: 0.82rem;
+        }
+        table th,
+        table td {
+            padding: 10px 12px;
+        }
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+<!-- ===== MODERN VIDEO-EDITING CSS END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -31,10 +797,53 @@
   ]
 }
 </script>
+
+<!-- ===== FAQ SCHEMA ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to shoot log to color grade travel videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Standard picture profiles from modern cameras like the iPhone 16 Pro, DJI Osmo Pocket 3, and GoPro Hero 13 already have great color, and a gentle exposure-plus-white-balance correction takes them most of the way. Log only pays off in very high-contrast scenes and if you're willing to spend real time grading."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a LUT and should beginners use one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A LUT is a pre-made color look you apply in one click. Beginners absolutely should use one — but only one per trip, applied at 50–70% intensity on top of corrected footage. That's the fastest route to a consistent, professional-looking travel film."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I color grade properly on a phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CapCut and VN both have exposure, white balance, HSL, curves, and LUT import with intensity control — everything the four-step workflow needs. Desktop tools like DaVinci Resolve add scopes and finer control, which matter mainly for log footage and problem clips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my grade look different on my phone and laptop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Phone screens are brighter, warmer, and oversaturated by default; many laptop screens are dimmer and cooler. Grade conservatively, avoid heavy saturation, and always check the exported file on at least two devices — ideally the device your audience will actually use."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -203,7 +1012,9 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -212,11 +1023,19 @@
     </ol>
 </nav>
 
+<div class="vid-container">
+
+<!-- ===== HERO ===== -->
 <section class="article-hero">
-    <h1>Color Grading Travel Videos: Basics</h1>
+<div class="hero-tag">Editing Tutorial · 2026</div>
+<h1>Color Grading Travel Videos: Basics</h1>
+<p class="hero-subtitle">The four-step grading workflow that works in any app — from a beach bar in Bali to a sleeper train in Vietnam.</p>
+<div class="color-wheel-bar">
+<span></span><span></span><span></span><span></span><span></span>
+</div>
 </section>
 
-<article class="container">
+<!-- ===== AUTHOR ===== -->
 <div class="author-box">
 <div class="author-avatar">📹</div>
 <div class="author-info">
@@ -225,10 +1044,12 @@
 <p class="last-updated">🕐 Last updated: August 25, 2026</p>
 </div>
 </div>
+
+<!-- ===== TOC ===== -->
 <div class="toc">
 <h3>In This Guide</h3>
 <ul>
-<li><a href="#flat-vs-standard">Flat/Log vs Standard: What to Shoot</a></li>
+<li><a href="#flat-vs-standard">Flat/Log vs Standard</a></li>
 <li><a href="#workflow">The Four-Step Grading Workflow</a></li>
 <li><a href="#phone-vs-desktop">Phone Apps vs Desktop Grading</a></li>
 <li><a href="#mistakes">Common Color Grading Mistakes</a></li>
@@ -236,8 +1057,15 @@
 <li><a href="#related">Related Articles</a></li>
 </ul>
 </div>
+
+<!-- ===== INTRO / VERDICT ===== -->
+<div class="vid-verdict">
 <p><strong>Yes — beginners can color grade travel videos, and the workflow is the same in every app: first fix exposure and contrast, then white balance, then apply one LUT or look at low intensity, and finally check skin tones. You do not need to shoot log to get a great result; standard footage graded gently almost always beats log footage graded badly.</strong> I've graded trip films everywhere from a beach bar in Bali to a sleeper train in Vietnam, and this exact order has never let me down.</p>
+</div>
+
 <p>Color grading has a reputation for being dark magic reserved for people with calibrated monitors and cinema cameras. In reality, holiday footage needs about 80% less work than people think. The difference between "nice phone footage" and "wow, where is that?" is usually three small, boring adjustments done in the right order — not a cinematic teal-and-orange preset.</p>
+
+<!-- ===== KEY TAKEAWAYS ===== -->
 <div class="takeaways">
 <h3>Key Takeaways</h3>
 <ul>
@@ -248,39 +1076,79 @@
 <li>CapCut, VN, and LumaFusion can all handle this workflow; DaVinci Resolve is the free desktop upgrade.</li>
 </ul>
 </div>
+
+<!-- ===== FLAT VS STANDARD ===== -->
 <h2 id="flat-vs-standard">Flat/Log vs Standard: What Should You Shoot?</h2>
 <p>On a beach in Bali last year, I shot the same sunset twice — once in the DJI Osmo Pocket 3's standard color, once in D-Log M. The standard clip was usable after thirty seconds of tweaking. The log clip took ten minutes and looked only slightly better in the sky. That sums up the flat-vs-standard debate for travel video: log gives you more headroom, but it costs you time and skill you may not have on holiday.</p>
+
 <h3>Shoot standard if…</h3>
 <ul>
 <li>You're new to grading, or you edit on your phone while travelling.</li>
 <li>Most of your shooting is in reasonable, even light — cities, overcast days, interiors.</li>
 <li>You'd rather spend evenings at dinner than at a laptop. Standard footage from cameras like the iPhone 16 Pro or Canon PowerShot V10 already looks 90% finished.</li>
 </ul>
+
 <h3>Shoot flat or log if…</h3>
 <ul>
 <li>You film lots of high-contrast scenes: sunsets, bright snow, dark temples against bright sky.</li>
 <li>You're happy to spend real time grading at home after the trip.</li>
 <li>Your camera has a good log implementation — D-Log M on the DJI Osmo Action 5 Pro and Pocket 3, or GP-Log on the GoPro Hero 13 — and you can expose it properly.</li>
 </ul>
+
 <div class="warning-box">
 <strong>Watch out:</strong> log footage looks grey and washed out straight out of camera — that's normal, it's meant to be graded. But if you underexpose log, the shadows turn to mush when you lift them. When in doubt, expose log slightly bright (without clipping the sky) and bring it down in the edit.
 </div>
+
 <p>If you shoot log, your camera maker publishes a free "conversion LUT" that turns log back to normal color — that's always step zero before anything in the workflow below.</p>
-<h2 id="workflow">The Four-Step Grading Workflow (Works in Any App)</h2>
+
+<!-- ===== WORKFLOW ===== -->
+<h2 id="workflow">The Four-Step Grading Workflow</h2>
 <p>Every grading tool — from CapCut's sliders to DaVinci Resolve's color wheels — boils down to the same four moves. Do them in this order, because each step changes how the next one looks.</p>
-<h3>Step 1: Fix Exposure and Contrast First</h3>
+
+<div class="workflow-grid">
+
+<div class="workflow-step" data-step="1">
+<div class="step-num">01</div>
+<div class="step-body">
+<h3>Fix Exposure and Contrast First</h3>
 <p>Before touching color, make the brightness right. Holiday footage is usually shot in harsh sun, so the typical fix is: pull highlights down to recover the sky, lift shadows slightly so faces under hats aren't black holes, then add a touch of contrast. In CapCut and VN this is the "Adjust" panel; in LumaFusion and Resolve it's the basic wheels. A clip that's correctly exposed already looks "graded" to most viewers.</p>
-<h3>Step 2: White Balance in Mixed Holiday Light</h3>
+</div>
+</div>
+
+<div class="workflow-step" data-step="2">
+<div class="step-num">02</div>
+<div class="step-body">
+<h3>White Balance in Mixed Holiday Light</h3>
 <p>Travel is the worst-case scenario for white balance: golden-hour streets with blue shop signs, restaurants mixing candlelight and LED panels, hotel rooms with warm lamps and cool window light. Auto white balance often flips mid-clip. The fix: pick one neutral reference (a white napkin, a grey wall, a cloud) and set temperature and tint so it looks neutral — then leave it alone for the whole scene. Slightly warm is forgiving for holiday footage; slightly green is never forgiven. Faces going orange or grey is almost always a white balance problem, not a "grade" problem.</p>
-<h3>Step 3: One LUT, One Trip</h3>
+</div>
+</div>
+
+<div class="workflow-step" data-step="3">
+<div class="step-num">03</div>
+<div class="step-body">
+<h3>One LUT, One Trip</h3>
 <p>A LUT is just a saved look. The beginner mistake is trying six LUTs per clip; the pro habit is picking one LUT for the whole trip and applying it at reduced intensity — 50 to 70 percent — over your corrected footage. That single decision is what makes a travel film feel cohesive. I used one warm-teal LUT across three weeks in Greece, and people asked what cinema camera I'd used. It was a phone with discipline. Once your look is set, cut it to music properly — my <a class="content-link" href="/VideoCameraHoliday/how-to/24fps-vs-120fps-holiday-edit-ai-music-sync.html">guide to frame rates and AI music sync for holiday edits</a> covers that side of the edit.</p>
-<h3>Step 4: Skin Tones Before Scenery</h3>
+</div>
+</div>
+
+<div class="workflow-step" data-step="4">
+<div class="step-num">04</div>
+<div class="step-body">
+<h3>Skin Tones Before Scenery</h3>
 <p>Viewers forgive a slightly purple sky; they do not forgive a green face. After your LUT, check every clip with a person in it. Most apps have an HSL (hue/saturation/luminance) panel: if skin looks too orange, desaturate orange slightly or shift its hue a touch toward red; if skin looks grey, your white balance is off — go back to step 2. On phone screens, which are oversaturated by default, skin that looks "vivid" on your phone often looks sunburnt on a TV. Grade skin slightly conservative.</p>
+</div>
+</div>
+
+</div>
+
 <div class="tip-box">
 <strong>Pro tip:</strong> Grade on the same device you'll watch the final film on most. If your audience watches on phones, do a final check on a phone. And step away for ten minutes before exporting — your eyes adapt to your own grade and start lying to you.
 </div>
+
+<!-- ===== PHONE VS DESKTOP ===== -->
 <h2 id="phone-vs-desktop">Phone Apps vs Desktop Grading</h2>
 <p>I grade roughly half my trip films on a phone or iPad and half at home. If you want the full mobile editing picture beyond just color, my <a class="content-link" href="../how-to/edit-travel-videos-phone-tablet.html">phone and tablet editing workflow</a> covers organization and export too. Here's how the color tools specifically compare:</p>
+
 <table>
 <tr><th>App</th><th>Color tools</th><th>LUT support</th><th>Best for</th></tr>
 <tr><td>CapCut (free)</td><td>Exposure, WB, HSL, curves, filters</td><td>Import custom LUTs, intensity slider</td><td>Quick grades on the road</td></tr>
@@ -288,7 +1156,10 @@
 <tr><td>LumaFusion (~$30, iPad)</td><td>Wheels, scopes, HSL, keyframes</td><td>Full LUT workflow</td><td>Serious grading on a tablet</td></tr>
 <tr><td>DaVinci Resolve (free, desktop)</td><td>Professional wheels, nodes, scopes</td><td>Full LUT workflow</td><td>Deep grades at home, log footage</td></tr>
 </table>
+
 <p>Honest verdict: for standard-profile holiday footage, CapCut or VN on a phone is genuinely enough — the workflow above uses nothing they lack. Desktop Resolve earns its place when you shoot log, need scopes to match cameras, or want to rescue a badly mixed-light scene. The <a class="content-link" href="../reviews/iphone-16-pro-video-review.html">iPhone 16 Pro's video quality</a> is good enough that its standard footage grades beautifully even on the phone itself. I graded much of my recent <a class="content-link" href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a> series this way — one LUT, phone timeline, done before the flight home.</p>
+
+<!-- ===== MISTAKES ===== -->
 <h2 id="mistakes">Common Color Grading Mistakes</h2>
 <ul>
 <li><strong>Grading before correcting.</strong> Slapping a LUT on badly exposed footage bakes the problems in. Fix exposure and white balance first, always.</li>
@@ -298,7 +1169,10 @@
 <li><strong>Over-darkening for "cinematic" mood.</strong> Moody grades look great on your monitor and invisible on a phone in daylight. Most travel footage wants to be bright and open.</li>
 <li><strong>Ignoring consistency across cameras.</strong> If you mix a GoPro and a phone, match them at the correction stage before the LUT — otherwise the same LUT produces two different looks.</li>
 </ul>
+
 <p>Once the grade is locked, the rest is packaging — <a class="content-link" href="../editing/best-editing-apps-holiday-footage.html">choosing the right editing app</a> for your device and <a class="content-link" href="../editing/post-travel-videos-youtube.html">exporting and posting to YouTube</a> with the right settings are covered in the companion guides.</p>
+
+<!-- ===== FAQ ===== -->
 <h2 id="faq">Frequently Asked Questions</h2>
 <div class="faq-section">
 <div class="faq-item">
@@ -318,6 +1192,8 @@
 <div class="faq-answer"><p>Phone screens are brighter, warmer, and oversaturated by default; many laptop screens are dimmer and cooler. Grade conservatively, avoid heavy saturation, and always check the exported file on at least two devices — ideally the device your audience will actually use.</p></div>
 </div>
 </div>
+
+<!-- ===== RELATED ===== -->
 <h2 id="related">Related Articles</h2>
 <div class="related-articles">
 <a class="related-card" href="/VideoCameraHoliday/how-to/24fps-vs-120fps-holiday-edit-ai-music-sync.html">
@@ -333,22 +1209,18 @@
 <p>Export settings, titles, thumbnails, chapters, and a Shorts strategy for 2026.</p>
 </a>
 </div>
-<p class="affiliate-note">This guide contains no affiliate links. Our recommendations are based on real travel testing.</p>
-</article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<p class="affiliate-note">This guide contains no affiliate links. Our recommendations are based on real travel testing.</p>
+
+</div><!-- /.vid-container -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -426,6 +1298,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -435,15 +1308,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -457,7 +1325,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -474,14 +1341,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -492,7 +1355,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -514,7 +1376,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -529,7 +1390,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -557,25 +1417,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -593,7 +1438,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -604,7 +1448,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -613,5 +1456,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
