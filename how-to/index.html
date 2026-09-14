@@ -1,143 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Practical how-to guides for travel video — film better holiday videos, stabilize without a gimbal, protect gear in rain, back up footage, and more." name="description"/>
-<title>Travel Video How-To Guides: Film, Edit, Back Up</title>
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
-<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/" rel="canonical"/>
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Expert camera comparisons for travel videography. Compare GoPro vs DJI, Sony vs Canon, action cams vs vlogging cameras. Real-world testing by Dawid Millennium with honest verdicts for 2026." name="description"/>
+  <title>Camera Comparisons 2026 – Head-to-Head Travel Camera Guides</title>
+  <link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+  <link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/comparisons/" rel="canonical"/>
 
-<!-- ===== FUNKY NEO-BRUTALIST DESIGN SYSTEM ===== -->
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
-<style>
+  <!-- ===== FUNKY NEO-BRUTALIST DESIGN SYSTEM ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
     :root {
-        --fun-bg: #FFF8E7;
-        --fun-ink: #0A0A0A;
-        --fun-lime: #CCFF00;
-        --fun-hotpink: #FF00AA;
-        --fun-cyan: #00FFFF;
-        --fun-yellow: #FFE500;
-        --fun-orange: #FF6B00;
-        --fun-purple: #A855F7;
-        --fun-white: #FFFFFF;
+      --fun-bg: #FFF8E7;
+      --fun-ink: #0A0A0A;
+      --fun-lime: #CCFF00;
+      --fun-hotpink: #FF00AA;
+      --fun-cyan: #00FFFF;
+      --fun-yellow: #FFE500;
+      --fun-orange: #FF6B00;
+      --fun-purple: #A855F7;
+      --fun-white: #FFFFFF;
 
-        --fun-border: 3px solid var(--fun-ink);
-        --fun-shadow: 6px 6px 0 var(--fun-ink);
-        --fun-shadow-lg: 10px 10px 0 var(--fun-ink);
-        --fun-shadow-sm: 3px 3px 0 var(--fun-ink);
+      --fun-border: 3px solid var(--fun-ink);
+      --fun-shadow: 6px 6px 0 var(--fun-ink);
+      --fun-shadow-lg: 10px 10px 0 var(--fun-ink);
+      --fun-shadow-sm: 3px 3px 0 var(--fun-ink);
 
-        --font-display: 'Archivo Black', sans-serif;
-        --font-body: 'Space Grotesk', sans-serif;
-        --font-mono: 'JetBrains Mono', monospace;
+      --font-display: 'Archivo Black', sans-serif;
+      --font-body: 'Space Grotesk', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
 
     body {
-        background: var(--fun-bg) !important;
-        color: var(--fun-ink) !important;
-        font-family: var(--font-body) !important;
-        font-size: 1.05rem;
-        line-height: 1.75;
-        overflow-x: hidden;
-        position: relative;
+      background: var(--fun-bg) !important;
+      color: var(--fun-ink) !important;
+      font-family: var(--font-body) !important;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      overflow-x: hidden;
+      position: relative;
     }
 
-    /* Dot pattern */
     body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 0;
-        background-image: radial-gradient(circle, rgba(10, 10, 10, 0.06) 2px, transparent 2px);
-        background-size: 32px 32px;
+      content: '';
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 0;
+      background-image: radial-gradient(circle, rgba(10, 10, 10, 0.06) 2px, transparent 2px);
+      background-size: 32px 32px;
     }
 
-    /* Colour blobs */
     body::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 0;
-        background:
-            radial-gradient(circle at 8% 12%, rgba(204, 255, 0, 0.28), transparent 32%),
-            radial-gradient(circle at 92% 20%, rgba(255, 0, 170, 0.16), transparent 32%),
-            radial-gradient(circle at 20% 82%, rgba(0, 255, 255, 0.16), transparent 34%),
-            radial-gradient(circle at 82% 88%, rgba(255, 229, 0, 0.22), transparent 32%);
+      content: '';
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(204, 255, 0, 0.28), transparent 32%),
+        radial-gradient(circle at 92% 20%, rgba(255, 0, 170, 0.16), transparent 32%),
+        radial-gradient(circle at 20% 82%, rgba(0, 255, 255, 0.16), transparent 34%),
+        radial-gradient(circle at 82% 88%, rgba(255, 229, 0, 0.22), transparent 32%);
     }
 
     .funky-wrap {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding: 0 20px;
-        position: relative;
-        z-index: 1;
+      max-width: 1080px; margin: 0 auto; padding: 0 20px;
+      position: relative; z-index: 1;
     }
 
-    /* ============================================
-       HERO
-       ============================================ */
-    .funky-hero {
-        text-align: center;
-        padding: 80px 20px 40px;
-        position: relative;
-    }
+    /* HERO */
+    .funky-hero { text-align: center; padding: 80px 20px 40px; position: relative; }
     .funky-hero .hero-sticker {
-        display: inline-block;
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        background: var(--fun-hotpink);
-        color: var(--fun-white);
-        padding: 8px 20px;
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-sm);
-        transform: rotate(-2deg);
-        margin-bottom: 24px;
+      display: inline-block; font-family: var(--font-mono); font-size: 0.75rem;
+      font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      background: var(--fun-hotpink); color: var(--fun-white);
+      padding: 8px 20px; border: var(--fun-border); box-shadow: var(--fun-shadow-sm);
+      transform: rotate(-2deg); margin-bottom: 24px;
     }
     .funky-hero h1 {
-        font-family: var(--font-display);
-        font-size: 3.2rem;
-        font-weight: 900;
-        line-height: 1.05;
-        letter-spacing: -0.03em;
-        margin-bottom: 22px;
-        color: var(--fun-ink);
-        text-transform: uppercase;
+      font-family: var(--font-display); font-size: 3.2rem; font-weight: 900;
+      line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 22px;
+      color: var(--fun-ink); text-transform: uppercase;
     }
     .funky-hero h1 .highlight {
-        background: var(--fun-lime);
-        padding: 0 14px;
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-sm);
-        display: inline-block;
-        transform: rotate(-1deg);
+      background: var(--fun-lime); padding: 0 14px; border: var(--fun-border);
+      box-shadow: var(--fun-shadow-sm); display: inline-block; transform: rotate(-1deg);
     }
     .funky-hero .hero-desc {
-        font-family: var(--font-body);
-        font-size: 1.2rem;
-        color: var(--fun-ink);
-        max-width: 680px;
-        margin: 0 auto;
-        line-height: 1.7;
-        opacity: 0.82;
-        font-weight: 500;
+      font-family: var(--font-body); font-size: 1.2rem; color: var(--fun-ink);
+      max-width: 680px; margin: 0 auto; line-height: 1.7; opacity: 0.82; font-weight: 500;
     }
     .funky-bar {
-        display: flex;
-        height: 10px;
-        max-width: 300px;
-        margin: 32px auto 0;
-        border: var(--fun-border);
-        overflow: hidden;
+      display: flex; height: 10px; max-width: 300px; margin: 32px auto 0;
+      border: var(--fun-border); overflow: hidden;
     }
     .funky-bar span { flex: 1; }
     .funky-bar span:nth-child(1) { background: var(--fun-lime); }
@@ -147,248 +100,129 @@
     .funky-bar span:nth-child(5) { background: var(--fun-orange); }
     .funky-bar span:nth-child(6) { background: var(--fun-purple); }
 
-    /* ============================================
-       STATS BAR
-       ============================================ */
+    /* STATS BAR */
     .funky-stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 18px;
-        margin: 50px 0 40px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px; margin: 50px 0 40px;
     }
     .funky-stat {
-        background: var(--fun-white);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow);
-        padding: 22px 20px;
-        text-align: center;
-        transition: all 0.2s ease;
+      background: var(--fun-white); border: var(--fun-border); box-shadow: var(--fun-shadow);
+      padding: 22px 20px; text-align: center; transition: all 0.2s ease;
     }
     .funky-stat:nth-child(1) { transform: rotate(-1deg); }
     .funky-stat:nth-child(2) { transform: rotate(0.8deg); }
     .funky-stat:nth-child(3) { transform: rotate(-0.5deg); }
     .funky-stat:nth-child(4) { transform: rotate(1deg); }
     .funky-stat:hover {
-        transform: translate(-3px, -3px) rotate(0deg);
-        box-shadow: var(--fun-shadow-lg);
-        background: var(--fun-lime);
+      transform: translate(-3px, -3px) rotate(0deg);
+      box-shadow: var(--fun-shadow-lg); background: var(--fun-lime);
     }
     .funky-stat .stat-num {
-        font-family: var(--font-display);
-        font-size: 2.4rem;
-        font-weight: 900;
-        line-height: 1;
-        color: var(--fun-ink);
-        margin-bottom: 6px;
-        display: block;
+      font-family: var(--font-display); font-size: 2.4rem; font-weight: 900;
+      line-height: 1; color: var(--fun-ink); margin-bottom: 6px; display: block;
     }
     .funky-stat .stat-label {
-        font-family: var(--font-mono);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        color: var(--fun-ink);
-        opacity: 0.75;
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; color: var(--fun-ink); opacity: 0.75;
     }
 
-    /* ============================================
-       AUTHOR BOX
-       ============================================ */
+    /* AUTHOR BOX */
     .funky-author {
-        display: flex;
-        align-items: center;
-        gap: 22px;
-        background: var(--fun-yellow);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow);
-        padding: 26px 30px;
-        margin: 40px 0;
-        transform: rotate(-0.3deg);
+      display: flex; align-items: center; gap: 22px;
+      background: var(--fun-yellow); border: var(--fun-border); box-shadow: var(--fun-shadow);
+      padding: 26px 30px; margin: 40px 0; transform: rotate(-0.3deg);
     }
     .funky-author .author-icon {
-        width: 68px;
-        height: 68px;
-        background: var(--fun-white);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-sm);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.9rem;
-        flex-shrink: 0;
-        transform: rotate(5deg);
+      width: 68px; height: 68px; background: var(--fun-white);
+      border: var(--fun-border); box-shadow: var(--fun-shadow-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.9rem; flex-shrink: 0; transform: rotate(5deg);
     }
     .funky-author h4 {
-        font-family: var(--font-display);
-        font-size: 1rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        margin: 0 0 6px 0;
-        color: var(--fun-ink);
+      font-family: var(--font-display); font-size: 1rem; font-weight: 900;
+      text-transform: uppercase; margin: 0 0 6px 0; color: var(--fun-ink);
     }
     .funky-author p {
-        margin: 0 0 6px 0;
-        color: var(--fun-ink);
-        font-size: 0.92rem;
-        line-height: 1.6;
-        opacity: 0.85;
-        font-weight: 500;
+      margin: 0 0 6px 0; color: var(--fun-ink); font-size: 0.92rem;
+      line-height: 1.6; opacity: 0.85; font-weight: 500;
     }
     .funky-author .updated {
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        font-weight: 700;
-        color: var(--fun-ink);
-        opacity: 0.7;
+      font-family: var(--font-mono); font-size: 0.75rem;
+      font-weight: 700; color: var(--fun-ink); opacity: 0.7;
     }
 
-    /* ============================================
-       INTRO PARAGRAPH
-       ============================================ */
-    .funky-intro {
-        font-size: 1.15rem;
-        line-height: 1.85;
-        margin: 30px 0;
-        color: var(--fun-ink);
-    }
+    /* INTRO */
+    .funky-intro { font-size: 1.15rem; line-height: 1.85; margin: 30px 0; color: var(--fun-ink); }
     .funky-intro strong {
-        background: var(--fun-yellow);
-        padding: 2px 8px;
-        border: 2px solid var(--fun-ink);
-        font-weight: 700;
+      background: var(--fun-yellow); padding: 2px 8px;
+      border: 2px solid var(--fun-ink); font-weight: 700;
     }
 
-    /* ============================================
-       SECTION HEADINGS
-       ============================================ */
+    /* SECTION HEADINGS */
     .funky-section-head {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin: 60px 0 30px 0;
-        flex-wrap: wrap;
+      display: flex; align-items: center; gap: 16px;
+      margin: 60px 0 30px 0; flex-wrap: wrap;
     }
     .funky-section-head h2 {
-        font-family: var(--font-display);
-        font-size: 1.7rem;
-        font-weight: 900;
-        color: var(--fun-ink);
-        text-transform: uppercase;
-        letter-spacing: -0.02em;
-        margin: 0;
-        padding: 12px 22px;
-        background: var(--fun-white);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow);
-        display: inline-block;
-        transform: rotate(-0.6deg);
+      font-family: var(--font-display); font-size: 1.7rem; font-weight: 900;
+      color: var(--fun-ink); text-transform: uppercase; letter-spacing: -0.02em;
+      margin: 0; padding: 12px 22px; background: var(--fun-white);
+      border: var(--fun-border); box-shadow: var(--fun-shadow);
+      display: inline-block; transform: rotate(-0.6deg);
     }
     .funky-section-head .count-badge {
-        font-family: var(--font-mono);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        background: var(--fun-hotpink);
-        color: var(--fun-white);
-        padding: 8px 14px;
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-sm);
-        transform: rotate(2deg);
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      background: var(--fun-hotpink); color: var(--fun-white);
+      padding: 8px 14px; border: var(--fun-border); box-shadow: var(--fun-shadow-sm);
+      transform: rotate(2deg);
     }
 
-    /* ============================================
-       HOW-TO CARDS GRID
-       ============================================ */
+    /* CARDS GRID */
     .funky-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 26px;
-        margin: 30px 0 50px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 26px; margin: 30px 0 50px;
     }
     .funky-card {
-        background: var(--fun-white);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow);
-        padding: 0;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        transition: all 0.22s ease;
-        position: relative;
-        overflow: hidden;
+      background: var(--fun-white); border: var(--fun-border); box-shadow: var(--fun-shadow);
+      padding: 0; text-decoration: none; display: flex; flex-direction: column;
+      transition: all 0.22s ease; position: relative; overflow: hidden; color: inherit;
     }
     .funky-card:nth-child(odd) { transform: rotate(-0.4deg); }
     .funky-card:nth-child(even) { transform: rotate(0.5deg); }
     .funky-card:hover {
-        transform: translate(-5px, -5px) rotate(0deg);
-        box-shadow: var(--fun-shadow-lg);
+      transform: translate(-5px, -5px) rotate(0deg);
+      box-shadow: var(--fun-shadow-lg);
     }
     .funky-card .card-top {
-        padding: 12px 20px;
-        border-bottom: var(--fun-border);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
+      padding: 12px 20px; border-bottom: var(--fun-border);
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
     }
-    .funky-card .card-icon {
-        font-size: 1.15rem;
-    }
+    .funky-card .card-icon { font-size: 1.15rem; }
     .funky-card .card-body {
-        padding: 22px 24px 24px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+      padding: 22px 24px 24px; flex: 1; display: flex; flex-direction: column;
     }
     .funky-card h3 {
-        font-family: var(--font-display);
-        font-size: 1.05rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: -0.01em;
-        color: var(--fun-ink);
-        margin: 0 0 12px 0;
-        line-height: 1.25;
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: -0.01em; color: var(--fun-ink);
+      margin: 0 0 12px 0; line-height: 1.25;
     }
     .funky-card p {
-        color: var(--fun-ink);
-        font-size: 0.9rem;
-        line-height: 1.6;
-        margin: 0 0 20px 0;
-        flex: 1;
-        opacity: 0.82;
-        font-weight: 500;
+      color: var(--fun-ink); font-size: 0.9rem; line-height: 1.6;
+      margin: 0 0 20px 0; flex: 1; opacity: 0.82; font-weight: 500;
     }
     .funky-card .card-cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-family: var(--font-display);
-        font-size: 0.78rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: var(--fun-ink);
-        padding: 8px 0 0 0;
-        border-top: 2px solid var(--fun-ink);
-        margin-top: auto;
-        width: 100%;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-display); font-size: 0.78rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 0.5px; color: var(--fun-ink);
+      padding: 8px 0 0 0; border-top: 2px solid var(--fun-ink);
+      margin-top: auto; width: 100%;
     }
-    .funky-card .card-cta .arrow {
-        transition: transform 0.2s ease;
-    }
-    .funky-card:hover .card-cta .arrow {
-        transform: translateX(6px);
-    }
+    .funky-card .card-cta .arrow { transition: transform 0.2s ease; }
+    .funky-card:hover .card-cta .arrow { transform: translateX(6px); }
 
-    /* Card colour variants */
     .funky-card[data-colour="lime"] .card-top { background: var(--fun-lime); }
     .funky-card[data-colour="cyan"] .card-top { background: var(--fun-cyan); }
     .funky-card[data-colour="pink"] .card-top { background: var(--fun-hotpink); color: var(--fun-white); }
@@ -396,218 +230,101 @@
     .funky-card[data-colour="orange"] .card-top { background: var(--fun-orange); color: var(--fun-white); }
     .funky-card[data-colour="purple"] .card-top { background: var(--fun-purple); color: var(--fun-white); }
 
-    /* ============================================
-       ALSO READ CALLOUT
-       ============================================ */
-    .funky-also-read {
-        background: var(--fun-cyan);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow);
-        padding: 32px 34px;
-        margin: 50px 0;
-        position: relative;
-        transform: rotate(-0.4deg);
+    /* Resource lists inside cards */
+    .funky-card ul { list-style: none; padding: 0; margin: 0; }
+    .funky-card ul li { margin-bottom: 8px; }
+    .funky-card ul li:last-child { margin-bottom: 0; }
+    .funky-card ul li a {
+      color: var(--fun-ink) !important; text-decoration: none;
+      border-bottom: 1px dashed var(--fun-ink); transition: all 0.2s ease;
+      display: inline-block; font-weight: 600; font-size: 0.9rem;
     }
-    .funky-also-read::before {
-        content: '📖';
-        position: absolute;
-        top: -22px;
-        right: 30px;
-        font-size: 1.4rem;
-        background: var(--fun-white);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-sm);
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotate(8deg);
-    }
-    .funky-also-read h3 {
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: -0.01em;
-        margin: 0 0 12px 0;
-        color: var(--fun-ink);
-    }
-    .funky-also-read p {
-        margin: 0;
-        font-size: 1rem;
-        line-height: 1.7;
-        color: var(--fun-ink);
-        font-weight: 500;
-    }
-    .funky-also-read a {
-        color: var(--fun-ink);
-        text-decoration: none;
-        font-weight: 700;
-        background: var(--fun-lime);
-        padding: 2px 8px;
-        border: 2px solid var(--fun-ink);
-        transition: all 0.2s ease;
-    }
-    .funky-also-read a:hover {
-        background: var(--fun-hotpink);
-        color: var(--fun-white);
+    .funky-card ul li a:hover {
+      background: var(--fun-lime); padding: 0 4px; border-bottom-color: transparent;
     }
 
-    /* ============================================
-       NEWSLETTER CTA
-       ============================================ */
+    /* NEWSLETTER / CTA */
     .funky-newsletter {
-        background: var(--fun-ink);
-        color: var(--fun-white);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-lg);
-        padding: 44px 40px;
-        margin: 50px 0 60px;
-        text-align: center;
-        position: relative;
-        transform: rotate(0.4deg);
+      background: var(--fun-ink); color: var(--fun-white);
+      border: var(--fun-border); box-shadow: var(--fun-shadow-lg);
+      padding: 44px 40px; margin: 50px 0 60px; text-align: center;
+      position: relative; transform: rotate(0.4deg);
     }
     .funky-newsletter::before {
-        content: '✉';
-        position: absolute;
-        top: -22px;
-        left: 50%;
-        transform: translateX(-50%) rotate(-6deg);
-        font-size: 1.5rem;
-        background: var(--fun-lime);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-sm);
-        width: 52px;
-        height: 52px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--fun-ink);
+      content: '⚔️'; position: absolute; top: -22px; left: 50%;
+      transform: translateX(-50%) rotate(-6deg); font-size: 1.5rem;
+      background: var(--fun-lime); border: var(--fun-border); box-shadow: var(--fun-shadow-sm);
+      width: 52px; height: 52px; display: flex; align-items: center;
+      justify-content: center; color: var(--fun-ink);
     }
     .funky-newsletter h3 {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: -0.02em;
-        margin: 0 0 12px 0;
-        color: var(--fun-white);
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: -0.02em;
+      margin: 0 0 12px 0; color: var(--fun-white);
     }
     .funky-newsletter p {
-        color: var(--fun-white);
-        opacity: 0.75;
-        margin: 0 0 26px 0;
-        font-size: 0.98rem;
-        max-width: 480px;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 500;
-    }
-    .funky-newsletter form {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .funky-newsletter input[type="email"] {
-        font-family: var(--font-mono);
-        font-size: 0.9rem;
-        padding: 14px 20px;
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-sm);
-        background: var(--fun-white);
-        color: var(--fun-ink);
-        border-radius: 0;
-        width: 280px;
-        max-width: 100%;
-        outline: none;
-    }
-    .funky-newsletter input[type="email"]:focus {
-        background: var(--fun-lime);
+      color: var(--fun-white); opacity: 0.75; margin: 0 0 26px 0;
+      font-size: 0.98rem; max-width: 520px; margin-left: auto; margin-right: auto; font-weight: 500;
     }
     .funky-newsletter .btn {
-        font-family: var(--font-display);
-        font-size: 0.82rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 14px 30px;
-        background: var(--fun-lime);
-        color: var(--fun-ink);
-        border: var(--fun-border);
-        box-shadow: var(--fun-shadow-sm);
-        cursor: pointer;
-        border-radius: 0;
-        transition: all 0.2s ease;
+      font-family: var(--font-display); font-size: 0.82rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 1px; padding: 14px 30px;
+      background: var(--fun-lime); color: var(--fun-ink); border: var(--fun-border);
+      box-shadow: var(--fun-shadow-sm); cursor: pointer; border-radius: 0;
+      transition: all 0.2s ease; text-decoration: none; display: inline-block;
     }
     .funky-newsletter .btn:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 5px 5px 0 var(--fun-white);
-        background: var(--fun-hotpink);
-        color: var(--fun-white);
+      transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--fun-white);
+      background: var(--fun-hotpink); color: var(--fun-white);
     }
 
-    /* ============================================
-       BREADCRUMBS
-       ============================================ */
+    /* BREADCRUMBS */
+    .breadcrumbs { padding: 20px 0 0; }
+    .breadcrumbs ol {
+      list-style: none; padding: 0; margin: 0; display: flex; gap: 8px;
+      font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .breadcrumbs ol li { display: flex; align-items: center; gap: 8px; }
     .breadcrumbs ol li a {
-        color: var(--fun-ink) !important;
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        opacity: 0.7;
+      color: var(--fun-ink) !important; text-decoration: none; opacity: 0.7;
     }
-    .breadcrumbs ol li a:hover {
-        color: var(--fun-hotpink) !important;
-        opacity: 1;
-    }
-    .breadcrumbs ol li[aria-current="page"] {
-        color: var(--fun-ink) !important;
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        opacity: 0.4;
-    }
+    .breadcrumbs ol li a:hover { color: var(--fun-hotpink) !important; opacity: 1; }
+    .breadcrumbs ol li[aria-current="page"] { color: var(--fun-ink) !important; opacity: 0.4; }
 
-    /* ============================================
-       RESPONSIVE
-       ============================================ */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
-        .funky-hero h1 { font-size: 2rem; }
-        .funky-hero .hero-desc { font-size: 1rem; }
-        .funky-author { flex-direction: column; text-align: center; }
-        .funky-grid { grid-template-columns: 1fr; }
-        .funky-newsletter { padding: 32px 24px; }
-        .funky-newsletter h3 { font-size: 1.1rem; }
-        .funky-section-head h2 { font-size: 1.3rem; padding: 10px 16px; }
-        .funky-stat .stat-num { font-size: 2rem; }
+      .funky-hero h1 { font-size: 2rem; }
+      .funky-hero .hero-desc { font-size: 1rem; }
+      .funky-author { flex-direction: column; text-align: center; }
+      .funky-grid { grid-template-columns: 1fr; }
+      .funky-newsletter { padding: 32px 24px; }
+      .funky-newsletter h3 { font-size: 1.1rem; }
+      .funky-section-head h2 { font-size: 1.3rem; padding: 10px 16px; }
+      .funky-stat .stat-num { font-size: 2rem; }
     }
-</style>
-<!-- ===== FUNKY DESIGN SYSTEM END ===== -->
+  </style>
+  <!-- ===== FUNKY DESIGN SYSTEM END ===== -->
 
-<!-- ===== BREADCRUMB SCHEMA ===== -->
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "How To",
-      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/"
-    }
-  ]
-}</script>
+  <!-- ===== BREADCRUMB SCHEMA ===== -->
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Comparisons",
+        "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/comparisons/"
+      }
+    ]
+  }</script>
 </head>
 <body>
 
@@ -785,320 +502,369 @@
 <!-- === DESIGN-B-HEADER-END === -->
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
-    <ol>
-        <li><a href="/VideoCameraHoliday/">Home</a></li>
-        <li aria-current="page">How-To</li>
-    </ol>
+  <ol>
+    <li><a href="/VideoCameraHoliday/">Home</a></li>
+    <li aria-current="page">Comparisons</li>
+  </ol>
 </nav>
 
 <div class="funky-wrap">
 
-<!-- ===== HERO ===== -->
-<section class="funky-hero">
-<div class="hero-sticker">Category · Field Skills</div>
-<h1>Travel Video <span class="highlight">How-To</span> Guides</h1>
-<p class="hero-desc">Practical, tested techniques for filming better holiday videos — from handheld stabilization to night-market audio, gear care to cinematic walking tours.</p>
-<div class="funky-bar">
-<span></span><span></span><span></span><span></span><span></span><span></span>
-</div>
-</section>
+  <!-- ===== HERO ===== -->
+  <section class="funky-hero">
+    <div class="hero-sticker">Category · Head-to-Head</div>
+    <h1>Camera <span class="highlight">Comparisons</span> 2026</h1>
+    <p class="hero-desc">Expert, real-world head-to-head camera guides. We test GoPro vs DJI, Sony vs Canon, and action cams vs vlogging cameras in actual travel conditions.</p>
+    <div class="funky-bar">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </section>
 
-<!-- ===== STATS BAR ===== -->
-<div class="funky-stats">
-<div class="funky-stat">
-<span class="stat-num">25+</span>
-<span class="stat-label">How-To Guides</span>
-</div>
-<div class="funky-stat">
-<span class="stat-num">4</span>
-<span class="stat-label">Skill Levels</span>
-</div>
-<div class="funky-stat">
-<span class="stat-num">0</span>
-<span class="stat-label">Spec Sheets</span>
-</div>
-<div class="funky-stat">
-<span class="stat-num">2026</span>
-<span class="stat-label">Latest Updates</span>
-</div>
-</div>
+  <!-- ===== STATS BAR ===== -->
+  <div class="funky-stats">
+    <div class="funky-stat">
+      <span class="stat-num">50+</span>
+      <span class="stat-label">Cameras Tested</span>
+    </div>
+    <div class="funky-stat">
+      <span class="stat-num">15+</span>
+      <span class="stat-label">Head-to-Head Guides</span>
+    </div>
+    <div class="funky-stat">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Sponsored Reviews</span>
+    </div>
+    <div class="funky-stat">
+      <span class="stat-num">2026</span>
+      <span class="stat-label">Latest Updates</span>
+    </div>
+  </div>
 
-<!-- ===== AUTHOR ===== -->
-<div class="funky-author">
-<div class="author-icon">🎬</div>
-<div>
-<h4>How-To Guides by Dawid Millennium</h4>
-<p>Every technique here is one I use on real trips — tested in the field, not in a studio.</p>
-<span class="updated">🕐 Last updated: August 2026</span>
-</div>
-</div>
+  <!-- ===== AUTHOR ===== -->
+  <div class="funky-author">
+    <div class="author-icon">🎬</div>
+    <div>
+      <h4>Comparisons by Dawid Millennium</h4>
+      <p>Every comparison is written by a travel videographer with 10+ years of hands-on experience testing cameras across 50+ countries. Real trips, honest verdicts.</p>
+      <span class="updated">🕐 Last updated: September 2026</span>
+    </div>
+  </div>
 
-<!-- ===== INTRO ===== -->
-<p class="funky-intro"><strong>Filming great holiday video isn't about the camera — it's about the technique.</strong> The guides below cover the practical skills that matter: how to stabilize without a gimbal, how to capture clean audio in a night market, how to back up footage when you have no laptop, and how to protect gear in the rain.</p>
+  <!-- ===== INTRO ===== -->
+  <p class="funky-intro"><strong>Filming great holiday video isn't just about the camera — it's about choosing the right tool for your specific travel style.</strong> Unlike lab-based reviews, we test each camera on actual trips – from beaches in Maldives to city breaks in Kyoto – so you get honest, practical advice for your holiday filming needs.</p>
 
-<!-- ===== FILMING TECHNIQUES ===== -->
-<div class="funky-section-head">
-<h2>🎬 Filming Techniques</h2>
-<span class="count-badge">6 Guides</span>
-</div>
+  <!-- ===== ALL COMPARISONS ===== -->
+  <div class="funky-section-head">
+    <h2>⚔️ All Camera Comparisons</h2>
+    <span class="count-badge">15+ Guides</span>
+  </div>
 
-<div class="funky-grid">
-<a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/how-to/film-better-holiday-videos.html">
-<div class="card-top"><span class="card-icon">📹</span><span>Foundation</span></div>
-<div class="card-body">
-<h3>Film Better Holiday Videos</h3>
-<p>The 7 habits that separate amateur holiday footage from cinematic travel video.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+  <div class="funky-grid">
+    <a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/comparisons/powershot-v1-vs-zv-1-ii.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>NEW</span></div>
+      <div class="card-body">
+        <h3>Canon PowerShot V1 vs Sony ZV-1 II</h3>
+        <p>Which compact video camera wins? We compare 4K/60, autofocus, IBIS, and built-in ND.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/how-to/film-in-harsh-sunlight.html">
-<div class="card-top"><span class="card-icon">☀️</span><span>Lighting</span></div>
-<div class="card-body">
-<h3>Filming in Harsh Sunlight</h3>
-<p>Midday beach, desert, or snow — how to avoid blown-out footage and harsh shadows.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/comparisons/dji-pocket-3-vs-gopro-hero-13.html">
+      <div class="card-top"><span class="card-icon">🎥⚔️🏄</span><span>Popular</span></div>
+      <div class="card-body">
+        <h3>DJI Pocket 3 vs GoPro Hero 13</h3>
+        <p>Gimbal stabilisation vs rugged action. Which is better for travel? Tested on beaches and tours.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/how-to/film-sunsets-golden-hour.html">
-<div class="card-top"><span class="card-icon">🌅</span><span>Golden Hour</span></div>
-<div class="card-body">
-<h3>Filming Sunsets &amp; Golden Hour</h3>
-<p>The best light of the day — how to actually capture it before it's gone.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/comparisons/gopro-hero-13-vs-sony-zv-1-ii.html">
+      <div class="card-top"><span class="card-icon">🏄⚔️🎥</span><span>Vlogging</span></div>
+      <div class="card-body">
+        <h3>GoPro Hero 13 vs Sony ZV-1 II</h3>
+        <p>Action cam vs vlogging compact. Tested in bright sun, low light, and on the move.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="yellow" href="/VideoCameraHoliday/how-to/film-yourself-solo.html">
-<div class="card-top"><span class="card-icon">🤳</span><span>Solo Travel</span></div>
-<div class="card-body">
-<h3>Film Yourself Solo</h3>
-<p>Tripod setups, framing, and workflow for solo travel vlogging.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="yellow" href="/VideoCameraHoliday/comparisons/action-camera-vs-gimbal-camera.html">
+      <div class="card-top"><span class="card-icon">🏔️⚔️🎥</span><span>Category</span></div>
+      <div class="card-body">
+        <h3>Action Camera vs Gimbal Camera</h3>
+        <p>The ultimate category showdown. When to choose a rugged action cam over a stabilized gimbal.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="orange" href="/VideoCameraHoliday/how-to/film-markets-street-food.html">
-<div class="card-top"><span class="card-icon">🍜</span><span>Street Food</span></div>
-<div class="card-body">
-<h3>Filming Markets &amp; Street Food</h3>
-<p>Chaos, colour, and steam — capturing the energy of a street market.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="orange" href="/VideoCameraHoliday/comparisons/budget-vs-premium-travel-cameras.html">
+      <div class="card-top"><span class="card-icon">💰⚔️💎</span><span>Value</span></div>
+      <div class="card-body">
+        <h3>Budget vs Premium Travel Cameras</h3>
+        <p>Is the $1,500 camera really twice as good as the $500 one? We compare real-world value.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="purple" href="/VideoCameraHoliday/how-to/film-travel-videos-without-crowds.html">
-<div class="card-top"><span class="card-icon">👥</span><span>Crowd Control</span></div>
-<div class="card-body">
-<h3>Filming Without Crowds</h3>
-<p>How to get clean shots at the world's busiest tourist spots.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
-</div>
+    <a class="funky-card" data-colour="purple" href="/VideoCameraHoliday/comparisons/iphone-16-pro-vs-dedicated-camera.html">
+      <div class="card-top"><span class="card-icon">📱⚔️📷</span><span>Smartphone</span></div>
+      <div class="card-body">
+        <h3>iPhone 16 Pro vs Dedicated Camera</h3>
+        <p>Has the iPhone finally killed the compact camera? We pit it against X100VI, GR IV, and ZV-1 II.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<!-- ===== TECHNICAL SKILLS ===== -->
-<div class="funky-section-head">
-<h2>🔧 Technical Skills</h2>
-<span class="count-badge">6 Guides</span>
-</div>
+    <a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/comparisons/sony-a7cr-vs-fujifilm-x-t50.html">
+      <div class="card-top"><span class="card-icon">📸⚔️📸</span><span>Mirrorless</span></div>
+      <div class="card-body">
+        <h3>Sony a7CR vs Fujifilm X-T50</h3>
+        <p>Full-frame power vs APS-C charm. Two mirrorless heavyweights compared for travel.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<div class="funky-grid">
-<a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">
-<div class="card-top"><span class="card-icon">🎯</span><span>Stabilization</span></div>
-<div class="card-body">
-<h3>Stabilize Without a Gimbal</h3>
-<p>Ninja-walk techniques, IBIS settings, and post-production tricks.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-r50.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Sony ZV-E10 vs Canon EOS R50</h3>
+        <p>Compare price, video specs, weight, and best use cases for vlogging and travel.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">
-<div class="card-top"><span class="card-icon">💾</span><span>Storage</span></div>
-<div class="card-body">
-<h3>Choose the Right Memory Card</h3>
-<p>V30 vs V60 vs V90 — how to avoid dropped frames and corrupted cards.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-gopro-12.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Sony ZV-E10 vs GoPro Hero 12</h3>
+        <p>Compare price, video specs, weight, and best use cases for content creation.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="yellow" href="/VideoCameraHoliday/how-to/backup-travel-photos-videos.html">
-<div class="card-top"><span class="card-icon">☁️</span><span>Backup</span></div>
-<div class="card-body">
-<h3>Backup Footage on the Road</h3>
-<p>How to back up gigabytes of footage without carrying a laptop.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="yellow" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-dji-action4.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Sony ZV-E10 vs DJI Osmo Action 4</h3>
+        <p>Compare price, video specs, weight, and best use cases for adventure filming.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/how-to/backup-travel-photos-without-laptop.html">
-<div class="card-top"><span class="card-icon">📱</span><span>Minimalist</span></div>
-<div class="card-body">
-<h3>Backup Without a Laptop</h3>
-<p>Phone-only and tablet-only backup workflows for minimalist travellers.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="orange" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-insta360-x4.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Sony ZV-E10 vs Insta360 X4</h3>
+        <p>Compare price, video specs, weight, and best use cases for 360° content.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="purple" href="/VideoCameraHoliday/how-to/edit-travel-videos-phone-tablet.html">
-<div class="card-top"><span class="card-icon">✂️</span><span>Mobile Edit</span></div>
-<div class="card-body">
-<h3>Edit on Phone or Tablet</h3>
-<p>CapCut, LumaFusion, and Premiere Rush — full travel edit workflows.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="purple" href="/VideoCameraHoliday/guides/sony-zv-e10-vs-canon-g7x3.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Sony ZV-E10 vs Canon G7X Mark III</h3>
+        <p>Compare price, video specs, weight, and best use cases for compact vlogging.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="orange" href="/VideoCameraHoliday/how-to/vertical-video-settings-travel.html">
-<div class="card-top"><span class="card-icon">📐</span><span>Vertical</span></div>
-<div class="card-body">
-<h3>Vertical Video Settings</h3>
-<p>Shooting for TikTok and Reels without losing vertical-friendly framing.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
-</div>
+    <a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/guides/canon-r50-vs-gopro-12.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Canon EOS R50 vs GoPro Hero 12</h3>
+        <p>Compare price, video specs, weight, and best use cases for family travel.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<!-- ===== ADVANCED TECHNIQUES ===== -->
-<div class="funky-section-head">
-<h2>🎞️ Advanced Techniques</h2>
-<span class="count-badge">6 Guides</span>
-</div>
+    <a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/guides/canon-r50-vs-dji-action4.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Canon EOS R50 vs DJI Osmo Action 4</h3>
+        <p>Compare price, video specs, weight, and best use cases for outdoor adventures.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<div class="funky-grid">
-<a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/how-to/timelapse-hyperlapse-travel-complete-guide.html">
-<div class="card-top"><span class="card-icon">⏱️</span><span>Timelapse</span></div>
-<div class="card-body">
-<h3>Timelapse &amp; Hyperlapse Complete Guide</h3>
-<p>Frame rates, intervals, and stabilization for jaw-dropping time-lapses.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/guides/canon-r50-vs-insta360-x4.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Canon EOS R50 vs Insta360 X4</h3>
+        <p>Compare price, video specs, weight, and best use cases for immersive content.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/how-to/24fps-vs-120fps-holiday-edit-ai-music-sync.html">
-<div class="card-top"><span class="card-icon">🎵</span><span>Frame Rate</span></div>
-<div class="card-body">
-<h3>24fps vs 120fps with AI Music Sync</h3>
-<p>Mixing frame rates for cinematic slow-motion, synced to AI music.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="yellow" href="/VideoCameraHoliday/guides/canon-r50-vs-canon-g7x3.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Canon EOS R50 vs Canon G7X Mark III</h3>
+        <p>Compare price, video specs, weight, and best use cases for everyday shooting.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/how-to/underwater-filming-snorkeling-complete-guide.html">
-<div class="card-top"><span class="card-icon">🤿</span><span>Underwater</span></div>
-<div class="card-body">
-<h3>Underwater Filming &amp; Snorkeling</h3>
-<p>Housings, filters, and technique for clear underwater footage.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="orange" href="/VideoCameraHoliday/guides/gopro-12-vs-dji-action4.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>GoPro Hero 12 vs DJI Osmo Action 4</h3>
+        <p>Compare price, video specs, weight, and best use cases for extreme sports.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="purple" href="/VideoCameraHoliday/how-to/shoot-cinematic-walking-tour-hyperlapse-insta360-x5.html">
-<div class="card-top"><span class="card-icon">🚶</span><span>360° Walking</span></div>
-<div class="card-body">
-<h3>Cinematic Walking Tours (Insta360 X5)</h3>
-<p>360° walking tour workflow with the Insta360 X5.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="purple" href="/VideoCameraHoliday/guides/gopro-12-vs-insta360-x4.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>GoPro Hero 12 vs Insta360 X4</h3>
+        <p>Compare price, video specs, weight, and best use cases for action storytelling.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="yellow" href="/VideoCameraHoliday/how-to/7-cinematic-shots-any-city-no-drone.html">
-<div class="card-top"><span class="card-icon">🎥</span><span>Shot List</span></div>
-<div class="card-body">
-<h3>7 Cinematic Shots — No Drone</h3>
-<p>The 7 shots every travel video needs, no drone required.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/guides/gopro-12-vs-canon-g7x3.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>GoPro Hero 12 vs Canon G7X Mark III</h3>
+        <p>Compare price, video specs, weight, and best use cases for travel vlogging.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="orange" href="/VideoCameraHoliday/how-to/ultimate-smartphone-rig-travel-storytelling.html">
-<div class="card-top"><span class="card-icon">📲</span><span>Rig Setup</span></div>
-<div class="card-body">
-<h3>Ultimate Smartphone Rig</h3>
-<p>Turn your phone into a serious travel storytelling tool.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
-</div>
+    <a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/guides/dji-action4-vs-insta360-x4.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>DJI Osmo Action 4 vs Insta360 X4</h3>
+        <p>Compare price, video specs, weight, and best use cases for creative angles.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<!-- ===== MAINTENANCE & GEAR CARE ===== -->
-<div class="funky-section-head">
-<h2>🧹 Maintenance &amp; Gear Care</h2>
-<span class="count-badge">6 Guides</span>
-</div>
+    <a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/guides/dji-action4-vs-canon-g7x3.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>DJI Osmo Action 4 vs Canon G7X Mark III</h3>
+        <p>Compare price, video specs, weight, and best use cases for versatile shooting.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<div class="funky-grid">
-<a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/how-to/clean-camera-sand-salt-water.html">
-<div class="card-top"><span class="card-icon">🏖️</span><span>Post-Beach</span></div>
-<div class="card-body">
-<h3>Clean Sand &amp; Salt Water</h3>
-<p>Post-beach camera care — what to do the moment you get back to the hotel.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="yellow" href="/VideoCameraHoliday/guides/insta360-x4-vs-canon-g7x3.html">
+      <div class="card-top"><span class="card-icon">📷⚔️🎥</span><span>2026</span></div>
+      <div class="card-body">
+        <h3>Insta360 X4 vs Canon G7X Mark III</h3>
+        <p>Compare price, video specs, weight, and best use cases for unique perspectives.</p>
+        <span class="card-cta">Read Comparison <span class="arrow">→</span></span>
+      </div>
+    </a>
+  </div>
 
-<a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/how-to/gear-maintenance-field-cleaning.html">
-<div class="card-top"><span class="card-icon">🧽</span><span>Field Care</span></div>
-<div class="card-body">
-<h3>Field Cleaning &amp; Maintenance</h3>
-<p>Keeping lenses, sensors, and bodies clean on long trips.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+  <!-- ===== HOW TO CHOOSE ===== -->
+  <div class="funky-section-head">
+    <h2>🎯 How to Choose</h2>
+    <span class="count-badge">4 Paths</span>
+  </div>
 
-<a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/how-to/gopro-fogging-underwater-fix.html">
-<div class="card-top"><span class="card-icon">💧</span><span>Fog Fix</span></div>
-<div class="card-body">
-<h3>Fix GoPro Fogging Underwater</h3>
-<p>Why your GoPro fogs and how to stop it forever.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+  <div class="funky-grid">
+    <a class="funky-card" data-colour="pink" href="/VideoCameraHoliday/guides/best-vlogging-cameras-travel-2026.html">
+      <div class="card-top"><span class="card-icon">🎥</span><span>Creators</span></div>
+      <div class="card-body">
+        <h3>Video-First Creators</h3>
+        <p>Best for vloggers: PowerShot V1 vs ZV-1 II, Pocket 3 vs Hero 13.</p>
+        <span class="card-cta">View Vlogging Guide <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="yellow" href="/VideoCameraHoliday/how-to/avoid-camera-condensation-tropical-travel.html">
-<div class="card-top"><span class="card-icon">🌴</span><span>Tropics</span></div>
-<div class="card-body">
-<h3>Avoid Condensation in the Tropics</h3>
-<p>Moving between A/C and humidity without killing your camera.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="cyan" href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">
+      <div class="card-top"><span class="card-icon">🏄</span><span>Adventure</span></div>
+      <div class="card-body">
+        <h3>Action &amp; Adventure</h3>
+        <p>Extreme sports: Hero 13 vs ZV-1 II, Action Cam comparisons.</p>
+        <span class="card-cta">Beach &amp; Adventure Tips <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="purple" href="/VideoCameraHoliday/how-to/remove-water-drops-gopro-lens.html">
-<div class="card-top"><span class="card-icon">💦</span><span>Water Drops</span></div>
-<div class="card-body">
-<h3>Remove Water Drops from GoPro Lens</h3>
-<p>The hydrophobic coating trick and the products that actually work.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
+    <a class="funky-card" data-colour="lime" href="/VideoCameraHoliday/guides/best-budget-holiday-camera-under-500.html">
+      <div class="card-top"><span class="card-icon">💰</span><span>Budget</span></div>
+      <div class="card-body">
+        <h3>Budget-Friendly Picks</h3>
+        <p>Best value: Budget vs Premium, iPhone vs Dedicated Camera.</p>
+        <span class="card-cta">Under $500 Guide <span class="arrow">→</span></span>
+      </div>
+    </a>
 
-<a class="funky-card" data-colour="orange" href="/VideoCameraHoliday/how-to/film-in-rain-protect-gear.html">
-<div class="card-top"><span class="card-icon">☔</span><span>Rain</span></div>
-<div class="card-body">
-<h3>Filming in Rain — Protect Gear</h3>
-<p>Rain covers, dry bags, and monsoon-safe camera setups.</p>
-<span class="card-cta">Read Guide <span class="arrow">→</span></span>
-</div>
-</a>
-</div>
+    <a class="funky-card" data-colour="purple" href="/VideoCameraHoliday/guides/best-compact-cameras-travel-2026.html">
+      <div class="card-top"><span class="card-icon">📸</span><span>Premium</span></div>
+      <div class="card-body">
+        <h3>Premium Travel Photography</h3>
+        <p>Enthusiast picks: a7CR vs X-T50, mirrorless comparisons.</p>
+        <span class="card-cta">Compact Travel Cameras <span class="arrow">→</span></span>
+      </div>
+    </a>
+  </div>
 
-<!-- ===== ALSO READ ===== -->
-<div class="funky-also-read">
-<h3>Also Read</h3>
-<p>Our <a href="/VideoCameraHoliday/editing/">editing guides</a> — colour grading, best apps, and posting from hotel wifi. The perfect companion to these field techniques.</p>
-</div>
+  <!-- ===== RELATED RESOURCES ===== -->
+  <div class="funky-section-head">
+    <h2>📚 Related Resources</h2>
+    <span class="count-badge">For Videographers</span>
+  </div>
 
-<!-- ===== NEWSLETTER ===== -->
-<div class="funky-newsletter">
-<h3>Get Weekly Camera Deals &amp; Field Notes</h3>
-<p>Join 5,000+ travellers who get our best holiday camera reviews and exclusive deals. No spam, unsubscribe anytime.</p>
-<form action="#" method="post">
-<input aria-label="Email address" name="email" placeholder="your@email.com" required="" type="email"/>
-<button class="btn" type="submit">Subscribe</button>
-</form>
-</div>
+  <div class="funky-grid">
+    <div class="funky-card" data-colour="pink" style="cursor: default;">
+      <div class="card-top"><span class="card-icon">📚</span><span>Guides</span></div>
+      <div class="card-body">
+        <h3>Buying Guides</h3>
+        <ul>
+          <li><a href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html">Best Holiday Cameras 2026</a></li>
+          <li><a href="/VideoCameraHoliday/guides/best-waterproof-cameras-beach.html">Waterproof Cameras</a></li>
+          <li><a href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">Compact for City Breaks</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="funky-card" data-colour="cyan" style="cursor: default;">
+      <div class="card-top"><span class="card-icon">🎬</span><span>How-To</span></div>
+      <div class="card-body">
+        <h3>Tutorials</h3>
+        <ul>
+          <li><a href="/VideoCameraHoliday/how-to/stabilize-videos-without-gimbal.html">Stabilize Without Gimbal</a></li>
+          <li><a href="/VideoCameraHoliday/how-to/film-yourself-solo.html">Film Yourself Solo</a></li>
+          <li><a href="/VideoCameraHoliday/how-to/choose-memory-card-4k-video.html">Choose Memory Card</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="funky-card" data-colour="lime" style="cursor: default;">
+      <div class="card-top"><span class="card-icon">🏖️</span><span>Destinations</span></div>
+      <div class="card-body">
+        <h3>Destination Guides</h3>
+        <ul>
+          <li><a href="/VideoCameraHoliday/destinations/best-cameras-beach-holidays.html">Beach Holidays</a></li>
+          <li><a href="/VideoCameraHoliday/destinations/best-cameras-city-breaks.html">City Breaks</a></li>
+          <li><a href="/VideoCameraHoliday/destinations/best-cameras-ski-holidays.html">Ski Holidays</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="funky-card" data-colour="yellow" style="cursor: default;">
+      <div class="card-top"><span class="card-icon">✂️</span><span>Editing</span></div>
+      <div class="card-body">
+        <h3>Editing Tips</h3>
+        <ul>
+          <li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">Color Grading Videos</a></li>
+          <li><a href="/VideoCameraHoliday/editing/best-editing-apps-holiday-footage.html">Best Editing Apps</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NEWSLETTER / CTA ===== -->
+  <div class="funky-newsletter">
+    <h3>Can't Find the Comparison You Need?</h3>
+    <p>We're constantly adding new head-to-head guides based on reader requests. Have a specific camera comparison in mind? Let us know and we'll prioritize it for our next testing trip.</p>
+    <a class="btn" href="/VideoCameraHoliday/about/">Suggest a Comparison</a>
+    <p style="margin-top: 16px; font-size: 0.85rem; opacity: 0.7;">Or check our <a href="/VideoCameraHoliday/guides/" style="color: var(--fun-lime); text-decoration: underline;">complete buying guides</a> for more recommendations.</p>
+  </div>
 
 </div><!-- /.funky-wrap -->
 
