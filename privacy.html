@@ -4,7 +4,251 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Privacy Policy for Holiday Video Camera. Learn what information we collect, how we use it, and your rights regarding your personal data." name="description"/>
 <title>Privacy Policy | Holiday Video Camera</title>
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/privacy.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">{
+
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/privacy.html" rel="canonical"/>
+
+<!-- ===== PRIVACY PAGE ENHANCEMENTS ===== -->
+<style>
+    /* ---- Privacy Container ---- */
+    .privacy-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* ---- Hero Section ---- */
+    .privacy-hero {
+        text-align: center;
+        padding: 60px 20px 30px;
+    }
+    .privacy-hero h1 {
+        font-size: 2.4rem;
+        background: linear-gradient(135deg, #ffffff, #e94560);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 16px;
+    }
+    .privacy-hero .subtitle {
+        color: #aaa;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    .privacy-hero .last-updated {
+        color: #666;
+        font-size: 0.85rem;
+        margin-top: 16px;
+    }
+
+    /* ---- Summary Box ---- */
+    .summary-box {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        border: 1px solid #2a2a4a;
+        border-radius: 16px;
+        padding: 26px 30px;
+        margin: 0 0 40px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .summary-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: #e94560;
+    }
+    .summary-box h2 {
+        color: #e94560;
+        font-size: 1.15rem;
+        margin: 0 0 14px 0;
+    }
+    .summary-box ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #ccc;
+        line-height: 1.8;
+    }
+    .summary-box li {
+        margin-bottom: 6px;
+    }
+    .summary-box strong {
+        color: #fff;
+    }
+
+    /* ---- TOC ---- */
+    .toc {
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin: 30px 0;
+    }
+    .toc h3 {
+        color: #e94560;
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 1.1rem;
+    }
+    .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 20px;
+    }
+    .toc ul li a {
+        color: #999;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        display: block;
+        padding: 4px 0;
+    }
+    .toc ul li a:hover {
+        color: #e94560;
+        padding-left: 4px;
+    }
+
+    /* ---- Policy Sections ---- */
+    .policy-section {
+        margin: 40px 0;
+        padding: 28px 30px;
+        background: #111;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        transition: border-color 0.3s ease;
+    }
+    .policy-section:hover {
+        border-color: #333;
+    }
+    .policy-section h2 {
+        color: #fff;
+        font-size: 1.35rem;
+        margin: 0 0 18px 0;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #2a2a2a;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .policy-section h2 .num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #e94560;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+    .policy-section p {
+        color: #ccc;
+        line-height: 1.85;
+        margin-bottom: 16px;
+        font-size: 1rem;
+    }
+    .policy-section p:last-child {
+        margin-bottom: 0;
+    }
+    .policy-section ul {
+        color: #ccc;
+        line-height: 1.85;
+        padding-left: 20px;
+        margin-bottom: 16px;
+    }
+    .policy-section ul li {
+        margin-bottom: 8px;
+    }
+    .policy-section ul li strong {
+        color: #fff;
+    }
+    .policy-section a {
+        color: #e94560;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+        transition: border-color 0.3s ease;
+    }
+    .policy-section a:hover {
+        border-bottom-color: #e94560;
+    }
+
+    /* ---- Contact Card ---- */
+    .contact-card {
+        background: rgba(233, 69, 96, 0.06);
+        border: 1px solid rgba(233, 69, 96, 0.25);
+        border-radius: 16px;
+        padding: 30px;
+        text-align: center;
+        margin: 40px 0;
+    }
+    .contact-card h2 {
+        color: #e94560;
+        margin: 0 0 12px 0;
+        font-size: 1.3rem;
+    }
+    .contact-card p {
+        color: #aaa;
+        max-width: 480px;
+        margin: 0 auto 20px;
+        line-height: 1.7;
+    }
+    .contact-card .btn {
+        display: inline-block;
+        padding: 12px 32px;
+        background: #e94560;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    .contact-card .btn:hover {
+        background: #c7354e;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(233, 69, 96, 0.25);
+    }
+
+    /* ---- Back to Top ---- */
+    .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #888;
+        text-decoration: none;
+        font-size: 0.85rem;
+        margin-top: 20px;
+        transition: color 0.3s ease;
+    }
+    .back-to-top:hover {
+        color: #e94560;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 768px) {
+        .privacy-hero h1 {
+            font-size: 1.7rem;
+        }
+        .toc ul {
+            grid-template-columns: 1fr;
+        }
+        .policy-section {
+            padding: 22px 20px;
+        }
+    }
+</style>
+<!-- ===== PRIVACY PAGE ENHANCEMENTS END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -13,11 +257,20 @@
       "position": 1,
       "name": "Home",
       "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy Policy",
+      "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/privacy.html"
     }
   ]
-}</script></head>
-<body><h1>Privacy Policy | Holiday Video Camera</h1>
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+}</script>
+</head>
+<body>
+
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -186,22 +439,79 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === --><article class="container">
-<p>Holiday Video Camera ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains what information we collect when you visit our website, how we use it, and the choices you have.</p>
-<h2>1. Information We Collect</h2>
-<p>We collect limited information to improve your experience:</p>
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+        <li><a href="/VideoCameraHoliday/">Home</a></li>
+        <li aria-current="page">Privacy Policy</li>
+    </ol>
+</nav>
+
+<div class="privacy-container">
+
+<!-- Hero -->
+<section class="privacy-hero">
+<h1>Privacy Policy</h1>
+<p class="subtitle">Holiday Video Camera ("we", "us", or "our") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and the choices you have.</p>
+<p class="last-updated">🕐 Last updated: September 14, 2026</p>
+</section>
+
+<!-- Summary Box -->
+<div class="summary-box">
+<h2>📌 The Short Version</h2>
+<ul>
+<li>We collect <strong>limited analytics data</strong> (pages visited, device type) to improve our content.</li>
+<li>We only collect your <strong>email address</strong> if you voluntarily subscribe to our newsletter.</li>
+<li>We <strong>never sell, rent, or trade</strong> your personal information.</li>
+<li>We use <strong>cookies</strong> for analytics and affiliate tracking — you can control them in your browser.</li>
+<li>You have the right to <strong>access, correct, or delete</strong> your data at any time.</li>
+</ul>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+<h3>On This Page</h3>
+<ul>
+<li><a href="#info-collect">1. Information We Collect</a></li>
+<li><a href="#how-use">2. How We Use Your Information</a></li>
+<li><a href="#cookies">3. Cookies &amp; Tracking</a></li>
+<li><a href="#third-party">4. Third-Party Services</a></li>
+<li><a href="#sharing">5. Data Sharing</a></li>
+<li><a href="#rights">6. Your Rights</a></li>
+<li><a href="#security">7. Data Security</a></li>
+<li><a href="#children">8. Children's Privacy</a></li>
+<li><a href="#changes">9. Changes to This Policy</a></li>
+<li><a href="#contact">10. Contact Us</a></li>
+</ul>
+</div>
+
+<!-- Section 1 -->
+<div class="policy-section" id="info-collect">
+<h2><span class="num">1</span> Information We Collect</h2>
+<p>We collect limited information to improve your experience on our site:</p>
 <ul>
 <li><strong>Usage Data:</strong> Pages visited, time spent, and referring URLs, collected through analytics tools.</li>
 <li><strong>Device Information:</strong> Browser type, operating system, and approximate location (country level) for analytics.</li>
 <li><strong>Email Address:</strong> Only if you voluntarily subscribe to our newsletter.</li>
 </ul>
-<h2>2. How We Use Your Information</h2>
+</div>
+
+<!-- Section 2 -->
+<div class="policy-section" id="how-use">
+<h2><span class="num">2</span> How We Use Your Information</h2>
+<p>We use the information we collect for the following purposes:</p>
 <ul>
 <li>To understand which content is most useful and improve our articles.</li>
 <li>To send you our newsletter (if you opt in).</li>
 <li>To display relevant affiliate links and measure their performance.</li>
 </ul>
-<h2>3. Cookies and Tracking Technologies</h2>
+</div>
+
+<!-- Section 3 -->
+<div class="policy-section" id="cookies">
+<h2><span class="num">3</span> Cookies and Tracking Technologies</h2>
 <p>We use cookies and similar technologies to:</p>
 <ul>
 <li>Remember your preferences (e.g., dark mode).</li>
@@ -209,7 +519,11 @@
 <li>Track affiliate link clicks (to earn commissions).</li>
 </ul>
 <p>You can control cookies through your browser settings. Disabling cookies may affect some functionality.</p>
-<h2>4. Third-Party Services</h2>
+</div>
+
+<!-- Section 4 -->
+<div class="policy-section" id="third-party">
+<h2><span class="num">4</span> Third-Party Services</h2>
 <p>We use trusted third-party services that may collect data on our behalf:</p>
 <ul>
 <li><strong>Google Analytics:</strong> For website traffic analysis.</li>
@@ -217,37 +531,70 @@
 <li><strong>Email Service Provider:</strong> To manage newsletter subscriptions.</li>
 </ul>
 <p>These services have their own privacy policies, and we encourage you to review them.</p>
-<h2>5. Data Sharing</h2>
+</div>
+
+<!-- Section 5 -->
+<div class="policy-section" id="sharing">
+<h2><span class="num">5</span> Data Sharing</h2>
 <p>We do not sell, rent, or trade your personal information. We may share aggregated, non-personally identifiable data with partners for analytics purposes.</p>
-<h2>6. Your Rights</h2>
+</div>
+
+<!-- Section 6 -->
+<div class="policy-section" id="rights">
+<h2><span class="num">6</span> Your Rights</h2>
 <p>Depending on your location, you may have the right to:</p>
 <ul>
 <li>Access, correct, or delete your personal information.</li>
 <li>Opt out of marketing emails (every email includes an unsubscribe link).</li>
 <li>Object to certain data processing activities.</li>
 </ul>
-<h2>7. Data Security</h2>
+</div>
+
+<!-- Section 7 -->
+<div class="policy-section" id="security">
+<h2><span class="num">7</span> Data Security</h2>
 <p>We take reasonable measures to protect your information, but no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
-<h2>8. Children's Privacy</h2>
+</div>
+
+<!-- Section 8 -->
+<div class="policy-section" id="children">
+<h2><span class="num">8</span> Children's Privacy</h2>
 <p>This website is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-<h2>9. Changes to This Policy</h2>
+</div>
+
+<!-- Section 9 -->
+<div class="policy-section" id="changes">
+<h2><span class="num">9</span> Changes to This Policy</h2>
 <p>We may update this Privacy Policy periodically. Any changes will be posted on this page with a revised date.</p>
-<h2>10. Contact Us</h2>
-<p>If you have questions about this policy, please visit our <a class="content-link" href="/VideoCameraHoliday/contact.html">Contact</a> page.</p>
-</article>
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+</div>
+
+<!-- Section 10 -->
+<div class="policy-section" id="contact">
+<h2><span class="num">10</span> Contact Us</h2>
+<p>If you have questions about this policy, please visit our <a href="/VideoCameraHoliday/contact.html">Contact page</a> or email us directly. We aim to respond to all privacy-related enquiries within 48 hours.</p>
+</div>
+
+<!-- Contact Card -->
+<div class="contact-card">
+<h2>Questions About Your Privacy?</h2>
+<p>If you have any concerns about how we handle your data, we'd love to hear from you. Our team responds to all privacy-related enquiries within 48 hours.</p>
+<a class="btn" href="/VideoCameraHoliday/contact.html">Contact Us</a>
+</div>
+
+<!-- Back to Top -->
+<div style="text-align:center; padding-bottom:40px;">
+<a class="back-to-top" href="#">↑ Back to top</a>
+</div>
+
+</div><!-- /.privacy-container -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -325,6 +672,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -334,15 +682,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -356,7 +699,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -373,14 +715,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -391,7 +729,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -413,7 +750,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -428,7 +764,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -456,25 +791,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -492,7 +812,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -503,7 +822,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -512,5 +830,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
