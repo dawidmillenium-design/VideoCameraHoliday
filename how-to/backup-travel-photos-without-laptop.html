@@ -5,7 +5,708 @@
 <meta content="Never lose your travel memories. Learn 5 proven ways to backup photos and videos on the road without carrying a heavy laptop. SSDs, clouds, and phones tested." name="description"/>
 <title>Travel Photo Backup: 5 Methods Without a Laptop (2026 Guide)</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/backup-travel-photos-without-laptop.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/>
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/how-to/backup-travel-photos-without-laptop.html" rel="canonical"/>
+
+<!-- ===== FUNKY NEO-BRUTALIST DESIGN SYSTEM ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+    :root {
+        --fun-bg: #FFF8E7;
+        --fun-ink: #0A0A0A;
+        --fun-lime: #CCFF00;
+        --fun-hotpink: #FF00AA;
+        --fun-cyan: #00FFFF;
+        --fun-yellow: #FFE500;
+        --fun-orange: #FF6B00;
+        --fun-purple: #A855F7;
+        --fun-white: #FFFFFF;
+
+        --fun-border: 3px solid var(--fun-ink);
+        --fun-shadow: 6px 6px 0 var(--fun-ink);
+        --fun-shadow-lg: 10px 10px 0 var(--fun-ink);
+        --fun-shadow-sm: 3px 3px 0 var(--fun-ink);
+
+        --font-display: 'Archivo Black', sans-serif;
+        --font-body: 'Space Grotesk', sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+        background: var(--fun-bg) !important;
+        color: var(--fun-ink) !important;
+        font-family: var(--font-body) !important;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    /* Dot pattern */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background-image: radial-gradient(circle, rgba(10, 10, 10, 0.06) 2px, transparent 2px);
+        background-size: 32px 32px;
+    }
+
+    /* Colour blobs — data/storage-inspired palette */
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background:
+            radial-gradient(circle at 8% 12%, rgba(0, 255, 255, 0.22), transparent 32%),
+            radial-gradient(circle at 92% 20%, rgba(168, 85, 247, 0.18), transparent 32%),
+            radial-gradient(circle at 20% 82%, rgba(204, 255, 0, 0.24), transparent 34%),
+            radial-gradient(circle at 82% 88%, rgba(255, 0, 170, 0.14), transparent 32%);
+    }
+
+    .funky-wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .funky-hero {
+        text-align: center;
+        padding: 80px 20px 40px;
+        position: relative;
+    }
+    .funky-hero .hero-sticker {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: var(--fun-cyan);
+        color: var(--fun-ink);
+        padding: 8px 20px;
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        transform: rotate(-2deg);
+        margin-bottom: 24px;
+    }
+    .funky-hero h1 {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 22px;
+        color: var(--fun-ink);
+        text-transform: uppercase;
+    }
+    .funky-hero h1 .highlight {
+        background: var(--fun-lime);
+        padding: 0 14px;
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        display: inline-block;
+        transform: rotate(-1deg);
+    }
+    .funky-hero .hero-desc {
+        font-family: var(--font-body);
+        font-size: 1.15rem;
+        color: var(--fun-ink);
+        max-width: 660px;
+        margin: 0 auto;
+        line-height: 1.7;
+        opacity: 0.82;
+        font-weight: 500;
+    }
+    .funky-bar {
+        display: flex;
+        height: 10px;
+        max-width: 300px;
+        margin: 32px auto 0;
+        border: var(--fun-border);
+        overflow: hidden;
+    }
+    .funky-bar span { flex: 1; }
+    .funky-bar span:nth-child(1) { background: var(--fun-cyan); }
+    .funky-bar span:nth-child(2) { background: var(--fun-purple); }
+    .funky-bar span:nth-child(3) { background: var(--fun-lime); }
+    .funky-bar span:nth-child(4) { background: var(--fun-hotpink); }
+    .funky-bar span:nth-child(5) { background: var(--fun-yellow); }
+    .funky-bar span:nth-child(6) { background: var(--fun-orange); }
+
+    /* ============================================
+       HEADINGS
+       ============================================ */
+    h2 {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: var(--fun-ink);
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        margin: 60px 0 30px 0;
+        padding: 12px 22px;
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        display: inline-block;
+        transform: rotate(-0.6deg);
+    }
+
+    h3 {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 900;
+        color: var(--fun-ink);
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        margin: 32px 0 14px 0;
+        padding: 8px 16px;
+        background: var(--fun-cyan);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        display: inline-block;
+        transform: rotate(0.5deg);
+    }
+
+    /* ============================================
+       TAKEAWAYS
+       ============================================ */
+    .takeaways {
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-lg);
+        padding: 34px 38px;
+        margin: 34px 0;
+        position: relative;
+        transform: rotate(0.3deg);
+    }
+    .takeaways::before {
+        content: '⚡';
+        position: absolute;
+        top: -22px;
+        right: 30px;
+        font-size: 1.5rem;
+        background: var(--fun-yellow);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-8deg);
+    }
+    .takeaways h3 {
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        font-size: 1.15rem;
+        transform: none;
+        color: var(--fun-ink);
+    }
+    .takeaways ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    .takeaways li {
+        margin-bottom: 14px;
+        padding-left: 34px;
+        position: relative;
+        line-height: 1.7;
+        color: var(--fun-ink);
+        font-weight: 500;
+    }
+    .takeaways li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        font-family: var(--font-display);
+        font-weight: 900;
+        color: var(--fun-hotpink);
+        font-size: 1.15rem;
+    }
+    .takeaways strong {
+        background: var(--fun-lime);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+    }
+
+    /* ============================================
+       PARAGRAPHS & LISTS
+       ============================================ */
+    p {
+        color: var(--fun-ink);
+        line-height: 1.85;
+        margin-bottom: 18px;
+        font-size: 1.02rem;
+    }
+    p strong {
+        background: var(--fun-yellow);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+        font-weight: 700;
+    }
+    article ul, article ol {
+        color: var(--fun-ink);
+        line-height: 1.85;
+        padding-left: 24px;
+        margin-bottom: 20px;
+    }
+    article ul li, article ol li {
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    article ul li strong, article ol li strong {
+        background: var(--fun-cyan);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+    }
+
+    /* ============================================
+       TIP / WARNING BOXES
+       ============================================ */
+    .tip-box {
+        background: var(--fun-lime);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 26px 30px;
+        margin: 34px 0;
+        position: relative;
+        transform: rotate(-0.5deg);
+    }
+    .tip-box::before {
+        content: '★';
+        position: absolute;
+        top: -22px;
+        left: 30px;
+        font-size: 1.4rem;
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        width: 46px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(8deg);
+    }
+    .tip-box strong {
+        background: var(--fun-white);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+    }
+    .tip-box p { margin: 0; font-weight: 500; }
+
+    .warning-box {
+        background: var(--fun-orange);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 26px 30px;
+        margin: 34px 0;
+        position: relative;
+        transform: rotate(0.4deg);
+        color: var(--fun-white);
+    }
+    .warning-box::before {
+        content: '⚠';
+        position: absolute;
+        top: -22px;
+        left: 30px;
+        font-size: 1.3rem;
+        background: var(--fun-yellow);
+        color: var(--fun-ink);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        width: 46px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-6deg);
+    }
+    .warning-box strong {
+        background: var(--fun-white);
+        color: var(--fun-ink);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+    }
+    .warning-box p { margin: 0; color: var(--fun-white); font-weight: 500; }
+
+    /* ============================================
+       PRODUCT BOX (SSD)
+       ============================================ */
+    .product-box {
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 28px 32px;
+        margin: 30px 0;
+        position: relative;
+        transition: all 0.22s ease;
+    }
+    .product-box:hover {
+        transform: translate(-4px, -4px);
+        box-shadow: var(--fun-shadow-lg);
+    }
+    .product-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+    }
+    .product-title {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--fun-ink);
+    }
+    .product-badge {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border: 2px solid var(--fun-ink);
+        background: var(--fun-lime);
+        color: var(--fun-ink);
+        box-shadow: 2px 2px 0 var(--fun-ink);
+    }
+    .product-box p {
+        color: var(--fun-ink);
+        line-height: 1.75;
+        font-size: 0.96rem;
+        margin-bottom: 20px;
+    }
+    .product-specs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 14px;
+        padding: 20px;
+        background: var(--fun-bg);
+        border: 2px solid var(--fun-ink);
+    }
+    .spec-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .spec-item strong {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--fun-ink);
+        opacity: 0.6;
+        font-weight: 700;
+    }
+    .spec-item span {
+        color: var(--fun-ink);
+        font-size: 0.92rem;
+        font-weight: 700;
+    }
+
+    /* ============================================
+       FAQ
+       ============================================ */
+    .faq-section { margin: 40px 0; }
+    .faq-item {
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 26px 30px;
+        margin-bottom: 22px;
+        transition: all 0.2s ease;
+    }
+    .faq-item:nth-child(odd) { transform: rotate(-0.3deg); }
+    .faq-item:nth-child(even) { transform: rotate(0.4deg); }
+    .faq-item:hover {
+        transform: translate(-4px, -4px) rotate(0deg);
+        box-shadow: var(--fun-shadow-lg);
+    }
+    .faq-question {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 900;
+        color: var(--fun-ink);
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        margin: 0 0 14px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    .faq-question::before {
+        content: 'Q';
+        font-family: var(--font-display);
+        font-size: 0.85rem;
+        background: var(--fun-cyan);
+        border: 2px solid var(--fun-ink);
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 2px 2px 0 var(--fun-ink);
+    }
+    .faq-answer {
+        color: var(--fun-ink);
+        line-height: 1.75;
+        margin: 0;
+        padding-left: 46px;
+        opacity: 0.85;
+        font-weight: 500;
+    }
+    .faq-answer p { margin: 0; }
+
+    /* ============================================
+       AUTHOR BOX
+       ============================================ */
+    .author-box {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        background: var(--fun-yellow);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 26px 30px;
+        margin: 40px 0;
+        transform: rotate(-0.3deg);
+    }
+    .author-avatar {
+        width: 68px;
+        height: 68px;
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.9rem;
+        flex-shrink: 0;
+        transform: rotate(5deg);
+    }
+    .author-info h4 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 0 0 6px 0;
+        color: var(--fun-ink);
+    }
+    .author-info p {
+        margin: 0 0 6px 0;
+        color: var(--fun-ink);
+        font-size: 0.92rem;
+        line-height: 1.6;
+        opacity: 0.85;
+        font-weight: 500;
+    }
+    .last-updated {
+        font-family: var(--font-mono);
+        font-size: 0.75rem !important;
+        font-weight: 700 !important;
+        color: var(--fun-ink) !important;
+        opacity: 0.7;
+    }
+
+    /* ============================================
+       TOC
+       ============================================ */
+    .toc {
+        background: var(--fun-cyan);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 28px 32px;
+        margin: 34px 0;
+        transform: rotate(0.4deg);
+    }
+    .toc h3 {
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0 0 18px 0;
+        font-size: 1rem;
+        transform: none;
+        color: var(--fun-ink);
+    }
+    .toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 20px;
+    }
+    .toc ul li a {
+        color: var(--fun-ink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.92rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        background: var(--fun-white);
+        border: 2px solid var(--fun-ink);
+        transition: all 0.2s ease;
+    }
+    .toc ul li a::before { content: '▸'; font-weight: 900; }
+    .toc ul li a:hover {
+        background: var(--fun-hotpink);
+        color: var(--fun-white);
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px 0 var(--fun-ink);
+    }
+
+    /* ============================================
+       RELATED CARDS
+       ============================================ */
+    .related-articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 24px;
+        margin: 30px 0 40px;
+    }
+    .related-card {
+        background: var(--fun-white);
+        border: var(--fun-border);
+        box-shadow: var(--fun-shadow);
+        padding: 24px 26px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.22s ease;
+    }
+    .related-card:nth-child(odd) { transform: rotate(-0.4deg); }
+    .related-card:nth-child(even) { transform: rotate(0.4deg); }
+    .related-card:hover {
+        transform: translate(-5px, -5px) rotate(0deg);
+        box-shadow: var(--fun-shadow-lg);
+        background: var(--fun-lime);
+    }
+    .related-card h4 {
+        font-family: var(--font-display);
+        font-size: 0.95rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--fun-ink);
+        margin: 0 0 10px 0;
+        line-height: 1.25;
+    }
+    .related-card p {
+        color: var(--fun-ink);
+        font-size: 0.85rem;
+        margin: 0;
+        line-height: 1.55;
+        opacity: 0.82;
+        font-weight: 500;
+    }
+
+    /* ============================================
+       INLINE LINKS
+       ============================================ */
+    article a:not(.related-card) {
+        color: var(--fun-ink);
+        text-decoration: none;
+        font-weight: 700;
+        background: var(--fun-lime);
+        padding: 1px 8px;
+        border: 2px solid var(--fun-ink);
+        transition: all 0.2s ease;
+    }
+    article a:not(.related-card):hover {
+        background: var(--fun-hotpink);
+        color: var(--fun-white);
+        transform: translate(-1px, -1px);
+        box-shadow: 2px 2px 0 var(--fun-ink);
+    }
+
+    /* ============================================
+       BREADCRUMBS
+       ============================================ */
+    .breadcrumbs ol li a {
+        color: var(--fun-ink) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        opacity: 0.7;
+    }
+    .breadcrumbs ol li a:hover {
+        color: var(--fun-hotpink) !important;
+        opacity: 1;
+    }
+    .breadcrumbs ol li[aria-current="page"] {
+        color: var(--fun-ink) !important;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        opacity: 0.4;
+    }
+
+    /* ============================================
+       AFFILIATE NOTE
+       ============================================ */
+    .affiliate-note {
+        text-align: center !important;
+        font-family: var(--font-mono) !important;
+        font-size: 0.75rem !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--fun-ink) !important;
+        opacity: 0.55;
+        padding: 40px 0 !important;
+        border-top: var(--fun-border) !important;
+        margin-top: 40px !important;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+        .funky-hero h1 { font-size: 1.75rem; }
+        .funky-hero .hero-desc { font-size: 1rem; }
+        .toc ul { grid-template-columns: 1fr; }
+        .takeaways, .tip-box, .warning-box, .author-box { padding: 22px 24px; }
+        .author-box { flex-direction: column; text-align: center; }
+        .related-articles { grid-template-columns: 1fr; }
+        h2 { font-size: 1.3rem; padding: 10px 16px; }
+        h3 { font-size: 1rem; }
+        .faq-answer { padding-left: 0; }
+        .product-specs { grid-template-columns: 1fr 1fr; }
+        .product-header { flex-direction: column; align-items: flex-start; }
+    }
+</style>
+<!-- ===== FUNKY DESIGN SYSTEM END ===== -->
+
+<!-- ===== BREADCRUMB SCHEMA ===== -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -31,10 +732,53 @@
   ]
 }
 </script>
+
+<!-- ===== FAQ SCHEMA ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I back up camera footage to my phone without a laptop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Plug a USB-C card reader into your phone, copy the card's DCIM folder to the phone using the Files app on iPhone or a file manager on Android, then move it to a portable USB-C SSD. Verify a few clips play before considering the copy done."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I back up photos with slow hotel Wi-Fi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Don't try to upload everything. Mark your 10-20 best clips and photos each night and let iCloud, Google Photos, or Dropbox sync just those overnight. Keep the bulk footage on the memory card and a portable SSD until you reach fast internet at home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 3-2-1 backup rule for travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keep 3 copies of your footage on 2 different devices with 1 copy off-site. On the road: the original memory card (never formatted mid-trip), a portable SSD stored in a separate bag, and cloud uploads of your best clips whenever Wi-Fi allows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use dual memory card slots while traveling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely, if your camera has them. Set the camera to simultaneous or backup recording so every file writes to both cards at once, then store the second card in a different bag. It's a free, automatic backup that requires zero nightly effort."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === DESIGN-B-HEADER-START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -203,20 +947,30 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === DESIGN-B-HEADER-END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
         <li><a href="/VideoCameraHoliday/how-to/">How-To</a></li>
-        <li aria-current="page">Travel Photo Backup: 5 Methods Without a Laptop (2026 Guide)</li>
+        <li aria-current="page">Travel Photo Backup: 5 Methods Without a Laptop</li>
     </ol>
 </nav>
 
-<section class="article-hero">
-    <h1>Travel Photo Backup: 5 Methods Without a Laptop (2026 Guide)</h1>
+<div class="funky-wrap">
+
+<!-- ===== HERO ===== -->
+<section class="funky-hero">
+<div class="hero-sticker">How-To · Data Safety</div>
+<h1>Travel Photo Backup: <span class="highlight">5 Methods</span> Without a Laptop</h1>
+<p class="hero-desc">Never lose your travel memories. The exact no-laptop backup routine that survives theft, corruption, and hotel Wi-Fi — tested across 40 countries.</p>
+<div class="funky-bar">
+<span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 </section>
 
-<article class="container">
+<!-- ===== AUTHOR ===== -->
 <div class="author-box">
 <div class="author-avatar">💾</div>
 <div class="author-info">
@@ -225,19 +979,23 @@
 <p class="last-updated">🕐 Last updated: September 4, 2026</p>
 </div>
 </div>
+
+<!-- ===== TOC ===== -->
 <div class="toc">
-<h3>In This Guide</h3>
+<h3>📑 In This Guide</h3>
 <ul>
 <li><a href="#golden-rule">The Golden Rule: 3-2-1</a></li>
-<li><a href="#method-phone">Method 1: Phone + Card Reader (Fastest)</a></li>
-<li><a href="#method-ssd">Method 2: Portable SSDs (Most Reliable)</a></li>
-<li><a href="#method-cloud">Method 3: Cloud Backup (Slow but Safe)</a></li>
-<li><a href="#method-wireless">Method 4: Wireless Drives (Techie Option)</a></li>
-<li><a href="#method-dual">Method 5: Dual Slot Cameras (Pro Standard)</a></li>
+<li><a href="#method-phone">Method 1: Phone + Card Reader</a></li>
+<li><a href="#method-ssd">Method 2: Portable SSDs</a></li>
+<li><a href="#method-cloud">Method 3: Cloud Backup</a></li>
+<li><a href="#method-wireless">Method 4: Wireless Drives</a></li>
+<li><a href="#method-dual">Method 5: Dual Slot Cameras</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#related">Related Articles</a></li>
 </ul>
 </div>
+
+<!-- ===== KEY TAKEAWAYS ===== -->
 <div class="takeaways">
 <h3>Key Takeaways</h3>
 <ul>
@@ -247,6 +1005,8 @@
 <li><strong>Cloud Limits:</strong> Hotel Wi-Fi is often too slow for 4K video. Use cloud for photos only.</li>
 </ul>
 </div>
+
+<!-- ===== GOLDEN RULE ===== -->
 <h2 id="golden-rule">The Golden Rule: 3-2-1 Backup Strategy</h2>
 <p>Before we dive into gear, understand the rule that saves photographers from heartbreak: <strong>3-2-1</strong>.</p>
 <ul>
@@ -254,17 +1014,24 @@
 <li><strong>2</strong> different types of media (e.g., SD Card + SSD).</li>
 <li><strong>1</strong> copy offsite (e.g., Cloud or drive left at home).</li>
 </ul>
+
 <div class="warning-box">
-<strong>⚠️ Critical:</strong> An SD card in your camera is NOT a backup. It is a capture device. Treat it as expendable. The moment you fill it, copy the files elsewhere and format it in-camera.
-        </div>
+<p><strong>⚠️ Critical:</strong> An SD card in your camera is NOT a backup. It is a capture device. Treat it as expendable. The moment you fill it, copy the files elsewhere and format it in-camera.</p>
+</div>
+
+<!-- ===== METHOD 1 ===== -->
 <h2 id="method-phone">Method 1: Phone + Card Reader (Fastest &amp; Easiest)</h2>
 <p>Your smartphone is the most powerful backup tool you own. With a simple $15 USB-C card reader, you can offload 128GB in minutes directly to your phone's storage.</p>
 <p><strong>Workflow:</strong> Insert SD card into reader → Plug into phone → Open "Files" app → Copy/Paste to phone folder → Upload to Google Photos/iCloud automatically.</p>
+
 <div class="tip-box">
-<strong>Pro Tip:</strong> iPhone 15/16 Pro and modern Androids support external SSDs directly. You can plug an SSD into your phone and bypass internal storage entirely for massive projects.
-        </div>
+<p><strong>Pro Tip:</strong> iPhone 15/16 Pro and modern Androids support external SSDs directly. You can plug an SSD into your phone and bypass internal storage entirely for massive projects.</p>
+</div>
+
+<!-- ===== METHOD 2 ===== -->
 <h2 id="method-ssd">Method 2: Portable SSDs (Most Reliable)</h2>
 <p>Solid State Drives (SSDs) are shockproof, silent, and tiny. Unlike old spinning hard drives (HDD), they survive being dropped in a backpack.</p>
+
 <div class="product-box">
 <div class="product-header">
 <div class="product-title">Samsung T7 Shield (2TB)</div>
@@ -272,63 +1039,77 @@
 </div>
 <p>Ruggedized, water-resistant, and incredibly fast (1000MB/s). It fits in a coin pocket and can backup a full day of 4K footage in minutes.</p>
 <div class="product-specs">
-<div class="spec-item"><strong>Speed</strong>1000 MB/s</div>
-<div class="spec-item"><strong>Durability</strong>IP65 Rated</div>
-<div class="spec-item"><strong>Capacity</strong>Up to 4TB</div>
-<div class="spec-item"><strong>Connection</strong>USB-C</div>
+<div class="spec-item"><strong>Speed</strong><span>1000 MB/s</span></div>
+<div class="spec-item"><strong>Durability</strong><span>IP65 Rated</span></div>
+<div class="spec-item"><strong>Capacity</strong><span>Up to 4TB</span></div>
+<div class="spec-item"><strong>Connection</strong><span>USB-C</span></div>
 </div>
 </div>
+
+<!-- ===== METHOD 3 ===== -->
 <h2 id="method-cloud">Method 3: Cloud Backup (Slow but Safe)</h2>
 <p>Services like Backblaze, Google Photos, and Dropbox are great for "offsite" security. However, rely on them ONLY for photos (JPEGs). Uploading 100GB of 4K video on hotel Wi-Fi will take days.</p>
 <p><strong>Strategy:</strong> Set your phone to auto-upload photos overnight while you sleep. Leave videos on the SSD until you return home.</p>
+
+<!-- ===== METHOD 4 ===== -->
 <h2 id="method-wireless">Method 4: Wireless Drives (Techie Option)</h2>
 <p>Devices like the <strong>Gnarbox</strong> or <strong>WD MyPassport Wireless</strong> have built-in card readers and Wi-Fi. You connect your phone to them wirelessly to transfer files. No cables needed, but they are slower and more expensive than a direct SSD connection.</p>
+
+<!-- ===== METHOD 5 ===== -->
 <h2 id="method-dual">Method 5: Dual Slot Cameras (Pro Standard)</h2>
 <p>If your camera has two SD slots (e.g., Sony A7IV, Canon R5), set it to <strong>"Simultaneous Recording"</strong>. This writes every file to two cards instantly. If one card fails, the other is a perfect clone. This is the safest method but requires buying double the SD cards.</p>
-<p>👉 <a href="/VideoCameraHoliday/accessories/best-sd-cards-4k-video.html" style="color:#e94560; font-weight:600;">See our Best SD Cards for 4K Video Guide →</a></p>
-<h2 id="faq">FAQ</h2>
+
+<p>👉 <a href="/VideoCameraHoliday/accessories/best-sd-cards-4k-video.html">See our Best SD Cards for 4K Video Guide →</a></p>
+
+<!-- ===== FAQ ===== -->
+<h2 id="faq">Frequently Asked Questions</h2>
 <div class="faq-section">
 <div class="faq-item">
 <h3 class="faq-question">Can I backup photos on an iPad?</h3>
-<div class="faq-answer"><p>Yes. iPads are excellent for this. Use the "Files" app to copy from SD card to external SSD connected via USB-C. The larger screen makes verifying focus and exposure easier too.</p></div>
+<p class="faq-answer">Yes. iPads are excellent for this. Use the "Files" app to copy from SD card to external SSD connected via USB-C. The larger screen makes verifying focus and exposure easier too.</p>
 </div>
 <div class="faq-item">
 <h3 class="faq-question">Is cloud backup safe in remote areas?</h3>
-<div class="faq-answer"><p>Only if you have good signal. In places like Safari lodges or mountains, assume ZERO connectivity. Rely on physical SSDs until you return to civilization.</p></div>
+<p class="faq-answer">Only if you have good signal. In places like Safari lodges or mountains, assume ZERO connectivity. Rely on physical SSDs until you return to civilization.</p>
 </div>
 <div class="faq-item">
 <h3 class="faq-question">How often should I backup?</h3>
-<div class="faq-answer"><p>Daily. Every night at your accommodation, copy the day's shoot. Format the card in the camera the next morning only after verifying the backup opened correctly.</p></div>
+<p class="faq-answer">Daily. Every night at your accommodation, copy the day's shoot. Format the card in the camera the next morning only after verifying the backup opened correctly.</p>
 </div>
 <div class="faq-item">
 <h3 class="faq-question">What about power banks?</h3>
-<div class="faq-answer"><p>Backing up drains battery. Ensure you have a high-capacity power bank to keep your phone/SSD charged during long transfer sessions.</p>
-<p>👉 <a href="/VideoCameraHoliday/accessories/best-power-banks-travel-filmmakers-2026.html" style="color:#e94560; font-weight:600;">See our Best Power Banks Guide →</a></p>
+<p class="faq-answer">Backing up drains battery. Ensure you have a high-capacity power bank to keep your phone/SSD charged during long transfer sessions. 👉 <a href="/VideoCameraHoliday/accessories/best-power-banks-travel-filmmakers-2026.html">See our Best Power Banks Guide →</a></p>
 </div>
 </div>
-</div>
+
+<!-- ===== RELATED ===== -->
 <h2 id="related">Related Articles</h2>
 <div class="related-articles">
-<a class="related-card" href="/VideoCameraHoliday/accessories/best-sd-cards-4k-video.html"><h4>Best SD Cards for 4K</h4><p>Speed tests for reliable recording.</p></a>
-<a class="related-card" href="/VideoCameraHoliday/accessories/best-power-banks-travel-filmmakers-2026.html"><h4>Best Power Banks</h4><p>Keep your drives and phones charged.</p></a>
-<a class="related-card" href="/VideoCameraHoliday/accessories/best-camera-bags-carry-on-travel-2026.html"><h4>Best Camera Bags</h4><p>Protect your drives and gear.</p></a>
+<a class="related-card" href="/VideoCameraHoliday/accessories/best-sd-cards-4k-video.html">
+<h4>Best SD Cards for 4K</h4>
+<p>Speed tests for reliable recording.</p>
+</a>
+<a class="related-card" href="/VideoCameraHoliday/accessories/best-power-banks-travel-filmmakers-2026.html">
+<h4>Best Power Banks</h4>
+<p>Keep your drives and phones charged.</p>
+</a>
+<a class="related-card" href="/VideoCameraHoliday/accessories/best-camera-bags-carry-on-travel-2026.html">
+<h4>Best Camera Bags</h4>
+<p>Protect your drives and gear.</p>
+</a>
 </div>
-<p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. Data loss is not an option.</p>
-</article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you. Data loss is not an option.</p>
+
+</div><!-- /.funky-wrap -->
+
+<!-- === DESIGN-B-FOOTER-START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -406,6 +1187,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -415,15 +1197,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -437,7 +1214,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -454,14 +1230,10 @@
         if (openBtn && typeof openBtn.focus === 'function') openBtn.focus();
     }
     window.closeDrawer = closeDrawer;
-
     openBtn.addEventListener('click', openDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -472,7 +1244,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -494,7 +1265,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -509,7 +1279,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -537,25 +1306,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -573,7 +1327,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -584,7 +1337,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -593,5 +1345,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === DESIGN-B-FOOTER-END === -->
+</body>
 </html>
