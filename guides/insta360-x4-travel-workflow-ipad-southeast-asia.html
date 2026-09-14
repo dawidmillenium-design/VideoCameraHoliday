@@ -204,6 +204,690 @@
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
 </aside><!-- === DESIGN-B-HEADER-END === -->
+
+<!-- ============================================================
+     INSTA360 X4 WORKFLOW — SPHERICAL STUDIO THEME (CSS ONLY)
+     Scoped strictly to .article-hero + .article-container.
+     Header, drawer and footer remain untouched.
+     ============================================================ -->
+<style id="x4-sphere-effects">
+/* ---------- spherical tokens ---------- */
+.article-hero,
+.article-container{
+  --x4-aqua:#06b6d4;
+  --x4-aqua-lt:#67e8f9;
+  --x4-aqua-dp:#0e7490;
+  --x4-violet:#a855f7;
+  --x4-violet-dp:#6b21a8;
+  --x4-amber:#f59e0b;
+  --x4-amber-lt:#fbbf24;
+  --x4-mint:#34d399;
+  --x4-rose:#fb7185;
+  --x4-ink:#080a12;
+  --x4-ink-2:#0c101c;
+  --x4-cream:#e2e8f0;
+  --x4-r:18px;
+  --x4-ease:cubic-bezier(.22,1,.36,1);
+}
+
+@property --x4-a{syntax:'<angle>';inherits:false;initial-value:0deg;}
+
+/* ---------- keyframes ---------- */
+@keyframes x4-in{from{opacity:0;transform:translateY(26px) scale(.97);filter:blur(9px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes x4-shine{0%{background-position:130% 50%}100%{background-position:-130% 50%}}
+@keyframes x4-slide{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes x4-spin{to{--x4-a:360deg}}
+@keyframes x4-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes x4-reveal{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes x4-orbit{to{transform:rotate(360deg)}}
+@keyframes x4-orbit-rev{to{transform:rotate(-360deg)}}
+@keyframes x4-globe{0%,100%{transform:translate(-50%,-50%) rotate(0deg) scale(1)}50%{transform:translate(-50%,-50%) rotate(180deg) scale(1.04)}}
+@keyframes x4-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(2deg)}}
+@keyframes x4-btn-sheen{0%{left:-120%}55%,100%{left:145%}}
+@keyframes x4-pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(var(--x4-pulse,6,182,212),0),0 22px 44px -34px rgba(var(--x4-pulse,6,182,212),.55)}
+  50%{box-shadow:0 0 0 7px rgba(var(--x4-pulse,6,182,212),.08),0 26px 52px -28px rgba(var(--x4-pulse,6,182,212),.85)}
+}
+@keyframes x4-scan{
+  0%{transform:translateY(-100%);opacity:0}
+  20%{opacity:.9}
+  100%{transform:translateY(2400%);opacity:0}
+}
+
+/* ============================================================
+   HERO — spherical 360° wireframe globe
+   ============================================================ */
+.article-hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  margin:0;
+  padding:clamp(64px,9vw,120px) 22px clamp(72px,10vw,128px);
+  text-align:center;
+  color:#fff;
+  background:
+    radial-gradient(ellipse 60% 44% at 50% 8%, rgba(6,182,212,.32), transparent 62%),
+    radial-gradient(ellipse 50% 40% at 12% 92%, rgba(168,85,247,.28), transparent 62%),
+    radial-gradient(ellipse 50% 40% at 92% 90%, rgba(52,211,153,.18), transparent 62%),
+    linear-gradient(180deg, #080a12 0%, #0c101c 38%, #101625 68%, #080a12 100%);
+}
+/* dot grid starfield */
+.article-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(1.4px 1.4px at 6% 22%, rgba(103,232,249,.9), transparent 60%),
+    radial-gradient(1.2px 1.2px at 22% 46%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(1.4px 1.4px at 38% 18%, rgba(103,232,249,.8), transparent 60%),
+    radial-gradient(1.2px 1.2px at 56% 68%, rgba(255,255,255,.55), transparent 60%),
+    radial-gradient(1.4px 1.4px at 72% 28%, rgba(168,85,247,.85), transparent 60%),
+    radial-gradient(1.2px 1.2px at 88% 54%, rgba(255,255,255,.55), transparent 60%),
+    radial-gradient(1.4px 1.4px at 14% 78%, rgba(103,232,249,.7), transparent 60%),
+    radial-gradient(1.2px 1.2px at 64% 88%, rgba(52,211,153,.75), transparent 60%);
+  animation:x4-orbit 0s linear infinite;
+  pointer-events:none;
+  z-index:0;
+}
+/* subtle scan sweep */
+.article-hero::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0;
+  height:40px;
+  background:linear-gradient(180deg, transparent, rgba(103,232,249,.07), transparent);
+  animation:x4-scan 12s linear infinite;
+  pointer-events:none;
+  z-index:1;
+}
+.article-hero > *{position:relative; z-index:4;}
+
+/* spherical wireframe globe */
+.article-hero .x4-globe{
+  position:absolute;
+  left:50%; top:50%;
+  width:clamp(280px,58vw,520px);
+  aspect-ratio:1;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  z-index:2;
+  opacity:.6;
+  animation:x4-globe 60s linear infinite;
+}
+.article-hero .x4-globe i{
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  border:1px solid rgba(103,232,249,.35);
+}
+/* latitude bands */
+.article-hero .x4-globe i:nth-child(1){
+  border:none;
+  background:
+    linear-gradient(0deg, transparent 24.5%, rgba(103,232,249,.4) 25%, transparent 25.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(103,232,249,.55) 50%, transparent 50.5%),
+    linear-gradient(0deg, transparent 74.5%, rgba(103,232,249,.4) 75%, transparent 75.5%);
+  animation:x4-orbit 80s linear infinite;
+}
+/* longitude bands */
+.article-hero .x4-globe i:nth-child(2){
+  border:none;
+  background:
+    linear-gradient(90deg, transparent 24.5%, rgba(168,85,247,.4) 25%, transparent 25.5%),
+    linear-gradient(90deg, transparent 49.5%, rgba(168,85,247,.55) 50%, transparent 50.5%),
+    linear-gradient(90deg, transparent 74.5%, rgba(168,85,247,.4) 75%, transparent 75.5%);
+  animation:x4-orbit-rev 100s linear infinite;
+}
+/* outer ring */
+.article-hero .x4-globe i:nth-child(3){
+  inset:-12%;
+  border-color:rgba(103,232,249,.2);
+  border-style:dashed;
+  animation:x4-orbit 120s linear infinite;
+}
+/* orbiting satellite dot */
+.article-hero .x4-globe i:nth-child(4){
+  inset:0;
+  border:none;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(251,191,36,.95) 0%, rgba(251,191,36,.35) 6%, transparent 8%),
+    radial-gradient(circle at 50% 100%, rgba(103,232,249,.85) 0%, rgba(103,232,249,.3) 6%, transparent 8%);
+  animation:x4-orbit 20s linear infinite;
+  filter:drop-shadow(0 0 10px rgba(103,232,249,.8));
+}
+
+/* H1 gradient */
+.article-hero h1{
+  margin:0 auto;
+  max-width:26ch;
+  font-size:clamp(1.65rem,4.6vw,3.1rem);
+  line-height:1.1;
+  letter-spacing:-.022em;
+  background:linear-gradient(100deg,
+    #ffffff 0%, #67e8f9 18%, #06b6d4 34%,
+    #ffffff 50%, #a855f7 68%, #34d399 84%, #ffffff 100%);
+  background-size:230% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 18px 34px rgba(0,0,0,.6));
+  animation:x4-in 1s var(--x4-ease) both, x4-shine 9s linear infinite 1.1s;
+}
+
+/* ============================================================
+   ARTICLE BODY
+   ============================================================ */
+.article-container{
+  position:relative;
+  max-width:900px;
+  margin:0 auto;
+  padding:0 22px 70px;
+  color:#cbd5e1;
+}
+
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .article-container > section{
+      animation:x4-reveal .9s var(--x4-ease) both;
+      animation-timeline:view();
+      animation-range:entry 4% cover 22%;
+    }
+  }
+}
+
+/* ---------- article header (byline) ---------- */
+.article-header{
+  position:relative;
+  margin:32px 0 36px;
+  padding:26px 26px 24px;
+  border-radius:var(--x4-r);
+  border:1px solid rgba(103,232,249,.28);
+  background:
+    linear-gradient(135deg, rgba(103,232,249,.1), rgba(168,85,247,.06) 55%, rgba(52,211,153,.06));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 28px 56px -44px rgba(0,0,0,.9);
+  overflow:hidden;
+}
+.article-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1.5px;
+  border-radius:inherit;
+  background:conic-gradient(from var(--x4-a),
+      transparent 0turn .5turn,
+      var(--x4-aqua) .66turn,
+      var(--x4-aqua-lt) .76turn,
+      var(--x4-violet) .86turn,
+      transparent .95turn);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  animation:x4-spin 10s linear infinite;
+  pointer-events:none;
+}
+.article-category{
+  display:inline-block;
+  margin:0 0 18px;
+  padding:6px 16px;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#04181f;
+  border-radius:999px;
+  background:linear-gradient(135deg, var(--x4-aqua-lt), var(--x4-aqua) 60%, var(--x4-aqua-dp));
+  box-shadow:0 10px 22px -12px rgba(6,182,212,.95);
+}
+.article-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  align-items:center;
+  margin-bottom:16px;
+  font-size:.86rem;
+  color:#9fb0c0;
+}
+.article-meta .author-info{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.author-avatar{
+  flex:0 0 auto;
+  width:46px; height:46px;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:.85rem;
+  letter-spacing:.02em;
+  color:#04181f;
+  border-radius:50%;
+  background:conic-gradient(from 210deg, var(--x4-aqua-lt), var(--x4-aqua), var(--x4-violet), var(--x4-aqua-dp), var(--x4-aqua-lt));
+  box-shadow:
+    0 0 0 4px rgba(6,182,212,.15),
+    0 12px 24px -12px rgba(6,182,212,.9);
+  animation:x4-float 6.5s ease-in-out infinite;
+}
+.article-meta strong{color:#fff;font-weight:800;}
+.article-meta > div:not(.author-info){white-space:nowrap;}
+.seo-badge{
+  display:inline-flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid rgba(52,211,153,.32);
+  background:rgba(52,211,153,.08);
+  font-size:.78rem;
+  font-weight:700;
+  color:#a7f3d0;
+}
+.seo-badge .seo-score{
+  padding:3px 12px;
+  border-radius:999px;
+  background:linear-gradient(135deg, var(--x4-mint), #10b981);
+  color:#04180f;
+  font-weight:900;
+  letter-spacing:.03em;
+}
+
+/* ---------- headings ---------- */
+.article-container h2{
+  position:relative;
+  margin:clamp(46px,6vw,74px) 0 22px;
+  padding:0 0 16px 52px;
+  font-size:clamp(1.28rem,2.4vw,1.6rem);
+  letter-spacing:-.014em;
+  color:#fff;
+  scroll-margin-top:96px;
+}
+.article-container h2::before{
+  content:"";
+  position:absolute;
+  left:6px; top:50%;
+  transform:translateY(-60%);
+  width:28px; height:28px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 34% 30%, #ffffff, var(--x4-aqua-lt) 38%, var(--x4-aqua) 66%, var(--x4-aqua-dp) 100%);
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,.2),
+    0 0 0 4px rgba(6,182,212,.14),
+    0 10px 22px -10px rgba(6,182,212,.9);
+}
+.article-container h2::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:0;
+  height:4px;
+  width:min(100%,340px);
+  border-radius:99px;
+  background:linear-gradient(90deg, var(--x4-aqua), var(--x4-aqua-lt) 30%, rgba(168,85,247,.55) 68%, transparent);
+  box-shadow:0 8px 22px -10px rgba(6,182,212,.85);
+  transform-origin:left center;
+  animation:x4-line 1.1s var(--x4-ease) both;
+  animation-timeline:view();
+  animation-range:entry 12% cover 26%;
+}
+.article-container h3{
+  position:relative;
+  margin:28px 0 14px;
+  font-size:1.12rem;
+  letter-spacing:-.006em;
+  color:#fff;
+  scroll-margin-top:96px;
+}
+.article-container h4{
+  margin:20px 0 10px;
+  font-size:1rem;
+  letter-spacing:.01em;
+  color:var(--x4-aqua-lt);
+}
+.article-container p{line-height:1.75;margin:0 0 18px;}
+.article-container p strong{color:#fff;}
+.article-container em{color:var(--x4-aqua-lt);font-style:italic;}
+.article-container code{
+  display:inline-block;
+  padding:2px 8px;
+  font-size:.85em;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  color:#a7f3d0;
+  background:rgba(52,211,153,.1);
+  border:1px solid rgba(52,211,153,.28);
+  border-radius:6px;
+}
+.article-container > ul,
+.article-container section > ul{
+  margin:0 0 20px;
+  padding-left:22px;
+  line-height:1.75;
+}
+.article-container > ul > li,
+.article-container section > ul > li{margin-bottom:8px;}
+.article-container ul li::marker{color:var(--x4-aqua);font-weight:900;}
+.article-container ol{
+  margin:0 0 20px;
+  padding-left:24px;
+  line-height:1.75;
+}
+.article-container ol li{margin-bottom:8px;}
+.article-container ol li::marker{color:var(--x4-violet);font-weight:900;}
+
+/* ---------- in-text links ---------- */
+.article-container a{
+  color:inherit;
+  text-decoration:none;
+  padding:0 2px;
+  border-radius:3px;
+  background-image:linear-gradient(90deg,var(--x4-aqua),var(--x4-violet));
+  background-repeat:no-repeat;
+  background-position:0 100%;
+  background-size:100% 2px;
+  transition:background-size .38s var(--x4-ease), color .38s var(--x4-ease);
+}
+.article-container a:hover,
+.article-container a:focus-visible{
+  background-size:100% 100%;
+  color:#04181f;
+}
+
+/* ============================================================
+   COMPARISON TABLES
+   ============================================================ */
+.article-container table.comparison-table{
+  width:100%;
+  margin:26px 0;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:.9rem;
+  border:1px solid rgba(103,232,249,.24);
+  border-radius:16px;
+  overflow:hidden;
+  background:linear-gradient(180deg, rgba(6,182,212,.05), rgba(168,85,247,.03));
+  box-shadow:0 30px 58px -44px rgba(0,0,0,.9);
+}
+.article-container table.comparison-table thead th{
+  padding:15px 16px;
+  text-align:left;
+  font-weight:800;
+  letter-spacing:.05em;
+  font-size:.78rem;
+  text-transform:uppercase;
+  color:var(--x4-aqua-lt);
+  background:
+    linear-gradient(135deg, rgba(6,182,212,.18), rgba(168,85,247,.14));
+  border-bottom:1px solid rgba(103,232,249,.32);
+}
+.article-container table.comparison-table tbody td{
+  padding:13px 16px;
+  border-bottom:1px solid rgba(103,232,249,.1);
+  color:#cbd5e1;
+  transition:background .35s var(--x4-ease), color .35s var(--x4-ease);
+}
+.article-container table.comparison-table tbody tr:last-child td{border-bottom:0;}
+.article-container table.comparison-table tbody tr:nth-child(even) td{
+  background:rgba(6,182,212,.03);
+}
+.article-container table.comparison-table tbody tr:hover td{
+  background:rgba(6,182,212,.1);
+  color:#fff;
+}
+.article-container table.comparison-table strong{color:#fff;}
+
+/* ============================================================
+   PRO TIP — glowing cyan chip
+   ============================================================ */
+.pro-tip{
+  position:relative;
+  margin:26px 0;
+  padding:20px 24px 20px 68px;
+  border-radius:16px;
+  border:1px solid rgba(103,232,249,.42);
+  background:
+    linear-gradient(135deg, rgba(6,182,212,.15), rgba(168,85,247,.08));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 26px 52px -40px rgba(6,182,212,.9);
+  overflow:hidden;
+  animation:x4-pulse 5s ease-in-out infinite;
+  --x4-pulse:6,182,212;
+}
+.pro-tip::before{
+  content:"💡";
+  position:absolute;
+  left:22px; top:50%;
+  transform:translateY(-50%);
+  font-size:1.5rem;
+  line-height:1;
+  filter:drop-shadow(0 4px 12px rgba(6,182,212,.6));
+  animation:x4-float 5s ease-in-out infinite;
+}
+.pro-tip strong{
+  display:block;
+  margin-bottom:4px;
+  color:#fff;
+  letter-spacing:.01em;
+  font-weight:800;
+}
+.pro-tip{color:#d7e8ef;line-height:1.7;}
+
+/* ============================================================
+   EVIDENCE BOX — mint ledger
+   ============================================================ */
+.evidence-box{
+  position:relative;
+  margin:26px 0;
+  padding:24px 26px 22px 30px;
+  border-radius:16px;
+  border:1px solid rgba(52,211,153,.32);
+  background:
+    linear-gradient(135deg, rgba(52,211,153,.12), rgba(52,211,153,.04) 55%, rgba(6,182,212,.06));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 26px 52px -40px rgba(52,211,153,.8);
+  overflow:hidden;
+}
+.evidence-box::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:5px;
+  border-radius:0 4px 4px 0;
+  background:linear-gradient(180deg, var(--x4-mint), #10b981);
+  box-shadow:0 0 22px -4px rgba(52,211,153,.85);
+}
+.evidence-box h4{
+  margin:0 0 10px;
+  color:var(--x4-mint);
+  letter-spacing:-.005em;
+  font-size:1rem;
+}
+.evidence-box p{
+  margin:0;
+  line-height:1.72;
+  color:#d7e8ef;
+}
+
+/* ============================================================
+   WORKFLOW STEPS — numbered tech cards
+   ============================================================ */
+.workflow-step{
+  position:relative;
+  counter-increment:x4-step;
+  margin:26px 0;
+  padding:28px 28px 24px 40px;
+  border-radius:var(--x4-r);
+  border:1px solid rgba(103,232,249,.22);
+  background:
+    linear-gradient(180deg, rgba(6,182,212,.06), rgba(255,255,255,.012) 60%, rgba(168,85,247,.05));
+  box-shadow:0 28px 58px -44px rgba(0,0,0,.9);
+  overflow:hidden;
+  transition:transform .55s var(--x4-ease), border-color .55s var(--x4-ease), box-shadow .55s var(--x4-ease);
+}
+.workflow-step::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:5px;
+  background:linear-gradient(180deg, var(--x4-aqua), var(--x4-violet));
+  border-radius:0 4px 4px 0;
+  box-shadow:0 0 22px -4px rgba(6,182,212,.75);
+}
+.workflow-step::after{
+  content:"";
+  position:absolute;
+  top:0; left:-130%;
+  width:60%; height:100%;
+  background:linear-gradient(100deg, transparent, rgba(103,232,249,.18), transparent);
+  transform:skewX(-18deg);
+  transition:left .95s var(--x4-ease);
+  pointer-events:none;
+}
+.workflow-step:hover,
+.workflow-step:focus-within{
+  transform:translateY(-6px);
+  border-color:rgba(103,232,249,.55);
+  box-shadow:
+    0 36px 68px -34px rgba(0,0,0,.95),
+    0 0 32px -6px rgba(6,182,212,.5);
+}
+.workflow-step:hover::after{left:150%;}
+.workflow-step h3{
+  margin-top:0;
+  padding-bottom:14px;
+  border-bottom:1px dashed rgba(103,232,249,.24);
+  color:#fff;
+}
+.workflow-step h3::first-letter{
+  color:var(--x4-aqua-lt);
+}
+.workflow-step h4{
+  margin-top:18px;
+  color:var(--x4-aqua-lt);
+  font-size:.94rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.workflow-step ol li,
+.workflow-step ul li{color:#cbd5e1;}
+
+/* ============================================================
+   INTERNAL LINKS block
+   ============================================================ */
+.internal-links{
+  position:relative;
+  margin:34px 0 12px;
+  padding:28px 28px 22px;
+  border-radius:var(--x4-r);
+  border:1px solid rgba(168,85,247,.3);
+  background:
+    radial-gradient(ellipse 60% 60% at 0% 0%, rgba(168,85,247,.14), transparent 62%),
+    radial-gradient(ellipse 60% 60% at 100% 100%, rgba(6,182,212,.12), transparent 62%),
+    linear-gradient(135deg, #0c101c, #131a2c 55%, #0c101c);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 30px 60px -42px rgba(0,0,0,.95);
+  overflow:hidden;
+}
+.internal-links::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--x4-violet-dp), var(--x4-violet) 30%, var(--x4-aqua-lt) 55%, var(--x4-aqua) 80%, var(--x4-violet-dp));
+  background-size:200% 100%;
+  animation:x4-slide 7s linear infinite;
+}
+.internal-links h3{
+  margin:0 0 16px;
+  color:var(--x4-aqua-lt);
+  letter-spacing:-.005em;
+}
+.internal-links ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.internal-links li{
+  position:relative;
+  margin:0 0 8px;
+  padding:0;
+}
+.internal-links a{
+  display:block;
+  padding:12px 18px 12px 46px;
+  border-radius:12px;
+  border:1px solid rgba(103,232,249,.2);
+  background:rgba(255,255,255,.025);
+  color:#e2e8f0;
+  font-weight:600;
+  font-size:.94rem;
+  text-decoration:none;
+  transition:transform .45s var(--x4-ease), border-color .45s var(--x4-ease), background .45s var(--x4-ease), box-shadow .45s var(--x4-ease), color .45s var(--x4-ease);
+}
+.internal-links a::before{
+  content:"↗";
+  position:absolute;
+  left:16px; top:50%;
+  transform:translateY(-50%);
+  width:22px; height:22px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:radial-gradient(circle at 34% 30%, var(--x4-aqua-lt), var(--x4-aqua) 70%);
+  color:#04181f;
+  font-weight:900;
+  font-size:.8rem;
+  box-shadow:0 6px 14px -8px rgba(6,182,212,.95);
+}
+.internal-links a{
+  background-image:none; /* reset global link underline */
+}
+.internal-links a:hover,
+.internal-links a:focus-visible{
+  transform:translateX(6px);
+  border-color:rgba(103,232,249,.6);
+  background:rgba(6,182,212,.1);
+  color:#fff;
+  box-shadow:0 18px 34px -22px rgba(6,182,212,.9);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:640px){
+  .article-hero .x4-globe{width:min(320px,86vw);opacity:.45;}
+  .article-container{padding:0 16px 70px;}
+  .article-container h2{padding-left:40px;font-size:1.2rem;}
+  .article-container h2::before{width:22px;height:22px;left:2px;}
+  .workflow-step{padding:22px 20px 20px 26px;}
+  .article-header{padding:22px 20px 20px;}
+  .article-meta{gap:12px;font-size:.82rem;}
+  .article-container table.comparison-table{font-size:.78rem;}
+  .article-container table.comparison-table thead th,
+  .article-container table.comparison-table tbody td{padding:10px 12px;}
+  .internal-links a{padding:11px 14px 11px 42px;font-size:.9rem;}
+}
+
+/* ============================================================
+   A11Y — reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  .article-hero *,
+  .article-hero::before,
+  .article-hero::after,
+  .article-container *,
+  .article-container *::before,
+  .article-container *::after{
+    animation:none !important;
+    transition-duration:.01ms !important;
+  }
+}
+</style>
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -213,6 +897,7 @@
 </nav>
 
 <section class="article-hero">
+    <span class="x4-globe" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <h1>Insta360 X4 Travel Workflow: Edit 360° Footage on iPad in Southeast Asia (2026 Guide)</h1>
 </section>
 
@@ -445,10 +1130,10 @@
 <section class="internal-links">
 <h3>📚 Related Guides to Master Your Travel Workflow</h3>
 <ul>
-<li><a href="/VideoCameraHoliday/reviews/insta360-x4-review.html">→ Full Insta360 X4 Review: 6 Months of Travel Testing</a></li>
-<li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">→ Color Grading Travel Videos: D-Log M to Rec.709 Tutorial</a></li>
-<li><a href="/VideoCameraHoliday/accessories/best-sd-cards-4k-video-2026.html">→ Best SD Cards for 4K Video: Speed Tests &amp; Recommendations</a></li>
-<li><a href="/VideoCameraHoliday/destinations/protect-camera-bangkok-humidity.html">→ Protecting Camera Gear from Bangkok Humidity &amp; Monsoon Rain</a></li>
+<li><a href="/VideoCameraHoliday/reviews/insta360-x4-review.html">Full Insta360 X4 Review: 6 Months of Travel Testing</a></li>
+<li><a href="/VideoCameraHoliday/editing/color-grading-travel-videos.html">Color Grading Travel Videos: D-Log M to Rec.709 Tutorial</a></li>
+<li><a href="/VideoCameraHoliday/accessories/best-sd-cards-4k-video-2026.html">Best SD Cards for 4K Video: Speed Tests &amp; Recommendations</a></li>
+<li><a href="/VideoCameraHoliday/destinations/protect-camera-bangkok-humidity.html">Protecting Camera Gear from Bangkok Humidity &amp; Monsoon Rain</a></li>
 </ul>
 </section>
 <section>
@@ -465,13 +1150,6 @@
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -562,11 +1240,6 @@
 (function(){
     'use strict';
 
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -580,7 +1253,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -602,9 +1274,6 @@
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -615,7 +1284,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -637,7 +1305,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -652,7 +1319,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -664,13 +1330,10 @@
                 });
                 return;
             }
-            var bestPanel = null, bestCount = 0;
             panels.forEach(function(p){
-                var count = 0;
                 p.querySelectorAll('li').forEach(function(li){
                     var match = (li.textContent || '').toLowerCase().indexOf(q) !== -1;
                     li.style.display = match ? '' : 'none';
-                    if (match) count++;
                 });
                 p.querySelectorAll('h5').forEach(function(h){
                     var sib = h.nextElementSibling, anyVisible = false;
@@ -680,25 +1343,10 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
-            if (bestPanel) {
-                var tabName = bestPanel.getAttribute('data-panel');
-                tabButtons.forEach(function(b){
-                    var on = b.getAttribute('data-tab') === tabName;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-                panels.forEach(function(p){
-                    p.classList.toggle('is-active', p === bestPanel);
-                });
-            }
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -716,7 +1364,6 @@
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -727,7 +1374,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
