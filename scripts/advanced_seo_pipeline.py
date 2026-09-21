@@ -17,7 +17,8 @@ logger = logging.getLogger("SEO_Pipeline")
 # --- DeepSeek Client Initialization ---
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
-DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-v4.1-flash")
+# FIXED: default to a real DeepSeek model ("deepseek-v4.1-flash" does not exist on the API)
+DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
 
 if not DEEPSEEK_API_KEY:
     logger.error("DEEPSEEK_API_KEY is not set. Exiting.")
@@ -63,7 +64,7 @@ class AgentEngine:
         # GOAL
         {self.profile.goal}
         
-        # BACKSTORY & EXPERTISE
+        # BACKGROUND & EXPERTISE
         {self.profile.backstory}
         
         # CURRENT CONTEXT

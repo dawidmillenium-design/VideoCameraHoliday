@@ -15,7 +15,8 @@ client = openai.OpenAI(
     api_key=os.getenv("DEEPSEEK_API_KEY"),
     base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
 )
-MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-v4-flash")
+# FIXED: default to a real DeepSeek model ("deepseek-v4-flash" does not exist on the API)
+MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
 
 # --- Data Structures ---
 @dataclass
