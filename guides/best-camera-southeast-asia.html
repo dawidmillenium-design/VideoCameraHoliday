@@ -1,11 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/>
+<head>
+<meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="The best cameras for Southeast Asia trips — tested through monsoon rain, humidity, beaches and street-food nights in Thailand, Vietnam and Bali. Real picks." name="description"/>
 <title>Best Cameras for Southeast Asia (2026 Guide)</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-camera-southeast-asia.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-camera-southeast-asia.html" rel="canonical"/>
+
+<!-- Google Fonts for Southeast Asian Editorial Theme -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- === SOUTHEAST ASIA THEME CSS START === -->
+<style>
+:root {
+  --sea-jungle: #0F3D3E;
+  --sea-teal: #1B4D3E;
+  --sea-gold: #D4AF37;
+  --sea-amber: #E6A817;
+  --sea-silk: #FAF9F6;
+  --sea-spice: #C0392B;
+  --sea-ink: #1A2E2E;
+  --sea-ink-light: #5A7A7A;
+  --font-heading: 'Noto Serif', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--sea-ink);
+  background-color: var(--sea-silk);
+  line-height: 1.7;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--sea-jungle);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(15, 61, 62, 0.2);
+}
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-brand {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header-nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.header-nav a:hover { color: var(--sea-gold); }
+
+.header-actions { display: flex; gap: 1rem; }
+.icon-btn, .drawer-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+.icon-btn:hover, .drawer-toggle:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--sea-gold);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--sea-ink-light);
+}
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.breadcrumbs a {
+  color: var(--sea-jungle);
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+  color: var(--sea-spice);
+}
+
+/* Hero Section */
+.article-hero {
+  background: linear-gradient(135deg, var(--sea-jungle) 0%, var(--sea-teal) 100%);
+  color: white;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.article-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.04"><path d="M0 50 Q 25 30, 50 50 T 100 50 L 100 100 L 0 100 Z" fill="white"/></svg>');
+  background-size: 200px;
+  background-position: bottom;
+  opacity: 0.6;
+}
+.article-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* Main Content Container */
+.container {
+  max-width: 800px;
+  margin: -2rem auto 0;
+  padding: 2.5rem 2rem 4rem;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(15, 61, 62, 0.08);
+  position: relative;
+  z-index: 2;
+}
+.container h2 {
+  font-family: var(--font-heading);
+  color: var(--sea-jungle);
+  border-bottom: 2px solid var(--sea-gold);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  font-size: 1.75rem;
+}
+.container h2:first-of-type { margin-top: 0; }
+.container h3 {
+  font-family: var(--font-heading);
+  color: var(--sea-teal);
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+.container a.content-link {
+  color: var(--sea-spice);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dotted var(--sea-spice);
+  transition: all 0.2s;
+}
+.container a.content-link:hover {
+  background-color: rgba(192, 57, 43, 0.05);
+  color: #a93226;
+}
+
+/* Article Image */
+.article-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Takeaways Box */
+.takeaways {
+  background: linear-gradient(to right, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.02));
+  border-left: 4px solid var(--sea-gold);
+  padding: 1.5rem 2rem;
+  border-radius: 0 8px 8px 0;
+  margin: 2rem 0;
+}
+.takeaways h3 {
+  margin-top: 0;
+  color: var(--sea-jungle);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+}
+.takeaways ul { margin-bottom: 0; padding-left: 1.2rem; }
+.takeaways li { margin-bottom: 0.75rem; }
+
+/* Product Box */
+.product-box {
+  background: var(--sea-silk);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+.product-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--sea-gold);
+  border-radius: 8px 8px 0 0;
+}
+.product-box h3 {
+  margin-top: 0;
+  color: var(--sea-jungle);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+/* Related Section */
+.related-section {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--sea-gold);
+}
+.related-section h3 {
+  font-family: var(--font-heading);
+  color: var(--sea-jungle);
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+.related-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.related-card {
+  background: white;
+  border: 1px solid #E5E8E8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 61, 62, 0.1);
+  border-color: var(--sea-gold);
+}
+.related-card h4 {
+  margin: 0 0 0.75rem 0;
+  color: var(--sea-jungle);
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+}
+.related-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--sea-ink-light);
+  line-height: 1.5;
+}
+
+/* Author Box */
+.author-box {
+  display: flex;
+  gap: 1.5rem;
+  background: var(--sea-jungle);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+  align-items: flex-start;
+}
+.author-avatar {
+  font-size: 2.5rem;
+  background: rgba(255,255,255,0.1);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid var(--sea-gold);
+}
+.author-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--sea-gold);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+}
+.author-info p {
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+
+.affiliate-note {
+  font-size: 0.85rem;
+  color: var(--sea-ink-light);
+  text-align: center;
+  margin-top: 2.5rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--sea-jungle);
+  color: rgba(255,255,255,0.75);
+  padding: 3.5rem 1.5rem 1.5rem;
+  margin-top: 4rem;
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-brand h3 {
+  color: white;
+  margin-top: 0;
+  font-family: var(--font-heading);
+}
+.footer-newsletter {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 400px;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border-radius: 6px;
+  font-family: var(--font-body);
+}
+.footer-newsletter input::placeholder { color: rgba(255,255,255,0.5); }
+.footer-newsletter button {
+  padding: 0.75rem 1.5rem;
+  background: var(--sea-gold);
+  color: var(--sea-jungle);
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: var(--font-body);
+}
+.footer-newsletter button:hover { background: #e5c15d; }
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.footer-cols h4 {
+  color: white;
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+.footer-cols ul { list-style: none; padding: 0; margin: 0; }
+.footer-cols li { margin-bottom: 0.6rem; }
+.footer-cols a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.footer-cols a:hover { color: var(--sea-gold); }
+
+.footer-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+}
+.footer-langs a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.footer-langs a:hover { color: var(--sea-gold); }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+}
+.footer-bottom a { color: var(--sea-gold); text-decoration: none; }
+
+/* Drawer & Functional UI */
+.drawer-backdrop {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 61, 62, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 998;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+.drawer-backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+.drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 340px; max-width: 85vw;
+  background: white;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex; flex-direction: column;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+}
+.drawer.is-open { transform: translateX(0); }
+
+.drawer-head {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #E5E8E8;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.drawer-head .title { font-weight: 700; font-size: 1.1rem; color: var(--sea-jungle); font-family: var(--font-heading); }
+.drawer-close { background: none; border: none; cursor: pointer; color: var(--sea-ink-light); padding: 0.25rem; }
+
+.drawer-search { padding: 1rem 1.5rem; border-bottom: 1px solid #E5E8E8; }
+.drawer-search input {
+  width: 100%; padding: 0.75rem;
+  border: 1px solid #E5E8E8; border-radius: 6px;
+  font-size: 0.95rem; font-family: var(--font-body);
+}
+.drawer-search input:focus { outline: 2px solid var(--sea-gold); border-color: transparent; }
+
+.drawer-tabs {
+  display: flex; overflow-x: auto; padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E5E8E8; gap: 0.5rem;
+  scrollbar-width: none;
+}
+.drawer-tabs::-webkit-scrollbar { display: none; }
+.drawer-tabs button {
+  background: none; border: 1px solid transparent;
+  padding: 0.5rem 1rem; border-radius: 20px;
+  font-size: 0.85rem; color: var(--sea-ink-light);
+  cursor: pointer; white-space: nowrap;
+  transition: all 0.2s; font-family: var(--font-body);
+}
+.drawer-tabs button.is-active {
+  background: var(--sea-jungle); color: white;
+}
+
+.drawer-body { flex: 1; overflow-y: auto; padding: 1.5rem; }
+.drawer-panel { display: none; }
+.drawer-panel.is-active { display: block; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+.drawer-panel h5 {
+  margin: 1.5rem 0 0.75rem; color: var(--sea-jungle);
+  font-size: 0.8rem; text-transform: uppercase;
+  letter-spacing: 0.08em; font-weight: 700;
+}
+.drawer-panel h5:first-child { margin-top: 0; }
+.drawer-panel ul { list-style: none; padding: 0; margin: 0; }
+.drawer-panel li { margin-bottom: 0.6rem; }
+.drawer-panel a {
+  color: var(--sea-ink); text-decoration: none;
+  font-size: 0.95rem; transition: color 0.2s;
+}
+.drawer-panel a:hover { color: var(--sea-spice); }
+
+.drawer-langs {
+  padding: 1rem 1.5rem; border-top: 1px solid #E5E8E8;
+  display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem;
+}
+.drawer-langs a { color: var(--sea-ink-light); text-decoration: none; }
+.drawer-langs a:hover { color: var(--sea-jungle); }
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--sea-jungle); color: white;
+  padding: 1.25rem 1.5rem; z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+}
+.cookie-banner.is-visible { transform: translateY(0); }
+.cookie-banner-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 1rem;
+}
+.cookie-banner a { color: var(--sea-gold); }
+.cookie-banner-actions { display: flex; gap: 0.75rem; }
+.cookie-banner-actions button {
+  padding: 0.6rem 1.25rem; border-radius: 6px;
+  border: none; cursor: pointer; font-weight: 600;
+  font-family: var(--font-body); transition: all 0.2s;
+}
+.cookie-banner-actions button.reject {
+  background: rgba(255,255,255,0.1); color: white;
+}
+.cookie-banner-actions button.reject:hover { background: rgba(255,255,255,0.2); }
+.cookie-banner-actions button.accept {
+  background: var(--sea-gold); color: var(--sea-jungle);
+}
+.cookie-banner-actions button.accept:hover { background: #e5c15d; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+  .article-hero { padding: 3.5rem 1rem; }
+  .container {
+    margin-top: -1rem;
+    border-radius: 16px 16px 0 0;
+    padding: 2rem 1.25rem 3rem;
+  }
+  .author-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-newsletter { flex-direction: column; }
+  .cookie-banner-inner { flex-direction: column; text-align: center; }
+}
+</style>
+<!-- === SOUTHEAST ASIA THEME CSS END === -->
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -31,11 +575,11 @@
   ]
 }
 </script>
-</head><body>
+</head>
+<body>
 
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 18dda5106699d367b7af4bdc2fdffb21589093bc
-
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === HEADER START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -56,6 +600,7 @@
 </div>
 </div>
 </header>
+
 <div aria-hidden="true" class="drawer-backdrop" id="drawerBackdrop"></div>
 <aside aria-hidden="true" aria-label="Main menu" aria-modal="true" class="drawer" id="siteDrawer" role="dialog">
 <div class="drawer-head">
@@ -204,7 +749,9 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === HEADER END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -217,7 +764,7 @@
     <h1>Best Cameras for Southeast Asia (2026 Guide)</h1>
 </section>
 
-<article class="container">
+<article class="container" id="main-content">
 <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
 <section class="related-section">
 <h3>📚 More Buying Guides</h3>
@@ -251,6 +798,7 @@
 </a>
 </div>
 </section>
+
 <div class="author-box">
 <div class="author-avatar">🎬</div>
 <div class="author-info">
@@ -258,7 +806,9 @@
 <p>Updated: September 2026 | Field-tested in Thailand, Vietnam, Indonesia &amp; Malaysia</p>
 </div>
 </div>
+
 <p><strong>Southeast Asia is the ultimate stress test for travel cameras.</strong> You're dealing with 95% humidity that fogs lenses, sudden monsoon downpours that flood streets in minutes, and neon-drenched night markets that push sensors to their absolute limits. After three months of testing across Thailand, Vietnam, Indonesia, and Malaysia, here's exactly what gear survives — and what dies on arrival.</p>
+
 <div class="takeaways">
 <h3>⚡ The Southeast Asia Verdict</h3>
 <ul>
@@ -268,12 +818,16 @@
 <li><strong>Non-Negotiable Accessory:</strong> Silica gel packets + waterproof dry bag</li>
 </ul>
 </div>
+
 <img alt="Bustling Bangkok street market at night with neon signs and street food vendors, testing travel cameras in Southeast Asia" class="article-img" src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+
 <h2>The Southeast Asia Challenge: Why Your Camera Needs Special Care</h2>
 <h3>The Humidity Problem</h3>
 <p>At 90%+ humidity, moisture gets everywhere. We've had lenses fog up within 5 minutes of stepping from air-conditioned malls into the outdoor heat. The fix? Keep silica gel packets in your camera bag at all times, and let your gear acclimate slowly when moving between temperatures.</p>
+
 <h3>The Monsoon Reality</h3>
 <p>Rain in Southeast Asia doesn't drizzle — it hammers. During our Bangkok tests, we experienced two sudden downpours that cleared the streets in under three minutes. If your camera isn't weather-sealed, it's going home in a bag of rice.</p>
+
 <h2 id="pocket-4p">🏆 Best Overall: DJI Osmo Pocket 4P</h2>
 <div class="product-box">
 <h3>Why it dominates Southeast Asia:</h3>
@@ -281,6 +835,7 @@
 <p><strong>The Catch:</strong> It's NOT waterproof. You must pair it with a small waterproof pouch or be extremely careful during rain. For monsoon season (May–October), consider the GoPro instead.</p>
 <p><strong>Best For:</strong> November–March (dry season), night markets, temples, city exploration.</p>
 </div>
+
 <h2 id="hero-13">🌧️ Best for Monsoon Season: GoPro Hero 13 Black</h2>
 <div class="product-box">
 <h3>Why it survives the elements:</h3>
@@ -288,6 +843,7 @@
 <p>We put it through hell in our <a class="content-link" href="/VideoCameraHoliday/reviews/gopro-hero-13-black-alps-hiking-companion.html">extreme weather testing</a>, and it handled Southeast Asian conditions just as well. The trade-off is low-light performance — you'll need good lighting for clean footage.</p>
 <p><strong>Best For:</strong> May–October (monsoon season), island hopping, waterfall hikes, beach days.</p>
 </div>
+
 <h2>🎒 The Essential Southeast Asia Camera Kit</h2>
 <ul>
 <li><strong>Silica Gel Packets (x10):</strong> Throw them everywhere — camera bag, pockets, hotel room near your gear. They prevent lens fogging and internal moisture.</li>
@@ -296,6 +852,7 @@
 <li><strong>Portable Power Bank (20,000mAh):</strong> You'll be filming all day with limited charging access.</li>
 <li><strong>Microfiber Cloths (x3):</strong> Humidity means constant lens wiping. Keep one in your pocket at all times.</li>
 </ul>
+
 <h2>Country-Specific Recommendations</h2>
 <ul>
 <li><strong>Thailand (Bangkok, Chiang Mai):</strong> Pocket 4P for night markets and temples. Bring a dry bag for the rainy season.</li>
@@ -303,30 +860,27 @@
 <li><strong>Indonesia (Bali, Komodo):</strong> Hero 13 Black for waterfalls and boat trips. The Pocket 4P for temple interiors.</li>
 <li><strong>Malaysia (Kuala Lumpur, Penang):</strong> Either works. The Petronas Towers at night favor the Pocket 4P; the Cameron Highlands favor the Hero 13.</li>
 </ul>
+
 <h2>Final Verdict</h2>
 <p>If you're visiting during the dry season and want cinematic night market footage, get the <strong>DJI Osmo Pocket 4P</strong>. If you're traveling during monsoon season or plan to be around water constantly, get the <strong>GoPro Hero 13 Black</strong>. Either way, pack silica gel and a dry bag — they're non-negotiable in this region.</p>
+
 <h2>Continue Your Southeast Asia Prep</h2>
 <div class="related-articles">
 <a class="related-card" href="/VideoCameraHoliday/reviews/dji-osmo-pocket-4p-review.html"><h4>Pocket 4P Bangkok Field Test</h4><p>Real-world low-light results from Bangkok's neon night markets.</p></a>
 <a class="related-card" href="/VideoCameraHoliday/how-to/audio-tips-noisy-locations.html"><h4>Audio Tips for Noisy Markets</h4><p>How to capture clean dialogue when everything around you is screaming.</p></a>
 <a class="related-card" href="/VideoCameraHoliday/guides/best-holiday-video-cameras-2026.html"><h4>Best Holiday Cameras 2026</h4><p>The full flagship roundup for every travel style and budget.</p></a>
 </div>
+
 <p class="affiliate-note">Some buying guides on this site contain affiliate links. If you buy through them we may earn a commission at no extra cost to you. Our rankings are based on real travel testing.</p>
 </article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<!-- === FOOTER START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -334,7 +888,7 @@
 </form>
 </div>
 </div>
-<div class="footer-cols" style="padding-top:44px;">
+<div class="footer-cols">
 <div>
 <h4>Top Guides</h4>
 <ul>
@@ -404,6 +958,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -413,15 +968,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -435,7 +985,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -457,9 +1006,6 @@
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -470,7 +1016,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -492,7 +1037,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -507,7 +1051,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -535,7 +1078,6 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
             if (bestPanel) {
                 var tabName = bestPanel.getAttribute('data-panel');
@@ -551,9 +1093,6 @@
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -566,12 +1105,11 @@
             var status = document.createElement('p');
             status.setAttribute('role', 'status');
             status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            status.textContent = 'Thanks — we’ll be in touch. (No backend wired yet; this is a placeholder.)';
             nlForm.replaceWith(status);
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -582,7 +1120,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -591,4 +1128,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body></html>
+</script>
+<!-- === FOOTER END === -->
+</body>
+</html>
