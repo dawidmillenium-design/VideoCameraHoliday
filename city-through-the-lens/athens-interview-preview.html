@@ -1,9 +1,589 @@
-<html><head><meta charset="utf-8"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Discover Athens' best filming locations from the Acropolis to hidden alleyways. Complete guide with camera settings, golden hour times, and gear tips for capturing ancient Greece." name="description"/>
-<title>Discover Athens' best filming locations from the</title>
+<meta content="Dawid Millennium" name="author"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1" name="robots"/>
+<meta content="Athens Through the Lens: A Filmmaker's Guide to Ancient Greece" property="og:title"/>
+<meta content="From sunrise at the Acropolis to midnight in Psirri — your complete guide to filming Athens like a pro." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/athens-interview-preview.html" property="og:url"/>
+<meta content="Holiday Video Camera" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<title>Athens Through the Lens: A Filmmaker's Guide to Ancient Greece</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/athens-interview-preview.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/athens-interview-preview.html" rel="canonical"/>
+
+<!-- Google Fonts for Athenian Theme -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- === ATHENS THEME CSS START === -->
+<style>
+:root {
+  --athens-blue: #1B4F72;
+  --athens-blue-light: #2980B9;
+  --athens-gold: #D4AF37;
+  --athens-marble: #FDFBF7;
+  --athens-olive: #556B2F;
+  --athens-terracotta: #C06C54;
+  --athens-text: #2C3E50;
+  --athens-text-light: #5D6D7E;
+  --font-heading: 'Cinzel', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--athens-text);
+  background-color: var(--athens-marble);
+  line-height: 1.7;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--athens-blue);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(27, 79, 114, 0.15);
+}
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-brand {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header-nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.header-nav a:hover { color: var(--athens-gold); }
+
+.header-actions { display: flex; gap: 1rem; }
+.icon-btn, .drawer-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+.icon-btn:hover, .drawer-toggle:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--athens-gold);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--athens-text-light);
+}
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.breadcrumbs a {
+  color: var(--athens-blue);
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+  color: var(--athens-terracotta);
+}
+
+/* Hero Section */
+.article-hero {
+  background: linear-gradient(135deg, var(--athens-blue) 0%, #154360 100%);
+  color: white;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.article-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.04"><path d="M20 100 L50 20 L80 100 Z M35 100 L50 60 L65 100 Z" fill="white"/></svg>');
+  background-size: 120px;
+  background-position: bottom center;
+  opacity: 0.6;
+}
+.article-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+/* Main Content Container */
+.container {
+  max-width: 800px;
+  margin: -2rem auto 0;
+  padding: 2.5rem 2rem 4rem;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(27, 79, 114, 0.08);
+  position: relative;
+  z-index: 2;
+}
+.container h2 {
+  font-family: var(--font-heading);
+  color: var(--athens-blue);
+  border-bottom: 2px solid var(--athens-gold);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+.container h2:first-of-type { margin-top: 0; }
+.container h3 {
+  font-family: var(--font-heading);
+  color: var(--athens-blue);
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+.container a {
+  color: var(--athens-blue-light);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dotted var(--athens-blue-light);
+  transition: all 0.2s;
+}
+.container a:hover {
+  color: var(--athens-terracotta);
+  border-color: var(--athens-terracotta);
+}
+
+/* Quick Answer & Tip Boxes */
+.quick-answer {
+  background: linear-gradient(to right, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.02));
+  border-left: 4px solid var(--athens-gold);
+  padding: 1.5rem 2rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 2rem;
+}
+.quick-answer h3 {
+  margin-top: 0;
+  color: var(--athens-blue);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+.tip-box {
+  background: rgba(85, 107, 47, 0.08);
+  border-left: 4px solid var(--athens-olive);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+  color: var(--athens-text);
+}
+.warning-box {
+  background: rgba(192, 108, 84, 0.08);
+  border-left: 4px solid var(--athens-terracotta);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+  color: var(--athens-text);
+}
+
+/* Table of Contents */
+.toc {
+  background: var(--athens-marble);
+  border: 1px solid #E5E8E8;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+}
+.toc h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--athens-blue);
+}
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.75rem;
+}
+.toc li a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-bottom: none;
+  color: var(--athens-text);
+}
+.toc li a:hover {
+  color: var(--athens-blue);
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+th, td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #E5E8E8;
+}
+th {
+  background-color: var(--athens-blue);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+tr:nth-child(even) { background-color: rgba(27, 79, 114, 0.03); }
+tr:hover { background-color: rgba(212, 175, 55, 0.1); }
+
+/* FAQ Section */
+.faq-section { margin-top: 2rem; }
+.faq-item {
+  border-bottom: 1px solid #E5E8E8;
+  padding: 1.5rem 0;
+}
+.faq-question {
+  margin: 0 0 0.75rem 0;
+  font-family: var(--font-heading);
+  color: var(--athens-blue);
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+.faq-answer p {
+  margin: 0;
+  color: var(--athens-text-light);
+  line-height: 1.6;
+}
+
+/* Related Section */
+.related-section {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--athens-gold);
+}
+.related-section h3 {
+  font-family: var(--font-heading);
+  color: var(--athens-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+.related-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.related-card {
+  background: white;
+  border: 1px solid #E5E8E8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(27, 79, 114, 0.1);
+  border-color: var(--athens-gold);
+}
+.related-card h4 {
+  margin: 0 0 0.75rem 0;
+  color: var(--athens-blue);
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+}
+.related-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--athens-text-light);
+  line-height: 1.5;
+}
+
+.affiliate-note {
+  font-size: 0.85rem;
+  color: var(--athens-text-light);
+  text-align: center;
+  margin-top: 2.5rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--athens-blue);
+  color: rgba(255,255,255,0.75);
+  padding: 3.5rem 1.5rem 1.5rem;
+  margin-top: 4rem;
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-brand h3 {
+  color: white;
+  margin-top: 0;
+  font-family: var(--font-heading);
+}
+.footer-newsletter {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 400px;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border-radius: 6px;
+  font-family: var(--font-body);
+}
+.footer-newsletter input::placeholder { color: rgba(255,255,255,0.5); }
+.footer-newsletter button {
+  padding: 0.75rem 1.5rem;
+  background: var(--athens-gold);
+  color: var(--athens-blue);
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: var(--font-body);
+}
+.footer-newsletter button:hover { background: #e5c15d; }
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.footer-cols h4 {
+  color: white;
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+.footer-cols ul { list-style: none; padding: 0; margin: 0; }
+.footer-cols li { margin-bottom: 0.6rem; }
+.footer-cols a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.footer-cols a:hover { color: var(--athens-gold); }
+
+.footer-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+}
+.footer-langs a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.footer-langs a:hover { color: var(--athens-gold); }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+}
+.footer-bottom a { color: var(--athens-gold); text-decoration: none; }
+
+/* Drawer & Functional UI */
+.drawer-backdrop {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(27, 79, 114, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 998;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+.drawer-backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+.drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 340px; max-width: 85vw;
+  background: white;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex; flex-direction: column;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+}
+.drawer.is-open { transform: translateX(0); }
+
+.drawer-head {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #E5E8E8;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.drawer-head .title { font-weight: 700; font-size: 1.1rem; color: var(--athens-blue); font-family: var(--font-heading); }
+.drawer-close { background: none; border: none; cursor: pointer; color: var(--athens-text-light); padding: 0.25rem; }
+
+.drawer-search { padding: 1rem 1.5rem; border-bottom: 1px solid #E5E8E8; }
+.drawer-search input {
+  width: 100%; padding: 0.75rem;
+  border: 1px solid #E5E8E8; border-radius: 6px;
+  font-size: 0.95rem; font-family: var(--font-body);
+}
+.drawer-search input:focus { outline: 2px solid var(--athens-gold); border-color: transparent; }
+
+.drawer-tabs {
+  display: flex; overflow-x: auto; padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E5E8E8; gap: 0.5rem;
+  scrollbar-width: none;
+}
+.drawer-tabs::-webkit-scrollbar { display: none; }
+.drawer-tabs button {
+  background: none; border: 1px solid transparent;
+  padding: 0.5rem 1rem; border-radius: 20px;
+  font-size: 0.85rem; color: var(--athens-text-light);
+  cursor: pointer; white-space: nowrap;
+  transition: all 0.2s; font-family: var(--font-body);
+}
+.drawer-tabs button.is-active {
+  background: var(--athens-blue); color: white;
+}
+
+.drawer-body { flex: 1; overflow-y: auto; padding: 1.5rem; }
+.drawer-panel { display: none; }
+.drawer-panel.is-active { display: block; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+.drawer-panel h5 {
+  margin: 1.5rem 0 0.75rem; color: var(--athens-blue);
+  font-size: 0.8rem; text-transform: uppercase;
+  letter-spacing: 0.08em; font-weight: 700;
+}
+.drawer-panel h5:first-child { margin-top: 0; }
+.drawer-panel ul { list-style: none; padding: 0; margin: 0; }
+.drawer-panel li { margin-bottom: 0.6rem; }
+.drawer-panel a {
+  color: var(--athens-text); text-decoration: none;
+  font-size: 0.95rem; transition: color 0.2s;
+}
+.drawer-panel a:hover { color: var(--athens-blue); }
+
+.drawer-langs {
+  padding: 1rem 1.5rem; border-top: 1px solid #E5E8E8;
+  display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem;
+}
+.drawer-langs a { color: var(--athens-text-light); text-decoration: none; }
+.drawer-langs a:hover { color: var(--athens-blue); }
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--athens-blue); color: white;
+  padding: 1.25rem 1.5rem; z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+}
+.cookie-banner.is-visible { transform: translateY(0); }
+.cookie-banner-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 1rem;
+}
+.cookie-banner a { color: var(--athens-gold); }
+.cookie-banner-actions { display: flex; gap: 0.75rem; }
+.cookie-banner-actions button {
+  padding: 0.6rem 1.25rem; border-radius: 6px;
+  border: none; cursor: pointer; font-weight: 600;
+  font-family: var(--font-body); transition: all 0.2s;
+}
+.cookie-banner-actions button.reject {
+  background: rgba(255,255,255,0.1); color: white;
+}
+.cookie-banner-actions button.reject:hover { background: rgba(255,255,255,0.2); }
+.cookie-banner-actions button.accept {
+  background: var(--athens-gold); color: var(--athens-blue);
+}
+.cookie-banner-actions button.accept:hover { background: #e5c15d; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+  .article-hero { padding: 3.5rem 1rem; }
+  .container {
+    margin-top: -1rem;
+    border-radius: 16px 16px 0 0;
+    padding: 2rem 1.25rem 3rem;
+  }
+  .toc ul { grid-template-columns: 1fr; }
+  .footer-newsletter { flex-direction: column; }
+  .cookie-banner-inner { flex-direction: column; text-align: center; }
+}
+</style>
+<!-- === ATHENS THEME CSS END === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Athens Through the Lens: A Filmmaker's Guide to Ancient Greece",
+  "author": { "@type": "Person", "name": "Dawid Millennium" },
+  "datePublished": "2026-09-04",
+  "publisher": { "@type": "Organization", "name": "Holiday Video Camera" }
+}
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -23,18 +603,17 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Discover Athens' best filming locations from the",
+      "name": "Athens Through the Lens",
       "item": "https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/athens-interview-preview.html"
     }
   ]
 }
 </script>
-</head><body>--- city-interview-preview/Athens.html (原始)
+</head>
+<body>
 
-+++ city-interview-preview/Athens.html (修改后)
-<!DOCTYPE html>
-
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === HEADER START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -55,6 +634,7 @@
 </div>
 </div>
 </header>
+
 <div aria-hidden="true" class="drawer-backdrop" id="drawerBackdrop"></div>
 <aside aria-hidden="true" aria-label="Main menu" aria-modal="true" class="drawer" id="siteDrawer" role="dialog">
 <div class="drawer-head">
@@ -203,51 +783,27 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === --><meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Discover Athens' best filming locations from the</title>
-<meta content="Discover Athens' best filming locations from the Acropolis to hidden alleyways. Complete guide with camera settings, golden hour times, and gear tips for capturing ancient Greece." name="description"/>
-<meta content="Dawid Millennium" name="author"/>
-<meta content="index, follow, max-image-preview:large, max-snippet:-1" name="robots"/>
-<meta content="Athens Through the Lens: A Filmmaker's Guide to Ancient Greece" property="og:title"/>
-<meta content="From sunrise at the Acropolis to midnight in Psirri — your complete guide to filming Athens like a pro." property="og:description"/>
-<meta content="article" property="og:type"/>
-<meta content="https://dawidmillenium-design.github.io/city-interview-preview/Athens.html" property="og:url"/>
-<meta content="Holiday Video Camera" property="og:site_name"/>
-<meta content="summary_large_image" name="twitter:card"/>
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 18dda5106699d367b7af4bdc2fdffb21589093bc
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Athens Through the Lens: A Filmmaker's Guide to Ancient Greece",
-  "author": { "@type": "Person", "name": "Dawid Millennium" },
-  "datePublished": "2026-09-04",
-  "publisher": { "@type": "Organization", "name": "Holiday Video Camera" }
-}
-</script>
-<link href="/assets/site-shell.css" rel="stylesheet"/>
-<link href="https://dawidmillenium-design.github.io/city-through-the-lens/athens-interview-preview.html" rel="canonical"/>
-
+</aside>
+<!-- === HEADER END === -->
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
         <li><a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens</a></li>
-        <li aria-current="page">Discover Athens' best filming locations from the</li>
+        <li aria-current="page">Athens Through the Lens</li>
     </ol>
 </nav>
 
 <section class="article-hero">
-    <h1>Discover Athens' best filming locations from the</h1>
+    <h1>Athens Through the Lens: A Filmmaker's Guide to Ancient Greece</h1>
 </section>
 
-<article class="container">
+<article class="container" id="main-content">
 <div class="quick-answer">
 <h3>⚡ Quick Answer</h3>
 <p>Athens rewards filmmakers who embrace contrast: ancient marble against street art, quiet Orthodox churches beside bustling tavernas. Shoot the Acropolis at sunrise (6:30 AM summer, 7:30 AM winter) from Areopagus Hill for crowd-free shots. Use a DJI Pocket 4P for handheld walking footage through Plaka's narrow streets, or Insta360 X5 for immersive 360° captures of Syntagma Square's changing of the guard. Golden hour hits the Parthenon's west face around 7 PM in summer, creating dramatic shadows through the columns.</p>
 </div>
+
 <div class="toc">
 <h3>In This Guide</h3>
 <ul>
@@ -261,28 +817,36 @@
 <li><a href="#related">Related Articles</a></li>
 </ul>
 </div>
+
 <h2 id="why-athens">Why Athens is Unique for Filmmakers</h2>
 <p>Athens isn't just another European capital — it's a living museum where 3,000 years of history collide with vibrant street culture. For videographers, this means unparalleled visual storytelling opportunities: you can frame a 5th-century temple against a backdrop of neon-lit rooftop bars in the same shot. The city's light is legendary; Mediterranean sun bounces off white marble creating natural reflectors that flatter every subject.</p>
 <p>What sets Athens apart is accessibility. Unlike Rome where major sites require expensive permits, you can film the Acropolis from public viewpoints without bureaucracy. The metro system connects key locations efficiently, and locals are generally welcoming to respectful filmmakers. Winter offers dramatic cloudy skies perfect for moody historical pieces, while summer provides that iconic Greek island glow even in the city.</p>
+
 <div class="tip-box">
 <strong>Pro tip:</strong> Download the "Athens Transport" app for real-time metro updates. Many filming locations are within walking distance of Metro stations (Acropoli, Syntagma, Monastiraki), making gear transport manageable even with tripods.
-    </div>
+</div>
+
 <h2 id="top-locations">Top 5 Filming Locations with Camera Settings</h2>
 <h3>1. Acropolis from Areopagus Hill (Mars Hill)</h3>
 <p>This rocky outcrop southwest of the Acropolis offers the most iconic view in Athens. Arrive by 6:15 AM to secure a tripod spot before tour groups descend. The elevated perspective lets you capture the Parthenon rising above the cityscape.</p>
 <p><strong>Recommended Settings:</strong> 4K/24fps, f/5.6, ISO 100-200 (morning), shutter 1/50. Use ND filters if shooting midday. For time-lapses, interval of 2-3 seconds over 30 minutes shows cloud movement beautifully.</p>
+
 <h3>2. Plaka District Alleyways</h3>
 <p>Ancient winding streets beneath the Acropolis, filled with bougainvillea, traditional shops, and cats. Best filmed early morning (8-9 AM) or late evening when cruise ship crowds thin. The narrow lanes create natural leading lines.</p>
 <p><strong>Recommended Settings:</strong> Handheld 4K/30fps with active stabilization (DJI Pocket 4P excels here). f/2.8 for shallow depth of field isolating subjects against blurred backgrounds. ISO 400-800 in shaded alleys.</p>
+
 <h3>3. Syntagma Square – Changing of the Guard</h3>
 <p>The Evzones ceremony at the Tomb of the Unknown Soldier happens hourly on the hour. The Sunday 11 AM parade from Parliament to Syntagma is the most elaborate. Film from the steps in front of Parliament for head-on shots.</p>
 <p><strong>Recommended Settings:</strong> 4K/60fps for slow-motion close-ups of the ceremonial movements. Telephoto compression (70-100mm equivalent) isolates guards against the Parliament building. Continuous autofocus essential.</p>
+
 <h3>4. National Garden</h3>
 <p>A hidden oasis behind Parliament with ancient ruins, peacocks, and shaded paths. Perfect for B-roll transitions or interview backdrops away from tourist chaos. Open sunrise to sunset, free entry.</p>
 <p><strong>Recommended Settings:</strong> Wide establishing shots at 24mm, f/8 for deep focus. For intimate garden details, switch to 50mm f/2.8. Dappled light requires careful exposure — use spot metering on subjects.</p>
+
 <h3>5. Psirri Neighborhood at Night</h3>
 <p>Athens' hippest district transforms after dark: street art, live rebetiko music, crowded mezze tavernas. This is where you capture authentic Athenian nightlife. Film Thursday-Saturday for maximum energy.</p>
 <p><strong>Recommended Settings:</strong> Low-light champions needed. DJI Pocket 4P's 1-inch sensor handles this well at ISO 1600-3200. f/1.8-2.8, 24fps. Embrace available neon and string lights — they create atmospheric bokeh.</p>
+
 <h2 id="golden-hour">Golden Hour &amp; Blue Hour Times by Season</h2>
 <table>
 <tr><th>Season</th><th>Sunrise</th><th>Golden Hour (Morning)</th><th>Golden Hour (Evening)</th><th>Sunset</th><th>Blue Hour</th></tr>
@@ -291,17 +855,21 @@
 <tr><td>Autumn (Sep-Nov)</td><td>7:00 AM</td><td>7:00-8:15 AM</td><td>6:00-7:30 PM</td><td>7:15 PM</td><td>7:30-8:00 PM</td></tr>
 <tr><td>Winter (Dec-Feb)</td><td>7:30 AM</td><td>7:30-8:30 AM</td><td>5:00-6:15 PM</td><td>6:00 PM</td><td>6:15-6:45 PM</td></tr>
 </table>
+
 <div class="tip-box">
 <strong>Pro tip:</strong> Use the PhotoPills app to calculate exact golden hour times for your specific dates. Athens' hilly terrain means some locations enter shadow earlier than others — scout ahead.
-    </div>
+</div>
+
 <h2 id="gear-recommendations">Gear Recommendations for Athens</h2>
 <p><strong>Primary Camera: DJI Osmo Pocket 4P</strong> — Perfect for navigating Plaka's crowded streets without drawing attention. The gimbal stabilization handles walking shots through uneven cobblestones smoothly. Battery life easily covers a full morning shoot (3-4 hours).</p>
 <p><strong>B-Roll Alternative: Insta360 X5</strong> — Capture immersive 360° footage of Syntagma Square ceremonies or Acropolis panoramas. Reframe in post to follow action without worrying about composition during filming. The invisible selfie stick creates unique perspectives around ancient columns.</p>
 <p><strong>Audio: Rode Wireless GO II</strong> — Essential for interviews in windy conditions atop Areopagus Hill. The compact transmitters clip discreetly under clothing. Backup audio with your camera's internal mic for safety.</p>
 <p><strong>Tripod: Peak Design Travel Tripod</strong> — Compact enough for carry-on, sturdy enough for long exposures during blue hour. The low-angle mode works perfectly for ground-level Acropolis shots.</p>
+
 <div class="warning-box">
 <strong>Important:</strong> Tripods are technically not allowed inside the Acropolis archaeological site without a special permit. Use monopods or handheld stabilization for interior shots. Security is strict about this rule.
-    </div>
+</div>
+
 <h2 id="shooting-tips">Essential Shooting Tips</h2>
 <ul>
 <li><strong>Respect religious sites:</strong> When filming churches (like Metropolitan Cathedral), dress modestly and ask permission before recording services. Many priests are accommodating if approached respectfully.</li>
@@ -310,11 +878,13 @@
 <li><strong>Power strategy:</strong> Greek outlets are Type C/F (European standard). Bring a universal adapter with multiple USB ports. Power banks are essential for all-day shoots — cafes often have limited outlets.</li>
 <li><strong>Local etiquette:</strong> Greeks are expressive and photogenic, but always ask before filming close-ups of individuals, especially in tavernas. A simple "Boró na sas filaráro?" (Can I film you?) goes far.</li>
 </ul>
+
 <h2 id="mistakes">Common Mistakes to Avoid</h2>
 <p><strong>Shooting the Acropolis only from inside:</strong> The best views are actually from outside — Areopagus Hill, Philopappos Monument, and even certain rooftop bars in Koukaki. Save your entrance fee for other sites and film the exterior from these vantage points.</p>
 <p><strong>Ignoring modern Athens:</strong> Don't make the mistake of only filming ancient ruins. The street art in Metaxourgeio, the trendy cafes in Koukaki, and the port of Piraeus add contemporary context to your story.</p>
 <p><strong>Overlooking sound:</strong> Athens is loud — traffic, scooters, construction. Plan dialogue recordings for early morning or late evening. Consider lavalier mics over shotgun mics which pick up too much ambient noise.</p>
 <p><strong>Midday shooting in summer:</strong> Harsh overhead sun creates unflattering shadows and blown highlights. Restrict outdoor filming to before 10 AM and after 6 PM during June-August. Use midday for indoor locations like museums or cafes.</p>
+
 <h2 id="faq">FAQ</h2>
 <div class="faq-section">
 <div class="faq-item">
@@ -348,24 +918,9 @@
 </div>
 </div>
 </div>
-<h2 id="related">Related Articles</h2>
-<div class="related-articles">
-<a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/rome-interview-preview.html">
-<h4>Rome Through the Lens</h4>
-<p>Filming the Eternal City: Vatican secrets, Colosseum timing, and trattoria lighting.</p>
-</a>
-<a class="related-card" href="/city-interview-preview/Istanbul.html">
-<h4>Istanbul Through the Lens</h4>
-<p>Capturing two continents: mosque interiors, bazaar colors, and Bosphorus sunsets.</p>
-</a>
-<a class="related-card" href="/VideoCameraHoliday/guides/best-low-light-camera-evening-vacation.html">
-<h4>Best Low Light Cameras for Evening Vacations</h4>
-<p>Night filming gear tested in cities from Tokyo to Athens.</p>
-</a>
-</div>
-<p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
+
 <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
-<section class="related-section">
+<section class="related-section" id="related">
 <h3>🌍 More European City Interviews</h3>
 <div class="related-articles">
 <a class="related-card" href="/VideoCameraHoliday/city-through-the-lens/london-interview-preview.html">
@@ -393,6 +948,7 @@
 <p>Gaudí, beach, and Gothic Quarter – Barcelona through a local's lens.</p>
 </a>
 </div>
+
 <h3>📸 Recommended Gear for Athens</h3>
 <div class="related-articles">
 <a class="related-card" href="/VideoCameraHoliday/reviews/fujifilm-x100vi-review.html">
@@ -408,6 +964,7 @@
 <p>1-inch sensor vlogging compact – ideal for street photography and vlogging.</p>
 </a>
 </div>
+
 <h3>📚 Related Guides for Your Athens Trip</h3>
 <div class="related-articles">
 <a class="related-card" href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">
@@ -424,21 +981,17 @@
 </a>
 </div>
 </section>
+
+<p class="affiliate-note">This guide contains affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
 </article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<!-- === FOOTER START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -446,7 +999,7 @@
 </form>
 </div>
 </div>
-<div class="footer-cols" style="padding-top:44px;">
+<div class="footer-cols">
 <div>
 <h4>Top Guides</h4>
 <ul>
@@ -516,6 +1069,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -525,15 +1079,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -547,7 +1096,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -569,9 +1117,6 @@
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -582,7 +1127,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -604,7 +1148,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -619,7 +1162,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -647,7 +1189,6 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
             if (bestPanel) {
                 var tabName = bestPanel.getAttribute('data-panel');
@@ -663,9 +1204,6 @@
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -678,12 +1216,11 @@
             var status = document.createElement('p');
             status.setAttribute('role', 'status');
             status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            status.textContent = 'Thanks — we’ll be in touch. (No backend wired yet; this is a placeholder.)';
             nlForm.replaceWith(status);
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -694,7 +1231,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -703,4 +1239,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body></html>
+</script>
+<!-- === FOOTER END === -->
+</body>
+</html>
