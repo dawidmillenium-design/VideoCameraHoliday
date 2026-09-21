@@ -1,11 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/>
+<head>
+<meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Filming in Paris? Local videographers reveal the best locations, permit rules, and techniques for capturing France's top destinations." name="description"/>
 <title>🇫🇷 City Through the Lens: Paris</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/paris-interview-preview.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/city-through-the-lens/paris-interview-preview.html" rel="canonical"/>
+
+<!-- Google Fonts for Parisian Editorial Theme -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+<!-- === PARIS THEME CSS START === -->
+<style>
+:root {
+  --paris-navy: #1B263B;
+  --paris-gold: #C5A059;
+  --paris-cream: #F9F7F2;
+  --paris-bordeaux: #722F37;
+  --paris-text: #2D3748;
+  --paris-text-light: #718096;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--paris-text);
+  background-color: var(--paris-cream);
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--paris-navy);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-brand {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header-nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.header-nav a:hover { color: var(--paris-gold); }
+
+.header-actions { display: flex; gap: 1rem; }
+.icon-btn, .drawer-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+.icon-btn:hover, .drawer-toggle:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--paris-gold);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--paris-text-light);
+}
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.breadcrumbs a {
+  color: var(--paris-navy);
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+  color: var(--paris-bordeaux);
+}
+
+/* Hero Section */
+.article-hero {
+  background: linear-gradient(135deg, var(--paris-navy) 0%, #2C3E50 100%);
+  color: white;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.article-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><path d="M50 10 L60 40 L90 40 L65 60 L75 90 L50 70 L25 90 L35 60 L10 40 L40 40 Z" fill="white"/></svg>');
+  background-size: 200px;
+  background-position: center;
+  opacity: 0.4;
+}
+.article-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  letter-spacing: -0.01em;
+  font-style: italic;
+}
+
+/* Main Content Container */
+.container {
+  max-width: 800px;
+  margin: -2rem auto 0;
+  padding: 2.5rem 2rem 4rem;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(27, 38, 59, 0.08);
+  position: relative;
+  z-index: 2;
+}
+.container h2 {
+  font-family: var(--font-heading);
+  color: var(--paris-navy);
+  border-bottom: 2px solid var(--paris-gold);
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  font-size: 1.75rem;
+}
+.container h2:first-of-type { margin-top: 0; }
+.container a.content-link {
+  color: var(--paris-bordeaux);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dotted var(--paris-bordeaux);
+  transition: background 0.2s;
+}
+.container a.content-link:hover {
+  background-color: rgba(114, 47, 55, 0.05);
+}
+
+/* Takeaways Box */
+.takeaways {
+  background: var(--paris-cream);
+  border-left: 4px solid var(--paris-gold);
+  padding: 1.5rem 2rem;
+  border-radius: 0 8px 8px 0;
+  margin: 2rem 0;
+}
+.takeaways h3 {
+  margin-top: 0;
+  color: var(--paris-navy);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+}
+.takeaways ul { margin-bottom: 0; padding-left: 1.2rem; }
+.takeaways li { margin-bottom: 0.75rem; }
+
+/* Related Section */
+.related-section {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #E2E8F0;
+}
+.related-section h3 {
+  font-family: var(--font-heading);
+  color: var(--paris-navy);
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+.related-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.related-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(27, 38, 59, 0.1);
+  border-color: var(--paris-bordeaux);
+}
+.related-card h4 {
+  margin: 0 0 0.75rem 0;
+  color: var(--paris-navy);
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+}
+.related-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--paris-text-light);
+  line-height: 1.5;
+}
+
+/* Author Box */
+.author-box {
+  display: flex;
+  gap: 1.5rem;
+  background: var(--paris-navy);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+  align-items: flex-start;
+}
+.author-avatar {
+  font-size: 2.5rem;
+  background: rgba(255,255,255,0.1);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid var(--paris-gold);
+}
+.author-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--paris-gold);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.author-info p {
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+
+.affiliate-note {
+  font-size: 0.85rem;
+  color: var(--paris-text-light);
+  text-align: center;
+  margin-top: 2.5rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--paris-navy);
+  color: rgba(255,255,255,0.7);
+  padding: 3.5rem 1.5rem 1.5rem;
+  margin-top: 4rem;
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-brand h3 {
+  color: white;
+  margin-top: 0;
+  font-family: var(--font-heading);
+}
+.footer-newsletter {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 400px;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border-radius: 6px;
+  font-family: var(--font-body);
+}
+.footer-newsletter input::placeholder { color: rgba(255,255,255,0.5); }
+.footer-newsletter button {
+  padding: 0.75rem 1.5rem;
+  background: var(--paris-bordeaux);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: var(--font-body);
+}
+.footer-newsletter button:hover { background: #5a252c; }
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-cols h4 {
+  color: white;
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+.footer-cols ul { list-style: none; padding: 0; margin: 0; }
+.footer-cols li { margin-bottom: 0.6rem; }
+.footer-cols a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.footer-cols a:hover { color: var(--paris-gold); }
+
+.footer-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+}
+.footer-langs a { color: rgba(255,255,255,0.5); text-decoration: none; }
+.footer-langs a:hover { color: var(--paris-gold); }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+}
+.footer-bottom a { color: var(--paris-gold); text-decoration: none; }
+
+/* Drawer & Functional UI */
+.drawer-backdrop {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(27, 38, 59, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+.drawer-backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+.drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 340px; max-width: 85vw;
+  background: white;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex; flex-direction: column;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+}
+.drawer.is-open { transform: translateX(0); }
+
+.drawer-head {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.drawer-head .title { font-weight: 700; font-size: 1.1rem; color: var(--paris-navy); font-family: var(--font-heading); }
+.drawer-close { background: none; border: none; cursor: pointer; color: var(--paris-text-light); padding: 0.25rem; }
+
+.drawer-search { padding: 1rem 1.5rem; border-bottom: 1px solid #E2E8F0; }
+.drawer-search input {
+  width: 100%; padding: 0.75rem;
+  border: 1px solid #E2E8F0; border-radius: 6px;
+  font-size: 0.95rem; font-family: var(--font-body);
+}
+.drawer-search input:focus { outline: 2px solid var(--paris-gold); border-color: transparent; }
+
+.drawer-tabs {
+  display: flex; overflow-x: auto; padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E2E8F0; gap: 0.5rem;
+  scrollbar-width: none;
+}
+.drawer-tabs::-webkit-scrollbar { display: none; }
+.drawer-tabs button {
+  background: none; border: 1px solid transparent;
+  padding: 0.5rem 1rem; border-radius: 20px;
+  font-size: 0.85rem; color: var(--paris-text-light);
+  cursor: pointer; white-space: nowrap;
+  transition: all 0.2s; font-family: var(--font-body);
+}
+.drawer-tabs button.is-active {
+  background: var(--paris-navy); color: white;
+}
+
+.drawer-body { flex: 1; overflow-y: auto; padding: 1.5rem; }
+.drawer-panel { display: none; }
+.drawer-panel.is-active { display: block; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+.drawer-panel h5 {
+  margin: 1.5rem 0 0.75rem; color: var(--paris-navy);
+  font-size: 0.8rem; text-transform: uppercase;
+  letter-spacing: 0.08em; font-weight: 700;
+}
+.drawer-panel h5:first-child { margin-top: 0; }
+.drawer-panel ul { list-style: none; padding: 0; margin: 0; }
+.drawer-panel li { margin-bottom: 0.6rem; }
+.drawer-panel a {
+  color: var(--paris-text); text-decoration: none;
+  font-size: 0.95rem; transition: color 0.2s;
+}
+.drawer-panel a:hover { color: var(--paris-bordeaux); }
+
+.drawer-langs {
+  padding: 1rem 1.5rem; border-top: 1px solid #E2E8F0;
+  display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem;
+}
+.drawer-langs a { color: var(--paris-text-light); text-decoration: none; }
+.drawer-langs a:hover { color: var(--paris-navy); }
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--paris-navy); color: white;
+  padding: 1.25rem 1.5rem; z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+}
+.cookie-banner.is-visible { transform: translateY(0); }
+.cookie-banner-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 1rem;
+}
+.cookie-banner a { color: var(--paris-gold); }
+.cookie-banner-actions { display: flex; gap: 0.75rem; }
+.cookie-banner-actions button {
+  padding: 0.6rem 1.25rem; border-radius: 6px;
+  border: none; cursor: pointer; font-weight: 600;
+  font-family: var(--font-body); transition: all 0.2s;
+}
+.cookie-banner-actions button.reject {
+  background: rgba(255,255,255,0.1); color: white;
+}
+.cookie-banner-actions button.reject:hover { background: rgba(255,255,255,0.2); }
+.cookie-banner-actions button.accept {
+  background: var(--paris-bordeaux); color: white;
+}
+.cookie-banner-actions button.accept:hover { background: #5a252c; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+  .article-hero { padding: 3.5rem 1rem; }
+  .container {
+    margin-top: -1rem;
+    border-radius: 16px 16px 0 0;
+    padding: 2rem 1.25rem 3rem;
+  }
+  .author-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-newsletter { flex-direction: column; }
+  .cookie-banner-inner { flex-direction: column; text-align: center; }
+}
+</style>
+<!-- === PARIS THEME CSS END === -->
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -34,7 +537,8 @@
 </head>
 <body>
 
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === HEADER START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -55,6 +559,7 @@
 </div>
 </div>
 </header>
+
 <div aria-hidden="true" class="drawer-backdrop" id="drawerBackdrop"></div>
 <aside aria-hidden="true" aria-label="Main menu" aria-modal="true" class="drawer" id="siteDrawer" role="dialog">
 <div class="drawer-head">
@@ -203,7 +708,9 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === HEADER END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -218,6 +725,7 @@
 
 <article class="container" id="main-content">
 <p><strong>Paris is the most filmed city in the world – but capturing its magic without the clichés takes local know‑how.</strong> We sat down with Sophie Moreau, a Paris‑based videographer who has shot campaigns for luxury brands and travel channels, to get the real story on filming in the City of Light. From the Trocadéro at sunrise to the hidden alleyways of Montmartre, Sophie shares her favourite locations, the gear that handles the unpredictable weather, and the permits you need to avoid a fine.</p>
+
 <div class="takeaways">
 <h3>🎯 What You'll Learn in This Interview</h3>
 <ul>
@@ -228,6 +736,7 @@
 <li><strong>Editing style:</strong> How she grades her footage to enhance the city's romantic, timeless feel.</li>
 </ul>
 </div>
+
 <h2>🗼 Sophie's Top Filming Locations</h2>
 <p>"Everyone shoots the Eiffel Tower from Trocadéro," Sophie says. "But the real gems are a few streets away." Her favourites:</p>
 <ul>
@@ -236,6 +745,7 @@
 <li><strong>Montmartre – backstreets:</strong> Skip the Sacré‑Cœur steps; head to Rue des Abbesses for authentic Parisian charm and fewer tourists.</li>
 <li><strong>Seine riverbanks – blue hour:</strong> The reflections from the bridges and the glow of the city lights create a magical atmosphere – handheld with a fast lens is all you need.</li>
 </ul>
+
 <h2>📸 The Kit She Actually Uses</h2>
 <ul>
 <li><strong>Primary camera:</strong> <a class="content-link" href="/VideoCameraHoliday/reviews/sony-zv-e10-ii-night-market-review.html">Sony ZV‑E10 II</a> – lightweight, great low light, and reliable autofocus.</li>
@@ -244,6 +754,7 @@
 <li><strong>Audio:</strong> RØDE Wireless Go II for capturing clean interviews even in crowded squares.</li>
 <li><strong>Backup:</strong> An <a class="content-link" href="/VideoCameraHoliday/reviews/iphone-16-pro-video-review.html">iPhone 16 Pro</a> for quick B‑roll and behind‑the‑scenes content.</li>
 </ul>
+
 <div class="takeaways" style="margin-top: 30px;">
 <h3>⚡ Quick Paris Filming Tips</h3>
 <ul>
@@ -254,6 +765,7 @@
 <li><strong>Be polite</strong> – ask permission before filming people, especially artists and vendors.</li>
 </ul>
 </div>
+
 <!-- ===== RELATED CONTENT – IMPROVED INTERNAL LINKING ===== -->
 <section class="related-section">
 <h3>🌍 More European City Interviews</h3>
@@ -283,6 +795,7 @@
 <p>Capturing Portugal's colourful capital – from trams to the coast.</p>
 </a>
 </div>
+
 <h3>📸 Recommended Gear for Paris</h3>
 <div class="related-articles">
 <a class="related-card" href="/VideoCameraHoliday/reviews/sony-zv-1-ii-review.html">
@@ -298,6 +811,7 @@
 <p>APS-C sensor and film simulations – the street photographer's dream.</p>
 </a>
 </div>
+
 <h3>📚 Related Guides for Your Paris Trip</h3>
 <div class="related-articles">
 <a class="related-card" href="/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html">
@@ -314,6 +828,7 @@
 </a>
 </div>
 </section>
+
 <div class="author-box">
 <div class="author-avatar">🎬</div>
 <div class="author-info">
@@ -321,23 +836,18 @@
 <p>I interview local videographers in every city I visit to bring you real‑world filming advice. This Paris interview was recorded in June 2026.</p>
 </div>
 </div>
+
 <p style="text-align:center; margin-top: 30px;"><a class="content-link" href="/VideoCameraHoliday/city-through-the-lens/">← Back to all City Through the Lens interviews</a></p>
 <p class="affiliate-note">Some product links in this article are affiliate links. If you buy through them we may earn a commission at no extra cost. All recommendations are based on our real‑world testing and interviews.</p>
 </article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<!-- === FOOTER START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -345,7 +855,7 @@
 </form>
 </div>
 </div>
-<div class="footer-cols" style="padding-top:44px;">
+<div class="footer-cols">
 <div>
 <h4>Top Guides</h4>
 <ul>
@@ -415,6 +925,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -424,15 +935,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -446,7 +952,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -468,9 +973,6 @@
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -481,7 +983,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -503,7 +1004,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -518,7 +1018,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -546,7 +1045,6 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
             if (bestPanel) {
                 var tabName = bestPanel.getAttribute('data-panel');
@@ -562,9 +1060,6 @@
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -577,12 +1072,11 @@
             var status = document.createElement('p');
             status.setAttribute('role', 'status');
             status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            status.textContent = 'Thanks — we’ll be in touch. (No backend wired yet; this is a placeholder.)';
             nlForm.replaceWith(status);
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -593,7 +1087,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -602,5 +1095,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === FOOTER END === -->
+</body>
 </html>
