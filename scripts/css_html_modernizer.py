@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 from pathlib import Path
 from bs4 import BeautifulSoup
 import openai
@@ -7,11 +8,16 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 
 class CSSHTMLModernizer:
     def __init__(self):
+        # FIXED: fail fast on missing API key instead of making doomed requests
+        api_key = os.getenv("DEEPSEEK_API_KEY")
+        if not api_key:
+            raise ValueError("DEEPSEEK_API_KEY environment variable is not set.")
         self.client = openai.OpenAI(
-            api_key=os.getenv("DEEPSEEK_API_KEY"),
+            api_key=api_key,
             base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
         )
-        self.model = os.getenv("DEEPSEEK_MODEL", "deepseek-v4-flash")
+        # FIXED: default to a real DeepSeek model ("deepseek-v4-flash" does not exist on the API)
+        self.model = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
         
         # Modern CSS patterns to apply
         self.modern_css_patterns = {
@@ -129,7 +135,8 @@ h1, h2, h3 {
         if not soup.find('meta', {'name': 'viewport'}):
             viewport = soup.new_tag('meta', name='viewport', content='width=device-width, initial-scale=1.0')
             if soup.head:
-                soup.head.append(viewpoint)
+                # FIXED: was `soup.head.append(viewpoint)` — undefined variable (NameError)
+                soup.head.append(viewport)
         
         # Add modern CSS framework link
         if not soup.find('link', href=lambda x: x and 'modern' in x):
