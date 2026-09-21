@@ -9,8 +9,12 @@ from datetime import datetime
 
 class GlobalSEOPipeline:
     def __init__(self, config_path: str = "global_seo_crew.yaml"):
-        self.base_url = "https://dawidmillenium-design.github.io/HolidayVideoCamera/"
-        self.deepseek_api_key = os.environ.get("DEEPSEEK_API_KEY", "YOUR_DEEPSEEK_API_KEY_HERE")
+        # FIXED: repo is "VideoCameraHoliday", not "HolidayVideoCamera"
+        self.base_url = "https://dawidmillenium-design.github.io/VideoCameraHoliday/"
+        # FIXED: fail fast instead of silently using a placeholder key
+        self.deepseek_api_key = os.environ.get("DEEPSEEK_API_KEY")
+        if not self.deepseek_api_key:
+            raise ValueError("DEEPSEEK_API_KEY environment variable is not set.")
         self.deepseek_api_url = "https://api.deepseek.com/v1/chat/completions"
         
         try:
