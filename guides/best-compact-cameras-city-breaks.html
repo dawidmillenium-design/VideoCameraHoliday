@@ -1,11 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/>
+<head>
+<meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="The best compact cameras for city breaks 2026. Street photography, low light, and architecture – tested in Kyoto, Lyon, and NYC. Different from general travel guides." name="description"/>
 <title>🏙️ Best Compact Cameras for City Breaks 2026</title>
 
-<link href="/VideoCameraHoliday/assets/design-b.css" rel="stylesheet"/><link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html" rel="canonical"/><!-- === DESIGN-B-HEAD-START === --><!-- === DESIGN-B-HEAD-END === --><script type="application/ld+json">
+<link href="https://dawidmillenium-design.github.io/VideoCameraHoliday/guides/best-compact-cameras-city-breaks.html" rel="canonical"/>
+
+<!-- Google Fonts for Urban/Architectural Theme -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- === URBAN CITY BREAKS THEME CSS START === -->
+<style>
+:root {
+  --city-dark: #0F172A;
+  --city-slate: #1E293B;
+  --city-bg: #F8FAFC;
+  --city-surface: #FFFFFF;
+  --city-text: #334155;
+  --city-text-light: #64748B;
+  --city-cyan: #06B6D4;
+  --city-cyan-hover: #0891B2;
+  --city-amber: #F59E0B;
+  --city-purple: #8B5CF6;
+  --city-green: #10B981;
+  --city-orange: #F97316;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--city-text);
+  background-color: var(--city-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.site-header {
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-brand {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.header-nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.header-nav a:hover { color: var(--city-cyan); }
+
+.header-actions { display: flex; gap: 0.75rem; }
+.icon-btn, .drawer-toggle {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+.icon-btn:hover, .drawer-toggle:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--city-cyan);
+  color: var(--city-cyan);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--city-text-light);
+}
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.breadcrumbs a {
+  color: var(--city-slate);
+  text-decoration: none;
+  font-weight: 500;
+}
+.breadcrumbs a:hover {
+  color: var(--city-cyan);
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.article-hero {
+  background: linear-gradient(135deg, var(--city-dark) 0%, var(--city-slate) 100%);
+  color: white;
+  padding: 5rem 1.5rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.article-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.6;
+}
+.article-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Main Content Container */
+.container {
+  max-width: 900px;
+  margin: -3rem auto 0;
+  padding: 2.5rem 2rem 4rem;
+  background: var(--city-surface);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1);
+  position: relative;
+  z-index: 2;
+}
+.container h2 {
+  font-family: var(--font-heading);
+  color: var(--city-dark);
+  border-bottom: 2px solid var(--city-cyan);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+.container h2:first-of-type { margin-top: 0; }
+.container a {
+  color: var(--city-cyan-hover);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dotted var(--city-cyan-hover);
+  transition: all 0.2s;
+}
+.container a:hover {
+  color: var(--city-dark);
+  border-color: var(--city-dark);
+}
+
+/* Disclaimer Box */
+.city-disclaimer {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-left: 4px solid var(--city-amber);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--city-text);
+}
+.city-disclaimer strong { color: var(--city-dark); }
+.city-disclaimer a { color: var(--city-amber); border-color: var(--city-amber); font-weight: 700; }
+.city-disclaimer a:hover { color: #d97706; border-color: #d97706; }
+
+/* Takeaways Box */
+.takeaways {
+  background: linear-gradient(to right, rgba(6, 182, 212, 0.05), transparent);
+  border-left: 4px solid var(--city-cyan);
+  padding: 1.5rem 2rem;
+  border-radius: 0 12px 12px 0;
+  margin: 2rem 0;
+}
+.takeaways h3 {
+  margin-top: 0;
+  color: var(--city-dark);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+}
+.takeaways ul { margin-bottom: 0; padding-left: 1.2rem; }
+.takeaways li { margin-bottom: 0.75rem; }
+
+/* Camera Grid & Cards */
+.cam-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.cam-card {
+  background: var(--city-surface);
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.cam-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.15);
+  border-color: var(--city-cyan);
+}
+.cam-card h3 {
+  font-family: var(--font-heading);
+  color: var(--city-dark);
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.3rem;
+}
+.cam-card .price {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--city-cyan-hover);
+  margin-bottom: 1rem;
+}
+.cam-card ul {
+  padding-left: 1.2rem;
+  margin: 0 0 1.5rem;
+  color: var(--city-text);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+.cam-card li { margin-bottom: 0.5rem; }
+
+.city-tip {
+  background: var(--city-bg);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--city-text);
+  margin-bottom: 1.25rem;
+  border: 1px solid #E2E8F0;
+}
+.city-tip strong { color: var(--city-dark); }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+}
+.badge-hero { background: var(--city-cyan); }
+.badge-green { background: var(--city-green); }
+.badge-blue { background: #3B82F6; }
+.badge-purple { background: var(--city-purple); }
+.badge-orange { background: var(--city-orange); }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background: var(--city-dark);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+.btn:hover {
+  background: var(--city-cyan);
+  color: white;
+  transform: translateY(-1px);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--city-dark);
+  color: var(--city-dark);
+}
+.btn-outline:hover {
+  background: var(--city-dark);
+  color: white;
+}
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.comparison-table th, .comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #E2E8F0;
+}
+.comparison-table th {
+  background-color: var(--city-dark);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table tbody tr:nth-child(even) { background-color: #F8FAFC; }
+.comparison-table tbody tr:hover { background-color: rgba(6, 182, 212, 0.05); }
+
+/* Author Box */
+.author-box-urban {
+  background: var(--city-dark);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.author-box-urban p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+.author-box-urban strong { color: var(--city-cyan); }
+
+/* Related Articles */
+.related-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.related-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.15);
+  border-color: var(--city-cyan);
+}
+.related-card h4 {
+  margin: 0 0 0.75rem 0;
+  color: var(--city-dark);
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+}
+.related-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--city-text-light);
+  line-height: 1.5;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.affiliate-note {
+  text-align: center;
+  color: var(--city-text-light);
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  font-style: italic;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--city-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 4rem 1.5rem 2rem;
+  margin-top: 4rem;
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-brand h3 {
+  color: white;
+  margin-top: 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+}
+.footer-newsletter {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 400px;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border-radius: 8px;
+  font-family: var(--font-body);
+}
+.footer-newsletter input::placeholder { color: rgba(255,255,255,0.4); }
+.footer-newsletter input:focus { outline: 2px solid var(--city-cyan); border-color: transparent; }
+.footer-newsletter button {
+  padding: 0.75rem 1.5rem;
+  background: var(--city-cyan);
+  color: var(--city-dark);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: var(--font-body);
+}
+.footer-newsletter button:hover { background: var(--city-cyan-hover); color: white; }
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-cols h4 {
+  color: white;
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+.footer-cols ul { list-style: none; padding: 0; margin: 0; }
+.footer-cols li { margin-bottom: 0.6rem; }
+.footer-cols a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.footer-cols a:hover { color: var(--city-cyan); }
+
+.footer-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+}
+.footer-langs a { color: rgba(255,255,255,0.5); text-decoration: none; }
+.footer-langs a:hover { color: var(--city-cyan); }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+}
+.footer-bottom a { color: var(--city-cyan); text-decoration: none; }
+
+/* Drawer & Functional UI */
+.drawer-backdrop {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+.drawer-backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+.drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 360px; max-width: 85vw;
+  background: var(--city-surface);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex; flex-direction: column;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+}
+.drawer.is-open { transform: translateX(0); }
+
+.drawer-head {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.drawer-head .title { font-weight: 700; font-size: 1.1rem; color: var(--city-dark); font-family: var(--font-heading); }
+.drawer-close { background: none; border: none; cursor: pointer; color: var(--city-text-light); padding: 0.25rem; transition: color 0.2s; }
+.drawer-close:hover { color: var(--city-dark); }
+
+.drawer-search { padding: 1rem 1.5rem; border-bottom: 1px solid #E2E8F0; }
+.drawer-search input {
+  width: 100%; padding: 0.75rem 1rem;
+  border: 1px solid #E2E8F0; border-radius: 8px;
+  font-size: 0.95rem; font-family: var(--font-body);
+  background: var(--city-bg);
+}
+.drawer-search input:focus { outline: 2px solid var(--city-cyan); border-color: transparent; background: white; }
+
+.drawer-tabs {
+  display: flex; overflow-x: auto; padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E2E8F0; gap: 0.5rem;
+  scrollbar-width: none;
+}
+.drawer-tabs::-webkit-scrollbar { display: none; }
+.drawer-tabs button {
+  background: none; border: 1px solid transparent;
+  padding: 0.5rem 1rem; border-radius: 20px;
+  font-size: 0.85rem; color: var(--city-text-light);
+  cursor: pointer; white-space: nowrap;
+  transition: all 0.2s; font-family: var(--font-body);
+  font-weight: 500;
+}
+.drawer-tabs button.is-active {
+  background: var(--city-dark); color: white;
+}
+.drawer-tabs button:hover:not(.is-active) {
+  background: var(--city-bg); color: var(--city-dark);
+}
+
+.drawer-body { flex: 1; overflow-y: auto; padding: 1.5rem; }
+.drawer-panel { display: none; }
+.drawer-panel.is-active { display: block; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.drawer-panel h5 {
+  margin: 1.5rem 0 0.75rem; color: var(--city-dark);
+  font-size: 0.8rem; text-transform: uppercase;
+  letter-spacing: 0.08em; font-weight: 700;
+}
+.drawer-panel h5:first-child { margin-top: 0; }
+.drawer-panel ul { list-style: none; padding: 0; margin: 0; }
+.drawer-panel li { margin-bottom: 0.6rem; }
+.drawer-panel a {
+  color: var(--city-text); text-decoration: none;
+  font-size: 0.95rem; transition: color 0.2s;
+}
+.drawer-panel a:hover { color: var(--city-cyan); }
+
+.drawer-langs {
+  padding: 1rem 1.5rem; border-top: 1px solid #E2E8F0;
+  display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem;
+}
+.drawer-langs a { color: var(--city-text-light); text-decoration: none; }
+.drawer-langs a:hover { color: var(--city-cyan); }
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--city-dark); color: white;
+  padding: 1.25rem 1.5rem; z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+}
+.cookie-banner.is-visible { transform: translateY(0); }
+.cookie-banner-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 1rem;
+}
+.cookie-banner a { color: var(--city-cyan); }
+.cookie-banner-actions { display: flex; gap: 0.75rem; }
+.cookie-banner-actions button {
+  padding: 0.6rem 1.25rem; border-radius: 8px;
+  border: none; cursor: pointer; font-weight: 600;
+  font-family: var(--font-body); transition: all 0.2s;
+}
+.cookie-banner-actions button.reject {
+  background: rgba(255,255,255,0.1); color: white;
+}
+.cookie-banner-actions button.reject:hover { background: rgba(255,255,255,0.2); }
+.cookie-banner-actions button.accept {
+  background: var(--city-cyan); color: var(--city-dark);
+}
+.cookie-banner-actions button.accept:hover { background: var(--city-cyan-hover); color: white; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+  .article-hero { padding: 3.5rem 1rem 4.5rem; }
+  .container {
+    margin-top: -2rem;
+    border-radius: 20px 20px 0 0;
+    padding: 2rem 1.25rem 3rem;
+  }
+  .cam-grid { grid-template-columns: 1fr; }
+  .author-box-urban { flex-direction: column; text-align: center; }
+  .footer-newsletter { flex-direction: column; }
+  .cookie-banner-inner { flex-direction: column; text-align: center; }
+  .comparison-table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+</style>
+<!-- === URBAN CITY BREAKS THEME CSS END === -->
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -34,7 +689,8 @@
 </head>
 <body>
 
-<!-- === DESIGN-B-HEADER-START === --><header class="site-header">
+<!-- === HEADER START === -->
+<header class="site-header">
 <div class="site-header-inner">
 <a class="site-brand" href="/VideoCameraHoliday/"><span aria-hidden="true">📹</span><span>Holiday Video Camera</span></a>
 <nav aria-label="Primary quick links" class="header-nav">
@@ -55,6 +711,7 @@
 </div>
 </div>
 </header>
+
 <div aria-hidden="true" class="drawer-backdrop" id="drawerBackdrop"></div>
 <aside aria-hidden="true" aria-label="Main menu" aria-modal="true" class="drawer" id="siteDrawer" role="dialog">
 <div class="drawer-head">
@@ -203,7 +860,9 @@
 <a href="/VideoCameraHoliday/th-TH/" hreflang="th-TH" lang="th">ไทย</a>
 <a href="/VideoCameraHoliday/zh-CN/" hreflang="zh-CN" lang="zh-CN">中文</a>
 </nav>
-</aside><!-- === DESIGN-B-HEADER-END === -->
+</aside>
+<!-- === HEADER END === -->
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
         <li><a href="/VideoCameraHoliday/">Home</a></li>
@@ -218,14 +877,16 @@
 
 <article class="container" id="main-content">
 <!-- ===== DISCLAIMER: Differentiate from General Travel Guide ===== -->
-<div style="background: rgba(233,69,96,0.1); border: 1px solid #e94560; border-radius: 12px; padding: 20px; margin-bottom: 30px;">
-<p style="margin:0; color:#ccc;">
+<div class="city-disclaimer">
+<p style="margin:0;">
 <strong>📌 This guide is specifically for <em>city breaks</em> – street photography, architecture, and low light.</strong> 
-                If you're travelling to beaches, mountains, or wildlife destinations, see our 
-                <a href="/VideoCameraHoliday/guides/best-compact-cameras-travel-2026.html" style="color:#e94560; text-decoration:underline;">Best Compact Cameras for Travel 2026</a> guide instead.
-            </p>
+If you're travelling to beaches, mountains, or wildlife destinations, see our 
+<a href="/VideoCameraHoliday/guides/best-compact-cameras-travel-2026.html">Best Compact Cameras for Travel 2026</a> guide instead.
+</p>
 </div>
+
 <p><strong>City breaks demand a different kind of camera.</strong> You're navigating crowded streets, shooting in dimly lit bars, and capturing the geometry of buildings. You need fast apertures, responsive autofocus, and a body that doesn't scream "tourist". This guide focuses on <strong>urban photography</strong> – we've tested these cameras in Kyoto's alleys, Lyon's markets, and New York's subways.</p>
+
 <div class="takeaways">
 <h3>⚡ Quick Takeaways – City Breaks</h3>
 <ul>
@@ -236,6 +897,7 @@
 <li><strong>Best Budget Urban:</strong> Canon G7 X III – fast lens and compact size.</li>
 </ul>
 </div>
+
 <!-- ===== CITY-FOCUSED PICKS ===== -->
 <h2>🏆 Our Top Compact Cameras for City Breaks</h2>
 <div class="cam-grid">
@@ -254,6 +916,7 @@
 <div class="city-tip"><strong>💡 Urban Tip:</strong> The OVF lets you see outside the frame – perfect for anticipating street moments.</div>
 <a class="btn" href="/VideoCameraHoliday/reviews/fujifilm-x100vi-travel-review.html">Read Full Review →</a>
 </div>
+
 <!-- GR IV – pocketable street -->
 <div class="cam-card">
 <span class="badge badge-green">👖 Best Pocketable Street</span>
@@ -269,6 +932,7 @@
 <div class="city-tip"><strong>💡 Urban Tip:</strong> Use Snap Focus at 2.5m and f/8 – you'll never miss a moment.</div>
 <a class="btn" href="/VideoCameraHoliday/reviews/ricoh-gr-iv-pocketable-review.html">Read Full Review →</a>
 </div>
+
 <!-- RX100 VII – low light zoom -->
 <div class="cam-card">
 <span class="badge badge-blue">🌃 Best Low‑Light Zoom</span>
@@ -284,6 +948,7 @@
 <div class="city-tip"><strong>💡 Urban Tip:</strong> The 200mm reach is great for architectural details and compression shots.</div>
 <a class="btn btn-outline" href="#" style="pointer-events:none; opacity:0.6;">Review Coming Soon</a>
 </div>
+
 <!-- PowerShot V1 – video hybrid -->
 <div class="cam-card">
 <span class="badge badge-purple">🎥 Best Video + Stills</span>
@@ -300,6 +965,7 @@
 <a class="btn" href="/VideoCameraHoliday/comparisons/powershot-v1-vs-zv-1-ii.html">Compare vs ZV‑1 II →</a>
 </div>
 </div>
+
 <!-- ===== BUDGET URBAN PICKS ===== -->
 <h2 id="budget">💰 Best Budget Compact for City Breaks</h2>
 <div class="cam-grid">
@@ -318,6 +984,7 @@
 <a class="btn btn-outline" href="#" style="pointer-events:none; opacity:0.6;">Review Coming Soon</a>
 </div>
 </div>
+
 <!-- ===== URBAN-FOCUSED COMPARISON TABLE ===== -->
 <h2>📊 City Break – Key Comparisons</h2>
 <table class="comparison-table">
@@ -374,6 +1041,7 @@
 </tr>
 </tbody>
 </table>
+
 <!-- ===== URBAN TIPS SECTION ===== -->
 <h2>📸 Urban Photography Tips</h2>
 <ul>
@@ -383,10 +1051,12 @@
 <li><strong>Shoot in RAW + JPEG:</strong> Fujifilm's film simulations give you great JPEGs, but RAW gives you editing flexibility.</li>
 <li><strong>Watch your background:</strong> City streets are busy – use wide apertures to isolate subjects.</li>
 </ul>
+
 <!-- ===== AUTHOR & INTERNAL LINKS ===== -->
-<div style="background:#111; border:1px solid #333; border-radius:12px; padding:25px; margin:40px 0;">
-<p style="font-size:0.9rem; color:#888;">📸 <strong>Tested by:</strong> Dawid Millennium — I've shot with these cameras in Kyoto's Gion district, Lyon's Vieux Lyon, and New York's Lower East Side. Every recommendation is based on real urban photography experience.</p>
+<div class="author-box-urban">
+<p>📸 <strong>Tested by:</strong> Dawid Millennium — I've shot with these cameras in Kyoto's Gion district, Lyon's Vieux Lyon, and New York's Lower East Side. Every recommendation is based on real urban photography experience.</p>
 </div>
+
 <!-- ===== RELATED GUIDES ===== -->
 <h2>📚 More Photography Guides</h2>
 <div class="related-articles">
@@ -403,29 +1073,26 @@
 <p>Rugged and underwater options.</p>
 </a>
 </div>
-<div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center; margin:30px 0;">
+
+<div class="action-buttons">
 <a class="btn" href="/VideoCameraHoliday/destinations/">🌍 Explore Destinations</a>
-<a class="btn" href="/VideoCameraHoliday/reviews/" style="background:#333;">📸 Read Full Reviews</a>
+<a class="btn btn-outline" href="/VideoCameraHoliday/reviews/" style="border-color: var(--city-dark); color: var(--city-dark);">📸 Read Full Reviews</a>
 </div>
+
 <h2>Compact Cameras in Real Cities</h2>
 <p>Match your kit to the streets you will actually film. Our city pages cover filming conditions and gear choices in <a href="/VideoCameraHoliday/city-through-the-lens/athens-interview-preview.html">Athens</a>, <a href="/VideoCameraHoliday/city-through-the-lens/baghdad-interview-preview.html">Baghdad</a>, <a href="/VideoCameraHoliday/city-through-the-lens/chengdu-interview-preview.html">Chengdu</a>, <a href="/VideoCameraHoliday/city-through-the-lens/chiang-mai-interview-preview.html">Chiang Mai</a>, and <a href="/VideoCameraHoliday/city-through-the-lens/chongqing-interview-preview.html">Chongqing</a>. See each page for the specific camera, conditions, and interview status covered.</p>
 <p>More city pages are available for <a href="/VideoCameraHoliday/city-through-the-lens/delhi-interview-preview.html">Delhi</a>, <a href="/VideoCameraHoliday/city-through-the-lens/guadalajara-interview-preview.html">Guadalajara</a>, <a href="/VideoCameraHoliday/city-through-the-lens/guangzhou-interview-preview.html">Guangzhou</a>, <a href="/VideoCameraHoliday/city-through-the-lens/hangzhou-interview-preview.html">Hangzhou</a>, and <a href="/VideoCameraHoliday/city-through-the-lens/jaipur-interview-preview.html">Jaipur</a>; some interviews are still in progress. Browse the <a href="/VideoCameraHoliday/city-through-the-lens/">City Through the Lens hub</a> for the full series. For a weather-sealed interchangeable-lens option, read our <a href="/VideoCameraHoliday/reviews/om-system-om-3-travel-review.html">OM System OM-3 travel review</a>.</p>
-<p style="text-align:center; color:#666; font-size:0.85rem;">Some links are affiliate links. We earn a small commission at no extra cost to you. All picks are based on real testing.</p>
+
+<p class="affiliate-note">Some links are affiliate links. We earn a small commission at no extra cost to you. All picks are based on real testing.</p>
 </article>
 
-<!-- === DESIGN-B-FOOTER-START === --><footer class="site-footer">
+<!-- === FOOTER START === -->
+<footer class="site-footer">
 <div class="footer-inner">
 <div class="footer-top">
 <div class="footer-brand">
 <h3><span aria-hidden="true">📹</span> Holiday Video Camera</h3>
 <p>Real travel camera testing — no lab charts. Get weekly reviews, deals, and field notes from the road.</p>
-<!--
-                    Newsletter form has NO backend wired up. The shared JS below
-                    intercepts submit and displays a thank-you. If you connect a
-                    real ESP (Buttondown, ConvertKit, Formspree), replace
-                    action="/VideoCameraHoliday/" with the ESP endpoint and delete
-                    the submit interceptor in the shared JS block below.
-                -->
 <form aria-label="Newsletter signup" class="footer-newsletter" id="hvcNewsletterForm">
 <label class="visually-hidden" for="footerEmail">Email address</label>
 <input id="footerEmail" name="email" placeholder="your@email.com" required="" type="email"/>
@@ -433,7 +1100,7 @@
 </form>
 </div>
 </div>
-<div class="footer-cols" style="padding-top:44px;">
+<div class="footer-cols">
 <div>
 <h4>Top Guides</h4>
 <ul>
@@ -503,6 +1170,7 @@
 </div>
 </div>
 </footer>
+
 <div aria-label="Cookie consent" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
 <div class="cookie-banner-inner">
 <p>We use cookies and third-party embeds (YouTube) to improve your experience. Read our <a href="/VideoCameraHoliday/privacy.html">Privacy Policy</a>.</p>
@@ -512,15 +1180,10 @@
 </div>
 </div>
 </div>
+
 <script>
 (function(){
     'use strict';
-
-    /* ------------------------------------------------------------------
-       Guard: if the page already contains a Design B header, the injector
-       should never have run this. But if it did, bail out to avoid
-       duplicate-ID chaos.
-       ------------------------------------------------------------------ */
     if (window.__hvcDesignBLoaded) return;
     window.__hvcDesignBLoaded = true;
 
@@ -534,7 +1197,6 @@
     var tabButtons  = tabsBox ? tabsBox.querySelectorAll('button[data-tab]') : [];
     if (!drawer || !backdrop || !openBtn) return;
 
-    /* -------------------- Drawer open/close -------------------- */
     function openDrawer(){
         drawer.classList.add('is-open');
         backdrop.classList.add('is-open');
@@ -556,9 +1218,6 @@
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
 
-    /* -------------------- Search button -------------------- */
-    /* Search button just opens the drawer and focuses the input.
-       It does NOT force-switch tabs — search shouldn't imply "reviews only". */
     if (searchBtn) {
         searchBtn.addEventListener('click', function(){
             openDrawer();
@@ -569,7 +1228,6 @@
         });
     }
 
-    /* -------------------- Escape + focus trap -------------------- */
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
             closeDrawer();
@@ -591,7 +1249,6 @@
         }
     });
 
-    /* -------------------- Tabs -------------------- */
     tabButtons.forEach(function(btn){
         btn.addEventListener('click', function(){
             var target = btn.getAttribute('data-tab');
@@ -606,7 +1263,6 @@
         });
     });
 
-    /* -------------------- Drawer search filter -------------------- */
     var searchInput = document.getElementById('drawerSearchInput');
     if (searchInput) {
         searchInput.addEventListener('input', function(){
@@ -634,7 +1290,6 @@
                     }
                     h.style.display = anyVisible ? '' : 'none';
                 });
-
             });
             if (bestPanel) {
                 var tabName = bestPanel.getAttribute('data-panel');
@@ -650,9 +1305,6 @@
         });
     }
 
-    /* -------------------- Newsletter (no-backend interceptor) --------------------
-       NOTE: This gives a friendly message but does NOT send the email anywhere.
-       Wire it to a real ESP before relying on it. */
     var nlForm = document.getElementById('hvcNewsletterForm');
     if (nlForm) {
         nlForm.addEventListener('submit', function(e){
@@ -665,12 +1317,11 @@
             var status = document.createElement('p');
             status.setAttribute('role', 'status');
             status.className = 'footer-newsletter-msg';
-            status.textContent = 'Thanks — we\u2019ll be in touch. (No backend wired yet; this is a placeholder.)';
+            status.textContent = 'Thanks — we’ll be in touch. (No backend wired yet; this is a placeholder.)';
             nlForm.replaceWith(status);
         });
     }
 
-    /* -------------------- Cookie consent -------------------- */
     var STORAGE_KEY = 'hvc-cookie-consent';
     var banner = document.getElementById('cookieBanner');
     if (banner) {
@@ -681,7 +1332,6 @@
         function setConsent(v){
             try { localStorage.setItem(STORAGE_KEY, v); } catch(e){}
             banner.classList.remove('is-visible');
-            /* Dispatch event so future embed-gating code can hook in */
             try { document.dispatchEvent(new CustomEvent('hvc:consent', { detail: v })); } catch(e){}
         }
         var acceptBtn = document.getElementById('cookieAccept');
@@ -690,5 +1340,7 @@
         if (rejectBtn) rejectBtn.addEventListener('click', function(){ setConsent('rejected'); });
     }
 })();
-</script><!-- === DESIGN-B-FOOTER-END === --></body>
+</script>
+<!-- === FOOTER END === -->
+</body>
 </html>
